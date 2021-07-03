@@ -1,5 +1,17 @@
+@import "abstracts/breakpoints";
+@import "abstracts/colors";
+@import "abstracts/fonts";
+
+@import "components/header";
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: papayawhip
+    background-color: papayawhip;
+    max-width: 65ch;
+    margin: 0 auto;
 }
 
 #content {
