@@ -1,5 +1,21 @@
+html {
+  font-family: sans-serif; }
+
+header {
+  margin: 2rem 1rem; }
+  header ul {
+    display: flex;
+    gap: 1rem; }
+  header li {
+    list-style-type: none; }
+
+* {
+  box-sizing: border-box; }
+
 body {
-  background-color: papayawhip; }
+  background-color: papayawhip;
+  max-width: 65ch;
+  margin: 0 auto; }
 
 #content {
   animation: fadeInAnimation ease-in 0.5s;
