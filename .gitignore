@@ -1,0 +1,8 @@
+# generated html
+# public
+
+# Dolphin directory files
+*.directory
+
+# Vim swap files
+.swp
