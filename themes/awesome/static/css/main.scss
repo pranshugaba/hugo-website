@@ -1,0 +1,10 @@
+@use "base";
+@use "abstracts";
+@use "components";
+
+#content {
+  animation: fadeInAnimation ease-in 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  padding: 2rem 1rem;
+}

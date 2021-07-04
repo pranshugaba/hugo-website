@@ -1,8 +1,14 @@
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 html {
   font-family: sans-serif; }
 
 header {
-  margin: 2rem 1rem; }
+  padding: 1rem 1rem; }
   header ul {
     display: flex;
     gap: 1rem; }
@@ -21,9 +27,3 @@ body {
   animation: fadeInAnimation ease-in 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards; }
-
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }

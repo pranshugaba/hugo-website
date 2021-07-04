@@ -1,12 +1,11 @@
-{{ define "main" }} 
-    <h1>Hello There</h1>
-    <h2>How are you?</h2>
-    <p>
-      I am Pranshu Gaba. I am a PhD student in computer science. Welcome to my
-      (new) website!
-    </p>
-    <h2>Recent Posts</h2>
-    {{ range first 10 .Site.RegularPages}}
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-    {{ end }}
-{{ end }}
+{{ define "main" }}
+<h1>Hello There</h1>
+<h2>How are you?</h2>
+<p>
+  I am Pranshu Gaba. I am a PhD student in computer science. Welcome to my (new)
+  website!
+</p>
+<h2>Recent Posts</h2>
+{{ range first 10 .Site.RegularPages}}
+<a href="{{ .Permalink }}">{{ .Title }}</a>
+{{ end }} {{ end }}
