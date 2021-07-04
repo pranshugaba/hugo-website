@@ -11,6 +11,6 @@ I also love playing chess, solving puzzles, swimming and cycling but not both at
 
 ## About this site
 
-This site is built using [Hugo](https://gohugo.io) and deployed on GitHub pages.
+This site is built using [Hugo](https://gohugo.io) and deployed using GitHub pages.
 
-You can find the source code for my site on my GitHub page.
+You can find the source code for my site on my [GitHub page](https://github.com/pranshugaba).

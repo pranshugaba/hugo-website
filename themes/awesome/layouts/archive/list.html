@@ -1,11 +1,12 @@
 {{ define "main" }}
 
+<h1>Archive</h1>
+
 {{ .Content }}
 
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-{{  $recentPages := first 10 $pages}}
 
-{{ range $recentPages.GroupByDate "2006" }}
+{{ range $pages.GroupByDate "2006" }}
 <h2>{{ .Key }}</h2>
 <ul>
     {{ range .Pages }}

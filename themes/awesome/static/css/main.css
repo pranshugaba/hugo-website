@@ -117,8 +117,8 @@ body {
 }
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: papayawhip;
-    color: black;
+    background-color: black;
+    color: papayawhip;
   }
 }
 
@@ -193,7 +193,7 @@ code {
 }
 @media (prefers-color-scheme: dark) {
   .header {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid papayawhip;
   }
 }
 .header__logo {
@@ -230,7 +230,7 @@ code {
 }
 @media (prefers-color-scheme: dark) {
   .footer {
-    border-top: 2px solid black;
+    border-top: 2px solid papayawhip;
   }
 }
 .footer a {
