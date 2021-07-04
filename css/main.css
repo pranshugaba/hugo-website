@@ -110,9 +110,16 @@ input {
 
 body {
   background-color: papayawhip;
+  color: black;
   max-width: 65ch;
   margin: 0 auto;
   padding: 1rem;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: papayawhip;
+  }
 }
 
 @font-face {
@@ -144,8 +151,8 @@ h2 {
 
 p {
   margin-top: 1rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  line-height: 1.5rem;
 }
 
 a, a:visited {
@@ -179,6 +186,11 @@ li {
 .header {
   border-bottom: 2px solid black;
   padding-bottom: 1rem;
+}
+@media (prefers-color-scheme: dark) {
+  .header {
+    border-bottom: 2px solid papayawhip;
+  }
 }
 .header__logo {
   max-width: -webkit-max-content;
@@ -214,6 +226,11 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
+}
+@media (prefers-color-scheme: dark) {
+  .footer {
+    border-top: 2px solid papayawhip;
+  }
 }
 .footer a {
   text-decoration: none;

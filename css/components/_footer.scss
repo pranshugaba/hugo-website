@@ -1,8 +1,13 @@
+@use "../abstracts/colors" as c;
+
 .footer {
   padding-top: 1rem;
-  border-top: 2px solid black;
+  border-top: 2px solid c.$fg--light;
+  @media (prefers-color-scheme: dark) {
+    border-top: 2px solid c.$fg--dark;
+  }
   display: flex;
-  flex-wrap:  wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
 
