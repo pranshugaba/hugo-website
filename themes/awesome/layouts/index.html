@@ -6,6 +6,12 @@
   website!
 </p>
 <h2>Recent Posts</h2>
-{{ range first 10 .Site.RegularPages}}
-<a href="{{ .Permalink }}">{{ .Title }}</a>
-{{ end }} {{ end }}
+<ul>
+  {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ range first 10 $pages }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

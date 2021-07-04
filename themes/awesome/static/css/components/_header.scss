@@ -1,8 +1,33 @@
-header {
-    padding: 2rem 1rem;
+.header {
+  border-bottom: 2px solid black;
+  padding-bottom: 1rem;
 
-    ul {
-        display: flex;
-        gap: 2rem;
+  &__logo {
+    max-width: max-content;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+  }
+
+  &__sections {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  & li {
+    margin-bottom: 0;
+  }
+
+  & a {
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
     }
+  }
 }

@@ -112,6 +112,7 @@ body {
   background-color: papayawhip;
   max-width: 65ch;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 @font-face {
@@ -122,16 +123,40 @@ body {
 }
 html {
   font-size: 125%;
-  font-family: "Inter", sans-serif, "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: "Inter", sans-serif;
 }
 
 h1 {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+a, a:visited {
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  margin-bottom: 1rem;
 }
 
 @-webkit-keyframes fadeInAnimation {
@@ -151,12 +176,54 @@ h2 {
     opacity: 1;
   }
 }
-header {
-  padding: 2rem 1rem;
+.header {
+  border-bottom: 2px solid black;
+  padding-bottom: 1rem;
 }
-header ul {
+.header__logo {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 0 auto 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+.header__sections {
+  margin-top: 1rem;
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.header li {
+  margin-bottom: 0;
+}
+.header a {
+  text-decoration: none;
+}
+.header a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  padding-top: 1rem;
+  border-top: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.footer a {
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer__links {
+  display: flex;
+  gap: 1rem;
 }
 
 #content {
@@ -166,5 +233,5 @@ header ul {
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  padding: 2rem 1rem;
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=main.css.map */
