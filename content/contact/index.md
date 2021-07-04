@@ -1,9 +1,7 @@
 ---
 title: Contact Me
-subtitle: Get in touch
+subtitle: "Get in touch :heart:"
 ---
-
-Reach out to me :heart:
 
 - email: pranshu@pranshugaba.com  
 - github: https://github.com/pranshugaba  

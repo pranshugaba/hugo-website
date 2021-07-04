@@ -1,15 +1,16 @@
 {{ define "main" }}
 <main>
-    <article>
-        <h1>{{ .Title }}</h1>
-        {{.Content}}
-    </article>
-    <ul>
-        {{ range .Pages }}
-            <li>
-                <a href="{{ .Permalink }}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
-            </li>
-        {{ end }}
-    </ul>
+  <article>
+    <h1>{{ .Title }}</h1>
+    {{.Content}}
+  </article>
+  {{ range .Pages.GroupByDate "2006" }}
+  <h2>{{ .Key }}</h2>
+  <ul>
+    {{ range .Pages }}
+    <li>{{ partial "posts/previewlist.html" . }}</li>
+    {{ end }}
+  </ul>
+  {{ end }}
 </main>
 {{ end }}

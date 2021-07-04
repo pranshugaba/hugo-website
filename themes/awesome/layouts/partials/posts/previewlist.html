@@ -1,0 +1,5 @@
+<div>{{ .Date.Format "Jan 2" }}</div>
+<div class="previewlist">
+  <a href="{{ .Permalink }}"> {{.Title}}</a>
+  <a href="/{{ .Type }}"> {{ singularize .Type }} </a>
+</div>

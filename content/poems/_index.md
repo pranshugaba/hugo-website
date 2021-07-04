@@ -1,5 +1,4 @@
 ---
 title: Poems
 ---
-
-Here be poems
+some limericks, mostly haikus

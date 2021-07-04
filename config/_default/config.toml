@@ -14,11 +14,16 @@ titleCaseStyle = "Chicago"
 [frontmatter]
 lastmod = ["lastmod", ":fileModTime", ":default"]
 
+[markup]
+    [markup.highlight]
+        lineNos = true
+        style = "dracula"
+
 [minify]
 minifyOutput = true
 
 [params]
-mainSections = ["articles", "poems"]
+mainSections = ["articles", "poems", "posts", "puzzles"]
 AuthorName = "Pranshu Gaba"
 GitHubUser = "pranshugaba"
 

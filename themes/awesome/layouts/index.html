@@ -2,14 +2,17 @@
 
 {{ .Content }}
 
-<h2>Recent Posts</h2>
-<ul>
-  {{ $pages := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
+{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 
-  {{ range first 10 $pages }}
-  <li>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-  </li>
-  {{ end }}
+
+{{ range $pages.GroupByDate "2006" }}
+<h2>{{ .Key }}</h2>
+<ul>
+    {{ range .Pages }}
+    <li>
+      {{ partial "posts/previewlist.html" . }}
+    </li>
+    {{ end }}
 </ul>
+{{ end }}
 {{ end }}

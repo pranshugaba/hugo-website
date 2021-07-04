@@ -1,4 +1,8 @@
 {{ define "main"}}
   <h1>{{ .Title }}</h1>
+  {{ with .Params.Subtitle }}
+      <h2>{{ emojify . }}</h2>
+  {{ end }}
   {{ .Content }}
+  <a href="/"><- Home</a>
 {{ end }}

@@ -2,4 +2,4 @@
 title: Articles
 ---
 
-Here there are articles
+About GameDev and WebDev
