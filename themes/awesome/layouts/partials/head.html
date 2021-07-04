@@ -6,7 +6,9 @@
   <link rel="icon" type="image/png" href="/icon.png" />
   <link rel="stylesheet" href="/css/main.css" />
 
-  {{ partial "helpers/katex.html" . }}
+  {{ if .Params.math }}
+    {{ partial "helpers/katex.html" . }}
+  {{ end }}
 
   <title>
     {{ if .IsHome }}Home | {{ else }}{{ if .Page.Title }}{{ .Page.Title }} | {{
