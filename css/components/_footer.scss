@@ -1,0 +1,21 @@
+.footer {
+  padding-top: 1rem;
+  border-top: 2px solid black;
+  display: flex;
+  flex-wrap:  wrap;
+  justify-content: space-between;
+  gap: 1rem;
+
+  & a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+  }
+}
