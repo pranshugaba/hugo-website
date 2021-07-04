@@ -1,1 +1,8 @@
-$primary: papayawhip;
+$color--papaya: hsl(37.1, 100%, 91.8%);
+$color--black: hsl(0, 0%, 0%);
+
+$bg--light: $color--papaya;
+$fg--light: $color--black;
+
+$bg--dark: $color--black;
+$fg--dark: $color--papaya;

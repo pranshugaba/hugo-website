@@ -1,13 +1,11 @@
 {{ define "main" }}
-<h1>Hello There</h1>
-<h2>How are you?</h2>
-<p>
-  I am Pranshu Gaba. I am a PhD student in computer science. Welcome to my (new)
-  website!
-</p>
+
+{{ .Content }}
+
 <h2>Recent Posts</h2>
 <ul>
-  {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ $pages := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
+
   {{ range first 10 $pages }}
   <li>
     <a href="{{ .Permalink }}">{{ .Title }}</a>

@@ -1,5 +1,10 @@
+@use "../abstracts/colors" as c;
+
 .header {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid c.$fg--light;
+  @media (prefers-color-scheme: dark) {
+    border-bottom: 2px solid c.$fg--dark;
+  }
   padding-bottom: 1rem;
 
   &__logo {
@@ -26,7 +31,7 @@
   & a {
     text-decoration: none;
 
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }

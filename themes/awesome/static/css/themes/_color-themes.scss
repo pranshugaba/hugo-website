@@ -1,0 +1,12 @@
+@use "../abstracts/colors";
+
+$themes: (
+  light: (
+    bg: $bg--light,
+    text: $text--light,
+  ),
+  dark: (
+    bg: $bg--dark,
+    text: $text--dark,
+  ),
+);

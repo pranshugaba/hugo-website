@@ -1,6 +1,14 @@
+@use "../abstracts/colors" as c;
+
 body {
-  background-color: papayawhip;
+  background-color: c.$bg--light;
+  color: c.$fg--light;
   max-width: 65ch;
   margin: 0 auto;
   padding: 1rem;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: c.$bg--dark;
+    color: c.$fg--dark;
+  }
 }
