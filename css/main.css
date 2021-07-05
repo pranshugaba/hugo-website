@@ -333,47 +333,79 @@ pre {
   font-size: larger;
 }
 
-.list-section__item {
-  display: grid;
-  grid-template-columns: -webkit-max-content auto;
-  grid-template-columns: max-content auto;
-  grid-template-rows: auto;
-  grid-template-areas: "date details";
-  -moz-column-gap: 1.25rem;
-       column-gap: 1.25rem;
+@media (min-width: 640px) {
+  .list-section__item {
+    display: grid;
+    grid-template-columns: -webkit-max-content auto;
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto;
+    grid-template-areas: "dt details";
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
+  }
 }
 
 .list-yearwise__item {
   display: grid;
-  grid-template-columns: -webkit-max-content auto -webkit-max-content;
-  grid-template-columns: max-content auto max-content;
-  grid-template-rows: auto;
-  grid-template-areas: "date details type";
+  grid-template-columns: auto auto;
+  grid-template-areas: "dt tp" "details details";
+  row-gap: 0.25rem;
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
 }
-@media (max-width: 540px) {
-  .list-yearwise__item {
-    grid-template-columns: auto auto;
-    grid-template-areas: "date type" " details details";
-    row-gap: 1rem;
-  }
-}
 .list-yearwise__item .item__type {
+  font-size: smaller;
+  grid-area: tp;
   justify-self: end;
+}
+@media (min-width: 640px) {
+  .list-yearwise__item {
+    grid-template-columns: -webkit-max-content auto -webkit-max-content;
+    grid-template-columns: max-content auto max-content;
+    grid-template-rows: auto;
+    grid-template-areas: "dt details tp";
+  }
+  .list-yearwise__item .item__type {
+    font-size: large;
+  }
 }
 
 .list-section__item .item__date,
 .list-yearwise__item .item__date {
-  grid-area: date;
-  justify-self: start;
-  align-self: start;
-  width: 4.5ch;
-  padding: 0 0.2rem;
-  margin-top: 0.25rem;
-  border-radius: 0.25rem;
+  display: flex;
+  gap: 0.25rem;
   font-size: smaller;
-  border: 2px solid black;
+  grid-area: dt;
+}
+@media (min-width: 640px) {
+  .list-section__item .item__date,
+.list-yearwise__item .item__date {
+    display: block;
+    justify-self: start;
+    align-self: start;
+    width: 4.5ch;
+    padding: 0 0.2rem;
+    margin-top: 0.25rem;
+    border-radius: 0.25rem;
+    font-size: smaller;
+    border: 2px solid black;
+  }
+  .list-section__item .item__month,
+.list-yearwise__item .item__month {
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 1;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  .list-section__item .item__day,
+.list-yearwise__item .item__day {
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
 }
 .list-section__item .item__details,
 .list-yearwise__item .item__details {
@@ -383,22 +415,6 @@ pre {
 .list-section__item .item__summary,
 .list-yearwise__item .item__summary {
   margin-top: 0.5rem;
-}
-
-.date__month {
-  font-size: 0.8rem;
-  text-align: center;
-  line-height: 1;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-
-.date__day {
-  font-size: 1.2rem;
-  text-align: center;
-  line-height: 1;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
 }
 
 .list-archive__item {
