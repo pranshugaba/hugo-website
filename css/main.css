@@ -117,8 +117,8 @@ body {
 }
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: black;
-    color: papayawhip;
+    background-color: papayawhip;
+    color: black;
   }
 }
 
@@ -127,6 +127,7 @@ body {
   src: url("/fonts/Inter-Variable.ttf") format("truetype");
   font-weight: 125 950;
   font-style: normal;
+  font-display: swap;
 }
 html {
   font-size: 125%;
@@ -134,19 +135,27 @@ html {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 500;
   letter-spacing: -0.05em;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 500;
   letter-spacing: -0.025em;
   margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.75em;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 ul, ol, p {
@@ -193,7 +202,7 @@ code {
 }
 @media (prefers-color-scheme: dark) {
   .header {
-    border-bottom: 2px solid papayawhip;
+    border-bottom: 2px solid black;
   }
 }
 .header__logo {
@@ -230,7 +239,7 @@ code {
 }
 @media (prefers-color-scheme: dark) {
   .footer {
-    border-top: 2px solid papayawhip;
+    border-top: 2px solid black;
   }
 }
 .footer a {
@@ -244,9 +253,35 @@ code {
   gap: 1rem;
 }
 
+pre {
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .previewlist {
   display: flex;
   justify-content: space-between;
+}
+
+.home__pager {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.page__nav {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.page__content {
+  margin-top: 2.5rem;
 }
 
 #content {
