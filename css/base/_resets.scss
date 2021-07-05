@@ -80,7 +80,8 @@ body {
 
 ol,
 ul {
-  list-style: none;
+  padding-left: 1.5rem;
+  list-style-position: outside;
 }
 
 blockquote,
@@ -102,6 +103,5 @@ table {
 }
 
 input {
-  -webkit-appearance: none;
   border-radius: 0;
 }

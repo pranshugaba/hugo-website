@@ -1,18 +1,31 @@
-.page {
-    &__nav {
-        margin-top: 3rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: space-between;
-    }
-    
-    &__date {
-        margin-top: 2rem;
-    }
+@use "../abstracts/mixins" as m;
 
-    &__content {
-        margin-top: 2rem;
+.page {
+  &__date {
+    margin-top: 2rem;
+  }
+
+  &__content {
+    margin-top: 2rem;
+  }
+
+  &__tags {
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    font-size: smaller;
+    @include m.plain-list;
+
+    & a {
+      @include m.plain-link;
     }
-    
+  }
+
+  &__nav {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
 }
