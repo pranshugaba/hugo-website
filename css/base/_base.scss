@@ -5,12 +5,18 @@ body {
   color: c.$fg--light;
   max-width: 65ch;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.8rem;
 
   @media (prefers-color-scheme: dark) {
     background-color: c.$bg--dark;
     color: c.$fg--dark;
   }
+}
+
+#content {
+  animation: fadeInAnimation ease-in 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 ::selection {
