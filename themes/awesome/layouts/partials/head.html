@@ -12,7 +12,6 @@
   {{ end }}
 
   <title>
-    {{ if .IsHome }}Home | {{ else }}{{ if .Page.Title }}{{ .Page.Title }} | {{
-    end }}{{ end }}{{ .Site.Title }}
+    {{- partial "title.html" . -}}
   </title>
 </head>

@@ -1,0 +1,2 @@
+{{ $section := .Get 0 }}
+{{ len (where .Site.RegularPages "Section" "==" $section) }}
