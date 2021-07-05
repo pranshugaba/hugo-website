@@ -143,7 +143,7 @@ Let's answer these questions for our X and O game.
 - It can be played on desktop.
 - The player clicks on the squares to enter symbols.
 - I have made a rough sketch how the interface would look like. This will be a simple game with just one scene. In more complex games, we would need more scenes.
-  {{< figure src="sketch.png" title="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play." >}}
+  {{< figure src="img/sketch.png" title="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play." >}}
 - We will describe the gameplay loop using a flowchart. It will also tell us how long a session will last.
 
 ### The gameplay loop
@@ -153,7 +153,7 @@ We want to explicitly state how the game receives inputs, what decisions it take
 
 "X and O" is a small and simple game, so its gameplay loop is simple too.
 
-{{< figure src="gameloop.png" title="The gameplay loop" >}}
+{{< figure src="img/gameloop.png" title="The gameplay loop" >}}
 
 To summarise:
 
@@ -171,11 +171,11 @@ Now that we have a good picture of how the game would work, we are ready to star
 Open Godot and create a new project. We will call it `x-and-o`. Choose an empty folder to save the project in, preferably with the same name as the game.
 Select "Create & Edit" to create the project.
 
-{{< figure src="create-project.png" >}}
+{{< figure src="img/create-project.png" >}}
 
 By default, when we start a new project, Godot starts in 3D mode. We are making a 2D game, so switch to 2D mode by clicking on "2D" at the top. The default shortcut to enter 2D mode is <kbd>Ctrl</kbd> + <kbd>F1</kbd>.
 
-{{< figure src="2d-mode.png" title="Click on 2D." >}}
+{{< figure src="img/2d-mode.png" title="Click on 2D." >}}
 
 Screens come in a variety of shapes and sizes. Some are square, some are tall, some are wide.
 We want our game to render correctly on all screens.
@@ -184,7 +184,7 @@ We will target a fixed resolution, so we do not have to worry about making the l
 
 To achieve this, open Project -> Project Settings.
 
-{{< figure src="project-settings-menu.png" >}}
+{{< figure src="img/project-settings-menu.png" >}}
 
 In the General tab, look for the section named "Window" in "Display".
 
@@ -206,7 +206,7 @@ We show some text in our game, and we will need to load a nice font for it.
 I have made an assets folder that you can use to make the game. It contains `x.png`, `o.png`, `grid.png`, and `Inter-Regular.ttf`.
 You can <NavExtLink to="/">download my assets</NavExtLink>, or you can make your own.
 
-{{< figure src="sprites.png" >}}
+{{< figure src="img/sprites.png" >}}
 
 <post-info-box>
 I made the png files for X, O, and the grid using <nav-ext-link to="https://inkscape.org/">Inkscape</nav-ext-link>. It is an excellent application for making vector art. It is free software, and I highly recommend it.
@@ -214,15 +214,15 @@ I made the png files for X, O, and the grid using <nav-ext-link to="https://inks
 
 I have included the `Inter` font in the assets. I chose this font because it looks sharp even at low resolutions and it goes well with the "X" and "O" sprites that I have made. You can use any font that goes with your theme.
 
-{{< figure src="font.png" >}}
+{{< figure src="img/font.png" >}}
 
->You can get fonts on websites such as <nav-ext-link to="https://fonts.google.com/">Google fonts</nav-ext-link> and <nav-ext-link to="https://www.dafont.com/theme.php?cat=501&l[]=10">dafont.com</nav-ext-link>. Make sure you have the rights to use the font you choose.
+> You can get fonts on websites such as <nav-ext-link to="https://fonts.google.com/">Google fonts</nav-ext-link> and <nav-ext-link to="https://www.dafont.com/theme.php?cat=501&l[]=10">dafont.com</nav-ext-link>. Make sure you have the rights to use the font you choose.
 
 We need to add these assets to our project in Godot.
 Make an `assets` folder in your game's root folder `x-and-o` using your file manager. (Use File Explorer if you are using Windows, Finder if you are on macOS). Move the sprites and the font in it.
 When you open Godot, you will see those files in the FileSystem tab.
 
-{{< figure src="filetree.png" >}}
+{{< figure src="img/filetree.png" >}}
 
 ## Building the interface
 
@@ -237,12 +237,12 @@ Read the <nav-ext-link to="https://docs.godotengine.org/en/stable/getting_starte
 We will add a root node that will hold all nodes in our game.
 Click on `Create root node` -> `2D node` in the Scene tab. This will create a root node named `Node2D`. Rename it to `Game`.
 
-{{< figure src="root-node.png" >}}
+{{< figure src="img/root-node.png" >}}
 
 Now that we have a root node, we can save the scene and run the game. Save the scene by pressing <kbd>Ctrl</kbd>+<kbd>S</kbd>.
 Make a `scenes` folder in the root directory and save this scene in it as `Game.tscn`.
 
-{{< figure src="save-game-scene.png" >}}
+{{< figure src="img/save-game-scene.png" >}}
 
 <post-info-box>
 Scenes are saved with the <code>.tscn</code> file extension.
@@ -250,7 +250,7 @@ Scenes are saved with the <code>.tscn</code> file extension.
 
 Run the game by clicking the play button (or press <kbd>F5</kbd>). The first time you run the game, Godot will ask you to set the main scene. The main scene is the scene that loads when you run the game. Select the `Game.tscn` scene we just saved.
 
-{{< figure src="play-button.png" >}}
+{{< figure src="img/play-button.png" >}}
 
 Of course, we haven't added anything to our scene yet, so we only see a blank screen when the game is run.
 Close the window (or press <kbd>F8</kbd>) to stop the preview.
@@ -263,37 +263,37 @@ Let's start with the labels because they are simpler.
 
 We can display text in a game with a `Label` node. Select `Game` and click on the plus icon to add a child node. In the "Create New Node" dialog that appears, search for `Label`, and click on "Create".
 
-{{< figure src="label-node.png" >}}
+{{< figure src="img/label-node.png" >}}
 
 A `Label` node appears as a child of `Game` in the scene tab.
 Rename the name of this node to `GameName` because that's what it is.
 
-{{< figure src="scene-tree-gamename.png" >}}
+{{< figure src="img/scene-tree-gamename.png" >}}
 
 We do not see any change in our game because the label has no text. We can add/edit the text of the `Label` by editing the `Text` property in the inspector tab. This label will display the name of the game: "X and O". Change the text of the label to "X and O".
 
-{{< figure src="inspector-label-text.png" >}}
+{{< figure src="img/inspector-label-text.png" >}}
 
 The label is hard to read: it is small and is white on a white background. We will fix this by using a custom font.
 
-{{< figure src="label-bad.png" >}}
+{{< figure src="img/label-bad.png" >}}
 
 In the inspector tab, in `Custom Fonts`, enable the Font property. Click on Empty -> New DynamicFont.
 
-{{< figure src="new-dynamic-font.png" >}}
+{{< figure src="img/new-dynamic-font.png" >}}
 
 Click on "Dynamic Font" to show some additional settings. In Font -> Font Data, click on Empty -> Load and select your font file. We can adjust the font size in `Settings`. We would like the name of the game to be big, so I set the font size to `96`. We can also change the font colours in Custom Colours -> Font colours. Play with the parameters until you have happy with the appearance.
 
-{{< figure src="dynamic-font.png" >}}
+{{< figure src="img/dynamic-font.png" >}}
 
 We have three more labels to show in our interface. Repeat this process three times to end up with a total of four labels.
 I made three new `Label` nodes with names `WinCondition`, `PlayerTurn`, and `PlayerInstruction`. My game looks like this now.
 
-{{< figure src="four-labels.png" >}}
+{{< figure src="img/four-labels.png" >}}
 
 <post-info-box type="tip">
 Enable "Grid Snap" in the toolbar to make it easier to align items.
-{{< figure src="grid-snap.png" >}}
+{{< figure src="img/grid-snap.png" >}}
 </post-info-box>
 
 Our text looks good. Next, we will add the grid.
@@ -310,15 +310,15 @@ We do not see any change in our game because the sprite does not have a texture.
 
 We can see the grid in our game now, but it's too big for our screen. We need to scale it down.
 
-{{< figure src="large-grid.png" >}}
+{{< figure src="img/large-grid.png" >}}
 
 In `GridSprite`, in transform, set the Scale to `0.3` and `0.3`.
 
-{{< figure src="scale-grid.png" >}}
+{{< figure src="img/scale-grid.png" >}}
 
 The grid fits in the screen now.
 
-{{< figure src="correct-grid.png" >}}
+{{< figure src="img/correct-grid.png" >}}
 
 We want to be able to detect clicks.
 We can detect clicks in an area using the `Area2D` node. We will have nine `Area2D` nodes, one for each cell of the grid.
@@ -329,12 +329,12 @@ We get this warning because we have an `Area2D` node, but we haven't defined its
 
 The `CollisionShape2D` now shows a warning: it needs a shape to function. Our cells are squares, so we select New RectangleShape2D in the inspector tab.
 
-{{< figure src="new-rectangle-2d.png" >}}
+{{< figure src="img/new-rectangle-2d.png" >}}
 
 Resize and move the blue area so it covers one of the grid cells.
 Using Grid Snap will make it easier to fit the CollisionShape2D on the cell perfectly.
 
-{{< figure src="collision-shape.png" >}}
+{{< figure src="img/collision-shape.png" >}}
 
 We would like to show "X" and "O" symbols in the cells when the game is played. Recall that we show images using the `Sprite` node.
 Add a `Sprite` as a child of `GridCell`, and rename it to `CellSymbol`. Choose the texture as `x.png`. If you are using my assets, you will need to scale it to `0.3` and translate it by `96` and `96` to centre the image in the cell.
@@ -348,15 +348,15 @@ To save the node as a scene, right-click on the node in the Scene tab, select "S
 
 The `GridCell` node has changed to an instance of the scene. You can see the new button now. Click on the "Open in Editor" button to edit it.
 
-{{< figure src="open-scene.png" >}}
+{{< figure src="img/open-scene.png" >}}
 
 Duplicate the node nine times. Move the nodes so we have one in each grid. Make sure to arrange them in order, because we will refer to them later when we want to detect win conditions. Also, rename `GridCell` to `GridCell1` for consistency.
 
-{{< figure src="nine-gridcells.png" >}}
+{{< figure src="img/nine-gridcells.png" >}}
 
 The texture that we set in the sprite in `GridCell` appears nine times in the grid. If we change the texture of the sprite in the `GridCell` scene, say to `x.png`, then observe that the sprite of every cell in the grid changes to an "X".
 
-{{< figure src="grid-complete.png" >}}
+{{< figure src="img/grid-complete.png" >}}
 
 Since we start the game with the empty grid, we don't want any of the X's and O's to show initially. We will show them one by one, programmatically, when the players play the game. For now, remove the texture from the `CellSymbol` sprite in `GridCell` to get an empty grid.
 
@@ -372,11 +372,11 @@ You can read the [Godot Docs for GDScript](https://docs.godotengine.org/en/stabl
 
 Click on the Attach Script button to attach a script to the `Game` node.
 
-{{< figure src="attach-script.png" >}}
+{{< figure src="img/attach-script.png" >}}
 
 This shows the "Attach Script dialog".
 
-{{< figure src="attach-script-dialog.png" >}}
+{{< figure src="img/attach-script-dialog.png" >}}
 
 The default options are fine, click "Create". This will create a file named `Game.gd`. This is where will write the logic for the game.
 The contents of this script will look like this.
@@ -419,7 +419,7 @@ You can <kbd>Ctrl</kbd>+Click on any inbuilt function to read its documentation.
 If you find any Godot term unclear, refer to the <nav-ext-link to="https://docs.godotengine.org/en/stable/index.html">Godot docs</nav-ext-link>. 
 <br/>
 <br/>
-<base-figure src="/img/articles/x-and-o/online-docs.png" :caption="false"> </base-figure>
+{{< figure src="/img/online-docs.png" >}}
 </post-info-box>
 
 Let's look at the gameplay loop again. The game takes decisions based on the state of the game. We need a way to store the game's state.
@@ -527,12 +527,12 @@ Since accessing nodes is a common pattern in Godot, there is a shorthand notatio
 <post-info-box type="tip" >
 The Godot editor will help you autocomplete the name of the node as soon as you type the dollar symbol.
 Make sure the node your script is attached to is active.
-<base-figure src="/img/articles/x-and-o/autocomplete.png" :caption="false"> </base-figure>
+{{< figure src="img/autocomplete.png" >}}
 </post-info-box>
 
 Once we have a reference to a node, we can manipulate it. Any changes that we can make in the Inspector tab, we can also make in our script. If you hover your mouse over any property in the inspector tab, you will see the name of the property that you can use in scripts.
 
-<BaseFigure src="/img/articles/x-and-o/hover-property.png" :caption="false"> </BaseFigure>
+{{< figure src="img/hover-property.png" >}}
 
 For example, if you want to hide the `GridSprite` when the game starts, you can do the following:
 
@@ -755,7 +755,7 @@ We are listening for the signal in the `GridCell` node as well. This is a case w
 
 Also note the "Receiver method" field says `_on_GridCell_input_event`. This is the method that will be called in the target node when the signal is emitted.
 
-<BaseFigure src="/img/articles/x-and-o/gridcell-signal.png" :caption="false"> </BaseFigure>
+{{< figure src="img/gridcell-signal.png" >}}
 
 Select `GridCell` and click "Connect".
 This creates the receiver function `_on_GridCell_input_event` in `GridCell.gd` for us.
@@ -1179,7 +1179,7 @@ We need to listen for the reset button pressed in the game over screen, in which
 
 Add input map in Project Settings -> Input Map. Add a `ui_restart` action. Add event Keyboard press "R" to it.
 
-<BaseFigure src="/img/articles/x-and-o/reset-input.png" :caption="false"> </BaseFigure>
+{{< figure src="img/reset-input.png" >}}
 
 ```gdscript [Game.gd]
 func _process(delta):
