@@ -1,4 +1,5 @@
 @use "../abstracts/colors" as c;
+@use "../abstracts/mixins" as m;
 
 .header {
   border-bottom: 2px solid c.$fg--light;
@@ -25,10 +26,6 @@
   }
 
   & a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    @include m.plain-link;
   }
 }

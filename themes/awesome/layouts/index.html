@@ -11,7 +11,7 @@
 
 {{ range $paginator.PageGroups }}
 <h2 class="list__key">{{ .Key }}</h2>
-<ul>
+<ul class="items__list">
     {{ range .Pages }}
     <li>
       {{ partial "pages/list-yearwise.html" . }}

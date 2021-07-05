@@ -4,12 +4,11 @@
     <h1>{{ .Title }}</h1>
     {{.Content}}
   </article>
-  {{ range .Pages.GroupByDate "2006" }}
-  <h2>{{ .Key }}</h2>
-  <ul>
-    {{ range .Pages }}
-    <li>{{ partial "pages/list-simple.html" . }}</li>
-    {{ end }}
+  {{ range .Pages }}
+  <ul class="items__list">
+    <li>
+      {{ partial "pages/list-simple.html" . }}
+    </li>
   </ul>
   {{ end }}
 </main>

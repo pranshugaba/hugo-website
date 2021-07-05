@@ -8,7 +8,7 @@
 
 {{ range $pages.GroupByDate "2006" }}
 <h2 class="list__key">{{ .Key }}</h2>
-<ul>
+<ul class="items__list">
     {{ range .Pages }}
     <li>
       {{ partial "pages/list-archive.html" . }}

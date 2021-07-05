@@ -12,3 +12,8 @@ body {
     color: c.$fg--dark;
   }
 }
+
+::selection {
+  background-color: c.$fg--light;
+  color: c.$bg--light;
+}
