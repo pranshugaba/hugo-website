@@ -1,0 +1,11 @@
+<div class="list-section__item">
+  <div class="item__details">
+    <div class="item__title">
+      <a href="{{ .Permalink }}"> {{.Title}}</a>
+    </div>
+    <div class="item__date">
+      {{ .Date.Format "Jan 2" }}
+    </div>
+  </div>
+  <p class="item__summary">{{ .Summary }}</p>
+</div>

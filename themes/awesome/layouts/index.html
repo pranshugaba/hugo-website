@@ -1,16 +1,20 @@
 {{ define "main" }}
 
-{{ .Content }}
+
 
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 {{ $paginator := .Paginate ($pages.GroupByDate "2006") }}
 
+{{ if eq ($paginator.PageNumber) 1 }}
+  {{ .Content }}
+{{ end }}
+
 {{ range $paginator.PageGroups }}
-<h2>{{ .Key }}</h2>
+<h2 class="list__key">{{ .Key }}</h2>
 <ul>
     {{ range .Pages }}
     <li>
-      {{ partial "pages/list_common.html" . }}
+      {{ partial "pages/list-yearwise.html" . }}
     </li>
     {{ end }}
 </ul>
@@ -19,12 +23,12 @@
 <div class="home__pager">
 <div>
   {{ with $paginator.HasPrev }}
-    <a href="{{ $paginator.Prev.URL }}"><- newer posts</a>
+    <a href="{{ $paginator.Prev.URL }}"><- newer </a>
   {{ end }}
 </div>
 <div>
   {{ with $paginator.HasNext }}
-    <a href="{{ $paginator.Next.URL }}">older posts -> </a>
+    <a href="{{ $paginator.Next.URL }}">older -> </a>
   {{ end }}
 </div>
 </div>

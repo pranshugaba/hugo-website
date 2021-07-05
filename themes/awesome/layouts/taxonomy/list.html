@@ -2,16 +2,13 @@
 <main>
   <article>
     <h1>{{ .Title }}</h1>
-    {{ with .Params.Subtitle }}
-        <h2 class="page__subtitle" >{{ . | emojify }}</h2>
-    {{ end }}
     {{.Content}}
   </article>
   {{ range .Pages.GroupByDate "2006" }}
-  <h2 class="list__key">{{ .Key }}</h2>
+  <h2>{{ .Key }}</h2>
   <ul>
     {{ range .Pages }}
-    <li>{{ partial "pages/list-section.html" . }}</li>
+    <li>{{ partial "pages/list-simple.html" . }}</li>
     {{ end }}
   </ul>
   {{ end }}

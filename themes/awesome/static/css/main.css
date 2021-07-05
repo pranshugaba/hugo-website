@@ -230,6 +230,7 @@ code {
 }
 
 .footer {
+  margin-top: 2rem;
   padding-top: 1rem;
   border-top: 2px solid black;
   display: flex;
@@ -260,9 +261,51 @@ pre {
   margin-bottom: 1rem;
 }
 
-.previewlist {
+.list__key {
+  margin-top: 2.5rem;
+}
+
+.item__title {
+  font-weight: 600;
+  font-size: larger;
+}
+
+.list-section__item,
+.list-yearwise__item {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.list-section__item .item__details,
+.list-yearwise__item .item__details {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   justify-content: space-between;
+}
+.list-section__item .item__summary,
+.list-yearwise__item .item__summary {
+  margin-top: 0.25rem;
+}
+
+.list-yearwise__item .item__date {
+  margin-top: 0.5rem;
+  font-size: smaller;
+}
+
+.list-archive__item {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.list-archive__item .item__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.list-archive__item .item__date {
+  font-family: monospace;
 }
 
 .home__pager {
@@ -280,8 +323,11 @@ pre {
   gap: 1rem;
   justify-content: space-between;
 }
+.page__date {
+  margin-top: 2rem;
+}
 .page__content {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 #content {
@@ -291,5 +337,4 @@ pre {
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  padding-bottom: 2rem;
 }/*# sourceMappingURL=main.css.map */

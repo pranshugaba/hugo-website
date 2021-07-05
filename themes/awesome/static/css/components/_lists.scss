@@ -1,0 +1,49 @@
+.list__key {
+  margin-top: 2.5rem;
+}
+
+.item__title {
+  font-weight: 600;
+  font-size: larger;
+}
+
+.list-section__item,
+.list-yearwise__item {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  & .item__details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: space-between;
+  }
+
+  & .item__summary {
+    margin-top: 0.25rem;
+  }
+}
+
+.list-yearwise__item {
+  & .item__date {
+    margin-top: 0.5rem;
+    font-size: smaller;
+  }
+}
+
+.list-archive__item {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+
+  & .item__details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  & .item__date {
+    font-family: monospace;
+  }
+}

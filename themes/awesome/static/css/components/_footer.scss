@@ -1,6 +1,7 @@
 @use "../abstracts/colors" as c;
 
 .footer {
+  margin-top: 2rem;
   padding-top: 1rem;
   border-top: 2px solid c.$fg--light;
   @media (prefers-color-scheme: dark) {

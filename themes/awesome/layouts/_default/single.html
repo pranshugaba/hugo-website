@@ -7,7 +7,11 @@
   {{ end }}
   {{ with .Date }}
     <div class="page__date">
-      {{ .Format "Jan 2, 2006" }}
+      {{ if eq (.Format "2006") (now.Format "2006")}}
+        {{ .Format "Jan 2" }}
+      {{ else }}
+        {{ .Format "Jan 2, 2006" }}
+      {{ end }}
     </div>
   {{ end }}
   {{ with .Content }}

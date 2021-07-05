@@ -1,0 +1,14 @@
+<div class="list-yearwise__item">
+  <div class="item__details">
+    <div class="item__title">
+      <a href="{{ .Permalink }}"> {{.Title}}</a>
+    </div>
+    <div class="item__type">
+      <a href="/{{ .Type }}"> {{ singularize .Type }} </a>
+    </div>
+  </div>
+      <div class="item__date">
+        {{ .Date.Format "January 2" }}
+      </div>
+  <p class="item__summary">{{ .Summary }}</p>
+</div>

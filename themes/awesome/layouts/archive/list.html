@@ -7,11 +7,11 @@
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 
 {{ range $pages.GroupByDate "2006" }}
-<h2>{{ .Key }}</h2>
+<h2 class="list__key">{{ .Key }}</h2>
 <ul>
     {{ range .Pages }}
     <li>
-      {{ partial "pages/list_common.html" . }}
+      {{ partial "pages/list-archive.html" . }}
     </li>
     {{ end }}
 </ul>

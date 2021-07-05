@@ -21,10 +21,10 @@ lastmod = ["lastmod", ":fileModTime", ":default"]
 [minify]
 minifyOutput = true
 
+[taxonomies]
+    tag = "tags"
+
 [params]
 mainSections = ["articles", "poems", "posts", "puzzles"]
 AuthorName = "Pranshu Gaba"
 GitHubUser = "pranshugaba"
-
-[taxonomies]
-tag = "tags"

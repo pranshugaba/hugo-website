@@ -1,0 +1,9 @@
+<div class="list-archive__item">
+  <div class="item__details">
+    <span class="item__date">
+      {{ .Date.Format "02 Jan" }}
+    </span>
+    <a href="{{ .Permalink }}"> {{.Title}}</a>
+  </div>
+  <a href="/{{ .Type }}"> {{ singularize .Type }} </a>
+</div>
