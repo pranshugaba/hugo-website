@@ -1,8 +1,8 @@
 $papaya: hsl(37.1, 100%, 91.8%);
-$black: hsl(0, 0%, 0%);
+$black: #121212;
 
 $bg--light: $papaya;
 $fg--light: $black;
 
-$bg--dark: $papaya;
-$fg--dark: $black;
+$bg--dark: $black;
+$fg--dark: $papaya;

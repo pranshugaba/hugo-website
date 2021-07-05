@@ -1,3 +1,4 @@
+@use "../abstracts/colors" as c;
 @use "../abstracts/mixins" as m;
 
 .items__list {
@@ -70,7 +71,7 @@
       margin-top: 0.25rem;
       border-radius: 0.25rem;
       font-size: smaller;
-      border: 2px solid black;
+      border: 2px solid c.$black;
     }
     .item__month {
       font-size: 0.8rem;

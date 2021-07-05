@@ -10,8 +10,13 @@ pre {
 
 p code,
 li code,
+h4 code,
 kbd {
-  padding: 0.1em 0.2em;
-  border: 1px solid black;
+  padding: 0.05rem 0.2rem;
+  border: 1px solid c.$black;
   border-radius: 0.2rem;
+}
+
+h4 code {
+  font-size: 1rem;
 }
