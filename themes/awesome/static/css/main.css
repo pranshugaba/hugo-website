@@ -113,13 +113,22 @@ body {
   color: black;
   max-width: 65ch;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 @media (prefers-color-scheme: dark) {
   body {
     background-color: papayawhip;
     color: black;
   }
+}
+
+#content {
+  -webkit-animation: fadeInAnimation ease-in 0.5s;
+          animation: fadeInAnimation ease-in 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 ::-moz-selection {
@@ -254,6 +263,7 @@ figcaption {
 }
 .header {
   border-bottom: 2px solid black;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
 }
 @media (prefers-color-scheme: dark) {
@@ -288,6 +298,7 @@ figcaption {
 .footer {
   margin-top: 2rem;
   padding-top: 1rem;
+  padding-bottom: 0.5rem;
   border-top: 2px solid black;
   display: flex;
   flex-wrap: wrap;
@@ -358,6 +369,12 @@ pre {
   grid-area: tp;
   justify-self: end;
 }
+.list-yearwise__item .item__type a {
+  text-decoration: none;
+}
+.list-yearwise__item .item__type a:hover {
+  text-decoration: underline;
+}
 @media (min-width: 640px) {
   .list-yearwise__item {
     grid-template-columns: -webkit-max-content auto -webkit-max-content;
@@ -414,23 +431,22 @@ pre {
 }
 .list-section__item .item__summary,
 .list-yearwise__item .item__summary {
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
 }
 
 .list-archive__item {
   margin-bottom: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: space-between;
-}
-.list-archive__item .item__details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
 }
 .list-archive__item .item__date {
-  font-family: monospace;
+  font-size: smaller;
+}
+@media (min-width: 640px) {
+  .list-archive__item {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+    justify-content: space-between;
+  }
 }
 
 .home__pager {
@@ -467,13 +483,4 @@ pre {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-between;
-}
-
-#content {
-  -webkit-animation: fadeInAnimation ease-in 0.5s;
-          animation: fadeInAnimation ease-in 0.5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }/*# sourceMappingURL=main.css.map */

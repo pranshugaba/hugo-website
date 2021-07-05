@@ -3,9 +3,3 @@
 @use "components";
 @use "layouts";
 @use "pages";
-
-#content {
-  animation: fadeInAnimation ease-in 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}

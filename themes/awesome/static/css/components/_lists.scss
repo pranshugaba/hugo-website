@@ -36,6 +36,9 @@
     font-size: smaller;
     grid-area: tp;
     justify-self: end;
+    & a {
+      @include m.plain-link;
+    }
   }
 
   @media (min-width: 640px) {
@@ -90,24 +93,20 @@
   }
 
   & .item__summary {
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
   }
 }
 
 .list-archive__item {
   margin-bottom: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: space-between;
-
-  & .item__details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  & .item__date {
+    font-size: smaller;
   }
 
-  & .item__date {
-    font-family: monospace;
+  @media (min-width: 640px) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+    justify-content: space-between;
   }
 }
