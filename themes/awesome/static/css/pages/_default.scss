@@ -1,0 +1,13 @@
+.page {
+    &__nav {
+        margin-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    &__content {
+        margin-top: 2.5rem;
+    }
+}

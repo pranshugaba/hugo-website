@@ -1,8 +1,30 @@
 {{ define "main"}}
-  <h1>{{ .Title }}</h1>
+  <div class="page__title">
+    <h1>{{ .Title | emojify }}</h1>
+  </div>
   {{ with .Params.Subtitle }}
-      <h2>{{ emojify . }}</h2>
+      <h2 class="page__subtitle" >{{ . | emojify }}</h2>
   {{ end }}
-  {{ .Content }}
-  <a href="/"><- Home</a>
+  {{ with .Date }}
+    <div class="page__date">
+      {{ .Format "Jan 2, 2006" }}
+    </div>
+  {{ end }}
+  {{ with .Content }}
+  <div class="page__content">
+    {{ . }}
+  </div>
+  {{ end }}
+
+
+  <div class="page__nav">
+    <div class="page__home">
+      <a href="/"><- home</a>
+    </div>
+    <div class="page__all">
+      {{ with .Section}}
+        <a href="/{{ . }}">all {{ . }} -></a>
+      {{ end }}
+    </div>
+  </div>
 {{ end }}

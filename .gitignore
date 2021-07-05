@@ -6,3 +6,7 @@ public
 
 # Vim swap files
 .swp
+
+# Poem images
+content/poems/*/*.jpg
+content/poems/*/*.jpeg

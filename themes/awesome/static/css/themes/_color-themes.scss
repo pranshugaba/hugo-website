@@ -1,12 +1,12 @@
-@use "../abstracts/colors";
+@use "../abstracts/colors" as c;
 
 $themes: (
   light: (
-    bg: $bg--light,
-    text: $text--light,
+    bg: c.$papaya,
+    fg: c.$black
   ),
   dark: (
-    bg: $bg--dark,
-    text: $text--dark,
+    bg: c.$black,
+    fg: c.$papaya
   ),
 );

@@ -16,7 +16,6 @@ lastmod = ["lastmod", ":fileModTime", ":default"]
 
 [markup]
     [markup.highlight]
-        lineNos = true
         style = "dracula"
 
 [minify]

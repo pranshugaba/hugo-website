@@ -2,7 +2,7 @@
 title: Subscribe
 ---
 
-Subscribe to my RSS.
+Subscribe to my RSS
 
 - [All posts](/index.xml)
 - [Articles](/articles/index.xml)
