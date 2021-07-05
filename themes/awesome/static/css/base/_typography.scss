@@ -1,6 +1,7 @@
 html {
   font-size: 125%;
   font-family: 'Inter', sans-serif;
+  text-underline-offset: 0.15em;
 }
 
 h1 {
@@ -74,4 +75,10 @@ sup {
 
 code {
   font-family: monospace;
+}
+
+figcaption {
+  font-size: smaller;
+  max-width: 60ch;
+  text-align: center;
 }

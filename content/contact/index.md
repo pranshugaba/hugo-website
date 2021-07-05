@@ -4,5 +4,5 @@ subtitle: "Get in touch :heart:"
 ---
 
 - email: pranshu@pranshugaba.com  
-- github: https://github.com/pranshugaba  
-- twitter: https://twitter.com/pranshugaba
+- github: [@pranshugaba](https://github.com/pranshugaba)
+- twitter: [@pranshugaba](https://twitter.com/pranshugaba)

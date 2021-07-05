@@ -25,6 +25,6 @@ minifyOutput = true
     tag = "tags"
 
 [params]
-mainSections = ["articles", "poems", "posts", "puzzles", "stories"]
+mainSections = ["poems", "posts", "puzzles", "stories"]
 AuthorName = "Pranshu Gaba"
 GitHubUser = "pranshugaba"

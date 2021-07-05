@@ -3,7 +3,7 @@
 
 title: "The Errand"
 subtitle: ""
-summary: ""
+summary: "A story about a knight who awakes to find himself in the woods. "
 authors: ["pranshu"]
 tags: ["story"]
 categories: []
