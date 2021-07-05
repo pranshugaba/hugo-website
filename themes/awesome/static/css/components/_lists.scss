@@ -16,44 +16,74 @@
 }
 
 .list-section__item {
-  display: grid;
-  grid-template-columns: max-content auto;
-  grid-template-rows: auto;
-  grid-template-areas: 'date details';
-  column-gap: 1.25rem;
+  @media (min-width: 640px) {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto;
+    grid-template-areas: 'dt details';
+    column-gap: 1.25rem;
+  }
 }
 
 .list-yearwise__item {
   display: grid;
-  grid-template-columns: max-content auto max-content;
-  grid-template-rows: auto;
-  grid-template-areas: 'date details type';
+  grid-template-columns: auto auto;
+  grid-template-areas: 'dt tp' 'details details';
+  row-gap: 0.25rem;
   column-gap: 1.25rem;
 
-  @media (max-width: 540px) {
-    grid-template-columns: auto auto;
-    grid-template-areas: 'date type' ' details details';
-    row-gap: 1rem;
-  }
-  & .item__type {
+  .item__type {
+    font-size: smaller;
+    grid-area: tp;
     justify-self: end;
+  }
+
+  @media (min-width: 640px) {
+    grid-template-columns: max-content auto max-content;
+    grid-template-rows: auto;
+    grid-template-areas: 'dt details tp';
+
+    .item__type {
+      font-size: large;
+    }
   }
 }
 
 .list-section__item,
 .list-yearwise__item {
-  & .item__date {
-    grid-area: date;
-    justify-self: start;
-    align-self: start;
-    width: 4.5ch;
-    padding: 0 0.2rem;
-    margin-top: 0.25rem;
-    border-radius: 0.25rem;
+  .item__date {
+    display: flex;
+    gap: 0.25rem;
     font-size: smaller;
-    border: 2px solid black;
+    grid-area: dt;
   }
-
+  @media (min-width: 640px) {
+    .item__date {
+      display: block;
+      justify-self: start;
+      align-self: start;
+      width: 4.5ch;
+      padding: 0 0.2rem;
+      margin-top: 0.25rem;
+      border-radius: 0.25rem;
+      font-size: smaller;
+      border: 2px solid black;
+    }
+    .item__month {
+      font-size: 0.8rem;
+      text-align: center;
+      line-height: 1;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+    .item__day {
+      font-size: 1.2rem;
+      text-align: center;
+      line-height: 1;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+  }
   & .item__details {
     grid-area: details;
     justify-self: start;
@@ -62,21 +92,6 @@
   & .item__summary {
     margin-top: 0.5rem;
   }
-}
-
-.date__month {
-  font-size: 0.8rem;
-  text-align: center;
-  line-height: 1;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-.date__day {
-  font-size: 1.2rem;
-  text-align: center;
-  line-height: 1;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
 }
 
 .list-archive__item {
