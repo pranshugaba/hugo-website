@@ -397,6 +397,7 @@ h4 code {
 .item__title {
   font-weight: 600;
   font-size: larger;
+  line-height: 1.5;
 }
 
 @media (min-width: 640px) {
@@ -415,7 +416,6 @@ h4 code {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-areas: "dt tp" "details details";
-  row-gap: 0.1rem;
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
 }
@@ -542,6 +542,7 @@ h4 code {
   font-weight: 400;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+  line-height: 1.25;
 }
 .page__date {
   font-weight: 400;

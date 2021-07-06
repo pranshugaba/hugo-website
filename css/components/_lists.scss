@@ -14,6 +14,7 @@
 .item__title {
   font-weight: 600;
   font-size: larger;
+  line-height: 1.5;
 }
 
 .list-section__item {
@@ -30,7 +31,6 @@
   display: grid;
   grid-template-columns: auto auto;
   grid-template-areas: 'dt tp' 'details details';
-  row-gap: 0.1rem;
   column-gap: 1.25rem;
 
   .item__type {
