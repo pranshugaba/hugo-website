@@ -117,8 +117,8 @@ body {
 }
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #121212;
-    color: papayawhip;
+    background-color: papayawhip;
+    color: #121212;
   }
 }
 
@@ -149,7 +149,7 @@ figure {
 
 img {
   height: auto;
-  max-width: 80%;
+  max-width: 100%;
 }
 
 figcaption {
@@ -306,7 +306,7 @@ figcaption {
 }
 @media (prefers-color-scheme: dark) {
   .header {
-    border-bottom: 2px solid papayawhip;
+    border-bottom: 2px solid #121212;
   }
 }
 .header__logo {
@@ -345,7 +345,7 @@ figcaption {
 }
 @media (prefers-color-scheme: dark) {
   .footer {
-    border-top: 2px solid papayawhip;
+    border-top: 2px solid #121212;
   }
 }
 .footer a {
