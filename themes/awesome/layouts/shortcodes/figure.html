@@ -3,7 +3,8 @@
     {{ with .Get "link" }}
         <a href="{{ . }}">
     {{ end }}
-    <img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }} />
+    {{ $relSrc := .Get "src" }}
+    <img src="{{ printf "%s%s" .Page.Permalink $relSrc }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }} />
     {{ if .Get "link" }}
         </a>
     {{ end }}

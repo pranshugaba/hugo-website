@@ -147,6 +147,7 @@ figure {
   margin-bottom: 2rem;
 }
 figure img {
+  display: block;
   height: auto;
   max-width: 100%;
   margin: 0;
@@ -154,7 +155,7 @@ figure img {
 figure figcaption {
   font-weight: 400;
   font-size: smaller;
-  margin: 1rem auto;
+  margin: 0.75rem auto;
 }
 
 @font-face {
