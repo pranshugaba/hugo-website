@@ -5,6 +5,7 @@
   {{ with .Params.Subtitle }}
       <h2 class="page__subtitle" >{{ . | emojify }}</h2>
   {{ end }}
+  {{ partial "single/featured.html" . }}
   {{ with .Date }}
     <div class="page__date">
       {{ if eq (.Format "2006") (now.Format "2006")}}
