@@ -1,5 +1,4 @@
 ---
-title: "Hello There :wave:"
 subtitle: I am Pranshu Gaba 
 summary: Personal website of Pranshu Gaba. Here I share photos, poems, puzzles, and more!
 ---
