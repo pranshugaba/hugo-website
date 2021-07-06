@@ -1,5 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nuxtjs on Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/tags/nuxtjs/"/><description>Recent content in nuxtjs on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 07 Jul 2021 01:11:40 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/nuxtjs/index.xml" rel="self" type="application/rss+xml"/><item><title>Redesigning my website</title><link>https://pranshugaba.com/posts/redesigning-my-website/</link><pubDate>Tue, 11 May 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/redesigning-my-website/</guid><description>
-<![CDATA[<p>This site is built using Nuxt.js, and I have had a great time making it.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nuxtjs on Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/tags/nuxtjs/"/><description>Recent content in nuxtjs on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 07 Jul 2021 02:12:32 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/nuxtjs/index.xml" rel="self" type="application/rss+xml"/><item><title>Redesigning my website</title><link>https://pranshugaba.com/posts/redesigning-my-website/</link><pubDate>Tue, 11 May 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/redesigning-my-website/</guid><description>
+<![CDATA[<aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>This post was published on an older version of my site. I have rewritten my site, and many things have changed since then. This site is no longer built using Nuxt.js, but the points that I make were valid at the time of writing this post.</p>
+        
+    </div>
+</aside>
+<p>This site is built using Nuxt.js, and I have had a great time making it.
 The previous version of this website (now retired to <a href="https://hugo.pranshugaba.com" target="_blank" rel="noopener">hugo.pranshugaba.com</a>) was built using Hugo.
 In this post, I outline how I made the switch from Hugo to Nuxt. I hope this helps anyone who is looking to make a static site using Nuxt.</p>
 <p>Hugo is quick to install and very easy to get started with.
