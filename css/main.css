@@ -82,7 +82,7 @@ body {
 
 ol,
 ul {
-  padding-left: 1.5rem;
+  padding-left: 2rem;
   list-style-position: outside;
 }
 
@@ -199,35 +199,35 @@ html {
 
 h1 {
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.25;
   letter-spacing: -0.05em;
   margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 500;
   letter-spacing: -0.025em;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75em;
+  margin-top: 3rem;
+  margin-bottom: 1em;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: -0.025em;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
 }
 
 h4 {
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: -0.025em;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 ul,
@@ -235,7 +235,7 @@ ol,
 p {
   margin-top: 1rem;
   margin-bottom: 1.25rem;
-  line-height: 1.6;
+  line-height: 1.75;
 }
 
 a, a:visited {
@@ -365,6 +365,8 @@ pre {
   margin-top: 1rem;
   margin-bottom: 1rem;
   overflow-x: scroll;
+  font-variant-ligatures: none;
+  line-height: 1.25;
 }
 
 p code,
@@ -377,7 +379,7 @@ kbd {
 }
 
 h4 code {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .items__list {
@@ -412,7 +414,7 @@ h4 code {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-areas: "dt tp" "details details";
-  row-gap: 0.25rem;
+  row-gap: 0.1rem;
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
 }
@@ -439,6 +441,10 @@ h4 code {
   }
 }
 
+.list-section__item,
+.list-yearwise__item {
+  margin-bottom: 1rem;
+}
 .list-section__item .item__date,
 .list-yearwise__item .item__date {
   display: flex;
@@ -454,7 +460,7 @@ h4 code {
     align-self: start;
     width: 4.5ch;
     padding: 0 0.2rem;
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
     border-radius: 0.25rem;
     font-size: smaller;
     border: 2px solid #121212;
@@ -483,7 +489,7 @@ h4 code {
 }
 .list-section__item .item__summary,
 .list-yearwise__item .item__summary {
-  margin-top: 0.4rem;
+  margin-top: 0;
 }
 
 .list-archive__item {
@@ -509,14 +515,32 @@ h4 code {
   justify-content: space-between;
 }
 
+.page__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.page__subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
 .page__date {
-  margin-top: 2rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.page__featuredimage {
+  margin-top: 1rem;
+  margin-bottom: -0.5rem;
+  border-radius: 0.5rem;
 }
 .page__content {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 .page__tags {
-  margin-top: 2rem;
+  margin-top: 4rem;
   display: flex;
   gap: 0.5rem;
   font-size: smaller;
@@ -528,6 +552,12 @@ h4 code {
 }
 .page__tags a:hover {
   text-decoration: underline;
+}
+.page__tags li {
+  line-height: 1;
+  padding: 0.25rem;
+  border: 2px solid black;
+  border-radius: 0.25rem;
 }
 .page__nav {
   margin-top: 2rem;
