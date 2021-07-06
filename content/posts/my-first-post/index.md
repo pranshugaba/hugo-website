@@ -3,7 +3,7 @@ title: 'My First Post'
 date: 2020-02-21T14:06:32+05:30
 summary: 'A trial of features of Hugo'
 subtitle: 'A trial of features of Hugo'
-draft: false
+draft: true
 math: true
 ---
 
