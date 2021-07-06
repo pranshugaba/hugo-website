@@ -3,9 +3,9 @@
 
 name = "Awesome"
 license = "MIT"
-licenselink = "https://github.com/pranshugaba/yourtheme/blob/master/LICENSE"
+licenselink = ""
 description = ""
-homepage = "http://example.com/"
+homepage = ""
 tags = []
 features = []
 min_version = "0.41.0"
