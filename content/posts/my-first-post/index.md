@@ -8,7 +8,26 @@ math: true
 ---
 
 This is my first post on Hugo. I am going to design my own theme!
+
+
+## Testing custom admonitions
+
+
+{{< note class="also-see" >}}
+Hello, this is _italic_ and this is **bold**. 
+This is a link to [home]({{< ref "/" >}}).
+This is an image. 
+
+- these are
+- some 
+- bullet points.
+{{< /note >}}
+
+## Other cool stuff
+
+
 Here's a simple footnote[^1], and here's a longer one.
+
 
 [^1]: This is the first footnote.
 
@@ -31,3 +50,4 @@ This is a tasklist
 - [x] Write the press release
 - [ ] Update the website
 - [ ] Contact the media
+

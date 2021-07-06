@@ -1,0 +1,15 @@
+{{- $markdown := .Inner | markdownify -}}
+
+
+<aside class="admonition  {{ with .Get "class" }}{{.}}{{ end }} ">
+    <div class="admonition__title">
+        {{ if .Get "class" }}{{ .Get "class" | humanize }}{{ else }}Note{{ end }}
+    </div>
+	<div class="admonition__content">
+        {{ if not ( findRE "<[h|p][^>]*>" $markdown ) }}
+            <p>{{ $markdown }}</p>
+        {{ else }}
+            {{ $markdown }}
+        {{ end }}
+    </div>
+</aside>

@@ -73,11 +73,9 @@ You can download Godot for free from [Godot's website](https://godotengine.org/d
 your operating system, download the Standard version, and extract
 and run!
 
-<post-info-box type="quote" title="aside">
-btw, I use arch.
-If you use Arch Linux, installing Godot is even easier.
-Just <code>pacman -S godot</code>!
-</post-info-box>
+{{< note class="aside" >}}
+btw, I use arch.  If you use Arch Linux, installing Godot is even easier.  Just `pacman -S godot`!
+{{< /note >}}
 
 This guide uses Godot 3.3.2, the latest stable version available at the time
 of writing. Godot tries to maintain backward compatibility, so this guide should work for future versions of Godot 3 as well.
@@ -114,25 +112,17 @@ The answers to these questions will directly impact the decisions you take when 
 - A multiplayer game will have different input systems and networking requirements compared to a single-player game.
 - Games developed for mobile will have a different interface compared to games developed for desktop.
 
-<post-info-box type="note">
+{{< note >}}
 Of course, the answers to these questions are not fixed; they will most likely change as you work on the game. 
 As you build the game and test it, you might find that a feature you had planned doesn't do well in practice.
-<ul>
-<li>
-You might come up with a better alternative during development.
-</li>
-<li>
-Your idea might be too complex to explain to the player.
-</li>
-<li>
-It might not be as exciting as you thought it would be.
-</li>
-<li>
-It might be hard to implement because of some technical limitations.
-</li>
-</ul>
+
+- You might come up with a better alternative during development.
+- Your idea might be too complex to explain to the player.
+- It might not be as exciting as you thought it would be.
+- It might be hard to implement because of some technical limitations.
+
 Be open to making changes to your game as you work on it. 
-</post-info-box>
+{{< /note >}}
 
 Let's answer these questions for our X and O game.
 
@@ -143,7 +133,7 @@ Let's answer these questions for our X and O game.
 - It can be played on desktop.
 - The player clicks on the squares to enter symbols.
 - I have made a rough sketch how the interface would look like. This will be a simple game with just one scene. In more complex games, we would need more scenes.
-  {{< figure src="img/sketch.png" title="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play." >}}
+  {{< figure src="img/sketch.png" caption="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play." >}}
 - We will describe the gameplay loop using a flowchart. It will also tell us how long a session will last.
 
 ### The gameplay loop
@@ -153,7 +143,7 @@ We want to explicitly state how the game receives inputs, what decisions it take
 
 "X and O" is a small and simple game, so its gameplay loop is simple too.
 
-{{< figure src="img/gameloop.png" title="The gameplay loop" >}}
+{{< figure src="img/gameloop.png" caption="The gameplay loop" >}}
 
 To summarise:
 
@@ -175,7 +165,7 @@ Select "Create & Edit" to create the project.
 
 By default, when we start a new project, Godot starts in 3D mode. We are making a 2D game, so switch to 2D mode by clicking on "2D" at the top. The default shortcut to enter 2D mode is <kbd>Ctrl</kbd> + <kbd>F1</kbd>.
 
-{{< figure src="img/2d-mode.png" title="Click on 2D." >}}
+{{< figure src="img/2d-mode.png" caption="Click on 2D." >}}
 
 Screens come in a variety of shapes and sizes. Some are square, some are tall, some are wide.
 We want our game to render correctly on all screens.
@@ -208,15 +198,17 @@ You can <NavExtLink to="/">download my assets</NavExtLink>, or you can make your
 
 {{< figure src="img/sprites.png" >}}
 
-<post-info-box>
-I made the png files for X, O, and the grid using <nav-ext-link to="https://inkscape.org/">Inkscape</nav-ext-link>. It is an excellent application for making vector art. It is free software, and I highly recommend it.
-</post-info-box>
+{{< note >}}
+I made the png files for X, O, and the grid using [Inkscape](https://inkscape.org/). It is an excellent application for making vector art. It is free software, and I highly recommend it.
+{{< /note >}}
 
 I have included the `Inter` font in the assets. I chose this font because it looks sharp even at low resolutions and it goes well with the "X" and "O" sprites that I have made. You can use any font that goes with your theme.
 
 {{< figure src="img/font.png" >}}
 
-> You can get fonts on websites such as <nav-ext-link to="https://fonts.google.com/">Google fonts</nav-ext-link> and <nav-ext-link to="https://www.dafont.com/theme.php?cat=501&l[]=10">dafont.com</nav-ext-link>. Make sure you have the rights to use the font you choose.
+{{< note >}}
+You can get fonts on websites such as [Google fonts](https://fonts.google.com/) and [dafont.com](https://www.dafont.com/theme.php?cat=501&l[]=10). Make sure you have the rights to use the font you choose.
+{{< /note >}}
 
 We need to add these assets to our project in Godot.
 Make an `assets` folder in your game's root folder `x-and-o` using your file manager. (Use File Explorer if you are using Windows, Finder if you are on macOS). Move the sprites and the font in it.
@@ -230,9 +222,9 @@ We have imported all the resources that we need in Godot. We can now start build
 
 Whether we want to display an image, play a sound, or display some text in Godot, we do so by adding a node for it. A Godot game is made by composing together different kinds of nodes.
 
-<post-info-box>
-Read the <nav-ext-link to="https://docs.godotengine.org/en/stable/getting_started/step_by_step/scenes_and_nodes.html">Godot docs on Scenes and Nodes</nav-ext-link> to understand how they work.
-</post-info-box>
+{{< note >}}
+Read the [Godot docs on Scenes and Nodes](https://docs.godotengine.org/en/stable/getting_started/step_by_step/scenes_and_nodes.html) to understand how they work.
+{{< /note >}}
 
 We will add a root node that will hold all nodes in our game.
 Click on `Create root node` -> `2D node` in the Scene tab. This will create a root node named `Node2D`. Rename it to `Game`.
@@ -244,9 +236,9 @@ Make a `scenes` folder in the root directory and save this scene in it as `Game.
 
 {{< figure src="img/save-game-scene.png" >}}
 
-<post-info-box>
-Scenes are saved with the <code>.tscn</code> file extension.
-</post-info-box>
+{{< note >}}
+Scenes are saved with the `.tscn` file extension.
+{{< /note >}}
 
 Run the game by clicking the play button (or press <kbd>F5</kbd>). The first time you run the game, Godot will ask you to set the main scene. The main scene is the scene that loads when you run the game. Select the `Game.tscn` scene we just saved.
 
@@ -291,10 +283,11 @@ I made three new `Label` nodes with names `WinCondition`, `PlayerTurn`, and `Pla
 
 {{< figure src="img/four-labels.png" >}}
 
-<post-info-box type="tip">
+{{< note class="tip" >}}
 Enable "Grid Snap" in the toolbar to make it easier to align items.
-{{< figure src="img/grid-snap.png" >}}
-</post-info-box>
+
+![](img/grid-snap.png)
+{{< /note >}}
 
 Our text looks good. Next, we will add the grid.
 
@@ -398,12 +391,11 @@ func _ready():
 #	pass
 ```
 
-<post-info-box>
-Lines starting with <code>#</code> are called comments. These are for humans to read and are ignored by the compiler. 
-<br/>
-<br/>
+{{< note >}}
+Lines starting with `#` are called comments. These are for humans to read and are ignored by the compiler. 
+
 Write concise comments that will help anyone who reads your code understand how your code works. The person reading the code could also be you from the future, and Future You would thank you for the well-documented code.
-</post-info-box>
+{{< /note >}}
 
 The `_ready` method is called when the `Game` node and all its children have entered the scene tree and have become active. Therefore, any work that we want to do when the game starts, we do it in `_ready`.
 This mostly involves initialising variables.
@@ -412,15 +404,13 @@ The `_process` method is called every frame. Anything that must be done every fr
 
 Since the function `_ready` contains only `pass`, and `_process` is commented out, these functions don't do anything now.
 
-<post-info-box type="tip">
+{{< note class="tip" >}}
 You can <kbd>Ctrl</kbd>+Click on any inbuilt function to read its documentation. You can also search for help or open online docs directly from the script editor.
-<br/>
-<br/>
-If you find any Godot term unclear, refer to the <nav-ext-link to="https://docs.godotengine.org/en/stable/index.html">Godot docs</nav-ext-link>. 
-<br/>
-<br/>
-{{< figure src="/img/online-docs.png" >}}
-</post-info-box>
+
+If you find any Godot term unclear, refer to the [Godot docs](https://docs.godotengine.org/en/stable/index.html).
+
+![](img/online-docs.png)
+{{< /note >}}
 
 Let's look at the gameplay loop again. The game takes decisions based on the state of the game. We need a way to store the game's state.
 
@@ -504,31 +494,27 @@ We will be able to read/edit the properties of the nodes using these references.
 
 We get a reference to a node using the `get_node` method. To access a node, we pass the path of the node relative to the current node (the node that the script is attached to) to `get_node`.
 
-<post-info-box type="example" title="Examples">
-<ul>
-<li>
- Access the <code>Grid</code> node with <code>get_node("Grid")</code>.
-</li>
-<li>
- Access the <code>GridCell2</code> node with <code>get_node("Grid/GridCell2")</code>.
-</li>
-<li>
- Access the <code>CellSymbol</code> node of <code>GridCell3</code> with <code>get_node("Grid/GridCell3/CellSymbol")</code>.
-</li>
- </ul>
-  </post-info-box>
+{{< note class="example" >}}
+Access the `Grid` node with `get_node("Grid")`.  
 
-<post-info-box>
-For more details, you can read the reference page for <nav-ext-link to="https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-get-node">get_node</nav-ext-link>.
-</post-info-box>
+Access the `GridCell2` node with `get_node("Grid/GridCell2")`.  
+
+Access the `CellSymbol` node of `GridCell3` with `get_node("Grid/GridCell3/CellSymbol")`.
+{{< /note >}}
+
+{{< note >}}
+For more details, you can read the reference page for 
+[get_node](https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-get-node)
+{{< /note >}}
 
 Since accessing nodes is a common pattern in Godot, there is a shorthand notation for it. We can write `$Grid/GridSprite` instead of `get_node("Grid/GridSprite")`. We will follow this shorter notation from now on.
 
-<post-info-box type="tip" >
+{{< note class="tip" >}}
 The Godot editor will help you autocomplete the name of the node as soon as you type the dollar symbol.
 Make sure the node your script is attached to is active.
-{{< figure src="img/autocomplete.png" >}}
-</post-info-box>
+
+![](img/autocomplete.png)
+{{< /note >}}
 
 Once we have a reference to a node, we can manipulate it. Any changes that we can make in the Inspector tab, we can also make in our script. If you hover your mouse over any property in the inspector tab, you will see the name of the property that you can use in scripts.
 
@@ -564,17 +550,15 @@ func _ready():
 This code works, but there is a lot of repetition. It is difficult to read it or make changes to it.
 If you find yourself repeating the same code a lot, there is probably a better way to write it.
 
-<post-info-box type="tip">
-<nav-ext-link to="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">Don't repeat yourself</nav-ext-link> too often.
-</post-info-box>
+{{< note class="tip" >}}
+[Don't repeat yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) too often. 
+{{< /note >}}
 
 We _can_ do better. We can make use of the <NavExtLink to="https://docs.godotengine.org/en/stable/classes/class_node.html?#class-node-method-get-children">get_children</NavExtLink> method. This method takes as an argument a reference to a node and returns an array of references to the children of the node.
 
-<post-info-box title="Note">
-Also see the 
-<nav-ext-link to="https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-get-child">get_child</nav-ext-link>
-method
-</post-info-box>
+{{< note >}}
+Also see [get_child](https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-get-child) method.
+{{< /note >}}
 
 Create a node of type `Node2D` in `Grid` and name it `GridCells`. Select all nine `GridCell` nodes and drag them on to `GridCells` to make them children of `GridCells`.
 Now, all `GridCell` we want to access are children of `GridCells`.
@@ -628,9 +612,9 @@ func _ready():
 
 If you print `cells[0].value` after the initialisation, you will see it has `value` equal `0` and not `Null`.
 
-<post-info-box type="tip" >
-You can check the state of any variable using the <code>print</code> method. It is very useful for debugging. 
-</post-info-box>
+{{< note class="tip" >}}
+You can check the state of any variable using the `print` method. It is very useful for debugging. 
+{{< /note >}}
 
 ### Listening for clicks using signals
 
@@ -652,9 +636,10 @@ if cell is clicked:
 	call play_turn in Game.gd
 ```
 
-<post-info-box>
+{{< note >}}
 The above code is pseudocode. It does not follow the syntax of GDScript, but it conveys a sketch of how the code would look like.
-</post-info-box>
+{{< /note >}}
+
 
 This is acceptable for a small game, but it would quickly get out of hand as the game becomes bigger. For every node that needs to
 react to the cell being clicked, we would need to call a method in `GridCell.gd`.
@@ -687,20 +672,20 @@ if signal is received:
 
 The concerns remain separated, and the code is more organised and manageable.
 
-<post-info-box title="Note">
-Read the Godot docs for 
-<nav-ext-link to=" https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html ">signals</nav-ext-link>
-</post-info-box>
+{{< note >}}
+Read the Godot docs for [signals](https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html).
+{{< /note >}}
 
 As you have seen, signals are a very important concept in game development. We will now see how to implement this in Godot.
 
 Nodes in Godot can emit signals when certain events occur.
 Each node in Godot has some signals predefined in them. You can see the signals defined for any node by clicking on the Node tab next to the Inspector tab.
 
-<post-info-box type="example">
+{{< note class="example" >}}
 A sprite node can emit a signal when its texture is changed, when its visibility changes, and so on.
-<base-figure src="/img/articles/x-and-o/sprite-signals.png" :caption="false"> </base-figure>
-</post-info-box>
+
+![](img/sprite-signals.png)
+{{< /note >}}
 
 We can also make our own custom signals.
 For example, in our game, we can make a signal named `cell_clicked` for `GridCell`. We do this by declaring it in `GridCell.gd`.
@@ -716,10 +701,10 @@ if cell is clicked:
 	emit_signal("cell_clicked")
 ```
 
-<post-info-box type="warning">
-The above code won't work because the syntax of the <code>if</code> statement is incorrect.
+{{< note class="warning" >}}
+The above code won't work because the syntax of the `if` statement is incorrect.
 Comment this lines out for now. We will fix this soon.
-</post-info-box>
+{{< /note >}}
 
 Nodes can also listen for signals.
 We want the `Game` node to listen for the `cell_clicked` signal emitted by a `GridCell` node.
@@ -765,24 +750,19 @@ func _on_GridCell_input_event(viewport, event, shape_idx):
 	pass
 ```
 
-<post-info-box type="tip">
+{{< note class="tip" >}}
 Notice the signal icon in the margin. This indicates that this method is called by a function. You can click on this icon to see more details about the signal.
-<base-figure src="/img/articles/x-and-o/signal-icon.png" :caption="false"> </base-figure>
-</post-info-box>
+
+![](img/signal-icon.png)
+{{< /note >}}
 
 The `_on_GridCell_input_event` takes in three parameters. The signal contains some information about the `input_event` and we can access it in this method.
 
-<post-info-box type="example" title="Try it yourself">
-Use <code>print</code> to figure out when this signal is emitted.
-<br/>
-<br/>
-<strong>Hint:</strong> Add <code>print(event)</code> to <code>_on_GridCell_input_event</code>. Run the game and work out what generates an output.
-</post-info-box>
+{{< note type="example" >}}
+Use `print` to figure out when this signal is emitted.
 
-<post-info-box title="Note">
-Read the Godot docs for 
-<nav-ext-link to="https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html">signals</nav-ext-link>
-</post-info-box>
+**Hint:** Add `print(event)` to `_on_GridCell_input_event`. Run the game and work out what generates an output.
+{{< /note >}}
 
 If you add `print(event)` in the method and run the game, you will see that moving your mouse on a cell creates an `InputEventMouseMotion` event, and clicking on a cell creates an `InputEventMouseButton` event.
 
@@ -803,10 +783,9 @@ func _on_GridCell_input_event(viewport, event, shape_idx):
 		print(event)
 ```
 
-<post-info-box title="Note">
-Read the Godot docs for 
-<nav-ext-link to="https://docs.godotengine.org/en/stable/classes/class_inputevent.html">inputevent</nav-ext-link>
-</post-info-box>
+{{< note >}} 
+Read the Godot docs for [inputevent]( https://docs.godotengine.org/en/stable/classes/class_inputevent.html).
+{{< /note >}}
 
 This is working well. We are printing an event if and only if a cell is clicked. We can replace `print` with `emit_signal`.
 
@@ -835,13 +814,13 @@ Since the signal is now carrying additional data, we need to update its declarat
 signal cell_clicked(cell)
 ```
 
-<post-info-box type="error">
+{{< note class="error" >}}
 If we run the game now, we get an error:
-<br/>
-<code>The method expected 0 arguments, but called with 1. </code>
-<br/>
+
+	The method expected 0 arguments, but called with 1.
+
 We get this error because the number of arguments taken by the called method does not agree with the data carried by the signal. 
-</post-info-box>
+{{< /note >}}
 
 We fix this by adding an argument to `play_turn`. We can print the name of the cell and see if it's correct.
 
@@ -1211,7 +1190,7 @@ Some new features that can be added:
 
 Hurray! Make it on your own. Improve it, publish it. Make more games!
 
-If you are curious to know how the Godot Engine works, head over <NavExtLink to="https://github.com/godotengine/godot">Godot's GitHub page</NavExtLink> and look at its Godot's source code. You can see how it's made and how it works.
+If you are curious to know how the Godot Engine works, head over [Godot's GitHub page](https://github.com/godotengine/godot) and look at its Godot's source code. You can see how it's made and how it works.
 You can report bugs and submit improvements here.
 
 If you enjoyed this guide and found it useful, consider supporting my work on Ko-fi. I would love to write more guides on game development and your support will go a long way.

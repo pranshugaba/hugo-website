@@ -2,13 +2,16 @@ figure {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
 
-img {
-  height: auto;
-  max-width: 100%;
-}
+  img {
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+  }
 
-figcaption {
-  margin: 0.5rem auto 1rem;
+  figcaption {
+    font-weight: 400;
+    font-size: smaller;
+    margin: 1rem auto;
+  }
 }

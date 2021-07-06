@@ -146,14 +146,15 @@ figure {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-
-img {
+figure img {
   height: auto;
   max-width: 100%;
+  margin: 0;
 }
-
-figcaption {
-  margin: 0.5rem auto 1rem;
+figure figcaption {
+  font-weight: 400;
+  font-size: smaller;
+  margin: 1rem auto;
 }
 
 @font-face {
@@ -234,7 +235,7 @@ ul,
 ol,
 p {
   margin-top: 1rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   line-height: 1.75;
 }
 
@@ -505,6 +506,23 @@ h4 code {
     gap: 0.5rem;
     justify-content: space-between;
   }
+}
+
+.admonition {
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.admonition__title, .admonition__content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.admonition__title {
+  font-weight: 700;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid black;
 }
 
 .home__pager {
