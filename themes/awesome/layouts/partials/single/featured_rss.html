@@ -1,4 +1,0 @@
-{{ $img := (.Resources.ByType "image").GetMatch "*featured*" }} {{ with $img }}
-{{ $big := .Fill "1200x800 center" }} {{ $small := $big.Resize "480x" }}
-<img src="{{ $big.RelPermalink }}" alt="{{ $img.Title }}" />
-{{ end }}

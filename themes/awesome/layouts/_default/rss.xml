@@ -31,7 +31,10 @@
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       <guid>{{ .Permalink }}</guid>
-      <description>{{- partial "single/featured_rss.html" . -}}{{ .Content | html }}</description>
+      {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
+      <description>
+          {{ "<![CDATA[" | safeHTML }}{{ with $img }}{{ $big := .Fill "1200x800 center" }}{{ "<" | safeHTML }}img src="{{ $big.Permalink }}" alt="" /{{ ">" | safeHTML }}{{ end }}{{ .Content | safeHTML }}{{"]]>" | safeHTML }}
+      </description>
     </item>
     {{ end }}
   </channel>
