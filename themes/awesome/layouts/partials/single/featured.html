@@ -2,6 +2,7 @@
 <figure class="page__featuredimage">
   {{ $big := .Fill "1200x800 center" }} {{ $small := $big.Resize "480x" }}
   <img
+    src="{{ $big.RelPermalink }}"
     srcset="{{ $small.RelPermalink }} 1x, {{ $big.RelPermalink }} 2x"
     alt="{{ $img.Title }}"
     height="{{ $big.Height }}"
