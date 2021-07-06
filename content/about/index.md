@@ -21,9 +21,9 @@ I am currently reading _Dune_ by Frank Herbert.
 
 There are currently
 
-- {{< countposts poems >}} poems,
-- {{< countposts posts >}} posts,
-- and {{< countposts puzzles >}} puzzles
+- [{{< countposts poems >}} poems]({{< ref "/poems" >}}),
+- [{{< countposts posts >}} posts]({{< ref "/posts" >}}),
+- and [{{< countposts puzzles >}} puzzles]({{< ref "/puzzles" >}})
 
 on this website.
 
