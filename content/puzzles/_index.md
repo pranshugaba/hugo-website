@@ -1,5 +1,4 @@
 ---
 title: Puzzles
+subtitle: Here there be puzzles
 ---
-
-Here there be puzzles

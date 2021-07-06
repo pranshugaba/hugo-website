@@ -1,11 +1,8 @@
 {{ define "main"}}
-  <div class="page__title">
-    <h1>{{ .Title | emojify }}</h1>
-  </div>
+  <h1 class="page__title">{{ .Title | emojify }}</h1>
   {{ with .Params.Subtitle }}
       <h2 class="page__subtitle" >{{ . | emojify }}</h2>
   {{ end }}
-  {{ partial "single/featured.html" . }}
   {{ with .Date }}
     <div class="page__date">
       {{ if eq (.Format "2006") (now.Format "2006")}}
@@ -15,17 +12,21 @@
       {{ end }}
     </div>
   {{ end }}
+  {{ partial "single/featured.html" . }}
   {{ with .Content }}
   <div class="page__content">
     {{ . }}
   </div>
   {{ end }}
 
-  <ul class="page__tags">
-    {{ range (.GetTerms "tags") }}
-        <li><a href="{{ .Permalink }}">#{{ .LinkTitle }}</a></li>
-    {{ end }}
+  {{ $tags := .GetTerms "tags" }}
+  {{ with $tags }}
+    <ul class="page__tags">
+      {{ range . }}
+          <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{ end }}
     </ul>
+  {{ end}}
 
   <div class="page__nav">
     <div class="page__home">

@@ -1,10 +1,18 @@
 ---
 title: Subscribe
+subtitle: "RSS feeds for this site"
 ---
 
-Subscribe to my RSS
+## All posts  
+https://awesome.pranshugaba.com/index.xml
 
-- [All posts](/index.xml)
-- [Articles](/articles/index.xml)
-- [Poems](/poems/index.xml)
-- [Puzzles](/puzzles/index.xml)
+## Sectionwise
+
+### writings
+https://awesome.pranshugaba.com/posts/index.xml
+
+### poems
+https://awesome.pranshugaba.com/poems/index.xml
+
+### puzzles
+https://awesome.pranshugaba.com/puzzles/index.xml

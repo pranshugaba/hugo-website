@@ -3,6 +3,8 @@ title: Contact Me
 subtitle: "Get in touch :heart:"
 ---
 
-- email: pranshu@pranshugaba.com  
-- github: [@pranshugaba](https://github.com/pranshugaba)
-- twitter: [@pranshugaba](https://twitter.com/pranshugaba)
+Give feedback on my posts, share something interesting, or just say hello! 
+
+- :email: pranshu@pranshugaba.com  
+- :smiley_cat: [/@pranshugaba](https://github.com/pranshugaba)
+- :bird: [/@pranshugaba](https://twitter.com/pranshugaba)

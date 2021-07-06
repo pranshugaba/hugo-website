@@ -1,7 +1,9 @@
 {{ define "main" }}
 
-<h1>Archive</h1>
-
+<h1>{{ .Title | emojify }}</h1>
+{{ with .Params.Subtitle }}
+    <h2 class="page__subtitle" >{{ . | emojify }}</h2>
+{{ end }}
 {{ .Content }}
 
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
