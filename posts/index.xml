@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/posts/"/><description>Recent content in Posts on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 07 Jul 2021 00:49:57 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/posts/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/building-x-and-o-using-godot/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/posts/"/><description>Recent content in Posts on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 07 Jul 2021 01:11:40 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/posts/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/building-x-and-o-using-godot/</guid><description>
 <![CDATA[<p>Do you love playing video games? I sure do! I enjoy making games too, and it&rsquo;s highly likely that you would too.
 Game development is an umbrella term for ranging from designing levels, mechanics to coding the logic to making art and music.
 It has a little something for everyone. If you would like to learn how to make games, then this guide is a great place to start, if I do say so myself.</p>
@@ -122,7 +122,8 @@ As you build the game and test it, you might find that a feature you had planned
 
 <figure >
     
-    <img src="img/sketch.png" alt="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play." />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/sketch.png" alt="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play." />
     
     
     <figcaption>
@@ -146,7 +147,8 @@ We want to explicitly state how the game receives inputs, what decisions it take
 
 <figure >
     
-    <img src="img/gameloop.png" alt="The gameplay loop" />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/gameloop.png" alt="The gameplay loop" />
     
     
     <figcaption>
@@ -176,7 +178,8 @@ Select &ldquo;Create &amp; Edit&rdquo; to create the project.</p>
 
 <figure >
     
-    <img src="img/create-project.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/create-project.png"  />
     
     
 </figure>
@@ -185,7 +188,8 @@ Select &ldquo;Create &amp; Edit&rdquo; to create the project.</p>
 
 <figure >
     
-    <img src="img/2d-mode.png" alt="Click on 2D." />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/2d-mode.png" alt="Click on 2D." />
     
     
     <figcaption>
@@ -208,7 +212,8 @@ We will target a fixed resolution, so we do not have to worry about making the l
 
 <figure >
     
-    <img src="img/project-settings-menu.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/project-settings-menu.png"  />
     
     
 </figure>
@@ -231,7 +236,8 @@ You can <!-- raw HTML omitted -->download my assets<!-- raw HTML omitted -->, or
 
 <figure >
     
-    <img src="img/sprites.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/sprites.png"  />
     
     
 </figure>
@@ -250,7 +256,8 @@ You can <!-- raw HTML omitted -->download my assets<!-- raw HTML omitted -->, or
 
 <figure >
     
-    <img src="img/font.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/font.png"  />
     
     
 </figure>
@@ -271,7 +278,8 @@ When you open Godot, you will see those files in the FileSystem tab.</p>
 
 <figure >
     
-    <img src="img/filetree.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/filetree.png"  />
     
     
 </figure>
@@ -294,7 +302,8 @@ Click on <code>Create root node</code> -&gt; <code>2D node</code> in the Scene t
 
 <figure >
     
-    <img src="img/root-node.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/root-node.png"  />
     
     
 </figure>
@@ -304,7 +313,8 @@ Make a <code>scenes</code> folder in the root directory and save this scene in i
 
 <figure >
     
-    <img src="img/save-game-scene.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/save-game-scene.png"  />
     
     
 </figure>
@@ -323,7 +333,8 @@ Make a <code>scenes</code> folder in the root directory and save this scene in i
 
 <figure >
     
-    <img src="img/play-button.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/play-button.png"  />
     
     
 </figure>
@@ -337,7 +348,8 @@ Close the window (or press <!-- raw HTML omitted -->F8<!-- raw HTML omitted -->)
 
 <figure >
     
-    <img src="img/label-node.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/label-node.png"  />
     
     
 </figure>
@@ -347,7 +359,8 @@ Rename the name of this node to <code>GameName</code> because that&rsquo;s what 
 
 <figure >
     
-    <img src="img/scene-tree-gamename.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/scene-tree-gamename.png"  />
     
     
 </figure>
@@ -356,7 +369,8 @@ Rename the name of this node to <code>GameName</code> because that&rsquo;s what 
 
 <figure >
     
-    <img src="img/inspector-label-text.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/inspector-label-text.png"  />
     
     
 </figure>
@@ -365,7 +379,8 @@ Rename the name of this node to <code>GameName</code> because that&rsquo;s what 
 
 <figure >
     
-    <img src="img/label-bad.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/label-bad.png"  />
     
     
 </figure>
@@ -374,7 +389,8 @@ Rename the name of this node to <code>GameName</code> because that&rsquo;s what 
 
 <figure >
     
-    <img src="img/new-dynamic-font.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/new-dynamic-font.png"  />
     
     
 </figure>
@@ -383,7 +399,8 @@ Rename the name of this node to <code>GameName</code> because that&rsquo;s what 
 
 <figure >
     
-    <img src="img/dynamic-font.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/dynamic-font.png"  />
     
     
 </figure>
@@ -393,7 +410,8 @@ I made three new <code>Label</code> nodes with names <code>WinCondition</code>, 
 
 <figure >
     
-    <img src="img/four-labels.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/four-labels.png"  />
     
     
 </figure>
@@ -421,7 +439,8 @@ We do not see any change in our game because the sprite does not have a texture.
 
 <figure >
     
-    <img src="img/large-grid.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/large-grid.png"  />
     
     
 </figure>
@@ -430,7 +449,8 @@ We do not see any change in our game because the sprite does not have a texture.
 
 <figure >
     
-    <img src="img/scale-grid.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/scale-grid.png"  />
     
     
 </figure>
@@ -439,7 +459,8 @@ We do not see any change in our game because the sprite does not have a texture.
 
 <figure >
     
-    <img src="img/correct-grid.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/correct-grid.png"  />
     
     
 </figure>
@@ -453,7 +474,8 @@ We get this warning because we have an <code>Area2D</code> node, but we haven&rs
 
 <figure >
     
-    <img src="img/new-rectangle-2d.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/new-rectangle-2d.png"  />
     
     
 </figure>
@@ -463,7 +485,8 @@ Using Grid Snap will make it easier to fit the CollisionShape2D on the cell perf
 
 <figure >
     
-    <img src="img/collision-shape.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/collision-shape.png"  />
     
     
 </figure>
@@ -478,7 +501,8 @@ However, if we want to make any changes to this node in the future, we would hav
 
 <figure >
     
-    <img src="img/open-scene.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/open-scene.png"  />
     
     
 </figure>
@@ -487,7 +511,8 @@ However, if we want to make any changes to this node in the future, we would hav
 
 <figure >
     
-    <img src="img/nine-gridcells.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/nine-gridcells.png"  />
     
     
 </figure>
@@ -496,7 +521,8 @@ However, if we want to make any changes to this node in the future, we would hav
 
 <figure >
     
-    <img src="img/grid-complete.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/grid-complete.png"  />
     
     
 </figure>
@@ -512,7 +538,8 @@ You can read the <a href="https://docs.godotengine.org/en/stable/getting_started
 
 <figure >
     
-    <img src="img/attach-script.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/attach-script.png"  />
     
     
 </figure>
@@ -521,7 +548,8 @@ You can read the <a href="https://docs.godotengine.org/en/stable/getting_started
 
 <figure >
     
-    <img src="img/attach-script-dialog.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/attach-script-dialog.png"  />
     
     
 </figure>
@@ -665,7 +693,8 @@ Make sure the node your script is attached to is active.</p>
 
 <figure >
     
-    <img src="img/hover-property.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/hover-property.png"  />
     
     
 </figure>
@@ -851,7 +880,8 @@ We are listening for the signal in the <code>GridCell</code> node as well. This 
 
 <figure >
     
-    <img src="img/gridcell-signal.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/gridcell-signal.png"  />
     
     
 </figure>
@@ -1158,7 +1188,8 @@ A lot of the code that we require is already in <code>_ready</code>. We would li
 
 <figure >
     
-    <img src="img/reset-input.png"  />
+    
+    <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/reset-input.png"  />
     
     
 </figure>
