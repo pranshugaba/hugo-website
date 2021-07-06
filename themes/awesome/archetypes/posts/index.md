@@ -1,9 +1,15 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
+subtitle: ""
+summary: ""
+
 date: {{ .Date }}
-description: ""
+lastmod: {{ .Date }}
+
 tags: []
-categories: []
+
+math: false
 
 draft: true
+featured: false
 ---

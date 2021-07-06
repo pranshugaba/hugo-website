@@ -13,7 +13,7 @@ tags: ['godot', 'gamedev']
 category: gamedev
 
 date: 2021-06-29T19:30:00+05:30
-updatedAt: 2021-06-29T19:30:00+05:30
+lastmod: 2021-06-29T19:30:00+05:30
 
 showReadingTime: false
 math: false

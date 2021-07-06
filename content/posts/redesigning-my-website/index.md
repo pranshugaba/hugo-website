@@ -13,7 +13,7 @@ tags: ["nuxtjs", "vuejs", "webdev"]
 category: webdev
 
 date: 2021-05-11T19:30:00+05:30
-updatedAt: 2021-05-11T19:30:00+05:30
+lastmod: 2021-05-11T19:30:00+05:30
 
 showReadingTime: true
 math: true
@@ -22,6 +22,10 @@ toc: false
 draft: false
 featured: false
 ---
+
+{{< note >}}
+This post was published on an older version of my site. I have rewritten my site, and many things have changed since then. This site is no longer built using Nuxt.js, but the points that I make were valid at the time of writing this post. 
+{{< /note >}}
 
 This site is built using Nuxt.js, and I have had a great time making it.
 The previous version of this website (now retired to [hugo.pranshugaba.com](https://hugo.pranshugaba.com)) was built using Hugo.
