@@ -1,1 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vuejs on Pranshu Gaba</title><link>https://pranshugaba.com/tags/vuejs/</link><description>Recent content in vuejs on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en-in</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 11 May 2021 19:30:00 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/vuejs/index.xml" rel="self" type="application/rss+xml"/><item><title>Redesigning my website</title><link>https://pranshugaba.com/posts/redesigning-my-website/</link><pubDate>Tue, 11 May 2021 19:30:00 +0530</pubDate><author>pranshu@pranshugaba.com (Pranshu Gaba)</author><guid>https://pranshugaba.com/posts/redesigning-my-website/</guid><description>Migrating from Hugo to Nuxt.js</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vuejs on Pranshu Gaba</title><link>https://pranshugaba.com/tags/vuejs/</link><description>Recent content in vuejs on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en-in</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 06 Jul 2021 23:51:32 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/vuejs/index.xml" rel="self" type="application/rss+xml"/><item><title>Redesigning my website</title><link>https://pranshugaba.com/posts/redesigning-my-website/</link><pubDate>Tue, 11 May 2021 19:30:00 +0530</pubDate><author>pranshu@pranshugaba.com (Pranshu Gaba)</author><guid>https://pranshugaba.com/posts/redesigning-my-website/</guid><description>&lt;p>This site is built using Nuxt.js, and I have had a great time making it.
+The previous version of this website (now retired to &lt;a href="https://hugo.pranshugaba.com" target="_blank" rel="noopener">hugo.pranshugaba.com&lt;/a>) was built using Hugo.
+In this post, I outline how I made the switch from Hugo to Nuxt. I hope this helps anyone who is looking to make a static site using Nuxt.&lt;/p>
+&lt;p>Hugo is quick to install and very easy to get started with.
+There are a variety of user-submitted themes available, and out of those, the Academic theme was my favourite. It served me well at the beginning, however, customizing it was not pleasant.&lt;/p>
+&lt;p>When I wanted to modify the theme, I would have to override the templates, and in some cases rewrite them completely. This would often cause unintended effects.
+I wanted to create a theme from scratch, and I realized that frameworks such as React and Vue are better suited for this.&lt;/p>
+&lt;p>Some of the popular static site generators are Gridsome, Next.js, and Nuxt.js.&lt;/p>
+&lt;p>I tried out Gridsome first because it was more oriented towards static sites. I learnt GraphQL, which is required to parse the markdown files. I found the syntax quite verbose.&lt;/p>
+&lt;p>Next, I tried out Next.js which uses React. I was surprised to see how easily I could pickup React since I knew Vue. It wasn&amp;rsquo;t easy parsing markdown files. I had to use a third-party plugin &lt;code>next-mdx-remote&lt;/code> which didn&amp;rsquo;t work very well with NextLinks.&lt;/p>
+&lt;p>I discovered the awesome-nuxtjs page on Github, and I loved the number of first-party plugins that Nuxt has.&lt;/p>
+&lt;p>The Nuxt Content module makes it very easy to access markdown files.
+Plugins are great, more contributors and better documentation.&lt;/p>
+&lt;p>I did the theming and styling from scratch and am adding features gradually. I was able to match all the features offered in Hugo, and then some.&lt;/p>
+&lt;h2 id="awesome-features-in-nuxt">Awesome features in Nuxt&lt;/h2>
+&lt;h3 id="prefetching">Prefetching&lt;/h3>
+&lt;p>One of the biggest advantages of using Nuxt is the prefetching. It prefetches the outgoing links on any page, so the links begin to load even before you click on them. This makes the site feel fast and snappy!&lt;/p>
+&lt;h3 id="math-equations">Math equations&lt;/h3>
+&lt;p>Install &lt;code>remark-math&lt;/code> and &lt;code>rehype-katex&lt;/code> modules and we are good to go!&lt;/p>
+&lt;p>I can have inline math $e^{i\pi} + 1 = 0$, and
+displaystyle math too!&lt;/p>
+&lt;p>$$
+\sum_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6}
+$$&lt;/p>
+&lt;h3 id="code-blocks">Code blocks&lt;/h3>
+&lt;p>Prism js comes pre-installed with Nuxt. You can install themes and plugins too.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-rust" data-lang="rust">&lt;span style="color:#ff79c6">fn&lt;/span> &lt;span style="color:#50fa7b">main&lt;/span>() {
+println&lt;span style="color:#ff79c6">!&lt;/span>(&lt;span style="color:#f1fa8c">&amp;#34;Hello, world!&amp;#34;&lt;/span>);
+}
+&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

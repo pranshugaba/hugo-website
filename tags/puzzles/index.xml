@@ -1,1 +1,106 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>puzzles on Pranshu Gaba</title><link>https://pranshugaba.com/tags/puzzles/</link><description>Recent content in puzzles on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en-in</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 06 Apr 2021 00:30:00 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/puzzles/index.xml" rel="self" type="application/rss+xml"/><item><title>A Chess Puzzle</title><link>https://pranshugaba.com/puzzles/2/</link><pubDate>Tue, 06 Apr 2021 00:30:00 +0530</pubDate><author>pranshu@pranshugaba.com (Pranshu Gaba)</author><guid>https://pranshugaba.com/puzzles/2/</guid><description>How many chess pieces can you place so no piece attacks any other piece?</description></item><item><title>The Picture Hanging Puzzle</title><link>https://pranshugaba.com/puzzles/1/</link><pubDate>Tue, 23 Mar 2021 17:30:00 +0530</pubDate><author>pranshu@pranshugaba.com (Pranshu Gaba)</author><guid>https://pranshugaba.com/puzzles/1/</guid><description>Can you hang a picture so that it is easy to remove?</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>puzzles on Pranshu Gaba</title><link>https://pranshugaba.com/tags/puzzles/</link><description>Recent content in puzzles on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en-in</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 06 Jul 2021 23:51:32 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/puzzles/index.xml" rel="self" type="application/rss+xml"/><item><title>A Chess Puzzle</title><link>https://pranshugaba.com/puzzles/2/</link><pubDate>Tue, 06 Apr 2021 00:30:00 +0530</pubDate><author>pranshu@pranshugaba.com (Pranshu Gaba)</author><guid>https://pranshugaba.com/puzzles/2/</guid><description>&lt;p>For the second puzzle of &lt;a href="https://pranshugaba.com/mardi-maths">Mardi Maths&lt;/a>, we have a chess puzzle!&lt;/p>
+&lt;p>Recall how chess pieces move:&lt;/p>
+&lt;ul>
+&lt;li>Rooks move in straight lines up, down, left, or right.&lt;/li>
+&lt;li>Bishops can move diagonally.&lt;/li>
+&lt;li>Queens can move up, down, left, right, or diagonally.&lt;/li>
+&lt;li>Kings can move one step in any direction.&lt;/li>
+&lt;li>Pawns attack forward-left or forward-right.&lt;/li>
+&lt;li>Knight move in an L-shaped pattern. Two steps forward and one step sideways.&lt;/li>
+&lt;/ul>
+&lt;p>You can practice the pieces' movements on &lt;a href="https://lichess.org/learn" target="_blank" rel="noopener">lichess.org&lt;/a>.&lt;/p>
+&lt;h2 id="the-problem">The Problem&lt;/h2>
+&lt;p>You are trying to place as many white pieces on the board as possible such that no piece attacks any other piece.
+For the sake of this problem, assume that pieces can attack other pieces of the same colour.&lt;/p>
+&lt;p>&lt;em>Tip:&lt;/em> You may find it helpful to play around with pieces on a board on the &lt;a href="https://lichess.org/editor/8/8/8/8/8/8/8/8_w_-_-_0_1" target="_blank" rel="noopener">lichess board editor&lt;/a>.&lt;/p>
+&lt;p>Here are 7 variants of this problem:&lt;/p>
+&lt;h3 id="1">1&lt;/h3>
+&lt;p>What is the maximum number of rooks you can place on a $8\times 8$ chessboard such that no two rooks attack each other?
+&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;p>The following figure shows an arrangement of rooks that does not work.
+&lt;figure class="chessboard">
+&lt;img src="rooks_fail.png" alt="A chessboard with white rooks placed on b4, c7, d3, f2, g5, and g8." />
+&lt;figcaption>
+This arrangement does not work because the rooks on g5 and g8 attack each other.
+&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;h3 id="2">2&lt;/h3>
+&lt;p>What is the maximum number of knights you can place on an $8 \times 8$ chessboard such that no two knights attack each other?
+&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;h3 id="3">3&lt;/h3>
+&lt;p>What is the maximum number of bishops you can place on an $8\times 8$ chessboard such that no two bishops attack each other?
+&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;h3 id="4">4&lt;/h3>
+&lt;p>What is the maximum number of kings you can place on an $8\times 8$ chessboard such that no two kings attack each other?
+&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;h3 id="5">5&lt;/h3>
+&lt;p>What is the maximum number of pawns you can place on an $8 \times 8$ chessboard such that no pawn attacks any other pawn?
+&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;h3 id="6">6&lt;/h3>
+&lt;p>What is the maximum number of queens you can place on an $8 \times 8$ chessboard such that no two queens attack each other?
+&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;h3 id="7">7&lt;/h3>
+&lt;p>What is the maximum number of chess pieces you can place on an $8\times 8$ chessboard such that no piece attacks any other piece? You are free to use kings, queens, rooks, bishops, knights, and pawns.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p> &lt;/p>
+&lt;p>Good luck, have fun!&lt;/p>
+&lt;hr>
+&lt;p>&lt;a href="https://pranshugaba.com/contact">Send your attempts to me!&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>If you have solved the problem, share your solutions! Best explanations will be featured in the next Mardi Maths.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>If you are stuck, share your progress. What have you you tried so far?&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Let me know if there&amp;rsquo;s an error or something&amp;rsquo;s not clear in the puzzle.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>I would love your feedback. Did you find the puzzles interesting / easy / difficult?&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>If you have any puzzles that you would like featured in this series, share those too!&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;a href="https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces" target="_blank" rel="noopener">Chess pieces&lt;/a> by &lt;a href="https://en.wikipedia.org/wiki/User:Cburnett" target="_blank" rel="noopener">Cburnett&lt;/a> are licensed under &lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank" rel="noopener">CC BY-SA 3.0&lt;/a>.&lt;/p></description></item><item><title>The Picture Hanging Puzzle</title><link>https://pranshugaba.com/puzzles/1/</link><pubDate>Tue, 23 Mar 2021 17:30:00 +0530</pubDate><author>pranshu@pranshugaba.com (Pranshu Gaba)</author><guid>https://pranshugaba.com/puzzles/1/</guid><description>&lt;p>Introducing &lt;a href="https://pranshugaba.com/mardi-maths">Mardi Maths&lt;/a>: a new series where I share interesting maths puzzles every other Tuesday. Interesting and enlightening reader-submitted solutions will be featured along with the following puzzle.&lt;/p>
+&lt;p>Here&amp;rsquo;s the first puzzle of the series.&lt;/p>
+&lt;h2 id="the-problem">The Problem&lt;/h2>
+&lt;p>You have stolen an exquisite painting from your local art gallery, and given the daring thief that you are, you would like to hang in your living room! You have with you some nails and a long rope.&lt;/p>
+&lt;h3 id="level-1">Level 1&lt;/h3>
+&lt;!-- raw HTML omitted -->
+&lt;p>You would like to hang the painting using two nails. To allow for easy removal, you want the painting to fall if you remove any one of the nails from the wall.&lt;/p>
+&lt;p>Is this feat possible? If yes, then how would you hang the painting? If no, then prove that it is impossible.&lt;/p>
+&lt;p>&lt;em>Tip:&lt;/em> Try it out with some pencils and a long string.&lt;/p>
+&lt;p>Note: The method shown in the figure &lt;em>does not&lt;/em> work, because if you remove any one nail, the painting still hangs from the other nail.&lt;/p>
+&lt;h3 id="level-2">Level 2&lt;/h3>
+&lt;p>Now suppose you want to hang the painting using $n$ nails. You would like to painting to fall on removing any one nail.&lt;/p>
+&lt;p>For what values of $n$ is this possible?
+In the cases it is possible, how would you hang the painting?&lt;/p>
+&lt;h3 id="level-3">Level 3&lt;/h3>
+&lt;p>Suppose you want to hang the painting using $n$ nails. This time, you would like the painting to fall on removing any $m$ nails. The painting should not fall if you remove fewer than $m$ nails.
+You may assume $1 \le m \le n$.&lt;/p>
+&lt;p>For what values of $m$ and $n$ is this possible?
+In the cases it is possible, how would you go about hanging the painting?&lt;/p>
+&lt;p>Good luck, have fun!&lt;/p>
+&lt;hr>
+&lt;p>&lt;a href="https://pranshugaba.com/contact">Write to me!&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>If you have solved the problem, share your solutions! Best explanations will be featured in the next Mardi Maths.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>If you are stuck, share your progress. What have you you tried so far? I might give a hint.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Let me know if there&amp;rsquo;s an error or something&amp;rsquo;s not clear in the puzzle.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>I would love your feedback. Did you find the puzzle interesting / too easy / too difficult?&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>If you have any puzzles that you would like featured in this series, share them with me!&lt;/p>
+&lt;/li>
+&lt;/ul></description></item></channel></rss>
