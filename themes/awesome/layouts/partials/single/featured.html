@@ -1,10 +1,12 @@
-{{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
-
-{{ with $img }}
-    <figure class="page__featuredimage">
-        {{ $big := .Fill "1200x800 center" }}
-        {{ $small := $big.Resize "480x" }}
-            <img srcset="{{ $small.RelPermalink }} 1x, {{ $big.RelPermalink }} 2x" alt="{{ $img.Title }}" height="{{ $big.Height }}" width="{{ $big.Width }}"
-            class="page__featuredimage">
-    </figure>
+{{ $img := (.Resources.ByType "image").GetMatch "*featured*" }} {{ with $img }}
+<figure class="page__featuredimage">
+  {{ $big := .Fill "1200x800 center" }} {{ $small := $big.Resize "480x" }}
+  <img
+    srcset="{{ $small.RelPermalink }} 1x, {{ $big.RelPermalink }} 2x"
+    alt="{{ $img.Title }}"
+    height="{{ $big.Height }}"
+    width="{{ $big.Width }}"
+    class="page__featuredimage"
+  />
+</figure>
 {{ end }}
