@@ -1,14 +1,13 @@
 {{ define "main" }}
   
-  <h1 class="page__title">Hello There {{ ":wave:" | emojify }}</h1>
-  {{ with .Params.Subtitle }}
-      <h2 class="page__subtitle" >{{ . | emojify }}</h2>
-  {{ end }}
-
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 {{ $paginator := .Paginate ($pages.GroupByDate "2006") }}
 
 {{ if eq ($paginator.PageNumber) 1 }}
+  <h1 class="page__title">Hello There {{ ":wave:" | emojify }}</h1>
+  {{ with .Params.Subtitle }}
+      <h2 class="page__subtitle" >{{ . | emojify }}</h2>
+  {{ end }}
   {{ .Content }}
 {{ end }}
 
