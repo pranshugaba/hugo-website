@@ -42,7 +42,7 @@ ol,
 p {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  line-height: 1.75;
+  line-height: 1.6;
 }
 
 a {
@@ -75,6 +75,13 @@ sup {
   margin-right: 0.05rem;
 }
 
+sub {
+  font-size: small;
+  vertical-align: sub;
+  margin-left: 0.1rem;
+  margin-right: 0.05rem;
+}
+
 .footnotes {
   font-size: smaller;
   & .footnote-backref {
@@ -91,4 +98,10 @@ figcaption {
   font-size: smaller;
   max-width: 60ch;
   text-align: center;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--fg);
 }
