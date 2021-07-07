@@ -55,7 +55,7 @@
 
 .list-section__item,
 .list-yearwise__item {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
   .item__date {
     display: flex;
@@ -64,6 +64,7 @@
     grid-area: dt;
   }
   @media (min-width: 640px) {
+    margin-bottom: 1.5rem;
     .item__date {
       display: block;
       justify-self: start;
@@ -107,7 +108,7 @@
   }
 
   @media (min-width: 640px) {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: row-reverse;
     gap: 0.5rem;

@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "The Picture Hanging Puzzle"
-subtitle: "Mardi Maths #1"
+subtitle: "Puzzle #1"
 summary: "Can you hang a picture so that it is easy to remove?"
 authors: ["pranshu"]
 tags: ["puzzles"]

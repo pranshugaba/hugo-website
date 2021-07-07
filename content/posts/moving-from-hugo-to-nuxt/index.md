@@ -1,7 +1,7 @@
 ---
-title: "Redesigning my website"
-subtitle: "Migrating from Hugo to Nuxt.js"
-summary: "Migrating from Hugo to Nuxt.js"
+title: "Moving my site from Hugo to Nuxt.js..."
+subtitle: "I rebuilt my website from the ground up"
+summary: "I previously built my site using Hugo with the Academic theme. It felt restrictive, so I tried out various static site generators and chose Nuxt.js."
 
 # featuredImage: "avatar.png"
 # previewOnly: false
@@ -9,7 +9,7 @@ summary: "Migrating from Hugo to Nuxt.js"
 
 authors: ["pranshu"]
 
-tags: ["nuxtjs", "vuejs", "webdev"]
+tags: ["nuxtjs", "vuejs", "hugo"]
 category: webdev
 
 date: 2021-05-11T19:30:00+05:30
@@ -31,17 +31,27 @@ This site is built using Nuxt.js, and I have had a great time making it.
 The previous version of this website (now retired to [hugo.pranshugaba.com](https://hugo.pranshugaba.com)) was built using Hugo.
 In this post, I outline how I made the switch from Hugo to Nuxt. I hope this helps anyone who is looking to make a static site using Nuxt.
 
-Hugo is quick to install and very easy to get started with.
-There are a variety of user-submitted themes available, and out of those, the Academic theme was my favourite. It served me well at the beginning, however, customizing it was not pleasant.
+Hugo is quick to install and very easy to get started with, which is what drew me to it in the first place. 
+There are a variety of user-submitted themes available, and out of those, the Academic theme was my favourite. 
 
-When I wanted to modify the theme, I would have to override the templates, and in some cases rewrite them completely. This would often cause unintended effects.
-I wanted to create a theme from scratch, and I realized that frameworks such as React and Vue are better suited for this.
+The theme has a lot of useful features, but I found it quite opinionated. I found several websites using this theme, and they all looked more or less the same. I could customise my site by overriding the template files, but this was  not a pleasant experience.  
 
-Some of the popular static site generators are Gridsome, Next.js, and Nuxt.js.
+When I wanted to modify the theme, I would have to override the templates, and in some cases rewrite them completely. This would often cause unintended effects. The site was difficult to maintain, and even more to add new features, and I always felt that I had hacked it together and it could break with an update to Hugo or the theme.
+
+I wanted to create a theme from scratch, and I realized that frameworks such as React and Vue have a much larger scope for customisation.
+
+There are _a lot_ of static site generators out there. In the end, I tried out Gridsome, Next.js, and Nuxt.js.
+
+### Gridsome 
 
 I tried out Gridsome first because it was more oriented towards static sites. I learnt GraphQL, which is required to parse the markdown files. I found the syntax quite verbose.
 
+### Next.js
+
 Next, I tried out Next.js which uses React. I was surprised to see how easily I could pickup React since I knew Vue. It wasn't easy parsing markdown files. I had to use a third-party plugin `next-mdx-remote` which didn't work very well with NextLinks.
+
+
+### Nuxt.js
 
 I discovered the awesome-nuxtjs page on Github, and I loved the number of first-party plugins that Nuxt has.
 
@@ -50,13 +60,11 @@ Plugins are great, more contributors and better documentation.
 
 I did the theming and styling from scratch and am adding features gradually. I was able to match all the features offered in Hugo, and then some.
 
-## Awesome features in Nuxt
-
-### Prefetching
+#### Prefetching
 
 One of the biggest advantages of using Nuxt is the prefetching. It prefetches the outgoing links on any page, so the links begin to load even before you click on them. This makes the site feel fast and snappy!
 
-### Math equations
+#### Math equations
 
 Install `remark-math` and `rehype-katex` modules and we are good to go!
 
@@ -67,7 +75,7 @@ $$
 \sum_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6}
 $$
 
-### Code blocks
+#### Code blocks
 
 Prism js comes pre-installed with Nuxt. You can install themes and plugins too.
 

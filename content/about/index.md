@@ -14,8 +14,14 @@ I am currently reading _Dune_ by Frank Herbert.
 
 ## ... this site
 
-- built with :heart: using [Hugo](https://gohugo.io)
-- deployed using [GitHub pages](https://github.com/pranshugaba)
+This site is: 
+
+- built with :heart: using [Hugo](https://gohugo.io), the world's fastest static site generator
+- designed and coded in [VSCodium](https://vscodium.com/) 
+- built on a PC running [Arch Linux](https://archlinux.org/)
+- hosted on [GitHub pages](https://pages.github.com/)
+
+You find the source code for this website on my [Github page](https://github.com/pranshugaba/).
 
 ### Statistics
 

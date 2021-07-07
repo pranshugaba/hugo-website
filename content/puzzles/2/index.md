@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "A Chess Puzzle"
-subtitle: "Mardi Maths #2"
+subtitle: "Puzzle #2"
 summary: "How many chess pieces can you place so no piece attacks any other piece?"
 authors: ["pranshu"]
 tags: ["puzzles", "chess"]
