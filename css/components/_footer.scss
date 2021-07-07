@@ -1,14 +1,10 @@
-@use "../abstracts/colors" as c;
 @use "../abstracts/mixins" as m;
 
 .footer {
   margin-top: 2rem;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
-  border-top: 2px solid c.$fg--light;
-  @media (prefers-color-scheme: dark) {
-    border-top: 2px solid c.$fg--dark;
-  }
+  border-top: 2px solid var(--fg);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

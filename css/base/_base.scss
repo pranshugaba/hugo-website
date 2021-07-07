@@ -1,16 +1,9 @@
-@use "../abstracts/colors" as c;
-
 body {
-  background-color: c.$bg--light;
-  color: c.$fg--light;
+  background-color: var(--bg);
+  color: var(--fg);
   max-width: 65ch;
   margin: 0 auto;
   padding: 0.8rem;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: c.$bg--dark;
-    color: c.$fg--dark;
-  }
 }
 
 #content {
@@ -20,6 +13,6 @@ body {
 }
 
 ::selection {
-  background-color: c.$fg--light;
-  color: c.$bg--light;
+  background-color: var(--fg);
+  color: var(--bg);
 }
