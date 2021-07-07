@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/"/><description>Recent content on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 07 Jul 2021 10:24:04 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/posts/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/building-x-and-o-using-godot/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/"/><description>Recent content on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 07 Jul 2021 10:52:08 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/posts/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/building-x-and-o-using-godot/</guid><description>
 <![CDATA[<p>Do you love playing video games? I sure do! I enjoy making games too, and it&rsquo;s highly likely that you would too.
 Game development is an umbrella term for ranging from designing levels, mechanics to coding the logic to making art and music.
 It has a little something for everyone. If you would like to learn how to make games, then this guide is a great place to start, if I do say so myself.</p>
@@ -120,7 +120,7 @@ As you build the game and test it, you might find that a feature you had planned
 <li>The player clicks on the squares to enter symbols.</li>
 <li>I have made a rough sketch how the interface would look like. This will be a simple game with just one scene. In more complex games, we would need more scenes.
 
-<figure >
+<figure class="diagram">
     
     
     <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/sketch.png" alt="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play." />
@@ -145,7 +145,7 @@ As you build the game and test it, you might find that a feature you had planned
 We want to explicitly state how the game receives inputs, what decisions it takes, what changes it makes, and how all of these relate to each other.</p>
 <p>&ldquo;X and O&rdquo; is a small and simple game, so its gameplay loop is simple too.</p>
 
-<figure >
+<figure class="diagram">
     
     
     <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/gameloop.png" alt="The gameplay loop" />
@@ -254,7 +254,7 @@ You can <!-- raw HTML omitted -->download my assets<!-- raw HTML omitted -->, or
 </aside>
 <p>I have included the <code>Inter</code> font in the assets. I chose this font because it looks sharp even at low resolutions and it goes well with the &ldquo;X&rdquo; and &ldquo;O&rdquo; sprites that I have made. You can use any font that goes with your theme.</p>
 
-<figure >
+<figure class="diagram">
     
     
     <img src="https://pranshugaba.com/posts/building-x-and-o-using-godot/img/font.png"  />
