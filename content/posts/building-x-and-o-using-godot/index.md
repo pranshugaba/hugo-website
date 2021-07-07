@@ -133,7 +133,7 @@ Let's answer these questions for our X and O game.
 - It can be played on desktop.
 - The player clicks on the squares to enter symbols.
 - I have made a rough sketch how the interface would look like. This will be a simple game with just one scene. In more complex games, we would need more scenes.
-  {{< figure src="img/sketch.png" caption="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play." >}}
+  {{< figure src="img/sketch.png" class="diagram" caption="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play." >}}
 - We will describe the gameplay loop using a flowchart. It will also tell us how long a session will last.
 
 ### The gameplay loop
@@ -143,7 +143,7 @@ We want to explicitly state how the game receives inputs, what decisions it take
 
 "X and O" is a small and simple game, so its gameplay loop is simple too.
 
-{{< figure src="img/gameloop.png" caption="The gameplay loop" >}}
+{{< figure src="img/gameloop.png" class="diagram" caption="The gameplay loop" >}}
 
 To summarise:
 
@@ -204,7 +204,7 @@ I made the png files for X, O, and the grid using [Inkscape](https://inkscape.or
 
 I have included the `Inter` font in the assets. I chose this font because it looks sharp even at low resolutions and it goes well with the "X" and "O" sprites that I have made. You can use any font that goes with your theme.
 
-{{< figure src="img/font.png" >}}
+{{< figure src="img/font.png" class="diagram" >}}
 
 {{< note >}}
 You can get fonts on websites such as [Google fonts](https://fonts.google.com/) and [dafont.com](https://www.dafont.com/theme.php?cat=501&l[]=10). Make sure you have the rights to use the font you choose.

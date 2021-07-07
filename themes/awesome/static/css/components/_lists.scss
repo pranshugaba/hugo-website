@@ -70,7 +70,7 @@
       align-self: start;
       width: 4.5ch;
       padding: 0 0.2rem;
-      margin-top: 0.5rem;
+      margin-top: 0.25rem;
       border-radius: 0.25rem;
       font-size: smaller;
       border: 2px solid var(--fg);
@@ -101,12 +101,13 @@
 }
 
 .list-archive__item {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   & .item__date {
     font-size: smaller;
   }
 
   @media (min-width: 640px) {
+    margin-bottom: 0.5rem;
     display: flex;
     flex-direction: row-reverse;
     gap: 0.5rem;

@@ -4,10 +4,20 @@ figure {
   margin-bottom: 2rem;
 
   img {
+    text-align: center;
     display: block;
     height: auto;
     max-width: 100%;
-    margin: 0;
+    margin: 0 auto;
+    @media (prefers-color-scheme: dark) {
+      opacity: 84%;
+    }
+  }
+
+  &.diagram img {
+    @media (prefers-color-scheme: dark) {
+      filter: hue-rotate(180deg) invert(1);
+    }
   }
 
   figcaption {
