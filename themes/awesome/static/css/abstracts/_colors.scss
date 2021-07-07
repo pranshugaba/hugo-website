@@ -1,8 +1,14 @@
 $papaya: hsl(37.1, 100%, 91.8%);
 $black: #121212;
 
-$bg--light: $papaya;
-$fg--light: $black;
+:root {
+  --bg: #{$papaya};
+  --fg: #{$black};
+}
 
-$bg--dark: $papaya;
-$fg--dark: $black;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #{$black};
+    --fg: #{$papaya};
+  }
+}

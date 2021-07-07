@@ -109,17 +109,11 @@ input {
 }
 
 body {
-  background-color: papayawhip;
-  color: #121212;
+  background-color: var(--bg);
+  color: var(--fg);
   max-width: 65ch;
   margin: 0 auto;
   padding: 0.8rem;
-}
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: papayawhip;
-    color: #121212;
-  }
 }
 
 #content {
@@ -132,13 +126,13 @@ body {
 }
 
 ::-moz-selection {
-  background-color: #121212;
-  color: papayawhip;
+  background-color: var(--fg);
+  color: var(--bg);
 }
 
 ::selection {
-  background-color: #121212;
-  color: papayawhip;
+  background-color: var(--fg);
+  color: var(--bg);
 }
 
 figure {
@@ -301,15 +295,21 @@ figcaption {
     opacity: 1;
   }
 }
+:root {
+  --bg: papayawhip;
+  --fg: #121212;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --fg: papayawhip;
+  }
+}
 .header {
-  border-bottom: 2px solid #121212;
+  border-bottom: 2px solid var(--fg);
   padding-top: 0.5rem;
   padding-bottom: 1rem;
-}
-@media (prefers-color-scheme: dark) {
-  .header {
-    border-bottom: 2px solid #121212;
-  }
 }
 .header__logo {
   max-width: -webkit-max-content;
@@ -339,16 +339,11 @@ figcaption {
   margin-top: 2rem;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
-  border-top: 2px solid #121212;
+  border-top: 2px solid var(--fg);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
-}
-@media (prefers-color-scheme: dark) {
-  .footer {
-    border-top: 2px solid #121212;
-  }
 }
 .footer a {
   text-decoration: none;
@@ -376,7 +371,7 @@ li code,
 h4 code,
 kbd {
   padding: 0.05rem 0.2rem;
-  border: 1px solid #121212;
+  border: 1px solid var(--fg);
   border-radius: 0.2rem;
 }
 
@@ -465,7 +460,7 @@ h4 code {
     margin-top: 0.5rem;
     border-radius: 0.25rem;
     font-size: smaller;
-    border: 2px solid #121212;
+    border: 2px solid var(--fg);
   }
   .list-section__item .item__month,
 .list-yearwise__item .item__month {
@@ -510,7 +505,7 @@ h4 code {
 }
 
 .admonition {
-  border: 2px solid black;
+  border: 2px solid var(--fg);
   border-radius: 0.5rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -523,7 +518,7 @@ h4 code {
   font-weight: 700;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--fg);
 }
 
 .home__pager {
@@ -576,7 +571,7 @@ h4 code {
 .page__tags li {
   line-height: 1;
   padding: 0.25rem;
-  border: 2px solid black;
+  border: 2px solid var(--fg);
   border-radius: 0.25rem;
 }
 .page__nav {
