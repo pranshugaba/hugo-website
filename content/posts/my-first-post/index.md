@@ -45,6 +45,16 @@ func main() {
 }
 {{< /highlight >}}
 
+``` rust
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, World!")
+}
+```
+
 This is a tasklist
 
 - [x] Write the press release

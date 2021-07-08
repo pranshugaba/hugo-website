@@ -19,7 +19,7 @@ lastmod = ["lastmod", ":fileModTime", ":default"]
 
 [markup]
 [markup.highlight]
-style = "dracula"
+pygmentsUseClasses = true
 
 [minify]
 minifyOutput = true

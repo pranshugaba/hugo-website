@@ -36,19 +36,20 @@ There are a variety of user-submitted themes available, and out of those, the Ac
 
 The theme has a lot of useful features, but I found it quite opinionated. I found several websites using this theme, and they all looked more or less the same. I could customise my site by overriding the template files, but this was  not a pleasant experience.  
 
-When I wanted to modify the theme, I would have to override the templates, and in some cases rewrite them completely. This would often cause unintended effects. The site was difficult to maintain, and even more to add new features, and I always felt that I had hacked it together and it could break with an update to Hugo or the theme.
+When I wanted to modify the theme, I had to override the theme templates, and in some cases rewrite them completely. This would often cause unintended effects. The site was difficult to maintain, and even more to add new features. I always felt that I had hacked it together and it could break with an update to Hugo or the theme.
 
-I wanted to create a theme from scratch, and I realized that frameworks such as React and Vue have a much larger scope for customisation.
+I wanted to create a theme from scratch, and I realized that there is much bigger scope for customisation if I use frameworks such as React or Vue. 
 
-There are _a lot_ of static site generators out there. In the end, I tried out Gridsome, Next.js, and Nuxt.js.
+There are a lot of static site generators based on these frameworks. I tried out Gridsome, Next.js, and Nuxt.js.
 
 ### Gridsome 
 
-I tried out Gridsome first because it was more oriented towards static sites. I learnt GraphQL, which is required to parse the markdown files. I found the syntax quite verbose.
+I tried Gridsome first. It is based on Vue.js. I was impressed with the speed that links opened with. I was able to access data from my markdown files using GraphQL. I had never used GraphQL before, and I enjoyed learning it. 
 
 ### Next.js
 
-Next, I tried out Next.js which uses React. I was surprised to see how easily I could pickup React since I knew Vue. It wasn't easy parsing markdown files. I had to use a third-party plugin `next-mdx-remote` which didn't work very well with NextLinks.
+Next, I tried out Next.js which uses React. I was surprised to see how easily I could pickup React since I knew Vue. Next.js has a great tutorial that teaches you Next.js by building a basic blog site. While I loved the tutorial, I didn't like much code I had to write to read my Markdown files. 
+I had to use a third-party plugin `next-mdx-remote` which didn't work very well with NextLinks.
 
 
 ### Nuxt.js
