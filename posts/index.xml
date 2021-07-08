@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/posts/"/><description>Recent content in Posts on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 07 Jul 2021 15:33:07 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/posts/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/building-x-and-o-using-godot/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/posts/"/><description>Recent content in Posts on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 08 Jul 2021 15:34:56 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/posts/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/building-x-and-o-using-godot/</guid><description>
 <![CDATA[<p>Do you love playing video games? I sure do! I enjoy making games too, and it&rsquo;s highly likely that you would too.
 Game development is an umbrella term for ranging from designing levels, mechanics to coding the logic to making art and music.
 It has a little something for everyone. If you would like to learn how to make games, then this guide is a great place to start, if I do say so myself.</p>
@@ -556,20 +556,20 @@ You can read the <a href="https://docs.godotengine.org/en/stable/getting_started
 
 <p>The default options are fine, click &ldquo;Create&rdquo;. This will create a file named <code>Game.gd</code>. This is where will write the logic for the game.
 The contents of this script will look like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">extends</span> Node2D
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Node2D</span>
 
-<span style="color:#6272a4"># Declare member variables here. Examples:</span>
-<span style="color:#6272a4"># var a = 2</span>
-<span style="color:#6272a4"># var b = &#34;text&#34;</span>
+<span style="color:#75715e"># Declare member variables here. Examples:</span>
+<span style="color:#75715e"># var a = 2</span>
+<span style="color:#75715e"># var b = &#34;text&#34;</span>
 
-<span style="color:#6272a4"># Called when the node enters the scene tree for the first time.</span>
-<span style="color:#ff79c6">func</span> _ready():
-	<span style="color:#ff79c6">pass</span> <span style="color:#6272a4"># Replace with function body.</span>
+<span style="color:#75715e"># Called when the node enters the scene tree for the first time.</span>
+<span style="color:#66d9ef">func</span> _ready():
+	<span style="color:#66d9ef">pass</span> <span style="color:#75715e"># Replace with function body.</span>
 
 
-<span style="color:#6272a4"># Called every frame. &#39;delta&#39; is the elapsed time since the previous frame.</span>
-<span style="color:#6272a4">#func _process(delta):</span>
-<span style="color:#6272a4">#	pass</span>
+<span style="color:#75715e"># Called every frame. &#39;delta&#39; is the elapsed time since the previous frame.</span>
+<span style="color:#75715e">#func _process(delta):</span>
+<span style="color:#75715e">#	pass</span>
 </code></pre></div><aside class="admonition   ">
     <div class="admonition__title">
         Note
@@ -615,35 +615,35 @@ We will initialise our variables in <code>_ready</code>.</p>
 <h4 id="game_started"><code>game_started</code></h4>
 <p>This variable tells us if a game is in progress.
 Once the scene is loaded, we are ready to play. We should begin listening for clicks and check for wins. We set <code>game_started</code> is <code>true</code> in <code>_ready</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">var</span> game_started
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">var</span> game_started
 
-<span style="color:#ff79c6">func</span> _ready():
-	game_started <span style="color:#ff79c6">=</span> true   <span style="color:#6272a4"># Game has started</span>
+<span style="color:#66d9ef">func</span> _ready():
+	game_started <span style="color:#f92672">=</span> true   <span style="color:#75715e"># Game has started</span>
 </code></pre></div><h4 id="turns_played"><code>turns_played</code></h4>
 <p>We keep track of the number of turns played in <code>turns_played</code>.
 When the scene is loaded, no turn has been played so far, so we start <code>turns_played</code> with <code>0</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">var</span> turns_played
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">var</span> turns_played
 
-<span style="color:#ff79c6">func</span> _ready():
-	<span style="color:#ff79c6">...</span>
-	turns_played <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>   <span style="color:#6272a4"># No turns played yet</span>
+<span style="color:#66d9ef">func</span> _ready():
+	<span style="color:#f92672">...</span>
+	turns_played <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>   <span style="color:#75715e"># No turns played yet</span>
 </code></pre></div><h4 id="player_turn"><code>player_turn</code></h4>
 <p>The variable <code>player_turn</code> will store the name of the player whose turn it is to play. While we can give these players any name we wish, let&rsquo;s call them player <code>1</code> and player <code>-1</code>.
 This choice will make our work in the future easier.</p>
 <p>Player <code>1</code> will play first and will place X&rsquo;s. Player <code>-1</code> will go second and will place O&rsquo;s.
 Let&rsquo;s initialise <code>player_turn</code> in <code>_ready</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">var</span> player_turn
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">var</span> player_turn
 
-<span style="color:#ff79c6">func</span> _ready():
-	<span style="color:#ff79c6">...</span>
-	player_turn <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>  <span style="color:#6272a4"># Player with &#39;X&#39; goes first</span>
+<span style="color:#66d9ef">func</span> _ready():
+	<span style="color:#f92672">...</span>
+	player_turn <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>  <span style="color:#75715e"># Player with &#39;X&#39; goes first</span>
 </code></pre></div><p>Once a player&rsquo;s turn ends, the other player gets to play. Therefore, the value of <code>player_turn</code> must change at the end of every turn.</p>
 <p>Let&rsquo;s write a function <code>change_player</code> function that changes the state of <code>player_turn</code>.
 We need to care about the details of how we change the player in this function only. Then, any time we want to change the player, we can call <code>change_player</code> without having to know how it works.
 This is called <!-- raw HTML omitted -->separation of concerns<!-- raw HTML omitted -->, and helps keep our code organised.</p>
 <p>Due to our choice of player names, this is function is a one-liner.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> change_player():
-	player_turn <span style="color:#ff79c6">*=</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> change_player():
+	player_turn <span style="color:#f92672">*=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 </code></pre></div><p>Calling <code>change_player</code> switches the value of <code>player_turn</code> from <code>1</code> to <code>-1</code> and vice versa.</p>
 <h4 id="cells"><code>cells</code></h4>
 <p>We need to store the state of each cell in the grid.
@@ -700,23 +700,23 @@ Make sure the node your script is attached to is active.</p>
 </figure>
 
 <p>For example, if you want to hide the <code>GridSprite</code> when the game starts, you can do the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> _ready():
-	<span style="color:#ff79c6">$</span>Grid<span style="color:#ff79c6">/</span>GridSprite<span style="color:#ff79c6">.</span>visible <span style="color:#ff79c6">=</span> false
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> _ready():
+	<span style="color:#f92672">$</span>Grid<span style="color:#f92672">/</span>GridSprite<span style="color:#f92672">.</span>visible <span style="color:#f92672">=</span> false
 </code></pre></div><p>If you play the game now, the grid lines will not be visible.
 This is how we can control nodes from our scripts.
 (Let&rsquo;s undo this so the grid is visible when you play the game.)</p>
 <p>Now that we know how to access the <code>GridCell</code> nodes, we might try something like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">var</span> cells
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">var</span> cells
 
-<span style="color:#ff79c6">func</span> _ready():
-	<span style="color:#ff79c6">...</span>
-	<span style="color:#ff79c6">var</span> cell1 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">$</span>Grid<span style="color:#ff79c6">/</span>GridCell1
-	<span style="color:#ff79c6">var</span> cell2 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">$</span>Grid<span style="color:#ff79c6">/</span>GridCell2
-	<span style="color:#ff79c6">var</span> cell3 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">$</span>Grid<span style="color:#ff79c6">/</span>GridCell3
-	<span style="color:#ff79c6">...</span>
-	<span style="color:#ff79c6">var</span> cell9 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">$</span>Grid<span style="color:#ff79c6">/</span>GridCell9
+<span style="color:#66d9ef">func</span> _ready():
+	<span style="color:#f92672">...</span>
+	<span style="color:#66d9ef">var</span> cell1 <span style="color:#f92672">=</span> <span style="color:#f92672">$</span>Grid<span style="color:#f92672">/</span>GridCell1
+	<span style="color:#66d9ef">var</span> cell2 <span style="color:#f92672">=</span> <span style="color:#f92672">$</span>Grid<span style="color:#f92672">/</span>GridCell2
+	<span style="color:#66d9ef">var</span> cell3 <span style="color:#f92672">=</span> <span style="color:#f92672">$</span>Grid<span style="color:#f92672">/</span>GridCell3
+	<span style="color:#f92672">...</span>
+	<span style="color:#66d9ef">var</span> cell9 <span style="color:#f92672">=</span> <span style="color:#f92672">$</span>Grid<span style="color:#f92672">/</span>GridCell9
 
-	cells <span style="color:#ff79c6">=</span> [cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9]
+	cells <span style="color:#f92672">=</span> [cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9]
 </code></pre></div><p>This code works, but there is a lot of repetition. It is difficult to read it or make changes to it.
 If you find yourself repeating the same code a lot, there is probably a better way to write it.</p>
 <aside class="admonition  tip ">
@@ -744,9 +744,9 @@ If you find yourself repeating the same code a lot, there is probably a better w
 Now, all <code>GridCell</code> we want to access are children of <code>GridCells</code>.
 We can call <code>$Grid/GridCells.get_children()</code> to get an array of references to the <code>GridCell</code> nodes.</p>
 <p>We can delete the ten lines we added in <code>_ready</code> and add this one line in its place:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> _ready():
-	<span style="color:#ff79c6">...</span>
-	cells <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">$</span>Grid<span style="color:#ff79c6">/</span>GridCells<span style="color:#ff79c6">.</span>get_children():
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> _ready():
+	<span style="color:#f92672">...</span>
+	cells <span style="color:#f92672">=</span> <span style="color:#f92672">$</span>Grid<span style="color:#f92672">/</span>GridCells<span style="color:#f92672">.</span>get_children():
 </code></pre></div><p>The resulting code is much cleaner.
 We have references to each <code>GridCell</code> node. Now, we need to save information in each node. We use a script!</p>
 <p>Attach a script to the <code>GridCell</code> scene.
@@ -754,21 +754,21 @@ This creates a script with the name <code>GridCell.gd</code>. Delete everything 
 <p>For each cell, we want to store if it is empty, or has an X or an O. Let&rsquo;s store this information in a variable named <code>value</code>.
 Continuing our notation with the player names, a cell with an &ldquo;X&rdquo; has <code>value</code> equal to <code>1</code> and a cell with an &ldquo;O&rdquo; has <code>value</code> <code>-1</code>. Cells can also be empty. Let empty cells have <code>value</code> <code>0</code>.</p>
 <p>Declare the <code>value</code> variable in <code>GridCell.gd</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">extends</span> Area2D
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Area2D</span>
 
-<span style="color:#ff79c6">var</span> value
+<span style="color:#66d9ef">var</span> value
 </code></pre></div><p>Now, every <code>GridCell</code> node has a property named <code>value</code>. If you can access a <code>GridCell</code> node, you can also access its <code>value</code> property.
 For example, in <code>Game.gd</code>, <code>cells[0]</code> holds a reference to <code>GridCell1</code>. We can access its <code>value</code> variable with <code>cells[0].value</code>. We can now read and edit the <code>value</code> of any <code>GridCell</code> node.</p>
 <p>We can use the <code>print</code> method to read the value during development. The output of <code>print</code> is shown in the Output tab (below the code editor).</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> _ready():
-	<span style="color:#ff79c6">...</span>
-	<span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;The value of GridCell1 is &#34;</span>, cells[<span style="color:#bd93f9">0</span>]<span style="color:#ff79c6">.</span>value)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> _ready():
+	<span style="color:#f92672">...</span>
+	print(<span style="color:#e6db74">&#34;The value of GridCell1 is &#34;</span>, cells[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>value)
 </code></pre></div><p>If we run the game now, we see <code>The value of GridCell1 is Null</code> in the output. Oops. This is because we declared <code>value</code>, but did not initialise it.
 Since all cells are empty initially, we will initialise the <code>value</code> of each <code>GridCell</code> with <code>0</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> _ready():
-	<span style="color:#ff79c6">...</span>
-	<span style="color:#ff79c6">for</span> cell <span style="color:#ff79c6">in</span> cells:
-		cell<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> _ready():
+	<span style="color:#f92672">...</span>
+	<span style="color:#66d9ef">for</span> cell <span style="color:#f92672">in</span> cells:
+		cell<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
 </code></pre></div><p>If you print <code>cells[0].value</code> after the initialisation, you will see it has <code>value</code> equal <code>0</code> and not <code>Null</code>.</p>
 <aside class="admonition  tip ">
     <div class="admonition__title">
@@ -783,8 +783,8 @@ Since all cells are empty initially, we will initialise the <code>value</code> o
 <h3 id="listening-for-clicks-using-signals">Listening for clicks using signals</h3>
 <p>We have initialised the state of the game. We need a way to detect when cells are clicked and respond to it.</p>
 <p>We will write a function <code>play_turn</code> in <code>Game.gd</code> that makes appropriate changes to the game&rsquo;s state when the player clicks on a grid cell.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> play_turn():
-	<span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;play_turn called&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> play_turn():
+	print(<span style="color:#e6db74">&#34;play_turn called&#34;</span>)
 </code></pre></div><p>We will fill in this function later. For now, we just want to call it when a cell is clicked. The <code>print</code> method lets us know if the method is called.</p>
 <p>Here&rsquo;s one way to call <code>play_turn</code> when a cell is clicked. In <code>GridCell.gd</code>, we could check if the cell is clicked. If it is clicked, we call the <code>play_turn</code> method in <code>Game.gd</code>.</p>
 <pre><code class="language-[GridCell.gd]" data-lang="[GridCell.gd]">if cell is clicked:
@@ -843,10 +843,10 @@ Each node in Godot has some signals predefined in them. You can see the signals 
 </aside>
 <p>We can also make our own custom signals.
 For example, in our game, we can make a signal named <code>cell_clicked</code> for <code>GridCell</code>. We do this by declaring it in <code>GridCell.gd</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">signal</span> cell_clicked
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">signal</span> cell_clicked
 </code></pre></div><p>We can get a node to emit a signal with the <code>emit_signal</code> method. In the following code, <code>cell</code> will emit the <code>cell_clicked</code> signal if it is clicked.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">if</span> cell is clicked:
-	emit_signal(<span style="color:#f1fa8c">&#34;cell_clicked&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">if</span> cell is clicked:
+	emit_signal(<span style="color:#e6db74">&#34;cell_clicked&#34;</span>)
 </code></pre></div><aside class="admonition  warning ">
     <div class="admonition__title">
         Warning
@@ -861,13 +861,13 @@ Comment this lines out for now. We will fix this soon.</p>
 <p>Nodes can also listen for signals.
 We want the <code>Game</code> node to listen for the <code>cell_clicked</code> signal emitted by a <code>GridCell</code> node.
 We use the <code>connect</code> method to listen for signals. The syntax for connecting signals is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript">SOURCE_NODE<span style="color:#ff79c6">.</span>connect(SIGNAL_NAME, TARGET_NODE, METHOD_NAME)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript">SOURCE_NODE<span style="color:#f92672">.</span>connect(SIGNAL_NAME, TARGET_NODE, METHOD_NAME)
 </code></pre></div><p>The way to read this is if when the <code>SOURCE_NODE</code> emits the <code>SIGNAL_NAME</code> signal, the <code>TARGET_NODE</code> calls the <code>METHOD_NAME</code> method. Let&rsquo;s see this in action for our game.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> _ready():
-  <span style="color:#ff79c6">...</span>
-  <span style="color:#6272a4"># listen for clicks</span>
-  <span style="color:#ff79c6">for</span> cell <span style="color:#ff79c6">in</span> cells:
-  	cell<span style="color:#ff79c6">.</span>connect(<span style="color:#f1fa8c">&#34;cell_clicked&#34;</span>, self, <span style="color:#f1fa8c">&#34;play_turn&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> _ready():
+  <span style="color:#f92672">...</span>
+  <span style="color:#75715e"># listen for clicks</span>
+  <span style="color:#66d9ef">for</span> cell <span style="color:#f92672">in</span> cells:
+  	cell<span style="color:#f92672">.</span>connect(<span style="color:#e6db74">&#34;cell_clicked&#34;</span>, self, <span style="color:#e6db74">&#34;play_turn&#34;</span>)
 </code></pre></div><p>We want to listen for signals from every cell in the grid, so we have a <code>for</code> loop that iterates over all cells in the grid.
 For each cell, when the <code>cell</code> node emits the <code>cell_clicked</code> signal, the <code>self</code> node (in this case the <code>Game</code> node) calls the <code>play_turn</code> method.</p>
 <p>Great, we are almost done. We just need to fix the <code>if cell is clicked</code> statement in <code>GridCell.gd</code>.</p>
@@ -888,8 +888,8 @@ We are listening for the signal in the <code>GridCell</code> node as well. This 
 
 <p>Select <code>GridCell</code> and click &ldquo;Connect&rdquo;.
 This creates the receiver function <code>_on_GridCell_input_event</code> in <code>GridCell.gd</code> for us.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> _on_GridCell_input_event(viewport, event, shape_idx):
-	<span style="color:#ff79c6">pass</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> _on_GridCell_input_event(viewport, event, shape_idx):
+	<span style="color:#66d9ef">pass</span>
 </code></pre></div><aside class="admonition  tip ">
     <div class="admonition__title">
         Tip
@@ -918,13 +918,13 @@ This creates the receiver function <code>_on_GridCell_input_event</code> in <cod
 <p>If you add <code>print(event)</code> in the method and run the game, you will see that moving your mouse on a cell creates an <code>InputEventMouseMotion</code> event, and clicking on a cell creates an <code>InputEventMouseButton</code> event.</p>
 <p>We are only interested if the players click on a cell. We do not care if the players move their mouse on the grid.
 We will filter only the mouse click events with an <code>if</code> statement.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> _on_GridCell_input_event(viewport, event, shape_idx):
-	<span style="color:#ff79c6">if</span> event is InputEventMouseButton:
-		<span style="color:#8be9fd;font-style:italic">print</span>(event)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> _on_GridCell_input_event(viewport, event, shape_idx):
+	<span style="color:#66d9ef">if</span> event is <span style="color:#a6e22e">InputEventMouseButton</span>:
+		print(event)
 </code></pre></div><p>If you run the game now and move the mouse on the grid, the output does not change. If you click on a cell, two mouse click events appear. Once when you press the button, and once when you release it. We would like to emit only one signal per click.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> _on_GridCell_input_event(viewport, event, shape_idx):
-	<span style="color:#ff79c6">if</span> event is InputEventMouseButton <span style="color:#ff79c6">and</span> event<span style="color:#ff79c6">.</span>is_pressed():
-		<span style="color:#8be9fd;font-style:italic">print</span>(event)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> _on_GridCell_input_event(viewport, event, shape_idx):
+	<span style="color:#66d9ef">if</span> event is <span style="color:#a6e22e">InputEventMouseButton</span> <span style="color:#f92672">and</span> event<span style="color:#f92672">.</span>is_pressed():
+		print(event)
 </code></pre></div><aside class="admonition   ">
     <div class="admonition__title">
         Note
@@ -936,18 +936,18 @@ We will filter only the mouse click events with an <code>if</code> statement.</p
     </div>
 </aside>
 <p>This is working well. We are printing an event if and only if a cell is clicked. We can replace <code>print</code> with <code>emit_signal</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> _on_GridCell_clicked(viewport, event, shape_idx):
-	<span style="color:#ff79c6">if</span> event is InputEventMouseButton <span style="color:#ff79c6">and</span> event<span style="color:#ff79c6">.</span>is_pressed():
-		emit_signal(<span style="color:#f1fa8c">&#34;cell_clicked&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> _on_GridCell_clicked(viewport, event, shape_idx):
+	<span style="color:#66d9ef">if</span> event is <span style="color:#a6e22e">InputEventMouseButton</span> <span style="color:#f92672">and</span> event<span style="color:#f92672">.</span>is_pressed():
+		emit_signal(<span style="color:#e6db74">&#34;cell_clicked&#34;</span>)
 </code></pre></div><p>Now every time we click a cell, <code>play_turn</code> is called and we see <code>play_turn is called</code> in the output.
 We know if a cell is clicked, but we don&rsquo;t know which cell is clicked.</p>
 <p>Signals can carry additional data that can be passed as a parameter to the method. We can add additional data to a signal by appending arguments in the <code>emit_signal</code> method.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> _on_GridCell_clicked(viewport, event, shape_idx):
-	<span style="color:#ff79c6">if</span> event is InputEventMouseButton <span style="color:#ff79c6">and</span> event<span style="color:#ff79c6">.</span>is_pressed():
-		emit_signal(<span style="color:#f1fa8c">&#34;cell_clicked&#34;</span>, self)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> _on_GridCell_clicked(viewport, event, shape_idx):
+	<span style="color:#66d9ef">if</span> event is <span style="color:#a6e22e">InputEventMouseButton</span> <span style="color:#f92672">and</span> event<span style="color:#f92672">.</span>is_pressed():
+		emit_signal(<span style="color:#e6db74">&#34;cell_clicked&#34;</span>, self)
 </code></pre></div><p>Here, we are passing <code>self</code> as additional data in the signal. Any node that is listening for the <code>cell_clicked</code> signal will also get to know the node that has emitted the signal.</p>
 <p>Since the signal is now carrying additional data, we need to update its declaration to reflect this change.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">signal</span> cell_clicked(cell)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">signal</span> cell_clicked(cell)
 </code></pre></div><aside class="admonition  error ">
     <div class="admonition__title">
         Error
@@ -963,9 +963,9 @@ We know if a cell is clicked, but we don&rsquo;t know which cell is clicked.</p>
     </div>
 </aside>
 <p>We fix this by adding an argument to <code>play_turn</code>. We can print the name of the cell and see if it&rsquo;s correct.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> play_turn(cell):
-	<span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;play_turn called&#34;</span>)
-	<span style="color:#8be9fd;font-style:italic">print</span>(cell<span style="color:#ff79c6">.</span>name, <span style="color:#f1fa8c">&#34; was clicked&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> play_turn(cell):
+	print(<span style="color:#e6db74">&#34;play_turn called&#34;</span>)
+	print(cell<span style="color:#f92672">.</span>name, <span style="color:#e6db74">&#34; was clicked&#34;</span>)
 </code></pre></div><p>Run the game, click on a cell, and see that the correct name is printed in the output.</p>
 <p>Great! We can detect if a cell is clicked, and if so, then which cell is clicked in <code>Game.gd</code>. We will use this information to make appropriate changes to the game&rsquo;s state.</p>
 <h3 id="executing-a-turn-of-the-game">Executing a turn of the game</h3>
@@ -985,22 +985,22 @@ We know if a cell is clicked, but we don&rsquo;t know which cell is clicked.</p>
 </li>
 </ul>
 <p>We write this in code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> play_turn(cell):
-	<span style="color:#ff79c6">if</span> game_started:
-		<span style="color:#ff79c6">if</span> player_turn <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">1</span>:
-	   		cell<span style="color:#ff79c6">.</span>setX()
-	   	<span style="color:#ff79c6">else</span>:
-	   		cell<span style="color:#ff79c6">.</span>setO()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> play_turn(cell):
+	<span style="color:#66d9ef">if</span> game_started:
+		<span style="color:#66d9ef">if</span> player_turn <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+	   		cell<span style="color:#f92672">.</span>setX()
+	   	<span style="color:#66d9ef">else</span>:
+	   		cell<span style="color:#f92672">.</span>setO()
 
-	  	cell<span style="color:#ff79c6">.</span>disconnect(<span style="color:#f1fa8c">&#34;cell_clicked&#34;</span>, self, <span style="color:#f1fa8c">&#34;play_turn&#34;</span>)
-	   	turns_played <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+	  	cell<span style="color:#f92672">.</span>disconnect(<span style="color:#e6db74">&#34;cell_clicked&#34;</span>, self, <span style="color:#e6db74">&#34;play_turn&#34;</span>)
+	   	turns_played <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 
-   		<span style="color:#ff79c6">if</span> check_win():
+   		<span style="color:#66d9ef">if</span> check_win():
    			game_over()
-   			<span style="color:#ff79c6">return</span>
-   		<span style="color:#ff79c6">if</span> check_draw():
+   			<span style="color:#66d9ef">return</span>
+   		<span style="color:#66d9ef">if</span> check_draw():
    			game_over()
-   			<span style="color:#ff79c6">return</span>
+   			<span style="color:#66d9ef">return</span>
 
    		change_player()
    		update_labels()
@@ -1010,34 +1010,34 @@ We have introduced many new functions (that we haven&rsquo;t defined yet) to kee
 <p>The <code>check_win</code> method will return <code>true</code> if someone has won. In that case, we call the <code>game_over()</code> to clean things up, and <code>return</code> prevents the execution of the remainder of the <code>play_turn</code> method.</p>
 <p>If <code>check_win</code> is false, then we check for draws with <code>check_draw</code>. This returns <code>true</code> if the game has drawn. Again, we call <code>game_over()</code> and <code>return</code> out of the <code>play_turn</code> method.</p>
 <p>We will first work on <code>cell.setX</code>, <code>cell.setO</code>, and <code>cell.isEmpty</code>. Declare all other methods and write <code>pass</code> in their bodies for now. This suppresses the &ldquo;Method not declared&rdquo; errors while we work on the cell functions.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> check_win():
-	<span style="color:#ff79c6">pass</span>  <span style="color:#6272a4"># TODO</span>
-<span style="color:#ff79c6">func</span> check_draw():
-	<span style="color:#ff79c6">pass</span>  <span style="color:#6272a4"># TODO</span>
-<span style="color:#ff79c6">func</span> game_over():
-	<span style="color:#ff79c6">pass</span>  <span style="color:#6272a4"># TODO</span>
-<span style="color:#ff79c6">func</span> update_labels():
-	<span style="color:#ff79c6">pass</span>  <span style="color:#6272a4"># TODO</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> check_win():
+	<span style="color:#66d9ef">pass</span>  <span style="color:#75715e"># TODO</span>
+<span style="color:#66d9ef">func</span> check_draw():
+	<span style="color:#66d9ef">pass</span>  <span style="color:#75715e"># TODO</span>
+<span style="color:#66d9ef">func</span> game_over():
+	<span style="color:#66d9ef">pass</span>  <span style="color:#75715e"># TODO</span>
+<span style="color:#66d9ef">func</span> update_labels():
+	<span style="color:#66d9ef">pass</span>  <span style="color:#75715e"># TODO</span>
 </code></pre></div><p>Since the <code>setX</code> method is related to the cell, we will define it <code>setX</code> in <code>GridCell.gd</code>. This is also why we call it as <code>cell.setX()</code> in <code>Game.gd</code> and not just <code>setX</code>.</p>
 <p>For each cell, we store a <code>value</code> and display a sprite.
 When we set &ldquo;X&rdquo; in a cell, we must update the <code>value</code> of the cell and change the sprite shown in the cell.
 Recall that <code>X</code> has <code>value</code> <code>1</code> and <code>O</code> has value <code>-1</code>.</p>
 <p>We can change the sprite shown by changing the texture of the <code>CellSymbol</code> node.
 We load and access the textures in our scripts using the <code>preload</code> method.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">const</span> x_symbol <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">preload</span>(<span style="color:#f1fa8c">&#34;res://assets/x.png&#34;</span>)
-<span style="color:#ff79c6">const</span> o_symbol <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">preload</span>(<span style="color:#f1fa8c">&#34;res://assets/o.png&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">const</span> x_symbol <span style="color:#f92672">=</span> preload(<span style="color:#e6db74">&#34;res://assets/x.png&#34;</span>)
+<span style="color:#66d9ef">const</span> o_symbol <span style="color:#f92672">=</span> preload(<span style="color:#e6db74">&#34;res://assets/o.png&#34;</span>)
 </code></pre></div><p>We define the <code>setX</code> method:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> setX():
-	value <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
-	<span style="color:#ff79c6">$</span>CellSymbol<span style="color:#ff79c6">.</span>texture <span style="color:#ff79c6">=</span> x_symbol
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> setX():
+	value <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+	<span style="color:#f92672">$</span>CellSymbol<span style="color:#f92672">.</span>texture <span style="color:#f92672">=</span> x_symbol
 </code></pre></div><p>The <code>setO</code> method is defined similarly.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> setO():
-	value <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>
-	<span style="color:#ff79c6">$</span>CellSymbol<span style="color:#ff79c6">.</span>texture <span style="color:#ff79c6">=</span> o_symbol
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> setO():
+	value <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+	<span style="color:#f92672">$</span>CellSymbol<span style="color:#f92672">.</span>texture <span style="color:#f92672">=</span> o_symbol
 </code></pre></div><p>Finally, let&rsquo;s also define <code>setEmpty</code>. To remove the texture of a sprite, we set its texture to <code>null</code>. Otherwise, this is similar to <code>setX</code> and <code>setO</code> as well.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> setEmpty():
-	value <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
-	<span style="color:#ff79c6">$</span>CellSymbol<span style="color:#ff79c6">.</span>texture <span style="color:#ff79c6">=</span> null
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> setEmpty():
+	value <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+	<span style="color:#f92672">$</span>CellSymbol<span style="color:#f92672">.</span>texture <span style="color:#f92672">=</span> null
 </code></pre></div><p>Try playing the game now. Click on different cells. You will an X and an O appearing alternatively with each click.
 Our setters work!</p>
 <p>The text labels are currently static.
@@ -1048,19 +1048,19 @@ We would like to update the labels after each turn. We would like to use the lab
 <li>&ldquo;Place an ___&rdquo; in the <code>PlayerInstruction</code> label.</li>
 </ul>
 <p>We add an &ldquo;X&rdquo; or an &ldquo;O&rdquo; in the blanks depending on whose turn it is. We can implement this in our script using format strings.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">var</span> player_turn_text <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Player </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#39;s turn&#34;</span>
-<span style="color:#ff79c6">var</span> player_instruction_text <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Place an </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">var</span> player_turn_text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Player </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;s turn&#34;</span>
+<span style="color:#66d9ef">var</span> player_instruction_text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Place an </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span>
 </code></pre></div><p>Here, <code>%s</code> acts as a blank. We can add any string in the blank by writing it after a <code>%</code> sign.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#8be9fd;font-style:italic">print</span>(player_turn_text <span style="color:#ff79c6">%</span> <span style="color:#f1fa8c">&#34;X&#34;</span>)
-<span style="color:#8be9fd;font-style:italic">print</span>(player_instruction_text <span style="color:#ff79c6">%</span> <span style="color:#f1fa8c">&#34;X&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript">print(player_turn_text <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;X&#34;</span>)
+print(player_instruction_text <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;X&#34;</span>)
 </code></pre></div><p>This prints &ldquo;Player X&rsquo;s turn&rdquo; and &ldquo;Place an X&rdquo; in the output. The <code>%s</code> in the format strings is replaced by &ldquo;X&rdquo;.</p>
 <p>Instead of &ldquo;X&rdquo;, we will replace the <code>%s</code> in the format strings with a variable that depends on the value of <code>player_turn</code>. The variable will be equal to &ldquo;X&rdquo; if <code>player_turn</code> is equal to <code>1</code>, and it will be &ldquo;O&rdquo; if <code>player_turn</code> is <code>-1</code>.</p>
 <p>We can do the following.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">var</span> player_symbols <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;:)&#34;</span>, <span style="color:#f1fa8c">&#34;X&#34;</span>, <span style="color:#f1fa8c">&#34;O&#34;</span>]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">var</span> player_symbols <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;:)&#34;</span>, <span style="color:#e6db74">&#34;X&#34;</span>, <span style="color:#e6db74">&#34;O&#34;</span>]
 
-<span style="color:#ff79c6">func</span> update_labels():
-	<span style="color:#ff79c6">$</span>PlayerTurn<span style="color:#ff79c6">.</span>text <span style="color:#ff79c6">=</span> player_turn_text <span style="color:#ff79c6">%</span> player_symbols[player_turn]
-	<span style="color:#ff79c6">$</span>PlayerInstruction<span style="color:#ff79c6">.</span>text <span style="color:#ff79c6">=</span> player_instruction_text <span style="color:#ff79c6">%</span> player_symbols[player_turn]
+<span style="color:#66d9ef">func</span> update_labels():
+	<span style="color:#f92672">$</span>PlayerTurn<span style="color:#f92672">.</span>text <span style="color:#f92672">=</span> player_turn_text <span style="color:#f92672">%</span> player_symbols[player_turn]
+	<span style="color:#f92672">$</span>PlayerInstruction<span style="color:#f92672">.</span>text <span style="color:#f92672">=</span> player_instruction_text <span style="color:#f92672">%</span> player_symbols[player_turn]
 </code></pre></div><p>We have used a trick while writing the <code>player_symbols</code> array to make this work.</p>
 <ul>
 <li>Arrays are counted starting with 0. Therefore, <code>player_symbols[1]</code> returns &ldquo;X&rdquo;.</li>
@@ -1073,115 +1073,115 @@ We would like to update the labels after each turn. We would like to use the lab
 <p>Display the name of the winner will be easier if we have a state variable that stores the name of the winner.
 If no one has won yet, then <code>winner</code> stores <code>0</code>. Otherwise, it stores <code>1</code> or <code>-1</code> depending on who won.
 Let&rsquo;s declare and initialise it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">var</span> winner
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">var</span> winner
 
-<span style="color:#ff79c6">func</span> _ready():
-	<span style="color:#ff79c6">...</span>
-	winner <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span> <span style="color:#6272a4"># no one has won yet</span>
+<span style="color:#66d9ef">func</span> _ready():
+	<span style="color:#f92672">...</span>
+	winner <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># no one has won yet</span>
 </code></pre></div><p>We have already called the <code>check_win</code>, <code>check_draw</code>, and <code>game_over</code> methods in <code>play_turn</code>. Now, it&rsquo;s time to fill these in.</p>
 <h4 id="check_win"><code>check_win</code></h4>
 <p>A player wins when they get three of the same symbols in a row, column, or diagonal.
 There are three rows, three columns, and two diagonals, so we need to check for three in a line in eight lines.</p>
 <p>This is where choosing values <code>1</code> and <code>-1</code> for &ldquo;X&rdquo; and &ldquo;O&rdquo; is useful again. To check if someone has won, we calculate the sum of values of each row, column, and diagonal. If any of them is 3 or -3, then we have a winner.</p>
 <p>Let&rsquo;s add this in <code>check_win</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> check_win():
-	<span style="color:#ff79c6">var</span> row1 <span style="color:#ff79c6">=</span> cells[<span style="color:#bd93f9">0</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">1</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">2</span>]<span style="color:#ff79c6">.</span>value
-	<span style="color:#ff79c6">var</span> row2 <span style="color:#ff79c6">=</span> cells[<span style="color:#bd93f9">3</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">4</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">5</span>]<span style="color:#ff79c6">.</span>value
-	<span style="color:#ff79c6">var</span> row3 <span style="color:#ff79c6">=</span> cells[<span style="color:#bd93f9">6</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">7</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">8</span>]<span style="color:#ff79c6">.</span>value
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> check_win():
+	<span style="color:#66d9ef">var</span> row1 <span style="color:#f92672">=</span> cells[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>value
+	<span style="color:#66d9ef">var</span> row2 <span style="color:#f92672">=</span> cells[<span style="color:#ae81ff">3</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">4</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">5</span>]<span style="color:#f92672">.</span>value
+	<span style="color:#66d9ef">var</span> row3 <span style="color:#f92672">=</span> cells[<span style="color:#ae81ff">6</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">7</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">8</span>]<span style="color:#f92672">.</span>value
 
-	<span style="color:#ff79c6">var</span> col1 <span style="color:#ff79c6">=</span> cells[<span style="color:#bd93f9">0</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">3</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">6</span>]<span style="color:#ff79c6">.</span>value
-	<span style="color:#ff79c6">var</span> col2 <span style="color:#ff79c6">=</span> cells[<span style="color:#bd93f9">1</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">4</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">7</span>]<span style="color:#ff79c6">.</span>value
-	<span style="color:#ff79c6">var</span> col3 <span style="color:#ff79c6">=</span> cells[<span style="color:#bd93f9">2</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">5</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">8</span>]<span style="color:#ff79c6">.</span>value
+	<span style="color:#66d9ef">var</span> col1 <span style="color:#f92672">=</span> cells[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">3</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">6</span>]<span style="color:#f92672">.</span>value
+	<span style="color:#66d9ef">var</span> col2 <span style="color:#f92672">=</span> cells[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">4</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">7</span>]<span style="color:#f92672">.</span>value
+	<span style="color:#66d9ef">var</span> col3 <span style="color:#f92672">=</span> cells[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">5</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">8</span>]<span style="color:#f92672">.</span>value
 
-	<span style="color:#ff79c6">var</span> diag1 <span style="color:#ff79c6">=</span> cells[<span style="color:#bd93f9">0</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">4</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">8</span>]<span style="color:#ff79c6">.</span>value
-	<span style="color:#ff79c6">var</span> diag2 <span style="color:#ff79c6">=</span> cells[<span style="color:#bd93f9">2</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">4</span>]<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+</span> cells[<span style="color:#bd93f9">6</span>]<span style="color:#ff79c6">.</span>value
+	<span style="color:#66d9ef">var</span> diag1 <span style="color:#f92672">=</span> cells[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">4</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">8</span>]<span style="color:#f92672">.</span>value
+	<span style="color:#66d9ef">var</span> diag2 <span style="color:#f92672">=</span> cells[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">4</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">+</span> cells[<span style="color:#ae81ff">6</span>]<span style="color:#f92672">.</span>value
 
-	<span style="color:#ff79c6">var</span> lines <span style="color:#ff79c6">=</span> [row1, row2, row3, col1, col2, col3, diag1, diag2]
+	<span style="color:#66d9ef">var</span> lines <span style="color:#f92672">=</span> [row1, row2, row3, col1, col2, col3, diag1, diag2]
 </code></pre></div><p>Recall that <code>check_win</code> returns true if someone has won, and false if not.
 It also updates the state variable <code>winner</code> with the value of the player who won. This is what this code does:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> check_win():
-	<span style="color:#ff79c6">...</span>
-	<span style="color:#ff79c6">for</span> line <span style="color:#ff79c6">in</span> lines:
-		<span style="color:#ff79c6">if</span> line <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">3</span>:
-			winner <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
-			<span style="color:#ff79c6">return</span> true
-		<span style="color:#ff79c6">elif</span> line <span style="color:#ff79c6">&lt;=</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">3</span>:
-			winner <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>
-			<span style="color:#ff79c6">return</span> true
-		<span style="color:#ff79c6">else</span>:
-			winner <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
-	<span style="color:#ff79c6">return</span> false
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> check_win():
+	<span style="color:#f92672">...</span>
+	<span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> lines:
+		<span style="color:#66d9ef">if</span> line <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">3</span>:
+			winner <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+			<span style="color:#66d9ef">return</span> true
+		<span style="color:#66d9ef">elif</span> line <span style="color:#f92672">&lt;=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>:
+			winner <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+			<span style="color:#66d9ef">return</span> true
+		<span style="color:#66d9ef">else</span>:
+			winner <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+	<span style="color:#66d9ef">return</span> false
 </code></pre></div><h4 id="check_draw"><code>check_draw</code></h4>
 <p>Detecting if the game has drawn is easier.
 If nine turns have been played and no one has won so far, then and only then it is a draw.
 We have been updating <code>turns_played</code> in the function <code>play_turn</code>. We use this value to check if the grid has been filled completely.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> check_draw():
-	<span style="color:#ff79c6">if</span> turns_played <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">9</span>:
-		<span style="color:#ff79c6">return</span> true
-	<span style="color:#ff79c6">else</span>:
-		<span style="color:#ff79c6">return</span> false
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> check_draw():
+	<span style="color:#66d9ef">if</span> turns_played <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">9</span>:
+		<span style="color:#66d9ef">return</span> true
+	<span style="color:#66d9ef">else</span>:
+		<span style="color:#66d9ef">return</span> false
 </code></pre></div><h4 id="game_over"><code>game_over</code></h4>
 <p>Try playing the game now. You can still add symbols after someone has won.
 The labels still say it&rsquo;s someone&rsquo;s turn to play.</p>
 <p>We need to stop listening for clicks, display the result on the screen, and update our state variables.</p>
 <p>We can use format strings again to display the winner.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">var</span> winner_text <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Player </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c"> won!&#34;</span>
-<span style="color:#ff79c6">var</span> drawn_text <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Game drawn.&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">var</span> winner_text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Player </span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> won!&#34;</span>
+<span style="color:#66d9ef">var</span> drawn_text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Game drawn.&#34;</span>
 
-<span style="color:#ff79c6">func</span> game_over():
-	<span style="color:#ff79c6">if</span> winner <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>:
-		<span style="color:#ff79c6">$</span>PlayerTurn<span style="color:#ff79c6">.</span>text <span style="color:#ff79c6">=</span> drawn_text
-	<span style="color:#ff79c6">else</span>:
-		<span style="color:#ff79c6">$</span>PlayerTurn<span style="color:#ff79c6">.</span>text <span style="color:#ff79c6">=</span> winner_text <span style="color:#ff79c6">%</span> player_symbols[winner]
+<span style="color:#66d9ef">func</span> game_over():
+	<span style="color:#66d9ef">if</span> winner <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+		<span style="color:#f92672">$</span>PlayerTurn<span style="color:#f92672">.</span>text <span style="color:#f92672">=</span> drawn_text
+	<span style="color:#66d9ef">else</span>:
+		<span style="color:#f92672">$</span>PlayerTurn<span style="color:#f92672">.</span>text <span style="color:#f92672">=</span> winner_text <span style="color:#f92672">%</span> player_symbols[winner]
 </code></pre></div><p>The game is over, so we set <code>game_started</code> to false.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> game_over():
-	<span style="color:#ff79c6">...</span>
-	game_started <span style="color:#ff79c6">=</span> false
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> game_over():
+	<span style="color:#f92672">...</span>
+	game_started <span style="color:#f92672">=</span> false
 </code></pre></div><p>If the game is over, then we no longer want to listen for clicks on cells.
 We have disconnected the <code>cell_clicked</code> signal on cells that have been clicked, but the signal is still connected to cells that have not been clicked.</p>
 <p>If we try to disconnect a signal that is not connected, we get an error.
 Therefore, we iterate over all cells, and disconnect the signal only if it still connected.
 We check if a signal is connected with the <code>is_connected</code> method.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> game_over():
-	<span style="color:#ff79c6">...</span>
-	<span style="color:#ff79c6">for</span> cell <span style="color:#ff79c6">in</span> cells:
-		<span style="color:#ff79c6">if</span> cell<span style="color:#ff79c6">.</span>is_connected(<span style="color:#f1fa8c">&#34;cell_clicked&#34;</span>, self, <span style="color:#f1fa8c">&#34;play_turn&#34;</span>):
-			cell<span style="color:#ff79c6">.</span>disconnect(<span style="color:#f1fa8c">&#34;cell_clicked&#34;</span>, self, <span style="color:#f1fa8c">&#34;play_turn&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> game_over():
+	<span style="color:#f92672">...</span>
+	<span style="color:#66d9ef">for</span> cell <span style="color:#f92672">in</span> cells:
+		<span style="color:#66d9ef">if</span> cell<span style="color:#f92672">.</span>is_connected(<span style="color:#e6db74">&#34;cell_clicked&#34;</span>, self, <span style="color:#e6db74">&#34;play_turn&#34;</span>):
+			cell<span style="color:#f92672">.</span>disconnect(<span style="color:#e6db74">&#34;cell_clicked&#34;</span>, self, <span style="color:#e6db74">&#34;play_turn&#34;</span>)
 </code></pre></div><p>Once a game is over and we display the results, we would like the players to be able to play again without having to quit and restart. We could add a restart button that starts a new game. Let&rsquo;s show this instruction to the players.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">var</span> restart_text <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Press &#39;R&#39; to start a new game.&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">var</span> restart_text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Press &#39;R&#39; to start a new game.&#34;</span>
 
-<span style="color:#ff79c6">func</span> game_over():
-	<span style="color:#ff79c6">...</span>
-	<span style="color:#ff79c6">$</span>PlayerInstruction<span style="color:#ff79c6">.</span>text <span style="color:#ff79c6">=</span> restart_text
+<span style="color:#66d9ef">func</span> game_over():
+	<span style="color:#f92672">...</span>
+	<span style="color:#f92672">$</span>PlayerInstruction<span style="color:#f92672">.</span>text <span style="color:#f92672">=</span> restart_text
 </code></pre></div><h3 id="starting-a-new-game">Starting a new game</h3>
 <p>We want to restart the game when the players press the &lsquo;R&rsquo; button on their keyboard.
 We will implement this now.</p>
 <p>We need to set things up again for a new game.
 A lot of the code that we require is already in <code>_ready</code>. We would like to execute all of those commands when the players click &ldquo;Play again&rdquo;. We will extract all of those into a function <code>start_game</code> and call it. To reset the game, we simply call this function.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> _ready():
-	cells <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">$</span>Grid<span style="color:#ff79c6">/</span>GridCells<span style="color:#ff79c6">.</span>get_children()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> _ready():
+	cells <span style="color:#f92672">=</span> <span style="color:#f92672">$</span>Grid<span style="color:#f92672">/</span>GridCells<span style="color:#f92672">.</span>get_children()
 	start_game()
 
-<span style="color:#ff79c6">func</span> start_game():
-	game_started <span style="color:#ff79c6">=</span> true
-	player_turn <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>  <span style="color:#6272a4"># Player 1 starts the game</span>
-	turns_played <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
-	winner <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+<span style="color:#66d9ef">func</span> start_game():
+	game_started <span style="color:#f92672">=</span> true
+	player_turn <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>  <span style="color:#75715e"># Player 1 starts the game</span>
+	turns_played <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+	winner <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
 	update_labels()
-	<span style="color:#6272a4"># start listening for clicks</span>
-	<span style="color:#ff79c6">for</span> cell <span style="color:#ff79c6">in</span> cells:
-		cell<span style="color:#ff79c6">.</span>connect(<span style="color:#f1fa8c">&#34;cell_clicked&#34;</span>, self, <span style="color:#f1fa8c">&#34;play_turn&#34;</span>)
+	<span style="color:#75715e"># start listening for clicks</span>
+	<span style="color:#66d9ef">for</span> cell <span style="color:#f92672">in</span> cells:
+		cell<span style="color:#f92672">.</span>connect(<span style="color:#e6db74">&#34;cell_clicked&#34;</span>, self, <span style="color:#e6db74">&#34;play_turn&#34;</span>)
 </code></pre></div><p>We don&rsquo;t need to initialise the references to GridCells again. We can move the rest of the code from <code>_ready</code> to <code>start_game</code>. We call <code>start_game</code> in <code>_ready</code>.</p>
 <p>We have also added <code>update_labels</code> so that correct instructions are shown when the game starts.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> start_game():
-	<span style="color:#ff79c6">...</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> start_game():
+	<span style="color:#f92672">...</span>
 	update_labels()
 </code></pre></div><p>We need to remove all symbols from the grid and reset all values too. We set all cells to empty.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> start_game():
-	<span style="color:#ff79c6">...</span>
-	<span style="color:#6272a4"># remove symbols from grid</span>
-	<span style="color:#ff79c6">for</span> cell <span style="color:#ff79c6">in</span> cells:
-		cell<span style="color:#ff79c6">.</span>setEmpty()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> start_game():
+	<span style="color:#f92672">...</span>
+	<span style="color:#75715e"># remove symbols from grid</span>
+	<span style="color:#66d9ef">for</span> cell <span style="color:#f92672">in</span> cells:
+		cell<span style="color:#f92672">.</span>setEmpty()
 </code></pre></div><p>The game still works after this refactoring.</p>
 <p>We need to listen for the reset button pressed in the game over screen, in which case we call the <code>start_game</code> function.</p>
 <p>Add input map in Project Settings -&gt; Input Map. Add a <code>ui_restart</code> action. Add event Keyboard press &ldquo;R&rdquo; to it.</p>
@@ -1194,10 +1194,10 @@ A lot of the code that we require is already in <code>_ready</code>. We would li
     
 </figure>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#ff79c6">func</span> _process(delta):
-	<span style="color:#ff79c6">if</span> <span style="color:#ff79c6">!</span>game_started:
-		<span style="color:#ff79c6">if</span> Input<span style="color:#ff79c6">.</span>is_action_pressed(<span style="color:#f1fa8c">&#34;ui_reset&#34;</span>):
-			<span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Resetting game&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> _process(delta):
+	<span style="color:#66d9ef">if</span> <span style="color:#f92672">!</span>game_started:
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">Input</span><span style="color:#f92672">.</span>is_action_pressed(<span style="color:#e6db74">&#34;ui_reset&#34;</span>):
+			print(<span style="color:#e6db74">&#34;Resetting game&#34;</span>)
 			start_game()
 </code></pre></div><p>It should work now. Our game is complete.</p>
 <h2 id="finishing-up">Finishing up</h2>
@@ -1233,13 +1233,14 @@ In this post, I outline how I made the switch from Hugo to Nuxt. I hope this hel
 <p>Hugo is quick to install and very easy to get started with, which is what drew me to it in the first place.
 There are a variety of user-submitted themes available, and out of those, the Academic theme was my favourite.</p>
 <p>The theme has a lot of useful features, but I found it quite opinionated. I found several websites using this theme, and they all looked more or less the same. I could customise my site by overriding the template files, but this was  not a pleasant experience.</p>
-<p>When I wanted to modify the theme, I would have to override the templates, and in some cases rewrite them completely. This would often cause unintended effects. The site was difficult to maintain, and even more to add new features, and I always felt that I had hacked it together and it could break with an update to Hugo or the theme.</p>
-<p>I wanted to create a theme from scratch, and I realized that frameworks such as React and Vue have a much larger scope for customisation.</p>
-<p>There are <em>a lot</em> of static site generators out there. In the end, I tried out Gridsome, Next.js, and Nuxt.js.</p>
+<p>When I wanted to modify the theme, I had to override the theme templates, and in some cases rewrite them completely. This would often cause unintended effects. The site was difficult to maintain, and even more to add new features. I always felt that I had hacked it together and it could break with an update to Hugo or the theme.</p>
+<p>I wanted to create a theme from scratch, and I realized that there is much bigger scope for customisation if I use frameworks such as React or Vue.</p>
+<p>There are a lot of static site generators based on these frameworks. I tried out Gridsome, Next.js, and Nuxt.js.</p>
 <h3 id="gridsome">Gridsome</h3>
-<p>I tried out Gridsome first because it was more oriented towards static sites. I learnt GraphQL, which is required to parse the markdown files. I found the syntax quite verbose.</p>
+<p>I tried Gridsome first. It is based on Vue.js. I was impressed with the speed that links opened with. I was able to access data from my markdown files using GraphQL. I had never used GraphQL before, and I enjoyed learning it.</p>
 <h3 id="nextjs">Next.js</h3>
-<p>Next, I tried out Next.js which uses React. I was surprised to see how easily I could pickup React since I knew Vue. It wasn&rsquo;t easy parsing markdown files. I had to use a third-party plugin <code>next-mdx-remote</code> which didn&rsquo;t work very well with NextLinks.</p>
+<p>Next, I tried out Next.js which uses React. I was surprised to see how easily I could pickup React since I knew Vue. Next.js has a great tutorial that teaches you Next.js by building a basic blog site. While I loved the tutorial, I didn&rsquo;t like much code I had to write to read my Markdown files.
+I had to use a third-party plugin <code>next-mdx-remote</code> which didn&rsquo;t work very well with NextLinks.</p>
 <h3 id="nuxtjs">Nuxt.js</h3>
 <p>I discovered the awesome-nuxtjs page on Github, and I loved the number of first-party plugins that Nuxt has.</p>
 <p>The Nuxt Content module makes it very easy to access markdown files.
@@ -1256,7 +1257,7 @@ displaystyle math too!</p>
 $$</p>
 <h4 id="code-blocks">Code blocks</h4>
 <p>Prism js comes pre-installed with Nuxt. You can install themes and plugins too.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#ff79c6">fn</span> <span style="color:#50fa7b">main</span>() {
-    println<span style="color:#ff79c6">!</span>(<span style="color:#f1fa8c">&#34;Hello, world!&#34;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
 }
 </code></pre></div>]]></description></item></channel></rss>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vuejs on Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/tags/vuejs/"/><description>Recent content in vuejs on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 07 Jul 2021 15:33:07 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/vuejs/index.xml" rel="self" type="application/rss+xml"/><item><title>Moving my site from Hugo to Nuxt.js...</title><link>https://pranshugaba.com/posts/moving-from-hugo-to-nuxt/</link><pubDate>Tue, 11 May 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/moving-from-hugo-to-nuxt/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vuejs on Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/tags/vuejs/"/><description>Recent content in vuejs on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 08 Jul 2021 15:34:56 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/vuejs/index.xml" rel="self" type="application/rss+xml"/><item><title>Moving my site from Hugo to Nuxt.js...</title><link>https://pranshugaba.com/posts/moving-from-hugo-to-nuxt/</link><pubDate>Tue, 11 May 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/moving-from-hugo-to-nuxt/</guid><description>
 <![CDATA[<aside class="admonition   ">
     <div class="admonition__title">
         Note
@@ -15,13 +15,14 @@ In this post, I outline how I made the switch from Hugo to Nuxt. I hope this hel
 <p>Hugo is quick to install and very easy to get started with, which is what drew me to it in the first place.
 There are a variety of user-submitted themes available, and out of those, the Academic theme was my favourite.</p>
 <p>The theme has a lot of useful features, but I found it quite opinionated. I found several websites using this theme, and they all looked more or less the same. I could customise my site by overriding the template files, but this was  not a pleasant experience.</p>
-<p>When I wanted to modify the theme, I would have to override the templates, and in some cases rewrite them completely. This would often cause unintended effects. The site was difficult to maintain, and even more to add new features, and I always felt that I had hacked it together and it could break with an update to Hugo or the theme.</p>
-<p>I wanted to create a theme from scratch, and I realized that frameworks such as React and Vue have a much larger scope for customisation.</p>
-<p>There are <em>a lot</em> of static site generators out there. In the end, I tried out Gridsome, Next.js, and Nuxt.js.</p>
+<p>When I wanted to modify the theme, I had to override the theme templates, and in some cases rewrite them completely. This would often cause unintended effects. The site was difficult to maintain, and even more to add new features. I always felt that I had hacked it together and it could break with an update to Hugo or the theme.</p>
+<p>I wanted to create a theme from scratch, and I realized that there is much bigger scope for customisation if I use frameworks such as React or Vue.</p>
+<p>There are a lot of static site generators based on these frameworks. I tried out Gridsome, Next.js, and Nuxt.js.</p>
 <h3 id="gridsome">Gridsome</h3>
-<p>I tried out Gridsome first because it was more oriented towards static sites. I learnt GraphQL, which is required to parse the markdown files. I found the syntax quite verbose.</p>
+<p>I tried Gridsome first. It is based on Vue.js. I was impressed with the speed that links opened with. I was able to access data from my markdown files using GraphQL. I had never used GraphQL before, and I enjoyed learning it.</p>
 <h3 id="nextjs">Next.js</h3>
-<p>Next, I tried out Next.js which uses React. I was surprised to see how easily I could pickup React since I knew Vue. It wasn&rsquo;t easy parsing markdown files. I had to use a third-party plugin <code>next-mdx-remote</code> which didn&rsquo;t work very well with NextLinks.</p>
+<p>Next, I tried out Next.js which uses React. I was surprised to see how easily I could pickup React since I knew Vue. Next.js has a great tutorial that teaches you Next.js by building a basic blog site. While I loved the tutorial, I didn&rsquo;t like much code I had to write to read my Markdown files.
+I had to use a third-party plugin <code>next-mdx-remote</code> which didn&rsquo;t work very well with NextLinks.</p>
 <h3 id="nuxtjs">Nuxt.js</h3>
 <p>I discovered the awesome-nuxtjs page on Github, and I loved the number of first-party plugins that Nuxt has.</p>
 <p>The Nuxt Content module makes it very easy to access markdown files.
@@ -38,7 +39,7 @@ displaystyle math too!</p>
 $$</p>
 <h4 id="code-blocks">Code blocks</h4>
 <p>Prism js comes pre-installed with Nuxt. You can install themes and plugins too.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#ff79c6">fn</span> <span style="color:#50fa7b">main</span>() {
-    println<span style="color:#ff79c6">!</span>(<span style="color:#f1fa8c">&#34;Hello, world!&#34;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
 }
 </code></pre></div>]]></description></item></channel></rss>
