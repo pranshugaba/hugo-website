@@ -23,6 +23,8 @@ draft: false
 featured: false
 ---
 
+## Introduction
+
 Do you love playing video games? I sure do! I enjoy making games too, and it's highly likely that you would too.
 Game development is an umbrella term for ranging from designing levels, mechanics to coding the logic to making art and music.
 It has a little something for everyone. If you would like to learn how to make games, then this guide is a great place to start, if I do say so myself.
