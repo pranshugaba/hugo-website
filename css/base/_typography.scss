@@ -41,7 +41,16 @@ h4 {
 }
 
 ul,
-ol,
+ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
 p {
   margin-top: 1rem;
   margin-bottom: 1.6rem;
@@ -61,10 +70,6 @@ a {
   &:hover {
     text-decoration: none;
   }
-}
-
-li {
-  margin-bottom: 0.5rem;
 }
 
 strong {
