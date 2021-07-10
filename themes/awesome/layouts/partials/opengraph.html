@@ -27,8 +27,8 @@
             {{ with .Params.Subtitle }}
                 {{ $subtitle = . | replaceRE "," "%252C" | replaceRE "\\?" "%253F" | replaceRE "/" "%252F" | replaceRE "#" "%2523" }}
             {{ end }}
-            <meta property="og:image" content="https://res.cloudinary.com/pranshugaba/image/upload/w_1280,h_669,c_fill,q_auto,f_auto/w_780,c_fit,co_rgb:121212,g_south_west,x_480,y_360,l_text:inter-semibold.ttf_80_line_spacing_-6_letter_spacing_-3:{{ $title }}/w_750,c_fit,co_rgb:121212,g_north_west,x_480,y_350,l_text:inter-regular.ttf_56_letter_spacing_-1:{{ $subtitle }}/social.png"/>
-            <meta property="twitter:image" content="https://res.cloudinary.com/pranshugaba/image/upload/w_1280,h_669,c_fill,q_auto,f_auto/w_780,c_fit,co_rgb:121212,g_south_west,x_480,y_360,l_text:inter-semibold.ttf_80_line_spacing_-6_letter_spacing_-3:{{ $title }}/w_750,c_fit,co_rgb:121212,g_north_west,x_480,y_350,l_text:inter-regular.ttf_56_letter_spacing_-1:{{ $subtitle }}/social.png"/>
+            <meta property="og:image" content="https://res.cloudinary.com/pranshugaba/image/upload/w_1280,h_669,c_fill,q_auto,f_auto/w_780,c_fit,co_rgb:121212,g_south_west,x_480,y_375,l_text:inter-semibold.ttf_80_line_spacing_-6_letter_spacing_-3:{{ $title }}/w_750,c_fit,co_rgb:121212,g_north_west,x_480,y_350,l_text:inter-regular.ttf_56_letter_spacing_-1:{{ $subtitle }}/social.png"/>
+            <meta property="twitter:image" content="https://res.cloudinary.com/pranshugaba/image/upload/w_1280,h_669,c_fill,q_auto,f_auto/w_780,c_fit,co_rgb:121212,g_south_west,x_480,y_375,l_text:inter-semibold.ttf_80_line_spacing_-6_letter_spacing_-3:{{ $title }}/w_750,c_fit,co_rgb:121212,g_north_west,x_480,y_350,l_text:inter-regular.ttf_56_letter_spacing_-1:{{ $subtitle }}/social.png"/>
         {{ end -}}
     {{- end -}}
 {{- end -}}
