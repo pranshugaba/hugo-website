@@ -2,7 +2,7 @@
 
 .page {
   &__title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
   }
   &__subtitle {
@@ -21,6 +21,9 @@
     margin-top: 2.5rem;
     margin-bottom: -0.5rem;
     border-radius: 0.5rem;
+    & img {
+      border: 0.15rem solid var(--fg);
+    }
   }
 
   &__content {
