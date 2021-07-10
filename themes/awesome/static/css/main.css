@@ -146,6 +146,7 @@ figure img {
   height: auto;
   max-width: 100%;
   margin: 0 auto;
+  border: 3px solid var(--fg);
 }
 @media (prefers-color-scheme: dark) {
   figure img {
@@ -165,24 +166,35 @@ figure figcaption {
 
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter-Variable.ttf") format("truetype");
-  font-weight: 125 950;
-  font-style: normal;
+  font-weight: 100 900;
   font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/Inter-roman.var.woff2") format("woff2");
 }
 @font-face {
-  font-family: "MW";
-  src: url("/fonts/Merriweather-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Inter";
+  font-weight: 100 900;
   font-display: swap;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("/fonts/Inter-italic.var.woff2") format("woff2");
 }
 @font-face {
-  font-family: "MW";
-  src: url("/fonts/Merriweather-Italic.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "Fraunces";
+  src: url("/fonts/Fraunces-Regular--latin_basic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/Fraunces-Italic--latin_basic.woff2") format("woff2");
+  font-weight: 100 900;
   font-style: italic;
   font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
   font-family: "JBMono";
@@ -210,10 +222,10 @@ html {
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-family: "Fraunces", serif;
+  font-size: 3rem;
+  font-variation-settings: "wght" 450, "opsz" 144, "SOFT" 75;
   line-height: 1.25;
-  letter-spacing: -0.05em;
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
@@ -354,9 +366,9 @@ hr {
   max-width: -moz-max-content;
   max-width: max-content;
   margin: 0 auto 1rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.025em;
+  font-family: "Fraunces", serif;
+  font-variation-settings: "wght" 500, "opsz" 144, "SOFT" 100;
+  font-size: 2rem;
 }
 .header__sections {
   margin-top: 1rem;
@@ -890,7 +902,7 @@ h4 code {
 }
 
 .page__title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 .page__subtitle {
@@ -901,8 +913,6 @@ h4 code {
   line-height: 1.25;
 }
 .page__date {
-  font-size: large;
-  font-weight: 400;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }

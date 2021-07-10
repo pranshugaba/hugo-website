@@ -34,17 +34,19 @@ In this post, I outline how I made the switch from Hugo to Nuxt. I hope this hel
 Hugo is quick to install and very easy to get started with, which is what drew me to it in the first place. 
 There are a variety of user-submitted themes available, and out of those, the Academic theme was my favourite. 
 
-The theme has a lot of useful features, but I found it quite opinionated. I found several websites using this theme, and they all looked more or less the same. I could customise my site by overriding the template files, but this was  not a pleasant experience.  
+The theme has a lot of useful features, but I found it to be quite opinionated. I found several websites using this theme, and they all looked more or less the same. I could customise my site by overriding the template files, but this was  not a pleasant experience.  
 
-When I wanted to modify the theme, I had to override the theme templates, and in some cases rewrite them completely. This would often cause unintended effects. The site was difficult to maintain, and even more to add new features. I always felt that I had hacked it together and it could break with an update to Hugo or the theme.
+When I wanted to modify the theme, I had to override the theme templates, and in some cases rewrite them completely. This would often cause unintended effects. The site was difficult to maintain, and even more so to add new features. I always felt that I had hacked it together and it could break with an update to Hugo or the theme.
 
-I wanted to create a theme from scratch, and I realized that there is much bigger scope for customisation if I use frameworks such as React or Vue. 
+I wanted to create a theme from scratch, and I realized that there is much more scope for customisation if I use frameworks such as React or Vue. 
 
 There are a lot of static site generators based on these frameworks. I tried out Gridsome, Next.js, and Nuxt.js.
 
 ### Gridsome 
 
 I tried Gridsome first. It is based on Vue.js. I was impressed with the speed that links opened with. I was able to access data from my markdown files using GraphQL. I had never used GraphQL before, and I enjoyed learning it. 
+
+Gridsome prefetches links, so links are  quick to open. 
 
 ### Next.js
 
