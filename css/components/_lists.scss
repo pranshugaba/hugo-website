@@ -32,6 +32,7 @@
   grid-template-columns: auto auto;
   grid-template-areas: 'dt tp' 'details details';
   column-gap: 1.25rem;
+  row-gap: 0.2rem;
 
   .item__type {
     font-size: smaller;
@@ -55,7 +56,7 @@
 
 .list-section__item,
 .list-yearwise__item {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 
   .item__date {
     display: flex;
@@ -64,14 +65,13 @@
     grid-area: dt;
   }
   @media (min-width: 640px) {
-    margin-bottom: 1.5rem;
     .item__date {
       display: block;
       justify-self: start;
       align-self: start;
       width: 4.5ch;
       padding: 0 0.2rem;
-      margin-top: 0.25rem;
+      margin-top: 0.5rem;
       border-radius: 0.25rem;
       font-size: smaller;
       border: 2px solid var(--fg);
@@ -97,7 +97,7 @@
   }
 
   & .item__summary {
-    margin-top: 0;
+    margin-top: 0.25rem;
   }
 }
 
