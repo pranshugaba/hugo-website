@@ -5,9 +5,7 @@
 
 {{ if eq ($paginator.PageNumber) 1 }}
   <h1 class="page__title">Hello There {{ ":wave:" | emojify }}</h1>
-  {{ with .Params.Subtitle }}
-      <h2 class="page__subtitle" >{{ . | emojify }}</h2>
-  {{ end }}
+    <h2 class="page__subtitle" >I am Pranshu Gaba</h2>
   {{ .Content }}
 {{ end }}
 

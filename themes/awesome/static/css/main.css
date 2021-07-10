@@ -146,7 +146,7 @@ figure img {
   height: auto;
   max-width: 100%;
   margin: 0 auto;
-  border: 3px solid var(--fg);
+  border: 2px solid var(--fg);
 }
 @media (prefers-color-scheme: dark) {
   figure img {
@@ -222,10 +222,10 @@ html {
 }
 
 h1 {
-  font-family: "Fraunces", serif;
-  font-size: 3rem;
-  font-variation-settings: "wght" 450, "opsz" 144, "SOFT" 75;
+  font-size: 2.5rem;
+  font-weight: 600;
   line-height: 1.25;
+  letter-spacing: -0.05em;
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
@@ -366,9 +366,9 @@ hr {
   max-width: -moz-max-content;
   max-width: max-content;
   margin: 0 auto 1rem;
-  font-family: "Fraunces", serif;
-  font-variation-settings: "wght" 500, "opsz" 144, "SOFT" 100;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
 }
 .header__sections {
   margin-top: 1rem;
@@ -906,7 +906,7 @@ h4 code {
 }
 
 .page__title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 .page__subtitle {
@@ -924,6 +924,9 @@ h4 code {
   margin-top: 2.5rem;
   margin-bottom: -0.5rem;
   border-radius: 0.5rem;
+}
+.page__featuredimage img {
+  border: 0.15rem solid var(--fg);
 }
 .page__content {
   margin-top: 2.5rem;
