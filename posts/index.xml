@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/posts/"/><description>Recent content in Posts on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sun, 11 Jul 2021 05:06:59 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/posts/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/building-x-and-o-using-godot/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/posts/"/><description>Recent content in Posts on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sun, 11 Jul 2021 19:17:17 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/posts/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/building-x-and-o-using-godot/</guid><description>
 <![CDATA[<h2 id="introduction">Introduction</h2>
 <p>Do you love playing video games? I sure do! I enjoy making games too, and it&rsquo;s highly likely that you would too.
 Game development is an umbrella term for ranging from designing levels, mechanics to coding the logic to making art and music.
@@ -1230,26 +1230,28 @@ You can report bugs and submit improvements here.</p>
 </aside>
 <p>This site is built using Nuxt.js, and I have had a great time making it.
 The previous version of this website (now retired to <a href="https://hugo.pranshugaba.com" target="_blank" rel="noopener">hugo.pranshugaba.com</a>) was built using Hugo.
-In this post, I outline how I made the switch from Hugo to Nuxt. I hope this helps anyone who is looking to make a static site using Nuxt.</p>
+In this post, I outline how I made the switch from Hugo to Nuxt. I hope this helps anyone who is looking to choose a static site generator for their website.</p>
 <p>Hugo is quick to install and very easy to get started with, which is what drew me to it in the first place.
 There are a variety of user-submitted themes available, and out of those, the Academic theme was my favourite.</p>
-<p>The theme has a lot of useful features, but I found it to be quite opinionated. I found several websites using this theme, and they all looked more or less the same. I could customise my site by overriding the template files, but this was  not a pleasant experience.</p>
+<p>The theme has a lot of useful features, but I found it to be quite opinionated. I found several websites using this theme, and they all looked more or less the same. I could customise my site by overriding the template files, but this was not a pleasant experience.</p>
 <p>When I wanted to modify the theme, I had to override the theme templates, and in some cases rewrite them completely. This would often cause unintended effects. The site was difficult to maintain, and even more so to add new features. I always felt that I had hacked it together and it could break with an update to Hugo or the theme.</p>
 <p>I wanted to create a theme from scratch, and I realized that there is much more scope for customisation if I use frameworks such as React or Vue.</p>
 <p>There are a lot of static site generators based on these frameworks. I tried out Gridsome, Next.js, and Nuxt.js.</p>
 <h3 id="gridsome">Gridsome</h3>
-<p>I tried Gridsome first. It is based on Vue.js. I was impressed with the speed that links opened with. I was able to access data from my markdown files using GraphQL. I had never used GraphQL before, and I enjoyed learning it.</p>
-<p>Gridsome prefetches links, so links are  quick to open.</p>
+<p>I tried <a href="https://gridsome.org/" target="_blank" rel="noopener">Gridsome</a> first, which is based on Vue.js.
+I had only used plain HTML and CSS before, but I could pickup Vue easily because each Vue file is divided into <code>template</code>, <code>script</code>, and <code>style</code> tags corresponding to HTML, JS, and CSS respectively.</p>
+<p>I enjoyed learning Gridsome, and I loved the site it generated too. Gridsome prefetches links, so links are super quick to open. It also automatically optimises image loading by showing a blurred placeholder in the place of the image until it loads.</p>
+<p>I could access data from my markdown files using GraphQL. I had never used GraphQL before, and I enjoyed learning it.</p>
 <h3 id="nextjs">Next.js</h3>
-<p>Next, I tried out Next.js which uses React. I was surprised to see how easily I could pickup React since I knew Vue. Next.js has a great tutorial that teaches you Next.js by building a basic blog site. While I loved the tutorial, I didn&rsquo;t like much code I had to write to read my Markdown files.
-I had to use a third-party plugin <code>next-mdx-remote</code> which didn&rsquo;t work very well with NextLinks.</p>
+<p>Next, I tried out <a href="https://nextjs.org/" target="_blank" rel="noopener">Next.js</a> which uses React. I was surprised to see how easily I could pickup React since I knew Vue. Next.js has a great tutorial that teaches you Next.js by building a basic blog site.
+While I loved the tutorial, I didn&rsquo;t like the fact that I had to write so much code just to read my markdown files.</p>
+<p>There are many features that I wanted to add to my website such as sitemap and PWA. I found many plugins for these on the <a href="https://github.com/unicodeveloper/awesome-nextjs" target="_blank" rel="noopener">awesome-nextjs</a> page on GitHub. However, most of them are third-party, and you never know when they stop working.</p>
 <h3 id="nuxtjs">Nuxt.js</h3>
-<p>I discovered the awesome-nuxtjs page on Github, and I loved the number of first-party plugins that Nuxt has.</p>
-<p>The Nuxt Content module makes it very easy to access markdown files.
-Plugins are great, more contributors and better documentation.</p>
+<p>While browsing through the awesome-nextjs page, I discovered the <a href="https://github.com/nuxt-community/awesome-nuxt" target="_blank" rel="noopener">awesome-nuxtjs</a> page. I found that Nuxt has first-party modules for almost every feature that I would like in my site. I immediately switched to <a href="https://nuxtjs.org/" target="_blank" rel="noopener">Nuxt.js</a>.
+I found that the modules are great, it is in active development, and the documentation is detailed and well-written.</p>
+<p>My favourite module is the <a href="https://content.nuxtjs.org/" target="_blank" rel="noopener">Nuxt Content</a> module. It makes it very easy to access markdown files and their content. I also loved the sitemap, PWA, and Color Mode modules.</p>
+<p>Nuxt prefetches the outgoing links on any page, so the links begin to load even before you click on them. This makes the site feel fast and snappy!</p>
 <p>I did the theming and styling from scratch and am adding features gradually. I was able to match all the features offered in Hugo, and then some.</p>
-<h4 id="prefetching">Prefetching</h4>
-<p>One of the biggest advantages of using Nuxt is the prefetching. It prefetches the outgoing links on any page, so the links begin to load even before you click on them. This makes the site feel fast and snappy!</p>
 <h4 id="math-equations">Math equations</h4>
 <p>Install <code>remark-math</code> and <code>rehype-katex</code> modules and we are good to go!</p>
 <p>I can have inline math $e^{i\pi} + 1 = 0$, and
@@ -1258,7 +1260,7 @@ displaystyle math too!</p>
 \sum_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6}
 $$</p>
 <h4 id="code-blocks">Code blocks</h4>
-<p>Prism js comes pre-installed with Nuxt. You can install themes and plugins too.</p>
+<p>Prism.js comes pre-installed with Nuxt. You can install themes and plugins too.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
     println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
 }
