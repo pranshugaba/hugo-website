@@ -15,4 +15,6 @@ draft: true
 featured: false
 ---
 
-Not more than 2 weeks ago, I migrated my site from Hugo to Nuxt, and I had [written a post]({{< ref "../moving-from-hugo-to-nuxt" >}}) describing why I chose to do so. 
+Not more than 2 months ago, I had migrated my site from Hugo to Nuxt, and I had [written a post]({{< ref "../moving-from-hugo-to-nuxt" >}}) describing why I chose to do so. Now I am back to Hugo. 
+
+

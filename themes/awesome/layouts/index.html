@@ -4,7 +4,7 @@
 {{ $paginator := .Paginate ($pages.GroupByDate "2006") }}
 
 {{ if eq ($paginator.PageNumber) 1 }}
-  <h1 class="page__title">Hello There {{ ":wave:" | emojify }}</h1>
+  <h1 class="page__title">Hello there</h1>
     <h2 class="page__subtitle" >I am Pranshu Gaba</h2>
   {{ .Content }}
 {{ end }}
