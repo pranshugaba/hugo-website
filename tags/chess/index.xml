@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>chess on Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/tags/chess/"/><description>Recent content in chess on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 13 Jul 2021 18:25:42 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/chess/index.xml" rel="self" type="application/rss+xml"/><item><title>A Chess Puzzle</title><link>https://pranshugaba.com/puzzles/2/</link><pubDate>Tue, 06 Apr 2021 00:30:00 +0530</pubDate><guid>https://pranshugaba.com/puzzles/2/</guid><description>
-<![CDATA[<img src="https://pranshugaba.com/puzzles/2/featured_hu345eb872bd2ee0c7684c1a1fb0528da6_62781_1200x800_fill_box_center_2.png" alt="" /><p>For the second puzzle of <a href="/mardi-maths">Mardi Maths</a>, we have a chess puzzle!</p>
-<p>Recall how chess pieces move:</p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>chess on Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/tags/chess/"/><description>Recent content in chess on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 13 Jul 2021 20:31:01 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/chess/index.xml" rel="self" type="application/rss+xml"/><item><title>A Chess Puzzle</title><link>https://pranshugaba.com/puzzles/2/</link><pubDate>Tue, 06 Apr 2021 00:30:00 +0530</pubDate><guid>https://pranshugaba.com/puzzles/2/</guid><description>
+<![CDATA[<img src="https://pranshugaba.com/puzzles/2/featured_hu345eb872bd2ee0c7684c1a1fb0528da6_62781_1200x800_fill_box_center_2.png" alt="" /><p>For the second puzzle, we have a chess puzzle!</p>
+<aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>Recall how chess pieces move:</p>
 <ul>
 <li>Rooks move in straight lines up, down, left, or right.</li>
 <li>Bishops can move diagonally.</li>
@@ -9,11 +15,24 @@
 <li>Pawns attack forward-left or forward-right.</li>
 <li>Knight move in an L-shaped pattern. Two steps forward and one step sideways.</li>
 </ul>
-<p>You can practice the pieces' movements on <a href="https://lichess.org/learn" target="_blank" rel="noopener">lichess.org</a>.</p>
+<p>You can practice the pieces' movements on <a href="https://lichess.org/learn">lichess.org</a>.</p>
+
+        
+    </div>
+</aside>
 <h2 id="the-problem">The Problem</h2>
 <p>You are trying to place as many white pieces on the board as possible such that no piece attacks any other piece.
 For the sake of this problem, assume that pieces can attack other pieces of the same colour.</p>
-<p><em>Tip:</em> You may find it helpful to play around with pieces on a board on the <a href="https://lichess.org/editor/8/8/8/8/8/8/8/8_w_-_-_0_1" target="_blank" rel="noopener">lichess board editor</a>.</p>
+<aside class="admonition  tip ">
+    <div class="admonition__title">
+        Tip
+    </div>
+	<div class="admonition__content">
+        
+            <p>You may find it helpful to play around with pieces on a board on the <a href="https://lichess.org/editor/8/8/8/8/8/8/8/8_w_-_-_0_1">lichess board editor</a>.</p>
+        
+    </div>
+</aside>
 <p>Here are 7 variants of this problem:</p>
 <h3 id="1">1</h3>
 <p>What is the maximum number of rooks you can place on a $8\times 8$ chessboard such that no two rooks attack each other?
@@ -64,22 +83,22 @@ For the sake of this problem, assume that pieces can attack other pieces of the 
 </div>
 <p>Good luck, have fun!</p>
 <hr>
-<p><a href="/contact">Send your attempts to me!</a></p>
+<p><a href="/contact">Share your attempts with me!</a></p>
 <ul>
 <li>
-<p>If you have solved the problem, share your solutions! Best explanations will be featured in the next Mardi Maths.</p>
+<p>If you have solved the problem, share your solutions! Best explanations will be featured with the next puzzle.</p>
 </li>
 <li>
-<p>If you are stuck, share your progress. What have you you tried so far?</p>
+<p>If you are stuck, share your progress. What have you you tried so far? I will guide you towards the answer.</p>
 </li>
 <li>
 <p>Let me know if there&rsquo;s an error or something&rsquo;s not clear in the puzzle.</p>
 </li>
 <li>
-<p>I would love your feedback. Did you find the puzzles interesting / easy / difficult?</p>
+<p>I would love your feedback. Did you find the puzzle interesting / too easy / too difficult?</p>
 </li>
 <li>
-<p>If you have any puzzles that you would like featured in this series, share those too!</p>
+<p>If you have any puzzles that you would like featured in this series, share those with me too!</p>
 </li>
 </ul>
 <hr>

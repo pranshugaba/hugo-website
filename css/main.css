@@ -275,6 +275,10 @@ p {
   line-height: 1.6;
 }
 
+p:first-child {
+  margin-top: 1rem;
+}
+
 p:last-child {
   margin-bottom: 1rem;
 }
@@ -330,6 +334,16 @@ hr {
   margin-top: 2rem;
   margin-bottom: 2rem;
   color: var(--fg);
+  border: 1px solid var(--fg);
+}
+
+blockquote {
+  font-size: 1.125rem;
+  border-left: 4px solid var(--fg);
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-left: 2ch;
+  padding-left: 2ch;
 }
 
 @-webkit-keyframes fadeInAnimation {
