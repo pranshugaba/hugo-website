@@ -897,6 +897,22 @@ h4 code {
   margin-top: 0;
 }
 
+.tagcloud {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1rem;
+}
+.tagcloud a {
+  text-decoration: none;
+}
+.tagcloud a:hover {
+  text-decoration: underline;
+}
+
 .home__pager {
   margin-top: 3rem;
   display: flex;
