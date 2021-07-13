@@ -1,5 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gamedev on Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/tags/gamedev/"/><description>Recent content in gamedev on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 13 Jul 2021 17:33:24 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/gamedev/index.xml" rel="self" type="application/rss+xml"/><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/posts/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/building-x-and-o-using-godot/</guid><description>
-<![CDATA[<h2 id="introduction">Introduction</h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gamedev on Pranshu Gaba</title><link rel="alternate" type="text/html" href="https://pranshugaba.com/tags/gamedev/"/><description>Recent content in gamedev on Pranshu Gaba</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 13 Jul 2021 17:59:13 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/gamedev/index.xml" rel="self" type="application/rss+xml"/><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/posts/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/building-x-and-o-using-godot/</guid><description>
+<![CDATA[<aside class="toc">
+    <h3 class="toc__heading">
+        Table of Contents
+    </h3>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a>
+      <ul>
+        <li><a href="#about-godot">About Godot</a></li>
+      </ul>
+    </li>
+    <li><a href="#setting-things-up">Setting things up</a>
+      <ul>
+        <li><a href="#planning-the-game">Planning the game</a></li>
+        <li><a href="#the-gameplay-loop">The gameplay loop</a></li>
+        <li><a href="#project-setup">Project setup</a></li>
+        <li><a href="#importing-assets">Importing assets</a></li>
+      </ul>
+    </li>
+    <li><a href="#building-the-interface">Building the interface</a>
+      <ul>
+        <li><a href="#labels">Labels</a></li>
+        <li><a href="#the-grid">The Grid</a></li>
+      </ul>
+    </li>
+    <li><a href="#implementing-the-logic">Implementing the logic</a>
+      <ul>
+        <li><a href="#storing-the-state-of-the-game">Storing the state of the game</a></li>
+        <li><a href="#listening-for-clicks-using-signals">Listening for clicks using signals</a></li>
+        <li><a href="#executing-a-turn-of-the-game">Executing a turn of the game</a></li>
+        <li><a href="#checking-for-wins-and-draws">Checking for wins and draws</a></li>
+        <li><a href="#starting-a-new-game">Starting a new game</a></li>
+      </ul>
+    </li>
+    <li><a href="#finishing-up">Finishing up</a>
+      <ul>
+        <li><a href="#exporting-the-game">Exporting the game</a></li>
+        <li><a href="#next-steps">Next steps</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</aside>
+<h2 id="introduction">Introduction</h2>
 <p>Do you love playing video games? I sure do! I enjoy making games too, and it&rsquo;s highly likely that you would too.
 Game development is an umbrella term for ranging from designing levels, mechanics to coding the logic to making art and music.
 It has a little something for everyone. If you would like to learn how to make games, then this guide is a great place to start, if I do say so myself.</p>
@@ -185,7 +228,7 @@ Select &ldquo;Create &amp; Edit&rdquo; to create the project.</p>
     
 </figure>
 
-<p>By default, when we start a new project, Godot starts in 3D mode. We are making a 2D game, so switch to 2D mode by clicking on &ldquo;2D&rdquo; at the top. The default shortcut to enter 2D mode is <!-- raw HTML omitted -->Ctrl<!-- raw HTML omitted --> + <!-- raw HTML omitted -->F1<!-- raw HTML omitted -->.</p>
+<p>By default, when we start a new project, Godot starts in 3D mode. We are making a 2D game, so switch to 2D mode by clicking on &ldquo;2D&rdquo; at the top. The default shortcut to enter 2D mode is <kbd>Ctrl</kbd> + <kbd>F1</kbd>.</p>
 
 <figure >
     
@@ -233,7 +276,7 @@ I set it to <code>#ffffff</code>, which is the hex code for white. Feel free to 
 We would load the images for these in Godot.
 We show some text in our game, and we will need to load a nice font for it.</p>
 <p>I have made an assets folder that you can use to make the game. It contains <code>x.png</code>, <code>o.png</code>, <code>grid.png</code>, and <code>Inter-Regular.ttf</code>.
-You can <!-- raw HTML omitted -->download my assets<!-- raw HTML omitted -->, or you can make your own.</p>
+You can <NavExtLink to="/">download my assets</NavExtLink>, or you can make your own.</p>
 
 <figure >
     
@@ -309,7 +352,7 @@ Click on <code>Create root node</code> -&gt; <code>2D node</code> in the Scene t
     
 </figure>
 
-<p>Now that we have a root node, we can save the scene and run the game. Save the scene by pressing <!-- raw HTML omitted -->Ctrl<!-- raw HTML omitted -->+<!-- raw HTML omitted -->S<!-- raw HTML omitted -->.
+<p>Now that we have a root node, we can save the scene and run the game. Save the scene by pressing <kbd>Ctrl</kbd>+<kbd>S</kbd>.
 Make a <code>scenes</code> folder in the root directory and save this scene in it as <code>Game.tscn</code>.</p>
 
 <figure >
@@ -330,7 +373,7 @@ Make a <code>scenes</code> folder in the root directory and save this scene in i
         
     </div>
 </aside>
-<p>Run the game by clicking the play button (or press <!-- raw HTML omitted -->F5<!-- raw HTML omitted -->). The first time you run the game, Godot will ask you to set the main scene. The main scene is the scene that loads when you run the game. Select the <code>Game.tscn</code> scene we just saved.</p>
+<p>Run the game by clicking the play button (or press <kbd>F5</kbd>). The first time you run the game, Godot will ask you to set the main scene. The main scene is the scene that loads when you run the game. Select the <code>Game.tscn</code> scene we just saved.</p>
 
 <figure >
     
@@ -341,7 +384,7 @@ Make a <code>scenes</code> folder in the root directory and save this scene in i
 </figure>
 
 <p>Of course, we haven&rsquo;t added anything to our scene yet, so we only see a blank screen when the game is run.
-Close the window (or press <!-- raw HTML omitted -->F8<!-- raw HTML omitted -->) to stop the preview.</p>
+Close the window (or press <kbd>F8</kbd>) to stop the preview.</p>
 <p>We look to our sketch to help us build the interface. We need a grid, some X&rsquo;s, some O&rsquo;s, and some text labels.</p>
 <p>Let&rsquo;s start with the labels because they are simpler.</p>
 <h3 id="labels">Labels</h3>
@@ -593,7 +636,7 @@ This mostly involves initialising variables.</p>
     </div>
 	<div class="admonition__content">
         
-            <p>You can <!-- raw HTML omitted -->Ctrl<!-- raw HTML omitted -->+Click on any inbuilt function to read its documentation. You can also search for help or open online docs directly from the script editor.</p>
+            <p>You can <kbd>Ctrl</kbd>+Click on any inbuilt function to read its documentation. You can also search for help or open online docs directly from the script editor.</p>
 <p>If you find any Godot term unclear, refer to the <a href="https://docs.godotengine.org/en/stable/index.html">Godot docs</a>.</p>
 <p><img src="img/online-docs.png" alt=""></p>
 
@@ -641,7 +684,7 @@ Let&rsquo;s initialise <code>player_turn</code> in <code>_ready</code>.</p>
 </code></pre></div><p>Once a player&rsquo;s turn ends, the other player gets to play. Therefore, the value of <code>player_turn</code> must change at the end of every turn.</p>
 <p>Let&rsquo;s write a function <code>change_player</code> function that changes the state of <code>player_turn</code>.
 We need to care about the details of how we change the player in this function only. Then, any time we want to change the player, we can call <code>change_player</code> without having to know how it works.
-This is called <!-- raw HTML omitted -->separation of concerns<!-- raw HTML omitted -->, and helps keep our code organised.</p>
+This is called <NavExtLink to="https://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</NavExtLink>, and helps keep our code organised.</p>
 <p>Due to our choice of player names, this is function is a one-liner.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#66d9ef">func</span> change_player():
 	player_turn <span style="color:#f92672">*=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
@@ -730,7 +773,7 @@ If you find yourself repeating the same code a lot, there is probably a better w
         
     </div>
 </aside>
-<p>We <em>can</em> do better. We can make use of the <!-- raw HTML omitted -->get_children<!-- raw HTML omitted --> method. This method takes as an argument a reference to a node and returns an array of references to the children of the node.</p>
+<p>We <em>can</em> do better. We can make use of the <NavExtLink to="https://docs.godotengine.org/en/stable/classes/class_node.html?#class-node-method-get-children">get_children</NavExtLink> method. This method takes as an argument a reference to a node and returns an array of references to the children of the node.</p>
 <aside class="admonition   ">
     <div class="admonition__title">
         Note
