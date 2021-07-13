@@ -10,13 +10,9 @@ summary: 'If you want to learn game development but do not know where to start, 
 authors: ['pranshu']
 
 tags: ['godot', 'gamedev']
-category: gamedev
 
 date: 2021-06-29T19:30:00+05:30
 lastmod: 2021-06-29T19:30:00+05:30
-
-showReadingTime: false
-math: false
 
 draft: false
 featured: false
@@ -93,8 +89,7 @@ Let's get started!
 
 ### Planning the game
 
-Before we start any work on a game in Godot, it is important to plan out how the game would look and behave.
-Having a concrete picture of the game in mind will help us when we develop the game in Godot.
+Before we start any work on a game in Godot, it is important to plan out how the game would look and behave. Having a concrete picture of the game in mind will help us when we develop the game in Godot.
 
 Here are some helpful questions that we can ask:
 
@@ -108,16 +103,14 @@ Here are some helpful questions that we can ask:
 - What happens in a typical gameplay?
 - How long does a gameplay session last?
 
-This list isn't exhaustive, but it gets you thinking about most major details of the game.
-The answers to these questions will directly impact the decisions you take when you develop the game. For example,
+This list isn't exhaustive, but it gets you thinking about most major details of the game. The answers to these questions will directly impact the decisions you take when you develop the game. For example,
 
 - The theme of the game will affect the choice of your art, sound, and music.
 - A multiplayer game will have different input systems and networking requirements compared to a single-player game.
 - Games developed for mobile will have a different interface compared to games developed for desktop.
 
 {{< note >}}
-Of course, the answers to these questions are not fixed; they will most likely change as you work on the game. 
-As you build the game and test it, you might find that a feature you had planned doesn't do well in practice.
+Of course, the answers to these questions are not fixed; they will most likely change as you work on the game. As you build the game and test it, you might find that a feature you had planned doesn't do well in practice.
 
 - You might come up with a better alternative during development.
 - Your idea might be too complex to explain to the player.
@@ -377,7 +370,7 @@ This shows the "Attach Script dialog".
 The default options are fine, click "Create". This will create a file named `Game.gd`. This is where will write the logic for the game.
 The contents of this script will look like this.
 
-```gdscript [Game.gd]
+```gdscript
 extends Node2D
 
 # Declare member variables here. Examples:
@@ -386,12 +379,12 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+    pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
-#	pass
+#    pass
 ```
 
 {{< note >}}
@@ -437,11 +430,11 @@ We will initialise our variables in `_ready`.
 This variable tells us if a game is in progress.
 Once the scene is loaded, we are ready to play. We should begin listening for clicks and check for wins. We set `game_started` is `true` in `_ready`.
 
-```gdscript [Game.gd]
+```gdscript
 var game_started
 
 func _ready():
-	game_started = true   # Game has started
+    game_started = true   # Game has started
 ```
 
 #### `turns_played`
@@ -449,12 +442,12 @@ func _ready():
 We keep track of the number of turns played in `turns_played`.
 When the scene is loaded, no turn has been played so far, so we start `turns_played` with `0`.
 
-```gdscript [Game.gd]
+```gdscript
 var turns_played
 
 func _ready():
-	...
-	turns_played = 0   # No turns played yet
+    ...
+    turns_played = 0   # No turns played yet
 ```
 
 #### `player_turn`
@@ -465,12 +458,12 @@ This choice will make our work in the future easier.
 Player `1` will play first and will place X's. Player `-1` will go second and will place O's.
 Let's initialise `player_turn` in `_ready`.
 
-```gdscript [Game.gd]
+```gdscript
 var player_turn
 
 func _ready():
-	...
-	player_turn = 1  # Player with 'X' goes first
+    ...
+    player_turn = 1  # Player with 'X' goes first
 ```
 
 Once a player's turn ends, the other player gets to play. Therefore, the value of `player_turn` must change at the end of every turn.
@@ -481,9 +474,9 @@ This is called <NavExtLink to="https://en.wikipedia.org/wiki/Separation_of_conce
 
 Due to our choice of player names, this is function is a one-liner.
 
-```gdscript [Game.gd]
+```gdscript
 func change_player():
-	player_turn *= -1
+    player_turn *= -1
 ```
 
 Calling `change_player` switches the value of `player_turn` from `1` to `-1` and vice versa.
@@ -527,7 +520,7 @@ For example, if you want to hide the `GridSprite` when the game starts, you can 
 
 ```gdscript
 func _ready():
-	$Grid/GridSprite.visible = false
+    $Grid/GridSprite.visible = false
 ```
 
 If you play the game now, the grid lines will not be visible.
@@ -540,14 +533,14 @@ Now that we know how to access the `GridCell` nodes, we might try something like
 var cells
 
 func _ready():
-	...
-	var cell1 = $Grid/GridCell1
-	var cell2 = $Grid/GridCell2
-	var cell3 = $Grid/GridCell3
-	...
-	var cell9 = $Grid/GridCell9
+    ...
+    var cell1 = $Grid/GridCell1
+    var cell2 = $Grid/GridCell2
+    var cell3 = $Grid/GridCell3
+    ...
+    var cell9 = $Grid/GridCell9
 
-	cells = [cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9]
+    cells = [cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9]
 ```
 
 This code works, but there is a lot of repetition. It is difficult to read it or make changes to it.
@@ -569,10 +562,10 @@ We can call `$Grid/GridCells.get_children()` to get an array of references to th
 
 We can delete the ten lines we added in `_ready` and add this one line in its place:
 
-```gdscript [Game.gd]
+```gdscript
 func _ready():
-	...
-	cells = $Grid/GridCells.get_children():
+    ...
+    cells = $Grid/GridCells.get_children():
 ```
 
 The resulting code is much cleaner.
@@ -586,7 +579,7 @@ Continuing our notation with the player names, a cell with an "X" has `value` eq
 
 Declare the `value` variable in `GridCell.gd`:
 
-```gdscript [GridCell.gd]
+```gdscript
 extends Area2D
 
 var value
@@ -597,20 +590,20 @@ For example, in `Game.gd`, `cells[0]` holds a reference to `GridCell1`. We can a
 
 We can use the `print` method to read the value during development. The output of `print` is shown in the Output tab (below the code editor).
 
-```gdscript [Game.gd]
+```gdscript
 func _ready():
-	...
-	print("The value of GridCell1 is ", cells[0].value)
+    ...
+    print("The value of GridCell1 is ", cells[0].value)
 ```
 
 If we run the game now, we see `The value of GridCell1 is Null` in the output. Oops. This is because we declared `value`, but did not initialise it.
 Since all cells are empty initially, we will initialise the `value` of each `GridCell` with `0`.
 
-```gdscript [Game.gd]
+```gdscript
 func _ready():
-	...
-	for cell in cells:
-		cell.value = 0
+    ...
+    for cell in cells:
+        cell.value = 0
 ```
 
 If you print `cells[0].value` after the initialisation, you will see it has `value` equal `0` and not `Null`.
@@ -625,9 +618,9 @@ We have initialised the state of the game. We need a way to detect when cells ar
 
 We will write a function `play_turn` in `Game.gd` that makes appropriate changes to the game's state when the player clicks on a grid cell.
 
-```gdscript [Game.gd]
+```gdscript
 func play_turn():
-	print("play_turn called")
+    print("play_turn called")
 ```
 
 We will fill in this function later. For now, we just want to call it when a cell is clicked. The `print` method lets us know if the method is called.
@@ -636,23 +629,22 @@ Here's one way to call `play_turn` when a cell is clicked. In `GridCell.gd`, we 
 
 ```[GridCell.gd]
 if cell is clicked:
-	call play_turn in Game.gd
+    call play_turn in Game.gd
 ```
 
 {{< note >}}
 The above code is pseudocode. It does not follow the syntax of GDScript, but it conveys a sketch of how the code would look like.
 {{< /note >}}
 
-
 This is acceptable for a small game, but it would quickly get out of hand as the game becomes bigger. For every node that needs to
 react to the cell being clicked, we would need to call a method in `GridCell.gd`.
 
 ```[GridCell.gd]
 if cell is clicked:
-	call method_a in A.gd
-	call method_b in B.gd
-	call method_c in C.gd
-	call method_d in D.gd
+    call method_a in A.gd
+    call method_b in B.gd
+    call method_c in C.gd
+    call method_d in D.gd
 ```
 
 This is bad code design, as we have a lot of code in `GridCell.gd` that is not relevant to `GridCell`.
@@ -662,7 +654,7 @@ We add only the following code in `GridCell.gd`.
 
 ```[GridCell.gd]
 if cell is clicked:
-	emit signal "cell was clicked"
+    emit signal "cell was clicked"
 ```
 
 Now, any node that needs to react to the cell being clicked observes `GridCell`, and if it hears the `cell was clicked` signal, it calls the appropriate method.
@@ -670,7 +662,7 @@ Now, any node that needs to react to the cell being clicked observes `GridCell`,
 ```[Game.gd]
 listen for signal "cell was clicked" from GridCell
 if signal is received:
-	call play_turn
+    call play_turn
 ```
 
 The concerns remain separated, and the code is more organised and manageable.
@@ -693,15 +685,15 @@ A sprite node can emit a signal when its texture is changed, when its visibility
 We can also make our own custom signals.
 For example, in our game, we can make a signal named `cell_clicked` for `GridCell`. We do this by declaring it in `GridCell.gd`.
 
-```gdscript [GridCell.gd]
+```gdscript
 signal cell_clicked
 ```
 
 We can get a node to emit a signal with the `emit_signal` method. In the following code, `cell` will emit the `cell_clicked` signal if it is clicked.
 
-```gdscript [GridCell.gd]
+```gdscript
 if cell is clicked:
-	emit_signal("cell_clicked")
+    emit_signal("cell_clicked")
 ```
 
 {{< note class="warning" >}}
@@ -719,12 +711,12 @@ SOURCE_NODE.connect(SIGNAL_NAME, TARGET_NODE, METHOD_NAME)
 
 The way to read this is if when the `SOURCE_NODE` emits the `SIGNAL_NAME` signal, the `TARGET_NODE` calls the `METHOD_NAME` method. Let's see this in action for our game.
 
-```gdscript [Game.gd]
+```gdscript
 func _ready():
   ...
   # listen for clicks
   for cell in cells:
-  	cell.connect("cell_clicked", self, "play_turn")
+      cell.connect("cell_clicked", self, "play_turn")
 ```
 
 We want to listen for signals from every cell in the grid, so we have a `for` loop that iterates over all cells in the grid.
@@ -748,9 +740,9 @@ Also note the "Receiver method" field says `_on_GridCell_input_event`. This is t
 Select `GridCell` and click "Connect".
 This creates the receiver function `_on_GridCell_input_event` in `GridCell.gd` for us.
 
-```gdscript [GridCell.gd]
+```gdscript
 func _on_GridCell_input_event(viewport, event, shape_idx):
-	pass
+    pass
 ```
 
 {{< note class="tip" >}}
@@ -772,18 +764,18 @@ If you add `print(event)` in the method and run the game, you will see that movi
 We are only interested if the players click on a cell. We do not care if the players move their mouse on the grid.
 We will filter only the mouse click events with an `if` statement.
 
-```gdscript [GridCell.gd]
+```gdscript
 func _on_GridCell_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton:
-		print(event)
+    if event is InputEventMouseButton:
+        print(event)
 ```
 
 If you run the game now and move the mouse on the grid, the output does not change. If you click on a cell, two mouse click events appear. Once when you press the button, and once when you release it. We would like to emit only one signal per click.
 
-```gdscript [GridCell.gd]
+```gdscript
 func _on_GridCell_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.is_pressed():
-		print(event)
+    if event is InputEventMouseButton and event.is_pressed():
+        print(event)
 ```
 
 {{< note >}} 
@@ -792,10 +784,10 @@ Read the Godot docs for [inputevent]( https://docs.godotengine.org/en/stable/cla
 
 This is working well. We are printing an event if and only if a cell is clicked. We can replace `print` with `emit_signal`.
 
-```gdscript [GridCell.gd]
+```gdscript
 func _on_GridCell_clicked(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.is_pressed():
-		emit_signal("cell_clicked")
+    if event is InputEventMouseButton and event.is_pressed():
+        emit_signal("cell_clicked")
 ```
 
 Now every time we click a cell, `play_turn` is called and we see `play_turn is called` in the output.
@@ -803,34 +795,34 @@ We know if a cell is clicked, but we don't know which cell is clicked.
 
 Signals can carry additional data that can be passed as a parameter to the method. We can add additional data to a signal by appending arguments in the `emit_signal` method.
 
-```gdscript [GridCell.gd]
+```gdscript
 func _on_GridCell_clicked(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.is_pressed():
-		emit_signal("cell_clicked", self)
+    if event is InputEventMouseButton and event.is_pressed():
+        emit_signal("cell_clicked", self)
 ```
 
 Here, we are passing `self` as additional data in the signal. Any node that is listening for the `cell_clicked` signal will also get to know the node that has emitted the signal.
 
 Since the signal is now carrying additional data, we need to update its declaration to reflect this change.
 
-```gdscript [GridCell.gd]
+```gdscript
 signal cell_clicked(cell)
 ```
 
 {{< note class="error" >}}
 If we run the game now, we get an error:
 
-	The method expected 0 arguments, but called with 1.
+    The method expected 0 arguments, but called with 1.
 
 We get this error because the number of arguments taken by the called method does not agree with the data carried by the signal. 
 {{< /note >}}
 
 We fix this by adding an argument to `play_turn`. We can print the name of the cell and see if it's correct.
 
-```gdscript [Game.gd]
+```gdscript
 func play_turn(cell):
-	print("play_turn called")
-	print(cell.name, " was clicked")
+    print("play_turn called")
+    print(cell.name, " was clicked")
 ```
 
 Run the game, click on a cell, and see that the correct name is printed in the output.
@@ -854,26 +846,26 @@ We look at the gameplay loop flowchart and describe how `play_turn` should behav
 
 We write this in code.
 
-```gdscript [Game.gd]
+```gdscript
 func play_turn(cell):
-	if game_started:
-		if player_turn == 1:
-	   		cell.setX()
-	   	else:
-	   		cell.setO()
+    if game_started:
+        if player_turn == 1:
+               cell.setX()
+           else:
+               cell.setO()
 
-	  	cell.disconnect("cell_clicked", self, "play_turn")
-	   	turns_played += 1
+          cell.disconnect("cell_clicked", self, "play_turn")
+           turns_played += 1
 
-   		if check_win():
-   			game_over()
-   			return
-   		if check_draw():
-   			game_over()
-   			return
+           if check_win():
+               game_over()
+               return
+           if check_draw():
+               game_over()
+               return
 
-   		change_player()
-   		update_labels()
+           change_player()
+           update_labels()
 ```
 
 This code reads a lot like our description of the function. It is almost written in English.
@@ -887,15 +879,15 @@ If `check_win` is false, then we check for draws with `check_draw`. This returns
 
 We will first work on `cell.setX`, `cell.setO`, and `cell.isEmpty`. Declare all other methods and write `pass` in their bodies for now. This suppresses the "Method not declared" errors while we work on the cell functions.
 
-```gdscript [Game.gd]
+```gdscript
 func check_win():
-	pass  # TODO
+    pass  # TODO
 func check_draw():
-	pass  # TODO
+    pass  # TODO
 func game_over():
-	pass  # TODO
+    pass  # TODO
 func update_labels():
-	pass  # TODO
+    pass  # TODO
 ```
 
 Since the `setX` method is related to the cell, we will define it `setX` in `GridCell.gd`. This is also why we call it as `cell.setX()` in `Game.gd` and not just `setX`.
@@ -907,33 +899,33 @@ Recall that `X` has `value` `1` and `O` has value `-1`.
 We can change the sprite shown by changing the texture of the `CellSymbol` node.
 We load and access the textures in our scripts using the `preload` method.
 
-```gdscript [GridCell.gd]
+```gdscript
 const x_symbol = preload("res://assets/x.png")
 const o_symbol = preload("res://assets/o.png")
 ```
 
 We define the `setX` method:
 
-```gdscript [GridCell.gd]
+```gdscript
 func setX():
-	value = 1
-	$CellSymbol.texture = x_symbol
+    value = 1
+    $CellSymbol.texture = x_symbol
 ```
 
 The `setO` method is defined similarly.
 
-```gdscript [GridCell.gd]
+```gdscript
 func setO():
-	value = -1
-	$CellSymbol.texture = o_symbol
+    value = -1
+    $CellSymbol.texture = o_symbol
 ```
 
 Finally, let's also define `setEmpty`. To remove the texture of a sprite, we set its texture to `null`. Otherwise, this is similar to `setX` and `setO` as well.
 
-```gdscript [GridCell.gd]
+```gdscript
 func setEmpty():
-	value = 0
-	$CellSymbol.texture = null
+    value = 0
+    $CellSymbol.texture = null
 ```
 
 Try playing the game now. Click on different cells. You will an X and an O appearing alternatively with each click.
@@ -949,7 +941,7 @@ We want to show
 
 We add an "X" or an "O" in the blanks depending on whose turn it is. We can implement this in our script using format strings.
 
-```gdscript [Game.gd]
+```gdscript
 var player_turn_text = "Player %s's turn"
 var player_instruction_text = "Place an %s"
 ```
@@ -967,12 +959,12 @@ Instead of "X", we will replace the `%s` in the format strings with a variable t
 
 We can do the following.
 
-```gdscript [Game.gd]
+```gdscript
 var player_symbols = [":)", "X", "O"]
 
 func update_labels():
-	$PlayerTurn.text = player_turn_text % player_symbols[player_turn]
-	$PlayerInstruction.text = player_instruction_text % player_symbols[player_turn]
+    $PlayerTurn.text = player_turn_text % player_symbols[player_turn]
+    $PlayerInstruction.text = player_instruction_text % player_symbols[player_turn]
 ```
 
 We have used a trick while writing the `player_symbols` array to make this work.
@@ -991,12 +983,12 @@ Display the name of the winner will be easier if we have a state variable that s
 If no one has won yet, then `winner` stores `0`. Otherwise, it stores `1` or `-1` depending on who won.
 Let's declare and initialise it.
 
-```gdscript [Game.gd]
+```gdscript
 var winner
 
 func _ready():
-	...
-	winner = 0 # no one has won yet
+    ...
+    winner = 0 # no one has won yet
 ```
 
 We have already called the `check_win`, `check_draw`, and `game_over` methods in `play_turn`. Now, it's time to fill these in.
@@ -1010,38 +1002,38 @@ This is where choosing values `1` and `-1` for "X" and "O" is useful again. To c
 
 Let's add this in `check_win`.
 
-```gdscript [Game.gd]
+```gdscript
 func check_win():
-	var row1 = cells[0].value + cells[1].value + cells[2].value
-	var row2 = cells[3].value + cells[4].value + cells[5].value
-	var row3 = cells[6].value + cells[7].value + cells[8].value
+    var row1 = cells[0].value + cells[1].value + cells[2].value
+    var row2 = cells[3].value + cells[4].value + cells[5].value
+    var row3 = cells[6].value + cells[7].value + cells[8].value
 
-	var col1 = cells[0].value + cells[3].value + cells[6].value
-	var col2 = cells[1].value + cells[4].value + cells[7].value
-	var col3 = cells[2].value + cells[5].value + cells[8].value
+    var col1 = cells[0].value + cells[3].value + cells[6].value
+    var col2 = cells[1].value + cells[4].value + cells[7].value
+    var col3 = cells[2].value + cells[5].value + cells[8].value
 
-	var diag1 = cells[0].value + cells[4].value + cells[8].value
-	var diag2 = cells[2].value + cells[4].value + cells[6].value
+    var diag1 = cells[0].value + cells[4].value + cells[8].value
+    var diag2 = cells[2].value + cells[4].value + cells[6].value
 
-	var lines = [row1, row2, row3, col1, col2, col3, diag1, diag2]
+    var lines = [row1, row2, row3, col1, col2, col3, diag1, diag2]
 ```
 
 Recall that `check_win` returns true if someone has won, and false if not.
 It also updates the state variable `winner` with the value of the player who won. This is what this code does:
 
-```gdscript [Game.gd]
+```gdscript
 func check_win():
-	...
-	for line in lines:
-		if line >= 3:
-			winner = 1
-			return true
-		elif line <= -3:
-			winner = -1
-			return true
-		else:
-			winner = 0
-	return false
+    ...
+    for line in lines:
+        if line >= 3:
+            winner = 1
+            return true
+        elif line <= -3:
+            winner = -1
+            return true
+        else:
+            winner = 0
+    return false
 ```
 
 #### `check_draw`
@@ -1050,12 +1042,12 @@ Detecting if the game has drawn is easier.
 If nine turns have been played and no one has won so far, then and only then it is a draw.
 We have been updating `turns_played` in the function `play_turn`. We use this value to check if the grid has been filled completely.
 
-```gdscript [Game.gd]
+```gdscript
 func check_draw():
-	if turns_played >= 9:
-		return true
-	else:
-		return false
+    if turns_played >= 9:
+        return true
+    else:
+        return false
 ```
 
 #### `game_over`
@@ -1067,23 +1059,23 @@ We need to stop listening for clicks, display the result on the screen, and upda
 
 We can use format strings again to display the winner.
 
-```gdscript [Game.gd]
+```gdscript
 var winner_text = "Player %s won!"
 var drawn_text = "Game drawn."
 
 func game_over():
-	if winner == 0:
-		$PlayerTurn.text = drawn_text
-	else:
-		$PlayerTurn.text = winner_text % player_symbols[winner]
+    if winner == 0:
+        $PlayerTurn.text = drawn_text
+    else:
+        $PlayerTurn.text = winner_text % player_symbols[winner]
 ```
 
 The game is over, so we set `game_started` to false.
 
-```gdscript [Game.gd]
+```gdscript
 func game_over():
-	...
-	game_started = false
+    ...
+    game_started = false
 ```
 
 If the game is over, then we no longer want to listen for clicks on cells.
@@ -1093,22 +1085,22 @@ If we try to disconnect a signal that is not connected, we get an error.
 Therefore, we iterate over all cells, and disconnect the signal only if it still connected.
 We check if a signal is connected with the `is_connected` method.
 
-```gdscript [Game.gd]
+```gdscript
 func game_over():
-	...
-	for cell in cells:
-		if cell.is_connected("cell_clicked", self, "play_turn"):
-			cell.disconnect("cell_clicked", self, "play_turn")
+    ...
+    for cell in cells:
+        if cell.is_connected("cell_clicked", self, "play_turn"):
+            cell.disconnect("cell_clicked", self, "play_turn")
 ```
 
 Once a game is over and we display the results, we would like the players to be able to play again without having to quit and restart. We could add a restart button that starts a new game. Let's show this instruction to the players.
 
-```gdscript [Game.gd]
+```gdscript
 var restart_text = "Press 'R' to start a new game."
 
 func game_over():
-	...
-	$PlayerInstruction.text = restart_text
+    ...
+    $PlayerInstruction.text = restart_text
 ```
 
 ### Starting a new game
@@ -1119,40 +1111,40 @@ We will implement this now.
 We need to set things up again for a new game.
 A lot of the code that we require is already in `_ready`. We would like to execute all of those commands when the players click "Play again". We will extract all of those into a function `start_game` and call it. To reset the game, we simply call this function.
 
-```gdscript [Game.gd]
+```gdscript
 func _ready():
-	cells = $Grid/GridCells.get_children()
-	start_game()
+    cells = $Grid/GridCells.get_children()
+    start_game()
 
 func start_game():
-	game_started = true
-	player_turn = 1  # Player 1 starts the game
-	turns_played = 0
-	winner = 0
-	update_labels()
-	# start listening for clicks
-	for cell in cells:
-		cell.connect("cell_clicked", self, "play_turn")
+    game_started = true
+    player_turn = 1  # Player 1 starts the game
+    turns_played = 0
+    winner = 0
+    update_labels()
+    # start listening for clicks
+    for cell in cells:
+        cell.connect("cell_clicked", self, "play_turn")
 ```
 
 We don't need to initialise the references to GridCells again. We can move the rest of the code from `_ready` to `start_game`. We call `start_game` in `_ready`.
 
 We have also added `update_labels` so that correct instructions are shown when the game starts.
 
-```gdscript [Game.gd]
+```gdscript
 func start_game():
-	...
-	update_labels()
+    ...
+    update_labels()
 ```
 
 We need to remove all symbols from the grid and reset all values too. We set all cells to empty.
 
-```gdscript [Game.gd]
+```gdscript
 func start_game():
-	...
-	# remove symbols from grid
-	for cell in cells:
-		cell.setEmpty()
+    ...
+    # remove symbols from grid
+    for cell in cells:
+        cell.setEmpty()
 ```
 
 The game still works after this refactoring.
@@ -1163,12 +1155,12 @@ Add input map in Project Settings -> Input Map. Add a `ui_restart` action. Add e
 
 {{< figure src="img/reset-input.png" >}}
 
-```gdscript [Game.gd]
+```gdscript
 func _process(delta):
-	if !game_started:
-		if Input.is_action_pressed("ui_reset"):
-			print("Resetting game")
-			start_game()
+    if !game_started:
+        if Input.is_action_pressed("ui_reset"):
+            print("Resetting game")
+            start_game()
 ```
 
 It should work now. Our game is complete.

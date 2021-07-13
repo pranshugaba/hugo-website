@@ -19,7 +19,7 @@ math: true
 image:
   caption: ""
   focal_point: "Top"
-  preview_only: true
+  preview_only: false
   placement: 2
 
 # Projects (optional).
@@ -31,8 +31,9 @@ projects: []
 ---
 
 
-For the second puzzle of [Mardi Maths](/mardi-maths), we have a chess puzzle!
+For the second puzzle, we have a chess puzzle!
 
+{{< note >}}
 Recall how chess pieces move:
 - Rooks move in straight lines up, down, left, or right. 
 - Bishops can move diagonally. 
@@ -42,12 +43,15 @@ Recall how chess pieces move:
 - Knight move in an L-shaped pattern. Two steps forward and one step sideways.
 
 You can practice the pieces' movements on [lichess.org](https://lichess.org/learn).
+{{< /note >}}
 
 ## The Problem
 You are trying to place as many white pieces on the board as possible such that no piece attacks any other piece. 
 For the sake of this problem, assume that pieces can attack other pieces of the same colour. 
 
-_Tip:_ You may find it helpful to play around with pieces on a board on the [lichess board editor](https://lichess.org/editor/8/8/8/8/8/8/8/8_w_-_-_0_1).
+{{< note class="tip" >}}
+You may find it helpful to play around with pieces on a board on the [lichess board editor](https://lichess.org/editor/8/8/8/8/8/8/8/8_w_-_-_0_1).
+{{< /note >}}
 
 Here are 7 variants of this problem:
 
@@ -91,23 +95,9 @@ What is the maximum number of chess pieces you can place on an $8\times 8$ chess
 <img src="white-pawn.svg"/>
 </div>
 
-Good luck, have fun! 
 
 
----
-
-[Send your attempts to me!](/contact) 
-
-- If you have solved the problem, share your solutions! Best explanations will be featured in the next Mardi Maths. 
-
-- If you are stuck, share your progress. What have you you tried so far? 
-
-- Let me know if there's an error or something's not clear in the puzzle. 
-
-- I would love your feedback. Did you find the puzzles interesting / easy / difficult?
-
-- If you have any puzzles that you would like featured in this series, share those too!
-
+{{% puzzles/feedback %}}
 
 ---
 
