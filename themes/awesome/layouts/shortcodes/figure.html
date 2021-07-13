@@ -4,7 +4,15 @@
         <a href="{{ . }}">
     {{ end }}
     {{ $relSrc := .Get "src" }}
-    <img src="{{ printf "%s%s" .Page.Permalink $relSrc }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }} />
+    {{ $lightImg := .Page.Resources.GetMatch $relSrc }}
+    {{ $darkSrc := .Get "dark-src" }}
+    {{ $darkImg := .Page.Resources.GetMatch $darkSrc }}
+    <picture>
+        {{ if $darkImg }}
+            <source srcset="{{ $darkImg.Permalink }}" media="(prefers-color-scheme: dark)">
+        {{ end }}
+        <img src="{{ $lightImg.Permalink }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }} loading="lazy">
+    </picture>
     {{ if .Get "link" }}
         </a>
     {{ end }}

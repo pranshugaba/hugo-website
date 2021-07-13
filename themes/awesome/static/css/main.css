@@ -146,10 +146,12 @@ figure img {
   height: auto;
   max-width: 100%;
   margin: 0 auto;
+  border: 2px solid var(--fg);
 }
 @media (prefers-color-scheme: dark) {
   figure img {
-    opacity: 84%;
+    opacity: 0.9;
+    filter: brightness(0.9) contrast(1.1);
   }
 }
 @media (prefers-color-scheme: dark) {
