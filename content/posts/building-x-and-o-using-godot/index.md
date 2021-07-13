@@ -17,11 +17,12 @@ lastmod: 2021-06-29T19:30:00+05:30
 
 showReadingTime: false
 math: false
-toc: true
 
 draft: false
 featured: false
 ---
+
+{{% toc %}}
 
 ## Introduction
 

@@ -20,6 +20,8 @@ lastmod = ["lastmod", ":fileModTime", ":default"]
 [markup]
 [markup.highlight]
 pygmentsUseClasses = true
+[markup.goldmark.renderer]
+unsafe = true
 
 [minify]
 minifyOutput = true

@@ -420,6 +420,7 @@ p code,
 li code,
 h4 code,
 kbd {
+  font-family: "JBMono", monospace;
   padding: 0.05rem 0.2rem;
   border: 1px solid var(--fg);
   border-radius: 0.2rem;
@@ -889,12 +890,21 @@ h4 code {
 .toc {
   border: 2px solid var(--fg);
   border-radius: 0.75rem;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   margin-top: 2rem;
   margin-bottom: 2rem;
   padding: 1.5rem 1rem 1rem;
 }
 .toc__heading {
   margin-top: 0;
+}
+.toc a {
+  text-decoration: none;
+}
+.toc a:hover {
+  text-decoration: underline;
 }
 
 .tagcloud {
@@ -974,4 +984,18 @@ h4 code {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-between;
+}
+
+.poems.page__content {
+  font-size: 1.125rem;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 640px) {
+  .poems.page__content {
+    font-size: 1.25rem;
+  }
 }/*# sourceMappingURL=main.css.map */
