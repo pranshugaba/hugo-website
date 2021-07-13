@@ -5,7 +5,7 @@ title: "equines"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["haiku", "poetry", "donkey"]
+tags: ["haiku", "donkey"]
 categories: []
 date: 2019-10-19T18:32:12+05:30
 lastmod: 2019-10-19T18:32:12+05:30

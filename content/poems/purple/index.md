@@ -5,7 +5,7 @@ title: "purple"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["poetry", "haiku", "fractals"]
+tags: [ "haiku", "fractals"]
 categories: []
 date: 2019-07-05T18:19:52+05:30
 lastmod: 2019-07-05T18:19:52+05:30

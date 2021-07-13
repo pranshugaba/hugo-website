@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main>
+  <article>
+    <h1 class="page__title">{{ .Title | humanize }}</h1>
+    <h2 class="page__subtitle">Pages tagged with {{ .Title }}</h2>
+    {{.Content}}
+  </article>
+
+  {{ range .Pages.GroupByDate "2006" }}
+  <h2 class="list__key">{{ .Key }}</h2>
+  <ul class="items__list">
+    {{ range .Pages }}
+    <li>{{ partial "list/yearwise.html" . }}</li>
+    {{ end }}
+  </ul>
+  {{ end }}
+
+</main>
+{{ end }}

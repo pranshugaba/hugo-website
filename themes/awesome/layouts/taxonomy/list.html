@@ -1,15 +1,21 @@
 {{ define "main" }}
 <main>
   <article>
-    <h1>{{ .Title }}</h1>
+    <h1 class="page__title">{{ .Title | emojify }}</h1>
+    {{ with .Params.Subtitle }}
+        <h2 class="page__subtitle" >{{ . | emojify }}</h2>
+    {{ end }}
     {{.Content}}
-  </article>
-  {{ range .Pages }}
-  <ul class="items__list">
-    <li>
-      {{ partial "list/simple.html" . }}
-    </li>
-  </ul>
+  {{ if eq .RelPermalink "/tags/" }}
+    {{ partial "list/tagcloud.html" . }}
+  {{ else }}
+    <ul class="items__list">
+      {{ range .Pages }}
+        <li>
+          {{ partial "list/simple.html" . }}
+        </li>
+      {{ end }}
+    </ul>
   {{ end }}
 </main>
 {{ end }}

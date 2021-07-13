@@ -5,7 +5,7 @@ title: "sofa"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["haiku", "poetry", "rain"]
+tags: ["haiku", "rain"]
 categories: []
 date: 2019-10-20T14:04:32+05:30
 lastmod: 2019-10-20T14:04:32+05:30

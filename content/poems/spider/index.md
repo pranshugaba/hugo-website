@@ -5,7 +5,7 @@ title: "spider"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["poetry", "haiku", "lights"]
+tags: [ "haiku", "lights"]
 categories: []
 date: 2020-08-13T15:09:40+05:30
 lastmod: 2020-08-13T15:09:40+05:30

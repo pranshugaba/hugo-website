@@ -5,7 +5,7 @@ title: "debris"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["poetry", "haiku"]
+tags: [ "haiku"]
 categories: []
 date: 2020-11-28T23:46:01+05:30
 lastmod: 2020-11-28T23:46:01+05:30

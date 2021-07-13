@@ -5,7 +5,7 @@ title: "McSwirl"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["haiku", "ice-cream", "poetry"]
+tags: ["haiku", "ice-cream", ]
 categories: []
 date: 2021-01-13T13:00:00+05:30
 lastmod: 2021-01-13T13:00:00+05:30

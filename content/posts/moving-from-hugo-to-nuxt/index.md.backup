@@ -40,7 +40,7 @@ When I wanted to modify the theme, I had to override the theme templates, and in
 
 I wanted to create a theme from scratch, and I realized that there is much more scope for customisation if I use frameworks such as React or Vue.
 
-There are a lot of static site generators based on these frameworks. I tried out Gridsome, Next.js, and Nuxt.js. 
+There are a lot of static site generators based on these frameworks. I tried out Gridsome, Next.js, and Nuxt.js.
 
 ### Gridsome
 

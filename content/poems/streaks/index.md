@@ -5,7 +5,7 @@ title: "streaks"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["poetry", "haiku", "lights"]
+tags: [ "haiku", "lights"]
 categories: []
 date: 2019-07-12T22:00:00+05:30
 lastmod: 2019-07-12T22:00:00+05:30

@@ -5,7 +5,7 @@ title: "spring"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["haiku", "poetry", "flowers"]
+tags: ["haiku", "flowers"]
 categories: []
 date: 2019-02-08T21:30:00+05:30
 lastmod: 2019-02-08T21:30:00+05:30

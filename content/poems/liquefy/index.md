@@ -5,7 +5,7 @@ title: "liquefy"
 subtitle: "a poem"
 summary: "a poem"
 authors: ["pranshu"]
-tags: ["poetry", "summer", "ice-cream"]
+tags: [ "summer", "ice-cream"]
 categories: []
 date: 2020-05-03T20:04:04+05:30
 lastmod: 2020-05-03T20:04:04+05:30

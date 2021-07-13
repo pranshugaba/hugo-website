@@ -5,7 +5,7 @@ title: "ocean"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["haiku", "poetry", "books"]
+tags: ["haiku",  "books"]
 categories: []
 date: 2020-10-27T13:00:00+05:30
 lastmod: 2020-10-27T13:00:00+05:30

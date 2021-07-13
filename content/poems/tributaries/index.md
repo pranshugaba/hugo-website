@@ -5,7 +5,7 @@ title: "tributaries"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["haiku", "poetry", "fractals"]
+tags: ["haiku", "fractals"]
 categories: []
 date: 2019-07-28T21:46:56+05:30
 lastmod: 2019-07-28T21:46:56+05:30

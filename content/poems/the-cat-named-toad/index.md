@@ -5,7 +5,7 @@ title: "The Cat Named Toad"
 subtitle: "A Limerick"
 summary: "A Limerick"
 authors: ["pranshu"]
-tags: ["limerick", "poetry", "cats"]
+tags: ["limerick",  "cats"]
 categories: []
 date: 2019-07-06T22:00:00+05:30
 lastmod: 2019-07-06T22:00:00+05:30

@@ -5,7 +5,7 @@ title: "flames"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["haiku", "poetry", "summer"]
+tags: ["haiku",  "summer"]
 categories: []
 date: 2019-07-14T21:19:45+05:30
 lastmod: 2019-07-14T21:19:45+05:30

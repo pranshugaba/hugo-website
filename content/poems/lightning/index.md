@@ -5,7 +5,7 @@ title: "lightning"
 subtitle: "a tanka"
 summary: "a tanka"
 authors: ["pranshu"]
-tags: ["tanka", "poetry", "lightning"]
+tags: ["tanka",  "lightning"]
 categories: []
 date: 2019-08-09T14:40:58+05:30
 lastmod: 2019-08-09T14:40:58+05:30

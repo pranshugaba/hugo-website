@@ -1,8 +1,11 @@
-{{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
-{{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-    <div class="tagbutton">
-  <a href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>">{{$name}}</a>
-  <sup>{{$cnt}}</sup>
-    </div>
-{{end}}
-{{end}}
+<ul class="tagcloud">
+  {{range $name, $taxonomy := .Site.Taxonomies.tags}} 
+    {{ $size := mul 0.5 (add 2 (math.Log .Count)) }}
+    {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+    <li>
+        <a href="{{ .Permalink }}" 
+        style="font-size: {{ $size }}em;">{{$name}}</a>
+    </li>
+    {{end}}
+  {{end}}
+</ul>

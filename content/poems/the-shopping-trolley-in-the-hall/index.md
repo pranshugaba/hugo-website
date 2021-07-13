@@ -1,11 +1,9 @@
 ---
-# Documentation: https://sourcethemes.com/academic/docs/managing-content/
-
 title: "The Shopping Trolley in the Hall"
 subtitle: "A Limerick"
 summary: "A Limerick"
 authors: ["pranshu"]
-tags: ["limerick", "poetry"]
+tags: ["limerick", ]
 categories: []
 date: 2019-07-11T22:00:00+05:30
 lastmod: 2019-07-11T22:00:00+05:30

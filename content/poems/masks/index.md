@@ -5,7 +5,7 @@ title: "masks"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["poetry", "haiku", "pandemic"]
+tags: [ "haiku", "pandemic"]
 categories: []
 date: 2020-11-25T17:15:13+05:30
 lastmod: 2020-11-25T17:15:13+05:30

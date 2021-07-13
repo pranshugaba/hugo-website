@@ -5,7 +5,7 @@ title: "crossing"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["poetry", "trains", "haiku"]
+tags: [ "trains", "haiku"]
 categories: []
 date: 2020-08-17T20:54:24+05:30
 lastmod: 2020-08-17T20:54:24+05:30

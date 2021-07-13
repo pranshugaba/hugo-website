@@ -5,7 +5,7 @@ title: "vines"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["haiku", "poetry", "rain"]
+tags: ["haiku",  "rain"]
 categories: []
 date: 2019-07-20T16:35:31+05:30
 lastmod: 2019-07-20T16:35:31+05:30

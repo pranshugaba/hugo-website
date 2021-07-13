@@ -5,7 +5,7 @@ title: "mirror world"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["poetry", "haiku", "sunset"]
+tags: [ "haiku", "sunset"]
 categories: []
 date: 2019-07-08T22:00:00+05:30
 lastmod: 2019-07-08T22:00:00+05:30

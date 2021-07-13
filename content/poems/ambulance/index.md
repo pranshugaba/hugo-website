@@ -1,11 +1,11 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "ambulance"
-subtitle: "a haiku"
-summary: "a haiku"
-authors: ["pranshu"]
-tags: ["poetry", "haiku", "lights"]
+title: 'ambulance'
+subtitle: 'a haiku'
+summary: 'a haiku'
+authors: ['pranshu']
+tags: ['haiku', 'lights']
 categories: []
 date: 2020-09-30T13:30:46+05:30
 lastmod: 2020-09-30T13:30:46+05:30
@@ -16,8 +16,8 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "Photo by Pranshu Gaba"
-  focal_point: ""
+  caption: 'Photo by Pranshu Gaba'
+  focal_point: ''
   preview_only: false
   placement: 2
 
@@ -28,6 +28,7 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
 rush hour traffic  
-lights blinking red and blue ---     
+lights blinking red and blue ---  
 an ambulance whizzes by

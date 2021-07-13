@@ -25,7 +25,7 @@
   {{ with $tags }}
     <ul class="page__tags">
       {{ range . }}
-          <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+          <li><a href="{{ .Permalink }}">{{ .LinkTitle | humanize }}</a></li>
       {{ end }}
     </ul>
   {{ end}}

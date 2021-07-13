@@ -5,7 +5,7 @@ title: "Two Monkeys on a Bicycle"
 subtitle: "A Limerick"
 summary: "A Limerick"
 authors: ["pranshu"]
-tags: ["limerick", "poetry", "monkey"]
+tags: ["limerick",  "monkey"]
 categories: []
 date: 2019-07-13T13:27:13+05:30
 lastmod: 2019-07-13T13:27:13+05:30
