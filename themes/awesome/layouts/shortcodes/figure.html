@@ -14,7 +14,7 @@
             <h4>{{ .Get "title" }}</h4>
         {{ end }}
         {{ if or (.Get "caption") (.Get "attr") }}
-            {{ .Get "caption" }}
+            {{ .Get "caption" | markdownify }}
             {{ with .Get "attrlink" }}
                 <a href="{{ . }}"> 
             {{ end }}

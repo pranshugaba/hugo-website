@@ -55,7 +55,6 @@ Here are 7 variants of this problem:
 What is the maximum number of rooks you can place on a $8\times 8$ chessboard such that no two rooks attack each other?
 <img src="white-rook.svg" class="float-right"/>
 
-The following figure shows an arrangement of rooks that does not work. 
 {{< figure src="rooks_fail.png" caption="This arrangement does not work because the rooks on g5 and g8 attack each other." alt="A chessboard with white rooks placed on b4, c7, d3, f2, g5, and g8." class="chessboard">}}
 
 ### 2
@@ -84,17 +83,13 @@ What is the maximum number of queens you can place on an $8 \times 8$ chessboard
 ### 7
 What is the maximum number of chess pieces you can place on an $8\times 8$ chessboard such that no piece attacks any other piece? You are free to use kings, queens, rooks, bishops, knights, and pawns. 
 <div align=center>
-<img src="white-king.svg" class="no-shadow"/>
-<img src="white-queen.svg" class="no-shadow"/>
-<img src="white-rook.svg" class="no-shadow"/>
-<img src="white-bishop.svg" class="no-shadow"/>
-<img src="white-knight.svg" class="no-shadow"/>
-<img src="white-pawn.svg" class="no-shadow"/>
+<img src="white-king.svg"/>
+<img src="white-queen.svg"/>
+<img src="white-rook.svg"/>
+<img src="white-bishop.svg"/>
+<img src="white-knight.svg"/>
+<img src="white-pawn.svg"/>
 </div>
-
-&nbsp;  
-
-
 
 Good luck, have fun! 
 

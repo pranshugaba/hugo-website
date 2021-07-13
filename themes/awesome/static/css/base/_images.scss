@@ -9,7 +9,7 @@ figure {
     height: auto;
     max-width: 100%;
     margin: 0 auto;
-    border: 2px solid var(--fg);
+    // border: 2px solid var(--fg);
     @media (prefers-color-scheme: dark) {
       opacity: 84%;
     }
@@ -25,5 +25,10 @@ figure {
     font-weight: 400;
     font-size: 0.75rem;
     margin: 0.75rem auto;
+    line-height: 1.5;
   }
+}
+
+.float-right {
+  float: right;
 }

@@ -43,7 +43,6 @@ You have stolen an exquisite painting from your local art gallery, and given the
 
 ### Level 1
 
-<img class='float-right' src='two_nails.png' alt="A painting hanging off two nails."/>  
 
 You would like to hang the painting using two nails. To allow for easy removal, you want the painting to fall if you remove any one of the nails from the wall.
 
@@ -53,7 +52,7 @@ You would like to hang the painting using two nails. To allow for easy removal, 
 
  *Tip:* Try it out with some pencils and a long string.
 
-Note: The method shown in the figure _does not_ work, because if you remove any one nail, the painting still hangs from the other nail. 
+{{< figure class="float-right" src="two_nails.png" alt="A painting hanging off two nails."  caption="The method shown in the figure _does not_ work, because if you remove any one nail, the painting still hangs from the other nail." >}}
 
 ### Level 2
 Now suppose you want to hang the painting using $n$ nails. You would like to painting to fall on removing any one nail.
