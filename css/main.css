@@ -146,7 +146,6 @@ figure img {
   height: auto;
   max-width: 100%;
   margin: 0 auto;
-  border: 2px solid var(--fg);
 }
 @media (prefers-color-scheme: dark) {
   figure img {
@@ -162,6 +161,11 @@ figure figcaption {
   font-weight: 400;
   font-size: 0.75rem;
   margin: 0.75rem auto;
+  line-height: 1.5;
+}
+
+.float-right {
+  float: right;
 }
 
 @font-face {
@@ -266,7 +270,7 @@ li {
 }
 
 p {
-  margin-top: 1rem;
+  margin-top: 1.6rem;
   margin-bottom: 1.6rem;
   line-height: 1.6;
 }
