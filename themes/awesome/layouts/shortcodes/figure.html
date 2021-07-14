@@ -11,7 +11,7 @@
         {{ if $darkImg }}
             <source srcset="{{ $darkImg.Permalink }}" media="(prefers-color-scheme: dark)">
         {{ end }}
-        <img src="{{ $lightImg.Permalink }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }} loading="lazy">
+        <img src="{{ $lightImg.Permalink }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }}>
     </picture>
     {{ if .Get "link" }}
         </a>

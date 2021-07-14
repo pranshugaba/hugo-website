@@ -12,35 +12,45 @@ draft: true
 featured: false
 ---
 
-Not more than 2 months ago, I had migrated my site from Hugo to Nuxt, and I had [written a post]({{< ref "../moving-from-hugo-to-nuxt" >}}) describing why I chose to do so. Now I am back to using Hugo. 
+Not more than 2 months ago, I had migrated my site from Hugo to Nuxt, and I had [written a post]({{< ref "../moving-from-hugo-to-nuxt" >}}) describing why I chose to do so. Well, that didn't last long, and now I am back to using Hugo. 
 
 ## My (short) experience with Nuxt
 
-I had added many features to my site in Nuxt. I was very happy with my site, it looked so pretty and colourful!
+I had added many features to my site in Nuxt. I was happy with my progress; my site looked so pretty and colourful!
 
 {{< figure src="nuxt-website-light.webp" dark-src="nuxt-website-dark.webp" caption="This is how my Nuxt website looked  like.">}}
 
-I was styling my site using Tailwind, and it was amazing not having to think of names for classes any more. 
+I used [TailwindCSS](https://tailwindcss.com/) to style my site, and it was amazing not having to think of class names anymore. It was easy to prototype and iterate over different styles quickly, even if it meant having a dirty HTML code overriden with dozens of classes. 
 
-Using Vue js, I was able to make reusable components such as page headings, table of contents, author bios, and so on. 
+Another thing I loved about Nuxt is that it is based on Vue, and therefore I could make reusable components for different parts of my site. Almost everything on my site was a component: header, footer, links, figures, headings, author bios, pagination, even the dark mode switch. To make my website, I had to design the components and then assemble them together, just like Lego! It was so much fun.
 
-I wrote a 7000 word long tutorial on how to make a game in Godot. 
+Once I finished adding features to my site, I wrote a tutorial on game development: [Building an X and O game in Godot]({{< ref "building-x-and-o-using-godot/" >}}). It was a long article -- about 7000 words long -- and it was filled with notes, figures, and codefences. With a post this big, I was beginning to face performance issues. 
 
-I wasn't very good at Vue and Javascript. I managed to write a Pagination for the Poem section. However, I  wasn't able to refactor it so I could reuse it for sections. 
+The site was taking too long to build. The initial build of the site would take more than 17 seconds to complete, and the server would take about 1.5 GB of memory. I found out that one of the main offenders for this was Tailwind. I switched Tailwind to JIT mode, and the startup build time reduced to 6 seconds. But this started increasing again as I added custom styling.
 
-I was also facing performance issues, both while building as well as during browsing my site. The initial build of the site was taking  more than 17 seconds and about 1.5 GB of memory. After I switched to the  Tailwind's JIT  mode, the startup time reduced to 6 seconds. But this started increasing again as I added more features to the site. 
+I could live with the long build times, but I also noticed issues on my website, especially on mobile. I had a dark theme toggler in my website, and toggling the theme on mobile was taking a good second or two, and was causing frame drops.
 
-When I tested the site on mobile, changing from light to dark mode would cause frame drops. Although the  site navigation was quick because of prefetching, but the initial load was slow because of the bundle size of Nuxt.js. I was showing some images on my many of my  pages, and I was facing layout shifts when the page was loaded  for the first time. Not just images, but content too as the  components were being hydrated client-side. It was quite annoying and distracting. 
+Another issue I was facing was with prefetching. As I have mentioned before, Nuxt prefetches links, so when you click on an link, the page appears to load almost instantly. Once you click on a link, the page would load very quickly, but a lot of content would load after a while as the components hydrated. This caused a layout shift, which is annoying, distracting, and terrible experience for a user. I would rather the page take half a second to load, but it loads completely without any layout shift.
 
-I started missing the simplicity and speed of Hugo, so I decided to give Hugo another go.
+The first time a user visits my site, they would have to download a big javascript bundle. This greatly increases the total blocking time and the time to Largest Contentful Paint during a user's first visit, which is arguably the most important visit. 
+
+I was missing the simplicity and speed of Hugo, so I decided to give Hugo another go.
 
 ## My new site built with Hugo
 
-I had a bad experience with using a readymade theme. So, this time, I decided to write my own theme. I decided to keep my site simple so it is easy to maintain, and not too distracting to look at. 
+I had a not-so-great experience with a readymade theme before, so this time I decided to write my own theme. I decided I would keep my site simple so it is easy to maintain and not too distracting to look at. 
 
-My site has only two colours: {{% color "papayawhip" %}} and almost-black {{% color "#121212" %}}. This makes the colour part of the CSS very simple. I also like the neat design, and the choices that I have to make when I have only two colours at my disposal. This is in stark contrast to my Nuxt site which had  so many colours. 
+My site uses only two colours: {{% color "papayawhip" %}} and {{% color "#121212" %}}. Every element has one of these two colors. This makes the colour part of the CSS very simple, and I was also able to write the dark theme in no time. 
 
-I am no longer using Tailwind. I am using Sass to style my site now. Hugo does not support Dart Sass as of today. I really love the `@use` directive instead of the `@import` directive which is being deprecated. So, what I do is I write in Dart Sass and live compile it. Hugo only gets the compiled CSS file. 
+I love this simple design; I think it looks crisp and clear with no distractions. The content is legible and there won't be any "Low contrast" text. I also love the creative decisions that I have to take when I have just two colours at my disposal. There are no box-shadows, no transparency, and no colour (except for images) on this site. This is in stark contrast to my Nuxt site which had all of those.
+
+I am no longer using Tailwind to style the site; I am using [Sass](https://sass-lang.com/) now. I do have to think of class names for each class, but using the BEM methodology helps. While Tailwind has most of the CSS features, I can use all CSS properties now such as underline-offset, smooth scrolling, etc. 
+
+Hugo does not support Dart Sass as of writing. I really love the `@use` directive instead of the `@import` directive which is being deprecated. So, what I do is I write in Dart Sass and live compile it. Hugo only gets the compiled CSS file. 
+
+I have made the text bigger so it is easier to read. 
+
+Performance wise, this site now scores perfectly on Lighthouse tests. It builds in ~150ms, which is really impressive.
 
 ## Conclusions
 
@@ -49,3 +59,5 @@ Nuxt is powerful, maybe too powerful for me.
 I like my stack now. It is boring, and that's a good thing. 
 
 I have redesigned my site twice in the last three months, and have spent hardly any time writing content. I am done adding new features to this site now. It  has all I need. Now, I just need to start writing good content. 
+
+I have moved it to the nuxt subdomain. Any new articles I will be adding to my main website only. 

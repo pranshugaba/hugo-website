@@ -219,7 +219,9 @@ figure figcaption {
 html {
   font-size: 112.5%;
   font-family: "Inter", sans-serif;
-  text-underline-offset: 0.15em;
+  text-underline-offset: 0.16em;
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
 }
 @media (min-width: 640px) {
   html {
@@ -272,9 +274,9 @@ li {
 }
 
 p {
-  margin-top: 1.6rem;
-  margin-bottom: 1.6rem;
-  line-height: 1.6;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
 }
 
 p:first-child {
@@ -285,11 +287,19 @@ p:last-child {
   margin-bottom: 1rem;
 }
 
+a {
+  -webkit-text-decoration: underline solid currentColor;
+          text-decoration: underline solid currentColor;
+  transition: -webkit-text-decoration 0.25s ease-in-out;
+  transition: text-decoration 0.25s ease-in-out;
+  transition: text-decoration 0.25s ease-in-out, -webkit-text-decoration 0.25s ease-in-out;
+}
 a, a:visited {
   color: inherit;
 }
 a:hover {
-  text-decoration: none;
+  -webkit-text-decoration: underline solid transparent;
+          text-decoration: underline solid transparent;
 }
 
 strong {
@@ -399,10 +409,12 @@ blockquote {
   gap: 1rem;
 }
 .header a {
-  text-decoration: none;
+  -webkit-text-decoration: underline solid transparent;
+          text-decoration: underline solid transparent;
 }
 .header a:hover {
-  text-decoration: underline;
+  -webkit-text-decoration: underline solid currentColor;
+          text-decoration: underline solid currentColor;
 }
 
 .footer {
@@ -416,10 +428,12 @@ blockquote {
   gap: 1rem;
 }
 .footer a {
-  text-decoration: none;
+  -webkit-text-decoration: underline solid transparent;
+          text-decoration: underline solid transparent;
 }
 .footer a:hover {
-  text-decoration: underline;
+  -webkit-text-decoration: underline solid currentColor;
+          text-decoration: underline solid currentColor;
 }
 .footer__links {
   display: flex;
@@ -799,10 +813,12 @@ h4 code {
   justify-self: end;
 }
 .list-yearwise__item .item__type a {
-  text-decoration: none;
+  -webkit-text-decoration: underline solid transparent;
+          text-decoration: underline solid transparent;
 }
 .list-yearwise__item .item__type a:hover {
-  text-decoration: underline;
+  -webkit-text-decoration: underline solid currentColor;
+          text-decoration: underline solid currentColor;
 }
 @media (min-width: 640px) {
   .list-yearwise__item {
@@ -921,10 +937,12 @@ h4 code {
   margin-top: 0;
 }
 .toc a {
-  text-decoration: none;
+  -webkit-text-decoration: underline solid transparent;
+          text-decoration: underline solid transparent;
 }
 .toc a:hover {
-  text-decoration: underline;
+  -webkit-text-decoration: underline solid currentColor;
+          text-decoration: underline solid currentColor;
 }
 
 .tagcloud {
@@ -937,10 +955,25 @@ h4 code {
   gap: 1rem;
 }
 .tagcloud a {
-  text-decoration: none;
+  -webkit-text-decoration: underline solid transparent;
+          text-decoration: underline solid transparent;
 }
 .tagcloud a:hover {
-  text-decoration: underline;
+  -webkit-text-decoration: underline solid currentColor;
+          text-decoration: underline solid currentColor;
+}
+
+table {
+  margin: 2rem auto;
+}
+
+td, th {
+  border: 1px solid var(--fg);
+  padding: 0.5rem;
+}
+
+thead {
+  font-weight: 700;
 }
 
 .home__pager {
@@ -964,18 +997,18 @@ h4 code {
 }
 .page__date {
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
 }
 .page__featuredimage {
-  margin-top: 2.5rem;
-  margin-bottom: -0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   border-radius: 0.5rem;
 }
 .page__featuredimage img {
   border: 0.15rem solid var(--fg);
 }
 .page__content {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   margin-bottom: 2.5rem;
 }
 .page__tags {
@@ -987,10 +1020,12 @@ h4 code {
   padding-left: 0;
 }
 .page__tags a {
-  text-decoration: none;
+  -webkit-text-decoration: underline solid transparent;
+          text-decoration: underline solid transparent;
 }
 .page__tags a:hover {
-  text-decoration: underline;
+  -webkit-text-decoration: underline solid currentColor;
+          text-decoration: underline solid currentColor;
 }
 .page__tags li {
   line-height: 1;

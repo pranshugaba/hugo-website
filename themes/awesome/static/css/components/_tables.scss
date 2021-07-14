@@ -1,0 +1,12 @@
+table {
+  margin: 2rem auto;
+}
+
+td, th {
+    border: 1px solid var(--fg);
+    padding: 0.5rem;
+}
+
+thead {
+    font-weight: 700;
+}
