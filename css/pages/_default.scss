@@ -14,12 +14,12 @@
   }
   &__date {
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
   }
 
   &__featuredimage {
-    margin-top: 2.5rem;
-    margin-bottom: -0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     border-radius: 0.5rem;
     & img {
       border: 0.15rem solid var(--fg);
@@ -27,7 +27,7 @@
   }
 
   &__content {
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     margin-bottom: 2.5rem;
   }
 
