@@ -1,8 +1,8 @@
 @mixin plain-link {
-  text-decoration: underline solid transparent;
+  text-decoration: none;
 
   &:hover {
-    text-decoration: underline solid currentColor;
+    text-decoration: underline;
   }
 }
 

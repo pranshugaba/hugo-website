@@ -49,7 +49,7 @@ You would like to hang the painting using two nails. To allow for easy removal, 
 Try it out with some pencils and a long string.
  {{< /note >}}
 
-{{< figure class="float-right" src="two_nails.png" alt="A painting hanging off two nails."  caption="The method shown in the figure _does not_ work, because if you remove any one nail, the painting still hangs from the other nail." >}}
+{{< figure class="medium no-border" src="two_nails.png" alt="A painting hanging off two nails."  caption="This method _does not_ work, because if you remove any one nail, the painting still hangs from the other nail." >}}
 
 ### Level 2
 
