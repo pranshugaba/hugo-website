@@ -150,11 +150,9 @@ figure img {
   border-radius: 0.5rem;
   border: 2px solid var(--fg);
 }
-@media (prefers-color-scheme: dark) {
-  figure img {
-    opacity: 0.9;
-    filter: brightness(0.9) contrast(1.1);
-  }
+.dark-mode figure img {
+  opacity: 0.9;
+  filter: brightness(0.9) contrast(1.1);
 }
 figure.no-border img {
   border: none;
@@ -175,10 +173,20 @@ figure.medium figcaption {
 figure.rectangle img {
   border-radius: 0;
 }
-@media (prefers-color-scheme: dark) {
-  figure.diagram img {
-    filter: hue-rotate(180deg) invert(1);
-  }
+.dark-mode figure.diagram img {
+  filter: hue-rotate(180deg) invert(1);
+}
+figure .light-image {
+  display: inline-block;
+}
+.dark-mode figure .light-image {
+  display: none;
+}
+figure .dark-image {
+  display: none;
+}
+.dark-mode figure .dark-image {
+  display: inline-block;
 }
 figure figcaption {
   font-weight: 400;

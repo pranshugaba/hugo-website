@@ -12,7 +12,7 @@ figure {
     margin: 0 auto;
     border-radius: 0.5rem;
     border: 2px solid var(--fg);
-    @media (prefers-color-scheme: dark) {
+    .dark-mode & {
       opacity: 0.9;
       filter: brightness(0.9) contrast(1.1);
     }
@@ -46,10 +46,24 @@ figure {
     border-radius: 0;
   }
 
-  &.diagram img {
-    @media (prefers-color-scheme: dark) {
-      filter: hue-rotate(180deg) invert(1);
-    }
+  .dark-mode &.diagram img {
+    filter: hue-rotate(180deg) invert(1);
+  }
+
+  .light-image {
+    display: inline-block;
+  }
+
+  .dark-mode & .light-image {
+    display: none;
+  }
+  
+  .dark-image {
+    display: none;
+  }
+
+  .dark-mode & .dark-image {
+    display: inline-block;
   }
 
   figcaption {
