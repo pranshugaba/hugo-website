@@ -55,9 +55,6 @@ func main() {
 }
 ```
 
-This is a tasklist
+## Todo 
 
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
-
+- [ ] Interesting functions in Hugo

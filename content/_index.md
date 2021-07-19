@@ -1,5 +1,4 @@
 ---
-title: Hello
 subtitle: Photos, poems, puzzles, and more!
 summary: Personal website of Pranshu Gaba. Here I share photos, poems, puzzles, and more!
 ---

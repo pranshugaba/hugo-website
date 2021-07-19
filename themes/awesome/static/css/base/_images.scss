@@ -1,7 +1,7 @@
 figure {
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 
   img {
     text-align: center;
@@ -13,7 +13,6 @@ figure {
     border-radius: 0.5rem;
     border: 2px solid var(--fg);
     .dark-mode & {
-      opacity: 0.9;
       filter: brightness(0.9) contrast(1.1);
     }
   }

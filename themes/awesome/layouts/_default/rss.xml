@@ -13,9 +13,9 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} by {{ end }}{{ .Site.Title }}{{ end }}</title>
     <link rel="alternate" type="text/html" href="{{ .Permalink }}"/>
-    <description>Recent content {{ if ne  .Title  .Site.Title }}{{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ .Site.Title }}</description>
+    <description>Recent content {{ if ne  .Title  .Site.Title }}{{ with .Title }}in {{.}} {{ end }}{{ end }}by {{ .Site.Title }}</description>
     <generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}
     <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
     <managingEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}{{ with .Site.Author.email }}
@@ -33,7 +33,7 @@
       <guid>{{ .Permalink }}</guid>
       {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
       <description>
-          {{ "<![CDATA[" | safeHTML }}{{ with $img }}{{ $big := .Fill "1200x800 center" }}{{ "<" | safeHTML }}img src="{{ $big.Permalink }}" alt="" /{{ ">" | safeHTML }}{{ end }}{{ .Content | safeHTML }}{{"]]>" | safeHTML }}
+          {{ "<![CDATA[" | safeHTML }}{{ with $img }}{{ $big := .Fill "1200x800 center" }}{{ "<" | safeHTML }}img src="{{ $big.Permalink }}" alt="" /{{ ">" | safeHTML }}{{ end }}{{ .Summary | safeHTML }}{{"]]>" | safeHTML }}
       </description>
     </item>
     {{ end }}
