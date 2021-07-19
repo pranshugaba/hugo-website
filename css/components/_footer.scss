@@ -14,8 +14,7 @@
     @include m.plain-link;
   }
 
-  &__links {
-    display: flex;
-    gap: 1rem;
+  #dark-mode-toggle {
+    cursor: pointer;
   }
 }

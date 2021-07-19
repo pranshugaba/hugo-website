@@ -6,9 +6,13 @@ $black: #121212;
   --fg: #{$black};
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #{$black};
-    --fg: #{$papaya};
-  }
+.dark-mode {
+  --bg: #{$black};
+  --fg: #{$papaya};
 }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --bg: #{$black};
+//     --fg: #{$papaya};
+//   }
+// }

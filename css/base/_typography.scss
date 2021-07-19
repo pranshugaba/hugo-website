@@ -4,8 +4,7 @@ html {
     font-size: 125%;
   }
   font-family: 'Inter', sans-serif;
-  text-underline-offset: 0.16em;
-  scroll-behavior: smooth;
+  text-underline-offset: 0.15em;
   scroll-padding-top: 1.5rem;
 }
 
@@ -19,7 +18,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 500;
   letter-spacing: -0.025em;
   margin-top: 3rem;
@@ -56,7 +55,10 @@ li {
 p {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  line-height: 1.75;
+  line-height: 1.6rem;
+  @media (min-width: 640px) {
+    line-height: 1.75rem;
+  }
 }
 p:first-child {
   margin-top: 1rem;
@@ -70,12 +72,10 @@ a {
   &:visited {
     color: inherit;
   }
-  text-decoration: underline solid currentColor;
-  transition: text-decoration 0.25s ease-in-out;
-  
+  text-decoration: underline;
 
   &:hover {
-    text-decoration: underline solid transparent;
+    text-decoration: none;
   }
 }
 

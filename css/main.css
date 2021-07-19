@@ -145,7 +145,9 @@ figure img {
   display: block;
   height: auto;
   max-width: 100%;
+  max-height: 640px;
   margin: 0 auto;
+  border-radius: 0.5rem;
   border: 2px solid var(--fg);
 }
 @media (prefers-color-scheme: dark) {
@@ -153,6 +155,25 @@ figure img {
     opacity: 0.9;
     filter: brightness(0.9) contrast(1.1);
   }
+}
+figure.no-border img {
+  border: none;
+  border-radius: 0;
+}
+figure.small img {
+  max-height: 240px;
+}
+figure.small figcaption {
+  max-width: 30ch;
+}
+figure.medium img {
+  max-height: 480px;
+}
+figure.medium figcaption {
+  max-width: 45ch;
+}
+figure.rectangle img {
+  border-radius: 0;
 }
 @media (prefers-color-scheme: dark) {
   figure.diagram img {
@@ -219,8 +240,7 @@ figure figcaption {
 html {
   font-size: 112.5%;
   font-family: "Inter", sans-serif;
-  text-underline-offset: 0.16em;
-  scroll-behavior: smooth;
+  text-underline-offset: 0.15em;
   scroll-padding-top: 1.5rem;
 }
 @media (min-width: 640px) {
@@ -239,7 +259,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 500;
   letter-spacing: -0.025em;
   margin-top: 3rem;
@@ -276,7 +296,12 @@ li {
 p {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  line-height: 1.75;
+  line-height: 1.6rem;
+}
+@media (min-width: 640px) {
+  p {
+    line-height: 1.75rem;
+  }
 }
 
 p:first-child {
@@ -288,18 +313,13 @@ p:last-child {
 }
 
 a {
-  -webkit-text-decoration: underline solid currentColor;
-          text-decoration: underline solid currentColor;
-  transition: -webkit-text-decoration 0.25s ease-in-out;
-  transition: text-decoration 0.25s ease-in-out;
-  transition: text-decoration 0.25s ease-in-out, -webkit-text-decoration 0.25s ease-in-out;
+  text-decoration: underline;
 }
 a, a:visited {
   color: inherit;
 }
 a:hover {
-  -webkit-text-decoration: underline solid transparent;
-          text-decoration: underline solid transparent;
+  text-decoration: none;
 }
 
 strong {
@@ -380,12 +400,11 @@ blockquote {
   --fg: #121212;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #121212;
-    --fg: papayawhip;
-  }
+.dark-mode {
+  --bg: #121212;
+  --fg: papayawhip;
 }
+
 .header {
   border-bottom: 2px solid var(--fg);
   padding-top: 0.5rem;
@@ -409,12 +428,10 @@ blockquote {
   gap: 1rem;
 }
 .header a {
-  -webkit-text-decoration: underline solid transparent;
-          text-decoration: underline solid transparent;
+  text-decoration: none;
 }
 .header a:hover {
-  -webkit-text-decoration: underline solid currentColor;
-          text-decoration: underline solid currentColor;
+  text-decoration: underline;
 }
 
 .footer {
@@ -428,16 +445,13 @@ blockquote {
   gap: 1rem;
 }
 .footer a {
-  -webkit-text-decoration: underline solid transparent;
-          text-decoration: underline solid transparent;
+  text-decoration: none;
 }
 .footer a:hover {
-  -webkit-text-decoration: underline solid currentColor;
-          text-decoration: underline solid currentColor;
+  text-decoration: underline;
 }
-.footer__links {
-  display: flex;
-  gap: 1rem;
+.footer #dark-mode-toggle {
+  cursor: pointer;
 }
 
 pre {
@@ -813,12 +827,10 @@ h4 code {
   justify-self: end;
 }
 .list-yearwise__item .item__type a {
-  -webkit-text-decoration: underline solid transparent;
-          text-decoration: underline solid transparent;
+  text-decoration: none;
 }
 .list-yearwise__item .item__type a:hover {
-  -webkit-text-decoration: underline solid currentColor;
-          text-decoration: underline solid currentColor;
+  text-decoration: underline;
 }
 @media (min-width: 640px) {
   .list-yearwise__item {
@@ -937,12 +949,10 @@ h4 code {
   margin-top: 0;
 }
 .toc a {
-  -webkit-text-decoration: underline solid transparent;
-          text-decoration: underline solid transparent;
+  text-decoration: none;
 }
 .toc a:hover {
-  -webkit-text-decoration: underline solid currentColor;
-          text-decoration: underline solid currentColor;
+  text-decoration: underline;
 }
 
 .tagcloud {
@@ -955,12 +965,10 @@ h4 code {
   gap: 1rem;
 }
 .tagcloud a {
-  -webkit-text-decoration: underline solid transparent;
-          text-decoration: underline solid transparent;
+  text-decoration: none;
 }
 .tagcloud a:hover {
-  -webkit-text-decoration: underline solid currentColor;
-          text-decoration: underline solid currentColor;
+  text-decoration: underline;
 }
 
 table {
@@ -990,7 +998,7 @@ thead {
 }
 .page__subtitle {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   line-height: 1.25;
@@ -1020,12 +1028,10 @@ thead {
   padding-left: 0;
 }
 .page__tags a {
-  -webkit-text-decoration: underline solid transparent;
-          text-decoration: underline solid transparent;
+  text-decoration: none;
 }
 .page__tags a:hover {
-  -webkit-text-decoration: underline solid currentColor;
-          text-decoration: underline solid currentColor;
+  text-decoration: underline;
 }
 .page__tags li {
   line-height: 1;
