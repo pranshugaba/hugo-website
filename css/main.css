@@ -143,6 +143,7 @@ figure {
 figure img {
   text-align: center;
   display: block;
+  width: auto;
   height: auto;
   max-width: 100%;
   max-height: 640px;
@@ -266,7 +267,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 500;
   letter-spacing: -0.025em;
   margin-top: 3rem;
@@ -303,11 +304,11 @@ li {
 p {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  line-height: 1.6rem;
+  line-height: 1.6;
 }
 @media (min-width: 640px) {
   p {
-    line-height: 1.75rem;
+    line-height: 1.75;
   }
 }
 
@@ -808,8 +809,17 @@ h4 code {
   line-height: 1.5;
 }
 
+.list-description__item {
+  margin-bottom: 3rem;
+}
+.list-description__item .item__date {
+  display: flex;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.1rem;
+}
 @media (min-width: 640px) {
-  .list-section__item {
+  .list-description__item {
     display: grid;
     grid-template-columns: -webkit-max-content auto;
     grid-template-columns: max-content auto;
@@ -818,53 +828,7 @@ h4 code {
     -moz-column-gap: 1.25rem;
          column-gap: 1.25rem;
   }
-}
-
-.list-yearwise__item {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-areas: "dt tp" "details details";
-  -moz-column-gap: 1.25rem;
-       column-gap: 1.25rem;
-  row-gap: 0.2rem;
-}
-.list-yearwise__item .item__type {
-  font-size: smaller;
-  grid-area: tp;
-  justify-self: end;
-}
-.list-yearwise__item .item__type a {
-  text-decoration: none;
-}
-.list-yearwise__item .item__type a:hover {
-  text-decoration: underline;
-}
-@media (min-width: 640px) {
-  .list-yearwise__item {
-    grid-template-columns: -webkit-max-content auto -webkit-max-content;
-    grid-template-columns: max-content auto max-content;
-    grid-template-rows: auto;
-    grid-template-areas: "dt details tp";
-  }
-  .list-yearwise__item .item__type {
-    font-size: large;
-  }
-}
-
-.list-section__item,
-.list-yearwise__item {
-  margin-bottom: 2.5rem;
-}
-.list-section__item .item__date,
-.list-yearwise__item .item__date {
-  display: flex;
-  gap: 0.25rem;
-  font-size: smaller;
-  grid-area: dt;
-}
-@media (min-width: 640px) {
-  .list-section__item .item__date,
-.list-yearwise__item .item__date {
+  .list-description__item .item__date {
     display: block;
     justify-self: start;
     align-self: start;
@@ -874,17 +838,16 @@ h4 code {
     border-radius: 0.25rem;
     font-size: smaller;
     border: 2px solid var(--fg);
+    grid-area: dt;
   }
-  .list-section__item .item__month,
-.list-yearwise__item .item__month {
+  .list-description__item .item__month {
     font-size: 0.8rem;
     text-align: center;
     line-height: 1;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
   }
-  .list-section__item .item__day,
-.list-yearwise__item .item__day {
+  .list-description__item .item__day {
     font-size: 1.2rem;
     text-align: center;
     line-height: 1;
@@ -892,13 +855,11 @@ h4 code {
     margin-bottom: 0.25rem;
   }
 }
-.list-section__item .item__details,
-.list-yearwise__item .item__details {
+.list-description__item .item__details {
   grid-area: details;
   justify-self: start;
 }
-.list-section__item .item__summary,
-.list-yearwise__item .item__summary {
+.list-description__item .item__summary {
   margin-top: 0.25rem;
 }
 
@@ -1001,11 +962,11 @@ thead {
 
 .page__title {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .page__subtitle {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 400;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   line-height: 1.25;

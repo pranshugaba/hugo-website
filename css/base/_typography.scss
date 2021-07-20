@@ -18,7 +18,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 500;
   letter-spacing: -0.025em;
   margin-top: 3rem;
@@ -55,9 +55,9 @@ li {
 p {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  line-height: 1.6rem;
+  line-height: 1.6;
   @media (min-width: 640px) {
-    line-height: 1.75rem;
+    line-height: 1.75;
   }
 }
 p:first-child {

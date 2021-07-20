@@ -17,54 +17,23 @@
   line-height: 1.5;
 }
 
-.list-section__item {
+.list-description__item {
+  margin-bottom: 3rem;
+
+  .item__date {
+    display: flex;
+    gap: 0.25rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
+  }
+
   @media (min-width: 640px) {
     display: grid;
     grid-template-columns: max-content auto;
     grid-template-rows: auto;
     grid-template-areas: 'dt details';
     column-gap: 1.25rem;
-  }
-}
 
-.list-yearwise__item {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-areas: 'dt tp' 'details details';
-  column-gap: 1.25rem;
-  row-gap: 0.2rem;
-
-  .item__type {
-    font-size: smaller;
-    grid-area: tp;
-    justify-self: end;
-    & a {
-      @include m.plain-link;
-    }
-  }
-
-  @media (min-width: 640px) {
-    grid-template-columns: max-content auto max-content;
-    grid-template-rows: auto;
-    grid-template-areas: 'dt details tp';
-
-    .item__type {
-      font-size: large;
-    }
-  }
-}
-
-.list-section__item,
-.list-yearwise__item {
-  margin-bottom: 2.5rem;
-
-  .item__date {
-    display: flex;
-    gap: 0.25rem;
-    font-size: smaller;
-    grid-area: dt;
-  }
-  @media (min-width: 640px) {
     .item__date {
       display: block;
       justify-self: start;
@@ -75,6 +44,7 @@
       border-radius: 0.25rem;
       font-size: smaller;
       border: 2px solid var(--fg);
+      grid-area: dt;
     }
     .item__month {
       font-size: 0.8rem;
