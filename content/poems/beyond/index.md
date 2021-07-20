@@ -5,7 +5,7 @@ title: "beyond"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["haiku",  "colors"]
+tags: ["haiku",  "colours"]
 categories: []
 date: 2019-07-07T12:42:24+05:30
 lastmod: 2019-07-07T12:42:24+05:30

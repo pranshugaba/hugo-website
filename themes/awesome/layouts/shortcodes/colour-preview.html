@@ -1,0 +1,10 @@
+{{ $colour := .Get 0 | safeCSS }}
+<code style="border: none";>
+<span
+    style="display: inline-block;
+    width: 1.6ch;
+    height: 1.6ch;
+    border-radius: 0.1rem;
+    background-color: {{ $colour }};
+    margin-right:5px;"
+    ></span>{{ $colour }}</code>

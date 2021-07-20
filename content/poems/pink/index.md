@@ -5,7 +5,7 @@ title: "pink"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["haiku",  "colors"]
+tags: ["haiku",  "colours"]
 categories: []
 date: 2019-07-17T16:40:33+05:30
 lastmod: 2019-07-17T16:40:33+05:30

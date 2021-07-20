@@ -1,6 +1,6 @@
 ---
 title: "...and Back to Hugo Again"
-subtitle: "This time, I wrote my own awesome theme."
+subtitle: "This time, I wrote my own awesome theme"
 summary: "I switched to Nuxt not more than 2 months ago. Now, I am back to using Hugo, and intend to do so for the forseeable future."
 
 date: 2021-07-06T15:16:36+05:30
@@ -42,7 +42,7 @@ I was missing the simplicity and speed of Hugo, so I decided to give Hugo anothe
 
 I had a not-so-great experience with a readymade theme before, so this time I decided to write my own theme. I decided I would keep my site simple so it is easy to maintain and not too distracting to look at. 
 
-My site uses only two colours: {{% color "papayawhip" %}} and {{% color "#121212" %}}. Every element has one of these two colors. This makes the colour part of the CSS very simple, and I was also able to write the dark theme in no time. 
+My site uses only two colours: {{< colour "papayawhip" >}} and {{< colour "#121212" >}}. Every element has one of these two colors. This makes the colour part of the CSS very simple, and I was also able to write the dark theme in no time. 
 
 I love this simple design; I think it looks crisp and clear with no distractions. The content is legible with enough contrast between the foreground and the background, much like a road sign. 
 

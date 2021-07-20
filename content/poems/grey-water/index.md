@@ -5,7 +5,7 @@ title: "grey water"
 subtitle: "a haiku"
 summary: "a haiku"
 authors: ["pranshu"]
-tags: ["colors", "haiku",  "flowers"]
+tags: ["colours", "haiku",  "flowers"]
 categories: []
 date: 2019-07-10T18:27:42+05:30
 lastmod: 2019-07-10T18:27:42+05:30

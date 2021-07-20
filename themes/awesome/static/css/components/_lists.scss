@@ -6,9 +6,15 @@
 }
 
 .list__key {
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
   font-size: 2rem;
+  border-bottom: 2px dotted var(--fg);
+  position:sticky;
+  padding: 1rem 0 0.75rem;
+  top: 0px;
+  top: 0px;
+  background-color: var(--bg);
 }
 
 .item__title {

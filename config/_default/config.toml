@@ -19,7 +19,7 @@ lastmod = ["lastmod", ":fileModTime", ":default"]
 
 [markup]
 [markup.highlight]
-pygmentsUseClasses = true
+style = "paraiso-dark"
 [markup.goldmark.renderer]
 unsafe = true
 

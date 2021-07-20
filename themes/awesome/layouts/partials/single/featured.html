@@ -9,19 +9,14 @@
     {{ $small := "" }}
     {{ if lt .Height .Width }}
       {{ $big = .Resize "1080x" }}
-      {{ $small = $big.Resize "540x" }}
     {{ else }}
       {{ $big = .Resize "x1080" }}
-      {{ $small = $big.Resize "x540" }}
     {{ end }}
     <img
-      srcset="{{ $small.Permalink }} 480w, {{ $big.Permalink }} 1200w"
-      sizes="(max-width: 640px) 480px, 1200px"
       src="{{ $big.Permalink }}"
       alt="{{ $img.Title }}"
       height="{{ $big.Height }}"
       width="{{ $big.Width }}"
-      class="page__featuredimage"
     />
   </figure>
 {{ end }}
