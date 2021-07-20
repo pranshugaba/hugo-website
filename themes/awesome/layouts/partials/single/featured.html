@@ -1,7 +1,19 @@
 {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }} 
 {{ with $img }}
+  {{ $orientation := 1 }}
+  {{ with .Exif }}
+    {{ $orientation = .Tags.Orientation }}
+  {{ end }}
   <figure class="page__featuredimage">
-    {{ $big := .Fill "1200x800 center" }} {{ $small := $big.Resize "480x" }}
+    {{ $big := "" }}
+    {{ $small := "" }}
+    {{ if lt .Height .Width }}
+      {{ $big = .Resize "1080x" }}
+      {{ $small = $big.Resize "540x" }}
+    {{ else }}
+      {{ $big = .Resize "x1080" }}
+      {{ $small = $big.Resize "x540" }}
+    {{ end }}
     <img
       srcset="{{ $small.Permalink }} 480w, {{ $big.Permalink }} 1200w"
       sizes="(max-width: 640px) 480px, 1200px"

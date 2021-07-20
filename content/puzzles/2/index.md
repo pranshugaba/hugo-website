@@ -19,7 +19,7 @@ math: true
 image:
   caption: ""
   focal_point: "Top"
-  preview_only: false
+  preview_only: true
   placement: 2
 
 # Projects (optional).
