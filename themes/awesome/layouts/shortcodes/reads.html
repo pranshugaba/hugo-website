@@ -1,0 +1,7 @@
+<ul class="items__list">
+    {{ range $.Site.Data.about.reads }}
+    <li>
+        {{ partial "list/books.html" . }}
+    </li>
+    {{ end }}
+</ul>

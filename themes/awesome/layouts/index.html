@@ -1,7 +1,8 @@
 {{ define "main" }}
-  
+ 
+{{ $itemsPerPage := 42 }}
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-{{ $paginator := .Paginate ($pages.GroupByDate "2006") }}
+{{ $paginator := .Paginate ($pages.GroupByDate "2006") $itemsPerPage }}
 
 {{ if eq ($paginator.PageNumber) 1 }}
   <h1 class="page__title">Hello there</h1>
@@ -10,14 +11,16 @@
 {{ end }}
 
 {{ range $paginator.PageGroups }}
-<h2 class="list__key">{{ .Key }}</h2>
-<ul class="items__list">
-    {{ range .Pages }}
-    <li>
-      {{ partial "list/description.html" . }}
-    </li>
-    {{ end }}
-</ul>
+<section id="{{ .Key }}">
+  <h2 class="list__key">{{ .Key }}</h2>
+  <ul class="items__list">
+      {{ range .Pages }}
+      <li>
+        {{ partial "list/description.html" . }}
+      </li>
+      {{ end }}
+  </ul>
+</section>
 {{ end }}
 
 <div class="home__pager">

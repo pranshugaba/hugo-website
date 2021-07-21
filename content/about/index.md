@@ -10,7 +10,8 @@ My research interests include Automata Theory, Logic, Discrete Maths, and Algori
 I create photopoetry, create puzzles, draw comics, develop apps and games, and write stories.
 I also love playing chess, solving puzzles, swimming and cycling but not both at once.
 
-I am currently reading _Dune_ by Frank Herbert.
+{{< currently-reading >}} [Some books that I have read recently.]({{< ref "/reads" >}})
+
 
 ## ... this site
 

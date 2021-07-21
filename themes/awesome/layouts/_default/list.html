@@ -8,12 +8,14 @@
     {{.Content}}
   </article>
   {{ range .Pages.GroupByDate "2006" }}
-  <h2 class="list__key">{{ .Key }}</h2>
-  <ul class="items__list">
-    {{ range .Pages }}
-    <li>{{ partial "list/description.html" . }}</li>
-    {{ end }}
-  </ul>
+  <section id="{{ .Key }}">
+    <h2 class="list__key">{{ .Key }}</h2>
+    <ul class="items__list">
+      {{ range .Pages }}
+      <li>{{ partial "list/description.html" . }}</li>
+      {{ end }}
+    </ul>
+  </section>
   {{ end }}
 </main>
 {{ end }}

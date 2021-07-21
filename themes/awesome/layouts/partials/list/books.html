@@ -1,0 +1,10 @@
+<div class="list-books__item">
+  <span class="item__date">
+      {{ with .startDate }}
+        {{ dateFormat "Jan 2006" . }}
+      {{ end }}
+  </span>
+  <div class="item__details">
+      <div class="item__title">{{ .title }}</div> by {{ .author }}
+  </div>
+</div>
