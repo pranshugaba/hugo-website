@@ -984,6 +984,9 @@ thead {
   margin-top: 2rem;
   margin-bottom: 2.5rem;
 }
+.page__lastmod {
+  margin-top: 1rem;
+}
 .page__featuredimage {
   margin-top: 2rem;
   margin-bottom: 2rem;

@@ -3,9 +3,16 @@
   {{ with .Params.Subtitle }}
       <h2 class="page__subtitle" >{{ . | emojify }}</h2>
   {{ end }}
-  {{ with .Date }}
+  {{ if .Date }}
     <div class="page__date">
-        {{ .Format "January 2, 2006" }}
+        {{ .Date.Format "January 2, 2006" }}
+        {{ if .Lastmod }}
+          {{ if (gt .Lastmod .Date)}}
+          <div class="page__lastmod">
+            Last updated on {{ .Lastmod.Format "January 2, 2006" }}
+          </div>
+          {{ end }}
+        {{ end }}
     </div>
   {{ end }}
   {{ if not .Params.image.preview_only }}
