@@ -6,10 +6,10 @@
 }
 
 .list__key {
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
   font-size: 2rem;
-  border-bottom: 2px dotted var(--fg);
+  border-bottom: 2px solid var(--fg);
   position:sticky;
   padding: 1rem 0 0.75rem;
   top: 0px;
@@ -77,8 +77,8 @@
   }
 }
 
-.list-archive__item {
-  margin-bottom: 1.5rem;
+.list-archive__item, .list-books__item {
+  margin-bottom: 2rem;
   & .item__date {
     font-size: smaller;
   }
@@ -90,4 +90,8 @@
     gap: 0.5rem;
     justify-content: space-between;
   }
+}
+
+.list-books__item {
+  margin-bottom: 2rem;
 }
