@@ -1,7 +1,9 @@
 <div class="list-books__item">
   <span class="item__date">
-      {{ with .startDate }}
-        {{ dateFormat "Jan 2006" . }}
+      {{ if .endDate }}
+        {{ dateFormat "Jan 2006" .endDate }}
+      {{ else }}
+        reading
       {{ end }}
   </span>
   <div class="item__details">

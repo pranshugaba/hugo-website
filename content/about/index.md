@@ -10,7 +10,7 @@ My research interests include Automata Theory, Logic, Discrete Maths, and Algori
 I create photopoetry, create puzzles, draw comics, develop apps and games, and write stories.
 I also love playing chess, solving puzzles, swimming and cycling but not both at once.
 
-{{< currently-reading >}} [Some books that I have read recently.]({{< ref "/reads" >}})
+{{< currently-reading >}} See my [recent reads]({{< ref "/reads" >}}).
 
 
 ## ... this site
