@@ -1,5 +1,5 @@
 <ul class="items__list">
-    {{ range $.Site.Data.books }}
+    {{ with $.Site.Data.books }}
         {{ range .wantToRead}}
         <li>
             {{ partial "list/books.html" (dict "Context" . "Status" "wantToRead") }}

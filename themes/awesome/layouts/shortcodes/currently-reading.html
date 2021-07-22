@@ -1,5 +1,3 @@
-{{ range $.Site.Data.books }}
-    {{ range .reading}}
-        <em>{{ .title }}</em> by {{ .author }}.
-    {{ end }}
+{{ range first 1 $.Site.Data.books.reading }}
+    I am currently reading <em>{{ .title }}</em> by {{ .author }}.
 {{ end }}

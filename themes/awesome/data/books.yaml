@@ -1,13 +1,13 @@
-- wantToRead:
+wantToRead:
   - title: Crime and Punishment
     author: Fyodor Dostoevsky
 
-- reading:
+reading:
   - title: Dune
     author: Frank Herbert
     startDate: 2021-07-01T05:30:00+05:30
 
-- read:
+read:
   - title: The Hobbit, or There and Back Again
     author: J. R. R. Tolkien
     startDate: 2021-03-20T05:30:00+05:30

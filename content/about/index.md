@@ -10,7 +10,8 @@ My research interests include Automata Theory, Logic, Discrete Maths, and Algori
 I write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}), and develop apps and games. 
 I also love playing chess, solving puzzles, swimming and cycling but not both at once.
 
-I am currently reading {{< currently-reading >}} See my [recent reads]({{< ref "/reads" >}}).
+{{< currently-reading >}}
+See [my reading list]({{< ref "/reads" >}}).
 
 
 ## About this site
