@@ -1027,32 +1027,44 @@ thead {
 }
 .page__nav {
   margin-top: 3rem;
-  line-height: 1.6;
-}
-@media (min-width: 640px) {
-  .page__nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
+  line-height: 1.75;
 }
 .page__prevnext {
+  border-top: 2px solid var(--fg);
+}
+@media (min-width: 640px) {
+  .page__prevnext {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+.page__prev, .page__next {
+  margin-top: 1.5rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+@media (min-width: 640px) {
+  .page__prev, .page__next {
+    max-width: 23ch;
+  }
+}
+.page__prev a, .page__next a {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-between;
-  align-items: flex-start;
+  gap: 0.5ch;
+}
+.page__next {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+.page__next a {
+  justify-content: end;
 }
 .page__all {
   margin-top: 2rem;
-}
-@media (min-width: 640px) {
-  .page__all {
-    margin-top: 0;
-  }
+  text-align: center;
 }
 
 .poems.page__content {

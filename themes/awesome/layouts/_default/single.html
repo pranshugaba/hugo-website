@@ -49,25 +49,25 @@
     {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
     {{ if (in .Site.Params.mainSections .Type) }}
         <div class="page__prevnext">
-          {{with $pages.Prev . }}
-            <div class="page__prev">
-              <a href="{{ .Permalink }}"><- {{ .Title }}</a>
-            </div>
-          {{end}}
-          {{with $pages.Next . }}
-            <div class="page__next">
-              <a href="{{ .Permalink }}">-> {{ .Title }}</a>
-            </div>
-          {{end}}
+          <div class="page__next">
+            {{with $pages.Next . }}
+            <a href="{{ .Permalink }}"><span>{{ .Title }}</span><span>-></span></a>
+            {{end}}
+          </div>
+          <div class="page__prev">
+            {{with $pages.Prev . }}
+              <a href="{{ .Permalink }}"><span><-</span><span>{{ .Title }}</span></a>
+            {{end}}
+          </div>
         </div>
-        <div class="page__all">
-          {{ with .Section}}
+        {{ with .Section}}
+          <div class="page__all">
             <a href="/{{ . }}">↑ all {{ . }}</a>
-          {{ end }}
-        </div>
+          </div>
+        {{ end }}
     {{ else }}
       <div class="page__home">
-        <a href="/"><- home</a>
+        <a href="/"><span><-</span> <span>home</span></a>
       </div>
     {{ end }}
   </div>
