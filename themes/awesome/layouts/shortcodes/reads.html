@@ -1,7 +1,19 @@
 <ul class="items__list">
-    {{ range $.Site.Data.about.reads }}
-    <li>
-        {{ partial "list/books.html" . }}
-    </li>
+    {{ range $.Site.Data.books }}
+        {{ range .wantToRead}}
+        <li>
+            {{ partial "list/books.html" (dict "Context" . "Status" "wantToRead") }}
+        </li>
+        {{ end }}
+        {{ range .reading}}
+        <li>
+            {{ partial "list/books.html" (dict "Context" . "Status" "reading") }}
+        </li>
+        {{ end }}
+        {{ range .read}}
+        <li>
+            {{ partial "list/books.html" (dict "Context" . "Status" "read") }}
+        </li>
+        {{ end }}
     {{ end }}
 </ul>

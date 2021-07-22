@@ -1,12 +1,16 @@
 <div class="list-books__item">
   <span class="item__date">
-      {{ if .endDate }}
-        {{ dateFormat "Jan 2006" .endDate }}
-      {{ else }}
-        reading
+    {{ if (eq .Status "wantToRead") }}
+      want to read 
+    {{ else if (eq .Status "reading") }}
+      currently reading
+    {{ else }}
+      {{ with .Context.endDate }}
+        {{ dateFormat "Jan 2006" . }}
       {{ end }}
+    {{ end }}
   </span>
   <div class="item__details">
-      <div class="item__title">{{ .title }}</div> by {{ .author }}
+      <div class="item__title">{{ .Context.title }}</div> by {{ .Context.author }}
   </div>
 </div>

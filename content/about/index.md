@@ -1,23 +1,23 @@
 ---
-title: About
+title: About me
+subtitle: Hi, I am Pranshu!
+summary: A little bit about me and my website
 ---
 
-## ... me
-
-Hi, I am Pranshu! I am currently a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tifr.res.in/). Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in).
+I am currently a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tifr.res.in/). Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in).
 My research interests include Automata Theory, Logic, Discrete Maths, and Algorithms.
 
-I create photopoetry, create puzzles, draw comics, develop apps and games, and write stories.
+I write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}), and develop apps and games. 
 I also love playing chess, solving puzzles, swimming and cycling but not both at once.
 
-{{< currently-reading >}} See my [recent reads]({{< ref "/reads" >}}).
+I am currently reading {{< currently-reading >}} See my [recent reads]({{< ref "/reads" >}}).
 
 
-## ... this site
+## About this site
 
 This site is: 
 
-- built with :heart: using [Hugo](https://gohugo.io), the world's fastest static site generator
+- built with :heart: using [Hugo](https://gohugo.io)
 - designed and coded in [VSCodium](https://vscodium.com/) 
 - built on a PC running [Arch Linux](https://archlinux.org/)
 - hosted on [GitHub pages](https://pages.github.com/)

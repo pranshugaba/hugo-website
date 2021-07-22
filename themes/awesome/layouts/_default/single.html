@@ -33,7 +33,7 @@
       {{ end }}
     </ul>
   {{ end}}
-
+{{/*  
   <div class="page__nav">
     <div class="page__home">
       <a href="/"><- home</a>
@@ -43,5 +43,32 @@
         <a href="/{{ . }}">all {{ . }} -></a>
       {{ end }}
     </div>
+  </div>  */}}
+
+  <div class="page__nav">
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ if (in .Site.Params.mainSections .Type) }}
+        <div class="page__prevnext">
+          {{with $pages.Prev . }}
+            <div class="page__prev">
+              <a href="{{ .Permalink }}"><- {{ .Title }}</a>
+            </div>
+          {{end}}
+          {{with $pages.Next . }}
+            <div class="page__next">
+              <a href="{{ .Permalink }}">-> {{ .Title }}</a>
+            </div>
+          {{end}}
+        </div>
+        <div class="page__all">
+          {{ with .Section}}
+            <a href="/{{ . }}">↑ all {{ . }}</a>
+          {{ end }}
+        </div>
+    {{ else }}
+      <div class="page__home">
+        <a href="/"><- home</a>
+      </div>
+    {{ end }}
   </div>
 {{ end }}

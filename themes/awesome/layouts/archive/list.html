@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<h1>{{ .Title | emojify }}</h1>
+<h1 class="page__title">{{ .Title | emojify }}</h1>
 {{ with .Params.Subtitle }}
     <h2 class="page__subtitle" >{{ . | emojify }}</h2>
 {{ end }}

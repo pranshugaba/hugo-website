@@ -1,10 +1,10 @@
 ---
 title: "Hugo Colour Shortcode"
 subtitle: "A fun way to show previews of colours in Hugo"
-summary: "Names of colours do not convey their image very well. What does #714825 looks like? I wrote a shortcode that shows previews of colours in Hugo, so you can see them and don't have to imagine them."
+summary: "Names of colours don't convey their image very well. What does #714825 looks like? I wrote a shortcode that shows previews of colours in Hugo, so you can see them and don't have to imagine them."
 
-date: 2021-07-14T01:53:47+05:30
-lastmod: 2021-07-14T01:53:47+05:30
+date: 2021-07-21T17:30:00+05:30
+lastmod: 2021-07-21T17:30:00+05:30
 
 tags: ["hugo", "shortcodes", "colours"]
 
@@ -14,13 +14,13 @@ draft: false
 featured: false
 ---
 
-I was writing a [post about my new Hugo website]({{< ref "/posts/moving-back-to-hugo" >}}), and I wanted to describe the colours used on this site. I wrote the names of the colours, but names cannot convey the colour very well. Can you imagine what the colour #714825 looks like? What about rgb(0, 100, 255)?
+I was writing a [post about my new Hugo website]({{< ref "/posts/moving-back-to-hugo" >}}), and I wanted to describe the colours used on this site. I wrote the names of the colours, but names do not convey the colour very well. Can you imagine what the colour #714825 looks like? What about rgb(0, 100, 255)?
 
-I thought it would be great if the reader could also see a preview of the colours. I could add images of the colours that I am describing, but that is a lot of work and not very flexible.  This is what led me to write this Hugo shortcode.
+I thought it would be great if the reader could also see a preview of the colours. I could add images of the colours that I am describing, but that is a lot of work and not very flexible.  This is what led me to write this Hugo shortcode. I followed the [Hugo docs on shortcodes](https://gohugo.io/templates/shortcode-templates/) for reference. 
 
 ## Usage
 
-The following code in Markdown
+The following code in markdown
 {{< highlight text >}}
 This is a colour shortcode {{</* colour "#ff0000" */>}}.
 {{< /highlight >}}
@@ -38,7 +38,7 @@ This works with all valid CSS colour syntaxes, not just hexcodes. Here are some 
 
 ## Shortcode
 
-I wrote the following shortcode to achieve this. 
+I created a file named `colour.html` in `layouts/shortcodes`, and added the following code in it. We can now access this code in any markdown file using the `colour` shortcode.
 
 ```go
 {{ $colour := .Get 0 | safeCSS }}
@@ -56,7 +56,7 @@ The shortcode takes in an argument: `$colour`.  We use this parameter to set the
 
 {{< note >}}
 
-While the shortcode syntax is specific to Hugo, most templating languages have a way to pass variables. It should be possible to adapt this code for the templating language that you use.
+While the shortcode syntax is specific to Hugo, most templating languages have a way to pass in variables. It should be possible to adapt this code for the templating language that you use.
 
 {{< /note >}}
 
