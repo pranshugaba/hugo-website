@@ -10,10 +10,11 @@
   margin-bottom: 2rem;
   font-size: 2rem;
   border-bottom: 2px solid var(--fg);
-  position:sticky;
   padding: 1rem 0 0.75rem;
-  top: 0px;
-  top: 0px;
+  @media (min-height: 320px) {
+    position: sticky;
+    top: 0px;
+  }
   background-color: var(--bg);
 }
 
@@ -77,7 +78,8 @@
   }
 }
 
-.list-archive__item, .list-books__item {
+.list-archive__item,
+.list-books__item {
   margin-bottom: 2rem;
   & .item__date {
     font-size: smaller;
@@ -93,5 +95,5 @@
 }
 
 .list-books__item {
-  margin-bottom: 2rem;
+  margin-top: 2.5rem;
 }

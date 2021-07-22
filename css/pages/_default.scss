@@ -35,7 +35,7 @@
   }
 
   &__tags {
-    margin-top: 4rem;
+    margin-top: 2rem;
     display: flex;
     gap: 0.5rem;
     font-size: smaller;
@@ -55,10 +55,28 @@
   }
 
   &__nav {
-    margin-top: 2rem;
+    margin-top: 3rem;
+    line-height: 1.6;
+    @media (min-width: 640px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+  &__prevnext {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__all {
+    margin-top: 2rem;
+    @media (min-width: 640px) {
+      margin-top: 0;
+    }
   }
 }

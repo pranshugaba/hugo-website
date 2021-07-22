@@ -801,11 +801,14 @@ h4 code {
   margin-bottom: 2rem;
   font-size: 2rem;
   border-bottom: 2px solid var(--fg);
-  position: sticky;
   padding: 1rem 0 0.75rem;
-  top: 0px;
-  top: 0px;
   background-color: var(--bg);
+}
+@media (min-height: 320px) {
+  .list__key {
+    position: sticky;
+    top: 0px;
+  }
 }
 
 .item__title {
@@ -868,14 +871,17 @@ h4 code {
   margin-top: 0.25rem;
 }
 
-.list-archive__item, .list-books__item {
+.list-archive__item,
+.list-books__item {
   margin-bottom: 2rem;
 }
-.list-archive__item .item__date, .list-books__item .item__date {
+.list-archive__item .item__date,
+.list-books__item .item__date {
   font-size: smaller;
 }
 @media (min-width: 640px) {
-  .list-archive__item, .list-books__item {
+  .list-archive__item,
+.list-books__item {
     margin-bottom: 1rem;
     display: flex;
     flex-direction: row-reverse;
@@ -885,7 +891,7 @@ h4 code {
 }
 
 .list-books__item {
-  margin-bottom: 2rem;
+  margin-top: 2.5rem;
 }
 
 .admonition {
@@ -1000,7 +1006,7 @@ thead {
   margin-bottom: 2.5rem;
 }
 .page__tags {
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
   gap: 0.5rem;
   font-size: smaller;
@@ -1020,11 +1026,33 @@ thead {
   border-radius: 0.25rem;
 }
 .page__nav {
-  margin-top: 2rem;
+  margin-top: 3rem;
+  line-height: 1.6;
+}
+@media (min-width: 640px) {
+  .page__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+.page__prevnext {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-between;
+  align-items: flex-start;
+}
+.page__all {
+  margin-top: 2rem;
+}
+@media (min-width: 640px) {
+  .page__all {
+    margin-top: 0;
+  }
 }
 
 .poems.page__content {
