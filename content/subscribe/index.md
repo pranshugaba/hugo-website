@@ -3,20 +3,12 @@ title: Subscribe
 subtitle: "RSS feeds for this site"
 ---
 
-## All posts
+Subsribe to [all posts](/index.xml), or each section individually 
 
-[https://pranshugaba.com/index.xml](/index.xml)
+- [writings](/posts/index.xml)
+- [poems](/poems/index.xml)
+- [puzzles](/puzzles/index.xml)
 
-## Sectionwise
+## Feed readers
 
-### writings
-
-[https://pranshugaba.com/posts/index.xml](/posts/index.xml)
-
-### poems
-
-[https://pranshugaba.com/poems/index.xml](/poems/index.xml)
-
-### puzzles
-
-[https://pranshugaba.com/puzzles/index.xml](/puzzles/index.xml)
+I recommend [newsboat](https://github.com/newsboat/newsboat) if you are on Linux, and [Feeder](https://f-droid.org/en/packages/com.nononsenseapps.feeder/) for Android.
