@@ -324,9 +324,39 @@ a {
 }
 a, a:visited {
   color: inherit;
+  outline: none;
+  transition: outline 0.1s ease-out;
 }
 a:hover {
   text-decoration: none;
+}
+a:focus-visible {
+  outline: 0.15em solid var(--fg);
+  outline-offset: 0.125em;
+  border-radius: 0.1em;
+  text-decoration: none;
+}
+
+button {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0.2em;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  outline: none;
+  transition: outline 0.1s ease-out;
+}
+button:hover {
+  text-decoration: underline;
+}
+button:focus-visible {
+  outline: 0.15em solid var(--fg);
+  outline-offset: 0.2em;
 }
 
 strong {
@@ -449,6 +479,7 @@ blockquote {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-end;
   gap: 1rem;
 }
 .footer a {
