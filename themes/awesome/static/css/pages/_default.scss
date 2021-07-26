@@ -35,7 +35,7 @@
   }
 
   &__tags {
-    margin-top: 2rem;
+    margin-top: 5rem;
     display: flex;
     gap: 0.5rem;
     font-size: smaller;
@@ -55,16 +55,14 @@
   }
 
   &__nav {
-    margin-top: 3rem;
+    margin-top: 1rem;
     line-height: 1.75;
   }
   &__prevnext {
     border-top: 2px solid var(--fg);
-    @media (min-width: 640px) {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row-reverse;
-    }
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
   }
 
   &__prev,
@@ -73,10 +71,6 @@
     width: max-content;
     @media (min-width: 640px) {
       max-width: 23ch;
-    }
-    & a {
-      display: flex;
-      gap: 0.5ch;
     }
   }
   &__next {

@@ -1,34 +1,28 @@
 <div id="{{ .Route }}" class="leaflet-map"></div>
 <p id="{{ .Route }}-distance"></p>
+{{ $images := .Context.Page.Resources.Match (printf "%s/*" .Route) }}
 <script>
   {
-    let mymap = L.map('{{ .Route }}').setView([19.18, 72.82], 12);
-    mymap.addControl(new L.Control.Fullscreen());
-    var Stadia_OSMBright = L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
+    let coords = [19.18, 72.82];
+    let zoomLevel = 12;
+    let mymap = L.map('{{ .Route }}', {
+      fullscreenControl: true,
+    }).setView(coords, zoomLevel);
+
+    const ATTR =
+      '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, ' +
+      '&copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> ' +
+      '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+    const TILES_URL =
+      'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png';
+    let Stadia_OSMBright = L.tileLayer(TILES_URL, {
       maxZoom: 17,
-      attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+      attribution: ATTR,
     });
-    var Stamen_Watercolor = L.tileLayer(
-      'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}',
-      {
-        attribution:
-          'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        minZoom: 3,
-        maxZoom: 15,
-        ext: 'jpg',
-      }
-    );
-    var Stamen_TerrainLabels = L.tileLayer(
-      'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-labels/{z}/{x}/{y}{r}.{ext}',
-      {
-        minZoom: 3,
-        maxZoom: 15,
-        ext: 'png',
-      }
-    );
-    {{/*  Stamen_Watercolor.addTo(mymap);  */}}
-    {{/*  Stamen_TerrainLabels.addTo(mymap);  */}}
     Stadia_OSMBright.addTo(mymap);
+
+    L.control.scale({ imperial: false }).addTo(mymap);
+
     let gpx = '{{ .Route }}.gpx'; // URL to your GPX file or the GPX itself
     new L.GPX(gpx, {
       async: true,
@@ -39,8 +33,8 @@
       },
       polyline_options: {
         color: '#0096FF',
-        opacity: 0.95,
-        weight: 4,
+        opacity: 0.9,
+        weight: 3,
         lineCap: 'round',
       },
     })
@@ -52,5 +46,41 @@
         ).innerText = `Distance: ${parseFloat(distance.toPrecision(3))} km`;
       })
       .addTo(mymap);
+
+    {{ with $images}}
+      var photos = [
+        {{ range . }}
+          {{ $thumbnail := .Fill  "100x100" }}
+          {{ $big := .Resize "x640" }}
+          {
+            {{ with .Exif }}
+              lat: {{ .Lat }},
+              lng: {{ .Long }},
+              {{ if .Tags.ImageDescription }}
+                name: '{{ .Tags.ImageDescription }}',
+              {{ else }}
+                name: '',
+              {{ end }}
+            {{ end }}
+            url: '{{ $big.Permalink }}',
+            thumbnail:
+              '{{ $thumbnail.Permalink }}',
+          },
+        {{ end }}
+      ];
+
+      var photoLayer = L.photo.cluster().on('click', function (evt) {
+        var photo = evt.layer.photo;
+        var template = '<img src="{url}" /></a><p>{name}</p>';
+        evt.layer
+          .bindPopup(L.Util.template(template, photo), {
+            className: 'leaflet-popup-photo',
+            minWidth: 400,
+          })
+          .openPopup();
+      });
+
+      photoLayer.add(photos).addTo(mymap);
+    {{ end }}
   }
 </script>
