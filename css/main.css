@@ -989,6 +989,13 @@ thead {
   font-weight: 700;
 }
 
+#mapid {
+  width: 100%;
+  height: clamp(16rem, 80vh, 32rem);
+  border-radius: 0.5rem;
+  border: 0.15rem solid var(--fg);
+}
+
 .home__pager {
   margin-top: 3rem;
   display: flex;
