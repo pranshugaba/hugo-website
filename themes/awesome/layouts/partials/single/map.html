@@ -2,16 +2,12 @@
 <p id="{{ .Route }}-distance"></p>
 <script>
   {
-    let mymap = L.map('{{ .Route }}').setView([19.18, 72.82], 11);
+    let mymap = L.map('{{ .Route }}').setView([19.18, 72.82], 12);
     mymap.addControl(new L.Control.Fullscreen());
-    var OpenStreetMap_Mapnik = L.tileLayer(
-      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      {
-        maxZoom: 19,
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      }
-    );
+    var Stadia_OSMBright = L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
+      maxZoom: 17,
+      attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    });
     var Stamen_Watercolor = L.tileLayer(
       'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}',
       {
@@ -30,8 +26,9 @@
         ext: 'png',
       }
     );
-    Stamen_Watercolor.addTo(mymap);
-    Stamen_TerrainLabels.addTo(mymap);
+    {{/*  Stamen_Watercolor.addTo(mymap);  */}}
+    {{/*  Stamen_TerrainLabels.addTo(mymap);  */}}
+    Stadia_OSMBright.addTo(mymap);
     let gpx = '{{ .Route }}.gpx'; // URL to your GPX file or the GPX itself
     new L.GPX(gpx, {
       async: true,
@@ -41,7 +38,7 @@
         startIconUrl: '/img/start.png',
       },
       polyline_options: {
-        color: 'darkslateblue',
+        color: '#0096FF',
         opacity: 0.95,
         weight: 4,
         lineCap: 'round',
