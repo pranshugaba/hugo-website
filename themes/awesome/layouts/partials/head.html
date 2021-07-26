@@ -9,14 +9,9 @@
 {{ end -}}
   <link rel="icon" type="image/png" href="/icon.png" />
   <link rel="stylesheet" href="/css/main.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.6.1/css/ol.css" type="text/css">
-  <style>
-    .map {
-      height: 400px;
-      width: 100%;
-    }
-  </style>
-  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.6.1/build/ol.js"></script>
+  {{ if .Params.map }}
+    {{ partial "helpers/maphead" . }}
+  {{ end }}
 
   {{ if .Params.math }}
     {{ partial "helpers/katex.html" . }}
