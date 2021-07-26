@@ -339,6 +339,7 @@ a:focus-visible {
 
 button {
   all: unset;
+  padding: 0.1rem;
   outline: none;
   transition: outline 0.1s ease-out;
 }
@@ -470,7 +471,7 @@ blockquote {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: baseline;
   gap: 1rem;
 }
 .footer a {
@@ -991,9 +992,10 @@ thead {
 
 .leaflet-map {
   width: 100%;
-  height: clamp(16rem, 80vh, 32rem);
+  height: clamp(16rem, 72vh, 32rem);
   border-radius: 0.5rem;
   border: 0.15rem solid var(--fg);
+  overflow: hidden;
 }
 
 .home__pager {

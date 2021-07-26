@@ -17,24 +17,19 @@
       {
         attribution:
           'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        minZoom: 4,
-        maxZoom: 16,
+        minZoom: 3,
+        maxZoom: 15,
         ext: 'jpg',
       }
     );
     var Stamen_TerrainLabels = L.tileLayer(
       'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-labels/{z}/{x}/{y}{r}.{ext}',
       {
-        minZoom: 4,
-        maxZoom: 16,
+        minZoom: 3,
+        maxZoom: 15,
         ext: 'png',
       }
     );
-    {
-      {
-        /*  OpenStreetMap_Mapnik.addTo(mymap);  */
-      }
-    }
     Stamen_Watercolor.addTo(mymap);
     Stamen_TerrainLabels.addTo(mymap);
     let gpx = '{{ .Route }}.gpx'; // URL to your GPX file or the GPX itself
@@ -46,9 +41,9 @@
         startIconUrl: '/img/start.png',
       },
       polyline_options: {
-        color: '#121212',
+        color: 'darkslateblue',
         opacity: 0.95,
-        weight: 3,
+        weight: 4,
         lineCap: 'round',
       },
     })
