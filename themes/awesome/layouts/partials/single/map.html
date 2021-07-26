@@ -1,49 +1,64 @@
-<div id="mapid"></div>
-<p id="routedistance"></p>
+<div id="{{ .Route }}" class="leaflet-map"></div>
+<p id="{{ .Route }}-distance"></p>
 <script>
-  let mymap = L.map('mapid').setView([9.18, 72.82], 11);
-  mymap.addControl(new L.Control.Fullscreen());
-  var Stamen_Watercolor = L.tileLayer(
-    'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}',
+  {
+    let mymap = L.map('{{ .Route }}').setView([19.18, 72.82], 11);
+    mymap.addControl(new L.Control.Fullscreen());
+    var OpenStreetMap_Mapnik = L.tileLayer(
+      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }
+    );
+    var Stamen_Watercolor = L.tileLayer(
+      'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}',
+      {
+        attribution:
+          'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        minZoom: 4,
+        maxZoom: 16,
+        ext: 'jpg',
+      }
+    );
+    var Stamen_TerrainLabels = L.tileLayer(
+      'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-labels/{z}/{x}/{y}{r}.{ext}',
+      {
+        minZoom: 4,
+        maxZoom: 16,
+        ext: 'png',
+      }
+    );
     {
-      attribution:
-        'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      minZoom: 4,
-      maxZoom: 16,
-      ext: 'jpg',
+      {
+        /*  OpenStreetMap_Mapnik.addTo(mymap);  */
+      }
     }
-  );
-  var Stamen_TerrainLabels = L.tileLayer(
-    'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-labels/{z}/{x}/{y}{r}.{ext}',
-    {
-      minZoom: 4,
-      maxZoom: 16,
-      ext: 'png',
-    }
-  );
-  Stamen_Watercolor.addTo(mymap);
-  Stamen_TerrainLabels.addTo(mymap);
-  let gpx = '/day1.gpx'; // URL to your GPX file or the GPX itself
-  new L.GPX(gpx, {
-    async: true,
-    marker_options: {
-      shadowUrl: '/img/shadow.png',
-      endIconUrl: '/img/end.png',
-      startIconUrl: '/img/start.png',
-    },
-    polyline_options: {
-      color: '#121212',
-      opacity: 0.95,
-      weight: 3,
-      lineCap: 'round',
-    },
-  })
-    .on('loaded', function (e) {
-      mymap.fitBounds(e.target.getBounds());
-      let distance = e.target.get_distance() / 1000;
-      document.getElementById(
-        'routedistance'
-      ).innerText = `Distance: ${parseFloat(distance.toPrecision(3))} km`;
+    Stamen_Watercolor.addTo(mymap);
+    Stamen_TerrainLabels.addTo(mymap);
+    let gpx = '{{ .Route }}.gpx'; // URL to your GPX file or the GPX itself
+    new L.GPX(gpx, {
+      async: true,
+      marker_options: {
+        shadowUrl: '/img/shadow.png',
+        endIconUrl: '/img/end.png',
+        startIconUrl: '/img/start.png',
+      },
+      polyline_options: {
+        color: '#121212',
+        opacity: 0.95,
+        weight: 3,
+        lineCap: 'round',
+      },
     })
-    .addTo(mymap);
+      .on('loaded', function (e) {
+        mymap.fitBounds(e.target.getBounds());
+        let distance = e.target.get_distance() / 1000;
+        document.getElementById(
+          '{{ .Route }}-distance'
+        ).innerText = `Distance: ${parseFloat(distance.toPrecision(3))} km`;
+      })
+      .addTo(mymap);
+  }
 </script>

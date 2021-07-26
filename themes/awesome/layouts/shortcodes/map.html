@@ -1,2 +1,3 @@
-<p>A map</p>
-{{ partial "single/map" . }}
+{{ $routeName := .Get 0 }}
+{{/*  <p class="{{ $routeName }}">A map of {{ $routeName }}</p>  */}}
+{{ partial "single/map" (dict "Context" . "Route" $routeName) }}
