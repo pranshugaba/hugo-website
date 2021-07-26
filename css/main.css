@@ -1037,7 +1037,7 @@ thead {
   margin-bottom: 2.5rem;
 }
 .page__tags {
-  margin-top: 2rem;
+  margin-top: 5rem;
   display: flex;
   gap: 0.5rem;
   font-size: smaller;
@@ -1057,18 +1057,14 @@ thead {
   border-radius: 0.25rem;
 }
 .page__nav {
-  margin-top: 3rem;
+  margin-top: 1rem;
   line-height: 1.75;
 }
 .page__prevnext {
   border-top: 2px solid var(--fg);
-}
-@media (min-width: 640px) {
-  .page__prevnext {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-  }
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
 }
 .page__prev, .page__next {
   margin-top: 1.5rem;
@@ -1080,10 +1076,6 @@ thead {
   .page__prev, .page__next {
     max-width: 23ch;
   }
-}
-.page__prev a, .page__next a {
-  display: flex;
-  gap: 0.5ch;
 }
 .page__next {
   margin-left: auto;
