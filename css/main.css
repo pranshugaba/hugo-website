@@ -989,7 +989,7 @@ thead {
   font-weight: 700;
 }
 
-#mapid {
+.leaflet-map {
   width: 100%;
   height: clamp(16rem, 80vh, 32rem);
   border-radius: 0.5rem;
