@@ -338,16 +338,7 @@ a:focus-visible {
 }
 
 button {
-  background-color: var(--bg);
-  color: var(--fg);
-  font-size: 1rem;
-  padding: 0;
-  margin: 0;
-  border: none;
-  border-radius: 0.2em;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  all: unset;
   outline: none;
   transition: outline 0.1s ease-out;
 }
@@ -874,7 +865,7 @@ h4 code {
     width: 4.5ch;
     padding: 0 0.2rem;
     margin-top: 0.5rem;
-    border-radius: 0.25rem;
+    border-radius: 0.4rem;
     font-size: smaller;
     border: 2px solid var(--fg);
     grid-area: dt;

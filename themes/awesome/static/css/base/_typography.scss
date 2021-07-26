@@ -88,14 +88,7 @@ a {
 }
 
 button {
-  background-color: var(--bg);
-  color: var(--fg);
-  font-size: 1rem;
-  padding: 0;
-  margin: 0;
-  border: none;
-  border-radius: 0.2em;
-  height: min-content;
+  all: unset;
   outline: none;
   transition: outline 0.1s ease-out;
   &:hover{
