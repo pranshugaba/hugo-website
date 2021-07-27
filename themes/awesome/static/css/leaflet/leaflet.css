@@ -262,7 +262,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   outline: 0;
 }
 .leaflet-container a {
-  color: #0078a8;
+  color: #121212;
 }
 .leaflet-container a.leaflet-active {
   outline: 2px solid orange;
@@ -274,7 +274,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 /* general typography */
 .leaflet-container {
-  font: 15px/1.5 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font: 15px/1.5 "Inter", 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 /* general toolbar styles */
@@ -406,7 +406,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 /* attribution and scale controls */
 
 .leaflet-container .leaflet-control-attribution {
-  background: papayawhip;
+  background: rgba(255, 239, 213, 0.95);
   border-top-left-radius: 4px;
   margin: 0;
 }
@@ -422,10 +422,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   text-decoration: underline;
 }
 .leaflet-right.leaflet-bottom {
-  max-width: 65%;
+  max-width: 60%;
 }
 .leaflet-container .leaflet-control-attribution {
-  font-size: 11px;
+  font-size: 12px;
 }
 .leaflet-left .leaflet-control-scale {
   margin-left: 5px;

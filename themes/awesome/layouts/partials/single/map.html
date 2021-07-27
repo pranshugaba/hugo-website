@@ -34,9 +34,9 @@
       }).setView(coords, zoomLevel);
 
       const ATTR =
-        '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, ' +
-        '&copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> ' +
-        '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+        '&copy; <a href="https://stadiamaps.com/" target="_blank" rel="noopener">Stadia Maps</a>, ' +
+        '&copy; <a href="https://openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> ' +
+        '&copy; <a href="http://openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a>';
       const TILES_URL =
         'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png';
       let Stadia_OSMBright = L.tileLayer(TILES_URL, {
