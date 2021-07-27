@@ -6,7 +6,7 @@ summary: "My first trip on my new road bike."
 date: 2021-07-23T13:00:00+05:30
 lastmod: 2021-07-23T13:00:00+05:30
 
-tags: []
+tags: ['cycling']
 
 math: false
 map: true

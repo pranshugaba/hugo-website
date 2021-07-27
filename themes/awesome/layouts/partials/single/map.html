@@ -1,86 +1,141 @@
-<div id="{{ .Route }}" class="leaflet-map"></div>
-<p id="{{ .Route }}-distance"></p>
+<div>
+  <div id="{{ .Route }}" class="leaflet-map"></div>
+  <div class="route__metadata">
+    <div class="route__name">
+      <p id="{{ .Route }}__name"></p>
+      <p id="{{ .Route }}__type"></p>
+    </div>
+    <div class="route__stats">
+      <p id="{{ .Route }}__distance"></p>
+      <p id="{{ .Route }}__duration"></p>
+      <p id="{{ .Route }}__speed"></p>
+    </div>
+  </div>
+</div>
+
 {{ $images := .Context.Page.Resources.Match (printf "%s/*" .Route) }}
 <script>
-  {
-    let coords = [19.18, 72.82];
-    let zoomLevel = 12;
-    let mymap = L.map('{{ .Route }}', {
-      fullscreenControl: true,
-    }).setView(coords, zoomLevel);
+    {
+      let coords = [19.18, 72.82];
+      let zoomLevel = 12;
+      var corner1 = L.latLng(18.743, 73.394),
+      corner2 = L.latLng(19.470, 72.507),
+      bounds = L.latLngBounds(corner1, corner2);
+      let mymap = L.map('{{ .Route }}', {
+        fullscreenControl: true,
+        preferCanvas: true,
+        zoomSnap: 0.5,
+        zoomDelta: 0.5,
+        maxBounds: bounds,
+        maxBoundsViscosity: 0.85,
+      }).setView(coords, zoomLevel);
 
-    const ATTR =
-      '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, ' +
-      '&copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> ' +
-      '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-    const TILES_URL =
-      'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png';
-    let Stadia_OSMBright = L.tileLayer(TILES_URL, {
-      maxZoom: 17,
-      attribution: ATTR,
-    });
-    Stadia_OSMBright.addTo(mymap);
-
-    L.control.scale({ imperial: false }).addTo(mymap);
-
-    let gpx = '{{ .Route }}.gpx'; // URL to your GPX file or the GPX itself
-    new L.GPX(gpx, {
-      async: true,
-      marker_options: {
-        shadowUrl: '/img/shadow.png',
-        endIconUrl: '/img/end.png',
-        startIconUrl: '/img/start.png',
-      },
-      polyline_options: {
-        color: '#0096FF',
-        opacity: 0.9,
-        weight: 3,
-        lineCap: 'round',
-      },
-    })
-      .on('loaded', function (e) {
-        mymap.fitBounds(e.target.getBounds());
-        let distance = e.target.get_distance() / 1000;
-        document.getElementById(
-          '{{ .Route }}-distance'
-        ).innerText = `Distance: ${parseFloat(distance.toPrecision(3))} km`;
-      })
-      .addTo(mymap);
-
-    {{ with $images}}
-      var photos = [
-        {{ range . }}
-          {{ $thumbnail := .Fill  "100x100" }}
-          {{ $big := .Resize "x640" }}
-          {
-            {{ with .Exif }}
-              lat: {{ .Lat }},
-              lng: {{ .Long }},
-              {{ if .Tags.ImageDescription }}
-                name: '{{ .Tags.ImageDescription }}',
-              {{ else }}
-                name: '',
-              {{ end }}
-            {{ end }}
-            url: '{{ $big.Permalink }}',
-            thumbnail:
-              '{{ $thumbnail.Permalink }}',
-          },
-        {{ end }}
-      ];
-
-      var photoLayer = L.photo.cluster().on('click', function (evt) {
-        var photo = evt.layer.photo;
-        var template = '<img src="{url}" /></a><p>{name}</p>';
-        evt.layer
-          .bindPopup(L.Util.template(template, photo), {
-            className: 'leaflet-popup-photo',
-            minWidth: 400,
-          })
-          .openPopup();
+      const ATTR =
+        '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, ' +
+        '&copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> ' +
+        '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+      const TILES_URL =
+        'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png';
+      let Stadia_OSMBright = L.tileLayer(TILES_URL, {
+        minZoom: 3,
+        maxZoom: 18,
+        attribution: ATTR,
       });
+      Stadia_OSMBright.addTo(mymap);
 
-      photoLayer.add(photos).addTo(mymap);
-    {{ end }}
-  }
+      L.control.scale({ imperial: false }).addTo(mymap);
+
+      let gpx = '{{ .Route }}.gpx'; // URL to your GPX file or the GPX itself
+      function roundToSigFigs(num, places = 3) {
+        return parseFloat(num.toPrecision(places));
+      }
+      new L.GPX(gpx, {
+        async: true,
+        marker_options: {
+          shadowUrl: '/img/shadow.png',
+          endIconUrl: '/img/enda.png',
+          startIconUrl: '/img/starta.png',
+          iconSize: [50, 50],
+          iconAnchor: [25, 48],
+        },
+        polyline_options: {
+          color: '#0096FF',
+          opacity: 0.9,
+          weight: 3,
+          lineCap: 'round',
+        },
+      })
+        .on('loaded', function (e) {
+          mymap.fitBounds(e.target.getBounds(), {
+            padding: [20, 5],
+          });
+          console.log(e.target);
+          
+          let name = e.target.get_name();
+          document.getElementById(
+            '{{ .Route }}__name'
+          ).innerText = name;
+          
+          let ex_type = e.target.get_exercise_type();
+          document.getElementById(
+            '{{ .Route }}__type'
+          ).innerText = ex_type;
+          
+          let distance = e.target.get_distance() / 1000;
+          document.getElementById(
+            '{{ .Route }}__distance'
+          ).innerText = `Distance: ${roundToSigFigs(distance)} km`;
+         
+          let duration = e.target.get_duration() / 60000;
+          document.getElementById(
+            '{{ .Route }}__duration'
+          ).innerText = `Time: ${roundToSigFigs(duration)} minutes`;
+         
+          let speed = e.target.get_average_speed();
+          document.getElementById(
+            '{{ .Route }}__speed'
+          ).innerText = `Avg. Speed: ${roundToSigFigs(speed)} km/h`;
+          
+        })
+        .addTo(mymap);
+
+      {{ with $images}}
+        var photos = [
+          {{ range . }}
+            {{ $thumbnail := .Fill  "100x100" }}
+            {{ $big := .Resize "x540" }}
+            {
+              {{ with .Exif }}
+                lat: {{ .Lat }},
+                lng: {{ .Long }},
+                {{ if .Tags.ImageDescription }}
+                  name: '{{ .Tags.ImageDescription }}',
+                {{ else }}
+                  name: '',
+                {{ end }}
+              {{ end }}
+              url: '{{ $big.Permalink }}',
+              thumbnail:
+                '{{ $thumbnail.Permalink }}',
+            },
+          {{ end }}
+        ];
+
+        var photoLayer = L.photo.cluster().on('click', function (evt) {
+          var photo = evt.layer.photo;
+          var template = '<img src="{url}" /></a><p>{name}</p>';
+          evt.layer
+            .bindPopup(L.Util.template(template, photo), {
+              className: 'leaflet-popup-photo',
+              minWidth: 360,
+              maxWidth: 500,
+              maxHeight: 500,
+              autoPanPadding: [20, 20]
+            })
+            .openPopup();
+        });
+
+        photoLayer.add(photos).addTo(mymap);
+      {{ end }}
+    }
 </script>
