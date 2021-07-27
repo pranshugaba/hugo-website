@@ -14,7 +14,8 @@
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   padding-inline: 0.75rem;
-  padding-block: 1rem;
+  padding-block-start: 0.75rem;
+  padding-block-end: 0.5rem;
 }
 .route__name {
   display: flex;
@@ -34,7 +35,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
   row-gap: 0;
 }
 .route__stats p {

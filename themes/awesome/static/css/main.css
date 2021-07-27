@@ -190,12 +190,23 @@ figure .dark-image {
 figure figcaption {
   font-weight: 400;
   font-size: 0.75rem;
-  margin: 0.75rem auto;
+  margin: 0.5rem auto;
   line-height: 1.5;
 }
 
 .float-right {
   float: right;
+}
+
+.figure__gallery {
+  margin-block: 2rem;
+}
+.figure__gallery figcaption {
+  font-size: 1rem;
+  -webkit-margin-before: 0.5rem;
+          margin-block-start: 0.5rem;
+  -webkit-margin-after: 2.5rem;
+          margin-block-end: 2.5rem;
 }
 
 @font-face {
@@ -1006,7 +1017,10 @@ thead {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   padding-inline: 0.75rem;
-  padding-block: 1rem;
+  -webkit-padding-before: 0.75rem;
+          padding-block-start: 0.75rem;
+  -webkit-padding-after: 0.5rem;
+          padding-block-end: 0.5rem;
 }
 
 .route__name {
@@ -1027,7 +1041,7 @@ thead {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
   row-gap: 0;
 }
 

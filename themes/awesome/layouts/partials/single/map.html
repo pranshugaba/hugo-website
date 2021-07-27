@@ -2,7 +2,10 @@
   <div id="{{ .Route }}" class="leaflet-map"></div>
   <div class="route__metadata">
     <div class="route__name">
-      <p id="{{ .Route }}__name"></p>
+      <div>
+        <p id="{{ .Route }}__name"></p>
+        <p id="{{ .Route }}__start_time"></p>
+      </div>
       <p id="{{ .Route }}__type"></p>
     </div>
     <div class="route__stats">
@@ -49,6 +52,19 @@
       function roundToSigFigs(num, places = 3) {
         return parseFloat(num.toPrecision(places));
       }
+      
+      const defaultOptions = {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        timeZone: "Asia/Kolkata"
+      };
+      function formatDate(date, options = defaultOptions) {
+        return new Intl.DateTimeFormat("en", options).format(date);
+      }
+
       new L.GPX(gpx, {
         async: true,
         marker_options: {
@@ -86,10 +102,15 @@
             '{{ .Route }}__distance'
           ).innerText = `Distance: ${roundToSigFigs(distance)} km`;
          
+          let start_time2 = new Date(e.target.get_time());
+          document.getElementById(
+            '{{ .Route }}__start_time'
+          ).innerText = formatDate(start_time2);
+
           let duration = e.target.get_duration() / 60000;
           document.getElementById(
             '{{ .Route }}__duration'
-          ).innerText = `Time: ${roundToSigFigs(duration)} minutes`;
+          ).innerText = `Duration: ${roundToSigFigs(duration)} minutes`;
          
           let speed = e.target.get_average_speed();
           document.getElementById(
@@ -128,8 +149,7 @@
             .bindPopup(L.Util.template(template, photo), {
               className: 'leaflet-popup-photo',
               minWidth: 360,
-              maxWidth: 500,
-              maxHeight: 500,
+              maxHeight: 540,
               autoPanPadding: [20, 20]
             })
             .openPopup();

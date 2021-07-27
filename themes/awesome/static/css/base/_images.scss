@@ -68,11 +68,20 @@ figure {
   figcaption {
     font-weight: 400;
     font-size: 0.75rem;
-    margin: 0.75rem auto;
+    margin: 0.5rem auto;
     line-height: 1.5;
   }
 }
 
 .float-right {
   float: right;
+}
+
+.figure__gallery {
+  margin-block: 2rem;
+  figcaption {
+    font-size: 1rem;
+    margin-block-start: 0.5rem;
+    margin-block-end: 2.5rem;
+  }
 }

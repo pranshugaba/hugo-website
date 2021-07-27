@@ -114,6 +114,9 @@ var L = L || require('leaflet'),
   get_exercise_type: function() {
     return this._info.type;
   },
+  get_time: function() {
+    return this._info.time;
+  },
   get_moving_pace: function () {
     return this.get_moving_time() / this.m_to_km(this.get_distance());
   },
@@ -309,6 +312,8 @@ var L = L || require('leaflet'),
     0 < o.length && (this._info.copyright = o[0].textContent);
     o = t.getElementsByTagName('type');
     0 < o.length && (this._info.type = o[0].textContent);
+    o = t.getElementsByTagName('time');
+    0 < o.length && (this._info.time = o[0].textContent);
     o = e.gpx_options.parseElements;
     if (-1 < o.indexOf('route'))
       for (var a = t.getElementsByTagName('rte'), r = 0; r < a.length; r++)

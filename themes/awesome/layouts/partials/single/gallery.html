@@ -1,0 +1,27 @@
+{{ $images := .Context.Page.Resources.Match (printf "%s/*" .Directory) }}
+
+{{ with $images}}
+    {{ range . }}
+    <figure class="figure__gallery">
+        {{ $big := "" }}
+        {{ if lt .Height .Width }}
+        {{ $big = .Resize "1080x" }}
+        {{ else }}
+        {{ $big = .Resize "x1080" }}
+        {{ end }}
+        <img
+        src="{{ $big.Permalink }}"
+        alt="{{ .Title }}"
+        height="{{ $big.Height }}"
+        width="{{ $big.Width }}"
+        />
+        {{ with .Exif }}
+            {{ with .Tags.ImageDescription }}
+                <figcaption>
+                {{ . }}
+                </figcaption>
+            {{ end }}
+        {{ end }}
+    </figure>
+    {{ end }}
+{{ end }}

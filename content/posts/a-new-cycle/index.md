@@ -20,3 +20,7 @@ I ordered a road bike online and it was delivered in Decathlon Bandra. I cycled 
 I clicked some interesting pictures on the way. Check out the route and the pictures on the map below. 
 
 {{< map "decathlon" >}}
+
+Some images that I took on the way. 
+
+{{< gallery "decathlon" >}}
