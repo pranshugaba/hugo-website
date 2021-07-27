@@ -1,4 +1,4 @@
-{{ $img := (.Resources.ByType "image").GetMatch "*featured*" }} 
+{{ $img := (.Resources.ByType "image").GetMatch "*featured*[png,jpeg,jpg,webp]" }} 
 {{ with $img }}
   {{ $orientation := 1 }}
   {{ with .Exif }}

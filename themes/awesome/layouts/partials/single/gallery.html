@@ -1,4 +1,4 @@
-{{ $images := .Context.Page.Resources.Match (printf "%s/*" .Directory) }}
+{{ $images := (.Context.Page.Resources.Match (printf "%s/*.{jpg,jpeg,png}" .Directory)) }}
 
 {{ with $images}}
     {{ range . }}
@@ -11,17 +11,20 @@
         {{ end }}
         <img
         src="{{ $big.Permalink }}"
-        alt="{{ .Title }}"
+        {{ $altFile := (printf "%s%s" .RelPermalink ".alt")}}
+        alt="{{ $altFile | readFile }}"
         height="{{ $big.Height }}"
         width="{{ $big.Width }}"
         />
-        {{ with .Exif }}
-            {{ with .Tags.ImageDescription }}
-                <figcaption>
-                {{ . }}
-                </figcaption>
-            {{ end }}
-        {{ end }}
+        <figcaption>
+            {{ $captionFile := (printf "%s%s" .RelPermalink ".caption")}}
+            {{ $caption := $captionFile | readFile | markdownify }}
+                {{ if not ( findRE "<[h|p][^>]*>" $caption ) }}
+                    <p>{{ $caption }}</p>
+                {{ else }}
+                    {{ $caption }}
+                {{ end }}
+        </figcaption>
     </figure>
     {{ end }}
 {{ end }}

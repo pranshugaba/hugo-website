@@ -15,12 +15,12 @@ draft: false
 featured: false
 ---
 
-I ordered a road bike online and it was delivered in Decathlon Bandra. I cycled back home to Kandivali. 
+I ordered a road bike online from Decathlon, and it was available for pickup from Decathlon Bandra. I cycled back home to Kandivali. 
 
-I clicked some interesting pictures on the way. Check out the route and the pictures on the map below. 
+Here's the route that I took, as well as some pictures that I clicked on the way. 
 
 {{< map "decathlon" >}}
 
-Some images that I took on the way. 
+Here's a gallery of the same pictures as on the map, but larger and with captions.
 
 {{< gallery "decathlon" >}}

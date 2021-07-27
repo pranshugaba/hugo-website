@@ -16,7 +16,7 @@
   </div>
 </div>
 
-{{ $images := .Context.Page.Resources.Match (printf "%s/*" .Route) }}
+{{ $images := .Context.Page.Resources.Match (printf "%s/*.{jpg,jpeg,png}" .Route) }}
 <script>
     {
       let coords = [19.18, 72.82];
@@ -106,9 +106,9 @@
           iconAnchor: [25, 48],
         },
         polyline_options: {
-          color: '#0096FF',
+          color: 'dodgerblue',
           opacity: 0.9,
-          weight: 3,
+          weight: 4,
           lineCap: 'round',
         },
       })
@@ -137,20 +137,24 @@
          
 
           let duration = e.target.get_duration() / 60000;
-          document.getElementById(
-            '{{ .Route }}__duration'
-          ).innerText = `Duration: ${formatNumber(duration)} minutes`;
+          if (duration) {
+            document.getElementById(
+              '{{ .Route }}__duration'
+            ).innerText = `Duration: ${formatNumber(duration)} minutes`;
          
-          let speed = e.target.get_average_speed();
-          document.getElementById(
-            '{{ .Route }}__speed'
-          ).innerText = `Avg. Speed: ${formatNumber(speed)} km/h`;
+            let speed = e.target.get_average_speed();
+            document.getElementById(
+              '{{ .Route }}__speed'
+            ).innerText = `Avg. Speed: ${formatNumber(speed)} km/h`;
+          }
           
           let start_time = new Date(e.target.get_time());
           let formatted_time = formatDate(start_time);
-          document.getElementById(
-            '{{ .Route }}__start-time'
-          ).innerText = formatted_time;
+          if (formatted_time) {
+            document.getElementById(
+              '{{ .Route }}__start-time'
+            ).innerText = formatted_time;
+          }
         })
         .addTo(mymap);
 
@@ -158,7 +162,7 @@
         var photos = [
           {{ range . }}
             {{ $thumbnail := .Fill  "100x100" }}
-            {{ $big := .Resize "x540" }}
+            {{ $big := .Resize "x480" }}
             {
               {{ with .Exif }}
                 lat: {{ .Lat }},
@@ -183,7 +187,6 @@
             .bindPopup(L.Util.template(template, photo), {
               className: 'leaflet-popup-photo',
               minWidth: 360,
-              maxHeight: 540,
               autoPanPadding: [20, 20]
             })
             .openPopup();
