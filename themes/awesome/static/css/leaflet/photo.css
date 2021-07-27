@@ -59,7 +59,8 @@
   border-radius: 8px;
 }
 .leaflet-popup-photo .leaflet-popup-tip {
-  background: white;
+  background-color: papayawhip;
+  border-radius: 3px;
 }
 .leaflet-popup-photo img,
 .leaflet-popup-photo video {

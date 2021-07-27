@@ -258,7 +258,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 /* visual tweaks */
 
 .leaflet-container {
-  background: #ddd;
+  background: papayawhip;
   outline: 0;
 }
 .leaflet-container a {
@@ -274,7 +274,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 /* general typography */
 .leaflet-container {
-  font: 12px/1.5 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font: 15px/1.5 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 /* general toolbar styles */
@@ -285,7 +285,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 .leaflet-bar a,
 .leaflet-bar a:hover {
-  background-color: #fff;
+  background-color: papayawhip;
   border-bottom: 1px solid #ccc;
   width: 26px;
   height: 26px;
@@ -302,7 +302,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   display: block;
 }
 .leaflet-bar a:hover {
-  background-color: #f4f4f4;
+  background-color: hsl(37, 50%, 85%);
 }
 .leaflet-bar a:first-child {
   border-top-left-radius: 4px;
@@ -400,14 +400,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 /* Default icon URLs */
 .leaflet-default-icon-path {
-  background-image: url(images/marker-icon.png);
+  background-image: url('/img/leaflet/marker-icon.png');
 }
 
 /* attribution and scale controls */
 
 .leaflet-container .leaflet-control-attribution {
-  background: #fff;
-  background: rgba(255, 255, 255, 0.7);
+  background: papayawhip;
+  border-top-left-radius: 4px;
   margin: 0;
 }
 .leaflet-control-attribution,
@@ -421,8 +421,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-control-attribution a:hover {
   text-decoration: underline;
 }
-.leaflet-container .leaflet-control-attribution,
-.leaflet-container .leaflet-control-scale {
+.leaflet-right.leaflet-bottom {
+  max-width: 65%;
+}
+.leaflet-container .leaflet-control-attribution {
   font-size: 11px;
 }
 .leaflet-left .leaflet-control-scale {
@@ -436,7 +438,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   border-top: none;
   line-height: 1.1;
   padding: 2px 5px 1px;
-  font-size: 11px;
+  font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
   -moz-box-sizing: border-box;
@@ -507,7 +509,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-  background: white;
+  background: papayawhip;
   color: #333;
   box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
 }
