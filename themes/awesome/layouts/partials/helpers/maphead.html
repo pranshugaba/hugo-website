@@ -1,9 +1,4 @@
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-  crossorigin=""
-/>
+<link rel="stylesheet" href="/css/leaflet/leaflet.css" />
 <!-- Make sure you put this AFTER Leaflet's CSS -->
 <script
   src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
@@ -13,10 +8,7 @@
 
 <!-- fullscreen button -->
 <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
-<link
-  href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css"
-  rel="stylesheet"
-/>
+<link href="/css/leaflet/fullscreen.css" rel="stylesheet" />
 
 <!-- gpx plugin -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.1/gpx.min.js"></script>
@@ -26,69 +18,9 @@
   src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"
   crossorigin=""
 ></script>
-<link
-  href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"
-  rel="stylesheet"
-  crossorigin=""
-/>
+<link href="/css/leaflet/markercluster.css" rel="stylesheet" />
 
 <!-- photos -->
-<script src="https://rawgit.com/turban/Leaflet.Photo/gh-pages/Leaflet.Photo.js"></script>
+<script src="/js/leaflet/photo.js"></script>
 
-<link
-  href="https://rawgit.com/turban/Leaflet.Photo/gh-pages/Leaflet.Photo.css"
-  rel="stylesheet"
-/>
-
-<style>
-  /* photo/video popup */
-  .leaflet-marker-photo {
-    border-radius: 4px;
-    border-width: 2.5px;
-  }
-  .leaflet-marker-photo > div {
-    border-radius: 4px;
-  }
-  .leaflet-marker-photo b {
-    box-sizing: content-box;
-    position: absolute;
-    top: -11px;
-    right: -11px;
-    font-weight: 600;
-  }
-  .leaflet-popup-photo a.leaflet-popup-close-button {
-    box-sizing: content-box;
-    top: -10px;
-    right: -10px;
-    background-color: #fff;
-    padding: 7px;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
-    color: #555;
-    font-size: 1rem;
-  }
-  .leaflet-popup-photo a.leaflet-popup-close-button:hover {
-    color: #333;
-    background-color: #eee;
-  }
-  .leaflet-popup-photo .leaflet-popup-content-wrapper {
-    padding: 6px;
-    border-radius: 4px;
-  }
-  .leaflet-popup-photo .leaflet-popup-content {
-    margin: 0;
-  }
-  .leaflet-popup-photo .leaflet-popup-tip {
-    background: white;
-  }
-  .leaflet-popup-photo img,
-  .leaflet-popup-photo video {
-    display: block;
-    width: 100%;
-  }
-  .leaflet-popup-photo p {
-    margin: 5px 0 0 0;
-  }
-</style>
+<link href="/css/leaflet/photo.css" rel="stylesheet" />
