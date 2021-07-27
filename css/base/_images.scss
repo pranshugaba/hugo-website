@@ -56,7 +56,7 @@ figure {
   .dark-mode & .light-image {
     display: none;
   }
-  
+
   .dark-image {
     display: none;
   }
@@ -78,10 +78,13 @@ figure {
 }
 
 .figure__gallery {
-  margin-block: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
   figcaption {
+    text-align: left;
     font-size: 1rem;
-    margin-block-start: 0.5rem;
-    margin-block-end: 2.5rem;
+  }
+  &:last-of-type {
+    border-bottom: none;
   }
 }
