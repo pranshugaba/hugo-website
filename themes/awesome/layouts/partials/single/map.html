@@ -4,7 +4,7 @@
     <div class="route__name">
       <div>
         <p id="{{ .Route }}__name"></p>
-        <p id="{{ .Route }}__start_time"></p>
+        <p id="{{ .Route }}__start-time"></p>
       </div>
       <p id="{{ .Route }}__type"></p>
     </div>
@@ -49,20 +49,51 @@
       L.control.scale({ imperial: false }).addTo(mymap);
 
       let gpx = '{{ .Route }}.gpx'; // URL to your GPX file or the GPX itself
-      function roundToSigFigs(num, places = 3) {
-        return parseFloat(num.toPrecision(places));
+      
+      function formatNumber (number, precision = 3) {
+        if (typeof number === 'undefined' || number === null) return ''
+      
+        if (number === 0) return '0'
+      
+        const roundedValue = round(precision, number)
+        const floorValue = Math.floor(roundedValue)
+      
+        const isInteger = Math.abs(floorValue - roundedValue) < Number.EPSILON
+      
+        const numberOfFloorDigits = String(floorValue).length
+        const numberOfDigits = String(roundedValue).length
+      
+        if (numberOfFloorDigits > precision) {
+          return String(floorValue)
+        } else {
+          const padding = isInteger ? precision - numberOfFloorDigits : precision - numberOfDigits + 1
+      
+          if (padding > 0) {
+            if (isInteger) {
+              return `${String(floorValue)}.${'0'.repeat(padding)}`
+            } else {
+              return `${String(roundedValue)}${'0'.repeat(padding)}`
+            }
+          } else {
+            return String(roundedValue)
+          }
+        }
       }
       
-      const defaultOptions = {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-        hour: "numeric",
-        minute: "numeric",
-        timeZone: "Asia/Kolkata"
-      };
-      function formatDate(date, options = defaultOptions) {
-        return new Intl.DateTimeFormat("en", options).format(date);
+      function round (precision, number) {
+        return parseFloat(number.toPrecision(precision))
+      }
+      
+      function formatDate(date) {
+        const options = {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          timeZone: "Asia/Kolkata"
+        };
+        return new Intl.DateTimeFormat("en-in", options).format(date);
       }
 
       new L.GPX(gpx, {
@@ -93,30 +124,33 @@
           ).innerText = name;
           
           let ex_type = e.target.get_exercise_type();
-          document.getElementById(
-            '{{ .Route }}__type'
-          ).innerText = ex_type;
+          if (ex_type){
+            document.getElementById(
+              '{{ .Route }}__type'
+            ).innerText = ex_type;
+          }
           
           let distance = e.target.get_distance() / 1000;
           document.getElementById(
             '{{ .Route }}__distance'
-          ).innerText = `Distance: ${roundToSigFigs(distance)} km`;
+          ).innerText = `Distance: ${formatNumber(distance)} km`;
          
-          let start_time2 = new Date(e.target.get_time());
-          document.getElementById(
-            '{{ .Route }}__start_time'
-          ).innerText = formatDate(start_time2);
 
           let duration = e.target.get_duration() / 60000;
           document.getElementById(
             '{{ .Route }}__duration'
-          ).innerText = `Duration: ${roundToSigFigs(duration)} minutes`;
+          ).innerText = `Duration: ${formatNumber(duration)} minutes`;
          
           let speed = e.target.get_average_speed();
           document.getElementById(
             '{{ .Route }}__speed'
-          ).innerText = `Avg. Speed: ${roundToSigFigs(speed)} km/h`;
+          ).innerText = `Avg. Speed: ${formatNumber(speed)} km/h`;
           
+          let start_time = new Date(e.target.get_time());
+          let formatted_time = formatDate(start_time);
+          document.getElementById(
+            '{{ .Route }}__start-time'
+          ).innerText = formatted_time;
         })
         .addTo(mymap);
 
@@ -159,3 +193,9 @@
       {{ end }}
     }
 </script>
+
+<style>
+  #{{ .Route }}__name {
+    font-weight: 600;
+  }
+</style>

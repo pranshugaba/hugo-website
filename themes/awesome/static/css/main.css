@@ -1028,8 +1028,10 @@ thead {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1.5rem;
-  row-gap: 0.5rem;
+  row-gap: 0;
   margin-block: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--fg);
 }
 
 .route__name p {
@@ -1046,7 +1048,7 @@ thead {
 }
 
 .route__stats p {
-  margin-block: 0.25rem;
+  margin-block: 0.2rem;
 }
 
 .home__pager {
