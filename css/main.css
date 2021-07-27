@@ -993,8 +993,46 @@ thead {
 .leaflet-map {
   width: 100%;
   height: clamp(16rem, 80vh, 32rem);
-  border-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
   border: 0.15rem solid var(--fg);
+}
+
+.route__metadata {
+  margin-block: 0.5rem;
+  margin-top: -10px;
+  border: 0.15rem solid var(--fg);
+  border-top: none;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding-inline: 0.75rem;
+  padding-block: 1rem;
+}
+
+.route__name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  row-gap: 0.5rem;
+  margin-block: 0.5rem;
+}
+
+.route__name p {
+  margin-block: 0;
+}
+
+.route__stats {
+  font-size: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  row-gap: 0;
+}
+
+.route__stats p {
+  margin-block: 0.25rem;
 }
 
 .home__pager {
@@ -1036,7 +1074,7 @@ thead {
   margin-bottom: 2.5rem;
 }
 .page__tags {
-  margin-top: 5rem;
+  margin-top: 7rem;
   display: flex;
   gap: 0.5rem;
   font-size: smaller;
