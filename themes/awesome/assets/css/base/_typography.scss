@@ -95,7 +95,7 @@ button {
   &:hover{
     text-decoration: underline;
   }
-  &:focus-visible {
+  &:focus{
     outline: 0.15em solid var(--fg);
     outline-offset: 0.2em;
   }

@@ -182,11 +182,12 @@
         var photoLayer = L.photo.cluster().on('click', function (evt) {
           var photo = evt.layer.photo;
           var template = '<img src="{url}" /></a><p>{name}</p>';
+          console.log("clickeddd");
           evt.layer
             .bindPopup(L.Util.template(template, photo), {
               className: 'leaflet-popup-photo',
               minWidth: 360,
-              autoPanPadding: [20, 20]
+              autoPanPadding: [20, 20],
             })
             .openPopup();
         });

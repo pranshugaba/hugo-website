@@ -283,7 +283,7 @@ button {
 button:hover {
   text-decoration: underline;
 }
-button:focus-visible {
+button:focus {
   outline: 0.15em solid var(--fg);
   outline-offset: 0.2em;
 }
@@ -1043,19 +1043,31 @@ thead {
 
 .gallery__figure {
   margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 4.5rem;
+  border: 2px solid var(--fg);
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.gallery__figure img {
+  border-radius: 0;
+  border: none;
+  vertical-align: middle;
 }
 .gallery__figure figcaption {
-  max-width: 60ch;
   text-align: left;
   font-size: 1rem;
 }
+.gallery__caption {
+  border-top: 2px solid var(--fg);
+  padding-inline: 0.5rem;
+}
 .gallery__metadata {
-  margin: 0.5rem;
   display: flex;
   justify-content: space-between;
+  border-bottom: 2px solid var(--fg);
+  padding: 0.5rem;
   gap: 1rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .gallery__metadata a {
   text-decoration: none;

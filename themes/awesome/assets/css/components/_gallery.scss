@@ -3,20 +3,32 @@
 .gallery {
   &__figure {
     margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 4.5rem;
+    border: 2px solid var(--fg);
+    overflow: hidden;
+    border-radius: 0.5rem;
+    img {
+      border-radius: 0;
+      border: none;
+      vertical-align: middle;
+    }
     figcaption {
-      max-width: 60ch;
       text-align: left;
       font-size: 1rem;
     }
   }
 
+  &__caption {
+    border-top: 2px solid var(--fg);
+    padding-inline: 0.5rem;
+  }
   &__metadata {
-    margin: 0.5rem;
     display: flex;
     justify-content: space-between;
+    border-bottom: 2px solid var(--fg);
+    padding: 0.5rem;
     gap: 1rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     & a {
       @include m.plain-link;
     }

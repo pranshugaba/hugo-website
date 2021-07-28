@@ -19,7 +19,7 @@
                     {{ end }}
                     {{ if .Lat }}
                     <div class="gallery__coords">
-                        <a href="https://www.openstreetmap.org/?mlat={{ .Lat }}&mlon={{ .Long }}#map=17/{{ .Lat }}/{{ .Long }}&layers=N" rel="noopener" target="_blank">({{ lang.NumFmt 3 .Lat }}°, {{ lang.NumFmt 3 .Long }}°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat={{ .Lat }}&mlon={{ .Long }}#map=16/{{ .Lat }}/{{ .Long }}&layers=N" rel="noopener" target="_blank">({{ lang.NumFmt 3 .Lat }}°, {{ lang.NumFmt 3 .Long }}°)</a> 
                     </div>
                     {{ end }}
                 </div>
@@ -32,15 +32,19 @@
         height="{{ $big.Height }}"
         width="{{ $big.Width }}"
         />
-        <figcaption>
-            {{ $captionFile := (printf "%s%s" .RelPermalink ".caption")}}
-            {{ $caption := $captionFile | readFile | markdownify }}
-                {{ if not ( findRE "<[h|p][^>]*>" $caption ) }}
-                    <p>{{ $caption }}</p>
-                {{ else }}
-                    {{ $caption }}
-                {{ end }}
-        </figcaption>
+        {{ $captionFile := (printf "%s%s" .RelPermalink ".caption")}}
+        {{ $caption := $captionFile | readFile | markdownify }}
+        {{ with $caption }}
+            <div class="gallery__caption">
+                <figcaption>
+                    {{ if not ( findRE "<[h|p][^>]*>" . ) }}
+                        <p>{{ . }}</p>
+                    {{ else }}
+                        {{ . }}
+                    {{ end }}
+                </figcaption>
+            </div>
+        {{ end }}
     </figure>
     {{ end }}
 {{ end }}

@@ -1,18 +1,20 @@
 {{ $leafletcss := resources.Get "/css/leaflet/leaflet.css" }}
 {{ $fullscreencss := resources.Get "/css/leaflet/fullscreen.css" }}
+{{ $gesturescss := resources.Get "/css/leaflet/gestures.css" }}
 {{ $markerclustercss := resources.Get "/css/leaflet/markercluster.css" }}
 {{ $photocss := resources.Get "/css/leaflet/photo.css" }}
 
-{{ $mapcss := slice $leafletcss $fullscreencss $markerclustercss $photocss | resources.Concat "/css/leaflet/map.css"}}
+{{ $mapcss := slice $leafletcss $fullscreencss $gesturescss $markerclustercss $photocss | resources.Concat "/css/leaflet/map.css"}}
 
 <link rel="stylesheet" href="{{ $mapcss.Permalink }}" />
 <!-- Make sure you put this AFTER Leaflet's CSS -->
-{{ $leafletjs := resources.Get "/js/leaflet/leaflet.js" }}
+{{ $leafletjs := resources.Get "/js/leaflet/leaflet-src.js" }}
 {{ $fullscreenjs := resources.Get "/js/leaflet/fullscreen.js" }}
 {{ $gpxjs := resources.Get "/js/leaflet/gpx.js" }}
+{{ $gesturesjs := resources.Get "/js/leaflet/gestures.js" }}
 {{ $markerclusterjs := resources.Get "/js/leaflet/markercluster.js" }}
 {{ $photojs := resources.Get "/js/leaflet/photo.js" }}
 
-{{ $mapjs := slice $leafletjs $fullscreenjs $gpxjs $markerclusterjs $photojs | resources.Concat "/js/leaflet/map.js"}}
+{{ $mapjs := slice $leafletjs $fullscreenjs $gesturesjs $gpxjs $markerclusterjs $photojs | resources.Concat "/js/leaflet/map.js"}}
 
 <script src="{{ $mapjs.Permalink }}"></script>

@@ -53,7 +53,8 @@ if (L.MarkerClusterGroup) {
   L.Photo.Cluster = L.MarkerClusterGroup.extend({
     options: {
       featureGroup: L.photo,
-      maxClusterRadius: 75,
+      maxClusterRadius: 100,
+      spiderfyOnMaxZoom: true,
       showCoverageOnHover: false,
       iconCreateFunction: function (cluster) {
         return new L.DivIcon(
