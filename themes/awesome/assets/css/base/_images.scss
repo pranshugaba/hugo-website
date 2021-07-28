@@ -78,13 +78,10 @@ figure {
 }
 
 .figure__gallery {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 4.5rem;
   figcaption {
+    max-width: 60ch;
     text-align: left;
     font-size: 1rem;
-  }
-  &:last-of-type {
-    border-bottom: none;
   }
 }

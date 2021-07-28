@@ -29,8 +29,6 @@
         preferCanvas: true,
         zoomSnap: 0.5,
         zoomDelta: 0.5,
-        maxBounds: bounds,
-        maxBoundsViscosity: 0.85,
       }).setView(coords, zoomLevel);
 
       const ATTR =
@@ -135,11 +133,12 @@
           ).innerText = `Distance: ${formatNumber(distance)} km`;
          
 
-          let duration = e.target.get_duration() / 60000;
+          let duration = e.target.get_duration();
+          let duration_string = e.target.get_duration_string(duration);
           if (duration) {
             document.getElementById(
               '{{ .Route }}__duration'
-            ).innerText = `Duration: ${formatNumber(duration)} minutes`;
+            ).innerText = `Duration: ${duration_string}`;
          
             let speed = e.target.get_average_speed();
             document.getElementById(

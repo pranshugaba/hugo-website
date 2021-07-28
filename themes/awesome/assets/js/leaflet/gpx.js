@@ -44,7 +44,7 @@ var L = L || require('leaflet'),
       this._init_info(),
       t && this._parse(t, e, this.options.async);
   },
-  get_duration_string: function (t, e) {
+  get_duration_string2: function (t, e) {
     var n = '';
     _DAY_IN_MILLIS <= t &&
       ((n += Math.floor(t / _DAY_IN_MILLIS) + 'd '), (t %= _DAY_IN_MILLIS)),
@@ -60,11 +60,30 @@ var L = L || require('leaflet'),
       (n += !e && 0 < t ? '.' + Math.round(1e3 * Math.floor(t)) / 1e3 : '"')
     );
   },
+  get_duration_string: function (t, e) {
+    let time = t;
+    let days = Math.floor(t / _DAY_IN_MILLIS);
+    t %= _DAY_IN_MILLIS;
+    let hours = Math.floor(t / _HOUR_IN_MILLIS);
+    t %= _HOUR_IN_MILLIS;
+    let minutes = Math.floor(t / _MINUTE_IN_MILLIS);
+    t %= _MINUTE_IN_MILLIS;
+    let seconds = Math.floor(t / 1000);
+    if (time >= _DAY_IN_MILLIS){
+      return days + "d " + hours + "h ";
+    } else if (time >= _HOUR_IN_MILLIS) {
+      return hours + "h " + minutes + "m ";
+    } else if (time > 0) {
+      return minutes + "m " + seconds + "s";
+    } else {
+      return "";
+    }
+  },
   get_duration_string_iso: function (t, e) {
     return this.get_duration_string(t, e).replace("'", ':').replace('"', '');
   },
-  to_miles: function (t) {
-    return t / 1.60934;
+  get_start_coords: function() {
+    return this._info.start_coords;
   },
   to_ft: function (t) {
     return 3.28084 * t;
@@ -258,6 +277,8 @@ var L = L || require('leaflet'),
     this._info = {
       name: null,
       length: 0,
+      start_coords: [0,0],
+      end_coords: [1,1],
       elevation: { gain: 0, loss: 0, max: 0, min: 1 / 0, _points: [] },
       hr: { avg: 0, _total: 0, _points: [] },
       duration: { start: null, end: null, moving: 0, total: 0 },

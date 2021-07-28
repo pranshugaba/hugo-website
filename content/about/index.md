@@ -4,15 +4,12 @@ subtitle: Hi, I am Pranshu!
 summary: A little bit about me and my website
 ---
 
-I am currently a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tifr.res.in/). Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in).
-My research interests include Automata Theory, Logic, Discrete Maths, and Algorithms.
+I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tifr.res.in/). Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in). My research interests include Automata Theory, Logic, Discrete Maths, and Algorithms.
 
-I write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}), and develop apps and games. 
-I also love playing chess, solving puzzles, swimming and cycling but not both at once.
+I write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}), and develop apps and games. I also love  photography, swimming and cycling but not both at once.
 
 {{< currently-reading >}}
 See [my reading list]({{< ref "/reads" >}}).
-
 
 ## About this site
 
@@ -31,7 +28,8 @@ There are currently
 
 - [{{< countposts poems >}} poems]({{< ref "/poems" >}}),
 - [{{< countposts posts >}} posts]({{< ref "/posts" >}}),
-- and [{{< countposts puzzles >}} puzzles]({{< ref "/puzzles" >}})
+- [{{< countposts puzzles >}} puzzles]({{< ref "/puzzles" >}}),
+- and [{{< countposts reviews >}} review]({{< ref "/reviews" >}}),
 
 on this website.
 

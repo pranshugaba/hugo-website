@@ -5,11 +5,11 @@
   {{ end }}
   {{ if .Date }}
     <div class="page__date">
-        {{ .Date.Format "January 2, 2006" }}
+        {{ .Date.Format "Monday, 2 January 2006" }}
         {{ if .Lastmod }}
           {{ if (gt .Lastmod .Date)}}
           <div class="page__lastmod">
-            Last updated on {{ .Lastmod.Format "January 2, 2006" }}
+            Last updated on {{ .Lastmod.Format "2 January 2006" }}
           </div>
           {{ end }}
         {{ end }}
@@ -25,48 +25,51 @@
   </div>
   {{ end }}
 
-  {{ $tags := .GetTerms "tags" }}
-  {{ with $tags }}
-    <ul class="page__tags">
-      {{ range . }}
-          <li><a href="{{ .Permalink }}">{{ .LinkTitle | humanize }}</a></li>
-      {{ end }}
-    </ul>
-  {{ end}}
-{{/*  
-  <div class="page__nav">
-    <div class="page__home">
-      <a href="/"><- home</a>
-    </div>
-    <div class="page__all">
+
+  {{ if .Section }}
+    {{ $tags := .GetTerms "tags" }}
+    <div class="page__navtags">
+      <ul class="page__tags">
+        {{ with $tags }}
+          {{ range . }}
+              <li><a href="{{ .Permalink }}">{{ .LinkTitle | humanize | lower }}</a></li>
+          {{ end }}
+        {{ end }}
+      </ul>
+
       {{ with .Section}}
-        <a href="/{{ . }}">all {{ . }} -></a>
+        <div class="page__all">
+          <a href="/{{ . }}">all {{ . }}</a>
+        </div>
       {{ end }}
-    </div>
-  </div>  */}}
+    </div> 
+  {{ end }}
 
   <div class="page__nav">
     {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
     {{ if (in .Site.Params.mainSections .Type) }}
         <div class="page__prevnext">
           <div class="page__prev">
-            {{with $pages.Prev . }}
-            <div><-</div>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-            {{end}}
+            {{ if $pages.Prev . }}
+              <div><-</div>
+              {{ with $pages.Prev . }}
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+              {{ end }}
+            {{ else }}
+              You have reached the oldest post!
+            {{ end }}
           </div>
           <div class="page__next">
-            {{with $pages.Next . }}
+            {{ if $pages.Next . }}
             <div>-></div>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
+              {{ with $pages.Next . }}
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+              {{ end }}
+            {{ else }}
+              You have reached the newest post!
             {{end}}
           </div>
         </div>
-        {{ with .Section}}
-          <div class="page__all">
-            <a href="/{{ . }}">↑ all {{ . }}</a>
-          </div>
-        {{ end }}
     {{ else }}
       <div class="page__home">
         <a href="/"><span><-</span> <span>home</span></a>
