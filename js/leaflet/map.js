@@ -9465,7 +9465,7 @@ if (L.MarkerClusterGroup) {
         );
       },
       icon: {
-        iconSize: [45, 45],
+        iconSize: [40, 40],
       },
     },
 
