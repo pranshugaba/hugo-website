@@ -407,15 +407,6 @@ figure figcaption {
   float: right;
 }
 
-.figure__gallery {
-  margin-bottom: 4.5rem;
-}
-.figure__gallery figcaption {
-  max-width: 60ch;
-  text-align: left;
-  font-size: 1rem;
-}
-
 @-webkit-keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -1038,7 +1029,7 @@ thead {
 }
 
 .route__stats {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1048,6 +1039,29 @@ thead {
 
 .route__stats p {
   margin-block: 0.2rem;
+}
+
+.gallery__figure {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.gallery__figure figcaption {
+  max-width: 60ch;
+  text-align: left;
+  font-size: 1rem;
+}
+.gallery__metadata {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+.gallery__metadata a {
+  text-decoration: none;
+}
+.gallery__metadata a:hover {
+  text-decoration: underline;
 }
 
 .home__pager {
@@ -1089,7 +1103,7 @@ thead {
   margin-bottom: 2.5rem;
 }
 .page__navtags {
-  margin-top: 7rem;
+  margin-top: 4rem;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -1099,7 +1113,7 @@ thead {
 .page__tags {
   display: flex;
   gap: 0.5rem;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   list-style: none;
   padding-left: 0;
 }
@@ -1115,8 +1129,14 @@ thead {
   border: 1.5px solid var(--fg);
   border-radius: 0.25rem;
 }
+.page__end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
 .page__all {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding: 0.25rem;
@@ -1134,13 +1154,11 @@ thead {
   line-height: 1.75;
 }
 .page__prevnext {
-  border: 2px solid var(--fg);
-  padding: 0.75rem;
-  border-radius: 0.5rem;
+  border-top: 2px solid var(--fg);
+  padding-top: 1rem;
   display: flex;
   gap: 1rem;
   justify-content: space-between;
-  background: linear-gradient(var(--fg), var(--fg)) no-repeat center/2px 100%;
 }
 .page__prev, .page__next {
   width: 50%;
@@ -1162,6 +1180,7 @@ thead {
   max-width: max-content;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 5rem;
 }
 @media (min-width: 640px) {
   .poems.page__content {

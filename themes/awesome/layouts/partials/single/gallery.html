@@ -1,13 +1,29 @@
 {{ $images := (.Context.Page.Resources.Match (printf "%s/*.{jpg,jpeg,png}" .Directory)) }}
-
+{{ $showCoords := .ShowCoords }}
 {{ with $images}}
     {{ range . }}
-    <figure class="figure__gallery">
+    <figure class="gallery__figure">
         {{ $big := "" }}
         {{ if lt .Height .Width }}
-        {{ $big = .Resize "1080x" }}
+        {{ $big = .Resize "1920x" }}
         {{ else }}
-        {{ $big = .Resize "x1080" }}
+        {{ $big = .Resize "x1920" }}
+        {{ end }}
+        {{ if $showCoords }}
+            {{ with .Exif }}
+                <div class="gallery__metadata">
+                    {{ with .Tags.DateTimeOriginal }}
+                        <div class="gallery__datetime">
+                            {{ dateFormat "2006-01-02 15:04" . }}
+                        </div>
+                    {{ end }}
+                    {{ if .Lat }}
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat={{ .Lat }}&mlon={{ .Long }}#map=17/{{ .Lat }}/{{ .Long }}&layers=N" rel="noopener" target="_blank">({{ lang.NumFmt 3 .Lat }}°, {{ lang.NumFmt 3 .Long }}°)</a> 
+                    </div>
+                    {{ end }}
+                </div>
+            {{ end }}
         {{ end }}
         <img
         src="{{ $big.Permalink }}"

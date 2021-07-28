@@ -56,7 +56,9 @@
               <a href="{{ .Permalink }}">{{ .Title }}</a>
               {{ end }}
             {{ else }}
-              You have reached the oldest post!
+              <div class="page__end">
+                You have reached the oldest post!
+              </div>
             {{ end }}
           </div>
           <div class="page__next">
@@ -66,7 +68,9 @@
               <a href="{{ .Permalink }}">{{ .Title }}</a>
               {{ end }}
             {{ else }}
-              You have reached the newest post!
+              <div class="page__end">
+                You have reached the newest post!
+              </div>
             {{end}}
           </div>
         </div>

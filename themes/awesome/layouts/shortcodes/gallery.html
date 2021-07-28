@@ -1,2 +1,6 @@
-{{ $dir := .Get 0 }}
-{{ partial "single/gallery" (dict "Context" . "Directory" $dir) }}
+{{ $dir := .Get "dir" }}
+{{ $showCoords := false }}
+{{ with .Get "showCoords" }}
+    {{ $showCoords = . }}
+{{ end }}
+{{ partial "single/gallery" (dict "Context" . "Directory" $dir "ShowCoords"  $showCoords) }}

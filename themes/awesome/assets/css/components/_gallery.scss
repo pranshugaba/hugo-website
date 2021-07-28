@@ -1,0 +1,24 @@
+@use "../abstracts/mixins" as m;
+
+.gallery {
+  &__figure {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    figcaption {
+      max-width: 60ch;
+      text-align: left;
+      font-size: 1rem;
+    }
+  }
+
+  &__metadata {
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.8rem;
+    & a {
+      @include m.plain-link;
+    }
+  }
+}
