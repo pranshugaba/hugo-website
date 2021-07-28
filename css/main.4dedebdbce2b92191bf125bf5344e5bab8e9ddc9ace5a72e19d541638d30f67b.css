@@ -267,7 +267,7 @@ a, a:visited {
 a:hover {
   text-decoration: none;
 }
-a:focus-visible {
+a:focus {
   outline: 0.15em solid var(--fg);
   outline-offset: 0.125em;
   border-radius: 0.1em;
@@ -1123,6 +1123,10 @@ thead {
 .page__tags a:hover {
   text-decoration: underline;
 }
+.page__tags a:focus {
+  outline-offset: 0.5rem;
+  border-radius: 1px;
+}
 .page__tags li {
   line-height: 1;
   padding: 0.25rem;
@@ -1148,6 +1152,10 @@ thead {
 }
 .page__all a:hover {
   text-decoration: underline;
+}
+.page__all a:focus {
+  outline-offset: 0.5em;
+  border-radius: 1px;
 }
 .page__nav {
   margin-top: 1rem;
