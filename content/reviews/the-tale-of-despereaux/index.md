@@ -10,7 +10,7 @@ tags: ["book-review"]
 
 math: false
 
-draft: true
+draft: false
 featured: false
 ---
 
