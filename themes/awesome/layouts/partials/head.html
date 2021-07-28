@@ -8,7 +8,12 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
   <link rel="icon" type="image/png" href="/icon.png" />
-  <link rel="stylesheet" href="/css/main.css" />
+
+  {{ $style := resources.Get "/css/main.css" }}
+  {{ if hugo.IsProduction }}
+    {{ $style = $style | fingerprint }}
+  {{ end }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
   {{ if .Params.map }}
     {{ partial "helpers/maphead" . }}
   {{ end }}

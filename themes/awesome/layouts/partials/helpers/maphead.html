@@ -1,26 +1,18 @@
-<link rel="stylesheet" href="/css/leaflet/leaflet.css" />
+{{ $leafletcss := resources.Get "/css/leaflet/leaflet.css" }}
+{{ $fullscreencss := resources.Get "/css/leaflet/fullscreen.css" }}
+{{ $markerclustercss := resources.Get "/css/leaflet/markercluster.css" }}
+{{ $photocss := resources.Get "/css/leaflet/photo.css" }}
+
+{{ $mapcss := slice $leafletcss $fullscreencss $markerclustercss $photocss | resources.Concat "/css/leaflet/map.css"}}
+
+<link rel="stylesheet" href="{{ $mapcss.Permalink }}" />
 <!-- Make sure you put this AFTER Leaflet's CSS -->
-<script
-  src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-  crossorigin=""
-></script>
+{{ $leafletjs := resources.Get "/js/leaflet/leaflet.js" }}
+{{ $fullscreenjs := resources.Get "/js/leaflet/fullscreen.js" }}
+{{ $gpxjs := resources.Get "/js/leaflet/gpx.js" }}
+{{ $markerclusterjs := resources.Get "/js/leaflet/markercluster.js" }}
+{{ $photojs := resources.Get "/js/leaflet/photo.js" }}
 
-<!-- fullscreen button -->
-<script src="/js/leaflet/fullscreen.js"></script>
-<link href="/css/leaflet/fullscreen.css" rel="stylesheet" />
+{{ $mapjs := slice $leafletjs $fullscreenjs $gpxjs $markerclusterjs $photojs | resources.Concat "/js/leaflet/map.js"}}
 
-<!-- gpx plugin -->
-<script src="/js/leaflet/gpx.js"></script>
-
-<!-- markercluster -->
-<script
-  src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"
-  crossorigin=""
-></script>
-<link href="/css/leaflet/markercluster.css" rel="stylesheet" />
-
-<!-- photos -->
-<script src="/js/leaflet/photo.js"></script>
-
-<link href="/css/leaflet/photo.css" rel="stylesheet" />
+<script src="{{ $mapjs.Permalink }}"></script>

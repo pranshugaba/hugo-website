@@ -9,6 +9,7 @@ html {
 }
 
 h1 {
+  font-family: "Fraunces", serif;
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.25;
@@ -131,10 +132,10 @@ sub {
 }
 
 code {
-  font-family: 'JBMono';
+  font-family: 'JBMono', monospace;
   font-size: 0.9rem;
 }
-;
+
 figcaption {
   font-size: 0.8rem;
   max-width: 60ch;
