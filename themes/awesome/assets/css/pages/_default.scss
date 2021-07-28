@@ -52,6 +52,10 @@
 
     & a {
       @include m.plain-link;
+      &:focus {
+        outline-offset: 0.5rem;
+        border-radius: 1px;
+      }
     }
 
     & li {
@@ -77,6 +81,10 @@
     border-radius: 0.25rem;
     & a {
       @include m.plain-link;
+      &:focus {
+        outline-offset: 0.5em;
+        border-radius: 1px;
+      }
     }
   }
 

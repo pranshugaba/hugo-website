@@ -79,7 +79,7 @@ a {
   &:hover {
     text-decoration: none;
   }
-  &:focus-visible {
+  &:focus{
     outline: 0.15em solid var(--fg);
     outline-offset: 0.125em;
     border-radius: 0.1em;
