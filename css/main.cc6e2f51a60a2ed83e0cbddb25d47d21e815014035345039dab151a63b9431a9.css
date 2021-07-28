@@ -153,7 +153,7 @@ body {
 }
 @font-face {
   font-family: "Fraunces";
-  src: url("/fonts/Fraunces-Regular--latin_basic.woff2") format("woff2");
+  src: url("/fonts/Fraunces-Regular.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -161,7 +161,7 @@ body {
 }
 @font-face {
   font-family: "Fraunces";
-  src: url("/fonts/Fraunces-Italic--latin_basic.woff2") format("woff2");
+  src: url("/fonts/Fraunces-Italic.woff2") format("woff2");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
@@ -318,7 +318,7 @@ sub {
 }
 
 code {
-  font-family: "JBMono";
+  font-family: "JBMono", monospace;
   font-size: 0.9rem;
 }
 
@@ -408,15 +408,12 @@ figure figcaption {
 }
 
 .figure__gallery {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 4.5rem;
 }
 .figure__gallery figcaption {
+  max-width: 60ch;
   text-align: left;
   font-size: 1rem;
-}
-.figure__gallery:last-of-type {
-  border-bottom: none;
 }
 
 @-webkit-keyframes fadeInAnimation {
@@ -494,6 +491,7 @@ figure figcaption {
 }
 .footer #dark-mode-toggle {
   cursor: pointer;
+  border-radius: 0.15rem;
 }
 
 pre {
@@ -1040,7 +1038,7 @@ thead {
 }
 
 .route__stats {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1090,11 +1088,18 @@ thead {
   margin-top: 1rem;
   margin-bottom: 2.5rem;
 }
-.page__tags {
+.page__navtags {
   margin-top: 7rem;
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.page__tags {
+  display: flex;
   gap: 0.5rem;
-  font-size: smaller;
+  font-size: 0.85rem;
   list-style: none;
   padding-left: 0;
 }
@@ -1110,26 +1115,36 @@ thead {
   border: 1.5px solid var(--fg);
   border-radius: 0.25rem;
 }
+.page__all {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
+  border: 1.5px solid var(--fg);
+  border-radius: 0.25rem;
+}
+.page__all a {
+  text-decoration: none;
+}
+.page__all a:hover {
+  text-decoration: underline;
+}
 .page__nav {
   margin-top: 1rem;
   line-height: 1.75;
 }
 .page__prevnext {
-  border-top: 2px solid var(--fg);
+  border: 2px solid var(--fg);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: space-between;
+  background: linear-gradient(var(--fg), var(--fg)) no-repeat center/2px 100%;
 }
 .page__prev, .page__next {
-  margin-top: 1.5rem;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-@media (min-width: 640px) {
-  .page__prev, .page__next {
-    max-width: 23ch;
-  }
+  width: 50%;
+  max-width: 25ch;
 }
 .page__next {
   margin-left: auto;
@@ -1138,10 +1153,6 @@ thead {
 }
 .page__next a {
   justify-content: end;
-}
-.page__all {
-  margin-top: 2rem;
-  text-align: center;
 }
 
 .poems.page__content {
