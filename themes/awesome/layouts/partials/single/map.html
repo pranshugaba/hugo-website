@@ -30,7 +30,6 @@
         zoomSnap: 0.5,
         zoomDelta: 0.5,
         scrollWheelZoom: false,
-        tap: false,
       }).setView(coords, zoomLevel);
 
       const ATTR =
@@ -158,44 +157,6 @@
           }
         })
         .addTo(mymap);
-
-      {{ with $images}}
-        var photos = [
-          {{ range . }}
-            {{ $thumbnail := .Fill  "100x100" }}
-            {{ $big := .Resize "x480" }}
-            {
-              {{ with .Exif }}
-                lat: {{ .Lat }},
-                lng: {{ .Long }},
-                {{ if .Tags.ImageDescription }}
-                  name: '{{ .Tags.ImageDescription }}',
-                {{ else }}
-                  name: '',
-                {{ end }}
-              {{ end }}
-              url: '{{ $big.Permalink }}',
-              thumbnail:
-                '{{ $thumbnail.Permalink }}',
-            },
-          {{ end }}
-        ];
-
-        var photoLayer = L.photo.cluster().on('click', function (evt) {
-          var photo = evt.layer.photo;
-          var template = '<img src="{url}" /></a><p>{name}</p>';
-          console.log("clickeddd");
-          evt.layer
-            .bindPopup(L.Util.template(template, photo), {
-              className: 'leaflet-popup-photo',
-              minWidth: 360,
-              autoPanPadding: [20, 20],
-            })
-            .openPopup();
-        });
-
-        photoLayer.add(photos).addTo(mymap);
-      {{ end }}
     }
 </script>
 

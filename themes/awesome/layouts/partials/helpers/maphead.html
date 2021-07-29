@@ -3,8 +3,9 @@
 {{ $gesturescss := resources.Get "/css/leaflet/gestures.css" }}
 {{ $markerclustercss := resources.Get "/css/leaflet/markercluster.css" }}
 {{ $photocss := resources.Get "/css/leaflet/photo.css" }}
+{{ $distancecss := resources.Get "/css/leaflet/distance-markers.css" }}
 
-{{ $mapcss := slice $leafletcss $fullscreencss $gesturescss | resources.Concat "/css/leaflet/map.css"}}
+{{ $mapcss := slice $leafletcss $fullscreencss | resources.Concat "/css/leaflet/map.css"}}
 
 <link rel="stylesheet" href="{{ $mapcss.Permalink }}" />
 <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -14,7 +15,9 @@
 {{ $gesturesjs := resources.Get "/js/leaflet/gestures.js" }}
 {{ $markerclusterjs := resources.Get "/js/leaflet/markercluster.js" }}
 {{ $photojs := resources.Get "/js/leaflet/photo.js" }}
+{{ $geometryjs := resources.Get "/js/leaflet/geometry.js" }}
+{{ $distancejs := resources.Get "/js/leaflet/distance-markers.js" }}
 
-{{ $mapjs := slice $leafletjs $fullscreenjs $gesturesjs $gpxjs | resources.Concat "/js/leaflet/map.js"}}
+{{ $mapjs := slice $leafletjs $fullscreenjs $gpxjs | resources.Concat "/js/leaflet/map.js"}}
 
 <script src="{{ $mapjs.Permalink }}"></script>

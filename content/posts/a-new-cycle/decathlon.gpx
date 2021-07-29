@@ -13,7 +13,7 @@
       <trkseg>
       <trkpt lat="19.06345" lon="72.83511">
          <name>Start</name>
-         <time>2021-07-23T09:46:00+05:30</time>
+         <time>2021-07-23T09:47:00+05:30</time>
       </trkpt>
       <trkpt lat="19.06367" lon="72.83501">
       </trkpt>
@@ -1185,7 +1185,7 @@
       </trkpt>
       <trkpt lat="19.20723" lon="72.83478">
          <name>End</name>
-         <time>2021-07-23T12:42:00+05:30</time>
+         <time>2021-07-23T12:34:00+05:30</time>
       </trkpt>
       </trkseg>
    </trk>
