@@ -1059,11 +1059,17 @@ thead {
 }
 .gallery__caption {
   border-top: 2px solid var(--fg);
-  padding-inline: 0.5rem;
+  padding-inline: 0.75rem;
+  padding-block: 0;
+}
+.gallery__caption p {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 .gallery__metadata {
   display: flex;
   justify-content: space-between;
+  line-height: 1.25;
   border-bottom: 2px solid var(--fg);
   padding: 0.5rem;
   gap: 1rem;
