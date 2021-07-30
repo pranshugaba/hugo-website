@@ -11,7 +11,7 @@ tags: ['cycling']
 map: true
 math: false
 
-draft: true
+draft: false
 featured: false
 ---
 
