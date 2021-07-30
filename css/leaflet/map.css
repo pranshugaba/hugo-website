@@ -258,7 +258,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 /* visual tweaks */
 
 .leaflet-container {
-  background: papayawhip;
+  background: var(--bg);
   outline: 0;
 }
 .leaflet-container a {
@@ -274,7 +274,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 /* general typography */
 .leaflet-container {
-  font: 15px/1.5 "Inter", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font: 15px/1.5 'Inter', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 /* general toolbar styles */
@@ -406,14 +406,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
 /* attribution and scale controls */
 
 .leaflet-container .leaflet-control-attribution {
-  background: rgba(255, 239, 213, 0.95);
   border-top-left-radius: 4px;
   margin: 0;
 }
 .leaflet-control-attribution,
 .leaflet-control-scale-line {
   padding: 0 5px;
-  color: #333;
 }
 .leaflet-control-attribution a {
   text-decoration: none;
@@ -434,18 +432,16 @@ svg.leaflet-image-layer.leaflet-interactive path {
   margin-bottom: 5px;
 }
 .leaflet-control-scale-line {
-  border: 2px solid #777;
+  border: 2px solid var(--fg);
   border-top: none;
   line-height: 1.1;
   padding: 2px 5px 1px;
   font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
-  background: #fff;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--bg);
 }
 .leaflet-control-scale-line:not(:first-child) {
   border-top: 2px solid #777;
