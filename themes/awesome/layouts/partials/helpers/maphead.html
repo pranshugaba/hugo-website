@@ -12,12 +12,7 @@
 {{ $leafletjs := resources.Get "/js/leaflet/leaflet-src.js" }}
 {{ $fullscreenjs := resources.Get "/js/leaflet/fullscreen.js" }}
 {{ $gpxjs := resources.Get "/js/leaflet/gpx.js" }}
-{{ $gesturesjs := resources.Get "/js/leaflet/gestures.js" }}
-{{ $markerclusterjs := resources.Get "/js/leaflet/markercluster.js" }}
-{{ $photojs := resources.Get "/js/leaflet/photo.js" }}
-{{ $geometryjs := resources.Get "/js/leaflet/geometry.js" }}
-{{ $distancejs := resources.Get "/js/leaflet/distance-markers.js" }}
 
-{{ $mapjs := slice $leafletjs $fullscreenjs $gpxjs | resources.Concat "/js/leaflet/map.js"}}
+{{ $mapjs := slice $leafletjs $fullscreenjs $gpxjs | resources.Concat "/js/leaflet/map.js" | minify }}
 
 <script src="{{ $mapjs.Permalink }}"></script>

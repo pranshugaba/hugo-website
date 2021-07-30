@@ -8,9 +8,9 @@
     {{ $big := "" }}
     {{ $small := "" }}
     {{ if lt .Height .Width }}
-      {{ $big = .Resize "1600x" }}
+      {{ $big = .Resize "1080x" }}
     {{ else }}
-      {{ $big = .Resize "x1600" }}
+      {{ $big = .Resize "x1080" }}
     {{ end }}
     <img
       src="{{ $big.Permalink }}"

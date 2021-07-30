@@ -261,9 +261,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   background: var(--bg);
   outline: 0;
 }
-.leaflet-container a {
-  color: #121212;
-}
 .leaflet-container a.leaflet-active {
   outline: 2px solid orange;
 }
@@ -293,7 +290,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   display: block;
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: #121212;
 }
 .leaflet-bar a,
 .leaflet-control-layers-toggle {

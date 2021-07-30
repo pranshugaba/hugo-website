@@ -1014,10 +1014,6 @@ thead {
   border-left: 1.5px solid var(--fg);
 }
 
-.leaflet-layer .leaflet-tile {
-  filter: grayscale(0.2) sepia(0.1) brightness(0.95) contrast(1.05);
-}
-
 .dark-mode .leaflet-layer .leaflet-tile {
   filter: grayscale(0.8) hue-rotate(180deg) invert(1) contrast(0.95) sepia(0.2) brightness(1.1);
 }
