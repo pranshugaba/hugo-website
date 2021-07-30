@@ -5,7 +5,32 @@
   border-top-right-radius: 0.5rem;
   border: 0.15rem solid var(--fg);
 }
+#mapol {
+  width: 100%;
+  height: clamp(16rem, 80vh, 32rem);
+  border-radius: 0.5rem;
+  border: 0.15rem solid var(--fg);
+  overflow: hidden;
+}
 
+.leaflet-control-attribution {
+  color: var(--fg);
+  background-color: var(--bg);
+  border-top: 1.5px solid var(--fg);
+  border-left: 1.5px solid var(--fg);
+}
+.leaflet-layer .leaflet-tile {
+  filter: grayscale(0.2) sepia(0.1) brightness(0.95) contrast(1.05);
+}
+.dark-mode .leaflet-layer .leaflet-tile {
+  filter: grayscale(0.8) hue-rotate(180deg) invert(1) contrast(0.95) sepia(0.2) brightness(1.1);
+}
+.leaflet-overlay-pane {
+  filter: grayscale(1) invert(1);
+}
+.dark-mode .leaflet-overlay-pane {
+  filter: unset;
+}
 .route__metadata {
   margin-block: 0.5rem;
   margin-top: -0.5rem;

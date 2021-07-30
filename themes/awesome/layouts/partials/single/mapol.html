@@ -1,0 +1,70 @@
+<h2>My Map</h2>
+<div id="mapol" class="mapol"></div>
+<script type="text/javascript">
+  const ATTR =
+    '&copy; <a href="https://stadiamaps.com/" target="_blank" rel="noopener">Stadia Maps</a>, ' +
+    '&copy; <a href="https://openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> ' +
+    '&copy; <a href="http://openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a>';
+
+  const tiles = new ol.layer.Tile({
+    source: new ol.source.XYZ({
+      attributions: ATTR,
+      url: 'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}@2x.png',
+      tilePixelRatio: 4,
+    }),
+  });
+
+  const style = {
+    Point: new ol.style.Style({
+      image: new ol.style.Circle({
+        fill: new ol.style.Fill({
+          color: 'rgba(255,255,0,0.4)',
+        }),
+        radius: 5,
+        stroke: new ol.style.Stroke({
+          color: '#ff0',
+          width: 1,
+        }),
+      }),
+    }),
+    LineString: new ol.style.Style({
+      stroke: new ol.style.Stroke({
+        color: '#f00',
+        width: 3,
+      }),
+    }),
+    MultiLineString: new ol.style.Style({
+      stroke: new ol.style.Stroke({
+        color: 'dodgerblue',
+        width: 4,
+      }),
+    }),
+  };
+
+  const route = new ol.layer.Vector({
+    source: new ol.source.Vector({
+      url: 'decathlon.gpx',
+      format: new ol.format.GPX(),
+    }),
+    style: function (feature) {
+      return style[feature.getGeometry().getType()];
+    },
+  });
+
+  const map = new ol.Map({
+    target: 'mapol',
+    controls: ol.control.defaults().extend([new ol.control.FullScreen()]),
+    layers: [tiles, route],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([72.84, 19.21]),
+      zoom: 15,
+    }),
+  });
+
+  // fit when the source loads
+  route.getSource().on('addfeature', function () {
+    map.getView().fit(route.getSource().getExtent(), {
+      padding: [50, 50, 50, 50],
+    });
+  });
+</script>

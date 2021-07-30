@@ -32,18 +32,27 @@
         scrollWheelZoom: false,
       }).setView(coords, zoomLevel);
 
-      const ATTR =
+         const ATTR =
         '&copy; <a href="https://stadiamaps.com/" target="_blank" rel="noopener">Stadia Maps</a>, ' +
         '&copy; <a href="https://openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> ' +
         '&copy; <a href="http://openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a>';
       const TILES_URL =
         'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png';
+
       let Stadia_OSMBright = L.tileLayer(TILES_URL, {
         minZoom: 3,
         maxZoom: 18,
         attribution: ATTR,
       });
       Stadia_OSMBright.addTo(mymap);
+
+      let darkMode = localStorage.getItem('darkMode');
+      if (darkMode === 'enabled'){
+        console.log("IT is dark in here")
+      }
+      else {
+        console.log("IT is light out here")
+      }
 
       L.control.scale({ imperial: false }).addTo(mymap);
 
@@ -105,15 +114,15 @@
           iconAnchor: [25, 48],
         },
         polyline_options: {
-          color: 'dodgerblue',
+          color: 'papayawhip',
           opacity: 0.9,
-          weight: 4,
+          weight: 3,
           lineCap: 'round',
         },
       })
         .on('loaded', function (e) {
           mymap.fitBounds(e.target.getBounds(), {
-            padding: [20, 5],
+            padding: [10, 10],
           });
           
           let name = e.target.get_name();
