@@ -5,7 +5,8 @@ subtitle: "RSS feeds for this site"
 
 Subscribe to [all posts](/index.xml), or each section individually 
 
-- [writings](/posts/index.xml)
+- [general posts](/posts/index.xml)
+- [minis](/minis/index.xml)
 - [poems](/poems/index.xml)
 - [puzzles](/puzzles/index.xml)
 

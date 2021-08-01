@@ -34,7 +34,7 @@
       <guid>{{ .Permalink }}</guid>
       {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
       <description>
-          {{ "<![CDATA[" | safeHTML }}{{ with $img }}{{ $big := .Fill "1200x800 center" }}{{ "<" | safeHTML }}img src="{{ $big.Permalink }}" alt="" /{{ ">" | safeHTML }}{{ end }}{{ .Summary | safeHTML }}
+          {{ "<![CDATA[" | safeHTML }}{{ with $img }}{{ $big := .Fill "1200x800 center" }}{{ "<" | safeHTML }}img src="{{ $big.Permalink }}" alt="" /{{ ">" | safeHTML }}{{ end }}{{if (eq .Section "minis")}}{{ .Content | safeHTML }}{{ else }}{{ .Summary | safeHTML }}{{ end }}
          {{ "<" | safeHTML }}p{{ ">" | safeHTML }}{{ "<" | safeHTML }}a href="{{ .Permalink }}"{{ ">" | safeHTML }}Read more{{ "<" | safeHTML }}/a{{ ">" | safeHTML }}{{ "<" | safeHTML }}/p{{ ">" | safeHTML }}{{"]]>" | safeHTML }}
       </description>
     </item>

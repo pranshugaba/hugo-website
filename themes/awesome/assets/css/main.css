@@ -437,16 +437,25 @@ figure figcaption {
 .header {
   border-bottom: 2px solid var(--fg);
   padding-top: 0.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.2rem;
+}
+@media (min-width: 640px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .header__logo {
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  margin: 0 auto 1rem;
+  margin: 0;
+  text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.025em;
+}
+@media (min-width: 640px) {
+  .header__logo {
+    text-align: left;
+  }
 }
 .header__sections {
   margin-top: 1rem;
@@ -455,6 +464,11 @@ figure figcaption {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+@media (min-width: 640px) {
+  .header__sections {
+    margin-top: 0;
+  }
 }
 .header a {
   text-decoration: none;
@@ -850,7 +864,7 @@ h4 code {
 .list-mini__item .item__date {
   display: flex;
   gap: 0.25rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-bottom: 0.1rem;
 }
 @media (min-width: 640px) {
@@ -928,6 +942,7 @@ h4 code {
 }
 
 .list-mini__item .item__time {
+  font-size: 0.9rem;
   margin-top: 0.5rem;
 }
 @media (min-width: 640px) {
@@ -937,21 +952,27 @@ h4 code {
 }
 .list-mini__item .item__content {
   font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+@media (min-width: 640px) {
+  .list-mini__item .item__content {
+    margin-top: 0;
+  }
 }
 .list-mini__item .item__content p {
   line-height: 1.6;
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
-.list-mini__item .item__content :first-child {
-  margin-top: 0.75rem;
+.list-mini__item .item__content p:first-child {
+  margin-top: 0.25rem;
 }
-.list-mini__item .item__content :last-child {
+.list-mini__item .item__content p:last-child {
   margin-bottom: 0;
 }
 .list-mini__item .item__content figure {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .admonition {
@@ -1001,8 +1022,8 @@ h4 code {
 .tagcloud {
   list-style: none;
   padding-left: 0;
+  margin-top: 2rem;
   display: flex;
-  margin-top: 3rem;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 1rem;
@@ -1275,4 +1296,36 @@ thead {
   .poems.page__content {
     font-size: 1.25rem;
   }
+}
+
+.minis.page__date {
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 640px) {
+  .minis.page__date {
+    margin-bottom: 0.75rem;
+  }
+}
+.minis.page__time {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+@media (min-width: 640px) {
+  .minis.page__time {
+    font-size: 1.25rem;
+  }
+}
+.minis.page__content {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 7rem;
+}
+@media (min-width: 640px) {
+  .minis.page__content {
+    font-size: 1.75rem;
+  }
+}
+.minis.page__content p {
+  line-height: 1.6;
 }/*# sourceMappingURL=main.css.map */

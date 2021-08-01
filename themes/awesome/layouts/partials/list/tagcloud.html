@@ -1,6 +1,7 @@
 <ul class="tagcloud">
   {{range $name, $taxonomy := .Site.Taxonomies.tags}} 
-    {{ $size := mul 0.5 (add 2 (math.Log .Count)) }}
+    {{ $invariance := 3}}
+    {{ $size := div (add $invariance (math.Log .Count)) $invariance }}
     {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
     <li>
         <a href="{{ .Permalink }}" 

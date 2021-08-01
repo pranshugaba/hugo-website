@@ -1,6 +1,7 @@
 ---
 
 title: Posts
-subtitle: About webdev, gamedev, free software, and more
+subtitle: About cycling and tech
+summary: My posts about cycling and tech.
 
 ---

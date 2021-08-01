@@ -2,20 +2,30 @@
 @use "../abstracts/mixins" as m;
 
 .header {
+  @media (min-width: 640px) {
+    display: flex;
+    justify-content: space-between;
+  }
   border-bottom: 2px solid var(--fg);
   padding-top: 0.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.2rem;
 
   &__logo {
-    max-width: max-content;
-    margin: 0 auto 1rem;
+    margin: 0;
+    text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: -0.025em;
+    @media (min-width: 640px) {
+      text-align: left;
+    }
   }
 
   &__sections {
     margin-top: 1rem;
+    @media (min-width: 640px) {
+      margin-top: 0;
+    }
     display: flex;
     flex-wrap: wrap;
     align-items: center;

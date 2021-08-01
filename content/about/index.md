@@ -8,8 +8,7 @@ I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www
 
 I write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}), and develop apps and games. I also love  photography, swimming and cycling but not both at once.
 
-{{< currently-reading >}}
-See [my reading list]({{< ref "/reads" >}}).
+[See what I am doing now]({{< ref "/now" >}}).
 
 ## About this site
 
@@ -26,11 +25,16 @@ You find the source code for this website on my [Github page](https://github.com
 
 There are currently
 
-- [{{< countposts poems >}} poems]({{< ref "/poems" >}}),
 - [{{< countposts posts >}} posts]({{< ref "/posts" >}}),
+- [{{< countposts minis >}} mini]({{< ref "/minis" >}}),
+- [{{< countposts poems >}} poems]({{< ref "/poems" >}}),
 - [{{< countposts puzzles >}} puzzles]({{< ref "/puzzles" >}}),
 - and [{{< countposts reviews >}} review]({{< ref "/reviews" >}}),
 
 on this website.
 
 Last updated on {{< lastupdated >}}.
+
+### Tags
+
+{{< tagcloud >}}

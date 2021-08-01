@@ -1,20 +1,16 @@
 ---
-title: "First"
-subtitle: ""
-summary: ""
+title: "First Mini post"
+summary: "My first mini post of many"
 
-date: 2021-08-01T21:54:00+05:30
-lastmod: 2021-08-01T21:54:00+05:30
+date: 2021-08-01T22:27:00+05:30
+lastmod: 2021-08-01T22:27:00+05:30
 
 tags: []
 
 math: false
 
-draft: true
+draft: false
 featured: false
 ---
 
-Hello, this is amazing!
-I will be going to the best now. Wish me all the best!
-
-{{< figure src="metro.jpg" >}}
+My first mini post! Inspired by [micro.blog](https://micro.blog).

@@ -1,6 +1,6 @@
 ---
 
 title: Minis
-subtitle: Mini posts
+subtitle: Byte-sized posts. Inspired by micro.blog.
 
 ---
