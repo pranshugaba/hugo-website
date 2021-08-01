@@ -16,6 +16,7 @@
     top: 0px;
   }
   background-color: var(--bg);
+  z-index: 100;
 }
 
 .item__title {
@@ -24,7 +25,8 @@
   line-height: 1.5;
 }
 
-.list-description__item {
+.list-description__item,
+.list-mini__item {
   margin-bottom: 3rem;
 
   .item__date {
@@ -96,4 +98,32 @@
 
 .list-books__item {
   margin-top: 2.5rem;
+}
+
+.list-mini__item {
+  .item__time {
+    margin-top: 0.5rem;
+
+    @media (min-width: 640px) {
+      margin-top: 0;
+    }
+  }
+  .item__content {
+    font-size: 1.25rem;
+    p {
+      line-height: 1.6;
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    :first-child {
+      margin-top: 0.75rem;
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
+    figure {
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+  }
 }

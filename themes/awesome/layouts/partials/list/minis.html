@@ -1,0 +1,18 @@
+<div class="list-mini__item">
+  <div class="item__date">
+    <div class="item__month">
+      {{ .Date.Format "Jan" }}
+    </div>
+    <div class="item__day">
+      {{ .Date.Format "2" }}
+    </div>
+  </div>
+  <div class="item__details">
+    <div class="item__time">
+        <a href="{{ .Permalink }}">{{ .Date.Format "3:04 pm" }}</a>
+    </div>
+    <div class="item__content">
+        {{ .Content }}
+    </div>
+  </div>
+</div>

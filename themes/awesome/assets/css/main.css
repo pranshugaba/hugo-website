@@ -827,6 +827,7 @@ h4 code {
   border-bottom: 2px solid var(--fg);
   padding: 1rem 0 0.75rem;
   background-color: var(--bg);
+  z-index: 100;
 }
 @media (min-height: 320px) {
   .list__key {
@@ -841,17 +842,20 @@ h4 code {
   line-height: 1.5;
 }
 
-.list-description__item {
+.list-description__item,
+.list-mini__item {
   margin-bottom: 3rem;
 }
-.list-description__item .item__date {
+.list-description__item .item__date,
+.list-mini__item .item__date {
   display: flex;
   gap: 0.25rem;
   font-size: 0.8rem;
   margin-bottom: 0.1rem;
 }
 @media (min-width: 640px) {
-  .list-description__item {
+  .list-description__item,
+.list-mini__item {
     display: grid;
     grid-template-columns: -webkit-max-content auto;
     grid-template-columns: max-content auto;
@@ -860,7 +864,8 @@ h4 code {
     -moz-column-gap: 1.25rem;
          column-gap: 1.25rem;
   }
-  .list-description__item .item__date {
+  .list-description__item .item__date,
+.list-mini__item .item__date {
     display: block;
     justify-self: start;
     align-self: start;
@@ -872,14 +877,16 @@ h4 code {
     border: 2px solid var(--fg);
     grid-area: dt;
   }
-  .list-description__item .item__month {
+  .list-description__item .item__month,
+.list-mini__item .item__month {
     font-size: 0.8rem;
     text-align: center;
     line-height: 1;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
   }
-  .list-description__item .item__day {
+  .list-description__item .item__day,
+.list-mini__item .item__day {
     font-size: 1.2rem;
     text-align: center;
     line-height: 1;
@@ -887,11 +894,13 @@ h4 code {
     margin-bottom: 0.25rem;
   }
 }
-.list-description__item .item__details {
+.list-description__item .item__details,
+.list-mini__item .item__details {
   grid-area: details;
   justify-self: start;
 }
-.list-description__item .item__summary {
+.list-description__item .item__summary,
+.list-mini__item .item__summary {
   margin-top: 0.25rem;
 }
 
@@ -916,6 +925,33 @@ h4 code {
 
 .list-books__item {
   margin-top: 2.5rem;
+}
+
+.list-mini__item .item__time {
+  margin-top: 0.5rem;
+}
+@media (min-width: 640px) {
+  .list-mini__item .item__time {
+    margin-top: 0;
+  }
+}
+.list-mini__item .item__content {
+  font-size: 1.25rem;
+}
+.list-mini__item .item__content p {
+  line-height: 1.6;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.list-mini__item .item__content :first-child {
+  margin-top: 0.75rem;
+}
+.list-mini__item .item__content :last-child {
+  margin-bottom: 0;
+}
+.list-mini__item .item__content figure {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .admonition {

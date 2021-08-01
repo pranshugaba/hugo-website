@@ -1,6 +1,6 @@
 {{ define "main" }}
  
-{{ $itemsPerPage := 42 }}
+{{ $itemsPerPage := 20 }}
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 {{ $paginator := .Paginate ($pages.GroupByDate "2006") $itemsPerPage }}
 
@@ -16,7 +16,11 @@
   <ul class="items__list">
       {{ range .Pages }}
       <li>
-        {{ partial "list/description.html" . }}
+        {{ if (eq .Section "minis")}}
+          {{ partial "list/minis.html" . }}
+        {{ else }}
+          {{ partial "list/description.html" . }}
+        {{ end }}
       </li>
       {{ end }}
   </ul>

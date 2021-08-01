@@ -12,7 +12,13 @@
     <h2 class="list__key">{{ .Key }}</h2>
     <ul class="items__list">
       {{ range .Pages }}
-      <li>{{ partial "list/description.html" . }}</li>
+      <li>
+        {{ if (eq .Section "minis")}}
+          {{ partial "list/minis.html" . }}
+        {{ else }}
+          {{ partial "list/description.html" . }}
+        {{ end }}
+      </li>
       {{ end }}
     </ul>
   </section>
