@@ -360,7 +360,7 @@ figure img {
   border: 0.1rem solid var(--fg);
 }
 .dark-mode figure img {
-  filter: brightness(0.9) contrast(1.1);
+  filter: brightness(0.9);
 }
 figure.no-border img {
   border: none;
@@ -885,7 +885,7 @@ h4 code {
     align-self: start;
     width: 4.5ch;
     padding: 0 0.2rem;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
     border-radius: 0.4rem;
     font-size: smaller;
     border: 2px solid var(--fg);
@@ -941,14 +941,13 @@ h4 code {
   margin-top: 2.5rem;
 }
 
-.list-mini__item .item__time {
+.list-mini__item .item__metadata {
   font-size: 0.9rem;
-  margin-top: 0.5rem;
 }
-@media (min-width: 640px) {
-  .list-mini__item .item__time {
-    margin-top: 0;
-  }
+.list-mini__item .item__metadata .page__location {
+  display: inline;
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
 }
 .list-mini__item .item__content {
   font-size: 1.25rem;
@@ -965,10 +964,7 @@ h4 code {
   margin-bottom: 0.5rem;
 }
 .list-mini__item .item__content p:first-child {
-  margin-top: 0.25rem;
-}
-.list-mini__item .item__content p:last-child {
-  margin-bottom: 0;
+  margin-top: 0;
 }
 .list-mini__item .item__content figure {
   margin-top: 0.5rem;
@@ -1187,7 +1183,10 @@ thead {
 }
 .page__date {
   margin-top: 2rem;
-  margin-bottom: 2.5rem;
+}
+.page__location {
+  margin-top: 0.75rem;
+  margin-bottom: 3rem;
 }
 .page__lastmod {
   margin-top: 1rem;
@@ -1201,7 +1200,7 @@ thead {
   border: 0.15rem solid var(--fg);
 }
 .page__content {
-  margin-top: 1rem;
+  margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
 .page__navtags {
@@ -1283,49 +1282,39 @@ thead {
   justify-content: end;
 }
 
-.poems.page__content {
+.poems .page__content {
   font-size: 1.125rem;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 7.5rem;
 }
 @media (min-width: 640px) {
-  .poems.page__content {
+  .poems .page__content {
     font-size: 1.25rem;
   }
 }
 
-.minis.page__date {
+.minis .page__date {
   margin-top: 3rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
-@media (min-width: 640px) {
-  .minis.page__date {
-    margin-bottom: 0.75rem;
-  }
+.minis .page__time {
+  margin-bottom: 0.75rem;
 }
-.minis.page__time {
-  margin-bottom: 1rem;
-  font-size: 1.125rem;
-}
-@media (min-width: 640px) {
-  .minis.page__time {
-    font-size: 1.25rem;
-  }
-}
-.minis.page__content {
+.minis .page__content {
   font-size: 1.5rem;
-  margin-top: 2.5rem;
-  margin-bottom: 7rem;
+  margin-top: 3rem;
+  margin-bottom: 7.5rem;
 }
 @media (min-width: 640px) {
-  .minis.page__content {
+  .minis .page__content {
     font-size: 1.75rem;
   }
 }
-.minis.page__content p {
+.minis .page__content p {
   line-height: 1.6;
 }/*# sourceMappingURL=main.css.map */
