@@ -1,1 +1,7 @@
-Location: Mumbai
+{{ with .Params.Location }}
+    {{ $lat := index .Coords 0 }}
+    {{ $long := index .Coords 1 }}
+    <div class="page__location">
+        {{ if .Emoji }}{{ .Emoji | emojify }}}{{ end }} <a href="https://www.openstreetmap.org/?mlat={{ $lat }}&mlon={{ $long }}#map=13/{{ $lat }}/{{ $long }}&layers=N" rel="noopener" target="_blank">{{ .Name }}</a>
+    </div>
+{{ end }}

@@ -8,11 +8,12 @@
     </div>
   </div>
   <div class="item__details">
-    <div class="item__time">
-        <a href="{{ .Permalink }}">{{ .Date.Format "3:04 pm" }}</a>
-    </div>
     <div class="item__content">
         {{ .Content }}
+    </div>
+    <div class="item__metadata">
+        <a href="{{ .Permalink }}">{{ .Date.Format "3:04 pm" }}</a>
+        {{ partial "single/_default/location" . }}
     </div>
   </div>
 </div>

@@ -13,7 +13,7 @@ figure {
     border-radius: 0.5rem;
     border: 0.1rem solid var(--fg);
     .dark-mode & {
-      filter: brightness(0.9) contrast(1.1);
+      filter: brightness(0.9);
     }
   }
 
