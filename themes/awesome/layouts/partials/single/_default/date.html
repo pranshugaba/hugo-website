@@ -1,0 +1,12 @@
+{{ if .Date }}
+<div class="page__date">
+    {{ .Date.Format "Monday, 2 January 2006" }}
+    {{ if .Lastmod }}
+        {{ if (gt .Lastmod .Date)}}
+        <div class="page__lastmod">
+        Last updated on {{ .Lastmod.Format "2 January 2006" }}
+        </div>
+        {{ end }}
+    {{ end }}
+</div>
+{{ end }}

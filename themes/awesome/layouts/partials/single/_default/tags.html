@@ -1,0 +1,18 @@
+{{ if .Section }}
+{{ $tags := .GetTerms "tags" }}
+<div class="page__navtags">
+    <ul class="page__tags">
+    {{ with $tags }}
+        {{ range . }}
+            <li><a href="{{ .Permalink }}">{{ .LinkTitle | humanize | lower }}</a></li>
+        {{ end }}
+    {{ end }}
+    </ul>
+
+    {{ with .Section}}
+    <div class="page__all">
+        <a href="/{{ . }}">all {{ . }}</a>
+    </div>
+    {{ end }}
+</div> 
+{{ end }}

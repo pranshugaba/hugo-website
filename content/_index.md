@@ -1,8 +1,6 @@
 ---
 subtitle: Photos, poems, puzzles, and more!
 summary: Personal website of Pranshu Gaba. Here I share photos, poems, puzzles, and more!
-
-math: true
 ---
 
 I am a PhD student in Computer Science. I write [posts]({{< ref "/posts" >}}) about game development, web development, and anything else that interests me. I also write [puzzles]({{< ref "/puzzles" >}}) and [poems]({{< ref "/poems" >}}).

@@ -1,83 +1,10 @@
 {{ define "main"}}
-  <h1 class="page__title">{{ .Title | emojify }}</h1>
-  {{ with .Params.Subtitle }}
-      <h2 class="page__subtitle" >{{ . | emojify }}</h2>
-  {{ end }}
-  {{ if .Date }}
-    <div class="page__date">
-        {{ .Date.Format "Monday, 2 January 2006" }}
-        {{ if .Lastmod }}
-          {{ if (gt .Lastmod .Date)}}
-          <div class="page__lastmod">
-            Last updated on {{ .Lastmod.Format "2 January 2006" }}
-          </div>
-          {{ end }}
-        {{ end }}
-    </div>
-  {{ end }}
-  {{ if not .Params.image.preview_only }}
-    {{ partial "single/featured.html" . }}
-  {{ end }}
-  {{ $section := .Section}}
-  {{ with .Content }}
-  <div class="{{ $section }} page__content">
-    {{ . }}
-  </div>
-  {{ end }}
-
-
-  {{ if .Section }}
-    {{ $tags := .GetTerms "tags" }}
-    <div class="page__navtags">
-      <ul class="page__tags">
-        {{ with $tags }}
-          {{ range . }}
-              <li><a href="{{ .Permalink }}">{{ .LinkTitle | humanize | lower }}</a></li>
-          {{ end }}
-        {{ end }}
-      </ul>
-
-      {{ with .Section}}
-        <div class="page__all">
-          <a href="/{{ . }}">all {{ . }}</a>
-        </div>
-      {{ end }}
-    </div> 
-  {{ end }}
-
-  <div class="page__nav">
-    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-    {{ if (in .Site.Params.mainSections .Type) }}
-        <div class="page__prevnext">
-          <div class="page__prev">
-            {{ if $pages.Prev . }}
-              <div><-</div>
-              {{ with $pages.Prev . }}
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-              {{ end }}
-            {{ else }}
-              <div class="page__end">
-                This is the oldest post.
-              </div>
-            {{ end }}
-          </div>
-          <div class="page__next">
-            {{ if $pages.Next . }}
-            <div>-></div>
-              {{ with $pages.Next . }}
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-              {{ end }}
-            {{ else }}
-              <div class="page__end">
-                This is the newest post.
-              </div>
-            {{end}}
-          </div>
-        </div>
-    {{ else }}
-      <div class="page__home">
-        <a href="/"><span><-</span> <span>home</span></a>
-      </div>
-    {{ end }}
-  </div>
+  {{ partial "single/_default/title" . }}
+  {{ partial "single/_default/subtitle" . }}
+  {{ partial "single/_default/date" . }}
+  {{ partial "single/_default/location" . }}
+  {{ partial "single/_default/cover-image.html" . }}
+  {{ partial "single/_default/page-content.html" . }}
+  {{ partial "single/_default/tags" . }}
+  {{ partial "single/_default/prevnext" . }}
 {{ end }}

@@ -1,19 +1,19 @@
 .minis {
-  &.page__date {
+  .page__date {
     margin-top: 3rem;
     margin-bottom: 0.5rem;
     @media (min-width: 640px) {
       margin-bottom: 0.75rem;
     }
   }
-  &.page__time {
+  .page__time {
     margin-bottom: 1rem;
     font-size: 1.125rem;
     @media (min-width: 640px) {
       font-size: 1.25rem;
     }
   }
-  &.page__content {
+  .page__content {
     font-size: 1.5rem;
     @media (min-width: 640px) {
       font-size: 1.75rem;
