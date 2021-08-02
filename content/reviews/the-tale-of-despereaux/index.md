@@ -6,7 +6,7 @@ summary: "I read The Tale of Despereaux, and here's my review of it. "
 date: 2015-08-17T17:30:00+05:30
 lastmod: 2015-08-17T17:30:00+05:30
 
-tags: ["book-review"]
+tags: ["book-reviews"]
 
 math: false
 

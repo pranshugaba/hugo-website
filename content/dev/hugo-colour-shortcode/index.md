@@ -14,7 +14,7 @@ draft: false
 featured: false
 ---
 
-I was writing a [post about my new Hugo website]({{< ref "/posts/moving-back-to-hugo" >}}), and I wanted to describe the colours used on this site. I wrote the names of the colours, but names do not convey the colour very well. Can you imagine what the colour #714825 looks like? What about rgb(0, 100, 255)?
+I was writing a [post about my new Hugo website]({{< ref "/dev/moving-back-to-hugo" >}}), and I wanted to describe the colours used on this site. I wrote the names of the colours, but names do not convey the colour very well. Can you imagine what the colour #714825 looks like? What about rgb(0, 100, 255)?
 
 I thought it would be great if the reader could also see a preview of the colours. I could add images of the colours that I am describing, but that is a lot of work and not very flexible.  This is what led me to write this Hugo shortcode. I followed the [Hugo docs on shortcodes](https://gohugo.io/templates/shortcode-templates/) for reference. 
 

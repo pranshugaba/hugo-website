@@ -30,13 +30,10 @@ minifyOutput = true
 tag = "tags"
 
 [params]
-mainSections = ["poems", "posts", "puzzles", "reviews", "stories", "minis"]
+mainSections = ["dev", "poems", "posts", "puzzles", "reviews", "stories", "trips", "minis", "comics"]
 AuthorName = "Pranshu Gaba"
 GitHubUser = "pranshugaba"
 
 [author]
 name = "Pranshu Gaba"
 email = "pranshu@pranshugaba.com"
-
-[permalinks]
-minis = "/:year/:month/:day/:slug"
