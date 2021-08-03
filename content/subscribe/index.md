@@ -9,10 +9,10 @@ Subscribe to [all posts](/index.xml), or each section individually
 - [dev](/dev/index.xml)
 - [poems](/poems/index.xml)
 - [puzzles](/puzzles/index.xml)
-- [stories](/puzzles/index.xml)
-- [comics](/puzzles/index.xml)
+- [stories](/stories/index.xml)
+- [comics](/comics/index.xml)
 - [trips](/trips/index.xml)
-- [reviews](/trips/index.xml)
+- [reviews](/reviews/index.xml)
 - [links](/links/index.xml)
 
 Append `/index.xml` to the URL of any list page to get the URL for the corresponding feed. 

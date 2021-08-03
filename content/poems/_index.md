@@ -1,4 +1,4 @@
 ---
 title: Poems
-subtitle: some limericks, mostly haikus
+subtitle: Some limericks, mostly haikus
 ---

@@ -3,14 +3,16 @@
     <a href="{{ .Permalink }}"> {{.Title}}</a>
   </div>
   <div class="item__metadata">
-    <p>
-      Published  on {{ .Date.Format "January 2" }} in <a href="/{{ .Type }}">{{ .Type | title }}</a> {{ with .Params.Location }}<br> from {{ partial "helpers/location" . }}{{ end }}
-    </p>
+    in <a href="/{{ .Type }}">{{ .Type | title }}</a>
+    on {{ .Date.Format "January 2" }}
+    {{ with .Params.Location }}
+      from {{ partial "helpers/location" . }}
+    {{ end }}
   </div>
   <div class="item__summary">
-    <p>{{ .Summary }}</p>
+    {{ .Summary | markdownify }}
   </div>
-  <div>
+  <div class="item__read-more">
     <a href="{{ .Permalink }}">Read more</a>
   </div>
 </div>

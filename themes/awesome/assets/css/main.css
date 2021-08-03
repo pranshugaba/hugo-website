@@ -848,7 +848,7 @@ h4 code {
 
 .list__key {
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-size: 2rem;
   border-bottom: 2px solid var(--fg);
   padding: 1rem 0 0.75rem;
@@ -871,16 +871,21 @@ h4 code {
 .list-description__item,
 .list-mini__item {
   border-bottom: 1.5px solid var(--fg);
-  margin-top: 2rem;
-  padding-bottom: 2rem;
-}
-.list-description__item .item__summary,
-.list-mini__item .item__summary {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .list-description__item .item__metadata,
 .list-mini__item .item__metadata {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+}
+.list-description__item .item__summary,
+.list-mini__item .item__summary {
+  margin-top: 1.25rem;
+}
+.list-description__item .item__read-more,
+.list-mini__item .item__read-more {
+  font-size: 0.85rem;
   margin-top: 1rem;
 }
 

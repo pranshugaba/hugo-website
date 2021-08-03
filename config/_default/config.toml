@@ -9,8 +9,8 @@ enableEmoji = true
 enableGitInfo = true
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "↩"
-paginate = 10 # Default number of elements per page in pagination.
-summaryLength = 50 # Length of text in words to show in a .Summary
+paginate = 10                                                                                                  # Default number of elements per page in pagination.
+summaryLength = 50                                                                                             # Length of text in words to show in a .Summary
 titleCaseStyle = "Chicago"
 
 
@@ -30,7 +30,19 @@ minifyOutput = true
 tag = "tags"
 
 [params]
-mainSections = ["dev", "poems", "posts", "puzzles", "reviews", "stories", "trips", "minis", "comics"]
+mainSections = [
+    "posts",
+    "thoughts",
+    "minis",
+    "dev",
+    "trips",
+    "reviews",
+    "links",
+    "poems",
+    "puzzles",
+    "stories",
+    "comics",
+]
 AuthorName = "Pranshu Gaba"
 GitHubUser = "pranshugaba"
 
