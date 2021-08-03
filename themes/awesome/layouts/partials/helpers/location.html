@@ -1,3 +1,7 @@
-    {{ $lat := index .Coords 0 }}
-    {{ $long := index .Coords 1 }}
-    {{ if .Emoji }}{{ .Emoji | emojify }}}{{ end }} <a href="https://www.openstreetmap.org/?mlat={{ $lat }}&mlon={{ $long }}#map=13/{{ $lat }}/{{ $long }}&layers=N" rel="noopener" target="_blank">{{ .Name }}</a>
+{{ $lat := "" }}
+{{ $long := "" }}
+{{ with .Coords }}
+    {{ $lat = index . 0 }}
+    {{ $long = index . 1 }}
+{{ end }}
+{{ if .Emoji }}{{ .Emoji | emojify }}}{{ end }}{{ if .Coords }}<a href="https://www.openstreetmap.org/?mlat={{ $lat }}&mlon={{ $long }}#map=13/{{ $lat }}/{{ $long }}&layers=N" rel="noopener" target="_blank">{{ end }}{{ .Name }}{{ if .Coords }}</a>{{ end }}

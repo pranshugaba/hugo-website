@@ -18,6 +18,15 @@
 
   if (darkMode === 'enabled') {
     enableDarkMode();
+  } else if (darkMode === 'disabled') {
+    disableDarkMode();
+  } else {
+    if (
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    ) {
+      enableDarkMode();
+    }
   }
   darkModeToggle.addEventListener('click', () => {
     darkMode = localStorage.getItem('darkMode');

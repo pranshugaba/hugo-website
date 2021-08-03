@@ -1,18 +1,24 @@
 <div class="list-description__item">
-  <div class="item__title">
-    <a href="{{ .Permalink }}"> {{.Title}}</a>
-  </div>
   <div class="item__metadata">
-    in <a href="/{{ .Type }}">{{ .Type | title }}</a>
-    on {{ .Date.Format "January 2" }}
-    {{ with .Params.Location }}
-      from {{ partial "helpers/location" . }}
-    {{ end }}
+    <div>
+      {{ .Date.Format "January 2" }}
+      {{ with .Params.Location }}
+        | {{ partial "helpers/location" . }}
+      {{ end }}
+    </div>
+    <div>
+      <a href="/{{ .Type }}">{{ .Type | title }}</a>
+    </div>
   </div>
-  <div class="item__summary">
-    {{ .Summary | markdownify }}
-  </div>
-  <div class="item__read-more">
-    <a href="{{ .Permalink }}">Read more</a>
+  <div class="item__content">
+    <div class="item__title">
+      <a href="{{ .Permalink }}"> {{.Title}}</a>
+    </div>
+    <div class="item__summary">
+      {{ .Summary | markdownify }}
+    </div>
+    <div class="item__read-more">
+      <a href="{{ .Permalink }}">Read</a>
+    </div>
   </div>
 </div>

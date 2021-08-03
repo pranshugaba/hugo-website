@@ -14,23 +14,26 @@ I write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}), and
 
 ## About this site
 
-This site is built with :heart: using [Hugo](https://gohugo.io) and is hosted on [GitHub pages](https://pages.github.com/). 
-
+This site is built with :heart: using [Hugo](https://gohugo.io) and is hosted on [GitHub pages](https://pages.github.com/).
 The site is open source. You can find the source code on my [Github page](https://github.com/pranshugaba/).
 
-### Statistics
 
-There are currently
+### Some statistics
 
-- [{{< countposts minis >}} mini]({{< ref "/minis/" >}}),
-- [{{< countposts dev >}} dev posts]({{< ref "/dev/" >}}),
-- [{{< countposts poems >}} poems]({{< ref "/poems/" >}}),
-- [{{< countposts puzzles >}} puzzles]({{< ref "/puzzles/" >}}),
-- [{{< countposts stories >}} story]({{< ref "/stories/" >}}),
-- [{{< countposts comics >}} comic strip]({{< ref "/comics/" >}}),
-- [{{< countposts trips >}} trips]({{< ref "/trips/" >}}),
-- and [{{< countposts reviews >}} review]({{< ref "/reviews/" >}})
+Number of posts in each section
 
-on this website.
+|                       Count | Section                              |
+| --------------------------: | :----------------------------------- |
+|    {{< countposts posts >}} | [Posts]({{< ref "/posts/" >}})       |
+| {{< countposts thoughts >}} | [Thoughts]({{< ref "/thoughts/" >}}) |
+|    {{< countposts minis >}} | [Minis]({{< ref "/minis/" >}})       |
+|      {{< countposts dev >}} | [Dev Articles]({{< ref "/dev/" >}})  |
+|    {{< countposts trips >}} | [Trips]({{< ref "/trips/" >}})       |
+|  {{< countposts reviews >}} | [Reviews]({{< ref "/reviews/" >}})   |
+|    {{< countposts links >}} | [Links]({{< ref "/links/" >}})       |
+|    {{< countposts poems >}} | [Poems]({{< ref "/poems/" >}})       |
+|  {{< countposts puzzles >}} | [Puzzles]({{< ref "/puzzles/" >}})   |
+|  {{< countposts stories >}} | [Stories]({{< ref "/stories/" >}})   |
+|   {{< countposts comics >}} | [Comics]({{< ref "/comics/" >}})     |
 
 Last updated on {{< lastupdated >}}.

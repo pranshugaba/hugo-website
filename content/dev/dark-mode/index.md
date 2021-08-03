@@ -1,12 +1,12 @@
 ---
-title: "Dark Mode Using CSS Variables, Sass, and localStorage"
+title: "Toggleable Dark Mode that persists"
 subtitle: "Create a dark mode toggle that perists"
 summary: "Implement dark mode using Sass and CSS variables"
 
-date: 2021-07-29T17:30:00+05:30
-lastmod: 2021-07-29T17:30:00+05:30
+date: 2021-08-03T17:30:00+05:30
+lastmod: 2021-08-03T17:30:00+05:30
 
-tags: []
+tags: ["webdev", "dark-mode"]
 
 math: false
 
