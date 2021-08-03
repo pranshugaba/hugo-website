@@ -407,6 +407,19 @@ figure figcaption {
   float: right;
 }
 
+@media print {
+  html {
+    font-size: 80%;
+  }
+
+  body {
+    max-width: inherit;
+  }
+
+  figure img {
+    max-width: 75%;
+  }
+}
 @-webkit-keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -415,7 +428,6 @@ figure figcaption {
     opacity: 1;
   }
 }
-
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -858,64 +870,18 @@ h4 code {
 
 .list-description__item,
 .list-mini__item {
-  margin-bottom: 3rem;
-}
-.list-description__item .item__date,
-.list-mini__item .item__date {
-  display: flex;
-  gap: 0.25rem;
-  font-size: 0.9rem;
-  margin-bottom: 0.1rem;
-}
-@media (min-width: 640px) {
-  .list-description__item,
-.list-mini__item {
-    display: grid;
-    grid-template-columns: -webkit-max-content auto;
-    grid-template-columns: max-content auto;
-    grid-template-rows: auto;
-    grid-template-areas: "dt details";
-    -moz-column-gap: 1.25rem;
-         column-gap: 1.25rem;
-  }
-  .list-description__item .item__date,
-.list-mini__item .item__date {
-    display: block;
-    justify-self: start;
-    align-self: start;
-    width: 4.5ch;
-    padding: 0 0.2rem;
-    margin-top: 0.25rem;
-    border-radius: 0.4rem;
-    font-size: smaller;
-    border: 2px solid var(--fg);
-    grid-area: dt;
-  }
-  .list-description__item .item__month,
-.list-mini__item .item__month {
-    font-size: 0.8rem;
-    text-align: center;
-    line-height: 1;
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
-  }
-  .list-description__item .item__day,
-.list-mini__item .item__day {
-    font-size: 1.2rem;
-    text-align: center;
-    line-height: 1;
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
-  }
-}
-.list-description__item .item__details,
-.list-mini__item .item__details {
-  grid-area: details;
-  justify-self: start;
+  border-bottom: 1.5px solid var(--fg);
+  margin-top: 2rem;
+  padding-bottom: 2rem;
 }
 .list-description__item .item__summary,
 .list-mini__item .item__summary {
-  margin-top: 0.25rem;
+  margin-top: 1rem;
+}
+.list-description__item .item__metadata,
+.list-mini__item .item__metadata {
+  font-size: 0.9rem;
+  margin-top: 1rem;
 }
 
 .list-archive__item,
@@ -941,14 +907,6 @@ h4 code {
   margin-top: 2.5rem;
 }
 
-.list-mini__item .item__metadata {
-  font-size: 0.9rem;
-}
-.list-mini__item .item__metadata .page__location {
-  display: inline;
-  -webkit-margin-start: 1rem;
-          margin-inline-start: 1rem;
-}
 .list-mini__item .item__content {
   font-size: 1.25rem;
   margin-top: 0.5rem;
