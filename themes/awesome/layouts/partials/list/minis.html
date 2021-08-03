@@ -1,19 +1,10 @@
 <div class="list-mini__item">
-  <div class="item__date">
-    <div class="item__month">
-      {{ .Date.Format "Jan" }}
-    </div>
-    <div class="item__day">
-      {{ .Date.Format "2" }}
-    </div>
-  </div>
   <div class="item__details">
     <div class="item__content">
         {{ .Content }}
     </div>
     <div class="item__metadata">
-        <a href="{{ .Permalink }}">{{ .Date.Format "3:04 pm" }}</a>
-        {{ partial "single/_default/location" . }}
+        <a href="{{ .Permalink }}">{{ .Date.Format "January 2, 3:04 pm" }}</a> {{ with .Params.Location }} from {{ partial "helpers/location" . }}{{ end }}
     </div>
   </div>
 </div>

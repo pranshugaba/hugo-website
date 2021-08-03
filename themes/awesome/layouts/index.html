@@ -1,6 +1,6 @@
 {{ define "main" }}
  
-{{ $itemsPerPage := 20 }}
+{{ $itemsPerPage := 10 }}
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 {{ $paginator := .Paginate ($pages.GroupByDate "2006") $itemsPerPage }}
 

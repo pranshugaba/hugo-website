@@ -33,7 +33,7 @@ summary: A guide to explore my site
 
 ## By Archive
 
-If you would like to a list of everything posted on this site, head to the [archive]({{< ref "/archive/" >}}).
+If you would like to see a list of everything posted on this site, head to the [archive]({{< ref "/archive/" >}}).
 
 ## By Feeds
 

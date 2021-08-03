@@ -1,16 +1,16 @@
 <div class="list-description__item">
-  <div class="item__date">
-    <div class="item__month">
-      {{ .Date.Format "Jan" }}
-    </div>
-    <div class="item__day">
-      {{ .Date.Format "2" }}
-    </div>
+  <div class="item__title">
+    <a href="{{ .Permalink }}"> {{.Title}}</a>
   </div>
-  <div class="item__details">
-    <div class="item__title">
-      <a href="{{ .Permalink }}"> {{.Title}}</a>
-    </div>
-    <p class="item__summary">{{ .Summary }}</p>
+  <div class="item__metadata">
+    <p>
+      Published  on {{ .Date.Format "January 2" }} in <a href="/{{ .Type }}">{{ .Type | title }}</a> {{ with .Params.Location }}<br> from {{ partial "helpers/location" . }}{{ end }}
+    </p>
+  </div>
+  <div class="item__summary">
+    <p>{{ .Summary }}</p>
+  </div>
+  <div>
+    <a href="{{ .Permalink }}">Read more</a>
   </div>
 </div>

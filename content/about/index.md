@@ -10,16 +10,13 @@ I write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}), and
 
 [See what I am doing now]({{< ref "/now" >}}).
 
+[See what software I use]({{< ref "/uses" >}}).
+
 ## About this site
 
-This site is:
+This site is built with :heart: using [Hugo](https://gohugo.io) and is hosted on [GitHub pages](https://pages.github.com/). 
 
-- built with :heart: using [Hugo](https://gohugo.io)
-- designed and coded in [VSCodium](https://vscodium.com/)
-- built on a PC running [Arch Linux](https://archlinux.org/)
-- hosted on [GitHub pages](https://pages.github.com/)
-
-You find the source code for this website on my [Github page](https://github.com/pranshugaba/).
+The site is open source. You can find the source code on my [Github page](https://github.com/pranshugaba/).
 
 ### Statistics
 
