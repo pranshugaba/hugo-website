@@ -899,9 +899,7 @@ h4 code {
 @media (min-width: 640px) {
   .list-description__item,
 .list-mini__item {
-    margin-top: 2.5rem;
-    border-radius: 0.5rem;
-    border: 2px solid var(--fg);
+    margin-top: 1.75rem;
   }
 }
 .list-description__item .item__metadata,
@@ -912,44 +910,21 @@ h4 code {
   justify-content: space-between;
   font-size: 0.9rem;
 }
-@media (min-width: 640px) {
-  .list-description__item .item__metadata,
-.list-mini__item .item__metadata {
-    padding-block: 0.32rem;
-    padding-inline: 0.75rem;
-  }
-}
-@media (min-width: 640px) {
-  .list-description__item .item__metadata,
-.list-mini__item .item__metadata {
-    border-bottom: 2px solid var(--fg);
-  }
-}
 .list-description__item .item__content,
 .list-mini__item .item__content {
   -webkit-padding-before: 0.5rem;
           padding-block-start: 0.5rem;
-  -webkit-padding-after: 1.5rem;
-          padding-block-end: 1.5rem;
-}
-@media (min-width: 640px) {
-  .list-description__item .item__content,
-.list-mini__item .item__content {
-    padding-inline: 0.75rem;
-    -webkit-padding-before: 1rem;
-            padding-block-start: 1rem;
-    -webkit-padding-after: 0.75rem;
-            padding-block-end: 0.75rem;
-  }
+  -webkit-padding-after: 1.75rem;
+          padding-block-end: 1.75rem;
 }
 .list-description__item .item__summary,
 .list-mini__item .item__summary {
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
 }
 .list-description__item .item__read-more,
 .list-mini__item .item__read-more {
   margin-top: 0.75rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .list-mini__item .item__content {
