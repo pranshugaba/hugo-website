@@ -3,7 +3,7 @@
     <div>
       {{ .Date.Format "January 2" }}
       {{ with .Params.Location }}
-        | {{ partial "helpers/location" . }}
+      &nbsp; · &nbsp; {{ partial "helpers/location" . }}
       {{ end }}
     </div>
     <div>
@@ -18,7 +18,7 @@
       {{ .Summary | markdownify }}
     </div>
     <div class="item__read-more">
-      <a href="{{ .Permalink }}">Read</a>
+      <a href="{{ .Permalink }}">Read -></a>
     </div>
   </div>
 </div>
