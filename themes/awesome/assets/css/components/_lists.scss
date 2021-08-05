@@ -46,6 +46,7 @@
 }
 .list-description__item,
 .list-mini__item {
+  margin-top: 2rem;
   margin-bottom: 4rem;
 
   .item__metadata {
@@ -55,7 +56,7 @@
   }
 
   .item__content {
-    margin-block: 0.75rem;
+    margin-block: 0.5rem;
   }
 
   .item__summary {

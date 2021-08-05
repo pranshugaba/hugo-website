@@ -15,7 +15,7 @@ titleCaseStyle = "Chicago"
 
 
 [frontmatter]
-lastmod = ["lastmod", ":fileModTime", ":default"]
+lastmod = ["lastmod", ":git", ":default"]
 
 [markup]
 [markup.highlight]
