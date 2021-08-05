@@ -24,7 +24,7 @@ Number of posts in each section
 
 |                       Count | Section                              |
 | --------------------------: | :----------------------------------- |
-|    {{< countposts posts >}} | [Posts]({{< ref "/posts/" >}})       |
+|    {{< countposts articles >}} | [Articles]({{< ref "/articles/" >}})       |
 | {{< countposts thoughts >}} | [Thoughts]({{< ref "/thoughts/" >}}) |
 |    {{< countposts minis >}} | [Minis]({{< ref "/minis/" >}})       |
 |      {{< countposts dev >}} | [Dev Articles]({{< ref "/dev/" >}})  |

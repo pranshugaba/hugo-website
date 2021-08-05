@@ -21,8 +21,8 @@
 
 .item__title {
   font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-size: 1.35rem;
+  line-height: 1.35;
 }
 
 .list-archive__item,
@@ -42,27 +42,20 @@
 }
 
 .list-books__item {
-  margin-top: 2.5rem;
+  margin-top: 2.25rem;
 }
 .list-description__item,
 .list-mini__item {
-  margin-top: 1.5rem;
-  border-bottom: 2px solid var(--fg);
-  @media (min-width: 640px) {
-    margin-top: 1.75rem;
-  }
+  margin-bottom: 4rem;
 
   .item__metadata {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-    justify-content: space-between;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+    width: max-content;
   }
 
   .item__content {
-    padding-block-start: 0.5rem;
-    padding-block-end: 1.75rem;
+    margin-block: 0.75rem;
   }
 
   .item__summary {
@@ -70,17 +63,14 @@
   }
   .item__read-more {
     margin-top: 0.75rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
 
 .list-mini__item {
   .item__content {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
 
-    @media (min-width: 640px) {
-      margin-top: 0;
-    }
     p {
       line-height: 1.6;
       margin-top: 0.5rem;

@@ -31,7 +31,7 @@ tag = "tags"
 
 [params]
 mainSections = [
-    "posts",
+    "articles",
     "thoughts",
     "minis",
     "dev",

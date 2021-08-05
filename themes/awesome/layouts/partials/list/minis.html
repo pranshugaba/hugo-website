@@ -1,20 +1,15 @@
 <div class="list-mini__item">
   <div class="item__metadata">
-    <div>
-      {{ .Date.Format "January 2" }}
-      {{ with .Params.Location }}
-        | {{ partial "helpers/location" . }}
-      {{ end }}
-    </div>
-    <div>
-      <a href="/{{ .Type }}">{{ .Type | title }}</a>
-    </div>
+    {{ .Date.Format "January 2" }}
+    &nbsp; · &nbsp; <a href="/{{ .Type }}">{{ .Type | title }}</a>
+    {{ with .Params.Location }}
+      | {{ partial "helpers/location" . }}
+    {{ end }}
   </div>
   <div class="item__content">
       {{ .Content }}
       <div class="item__read-more">
-
-      <a href="{{ .Permalink }}">{{ .Date.Format "3:04 pm" }}</a> 
+        <a href="{{ .Permalink }}">{{ .Date.Format "3:04 pm" }}</a> 
       </div>
   </div>
 </div>

@@ -1,14 +1,10 @@
 <div class="list-description__item">
   <div class="item__metadata">
-    <div>
-      {{ .Date.Format "January 2" }}
-      {{ with .Params.Location }}
-      &nbsp; · &nbsp; {{ partial "helpers/location" . }}
-      {{ end }}
-    </div>
-    <div>
-      <a href="/{{ .Type }}">{{ .Type | title }}</a>
-    </div>
+    {{ .Date.Format "January 2" }}
+    &nbsp; · &nbsp; <a href="/{{ .Type }}">{{ .Type | title }}</a>
+    {{ with .Params.Location }}
+    &nbsp; · &nbsp; {{ partial "helpers/location" . }}
+    {{ end }}
   </div>
   <div class="item__content">
     <div class="item__title">
