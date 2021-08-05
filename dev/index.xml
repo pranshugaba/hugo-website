@@ -1,9 +1,1675 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dev posts by Pranshu Gaba</title><link>https://pranshugaba.com/dev/</link><description>Posts about GameDev and WebDev</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 05 Aug 2021 00:52:41 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Colour Shortcode</title><link>https://pranshugaba.com/dev/hugo-colour-shortcode/</link><pubDate>Wed, 21 Jul 2021 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/hugo-colour-shortcode/</guid><description>
-<![CDATA[Names of colours don&rsquo;t convey their image very well. What does #714825 looks like? I wrote a shortcode that shows previews of colours in Hugo, so you can see them and don&rsquo;t have to imagine them.
-         <p><a href="https://pranshugaba.com/dev/hugo-colour-shortcode/">Read more</a></p>]]></description></item><item><title>...and Back to Hugo Again</title><link>https://pranshugaba.com/dev/moving-back-to-hugo/</link><pubDate>Tue, 06 Jul 2021 15:16:36 +0530</pubDate><guid>https://pranshugaba.com/dev/moving-back-to-hugo/</guid><description>
-I switched to Nuxt not more than 2 months ago. Now, I am back to using Hugo, and intend to do so for the forseeable future.
-&lt;p>&lt;a href="https://pranshugaba.com/dev/moving-back-to-hugo/">Read more&lt;/a>&lt;/p></description></item><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/dev/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/building-x-and-o-using-godot/</guid><description>
-If you want to learn game development but do not know where to start, then this guide is for you. Learn game development using the Godot game engine by making an X and O game.
-&lt;p>&lt;a href="https://pranshugaba.com/dev/building-x-and-o-using-godot/">Read more&lt;/a>&lt;/p></description></item><item><title>Moving my site from Hugo to Nuxt.js...</title><link>https://pranshugaba.com/dev/moving-from-hugo-to-nuxt/</link><pubDate>Tue, 11 May 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/moving-from-hugo-to-nuxt/</guid><description>
-I previously built my site using Hugo with the Academic theme. It felt restrictive, so I tried out various static site generators and chose Nuxt.js.
-&lt;p>&lt;a href="https://pranshugaba.com/dev/moving-from-hugo-to-nuxt/">Read more&lt;/a>&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dev posts by Pranshu Gaba</title><link>https://pranshugaba.com/dev/</link><description>Posts about GameDev and WebDev</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 05 Aug 2021 18:49:14 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Colour Shortcode</title><link>https://pranshugaba.com/dev/hugo-colour-shortcode/</link><pubDate>Wed, 21 Jul 2021 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/hugo-colour-shortcode/</guid><description>
+<![CDATA[<p>I was writing a <a href="https://pranshugaba.com/dev/moving-back-to-hugo/">post about my new Hugo website</a>, and I wanted to describe the colours used on this site. I wrote the names of the colours, but names do not convey the colour very well. Can you imagine what the colour #714825 looks like? What about rgb(0, 100, 255)?</p>
+<p>I thought it would be great if the reader could also see a preview of the colours. I could add images of the colours that I am describing, but that is a lot of work and not very flexible.  This is what led me to write this Hugo shortcode. I followed the <a href="https://gohugo.io/templates/shortcode-templates/" target="_blank" rel="noopener">Hugo docs on shortcodes</a> for reference.</p>
+<h2 id="usage">Usage</h2>
+<p>The following code in markdown
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">This is a colour shortcode {{&lt; colour &#34;#ff0000&#34; &gt;}}.</code></pre></div></p>
+<p>renders as</p>
+<p>This is a colour shortcode 
+<code style="background-color: #ff0000;"> 
+<span style="color: #ff0000;filter:  grayscale(1) invert(1) contrast(100);">#ff0000</span></code>.</p>
+<p>This works with all valid CSS colour syntaxes, not just hexcodes. Here are some examples:</p>
+<ul>
+<li>
+<code style="background-color: #714285;"> 
+<span style="color: #714285;filter:  grayscale(1) invert(1) contrast(100);">#714285</span></code></li>
+<li>
+<code style="background-color: rgb(0, 100, 255);"> 
+<span style="color: rgb(0, 100, 255);filter:  grayscale(1) invert(1) contrast(100);">rgb(0, 100, 255)</span></code></li>
+<li>
+<code style="background-color: hsl(37.1, 100%, 91.8%);"> 
+<span style="color: hsl(37.1, 100%, 91.8%);filter:  grayscale(1) invert(1) contrast(100);">hsl(37.1, 100%, 91.8%)</span></code></li>
+<li>
+<code style="background-color: aquamarine;"> 
+<span style="color: aquamarine;filter:  grayscale(1) invert(1) contrast(100);">aquamarine</span></code></li>
+</ul>
+<h2 id="shortcode">Shortcode</h2>
+<p>I created a file named <code>colour.html</code> in <code>layouts/shortcodes</code>, and added the following code in it. We can now access this code in any markdown file using the <code>colour</code> shortcode.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> <span style="color:#5bc4bf">:=</span> .<span style="color:#06b6ef">Get</span> <span style="color:#f99b15">0</span> | <span style="color:#06b6ef">safeCSS</span> }}
+&lt;<span style="color:#06b6ef">code</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;background-color: {{ $colour }};&#34;</span>&gt; 
+  &lt;<span style="color:#06b6ef">span</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;
+</span><span style="color:#48b685">      color: {{ $colour }};
+</span><span style="color:#48b685">      filter:  grayscale(1) invert(1) contrast(100);
+</span><span style="color:#48b685">      &#34;</span>&gt;
+      {{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> }}
+  &lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">span</span>&gt;
+&lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">code</span>&gt;
+</code></pre></div><p>The shortcode takes in an argument: <code>$colour</code>.  We use this parameter to set the text in the <code>code</code> tag, and we set both the text colour and the background colour to <code>$colour</code>. We then invert the colour of the text and increase the contrast to make the name of the colour legible. The end result is that the text is white if colour is bright, and black if it is dark.</p>
+<aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>While the shortcode syntax is specific to Hugo, most templating languages have a way to pass in variables. It should be possible to adapt this code for the templating language that you use.</p>
+        
+    </div>
+</aside>
+<h2 id="limitations">Limitations</h2>
+<p>This works well in most cases, but it has some limitations.</p>
+<ul>
+<li>
+<p>When the luminosity of the colour is close to 50% and the saturation is low, neither black nor white text has enough contrast with the chosen colour, and the text is not as legible. Example: 
+<code style="background-color: hsl(180, 10%,  50%);"> 
+<span style="color: hsl(180, 10%,  50%);filter:  grayscale(1) invert(1) contrast(100);">hsl(180, 10%,  50%)</span></code></p>
+</li>
+<li>
+<p>The text is not legible when the colour is transparent. This is because the text is transparent too, and does not have enough contrast with the background. Example: 
+<code style="background-color: rgba(120, 0, 240, 0.3);"> 
+<span style="color: rgba(120, 0, 240, 0.3);filter:  grayscale(1) invert(1) contrast(100);">rgba(120, 0, 240, 0.3)</span></code></p>
+</li>
+</ul>
+<h2 id="alternate-style">Alternate style</h2>
+<p>Here&rsquo;s another style of previewing colours.</p>
+<ul>
+<li>
+<code>
+<span
+    style="display: inline-block;
+    width: 1.6ch;
+    height: 1.6ch;
+    border-radius: 0.1rem;
+    background-color: #714285;
+    margin-right:5px;"
+    ></span>#714285</code>
+</li>
+<li>
+<code>
+<span
+    style="display: inline-block;
+    width: 1.6ch;
+    height: 1.6ch;
+    border-radius: 0.1rem;
+    background-color: rgb(0, 100, 255);
+    margin-right:5px;"
+    ></span>rgb(0, 100, 255)</code>
+</li>
+<li>
+<code>
+<span
+    style="display: inline-block;
+    width: 1.6ch;
+    height: 1.6ch;
+    border-radius: 0.1rem;
+    background-color: hsl(37.1, 100%, 91.8%);
+    margin-right:5px;"
+    ></span>hsl(37.1, 100%, 91.8%)</code>
+</li>
+<li>
+<code>
+<span
+    style="display: inline-block;
+    width: 1.6ch;
+    height: 1.6ch;
+    border-radius: 0.1rem;
+    background-color: aquamarine;
+    margin-right:5px;"
+    ></span>aquamarine</code>
+</li>
+</ul>
+<p>The text is always legible, but the colour preview is smaller.</p>
+<p>Here&rsquo;s the shortcode for this style:</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> <span style="color:#5bc4bf">:=</span> .<span style="color:#06b6ef">Get</span> <span style="color:#f99b15">0</span> | <span style="color:#06b6ef">safeCSS</span> }}
+&lt;<span style="color:#06b6ef">code</span>&gt;
+&lt;<span style="color:#06b6ef">span</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;display: inline-block;
+</span><span style="color:#48b685">    width: 1.6ch;
+</span><span style="color:#48b685">    height: 1.6ch;
+</span><span style="color:#48b685">    border-radius: 0.1rem;
+</span><span style="color:#48b685">    background-color: {{ $colour }};
+</span><span style="color:#48b685">    margin-right:5px;&#34;</span>&gt;&lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">span</span>&gt;
+    {{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> }}
+&lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">code</span>&gt;
+</code></pre></div><hr>
+<p><a href="https://pranshugaba.com/contact/">Let me know</a> if you liked this shortcode, and which style you liked more. Feel free to use this code in your site and share your implementation with me. If you have any suggestions to improve this code, share those with me too.</p>
+]]></description></item><item><title>...and Back to Hugo Again</title><link>https://pranshugaba.com/dev/moving-back-to-hugo/</link><pubDate>Tue, 06 Jul 2021 15:16:36 +0530</pubDate><guid>https://pranshugaba.com/dev/moving-back-to-hugo/</guid><description>
+<![CDATA[<p>Not more than 2 months ago, I had migrated my site from Hugo to Nuxt, and I had <a href="https://pranshugaba.com/dev/moving-from-hugo-to-nuxt/">written a post</a> describing why I chose to do so. Well, that didn&rsquo;t last long, and now I am back to using Hugo.</p>
+<h2 id="my-short-experience-with-nuxt">My (short) experience with Nuxt</h2>
+<p>I had added many features to my site in Nuxt. I was happy with my progress; my site looked so pretty and colourful!</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <source srcset="https://pranshugaba.com/dev/moving-back-to-hugo/nuxt-website-dark.webp" media="(prefers-color-scheme: dark)">
+    <img src="https://pranshugaba.com/dev/moving-back-to-hugo/nuxt-website-dark.webp" alt="This is how my Nuxt website looked  like." class="dark-image">
+    <img src="https://pranshugaba.com/dev/moving-back-to-hugo/nuxt-website-light.webp" alt="This is how my Nuxt website looked  like." class="light-image">
+    
+    
+    
+    <figcaption>
+        
+        
+            This is how my Nuxt website looked  like.
+            
+            
+            
+        
+    </figcaption>
+    
+</figure>
+
+<p>I used <a href="https://tailwindcss.com/" target="_blank" rel="noopener">TailwindCSS</a> to style my site, and it was amazing not having to think of class names anymore. It was easy to prototype and iterate over different styles quickly, even if it meant having a dirty HTML code overriden with dozens of classes.</p>
+<p>Another thing I loved about Nuxt is that it is based on Vue, and therefore I could make reusable components for different parts of my site. Almost everything on my site was a component: header, footer, links, figures, headings, author bios, pagination, even the dark mode switch. To make my website, I had to design the components and then assemble them together, just like Lego! It was so much fun.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <source srcset="https://pranshugaba.com/dev/moving-back-to-hugo/components-dark.webp" media="(prefers-color-scheme: dark)">
+    <img src="https://pranshugaba.com/dev/moving-back-to-hugo/components-dark.webp" alt="Some of the components in my Nuxt website" class="dark-image">
+    <img src="https://pranshugaba.com/dev/moving-back-to-hugo/components-light.webp" alt="Some of the components in my Nuxt website" class="light-image">
+    
+    
+    
+    <figcaption>
+        
+        
+            Some of the components in my Nuxt website
+            
+            
+            
+        
+    </figcaption>
+    
+</figure>
+
+<p>Once I finished adding features to my site, I wrote a tutorial on game development: <a href="https://pranshugaba.com/dev/building-x-and-o-using-godot/">Building an X and O game in Godot</a>. It was a long article &ndash; about 7000 words long &ndash; and it was filled with notes, figures, and codefences. With a post this big, I was beginning to face performance issues.</p>
+<p>The site was taking too long to build. The initial build of the site would take more than 17 seconds to complete, and the server would take up about 1.5 GB of memory. I found out that one of the main offenders was Tailwind. I switched Tailwind to JIT mode, and the startup build time reduced to 6 seconds. But this increased again as I added custom styling.</p>
+<p>I could live with the long build times, but I also noticed issues on my website, especially on mobile. I had a dark theme toggler in my website, and toggling the theme on mobile was taking a good second or two, and was causing frame drops.</p>
+<p>Another issue I was facing was related to prefetching. As I have mentioned before, Nuxt prefetches links, so when you click on an link, the page appears to load almost instantly. While the page was loading very quickly, it did not load completely rendered. A lot of content loaded after a while as the components hydrated. This was causing layout shifts, which was annoying, distracting, and terrible experience for the user. I would rather the page take half a second to load, but it loads completely without any layout shift.</p>
+<p>Yet another issue with using generators such as Next and Nuxt is that the first time a user visits my site, they have to download a big Javascript bundle. This greatly increases the total blocking time and the time to Largest Contentful Paint during a user&rsquo;s first visit, which is arguably the most important visit.</p>
+<p>I was missing the simplicity and speed of Hugo, so I decided to give Hugo another go.</p>
+<h2 id="my-new-site-built-with-hugo">My new site built with Hugo</h2>
+<p>I had a not-so-great experience with a readymade theme before, so this time I decided to write my own theme. I decided I would keep my site simple so it is easy to maintain and not too distracting to look at.</p>
+<p>My site uses only two colours: 
+<code style="background-color: papayawhip;"> 
+<span style="color: papayawhip;filter:  grayscale(1) invert(1) contrast(100);">papayawhip</span></code> and 
+<code style="background-color: #121212;"> 
+<span style="color: #121212;filter:  grayscale(1) invert(1) contrast(100);">#121212</span></code>. Every element has one of these two colors. This makes the colour part of the CSS very simple, and I was also able to write the dark theme in no time.</p>
+<p>I love this simple design; I think it looks crisp and clear with no distractions. The content is legible with enough contrast between the foreground and the background, much like a road sign.</p>
+
+<figure class="small">
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/moving-back-to-hugo/road-sign.webp" >
+    
+    
+    
+</figure>
+
+<p>I also love the creative decisions that I have to take when I have just two colours at my disposal. There are no box-shadows, no transparency, and no colour (except for images) on this site. Any component on the site must use exactly one of the two colours in the palette.</p>
+<p>I am no longer using Tailwind to style the site; I am using <a href="https://sass-lang.com/" target="_blank" rel="noopener">Sass</a> now. I do have to think of class names for each class, but using the BEM methodology helps. While Tailwind has most of the CSS features, it still lacks many newer CSS properties. I can now use all CSS properties now such as underline-offset, smooth scrolling, scroll-padding-top, etc.</p>
+<p>In Sass, we can split our CSS into different modules to make it more organised and easy to maintain. We can combine the modules using the <code>@use</code> directive, or the deprecated <code>@import</code> directive. I wanted to use  <code>@use</code> instead of  <code>@import</code>,  but it is only available in Dart Sass, which Hugo does not support  as of writing.  So, what I do is I write in Dart Sass and live compile it. Hugo only gets the compiled CSS file.</p>
+<p>While I can no longer use Vue components, Hugo has templates, partials, and shortcodes that help me avoid repeating code.</p>
+<p>Performance wise, this site now scores perfectly on Lighthouse tests. It builds in ~150ms, which is really impressive.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>While Nuxt is powerful, it is too powerful for a simple site like mine which has just text and images. I feel Hugo is more than enough for my needs.</p>
+<p>I like my stack now. It is boring, and that&rsquo;s a good thing. I have redesigned my site twice in the last three months, and have spent hardly any time writing content. I am done adding new features to this site now.  I might polish up the code and publish it as a theme on <a href="https://themes.gohugo.io/" target="_blank" rel="noopener">Hugo themes</a>. Everything has been setup for me to write content and post it. I just need to start writing now.</p>
+<p>I have moved my Nuxt website to the nuxt subdomain, and it will remain there for posterity. I won&rsquo;t be making any changes to it. I will publish new  posts on my new website only.</p>
+]]></description></item><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/dev/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/building-x-and-o-using-godot/</guid><description>
+<![CDATA[<aside class="toc">
+    <h3 class="toc__heading">
+        Table of Contents
+    </h3>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a>
+      <ul>
+        <li><a href="#about-godot">About Godot</a></li>
+      </ul>
+    </li>
+    <li><a href="#setting-things-up">Setting things up</a>
+      <ul>
+        <li><a href="#planning-the-game">Planning the game</a></li>
+        <li><a href="#the-gameplay-loop">The gameplay loop</a></li>
+        <li><a href="#project-setup">Project setup</a></li>
+        <li><a href="#importing-assets">Importing assets</a></li>
+      </ul>
+    </li>
+    <li><a href="#building-the-interface">Building the interface</a>
+      <ul>
+        <li><a href="#labels">Labels</a></li>
+        <li><a href="#the-grid">The Grid</a></li>
+      </ul>
+    </li>
+    <li><a href="#implementing-the-logic">Implementing the logic</a>
+      <ul>
+        <li><a href="#storing-the-state-of-the-game">Storing the state of the game</a></li>
+        <li><a href="#listening-for-clicks-using-signals">Listening for clicks using signals</a></li>
+        <li><a href="#executing-a-turn-of-the-game">Executing a turn of the game</a></li>
+        <li><a href="#checking-for-wins-and-draws">Checking for wins and draws</a></li>
+        <li><a href="#starting-a-new-game">Starting a new game</a></li>
+      </ul>
+    </li>
+    <li><a href="#finishing-up">Finishing up</a>
+      <ul>
+        <li><a href="#exporting-the-game">Exporting the game</a></li>
+        <li><a href="#next-steps">Next steps</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</aside>
+<h2 id="introduction">Introduction</h2>
+<p>Do you love playing video games? I sure do! I enjoy making games too, and it&rsquo;s highly likely that you would too.
+Game development is an umbrella term for ranging from designing levels, mechanics to coding the logic to making art and music.
+It has a little something for everyone. If you would like to learn how to make games, then this guide is a great place to start, if I do say so myself.</p>
+<p>In this guide, we will make an X and O game using Godot.
+This is a great first game to make as it is not too complex, and yet it
+covers many important aspects of game development.</p>
+<p>We will look at some of the most important programming paradigms in game development.
+We will learn how to make games using Godot.</p>
+<p>There are no prerequisites, except for critical thinking, reasoning, and basic computer skills. Prior programming experience is helpful, but not necessary.
+The goal of the guide is to get you comfortable with using Godot to build simple games.</p>
+<p>By the end of this guide, you will be able to:</p>
+<ul>
+<li>Design a gameplay loop for the game</li>
+<li>Create a complete working game
+<ul>
+<li>Display images and text in the game</li>
+<li>Keep track of the state of the game</li>
+<li>Listen for clicks in an area</li>
+<li>Detect and respond to keyboard presses</li>
+<li>Create, emit, and connect signals</li>
+<li>Decide and check win conditions of a game</li>
+</ul>
+</li>
+<li>Export your game and share it with others</li>
+</ul>
+<h3 id="about-godot">About Godot</h3>
+<p>We will use Godot &ndash; an amazing game engine &ndash; to make our game.
+A game engine is software that handles and integrates various aspects of game development: graphics, physics, logic, sound, interface, input, and more.
+Some other popular game engines are Unity and Unreal.
+I will describe some advantages that Godot has over them.</p>
+<ul>
+<li>
+<p>Godot is free and open-source.
+You can visit <a href="https://github.com/godotengine/godot" target="_blank" rel="noopener">Godot&rsquo;s GitHub page</a> and look at Godot&rsquo;s source code. You can study how it&rsquo;s made and how it works.
+You can report bugs and contribute to the codebase yourself.</p>
+</li>
+<li>
+<p>Any game that you make using Godot belongs to you, and any profit you make is yours to keep. This is not the case with most other game engines.</p>
+</li>
+<li>
+<p>Godot works on Windows, macOS, and Linux. In particular, Godot has first-class support for
+Linux. Since I primarily use Linux, this is perfect for me.</p>
+</li>
+<li>
+<p>Godot is lightweight. Godot is only a 35 MB download, it starts up in seconds, and is very light on CPU and memory.</p>
+</li>
+<li>
+<p>Godot is a joy to use. The UI is simple and shows you only what you need to see, allowing you to focus on your work. It is also customisable: you can change the colour scheme and the fonts of the editor as you please.</p>
+</li>
+</ul>
+<p>You can download Godot for free from <a href="https://godotengine.org/download" target="_blank" rel="noopener">Godot&rsquo;s website</a>. We will write code in GDScript and not C#, so we do not need the Mono version. Select
+your operating system, download the Standard version, and extract
+and run!</p>
+<aside class="admonition  aside ">
+    <div class="admonition__title">
+        Aside
+    </div>
+	<div class="admonition__content">
+        
+            <p>btw, I use arch.  If you use Arch Linux, installing Godot is even easier.  Just <code>pacman -S godot</code>!</p>
+        
+    </div>
+</aside>
+<p>This guide uses Godot 3.3.2, the latest stable version available at the time
+of writing. Godot tries to maintain backward compatibility, so this guide should work for future versions of Godot 3 as well.</p>
+<p>The complete code of the finished version of the game is available on my GitHub page.
+If you face any issue, if something&rsquo;s not working, you can compare your code with it.
+You can also play the final version game to see how it works on my itch.io page.</p>
+<p>Let&rsquo;s get started!</p>
+<h2 id="setting-things-up">Setting things up</h2>
+<h3 id="planning-the-game">Planning the game</h3>
+<p>Before we start any work on a game in Godot, it is important to plan out how the game would look and behave. Having a concrete picture of the game in mind will help us when we develop the game in Godot.</p>
+<p>Here are some helpful questions that we can ask:</p>
+<ul>
+<li>What is the genre/theme of the game?</li>
+<li>What is the name of the game?</li>
+<li>How many players can play the game? (single-player or multiplayer)</li>
+<li>What are the objectives of the game?</li>
+<li>What device will it be played on?</li>
+<li>How does the user interact with the game?</li>
+<li>How does the user interface look like?</li>
+<li>What happens in a typical gameplay?</li>
+<li>How long does a gameplay session last?</li>
+</ul>
+<p>This list isn&rsquo;t exhaustive, but it gets you thinking about most major details of the game. The answers to these questions will directly impact the decisions you take when you develop the game. For example,</p>
+<ul>
+<li>The theme of the game will affect the choice of your art, sound, and music.</li>
+<li>A multiplayer game will have different input systems and networking requirements compared to a single-player game.</li>
+<li>Games developed for mobile will have a different interface compared to games developed for desktop.</li>
+</ul>
+<aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>Of course, the answers to these questions are not fixed; they will most likely change as you work on the game. As you build the game and test it, you might find that a feature you had planned doesn&rsquo;t do well in practice.</p>
+<ul>
+<li>You might come up with a better alternative during development.</li>
+<li>Your idea might be too complex to explain to the player.</li>
+<li>It might not be as exciting as you thought it would be.</li>
+<li>It might be hard to implement because of some technical limitations.</li>
+</ul>
+<p>Be open to making changes to your game as you work on it.</p>
+
+        
+    </div>
+</aside>
+<p>Let&rsquo;s answer these questions for our X and O game.</p>
+<ul>
+<li>It is a puzzle game. It is bright and colourful.</li>
+<li>We will call it &ldquo;X and O&rdquo;.</li>
+<li>It is played by two players.</li>
+<li>The objective of the player is to place three of the same symbol in a row, column, or diagonal.</li>
+<li>It can be played on desktop.</li>
+<li>The player clicks on the squares to enter symbols.</li>
+<li>I have made a rough sketch how the interface would look like. This will be a simple game with just one scene. In more complex games, we would need more scenes.
+
+<figure class="diagram">
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/sketch.png" alt="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play.">
+    
+    
+    
+    <figcaption>
+        
+        
+            We have the game title, some instructions, the grid, and some labels to show whose turn it is to play.
+            
+            
+            
+        
+    </figcaption>
+    
+</figure>
+</li>
+<li>We will describe the gameplay loop using a flowchart. It will also tell us how long a session will last.</li>
+</ul>
+<h3 id="the-gameplay-loop">The gameplay loop</h3>
+<p>We want to write down how the state of the game changes as the player plays the game.
+We want to explicitly state how the game receives inputs, what decisions it takes, what changes it makes, and how all of these relate to each other.</p>
+<p>&ldquo;X and O&rdquo; is a small and simple game, so its gameplay loop is simple too.</p>
+
+<figure class="diagram">
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/gameloop.png" alt="The gameplay loop">
+    
+    
+    
+    <figcaption>
+        
+        
+            The gameplay loop
+            
+            
+            
+        
+    </figcaption>
+    
+</figure>
+
+<p>To summarise:</p>
+<ul>
+<li>When the game starts, we listen for clicks on the grid.</li>
+<li>When the player clicks on a cell, we show the appropriate symbol in that cell.</li>
+<li>We then compute if someone has won. If not, then we check if the game has drawn.</li>
+<li>If the game has ended (by a win or a draw), then we display the name of the winner and give an option to start a new game. Otherwise, we go back to listening for clicks.</li>
+</ul>
+<p>Each round of the game lasts no more than a minute. Players may play multiple rounds in a session.</p>
+<p>Now that we have a good picture of how the game would work, we are ready to start working in Godot.</p>
+<h3 id="project-setup">Project setup</h3>
+<p>Open Godot and create a new project. We will call it <code>x-and-o</code>. Choose an empty folder to save the project in, preferably with the same name as the game.
+Select &ldquo;Create &amp; Edit&rdquo; to create the project.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/create-project.png" >
+    
+    
+    
+</figure>
+
+<p>By default, when we start a new project, Godot starts in 3D mode. We are making a 2D game, so switch to 2D mode by clicking on &ldquo;2D&rdquo; at the top. The default shortcut to enter 2D mode is <kbd>Ctrl</kbd> + <kbd>F1</kbd>.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/2d-mode.png" alt="Click on 2D.">
+    
+    
+    
+    <figcaption>
+        
+        
+            Click on 2D.
+            
+            
+            
+        
+    </figcaption>
+    
+</figure>
+
+<p>Screens come in a variety of shapes and sizes. Some are square, some are tall, some are wide.
+We want our game to render correctly on all screens.
+Since this is our first game, we will keep it simple.
+We will target a fixed resolution, so we do not have to worry about making the layout responsive.</p>
+<p>To achieve this, open Project -&gt; Project Settings.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/project-settings-menu.png" >
+    
+    
+    
+</figure>
+
+<p>In the General tab, look for the section named &ldquo;Window&rdquo; in &ldquo;Display&rdquo;.</p>
+<ul>
+<li>Set <code>Width</code> to <code>1280</code> and <code>Height</code> to <code>720</code>. This sets the aspect ratio of the game to 16:9, the most common aspect ratio for screens.</li>
+<li>In the same section, scroll down to &ldquo;Stretch&rdquo;, and set <code>Mode</code> to <code>2d</code> and <code>Aspect</code> to <code>keep</code>. Now, if the aspect ratio of the screen is not 16:9, then Godot will not distort the content. It will pad the content with black bars instead.</li>
+</ul>
+<p>This way our game looks reasonably good on all screens with minimal effort. We will learn how to make a responsive layout another time.</p>
+<p>By default, the background colour of the game is dark grey. Let&rsquo;s change the background colour. In the same &ldquo;General&rdquo; tab of project settings, go to Rendering -&gt; Environment -&gt; Default Clear Colour.
+As mentioned before, I want the game to be bright and colourful.
+I set it to <code>#ffffff</code>, which is the hex code for white. Feel free to choose a colour that goes with your theme.</p>
+<h3 id="importing-assets">Importing assets</h3>
+<p>Looking at the sketch interface, we see that we need to display some X&rsquo;s, some O&rsquo;s, and the grid on the screen.
+We would load the images for these in Godot.
+We show some text in our game, and we will need to load a nice font for it.</p>
+<p>I have made an assets folder that you can use to make the game. It contains <code>x.png</code>, <code>o.png</code>, <code>grid.png</code>, and <code>Inter-Regular.ttf</code>.
+You can <NavExtLink to="/">download my assets</NavExtLink>, or you can make your own.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/sprites.png" >
+    
+    
+    
+</figure>
+
+<aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>I made the png files for X, O, and the grid using <a href="https://inkscape.org/">Inkscape</a>. It is an excellent application for making vector art. It is free software, and I highly recommend it.</p>
+        
+    </div>
+</aside>
+<p>I have included the <code>Inter</code> font in the assets. I chose this font because it looks sharp even at low resolutions and it goes well with the &ldquo;X&rdquo; and &ldquo;O&rdquo; sprites that I have made. You can use any font that goes with your theme.</p>
+
+<figure class="diagram">
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/font.png" >
+    
+    
+    
+</figure>
+
+<aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>You can get fonts on websites such as <a href="https://fonts.google.com/">Google fonts</a> and <a href="https://www.dafont.com/theme.php?cat=501&amp;l%5B%5D=10">dafont.com</a>. Make sure you have the rights to use the font you choose.</p>
+        
+    </div>
+</aside>
+<p>We need to add these assets to our project in Godot.
+Make an <code>assets</code> folder in your game&rsquo;s root folder <code>x-and-o</code> using your file manager. (Use File Explorer if you are using Windows, Finder if you are on macOS). Move the sprites and the font in it.
+When you open Godot, you will see those files in the FileSystem tab.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/filetree.png" >
+    
+    
+    
+</figure>
+
+<h2 id="building-the-interface">Building the interface</h2>
+<p>We have imported all the resources that we need in Godot. We can now start building the user interface.</p>
+<p>Whether we want to display an image, play a sound, or display some text in Godot, we do so by adding a node for it. A Godot game is made by composing together different kinds of nodes.</p>
+<aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>Read the <a href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/scenes_and_nodes.html">Godot docs on Scenes and Nodes</a> to understand how they work.</p>
+        
+    </div>
+</aside>
+<p>We will add a root node that will hold all nodes in our game.
+Click on <code>Create root node</code> -&gt; <code>2D node</code> in the Scene tab. This will create a root node named <code>Node2D</code>. Rename it to <code>Game</code>.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/root-node.png" >
+    
+    
+    
+</figure>
+
+<p>Now that we have a root node, we can save the scene and run the game. Save the scene by pressing <kbd>Ctrl</kbd>+<kbd>S</kbd>.
+Make a <code>scenes</code> folder in the root directory and save this scene in it as <code>Game.tscn</code>.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/save-game-scene.png" >
+    
+    
+    
+</figure>
+
+<aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>Scenes are saved with the <code>.tscn</code> file extension.</p>
+        
+    </div>
+</aside>
+<p>Run the game by clicking the play button (or press <kbd>F5</kbd>). The first time you run the game, Godot will ask you to set the main scene. The main scene is the scene that loads when you run the game. Select the <code>Game.tscn</code> scene we just saved.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/play-button.png" >
+    
+    
+    
+</figure>
+
+<p>Of course, we haven&rsquo;t added anything to our scene yet, so we only see a blank screen when the game is run.
+Close the window (or press <kbd>F8</kbd>) to stop the preview.</p>
+<p>We look to our sketch to help us build the interface. We need a grid, some X&rsquo;s, some O&rsquo;s, and some text labels.</p>
+<p>Let&rsquo;s start with the labels because they are simpler.</p>
+<h3 id="labels">Labels</h3>
+<p>We can display text in a game with a <code>Label</code> node. Select <code>Game</code> and click on the plus icon to add a child node. In the &ldquo;Create New Node&rdquo; dialog that appears, search for <code>Label</code>, and click on &ldquo;Create&rdquo;.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/label-node.png" >
+    
+    
+    
+</figure>
+
+<p>A <code>Label</code> node appears as a child of <code>Game</code> in the scene tab.
+Rename the name of this node to <code>GameName</code> because that&rsquo;s what it is.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/scene-tree-gamename.png" >
+    
+    
+    
+</figure>
+
+<p>We do not see any change in our game because the label has no text. We can add/edit the text of the <code>Label</code> by editing the <code>Text</code> property in the inspector tab. This label will display the name of the game: &ldquo;X and O&rdquo;. Change the text of the label to &ldquo;X and O&rdquo;.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/inspector-label-text.png" >
+    
+    
+    
+</figure>
+
+<p>The label is hard to read: it is small and is white on a white background. We will fix this by using a custom font.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/label-bad.png" >
+    
+    
+    
+</figure>
+
+<p>In the inspector tab, in <code>Custom Fonts</code>, enable the Font property. Click on Empty -&gt; New DynamicFont.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/new-dynamic-font.png" >
+    
+    
+    
+</figure>
+
+<p>Click on &ldquo;Dynamic Font&rdquo; to show some additional settings. In Font -&gt; Font Data, click on Empty -&gt; Load and select your font file. We can adjust the font size in <code>Settings</code>. We would like the name of the game to be big, so I set the font size to <code>96</code>. We can also change the font colours in Custom Colours -&gt; Font colours. Play with the parameters until you have happy with the appearance.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/dynamic-font.png" >
+    
+    
+    
+</figure>
+
+<p>We have three more labels to show in our interface. Repeat this process three times to end up with a total of four labels.
+I made three new <code>Label</code> nodes with names <code>WinCondition</code>, <code>PlayerTurn</code>, and <code>PlayerInstruction</code>. My game looks like this now.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/four-labels.png" >
+    
+    
+    
+</figure>
+
+<aside class="admonition  tip ">
+    <div class="admonition__title">
+        Tip
+    </div>
+	<div class="admonition__content">
+        
+            <p>Enable &ldquo;Grid Snap&rdquo; in the toolbar to make it easier to align items.</p>
+<p><img src="img/grid-snap.png" alt=""></p>
+
+        
+    </div>
+</aside>
+<p>Our text looks good. Next, we will add the grid.</p>
+<h3 id="the-grid">The Grid</h3>
+<p>The grid is a bit more complex. In addition to showing the grid, we also need to listen for clicks and display an &ldquo;X&rdquo; or &ldquo;O&rdquo; in each of the nine cells.</p>
+<p>Create a 2D node and name it <code>Grid</code>. We will store all nodes related to the grid as children of this node. This will make our <code>Game</code> scene more organised.</p>
+<p>We can show images in Godot using the <code>Sprite</code> node.
+Add a child node to <code>Grid</code> of type <code>Sprite</code>, and rename the node to <code>GridSprite</code>.
+We do not see any change in our game because the sprite does not have a texture. Drag and drop <code>grid.png</code> from the FileSystem to the <code>Texture</code> property of the sprite.</p>
+<p>We can see the grid in our game now, but it&rsquo;s too big for our screen. We need to scale it down.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/large-grid.png" >
+    
+    
+    
+</figure>
+
+<p>In <code>GridSprite</code>, in transform, set the Scale to <code>0.3</code> and <code>0.3</code>.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/scale-grid.png" >
+    
+    
+    
+</figure>
+
+<p>The grid fits in the screen now.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/correct-grid.png" >
+    
+    
+    
+</figure>
+
+<p>We want to be able to detect clicks.
+We can detect clicks in an area using the <code>Area2D</code> node. We will have nine <code>Area2D</code> nodes, one for each cell of the grid.</p>
+<p>First, let&rsquo;s add one <code>Area2D</code> node as a child of <code>Grid</code>, and rename it to <code>GridCell</code>. This gives
+a yellow warning symbol. Hover over it, and it tells us to add a <code>CollisionShape2D</code> as a child.
+We get this warning because we have an <code>Area2D</code> node, but we haven&rsquo;t defined its area. Add a <code>CollisionShape2D</code> as a child of <code>GridCell</code> to remove this warning.</p>
+<p>The <code>CollisionShape2D</code> now shows a warning: it needs a shape to function. Our cells are squares, so we select New RectangleShape2D in the inspector tab.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/new-rectangle-2d.png" >
+    
+    
+    
+</figure>
+
+<p>Resize and move the blue area so it covers one of the grid cells.
+Using Grid Snap will make it easier to fit the CollisionShape2D on the cell perfectly.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/collision-shape.png" >
+    
+    
+    
+</figure>
+
+<p>We would like to show &ldquo;X&rdquo; and &ldquo;O&rdquo; symbols in the cells when the game is played. Recall that we show images using the <code>Sprite</code> node.
+Add a <code>Sprite</code> as a child of <code>GridCell</code>, and rename it to <code>CellSymbol</code>. Choose the texture as <code>x.png</code>. If you are using my assets, you will need to scale it to <code>0.3</code> and translate it by <code>96</code> and <code>96</code> to centre the image in the cell.</p>
+<p>Our <code>GridCell</code> node is ready. We could duplicate it nine times and our game would work.
+However, if we want to make any changes to this node in the future, we would have to apply the changes on all nine nodes. This is tedious at best, and a source for errors at worst.</p>
+<p>We solve this problem by saving the <code>GridCell</code> node as a scene. Then, anytime we want to use this node, we can create an instance of it. Any changes that we make to the <code>GridCell</code> scene will be reflected in all of its instances.</p>
+<p>To save the node as a scene, right-click on the node in the Scene tab, select &ldquo;Save Branch as Scene&rdquo;, and save it as <code>GridCell.tscn</code> in the <code>scenes</code> folder.</p>
+<p>The <code>GridCell</code> node has changed to an instance of the scene. You can see the new button now. Click on the &ldquo;Open in Editor&rdquo; button to edit it.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/open-scene.png" >
+    
+    
+    
+</figure>
+
+<p>Duplicate the node nine times. Move the nodes so we have one in each grid. Make sure to arrange them in order, because we will refer to them later when we want to detect win conditions. Also, rename <code>GridCell</code> to <code>GridCell1</code> for consistency.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/nine-gridcells.png" >
+    
+    
+    
+</figure>
+
+<p>The texture that we set in the sprite in <code>GridCell</code> appears nine times in the grid. If we change the texture of the sprite in the <code>GridCell</code> scene, say to <code>x.png</code>, then observe that the sprite of every cell in the grid changes to an &ldquo;X&rdquo;.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/grid-complete.png" >
+    
+    
+    
+</figure>
+
+<p>Since we start the game with the empty grid, we don&rsquo;t want any of the X&rsquo;s and O&rsquo;s to show initially. We will show them one by one, programmatically, when the players play the game. For now, remove the texture from the <code>CellSymbol</code> sprite in <code>GridCell</code> to get an empty grid.</p>
+<p>We have added all the nodes needed to make the game, but the game is still static and doesn&rsquo;t do much.
+We will now add the code to make it dynamic and interactive.</p>
+<h2 id="implementing-the-logic">Implementing the logic</h2>
+<p>We control the behaviour of nodes using scripting. Godot officially supports 4 languages for scripts: GDScript, VisualScript, C#, and C++. You can read more about them in <a href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/scripting.html" target="_blank" rel="noopener">Scripting docs</a></p>
+<p>We will write our scripts in GDScript. Its syntax is similar to Python.
+You can read the <a href="https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html" target="_blank" rel="noopener">Godot Docs for GDScript</a> for more information about GDScript.</p>
+<p>Click on the Attach Script button to attach a script to the <code>Game</code> node.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/attach-script.png" >
+    
+    
+    
+</figure>
+
+<p>This shows the &ldquo;Attach Script dialog&rdquo;.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/attach-script-dialog.png" >
+    
+    
+    
+</figure>
+
+<p>The default options are fine, click &ldquo;Create&rdquo;. This will create a file named <code>Game.gd</code>. This is where will write the logic for the game.
+The contents of this script will look like this.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">extends</span> <span style="color:#ef6155">Node2D</span>
+
+<span style="color:#776e71"># Declare member variables here. Examples:</span>
+<span style="color:#776e71"># var a = 2</span>
+<span style="color:#776e71"># var b = &#34;text&#34;</span>
+
+<span style="color:#776e71"># Called when the node enters the scene tree for the first time.</span>
+<span style="color:#815ba4">func</span> _ready():
+    <span style="color:#815ba4">pass</span> <span style="color:#776e71"># Replace with function body.</span>
+
+
+<span style="color:#776e71"># Called every frame. &#39;delta&#39; is the elapsed time since the previous frame.</span>
+<span style="color:#776e71">#func _process(delta):</span>
+<span style="color:#776e71">#    pass</span>
+</code></pre></div><aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>Lines starting with <code>#</code> are called comments. These are for humans to read and are ignored by the compiler.</p>
+<p>Write concise comments that will help anyone who reads your code understand how your code works. The person reading the code could also be you from the future, and Future You would thank you for the well-documented code.</p>
+
+        
+    </div>
+</aside>
+<p>The <code>_ready</code> method is called when the <code>Game</code> node and all its children have entered the scene tree and have become active. Therefore, any work that we want to do when the game starts, we do it in <code>_ready</code>.
+This mostly involves initialising variables.</p>
+<p>The <code>_process</code> method is called every frame. Anything that must be done every frame goes in <code>_process</code>. For example, in a platformer game, we would need to update the position of the character every frame, so we would calculate its position in <code>_process</code>. We won&rsquo;t use <code>_process</code> much in this game.</p>
+<p>Since the function <code>_ready</code> contains only <code>pass</code>, and <code>_process</code> is commented out, these functions don&rsquo;t do anything now.</p>
+<aside class="admonition  tip ">
+    <div class="admonition__title">
+        Tip
+    </div>
+	<div class="admonition__content">
+        
+            <p>You can <kbd>Ctrl</kbd>+Click on any inbuilt function to read its documentation. You can also search for help or open online docs directly from the script editor.</p>
+<p>If you find any Godot term unclear, refer to the <a href="https://docs.godotengine.org/en/stable/index.html">Godot docs</a>.</p>
+<p><img src="img/online-docs.png" alt=""></p>
+
+        
+    </div>
+</aside>
+<p>Let&rsquo;s look at the gameplay loop again. The game takes decisions based on the state of the game. We need a way to store the game&rsquo;s state.</p>
+<h3 id="storing-the-state-of-the-game">Storing the state of the game</h3>
+<p>What information would we like to save in a state? Given the state, we must be able to accurately make the decisions in our gameplay flowchart. We must be able to tell if someone has won, if the game has drawn or if it is still going on. In the last case, we must also be able to tell whose turn it is to play. We need to know the state of each cell in order to determine if someone has drawn or not.</p>
+<p>We will save the following information in our state:</p>
+<ul>
+<li><code>game_started</code>: Is a game in progress? If yes, then we need to listen for clicks and check for wins and draws. Otherwise, we need to show a &ldquo;Start New Game&rdquo; button.</li>
+<li><code>turns_played</code>: How many turns have been played so far? This value will help us check whether all cells have been filled, in which case the game has ended.</li>
+<li><code>player_turn</code>: We would like to store whose turn it is to play now. We will use this to determine if the next click should add an &ldquo;X&rdquo; or an &ldquo;O&rdquo;. We will also display this information to the players.</li>
+<li><code>cells</code>: For each cell in the grid, we need to store whether it is empty, has an &ldquo;X&rdquo; or an &ldquo;O&rdquo;.</li>
+</ul>
+<p>For each property, we will declare the variable and initialise it.
+We will declare the variables outside <code>_ready</code> so we can access them in other functions.
+We will initialise our variables in <code>_ready</code>.</p>
+<h4 id="game_started"><code>game_started</code></h4>
+<p>This variable tells us if a game is in progress.
+Once the scene is loaded, we are ready to play. We should begin listening for clicks and check for wins. We set <code>game_started</code> is <code>true</code> in <code>_ready</code>.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">var</span> game_started
+
+<span style="color:#815ba4">func</span> _ready():
+    game_started <span style="color:#5bc4bf">=</span> true   <span style="color:#776e71"># Game has started</span>
+</code></pre></div><h4 id="turns_played"><code>turns_played</code></h4>
+<p>We keep track of the number of turns played in <code>turns_played</code>.
+When the scene is loaded, no turn has been played so far, so we start <code>turns_played</code> with <code>0</code>.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">var</span> turns_played
+
+<span style="color:#815ba4">func</span> _ready():
+    <span style="color:#5bc4bf">...</span>
+    turns_played <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">0</span>   <span style="color:#776e71"># No turns played yet</span>
+</code></pre></div><h4 id="player_turn"><code>player_turn</code></h4>
+<p>The variable <code>player_turn</code> will store the name of the player whose turn it is to play. While we can give these players any name we wish, let&rsquo;s call them player <code>1</code> and player <code>-1</code>.
+This choice will make our work in the future easier.</p>
+<p>Player <code>1</code> will play first and will place X&rsquo;s. Player <code>-1</code> will go second and will place O&rsquo;s.
+Let&rsquo;s initialise <code>player_turn</code> in <code>_ready</code>.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">var</span> player_turn
+
+<span style="color:#815ba4">func</span> _ready():
+    <span style="color:#5bc4bf">...</span>
+    player_turn <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">1</span>  <span style="color:#776e71"># Player with &#39;X&#39; goes first</span>
+</code></pre></div><p>Once a player&rsquo;s turn ends, the other player gets to play. Therefore, the value of <code>player_turn</code> must change at the end of every turn.</p>
+<p>Let&rsquo;s write a function <code>change_player</code> function that changes the state of <code>player_turn</code>.
+We need to care about the details of how we change the player in this function only. Then, any time we want to change the player, we can call <code>change_player</code> without having to know how it works.
+This is called <NavExtLink to="https://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</NavExtLink>, and helps keep our code organised.</p>
+<p>Due to our choice of player names, this is function is a one-liner.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> change_player():
+    player_turn <span style="color:#5bc4bf">*=</span> <span style="color:#5bc4bf">-</span><span style="color:#f99b15">1</span>
+</code></pre></div><p>Calling <code>change_player</code> switches the value of <code>player_turn</code> from <code>1</code> to <code>-1</code> and vice versa.</p>
+<h4 id="cells"><code>cells</code></h4>
+<p>We need to store the state of each cell in the grid.
+The variable <code>cells</code> will be an array in which we store references to all <code>GridCell</code> nodes.
+We store these in an array so we can access them easily.
+We will be able to read/edit the properties of the nodes using these references.</p>
+<p>We get a reference to a node using the <code>get_node</code> method. To access a node, we pass the path of the node relative to the current node (the node that the script is attached to) to <code>get_node</code>.</p>
+<aside class="admonition  example ">
+    <div class="admonition__title">
+        Example
+    </div>
+	<div class="admonition__content">
+        
+            <p>Access the <code>Grid</code> node with <code>get_node(&quot;Grid&quot;)</code>.</p>
+<p>Access the <code>GridCell2</code> node with <code>get_node(&quot;Grid/GridCell2&quot;)</code>.</p>
+<p>Access the <code>CellSymbol</code> node of <code>GridCell3</code> with <code>get_node(&quot;Grid/GridCell3/CellSymbol&quot;)</code>.</p>
+
+        
+    </div>
+</aside>
+<aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>For more details, you can read the reference page for
+<a href="https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-get-node">get_node</a></p>
+        
+    </div>
+</aside>
+<p>Since accessing nodes is a common pattern in Godot, there is a shorthand notation for it. We can write <code>$Grid/GridSprite</code> instead of <code>get_node(&quot;Grid/GridSprite&quot;)</code>. We will follow this shorter notation from now on.</p>
+<aside class="admonition  tip ">
+    <div class="admonition__title">
+        Tip
+    </div>
+	<div class="admonition__content">
+        
+            <p>The Godot editor will help you autocomplete the name of the node as soon as you type the dollar symbol.
+Make sure the node your script is attached to is active.</p>
+<p><img src="img/autocomplete.png" alt=""></p>
+
+        
+    </div>
+</aside>
+<p>Once we have a reference to a node, we can manipulate it. Any changes that we can make in the Inspector tab, we can also make in our script. If you hover your mouse over any property in the inspector tab, you will see the name of the property that you can use in scripts.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/hover-property.png" >
+    
+    
+    
+</figure>
+
+<p>For example, if you want to hide the <code>GridSprite</code> when the game starts, you can do the following:</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> _ready():
+    <span style="color:#5bc4bf">$</span>Grid<span style="color:#5bc4bf">/</span>GridSprite<span style="color:#5bc4bf">.</span>visible <span style="color:#5bc4bf">=</span> false
+</code></pre></div><p>If you play the game now, the grid lines will not be visible.
+This is how we can control nodes from our scripts.
+(Let&rsquo;s undo this so the grid is visible when you play the game.)</p>
+<p>Now that we know how to access the <code>GridCell</code> nodes, we might try something like this:</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">var</span> cells
+
+<span style="color:#815ba4">func</span> _ready():
+    <span style="color:#5bc4bf">...</span>
+    <span style="color:#815ba4">var</span> cell1 <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">$</span>Grid<span style="color:#5bc4bf">/</span>GridCell1
+    <span style="color:#815ba4">var</span> cell2 <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">$</span>Grid<span style="color:#5bc4bf">/</span>GridCell2
+    <span style="color:#815ba4">var</span> cell3 <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">$</span>Grid<span style="color:#5bc4bf">/</span>GridCell3
+    <span style="color:#5bc4bf">...</span>
+    <span style="color:#815ba4">var</span> cell9 <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">$</span>Grid<span style="color:#5bc4bf">/</span>GridCell9
+
+    cells <span style="color:#5bc4bf">=</span> [cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9]
+</code></pre></div><p>This code works, but there is a lot of repetition. It is difficult to read it or make changes to it.
+If you find yourself repeating the same code a lot, there is probably a better way to write it.</p>
+<aside class="admonition  tip ">
+    <div class="admonition__title">
+        Tip
+    </div>
+	<div class="admonition__content">
+        
+            <p><a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">Don&rsquo;t repeat yourself</a> too often.</p>
+        
+    </div>
+</aside>
+<p>We <em>can</em> do better. We can make use of the <NavExtLink to="https://docs.godotengine.org/en/stable/classes/class_node.html?#class-node-method-get-children">get_children</NavExtLink> method. This method takes as an argument a reference to a node and returns an array of references to the children of the node.</p>
+<aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>Also see <a href="https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-get-child">get_child</a> method.</p>
+        
+    </div>
+</aside>
+<p>Create a node of type <code>Node2D</code> in <code>Grid</code> and name it <code>GridCells</code>. Select all nine <code>GridCell</code> nodes and drag them on to <code>GridCells</code> to make them children of <code>GridCells</code>.
+Now, all <code>GridCell</code> we want to access are children of <code>GridCells</code>.
+We can call <code>$Grid/GridCells.get_children()</code> to get an array of references to the <code>GridCell</code> nodes.</p>
+<p>We can delete the ten lines we added in <code>_ready</code> and add this one line in its place:</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> _ready():
+    <span style="color:#5bc4bf">...</span>
+    cells <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">$</span>Grid<span style="color:#5bc4bf">/</span>GridCells<span style="color:#5bc4bf">.</span>get_children():
+</code></pre></div><p>The resulting code is much cleaner.
+We have references to each <code>GridCell</code> node. Now, we need to save information in each node. We use a script!</p>
+<p>Attach a script to the <code>GridCell</code> scene.
+This creates a script with the name <code>GridCell.gd</code>. Delete everything except the first line <code>extends Area2D</code>.</p>
+<p>For each cell, we want to store if it is empty, or has an X or an O. Let&rsquo;s store this information in a variable named <code>value</code>.
+Continuing our notation with the player names, a cell with an &ldquo;X&rdquo; has <code>value</code> equal to <code>1</code> and a cell with an &ldquo;O&rdquo; has <code>value</code> <code>-1</code>. Cells can also be empty. Let empty cells have <code>value</code> <code>0</code>.</p>
+<p>Declare the <code>value</code> variable in <code>GridCell.gd</code>:</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">extends</span> <span style="color:#ef6155">Area2D</span>
+
+<span style="color:#815ba4">var</span> value
+</code></pre></div><p>Now, every <code>GridCell</code> node has a property named <code>value</code>. If you can access a <code>GridCell</code> node, you can also access its <code>value</code> property.
+For example, in <code>Game.gd</code>, <code>cells[0]</code> holds a reference to <code>GridCell1</code>. We can access its <code>value</code> variable with <code>cells[0].value</code>. We can now read and edit the <code>value</code> of any <code>GridCell</code> node.</p>
+<p>We can use the <code>print</code> method to read the value during development. The output of <code>print</code> is shown in the Output tab (below the code editor).</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> _ready():
+    <span style="color:#5bc4bf">...</span>
+    print(<span style="color:#48b685">&#34;The value of GridCell1 is &#34;</span>, cells[<span style="color:#f99b15">0</span>]<span style="color:#5bc4bf">.</span>value)
+</code></pre></div><p>If we run the game now, we see <code>The value of GridCell1 is Null</code> in the output. Oops. This is because we declared <code>value</code>, but did not initialise it.
+Since all cells are empty initially, we will initialise the <code>value</code> of each <code>GridCell</code> with <code>0</code>.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> _ready():
+    <span style="color:#5bc4bf">...</span>
+    <span style="color:#815ba4">for</span> cell <span style="color:#5bc4bf">in</span> cells:
+        cell<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">0</span>
+</code></pre></div><p>If you print <code>cells[0].value</code> after the initialisation, you will see it has <code>value</code> equal <code>0</code> and not <code>Null</code>.</p>
+<aside class="admonition  tip ">
+    <div class="admonition__title">
+        Tip
+    </div>
+	<div class="admonition__content">
+        
+            <p>You can check the state of any variable using the <code>print</code> method. It is very useful for debugging.</p>
+        
+    </div>
+</aside>
+<h3 id="listening-for-clicks-using-signals">Listening for clicks using signals</h3>
+<p>We have initialised the state of the game. We need a way to detect when cells are clicked and respond to it.</p>
+<p>We will write a function <code>play_turn</code> in <code>Game.gd</code> that makes appropriate changes to the game&rsquo;s state when the player clicks on a grid cell.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> play_turn():
+    print(<span style="color:#48b685">&#34;play_turn called&#34;</span>)
+</code></pre></div><p>We will fill in this function later. For now, we just want to call it when a cell is clicked. The <code>print</code> method lets us know if the method is called.</p>
+<p>Here&rsquo;s one way to call <code>play_turn</code> when a cell is clicked. In <code>GridCell.gd</code>, we could check if the cell is clicked. If it is clicked, we call the <code>play_turn</code> method in <code>Game.gd</code>.</p>
+<pre><code class="language-[GridCell.gd]" data-lang="[GridCell.gd]">if cell is clicked:
+    call play_turn in Game.gd
+</code></pre><aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>The above code is pseudocode. It does not follow the syntax of GDScript, but it conveys a sketch of how the code would look like.</p>
+        
+    </div>
+</aside>
+<p>This is acceptable for a small game, but it would quickly get out of hand as the game becomes bigger. For every node that needs to
+react to the cell being clicked, we would need to call a method in <code>GridCell.gd</code>.</p>
+<pre><code class="language-[GridCell.gd]" data-lang="[GridCell.gd]">if cell is clicked:
+    call method_a in A.gd
+    call method_b in B.gd
+    call method_c in C.gd
+    call method_d in D.gd
+</code></pre><p>This is bad code design, as we have a lot of code in <code>GridCell.gd</code> that is not relevant to <code>GridCell</code>.
+A better way of achieving the same effect is to use signals (also known as the observer pattern).</p>
+<p>We add only the following code in <code>GridCell.gd</code>.</p>
+<pre><code class="language-[GridCell.gd]" data-lang="[GridCell.gd]">if cell is clicked:
+    emit signal &quot;cell was clicked&quot;
+</code></pre><p>Now, any node that needs to react to the cell being clicked observes <code>GridCell</code>, and if it hears the <code>cell was clicked</code> signal, it calls the appropriate method.</p>
+<pre><code class="language-[Game.gd]" data-lang="[Game.gd]">listen for signal &quot;cell was clicked&quot; from GridCell
+if signal is received:
+    call play_turn
+</code></pre><p>The concerns remain separated, and the code is more organised and manageable.</p>
+<aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>Read the Godot docs for <a href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html">signals</a>.</p>
+        
+    </div>
+</aside>
+<p>As you have seen, signals are a very important concept in game development. We will now see how to implement this in Godot.</p>
+<p>Nodes in Godot can emit signals when certain events occur.
+Each node in Godot has some signals predefined in them. You can see the signals defined for any node by clicking on the Node tab next to the Inspector tab.</p>
+<aside class="admonition  example ">
+    <div class="admonition__title">
+        Example
+    </div>
+	<div class="admonition__content">
+        
+            <p>A sprite node can emit a signal when its texture is changed, when its visibility changes, and so on.</p>
+<p><img src="img/sprite-signals.png" alt=""></p>
+
+        
+    </div>
+</aside>
+<p>We can also make our own custom signals.
+For example, in our game, we can make a signal named <code>cell_clicked</code> for <code>GridCell</code>. We do this by declaring it in <code>GridCell.gd</code>.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">signal</span> cell_clicked
+</code></pre></div><p>We can get a node to emit a signal with the <code>emit_signal</code> method. In the following code, <code>cell</code> will emit the <code>cell_clicked</code> signal if it is clicked.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">if</span> cell is clicked:
+    emit_signal(<span style="color:#48b685">&#34;cell_clicked&#34;</span>)
+</code></pre></div><aside class="admonition  warning ">
+    <div class="admonition__title">
+        Warning
+    </div>
+	<div class="admonition__content">
+        
+            <p>The above code won&rsquo;t work because the syntax of the <code>if</code> statement is incorrect.
+Comment this lines out for now. We will fix this soon.</p>
+        
+    </div>
+</aside>
+<p>Nodes can also listen for signals.
+We want the <code>Game</code> node to listen for the <code>cell_clicked</code> signal emitted by a <code>GridCell</code> node.
+We use the <code>connect</code> method to listen for signals. The syntax for connecting signals is:</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript">SOURCE_NODE<span style="color:#5bc4bf">.</span>connect(SIGNAL_NAME, TARGET_NODE, METHOD_NAME)
+</code></pre></div><p>The way to read this is if when the <code>SOURCE_NODE</code> emits the <code>SIGNAL_NAME</code> signal, the <code>TARGET_NODE</code> calls the <code>METHOD_NAME</code> method. Let&rsquo;s see this in action for our game.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> _ready():
+  <span style="color:#5bc4bf">...</span>
+  <span style="color:#776e71"># listen for clicks</span>
+  <span style="color:#815ba4">for</span> cell <span style="color:#5bc4bf">in</span> cells:
+      cell<span style="color:#5bc4bf">.</span>connect(<span style="color:#48b685">&#34;cell_clicked&#34;</span>, self, <span style="color:#48b685">&#34;play_turn&#34;</span>)
+</code></pre></div><p>We want to listen for signals from every cell in the grid, so we have a <code>for</code> loop that iterates over all cells in the grid.
+For each cell, when the <code>cell</code> node emits the <code>cell_clicked</code> signal, the <code>self</code> node (in this case the <code>Game</code> node) calls the <code>play_turn</code> method.</p>
+<p>Great, we are almost done. We just need to fix the <code>if cell is clicked</code> statement in <code>GridCell.gd</code>.</p>
+<p>How do we check if a cell is clicked? Godot has a predefined signal for it! We can use the <code>input_event</code> signal defined in nodes of type <code>Area2D</code>. If we hover over the name, we see that it is emitted when an input event occurs. What is an input event? We will investigate this soon. First, let&rsquo;s connect this signal.</p>
+<p>We have seen how to connect signals using code. We can also use the GUI to connect signals in Godot. Let&rsquo;s see how to do that now.</p>
+<p>Select the source node, the node that emits the signal. In our game, it&rsquo;s the <code>GridCell</code> node in the <code>GridCell</code> scene. It is of type <code>Area2D</code>. Open the Node tab, find the <code>input_event</code> signal and click ``Connect&hellip;''.</p>
+<p>We must now select the target node, the node that listens for the signal.
+We are listening for the signal in the <code>GridCell</code> node as well. This is a case where we connect a node to itself.</p>
+<p>Also note the &ldquo;Receiver method&rdquo; field says <code>_on_GridCell_input_event</code>. This is the method that will be called in the target node when the signal is emitted.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/gridcell-signal.png" >
+    
+    
+    
+</figure>
+
+<p>Select <code>GridCell</code> and click &ldquo;Connect&rdquo;.
+This creates the receiver function <code>_on_GridCell_input_event</code> in <code>GridCell.gd</code> for us.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> _on_GridCell_input_event(viewport, event, shape_idx):
+    <span style="color:#815ba4">pass</span>
+</code></pre></div><aside class="admonition  tip ">
+    <div class="admonition__title">
+        Tip
+    </div>
+	<div class="admonition__content">
+        
+            <p>Notice the signal icon in the margin. This indicates that this method is called by a function. You can click on this icon to see more details about the signal.</p>
+<p><img src="img/signal-icon.png" alt=""></p>
+
+        
+    </div>
+</aside>
+<p>The <code>_on_GridCell_input_event</code> takes in three parameters. The signal contains some information about the <code>input_event</code> and we can access it in this method.</p>
+<aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>Use <code>print</code> to figure out when this signal is emitted.</p>
+<p><strong>Hint:</strong> Add <code>print(event)</code> to <code>_on_GridCell_input_event</code>. Run the game and work out what generates an output.</p>
+
+        
+    </div>
+</aside>
+<p>If you add <code>print(event)</code> in the method and run the game, you will see that moving your mouse on a cell creates an <code>InputEventMouseMotion</code> event, and clicking on a cell creates an <code>InputEventMouseButton</code> event.</p>
+<p>We are only interested if the players click on a cell. We do not care if the players move their mouse on the grid.
+We will filter only the mouse click events with an <code>if</code> statement.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> _on_GridCell_input_event(viewport, event, shape_idx):
+    <span style="color:#815ba4">if</span> event is <span style="color:#ef6155">InputEventMouseButton</span>:
+        print(event)
+</code></pre></div><p>If you run the game now and move the mouse on the grid, the output does not change. If you click on a cell, two mouse click events appear. Once when you press the button, and once when you release it. We would like to emit only one signal per click.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> _on_GridCell_input_event(viewport, event, shape_idx):
+    <span style="color:#815ba4">if</span> event is <span style="color:#ef6155">InputEventMouseButton</span> <span style="color:#5bc4bf">and</span> event<span style="color:#5bc4bf">.</span>is_pressed():
+        print(event)
+</code></pre></div><aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>Read the Godot docs for <a href="https://docs.godotengine.org/en/stable/classes/class_inputevent.html">inputevent</a>.</p>
+        
+    </div>
+</aside>
+<p>This is working well. We are printing an event if and only if a cell is clicked. We can replace <code>print</code> with <code>emit_signal</code>.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> _on_GridCell_clicked(viewport, event, shape_idx):
+    <span style="color:#815ba4">if</span> event is <span style="color:#ef6155">InputEventMouseButton</span> <span style="color:#5bc4bf">and</span> event<span style="color:#5bc4bf">.</span>is_pressed():
+        emit_signal(<span style="color:#48b685">&#34;cell_clicked&#34;</span>)
+</code></pre></div><p>Now every time we click a cell, <code>play_turn</code> is called and we see <code>play_turn is called</code> in the output.
+We know if a cell is clicked, but we don&rsquo;t know which cell is clicked.</p>
+<p>Signals can carry additional data that can be passed as a parameter to the method. We can add additional data to a signal by appending arguments in the <code>emit_signal</code> method.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> _on_GridCell_clicked(viewport, event, shape_idx):
+    <span style="color:#815ba4">if</span> event is <span style="color:#ef6155">InputEventMouseButton</span> <span style="color:#5bc4bf">and</span> event<span style="color:#5bc4bf">.</span>is_pressed():
+        emit_signal(<span style="color:#48b685">&#34;cell_clicked&#34;</span>, self)
+</code></pre></div><p>Here, we are passing <code>self</code> as additional data in the signal. Any node that is listening for the <code>cell_clicked</code> signal will also get to know the node that has emitted the signal.</p>
+<p>Since the signal is now carrying additional data, we need to update its declaration to reflect this change.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">signal</span> cell_clicked(cell)
+</code></pre></div><aside class="admonition  error ">
+    <div class="admonition__title">
+        Error
+    </div>
+	<div class="admonition__content">
+        
+            <p>If we run the game now, we get an error:</p>
+<pre><code>The method expected 0 arguments, but called with 1.
+</code></pre>
+<p>We get this error because the number of arguments taken by the called method does not agree with the data carried by the signal.</p>
+
+        
+    </div>
+</aside>
+<p>We fix this by adding an argument to <code>play_turn</code>. We can print the name of the cell and see if it&rsquo;s correct.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> play_turn(cell):
+    print(<span style="color:#48b685">&#34;play_turn called&#34;</span>)
+    print(cell<span style="color:#5bc4bf">.</span>name, <span style="color:#48b685">&#34; was clicked&#34;</span>)
+</code></pre></div><p>Run the game, click on a cell, and see that the correct name is printed in the output.</p>
+<p>Great! We can detect if a cell is clicked, and if so, then which cell is clicked in <code>Game.gd</code>. We will use this information to make appropriate changes to the game&rsquo;s state.</p>
+<h3 id="executing-a-turn-of-the-game">Executing a turn of the game</h3>
+<p>We will now fill in the <code>play_turn</code> method. Recall that it is called when the <code>cell_clicked</code> signal is emitted, which happens when a player clicks on a cell.</p>
+<p>We look at the gameplay loop flowchart and describe how <code>play_turn</code> should behave.</p>
+<ul>
+<li>If the game has not started, we do nothing.</li>
+<li>If a cell is clicked, then
+<ul>
+<li>We need to set its value depending on <code>player_turn</code>.</li>
+<li>We stop listening for clicks on this cell.</li>
+<li>Increment <code>turns_played</code>.</li>
+<li>Check for wins. If someone won, it&rsquo;s <code>game_over</code>.</li>
+<li>Else, check for a draw. If it&rsquo;s a draw, it&rsquo;s <code>game_over</code>.</li>
+<li>Else, we change the player and update the labels.</li>
+</ul>
+</li>
+</ul>
+<p>We write this in code.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> play_turn(cell):
+    <span style="color:#815ba4">if</span> game_started:
+        <span style="color:#815ba4">if</span> player_turn <span style="color:#5bc4bf">==</span> <span style="color:#f99b15">1</span>:
+               cell<span style="color:#5bc4bf">.</span>setX()
+           <span style="color:#815ba4">else</span>:
+               cell<span style="color:#5bc4bf">.</span>setO()
+
+          cell<span style="color:#5bc4bf">.</span>disconnect(<span style="color:#48b685">&#34;cell_clicked&#34;</span>, self, <span style="color:#48b685">&#34;play_turn&#34;</span>)
+           turns_played <span style="color:#5bc4bf">+=</span> <span style="color:#f99b15">1</span>
+
+           <span style="color:#815ba4">if</span> check_win():
+               game_over()
+               <span style="color:#815ba4">return</span>
+           <span style="color:#815ba4">if</span> check_draw():
+               game_over()
+               <span style="color:#815ba4">return</span>
+
+           change_player()
+           update_labels()
+</code></pre></div><p>This code reads a lot like our description of the function. It is almost written in English.</p>
+<p>Once a cell is clicked, we disconnect the signal to the node using the <code>disconnect</code> method.
+We have introduced many new functions (that we haven&rsquo;t defined yet) to keep concerns separate and make the <code>play_turn</code> method easy to read.</p>
+<p>The <code>check_win</code> method will return <code>true</code> if someone has won. In that case, we call the <code>game_over()</code> to clean things up, and <code>return</code> prevents the execution of the remainder of the <code>play_turn</code> method.</p>
+<p>If <code>check_win</code> is false, then we check for draws with <code>check_draw</code>. This returns <code>true</code> if the game has drawn. Again, we call <code>game_over()</code> and <code>return</code> out of the <code>play_turn</code> method.</p>
+<p>We will first work on <code>cell.setX</code>, <code>cell.setO</code>, and <code>cell.isEmpty</code>. Declare all other methods and write <code>pass</code> in their bodies for now. This suppresses the &ldquo;Method not declared&rdquo; errors while we work on the cell functions.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> check_win():
+    <span style="color:#815ba4">pass</span>  <span style="color:#776e71"># TODO</span>
+<span style="color:#815ba4">func</span> check_draw():
+    <span style="color:#815ba4">pass</span>  <span style="color:#776e71"># TODO</span>
+<span style="color:#815ba4">func</span> game_over():
+    <span style="color:#815ba4">pass</span>  <span style="color:#776e71"># TODO</span>
+<span style="color:#815ba4">func</span> update_labels():
+    <span style="color:#815ba4">pass</span>  <span style="color:#776e71"># TODO</span>
+</code></pre></div><p>Since the <code>setX</code> method is related to the cell, we will define it <code>setX</code> in <code>GridCell.gd</code>. This is also why we call it as <code>cell.setX()</code> in <code>Game.gd</code> and not just <code>setX</code>.</p>
+<p>For each cell, we store a <code>value</code> and display a sprite.
+When we set &ldquo;X&rdquo; in a cell, we must update the <code>value</code> of the cell and change the sprite shown in the cell.
+Recall that <code>X</code> has <code>value</code> <code>1</code> and <code>O</code> has value <code>-1</code>.</p>
+<p>We can change the sprite shown by changing the texture of the <code>CellSymbol</code> node.
+We load and access the textures in our scripts using the <code>preload</code> method.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">const</span> x_symbol <span style="color:#5bc4bf">=</span> preload(<span style="color:#48b685">&#34;res://assets/x.png&#34;</span>)
+<span style="color:#815ba4">const</span> o_symbol <span style="color:#5bc4bf">=</span> preload(<span style="color:#48b685">&#34;res://assets/o.png&#34;</span>)
+</code></pre></div><p>We define the <code>setX</code> method:</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> setX():
+    value <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">1</span>
+    <span style="color:#5bc4bf">$</span>CellSymbol<span style="color:#5bc4bf">.</span>texture <span style="color:#5bc4bf">=</span> x_symbol
+</code></pre></div><p>The <code>setO</code> method is defined similarly.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> setO():
+    value <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">-</span><span style="color:#f99b15">1</span>
+    <span style="color:#5bc4bf">$</span>CellSymbol<span style="color:#5bc4bf">.</span>texture <span style="color:#5bc4bf">=</span> o_symbol
+</code></pre></div><p>Finally, let&rsquo;s also define <code>setEmpty</code>. To remove the texture of a sprite, we set its texture to <code>null</code>. Otherwise, this is similar to <code>setX</code> and <code>setO</code> as well.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> setEmpty():
+    value <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">0</span>
+    <span style="color:#5bc4bf">$</span>CellSymbol<span style="color:#5bc4bf">.</span>texture <span style="color:#5bc4bf">=</span> null
+</code></pre></div><p>Try playing the game now. Click on different cells. You will an X and an O appearing alternatively with each click.
+Our setters work!</p>
+<p>The text labels are currently static.
+We would like to update the labels after each turn. We would like to use the labels to tell the players whether it&rsquo;s &ldquo;X&rdquo; or &ldquo;O&rdquo; to play. Let&rsquo;s write the <code>update_labels</code> method now.</p>
+<p>We want to show</p>
+<ul>
+<li>&ldquo;Player ___’s turn&rdquo; in the <code>PlayerTurn</code> label, and</li>
+<li>&ldquo;Place an ___&rdquo; in the <code>PlayerInstruction</code> label.</li>
+</ul>
+<p>We add an &ldquo;X&rdquo; or an &ldquo;O&rdquo; in the blanks depending on whose turn it is. We can implement this in our script using format strings.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">var</span> player_turn_text <span style="color:#5bc4bf">=</span> <span style="color:#48b685">&#34;Player </span><span style="color:#f99b15">%s</span><span style="color:#48b685">&#39;s turn&#34;</span>
+<span style="color:#815ba4">var</span> player_instruction_text <span style="color:#5bc4bf">=</span> <span style="color:#48b685">&#34;Place an </span><span style="color:#f99b15">%s</span><span style="color:#48b685">&#34;</span>
+</code></pre></div><p>Here, <code>%s</code> acts as a blank. We can add any string in the blank by writing it after a <code>%</code> sign.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript">print(player_turn_text <span style="color:#5bc4bf">%</span> <span style="color:#48b685">&#34;X&#34;</span>)
+print(player_instruction_text <span style="color:#5bc4bf">%</span> <span style="color:#48b685">&#34;X&#34;</span>)
+</code></pre></div><p>This prints &ldquo;Player X&rsquo;s turn&rdquo; and &ldquo;Place an X&rdquo; in the output. The <code>%s</code> in the format strings is replaced by &ldquo;X&rdquo;.</p>
+<p>Instead of &ldquo;X&rdquo;, we will replace the <code>%s</code> in the format strings with a variable that depends on the value of <code>player_turn</code>. The variable will be equal to &ldquo;X&rdquo; if <code>player_turn</code> is equal to <code>1</code>, and it will be &ldquo;O&rdquo; if <code>player_turn</code> is <code>-1</code>.</p>
+<p>We can do the following.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">var</span> player_symbols <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#34;:)&#34;</span>, <span style="color:#48b685">&#34;X&#34;</span>, <span style="color:#48b685">&#34;O&#34;</span>]
+
+<span style="color:#815ba4">func</span> update_labels():
+    <span style="color:#5bc4bf">$</span>PlayerTurn<span style="color:#5bc4bf">.</span>text <span style="color:#5bc4bf">=</span> player_turn_text <span style="color:#5bc4bf">%</span> player_symbols[player_turn]
+    <span style="color:#5bc4bf">$</span>PlayerInstruction<span style="color:#5bc4bf">.</span>text <span style="color:#5bc4bf">=</span> player_instruction_text <span style="color:#5bc4bf">%</span> player_symbols[player_turn]
+</code></pre></div><p>We have used a trick while writing the <code>player_symbols</code> array to make this work.</p>
+<ul>
+<li>Arrays are counted starting with 0. Therefore, <code>player_symbols[1]</code> returns &ldquo;X&rdquo;.</li>
+<li>We can access arrays from the end using negative indices. The <code>-1</code> index of an array is the last element of the array. Therefore, <code>player_symbols[-1]</code> returns &ldquo;O&rdquo;.</li>
+<li>We can set the zeroeth element of the array to anything, as it will never be read.</li>
+</ul>
+<p>Thus, when <code>update_labels</code> is called, it updates the labels with the correct text.</p>
+<h3 id="checking-for-wins-and-draws">Checking for wins and draws</h3>
+<p>If we play the game now, we can keep adding symbols until all cells have been filled. Even then, the labels say it&rsquo;s Player O&rsquo;s turn to play when clearly the game is over. We would like the game to stop once someone has won or the game has drawn, and we would like to display to result on the screen.</p>
+<p>Display the name of the winner will be easier if we have a state variable that stores the name of the winner.
+If no one has won yet, then <code>winner</code> stores <code>0</code>. Otherwise, it stores <code>1</code> or <code>-1</code> depending on who won.
+Let&rsquo;s declare and initialise it.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">var</span> winner
+
+<span style="color:#815ba4">func</span> _ready():
+    <span style="color:#5bc4bf">...</span>
+    winner <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">0</span> <span style="color:#776e71"># no one has won yet</span>
+</code></pre></div><p>We have already called the <code>check_win</code>, <code>check_draw</code>, and <code>game_over</code> methods in <code>play_turn</code>. Now, it&rsquo;s time to fill these in.</p>
+<h4 id="check_win"><code>check_win</code></h4>
+<p>A player wins when they get three of the same symbols in a row, column, or diagonal.
+There are three rows, three columns, and two diagonals, so we need to check for three in a line in eight lines.</p>
+<p>This is where choosing values <code>1</code> and <code>-1</code> for &ldquo;X&rdquo; and &ldquo;O&rdquo; is useful again. To check if someone has won, we calculate the sum of values of each row, column, and diagonal. If any of them is 3 or -3, then we have a winner.</p>
+<p>Let&rsquo;s add this in <code>check_win</code>.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> check_win():
+    <span style="color:#815ba4">var</span> row1 <span style="color:#5bc4bf">=</span> cells[<span style="color:#f99b15">0</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">1</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">2</span>]<span style="color:#5bc4bf">.</span>value
+    <span style="color:#815ba4">var</span> row2 <span style="color:#5bc4bf">=</span> cells[<span style="color:#f99b15">3</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">4</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">5</span>]<span style="color:#5bc4bf">.</span>value
+    <span style="color:#815ba4">var</span> row3 <span style="color:#5bc4bf">=</span> cells[<span style="color:#f99b15">6</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">7</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">8</span>]<span style="color:#5bc4bf">.</span>value
+
+    <span style="color:#815ba4">var</span> col1 <span style="color:#5bc4bf">=</span> cells[<span style="color:#f99b15">0</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">3</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">6</span>]<span style="color:#5bc4bf">.</span>value
+    <span style="color:#815ba4">var</span> col2 <span style="color:#5bc4bf">=</span> cells[<span style="color:#f99b15">1</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">4</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">7</span>]<span style="color:#5bc4bf">.</span>value
+    <span style="color:#815ba4">var</span> col3 <span style="color:#5bc4bf">=</span> cells[<span style="color:#f99b15">2</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">5</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">8</span>]<span style="color:#5bc4bf">.</span>value
+
+    <span style="color:#815ba4">var</span> diag1 <span style="color:#5bc4bf">=</span> cells[<span style="color:#f99b15">0</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">4</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">8</span>]<span style="color:#5bc4bf">.</span>value
+    <span style="color:#815ba4">var</span> diag2 <span style="color:#5bc4bf">=</span> cells[<span style="color:#f99b15">2</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">4</span>]<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">+</span> cells[<span style="color:#f99b15">6</span>]<span style="color:#5bc4bf">.</span>value
+
+    <span style="color:#815ba4">var</span> lines <span style="color:#5bc4bf">=</span> [row1, row2, row3, col1, col2, col3, diag1, diag2]
+</code></pre></div><p>Recall that <code>check_win</code> returns true if someone has won, and false if not.
+It also updates the state variable <code>winner</code> with the value of the player who won. This is what this code does:</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> check_win():
+    <span style="color:#5bc4bf">...</span>
+    <span style="color:#815ba4">for</span> line <span style="color:#5bc4bf">in</span> lines:
+        <span style="color:#815ba4">if</span> line <span style="color:#5bc4bf">&gt;=</span> <span style="color:#f99b15">3</span>:
+            winner <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">1</span>
+            <span style="color:#815ba4">return</span> true
+        <span style="color:#815ba4">elif</span> line <span style="color:#5bc4bf">&lt;=</span> <span style="color:#5bc4bf">-</span><span style="color:#f99b15">3</span>:
+            winner <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">-</span><span style="color:#f99b15">1</span>
+            <span style="color:#815ba4">return</span> true
+        <span style="color:#815ba4">else</span>:
+            winner <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">0</span>
+    <span style="color:#815ba4">return</span> false
+</code></pre></div><h4 id="check_draw"><code>check_draw</code></h4>
+<p>Detecting if the game has drawn is easier.
+If nine turns have been played and no one has won so far, then and only then it is a draw.
+We have been updating <code>turns_played</code> in the function <code>play_turn</code>. We use this value to check if the grid has been filled completely.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> check_draw():
+    <span style="color:#815ba4">if</span> turns_played <span style="color:#5bc4bf">&gt;=</span> <span style="color:#f99b15">9</span>:
+        <span style="color:#815ba4">return</span> true
+    <span style="color:#815ba4">else</span>:
+        <span style="color:#815ba4">return</span> false
+</code></pre></div><h4 id="game_over"><code>game_over</code></h4>
+<p>Try playing the game now. You can still add symbols after someone has won.
+The labels still say it&rsquo;s someone&rsquo;s turn to play.</p>
+<p>We need to stop listening for clicks, display the result on the screen, and update our state variables.</p>
+<p>We can use format strings again to display the winner.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">var</span> winner_text <span style="color:#5bc4bf">=</span> <span style="color:#48b685">&#34;Player </span><span style="color:#f99b15">%s</span><span style="color:#48b685"> won!&#34;</span>
+<span style="color:#815ba4">var</span> drawn_text <span style="color:#5bc4bf">=</span> <span style="color:#48b685">&#34;Game drawn.&#34;</span>
+
+<span style="color:#815ba4">func</span> game_over():
+    <span style="color:#815ba4">if</span> winner <span style="color:#5bc4bf">==</span> <span style="color:#f99b15">0</span>:
+        <span style="color:#5bc4bf">$</span>PlayerTurn<span style="color:#5bc4bf">.</span>text <span style="color:#5bc4bf">=</span> drawn_text
+    <span style="color:#815ba4">else</span>:
+        <span style="color:#5bc4bf">$</span>PlayerTurn<span style="color:#5bc4bf">.</span>text <span style="color:#5bc4bf">=</span> winner_text <span style="color:#5bc4bf">%</span> player_symbols[winner]
+</code></pre></div><p>The game is over, so we set <code>game_started</code> to false.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> game_over():
+    <span style="color:#5bc4bf">...</span>
+    game_started <span style="color:#5bc4bf">=</span> false
+</code></pre></div><p>If the game is over, then we no longer want to listen for clicks on cells.
+We have disconnected the <code>cell_clicked</code> signal on cells that have been clicked, but the signal is still connected to cells that have not been clicked.</p>
+<p>If we try to disconnect a signal that is not connected, we get an error.
+Therefore, we iterate over all cells, and disconnect the signal only if it still connected.
+We check if a signal is connected with the <code>is_connected</code> method.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> game_over():
+    <span style="color:#5bc4bf">...</span>
+    <span style="color:#815ba4">for</span> cell <span style="color:#5bc4bf">in</span> cells:
+        <span style="color:#815ba4">if</span> cell<span style="color:#5bc4bf">.</span>is_connected(<span style="color:#48b685">&#34;cell_clicked&#34;</span>, self, <span style="color:#48b685">&#34;play_turn&#34;</span>):
+            cell<span style="color:#5bc4bf">.</span>disconnect(<span style="color:#48b685">&#34;cell_clicked&#34;</span>, self, <span style="color:#48b685">&#34;play_turn&#34;</span>)
+</code></pre></div><p>Once a game is over and we display the results, we would like the players to be able to play again without having to quit and restart. We could add a restart button that starts a new game. Let&rsquo;s show this instruction to the players.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">var</span> restart_text <span style="color:#5bc4bf">=</span> <span style="color:#48b685">&#34;Press &#39;R&#39; to start a new game.&#34;</span>
+
+<span style="color:#815ba4">func</span> game_over():
+    <span style="color:#5bc4bf">...</span>
+    <span style="color:#5bc4bf">$</span>PlayerInstruction<span style="color:#5bc4bf">.</span>text <span style="color:#5bc4bf">=</span> restart_text
+</code></pre></div><h3 id="starting-a-new-game">Starting a new game</h3>
+<p>We want to restart the game when the players press the &lsquo;R&rsquo; button on their keyboard.
+We will implement this now.</p>
+<p>We need to set things up again for a new game.
+A lot of the code that we require is already in <code>_ready</code>. We would like to execute all of those commands when the players click &ldquo;Play again&rdquo;. We will extract all of those into a function <code>start_game</code> and call it. To reset the game, we simply call this function.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> _ready():
+    cells <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">$</span>Grid<span style="color:#5bc4bf">/</span>GridCells<span style="color:#5bc4bf">.</span>get_children()
+    start_game()
+
+<span style="color:#815ba4">func</span> start_game():
+    game_started <span style="color:#5bc4bf">=</span> true
+    player_turn <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">1</span>  <span style="color:#776e71"># Player 1 starts the game</span>
+    turns_played <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">0</span>
+    winner <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">0</span>
+    update_labels()
+    <span style="color:#776e71"># start listening for clicks</span>
+    <span style="color:#815ba4">for</span> cell <span style="color:#5bc4bf">in</span> cells:
+        cell<span style="color:#5bc4bf">.</span>connect(<span style="color:#48b685">&#34;cell_clicked&#34;</span>, self, <span style="color:#48b685">&#34;play_turn&#34;</span>)
+</code></pre></div><p>We don&rsquo;t need to initialise the references to GridCells again. We can move the rest of the code from <code>_ready</code> to <code>start_game</code>. We call <code>start_game</code> in <code>_ready</code>.</p>
+<p>We have also added <code>update_labels</code> so that correct instructions are shown when the game starts.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> start_game():
+    <span style="color:#5bc4bf">...</span>
+    update_labels()
+</code></pre></div><p>We need to remove all symbols from the grid and reset all values too. We set all cells to empty.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> start_game():
+    <span style="color:#5bc4bf">...</span>
+    <span style="color:#776e71"># remove symbols from grid</span>
+    <span style="color:#815ba4">for</span> cell <span style="color:#5bc4bf">in</span> cells:
+        cell<span style="color:#5bc4bf">.</span>setEmpty()
+</code></pre></div><p>The game still works after this refactoring.</p>
+<p>We need to listen for the reset button pressed in the game over screen, in which case we call the <code>start_game</code> function.</p>
+<p>Add input map in Project Settings -&gt; Input Map. Add a <code>ui_restart</code> action. Add event Keyboard press &ldquo;R&rdquo; to it.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/reset-input.png" >
+    
+    
+    
+</figure>
+
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> _process(delta):
+    <span style="color:#815ba4">if</span> <span style="color:#5bc4bf">!</span>game_started:
+        <span style="color:#815ba4">if</span> <span style="color:#ef6155">Input</span><span style="color:#5bc4bf">.</span>is_action_pressed(<span style="color:#48b685">&#34;ui_reset&#34;</span>):
+            print(<span style="color:#48b685">&#34;Resetting game&#34;</span>)
+            start_game()
+</code></pre></div><p>It should work now. Our game is complete.</p>
+<h2 id="finishing-up">Finishing up</h2>
+<p>Well, almost complete.
+We can play the game in Godot. If you had to share it with others, we do not expect them to install Godot to play our game. This is not even possible on mobile. We need to export our game.</p>
+<h3 id="exporting-the-game">Exporting the game</h3>
+<p>Click on Project -&gt; Export&hellip;</p>
+<p>We can now export to Windows, macOS, Linux, Android, iOS, and the Web.</p>
+<h3 id="next-steps">Next steps</h3>
+<p>Some new features that can be added:</p>
+<ul>
+<li>Make it usable on mobile. devices without a keyboard. We can add a play again button.</li>
+<li>Undo (This is a bit hard. Store the move history in a stack.)</li>
+</ul>
+<p>Hurray! Make it on your own. Improve it, publish it. Make more games!</p>
+<p>If you are curious to know how the Godot Engine works, head over <a href="https://github.com/godotengine/godot" target="_blank" rel="noopener">Godot&rsquo;s GitHub page</a> and look at its Godot&rsquo;s source code. You can see how it&rsquo;s made and how it works.
+You can report bugs and submit improvements here.</p>
+<p>If you enjoyed this guide and found it useful, consider supporting my work on Ko-fi. I would love to write more guides on game development and your support will go a long way.</p>
+]]></description></item><item><title>Moving my site from Hugo to Nuxt.js...</title><link>https://pranshugaba.com/dev/moving-from-hugo-to-nuxt/</link><pubDate>Tue, 11 May 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/moving-from-hugo-to-nuxt/</guid><description>
+<![CDATA[<aside class="admonition   ">
+    <div class="admonition__title">
+        Note
+    </div>
+	<div class="admonition__content">
+        
+            <p>This post was published on an older version of my site. I have rewritten my site, and many things have changed since then. This site is no longer built using Nuxt.js, but the points that I make were valid at the time of writing this post.</p>
+        
+    </div>
+</aside>
+<p>This site is built using Nuxt.js, and I have had a great time making it.
+The previous version of this website (now retired to <a href="https://hugo.pranshugaba.com" target="_blank" rel="noopener">hugo.pranshugaba.com</a>) was built using Hugo. In this post, I outline how I made the switch from Hugo to Nuxt. I hope this helps anyone who is looking to choose a static site generator for their website.</p>
+<p>Hugo is quick to install and very easy to get started with, which is what drew me to it in the first place. There are a variety of user-submitted themes available, and out of those, the Academic theme was my favourite.</p>
+<p>The theme has a lot of useful features, but I found it to be quite opinionated. I found several websites using this theme, and they all looked more or less the same. If I wanted to modify the theme, I had to override the theme templates, and in some cases rewrite them completely. This would often cause unintended effects. It was difficult to maintain the site, and even more so to add new features. I always felt that I had hacked it together and it could break with an update to Hugo or the theme.</p>
+<p>I wanted to create a theme from scratch, and I realized that there is much more scope for customisation if I use frameworks such as React or Vue.</p>
+<p>There are a lot of static site generators based on these frameworks. I tried out Gridsome, Next.js, and Nuxt.js.</p>
+<h3 id="gridsome">Gridsome</h3>
+<p>I tried <a href="https://gridsome.org/" target="_blank" rel="noopener">Gridsome</a> first, which is based on Vue.js. I had only used plain HTML and CSS before, but I could pickup Vue easily because each Vue file is divided into <code>template</code>, <code>script</code>, and <code>style</code> tags corresponding to HTML, JS, and CSS respectively.</p>
+<p>I enjoyed learning Gridsome, and I loved the site it generated too. Gridsome prefetches links, so links are super quick to open. It also automatically optimises image loading by showing a blurred placeholder in the place of the image until it loads.</p>
+<p>I could access data from my markdown files using GraphQL. I had never used GraphQL before, and I enjoyed learning it.</p>
+<h3 id="nextjs">Next.js</h3>
+<p>Next, I tried out <a href="https://nextjs.org/" target="_blank" rel="noopener">Next.js</a> which uses React. I was surprised to see how easily I could pickup React since I knew Vue. Next.js has a great tutorial that teaches you Next.js by building a basic blog site. While I loved the tutorial, I didn&rsquo;t like the fact that I had to write so much code just to read my markdown files.</p>
+<p>There were many features that I wanted to add to my website such as sitemap and PWA. I found many plugins for these on the <a href="https://github.com/unicodeveloper/awesome-nextjs" target="_blank" rel="noopener">awesome-nextjs</a> page on GitHub. However, most of them were third-party, and you never know when they stop being supported.</p>
+<h3 id="nuxtjs">Nuxt.js</h3>
+<p>While browsing through the awesome-nextjs page, I discovered the <a href="https://github.com/nuxt-community/awesome-nuxt" target="_blank" rel="noopener">awesome-nuxtjs</a> page. I found that Nuxt has first-party modules for almost every feature that I would like in my site. I immediately switched to <a href="https://nuxtjs.org/" target="_blank" rel="noopener">Nuxt.js</a>.
+I found that Nuxt is in active development, the modules are great, and the documentation is detailed and well-written.</p>
+<p>My favourite module is the <a href="https://content.nuxtjs.org/" target="_blank" rel="noopener">Nuxt Content</a> module. It makes it very easy to access markdown files and their content. I also loved the <a href="https://sitemap.nuxtjs.org/" target="_blank" rel="noopener">Sitemap</a>, <a href="https://pwa.nuxtjs.org/" target="_blank" rel="noopener">PWA</a>, and <a href="https://color-mode.nuxtjs.org/" target="_blank" rel="noopener">Color Mode</a> modules.</p>
+<p>Like Gridsome and Next, Nuxt prefetches the outgoing links on any page, so the links begin to load even before you click on them. This makes the site feel fast and snappy!</p>
+<p>I did the theming and styling from scratch and am adding features gradually. I was able to match all the features offered in Hugo, and then some.</p>
+<h4 id="math-equations">Math equations</h4>
+<p>Install <code>remark-math</code> and <code>rehype-katex</code> modules and we are good to go!</p>
+<p>I can have inline math $e^{i\pi} + 1 = 0$, and displaystyle math too!</p>
+<p>$$
+\sum_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6}
+$$</p>
+<h4 id="code-blocks">Code blocks</h4>
+<p>Prism.js comes pre-installed with Nuxt. You can install themes and plugins too.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#815ba4">fn</span> <span style="color:#06b6ef">main</span>() {
+    println<span style="color:#5bc4bf">!</span>(<span style="color:#48b685">&#34;Hello, world!&#34;</span>);
+}
+</code></pre></div><p>You can check out the code on <a href="https://github.com/pranshugaba/nuxt-website" target="_blank" rel="noopener">GitHub</a>  to see how I made my website using Nuxt.</p>
+]]></description></item></channel></rss>
