@@ -894,7 +894,7 @@ h4 code {
 .list-description__item,
 .list-mini__item {
   margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 4.5rem;
 }
 .list-description__item .item__metadata,
 .list-mini__item .item__metadata {
@@ -941,8 +941,8 @@ h4 code {
   margin-bottom: 1.5rem;
 }
 .admonition__title, .admonition__content {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 .admonition__title {
   font-weight: 700;

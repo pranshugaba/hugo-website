@@ -28,7 +28,7 @@ This post was published on an older version of my site. I have rewritten my site
 {{< /note >}}
 
 This site is built using Nuxt.js, and I have had a great time making it.
-The previous version of this website (now retired to [hugo.pranshugaba.com](https://hugo.pranshugaba.com)) was built using Hugo. In this post, I outline how I made the switch from Hugo to Nuxt. I hope this helps anyone who is looking to choose a static site generator for their website.
+The previous version of this website (now retired to hugo.pranshugaba.com) was built using Hugo. In this post, I outline how I made the switch from Hugo to Nuxt. I hope this helps anyone who is looking to choose a static site generator for their website.
 
 Hugo is quick to install and very easy to get started with, which is what drew me to it in the first place. There are a variety of user-submitted themes available, and out of those, the Academic theme was my favourite.
 

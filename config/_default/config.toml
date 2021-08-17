@@ -20,6 +20,9 @@ lastmod = ["lastmod", ":git", ":default"]
 [markup]
 [markup.highlight]
 style = "paraiso-dark"
+[markup.goldmark]
+[markup.goldmark.parser.attribute]
+block = true
 [markup.goldmark.renderer]
 unsafe = true
 
@@ -31,10 +34,11 @@ tag = "tags"
 
 [params]
 mainSections = [
-    "articles",
+    "posts",
     "thoughts",
     "minis",
     "dev",
+    "maths",
     "trips",
     "reviews",
     "links",

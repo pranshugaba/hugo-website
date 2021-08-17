@@ -1188,4 +1188,4 @@ Hurray! Make it on your own. Improve it, publish it. Make more games!
 If you are curious to know how the Godot Engine works, head over [Godot's GitHub page](https://github.com/godotengine/godot) and look at its Godot's source code. You can see how it's made and how it works.
 You can report bugs and submit improvements here.
 
-If you enjoyed this guide and found it useful, consider supporting my work on Ko-fi. I would love to write more guides on game development and your support will go a long way.
+If you enjoyed this guide and found it useful, consider supporting my work on [Ko‑fi](https://ko-fi.com/pranshugaba). I would love to write more guides on game development and your support will go a long way.

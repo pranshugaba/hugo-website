@@ -18,8 +18,8 @@ I write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}), and
 
 ### Projects
 
-- Maths Wiki
-- Decimal Clock
+- [Maths Wiki](https://maths.wiki)
+- [Decimal Clock](https://tenhourstudios.com)
 
 ### Support
 
@@ -32,14 +32,14 @@ The site is open source. You can find the source code on my [Github page](https:
 
 ### Some statistics
 
-Number of posts in each section
+Number of pages in each section
 
 |                       Count | Section                              |
 | --------------------------: | :----------------------------------- |
-| {{< countposts articles >}} | [Articles]({{< ref "/articles/" >}}) |
+| {{< countposts posts >}} | [Posts]({{< ref "/posts/" >}}) |
 | {{< countposts thoughts >}} | [Thoughts]({{< ref "/thoughts/" >}}) |
 |    {{< countposts minis >}} | [Minis]({{< ref "/minis/" >}})       |
-|      {{< countposts dev >}} | [Dev Articles]({{< ref "/dev/" >}})  |
+|      {{< countposts dev >}} | [Dev]({{< ref "/dev/" >}})  |
 |    {{< countposts trips >}} | [Trips]({{< ref "/trips/" >}})       |
 |  {{< countposts reviews >}} | [Reviews]({{< ref "/reviews/" >}})   |
 |    {{< countposts links >}} | [Links]({{< ref "/links/" >}})       |
