@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>walking by Pranshu Gaba</title><link>https://pranshugaba.com/tags/walking/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sun, 22 Aug 2021 01:12:16 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/walking/index.xml" rel="self" type="application/rss+xml"/><item><title>An Evening Excursion</title><link>https://pranshugaba.com/trips/walking-in-south-mumbai/</link><pubDate>Thu, 19 Aug 2021 21:30:00 +0530</pubDate><guid>https://pranshugaba.com/trips/walking-in-south-mumbai/</guid><description>
+<![CDATA[<p>I have my qualifier exams tomorrow, and my pen is almost out of ink. I wanted to buy a refill, but the general store in TIFR does not stock refills for the pen that I use. So I decided to walk to a stationery store in Colaba market and buy a refill.</p>
+<p>The nearest stationery store is 3 kilometres from TIFR, and a round trip to the store would have been just over 6 kilometres. However, I felt like doing some sightseeing, and I ended up walking more than 14 kilometres.</p>
+<p>Here&rsquo;s the route that I walked and some pictures that I took. It&rsquo;s mostly cats and buildings, but there&rsquo;s also a dog and some reptiles.</p>
+<h2 id="map">Map</h2>
+
+<div>
+  <div id="refill" class="leaflet-map"></div>
+  <div class="route__metadata">
+    <div class="route__name">
+      <div>
+        <p id="refill__name"></p>
+        <p id="refill__start-time"></p>
+      </div>
+      <p id="refill__type"></p>
+    </div>
+    <div class="route__stats">
+      <p id="refill__distance"></p>
+      <p id="refill__duration"></p>
+      <p id="refill__speed"></p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    {
+      let coords = [19.18, 72.82];
+      let zoomLevel = 12;
+      var corner1 = L.latLng(18.743, 73.394),
+      corner2 = L.latLng(19.470, 72.507),
+      bounds = L.latLngBounds(corner1, corner2);
+      let mymap = L.map('refill', {
+        fullscreenControl: true,
+        preferCanvas: true,
+        zoomSnap: 0.5,
+        zoomDelta: 0.5,
+        scrollWheelZoom: false,
+      }).setView(coords, zoomLevel);
+
+         const ATTR =
+        '&copy; <a href="https://stadiamaps.com/" target="_blank" rel="noopener">Stadia Maps</a>, ' +
+        '&copy; <a href="https://openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> ' +
+        '&copy; <a href="http://openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a>';
+      const TILES_URL =
+        'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png';
+
+      let Stadia_OSMBright = L.tileLayer(TILES_URL, {
+        minZoom: 3,
+        maxZoom: 18,
+        attribution: ATTR,
+      });
+      Stadia_OSMBright.addTo(mymap);
+
+      let darkMode = localStorage.getItem('darkMode');
+      if (darkMode === 'enabled'){
+        console.log("IT is dark in here")
+      }
+      else {
+        console.log("IT is light out here")
+      }
+
+      L.control.scale({ imperial: false }).addTo(mymap);
+
+      let gpx = 'refill.gpx'; 
+      
+      function formatNumber (number, precision = 3) {
+        if (typeof number === 'undefined' || number === null) return ''
+      
+        if (number === 0) return '0'
+      
+        const roundedValue = round(precision, number)
+        const floorValue = Math.floor(roundedValue)
+      
+        const isInteger = Math.abs(floorValue - roundedValue) < Number.EPSILON
+      
+        const numberOfFloorDigits = String(floorValue).length
+        const numberOfDigits = String(roundedValue).length
+      
+        if (numberOfFloorDigits > precision) {
+          return String(floorValue)
+        } else {
+          const padding = isInteger ? precision - numberOfFloorDigits : precision - numberOfDigits + 1
+      
+          if (padding > 0) {
+            if (isInteger) {
+              return `${String(floorValue)}.${'0'.repeat(padding)}`
+            } else {
+              return `${String(roundedValue)}${'0'.repeat(padding)}`
+            }
+          } else {
+            return String(roundedValue)
+          }
+        }
+      }
+      
+      function round (precision, number) {
+        return parseFloat(number.toPrecision(precision))
+      }
+      
+      function formatDate(date) {
+        const options = {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          timeZone: "Asia/Kolkata"
+        };
+        return new Intl.DateTimeFormat("en-in", options).format(date);
+      }
+
+      new L.GPX(gpx, {
+        async: true,
+        marker_options: {
+          shadowUrl: '/img/shadow.png',
+          endIconUrl: '/img/enda.png',
+          startIconUrl: '/img/starta.png',
+          iconSize: [50, 50],
+          iconAnchor: [25, 48],
+        },
+        polyline_options: {
+          color: 'papayawhip',
+          opacity: 0.9,
+          weight: 3,
+          lineCap: 'round',
+        },
+      })
+        .on('loaded', function (e) {
+          mymap.fitBounds(e.target.getBounds(), {
+            padding: [10, 10],
+          });
+          
+          let name = e.target.get_name();
+          document.getElementById(
+            'refill__name'
+          ).innerText = name;
+          
+          let ex_type = e.target.get_exercise_type();
+          if (ex_type){
+            document.getElementById(
+              'refill__type'
+            ).innerText = ex_type;
+          }
+          
+          let distance = e.target.get_distance() / 1000;
+          document.getElementById(
+            'refill__distance'
+          ).innerText = `Distance: ${formatNumber(distance)} km`;
+         
+
+          let duration = e.target.get_duration();
+          let duration_string = e.target.get_duration_string(duration);
+          if (duration) {
+            document.getElementById(
+              'refill__duration'
+            ).innerText = `Duration: ${duration_string}`;
+         
+            let speed = e.target.get_average_speed();
+            document.getElementById(
+              'refill__speed'
+            ).innerText = `Avg. Speed: ${formatNumber(speed)} km/h`;
+          }
+          
+          let start_time = new Date(e.target.get_time());
+          let formatted_time = formatDate(start_time);
+          if (formatted_time) {
+            document.getElementById(
+              'refill__start-time'
+            ).innerText = formatted_time;
+          }
+        })
+        .addTo(mymap);
+    }
+</script>
+
+<style>
+  #refill__name {
+    font-weight: 600;
+  }
+</style>
+<h2 id="gallery">Gallery</h2>
+
+
+
+    
+
+
+
+
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 17:00
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.91166497222222&mlon=72.82128399999999#map=16/18.91166497222222/72.82128399999999&layers=N" rel="noopener" target="_blank">(18.912°, 72.821°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_17_00_08_huc022dea1a06b8c467c505575cc2d414f_2044395_0x1600_resize_q75_box.jpg"
+        
+        alt=""
+        height="1600"
+        width="1200"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 17:20
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.917628&mlon=72.827652#map=16/18.917628/72.827652&layers=N" rel="noopener" target="_blank">(18.918°, 72.828°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_17_20_25_huf07d77d345cd8c260b090a95c1d437ae_716438_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="900"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 17:58
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.922547972222223&mlon=72.83452799999999#map=16/18.922547972222223/72.83452799999999&layers=N" rel="noopener" target="_blank">(18.923°, 72.835°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_17_58_17_hue845a99f17e07a313a31d961680c50c3_1615916_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:01
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.922620972222223&mlon=72.83414099999999#map=16/18.922620972222223/72.83414099999999&layers=N" rel="noopener" target="_blank">(18.923°, 72.834°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_01_33_huc917ff9ce5f11abcc28ad03d10599f99_643964_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:06
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.925107&mlon=72.832818#map=16/18.925107/72.832818&layers=N" rel="noopener" target="_blank">(18.925°, 72.833°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_06_45_hu58738b73da5584e6718eb3324385271e_2024855_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:08
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.925854972222222&mlon=72.83206197222222#map=16/18.925854972222222/72.83206197222222&layers=N" rel="noopener" target="_blank">(18.926°, 72.832°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_08_56_hu8ead497346f2b994f84d6b62920bd660_2167022_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:11
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.926908&mlon=72.83144399999999#map=16/18.926908/72.83144399999999&layers=N" rel="noopener" target="_blank">(18.927°, 72.831°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_11_21_hu69b39aec53a31a9dff428fea136810e5_611820_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="904"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:11
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.926908&mlon=72.83144399999999#map=16/18.926908/72.83144399999999&layers=N" rel="noopener" target="_blank">(18.927°, 72.831°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_11_43_hu77257feccfc5c74a46571c9a50c64769_1665526_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:13
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.927648&mlon=72.831474#map=16/18.927648/72.831474&layers=N" rel="noopener" target="_blank">(18.928°, 72.831°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_13_49_hua293edd5f68a623608f6f21ff7a8379e_1487986_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:14
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.927966972222222&mlon=72.83174799999999#map=16/18.927966972222222/72.83174799999999&layers=N" rel="noopener" target="_blank">(18.928°, 72.832°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_14_37_hu388186a444a5ceab5667b164090a5a1d_1532420_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:14
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.928042&mlon=72.831822#map=16/18.928042/72.831822&layers=N" rel="noopener" target="_blank">(18.928°, 72.832°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_14_47_hufd39997745c4876cccebcf453777fc60_925329_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:17
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.929555&mlon=72.831507#map=16/18.929555/72.831507&layers=N" rel="noopener" target="_blank">(18.930°, 72.832°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_17_35_hu3628ce50731a224509b05c080844a5a9_1294710_0x1600_resize_q75_box.jpg"
+        
+        alt=""
+        height="1600"
+        width="1200"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:19
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.930339&mlon=72.83135797222222#map=16/18.930339/72.83135797222222&layers=N" rel="noopener" target="_blank">(18.930°, 72.831°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_19_23_hua480b2e9f419891d1fd7cb35dce8a46f_1712608_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:21
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.931644972222223&mlon=72.829577#map=16/18.931644972222223/72.829577&layers=N" rel="noopener" target="_blank">(18.932°, 72.830°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_21_39_hu1d01e0b84653a46e8496479fcf2461c8_2650635_0x1600_resize_q75_box.jpg"
+        
+        alt=""
+        height="1600"
+        width="1200"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:22
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.930241972222223&mlon=72.83000497222221#map=16/18.930241972222223/72.83000497222221&layers=N" rel="noopener" target="_blank">(18.930°, 72.830°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_22_05_hufadc9e6a0dba19dfac6d717d32c82bf9_2225488_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:30
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.932679&mlon=72.82906097222222#map=16/18.932679/72.82906097222222&layers=N" rel="noopener" target="_blank">(18.933°, 72.829°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_30_12_hu0715b5b8b7a682d0af681ce84efb6c74_1889845_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:50
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.930758&mlon=72.82619097222222#map=16/18.930758/72.82619097222222&layers=N" rel="noopener" target="_blank">(18.931°, 72.826°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_50_43_hu32a6ef80a4eeb4bb0cf6d30a3db2c3f2_1013198_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 18:53
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.930976&mlon=72.82415999999999#map=16/18.930976/72.82415999999999&layers=N" rel="noopener" target="_blank">(18.931°, 72.824°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_18_53_51_hu342899a0a0227fe97fab6c67f2eddc41_980790_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 19:07
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.92942&mlon=72.82241797222221#map=16/18.92942/72.82241797222221&layers=N" rel="noopener" target="_blank">(18.929°, 72.822°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_19_07_25_hudbf74c80bbf390139e3cada60d0d5e92_713582_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 19:08
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.928968972222222&mlon=72.823171#map=16/18.928968972222222/72.823171&layers=N" rel="noopener" target="_blank">(18.929°, 72.823°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_19_08_39_hu5beb680e2953d773ff8e4735318df767_577024_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 19:31
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.926276&mlon=72.82675297222222#map=16/18.926276/72.82675297222222&layers=N" rel="noopener" target="_blank">(18.926°, 72.827°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_19_31_55_hu10573a73a82e8d572b7b61e974bb1ec8_583829_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 19:41
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.920173972222223&mlon=72.82594399999999#map=16/18.920173972222223/72.82594399999999&layers=N" rel="noopener" target="_blank">(18.920°, 72.826°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_19_41_32_hu71866b6f14f6d33461cf87dbf9ff277d_1066842_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 19:43
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.918905972222223&mlon=72.82545897222222#map=16/18.918905972222223/72.82545897222222&layers=N" rel="noopener" target="_blank">(18.919°, 72.825°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_19_43_43_hue3ba88010111c10a79f1bee061ffb45a_831488_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-08-19 19:43
+                        </div>
+                    
+                    
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat=18.918905972222223&mlon=72.82545897222222#map=16/18.918905972222223/72.82545897222222&layers=N" rel="noopener" target="_blank">(18.919°, 72.825°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/walking-in-south-mumbai/refill/2021_08_19_19_43_56_hu274b1218efcd389ef1cd2126b5e0acb5_804245_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+
+]]></description></item></channel></rss>

@@ -894,7 +894,7 @@ h4 code {
 .list-description__item,
 .list-mini__item {
   margin-top: 2rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 4rem;
 }
 .list-description__item .item__metadata,
 .list-mini__item .item__metadata {
@@ -1087,8 +1087,13 @@ thead {
 .gallery__figure {
   margin-top: 2rem;
   margin-bottom: 4.5rem;
+  margin-left: auto;
+  margin-right: auto;
   border: 2px solid var(--fg);
   overflow: hidden;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   border-radius: 0.5rem;
 }
 .gallery__figure img {
