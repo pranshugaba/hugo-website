@@ -4,8 +4,11 @@
   &__figure {
     margin-top: 2rem;
     margin-bottom: 4.5rem;
+    margin-left: auto;
+    margin-right: auto;
     border: 2px solid var(--fg);
     overflow: hidden;
+    max-width: max-content;
     border-radius: 0.5rem;
     img {
       border-radius: 0;
