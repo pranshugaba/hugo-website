@@ -5,6 +5,7 @@
     &nbsp; · &nbsp; {{ partial "helpers/location" . }}
     {{ end }}
     &nbsp; · &nbsp; <a href="/{{ .Type }}">{{ .Type | title }}</a>
+    &nbsp; · &nbsp; #{{ .Params.Number }} 
   </div>
   <div class="item__content">
       {{ .Content }}

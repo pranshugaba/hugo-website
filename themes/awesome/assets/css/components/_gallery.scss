@@ -18,10 +18,15 @@
     figcaption {
       text-align: left;
       font-size: 1rem;
+      // https://stackoverflow.com/questions/9769587/set-div-to-have-its-siblings-width/37034774
+      flex-grow: 1;       // Image not wider than image
+      width: 0;           // Image not wider than image
+      margin-block: 0;    // Image not wider than image 
     }
   }
 
   &__caption {
+    display: flex; // This is make sure the caption is not wider than the image.
     border-top: 2px solid var(--fg);
     padding-inline: 0.75rem;
     padding-block: 0;
