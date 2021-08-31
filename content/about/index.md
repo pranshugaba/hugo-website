@@ -36,10 +36,11 @@ Number of pages in each section
 
 |                       Count | Section                              |
 | --------------------------: | :----------------------------------- |
-| {{< countposts posts >}} | [Posts]({{< ref "/posts/" >}}) |
+|    {{< countposts posts >}} | [Posts]({{< ref "/posts/" >}})       |
 | {{< countposts thoughts >}} | [Thoughts]({{< ref "/thoughts/" >}}) |
 |    {{< countposts minis >}} | [Minis]({{< ref "/minis/" >}})       |
-|      {{< countposts dev >}} | [Dev]({{< ref "/dev/" >}})  |
+|      {{< countposts dev >}} | [Dev posts]({{< ref "/dev/" >}})     |
+|    {{< countposts maths >}} | [Maths posts]({{< ref "/maths/" >}}) |
 |    {{< countposts trips >}} | [Trips]({{< ref "/trips/" >}})       |
 |  {{< countposts reviews >}} | [Reviews]({{< ref "/reviews/" >}})   |
 |    {{< countposts links >}} | [Links]({{< ref "/links/" >}})       |
