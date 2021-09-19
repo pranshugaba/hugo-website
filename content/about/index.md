@@ -10,14 +10,16 @@ I write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}), and
 
 ### Now
 
-[See what I am doing now]({{< ref "/now" >}}).
+[See what I am doing now ->]({{< ref "/now" >}})
 
 ### Uses
 
-[See what software I use]({{< ref "/uses" >}}).
+I try to use free and open source software as much as possible. I find that in most cases it is better than the non-free proprietary alternatives. 
+
+[See what software I use ->]({{< ref "/uses" >}})
 
 ### Projects
-
+I work on the following projects in my spare time:
 - [Maths Wiki](https://maths.wiki)
 - [Decimal Clock](https://tenhourstudios.com)
 

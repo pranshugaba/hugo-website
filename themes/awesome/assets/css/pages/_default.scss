@@ -82,6 +82,7 @@
     padding: 0.25rem;
     border: 1.5px solid var(--fg);
     border-radius: 0.25rem;
+    line-height: 1;
     & a {
       @include m.plain-link;
       &:focus {

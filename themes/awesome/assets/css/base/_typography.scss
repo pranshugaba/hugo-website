@@ -21,15 +21,15 @@ h2 {
   font-size: 2.25rem;
   font-weight: 500;
   letter-spacing: -0.025em;
-  margin-top: 3rem;
-  margin-bottom: 1.75rem;
+  margin-top: 4.5rem;
+  margin-bottom: 2rem;
 }
 
 h3 {
   font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: -0.025em;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -45,7 +45,6 @@ ul,
 ol {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  line-height: 1.6;
 }
 
 li {
@@ -55,10 +54,6 @@ li {
 p {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  line-height: 1.6;
-  @media (min-width: 640px) {
-    line-height: 1.75;
-  }
 }
 p:first-child {
   margin-top: 1rem;
@@ -155,4 +150,8 @@ blockquote {
   margin-bottom: 2.5rem;
   margin-left: 2ch;
   padding-left: 2ch;
+}
+
+pre {
+  font-family: monospace;
 }

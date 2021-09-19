@@ -10,6 +10,7 @@
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
+  line-height: 1;
 
   & a {
     @include m.plain-link;

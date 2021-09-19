@@ -6,7 +6,7 @@
      xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
    <rte>
       <name>Afternoon ride to Gorai</name>
-    <type>Biking</type>
+    <type>Cycling</type>
       <rtept lat="19.20723" lon="72.83477">
          <name>Start</name>
         <time>2021-07-30T12:10:53+05:30</time>

@@ -75,7 +75,10 @@ main {
 }
 
 body {
-  line-height: 1;
+  line-height: 1.6;
+  @media (min-width: 640px) {
+    line-height: 1.75;
+  }
 }
 
 ol,
