@@ -1,4 +1,184 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>cycling by Pranshu Gaba</title><link>https://pranshugaba.com/tags/cycling/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 31 Aug 2021 12:17:34 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/cycling/index.xml" rel="self" type="application/rss+xml"/><item><title>Cycling to Gorai</title><link>https://pranshugaba.com/trips/cycling-to-gorai/</link><pubDate>Fri, 30 Jul 2021 14:00:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-to-gorai/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>cycling by Pranshu Gaba</title><link>https://pranshugaba.com/tags/cycling/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sun, 19 Sep 2021 14:02:38 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/cycling/index.xml" rel="self" type="application/rss+xml"/><item><title>Cycling along the length of Mumbai</title><link>https://pranshugaba.com/trips/cycling-to-tifr/</link><pubDate>Sun, 19 Sep 2021 13:00:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-to-tifr/</guid><description>
+<![CDATA[<p>I want to cycle more in South Mumbai, so I needed to get my cycle from my home to TIFR. I could have gone by train, but cycling is more fun!</p>
+<p>It was an exciting but exhausting ride. I left at 5.20 am and reached TIFR at 8.35 am. I mainly cycled along S V road and Dr. Annie Besant road.</p>
+<p>I got to see a rainbow on the way!</p>
+
+<div>
+  <div id="tifr" class="leaflet-map"></div>
+  <div class="route__metadata">
+    <div class="route__name">
+      <div>
+        <p id="tifr__name"></p>
+        <p id="tifr__start-time"></p>
+      </div>
+      <p id="tifr__type"></p>
+    </div>
+    <div class="route__stats">
+      <p id="tifr__distance"></p>
+      <p id="tifr__duration"></p>
+      <p id="tifr__speed"></p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    {
+      let coords = [19.18, 72.82];
+      let zoomLevel = 12;
+      var corner1 = L.latLng(18.743, 73.394),
+      corner2 = L.latLng(19.470, 72.507),
+      bounds = L.latLngBounds(corner1, corner2);
+      let mymap = L.map('tifr', {
+        fullscreenControl: true,
+        preferCanvas: true,
+        zoomSnap: 0.5,
+        zoomDelta: 0.5,
+        scrollWheelZoom: false,
+      }).setView(coords, zoomLevel);
+
+         const ATTR =
+        '&copy; <a href="https://stadiamaps.com/" target="_blank" rel="noopener">Stadia Maps</a>, ' +
+        '&copy; <a href="https://openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> ' +
+        '&copy; <a href="http://openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a>';
+      const TILES_URL =
+        'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png';
+
+      let Stadia_OSMBright = L.tileLayer(TILES_URL, {
+        minZoom: 3,
+        maxZoom: 18,
+        attribution: ATTR,
+      });
+      Stadia_OSMBright.addTo(mymap);
+
+      let darkMode = localStorage.getItem('darkMode');
+      if (darkMode === 'enabled'){
+        console.log("IT is dark in here")
+      }
+      else {
+        console.log("IT is light out here")
+      }
+
+      L.control.scale({ imperial: false }).addTo(mymap);
+
+      let gpx = 'tifr.gpx'; 
+      
+      function formatNumber (number, precision = 3) {
+        if (typeof number === 'undefined' || number === null) return ''
+      
+        if (number === 0) return '0'
+      
+        const roundedValue = round(precision, number)
+        const floorValue = Math.floor(roundedValue)
+      
+        const isInteger = Math.abs(floorValue - roundedValue) < Number.EPSILON
+      
+        const numberOfFloorDigits = String(floorValue).length
+        const numberOfDigits = String(roundedValue).length
+      
+        if (numberOfFloorDigits > precision) {
+          return String(floorValue)
+        } else {
+          const padding = isInteger ? precision - numberOfFloorDigits : precision - numberOfDigits + 1
+      
+          if (padding > 0) {
+            if (isInteger) {
+              return `${String(floorValue)}.${'0'.repeat(padding)}`
+            } else {
+              return `${String(roundedValue)}${'0'.repeat(padding)}`
+            }
+          } else {
+            return String(roundedValue)
+          }
+        }
+      }
+      
+      function round (precision, number) {
+        return parseFloat(number.toPrecision(precision))
+      }
+      
+      function formatDate(date) {
+        const options = {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          timeZone: "Asia/Kolkata"
+        };
+        return new Intl.DateTimeFormat("en-in", options).format(date);
+      }
+
+      new L.GPX(gpx, {
+        async: true,
+        marker_options: {
+          shadowUrl: '/img/shadow.png',
+          endIconUrl: '/img/enda.png',
+          startIconUrl: '/img/starta.png',
+          iconSize: [50, 50],
+          iconAnchor: [25, 48],
+        },
+        polyline_options: {
+          color: 'papayawhip',
+          opacity: 0.9,
+          weight: 3,
+          lineCap: 'round',
+        },
+      })
+        .on('loaded', function (e) {
+          mymap.fitBounds(e.target.getBounds(), {
+            padding: [10, 10],
+          });
+          
+          let name = e.target.get_name();
+          document.getElementById(
+            'tifr__name'
+          ).innerText = name;
+          
+          let ex_type = e.target.get_exercise_type();
+          if (ex_type){
+            document.getElementById(
+              'tifr__type'
+            ).innerText = ex_type;
+          }
+          
+          let distance = e.target.get_distance() / 1000;
+          document.getElementById(
+            'tifr__distance'
+          ).innerText = `Distance: ${formatNumber(distance)} km`;
+         
+
+          let duration = e.target.get_duration();
+          let duration_string = e.target.get_duration_string(duration);
+          if (duration) {
+            document.getElementById(
+              'tifr__duration'
+            ).innerText = `Duration: ${duration_string}`;
+         
+            let speed = e.target.get_average_speed();
+            document.getElementById(
+              'tifr__speed'
+            ).innerText = `Avg. Speed: ${formatNumber(speed)} km/h`;
+          }
+          
+          let start_time = new Date(e.target.get_time());
+          let formatted_time = formatDate(start_time);
+          if (formatted_time) {
+            document.getElementById(
+              'tifr__start-time'
+            ).innerText = formatted_time;
+          }
+        })
+        .addTo(mymap);
+    }
+</script>
+
+<style>
+  #tifr__name {
+    font-weight: 600;
+  }
+</style>
+]]></description></item><item><title>Cycling to Gorai</title><link>https://pranshugaba.com/trips/cycling-to-gorai/</link><pubDate>Fri, 30 Jul 2021 14:00:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-to-gorai/</guid><description>
 <![CDATA[<h2 id="map">Map</h2>
 
 <div>

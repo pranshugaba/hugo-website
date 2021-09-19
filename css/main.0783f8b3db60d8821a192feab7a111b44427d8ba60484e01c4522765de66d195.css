@@ -77,7 +77,12 @@ main {
 }
 
 body {
-  line-height: 1;
+  line-height: 1.6;
+}
+@media (min-width: 640px) {
+  body {
+    line-height: 1.75;
+  }
 }
 
 ol,
@@ -206,15 +211,15 @@ h2 {
   font-size: 2.25rem;
   font-weight: 500;
   letter-spacing: -0.025em;
-  margin-top: 3rem;
-  margin-bottom: 1.75rem;
+  margin-top: 4.5rem;
+  margin-bottom: 2rem;
 }
 
 h3 {
   font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: -0.025em;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -230,7 +235,6 @@ ul,
 ol {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  line-height: 1.6;
 }
 
 li {
@@ -240,12 +244,6 @@ li {
 p {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  line-height: 1.6;
-}
-@media (min-width: 640px) {
-  p {
-    line-height: 1.75;
-  }
 }
 
 p:first-child {
@@ -342,6 +340,10 @@ blockquote {
   margin-bottom: 2.5rem;
   margin-left: 2ch;
   padding-left: 2ch;
+}
+
+pre {
+  font-family: monospace;
 }
 
 figure {
@@ -449,7 +451,8 @@ figure figcaption {
 .header {
   border-bottom: 2px solid var(--fg);
   padding-top: 0.5rem;
-  padding-bottom: 1.2rem;
+  padding-bottom: 1.125rem;
+  line-height: 1.15;
 }
 @media (min-width: 640px) {
   .header {
@@ -499,6 +502,7 @@ figure figcaption {
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
+  line-height: 1;
 }
 .footer a {
   text-decoration: none;
@@ -1001,6 +1005,7 @@ table {
 td, th {
   border: 1px solid var(--fg);
   padding: 0.5rem;
+  line-height: 1;
 }
 
 thead {
@@ -1219,6 +1224,7 @@ thead {
   padding: 0.25rem;
   border: 1.5px solid var(--fg);
   border-radius: 0.25rem;
+  line-height: 1;
 }
 .page__all a {
   text-decoration: none;
