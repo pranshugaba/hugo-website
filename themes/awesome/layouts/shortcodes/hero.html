@@ -1,0 +1,35 @@
+{{ $context := . }}
+
+{{- $heroText := .Inner | markdownify -}}
+
+{{ $imgName := "*jpg" }}
+{{ with .Get "image" }}
+    {{ $imgName = . }}
+{{ end }}
+
+{{ $img := .Page.Resources.GetMatch (printf "*%s*" $imgName)}}
+
+
+<div class="hero {{ with .Get "position" }}{{.}}{{end}}">
+    {{ with $img }}
+        <div class="hero__image">
+            <figure class="hero__figure">
+                {{ $big := "" }}
+                {{ if lt .Height .Width }}
+                {{ $big = .Resize "1600x" }}
+                {{ else }}
+                {{ $big = .Resize "x1600" }}
+                {{ end }}
+                <img
+                src="{{ $big.Permalink }}"
+                alt="{{ with $context.Get "alt" }}{{.}}{{end}}"
+                height="{{ $big.Height }}"
+                width="{{ $big.Width }}"
+                />
+            </figure>
+        </div>
+    {{ end }}
+    <div class="hero__text">
+        {{ $heroText }}
+    </div>
+</div>

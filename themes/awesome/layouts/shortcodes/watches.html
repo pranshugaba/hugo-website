@@ -1,0 +1,22 @@
+<ul class="items__list">
+    {{ with $.Site.Data.tvseries }}
+        <h2>Want to watch</h2>
+        {{ range .wantToWatch}}
+        <li>
+            {{ partial "list/tvseries.html" (dict "Context" . "Status" "wantToWatch") }}
+        </li>
+        {{ end }}
+        <h2>Currently watching</h2>
+        {{ range .watching}}
+        <li>
+            {{ partial "list/tvseries.html" (dict "Context" . "Status" "watching") }}
+        </li>
+        {{ end }}
+        <h2>Finished watching</h2>
+        {{ range .watched}}
+        <li>
+            {{ partial "list/tvseries.html" (dict "Context" . "Status" "watched") }}
+        </li>
+        {{ end }}
+    {{ end }}
+</ul>

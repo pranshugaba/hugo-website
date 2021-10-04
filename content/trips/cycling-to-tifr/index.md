@@ -1,7 +1,7 @@
 ---
 title: "Cycling along the length of Mumbai"
 subtitle: "I cycled from home to TIFR"
-summary: "A fun, but tiring, early morning ride."
+summary: "A fun but tiring early morning ride."
 date: 2021-09-19T13:00:00+05:30
 lastmod: 2021-09-19T13:00:00+05:30
 

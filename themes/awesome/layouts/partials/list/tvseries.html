@@ -1,0 +1,10 @@
+<div class="list-books__item">
+  <span class="item__date">
+      {{ with .Context.season }}
+        season {{ . }}
+      {{ end }}
+  </span>
+  <div class="item__details">
+      <div class="item__title">{{ .Context.title }}</div> {{ .Context.channel }}
+  </div>
+</div>

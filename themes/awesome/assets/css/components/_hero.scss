@@ -1,0 +1,28 @@
+.hero {
+  &__figure {
+    margin-inline: auto;
+    width: clamp(150px, 80%, 320px);
+    img {
+      border-radius: 1rem;
+    }
+  }
+  @media (min-width: 640px) {
+    margin-inline: calc((-0.1) * (90vw - 640px));
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: clamp(1rem, 4%, 2rem);
+
+    &.img__right {
+      flex-direction: row-reverse;
+    }
+
+    &__figure {
+      margin-inline: 0;
+      width: 100%;
+    }
+    &__text {
+      max-width: 55%;
+    }
+  }
+}
