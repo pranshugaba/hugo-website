@@ -9,11 +9,6 @@ watching:
     season: 9
     channel: Channel 4
   
-  - title: Final Space
-    type: Series
-    season: 2
-    channel: Netflix
-  
   - title: Taskmaster
     type: Series
     channel: Channel 4
@@ -25,15 +20,15 @@ watching:
     season: 3
     channel: FX
   
+  - title: Curb your Enthusiasm
+    type: Series
+    season: 11
+    channel: HBO
+
   - title: Gravity Falls
     type: Series
     season: 2
     channel: Disney
-  
-  - title: Ted Lasso
-    type: Series
-    season: 2
-    channel: Apple TV+
 
   - title: Limmy's Show
     type: Series
@@ -50,4 +45,15 @@ watched:
   - title: Brooklyn 99
     type: Series
     season: 8
+    channel: NBC
+  
+  - title: Final Space
+    type: Series
+    season: 3
+    channel: Netflix
+
+done: 
+  - title: Superstore 
+    type: Series
+    season: 6
     channel: NBC

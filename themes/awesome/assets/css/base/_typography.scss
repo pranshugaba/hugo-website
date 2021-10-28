@@ -14,23 +14,23 @@ h1 {
   line-height: 1.25;
   letter-spacing: -0.05em;
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5em;
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 500;
   letter-spacing: -0.025em;
-  margin-top: 4.5rem;
-  margin-bottom: 2rem;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: -0.025em;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-top: 1.5em;
+  margin-bottom: 0.25em;
 }
 
 h4 {
@@ -39,6 +39,18 @@ h4 {
   letter-spacing: -0.025em;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0;
 }
 
 ul,
@@ -61,7 +73,12 @@ p:first-child {
 p:last-child {
   margin-bottom: 1rem;
 }
-
+h2 + p,
+h2 + h3,
+h3 + p,
+h4 + p {
+  margin-top: 0.75rem;
+}
 a {
   &,
   &:visited {
@@ -74,7 +91,7 @@ a {
   &:hover {
     text-decoration: none;
   }
-  &:focus{
+  &:focus {
     outline: 0.15em solid var(--fg);
     outline-offset: 0.125em;
     border-radius: 0.1em;
@@ -87,10 +104,10 @@ button {
   padding: 0.1rem;
   outline: none;
   transition: outline 0.1s ease-out;
-  &:hover{
+  &:hover {
     text-decoration: underline;
   }
-  &:focus{
+  &:focus {
     outline: 0.15em solid var(--fg);
     outline-offset: 0.2em;
   }

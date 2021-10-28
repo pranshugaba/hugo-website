@@ -14,9 +14,11 @@ draft: true
 featured: false
 ---
 
+Have you read the terms and conditions that you are _forced_ to accept when you install Windows or macOS on a new PC? When you set up a new iPhone or Android device? They look scary because they are so long and written legalese. But once you read it, you will realise how much more worse it actually is. You bound to follow the terms and conditions that you "agreed" to, and the companies can punish you if you violate those terms. You sign away many important rights when you click on the agree button. But it does not have to be this way. I would like to introduce to you, if you don't know it already, _free software_. 
+
 ### What is free software?
 
-I will first clarify what I mean by free software. 
+Let me begin by clarifying a common misconception. 
 The _free_ in the free software stands for free as in freedom, not free as in free of cost. Some languages such as French and Spanish have two different words for the two meanings. 
 For example, in Spanish, _gratis_ means free of cost whereas _libre_ means freedom.
 Unfortunately, English does not have two different words for free and this leads to confusion sometimes. 
