@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *:before,
 *:after {
@@ -211,6 +212,7 @@ h2 {
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: -0.025em;
+  line-height: 1.25;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
@@ -219,6 +221,7 @@ h3 {
   font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: -0.025em;
+  line-height: 1.35;
   margin-top: 1.5em;
   margin-bottom: 0.25em;
 }
@@ -228,18 +231,20 @@ h4 {
   font-weight: 500;
   letter-spacing: -0.025em;
   margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 h5 {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 h6 {
   font-size: 1rem;
   font-weight: 500;
+  margin-top: 2rem;
   margin-bottom: 0;
 }
 
@@ -254,22 +259,26 @@ li {
 }
 
 p {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-p:first-child {
   margin-top: 1rem;
-}
-
-p:last-child {
   margin-bottom: 1rem;
 }
 
-h2 + p,
-h2 + h3,
+p + p {
+  margin-top: 1.5rem;
+}
+
+p:first-child {
+  margin-top: 0.75rem;
+}
+
+p:last-child {
+  margin-bottom: 0.75rem;
+}
+
 h3 + p,
-h4 + p {
+h4 + p,
+h5 + p,
+h6 + p {
   margin-top: 0.75rem;
 }
 
@@ -354,15 +363,57 @@ hr {
 
 blockquote {
   font-size: 1.125rem;
-  border-left: 4px solid var(--fg);
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  margin-left: 2ch;
-  padding-left: 2ch;
+  border: 0.125rem solid var(--fg);
+  border-radius: 1rem;
+  border-bottom-left-radius: 0.15rem;
+  margin-block: 2.5rem;
+  margin-inline: auto;
+  padding-block: 1.25rem;
+  padding-inline: 2ch;
+  quotes: "“" "”" "‘" "’";
+  width: 90%;
+}
+@media (min-width: 640px) {
+  blockquote {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 80%;
+  }
+}
+
+blockquote::before {
+  content: open-quote;
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 1rem;
+  margin-right: 0.1rem;
+  vertical-align: -0.375em;
+}
+
+blockquote p {
+  display: inline;
 }
 
 pre {
   font-family: monospace;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+q::before {
+  content: open-quote;
+}
+
+q::after {
+  content: close-quote;
+}
+
+dt {
+  margin-top: 1rem;
+  font-weight: 500;
 }
 
 figure {
@@ -550,7 +601,7 @@ h4 code,
 kbd {
   font-family: "JBMono", monospace;
   padding: 0.05rem 0.2rem;
-  border: 1px solid var(--fg);
+  border: 0.075rem solid var(--fg);
   border-radius: 0.2rem;
 }
 
@@ -970,6 +1021,7 @@ h4 code {
 }
 .admonition__title {
   font-weight: 700;
+  line-height: 1.25;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--fg);
@@ -1256,7 +1308,7 @@ thead {
 .page__tags li {
   line-height: 1;
   padding: 0.25rem;
-  border: 1.5px solid var(--fg);
+  border: 0.075rem solid var(--fg);
   border-radius: 0.25rem;
 }
 .page__end {
@@ -1270,7 +1322,7 @@ thead {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding: 0.25rem;
-  border: 1.5px solid var(--fg);
+  border: 0.075rem solid var(--fg);
   border-radius: 0.25rem;
   line-height: 1;
 }
