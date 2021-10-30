@@ -64,7 +64,7 @@
     & li {
       line-height: 1;
       padding: 0.25rem;
-      border: 1.5px solid var(--fg);
+      border: 0.075rem solid var(--fg);
       border-radius: 0.25rem;
     }
   }
@@ -80,7 +80,7 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     padding: 0.25rem;
-    border: 1.5px solid var(--fg);
+    border: 0.075rem solid var(--fg);
     border-radius: 0.25rem;
     line-height: 1;
     & a {
