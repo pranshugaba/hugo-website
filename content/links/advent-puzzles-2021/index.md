@@ -1,7 +1,7 @@
 ---
 title: "Advent Puzzles 2021"
 subtitle: "25 days of problem solving"
-summary: "'Tis the season to solve puzzles!"
+summary: "'Tis the season of problem solving!"
 
 date: 2021-12-10T05:30:00+05:30
 lastmod: 2021-12-10T05:30:00+05:30
