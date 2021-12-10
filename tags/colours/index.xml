@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>colours by Pranshu Gaba</title><link>https://pranshugaba.com/tags/colours/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sun, 31 Oct 2021 00:59:09 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/colours/index.xml" rel="self" type="application/rss+xml"/><item><title>blue</title><link>https://pranshugaba.com/poems/blue/</link><pubDate>Tue, 17 Aug 2021 23:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/blue/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>colours by Pranshu Gaba</title><link>https://pranshugaba.com/tags/colours/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 11 Dec 2021 03:29:55 +0530</lastBuildDate><atom:link href="https://pranshugaba.com/tags/colours/index.xml" rel="self" type="application/rss+xml"/><item><title>blue</title><link>https://pranshugaba.com/poems/blue/</link><pubDate>Tue, 17 Aug 2021 23:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/blue/</guid><description>
 <![CDATA[<img src="https://pranshugaba.com/poems/blue/featured_hu111d066e5bba36b8a8625aab87fe34a5_4272772_1080x0_resize_q75_box.jpg" alt="" /><p>i&rsquo;m afraid<br>
 the esteemed car<br>
 just blue itself</p>
@@ -7,7 +7,7 @@ just blue itself</p>
 <p>I thought it would be great if the reader could also see a preview of the colours. I could add images of the colours that I am describing, but that is a lot of work and not very flexible.  This is what led me to write this Hugo shortcode. I followed the <a href="https://gohugo.io/templates/shortcode-templates/" target="_blank" rel="noopener">Hugo docs on shortcodes</a> for reference.</p>
 <h2 id="usage">Usage</h2>
 <p>The following code in markdown
-<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">This is a colour shortcode {{&lt; colour &#34;#ff0000&#34; &gt;}}.</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">This is a colour shortcode {{&lt; colour &#34;#ff0000&#34; &gt;}}.</code></pre></div></p>
 <p>renders as</p>
 <p>This is a colour shortcode 
 <code style="background-color: #ff0000;"> 
@@ -29,7 +29,7 @@ just blue itself</p>
 </ul>
 <h2 id="shortcode">Shortcode</h2>
 <p>I created a file named <code>colour.html</code> in <code>layouts/shortcodes</code>, and added the following code in it. We can now access this code in any markdown file using the <code>colour</code> shortcode.</p>
-<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> <span style="color:#5bc4bf">:=</span> .<span style="color:#06b6ef">Get</span> <span style="color:#f99b15">0</span> | <span style="color:#06b6ef">safeCSS</span> }}
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> <span style="color:#5bc4bf">:=</span> .<span style="color:#06b6ef">Get</span> <span style="color:#f99b15">0</span> | <span style="color:#06b6ef">safeCSS</span> }}
 &lt;<span style="color:#06b6ef">code</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;background-color: {{ $colour }};&#34;</span>&gt; 
   &lt;<span style="color:#06b6ef">span</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;
 </span><span style="color:#48b685">      color: {{ $colour }};
@@ -113,7 +113,7 @@ just blue itself</p>
 </ul>
 <p>The text is always legible, but the colour preview is smaller.</p>
 <p>Here&rsquo;s the shortcode for this style:</p>
-<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> <span style="color:#5bc4bf">:=</span> .<span style="color:#06b6ef">Get</span> <span style="color:#f99b15">0</span> | <span style="color:#06b6ef">safeCSS</span> }}
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> <span style="color:#5bc4bf">:=</span> .<span style="color:#06b6ef">Get</span> <span style="color:#f99b15">0</span> | <span style="color:#06b6ef">safeCSS</span> }}
 &lt;<span style="color:#06b6ef">code</span>&gt;
 &lt;<span style="color:#06b6ef">span</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;display: inline-block;
 </span><span style="color:#48b685">    width: 1.6ch;
