@@ -209,7 +209,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.925rem;
   font-weight: 500;
   letter-spacing: -0.025em;
   line-height: 1.25;
@@ -1249,8 +1249,18 @@ thead {
   justify-content: space-between;
 }
 
+.page__header {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+@media (min-width: 640px) {
+  .page__header {
+    margin-top: min(7.5rem, 25vh);
+  }
+}
 .page__title {
   font-size: 2.5rem;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
 .page__subtitle {
@@ -1261,7 +1271,7 @@ thead {
   line-height: 1.25;
 }
 .page__date {
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
 .page__location {
   margin-top: 0.75rem;
@@ -1362,6 +1372,9 @@ thead {
   justify-content: end;
 }
 
+.poems .page__header {
+  margin-top: 3rem;
+}
 .poems .page__content {
   font-size: 1.125rem;
   max-width: -webkit-max-content;

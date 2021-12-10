@@ -1,12 +1,12 @@
 {{ define "main" }}
 <main>
-  <article>
+  <div class="page__header">
     <h1 class="page__title">{{ .Title | emojify }}</h1>
     {{ with .Params.Subtitle }}
         <h2 class="page__subtitle" >{{ . | emojify }}</h2>
     {{ end }}
     {{.Content}}
-  </article>
+  </div>
   {{ range .Pages.GroupByDate "2006" }}
   <section id="{{ .Key }}">
     <h2 class="list__key">{{ .Key }}</h2>

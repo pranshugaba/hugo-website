@@ -1,10 +1,11 @@
 {{ define "main" }}
 <main>
-  <article>
+  <div class="page__header">
     <h1 class="page__title">{{ .Title | emojify }}</h1>
     {{ with .Params.Subtitle }}
         <h2 class="page__subtitle" >{{ . | emojify }}</h2>
     {{ end }}
+  </div>
     {{.Content}}
   {{ if eq .RelPermalink "/tags/" }}
     {{ partial "list/tagcloud.html" . }}

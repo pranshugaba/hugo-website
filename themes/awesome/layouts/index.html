@@ -5,8 +5,10 @@
 {{ $paginator := .Paginate ($pages.GroupByDate "2006") $itemsPerPage }}
 
 {{ if eq ($paginator.PageNumber) 1 }}
-  <h1 class="page__title">Hello there</h1>
-  <h2 class="page__subtitle" >Welcome to my site!</h2>
+  <div class="page__header">
+    <h1 class="page__title">Hello there</h1>
+    <h2 class="page__subtitle" >Welcome to my site!</h2>
+  </div>
   {{ .Content }}
 {{ end }}
 
