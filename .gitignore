@@ -7,6 +7,9 @@ public
 # Vim swap files
 .swp
 
+# hugo build file
+.hugo_build.lock
+
 # hugo generated resources
 resources
 

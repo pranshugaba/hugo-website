@@ -4,6 +4,8 @@ $black: #121212;
 :root {
   --bg: #{$papaya};
   --fg: #{$black};
+  --light: #{$papaya};
+  --dark: #{$black};
 }
 
 .dark-mode {

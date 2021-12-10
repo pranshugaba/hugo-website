@@ -282,7 +282,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 .leaflet-bar a,
 .leaflet-bar a:hover {
-  background-color: papayawhip;
+  background-color: var(--light);
   border-bottom: 1px solid #ccc;
   width: 26px;
   height: 26px;
@@ -298,9 +298,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
   background-repeat: no-repeat;
   display: block;
 }
-.leaflet-bar a:hover {
-  background-color: hsl(37, 50%, 85%);
-}
+/* .leaflet-bar a:hover {
+  background-color: hsl(36, 65%, 22%);
+} */
 .leaflet-bar a:first-child {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -502,7 +502,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-  background: papayawhip;
+  background: var(--light);
   color: #333;
   box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
 }

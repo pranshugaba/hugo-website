@@ -1,5 +1,5 @@
 .leaflet-control-fullscreen a {
-  background: papayawhip url('/img/leaflet/fullscreen@2x.png') no-repeat 0 0;
+  background: var(--light) url('/img/leaflet/fullscreen@2x.png') no-repeat 0 0;
   background-size: 26px 52px;
 }
 

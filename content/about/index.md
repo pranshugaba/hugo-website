@@ -50,6 +50,7 @@ The site is open source. You can find the source code on my [Github page](https:
 |      {{< countposts dev >}} | [Dev posts]({{< ref "/dev/" >}})     |
 |    {{< countposts trips >}} | [Trips]({{< ref "/trips/" >}})       |
 |  {{< countposts reviews >}} | [Reviews]({{< ref "/reviews/" >}})   |
+|    {{< countposts links >}} | [Links]({{< ref "/links/" >}})       |
 |    {{< countposts poems >}} | [Poems]({{< ref "/poems/" >}})       |
 |  {{< countposts puzzles >}} | [Puzzles]({{< ref "/puzzles/" >}})   |
 |  {{< countposts stories >}} | [Stories]({{< ref "/stories/" >}})   |

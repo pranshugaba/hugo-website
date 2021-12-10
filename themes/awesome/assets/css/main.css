@@ -511,6 +511,8 @@ figure figcaption {
 :root {
   --bg: papayawhip;
   --fg: #121212;
+  --light: papayawhip;
+  --dark: #121212;
 }
 
 .dark-mode {
