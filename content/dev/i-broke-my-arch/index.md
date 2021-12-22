@@ -1,5 +1,5 @@
 ---
-title: "I broke my Arch system"
+title: "I broke my Arch System"
 subtitle: "I updated my system, and now I only see a black screen"
 summary: "I updated my Arch system, and all I would get is a black screen. I fixed it by rebuilding some AUR packages."
 
@@ -10,7 +10,7 @@ tags: ["linux", "arch-linux", "pacman"]
 
 math: false
 
-draft: true
+draft: false
 featured: false
 ---
 
