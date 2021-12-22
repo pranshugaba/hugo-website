@@ -1,5 +1,5 @@
 ---
 title: Dev posts
-subtitle: Posts about GameDev and WebDev
-summary: My posts related to game development and web development.
+subtitle: Technical posts related to GameDev, WebDev, and Linux
+summary: My posts related to game development, web development, and Linux
 ---

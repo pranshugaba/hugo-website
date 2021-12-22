@@ -14,13 +14,13 @@ summary: A guide to explore my site
 
 ### Learn
 
-- [Dev]({{< ref "/dev/" >}}): Posts about gamedev and webdev
+- [Dev]({{< ref "/dev/" >}}): Technical posts about gamedev, webdev, and Linux
 - [Maths]({{< ref "/maths/" >}}): Posts about maths and computer science
 
 ### Explore
 
 - [Trips]({{< ref "/trips/" >}}): My cycling and walking trips
-- [Reviews]({{< ref "/reviews/" >}}): I review books, movies, apps, and games
+- [Reviews]({{< ref "/reviews/" >}}): I review books, movies, and games
 - [Links]({{< ref "/links/" >}}): Some links that I find interesting
 
 ### Fun
