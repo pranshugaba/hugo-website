@@ -122,6 +122,21 @@ body {
   padding: 0.8rem;
 }
 
+.skip__nav {
+  position: absolute;
+  transform: translateY(-200%);
+  background-color: var(--bg);
+  padding: 0.1rem 0.2rem;
+}
+.skip__nav:focus {
+  transform: translateY(350%);
+}
+@media (min-width: 640px) {
+  .skip__nav:focus {
+    transform: translateY(250%);
+  }
+}
+
 #content {
   -webkit-animation: fadeInAnimation ease-in 0.5s;
           animation: fadeInAnimation ease-in 0.5s;
