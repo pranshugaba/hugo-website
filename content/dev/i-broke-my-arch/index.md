@@ -16,7 +16,7 @@ featured: false
 
 Today, I updated my system running Arch Linux after a month using `pacman -Syu`. I rebooted my system to find a black screen instead of the SDDM login screen. I tried pressing the Caps Lock key, and I could see its light toggle. This meant that things were not that bad. 
 
-I changed the tty using <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F2</kbd> and logged in to my system. I tried downgrading the Linux kernel but that didn't help. I tried disabling the optimus-manager and sddm services, and tried starting Xorg server using `startx` or `xinit`. None of this worked. 
+I changed the tty using <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F2</kbd> and logged in to my system. I tried downgrading the Linux kernel but that didn't help. I tried disabling the optimus-manager and sddm services, and tried starting the Xorg server using `startx` or `xinit`. None of this worked. 
 
 The fix was to rebuild the optimus-manager package. It turns out that Python was upgraded from 3.9 to 3.10 in the update, and this broke Optimus Manager. I rebuilt it, and I am able to access the login screen and my window manager again.
 

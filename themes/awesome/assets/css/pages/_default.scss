@@ -4,7 +4,7 @@
   &__header {
     margin-top: 3rem;
     @media (min-width: 640px) {
-      margin-top: min(7.5rem, 25vh);
+      margin-top: min(6rem, 20vh);
     }
     margin-bottom: 3rem;
   }
@@ -28,7 +28,8 @@
     margin-bottom: 3rem;
   }
   &__lastmod {
-    margin-top: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1.5rem;
   }
 
   &__featuredimage {

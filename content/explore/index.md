@@ -6,15 +6,9 @@ summary: A guide to explore my site
 
 ## By Sections
 
-### General
-
-- [Posts]({{< ref "/posts/" >}}): General Posts
-- [Thoughts]({{< ref "/thoughts/" >}}): My thoughts and opinions
-- [Minis]({{< ref "/minis/" >}}): Byte-sized posts
-
 ### Learn
 
-- [Dev]({{< ref "/dev/" >}}): Technical posts about gamedev, webdev, and Linux
+- [Dev]({{< ref "/dev/" >}}): Technical posts on gamedev, webdev, and Linux
 - [Maths]({{< ref "/maths/" >}}): Posts about maths and computer science
 
 ### Explore
@@ -29,6 +23,7 @@ summary: A guide to explore my site
 - [Puzzles]({{< ref "/puzzles/" >}}): Head-scratchers and mind-benders
 - [Stories]({{< ref "/stories/" >}}): Gripping tales of awe and wonder
 - [Comics]({{< ref "/comics/" >}}): Handwritten, handdrawn, handpainted
+- [Minis]({{< ref "/minis/" >}}): Byte-sized posts
 
 
 ## By Tags
