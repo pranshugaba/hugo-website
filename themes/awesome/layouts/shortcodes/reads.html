@@ -1,3 +1,15 @@
+<h2 class="list__key">Currently reading</h2>
+<ul class="items__list">
+    {{ with $.Site.Data.books }}
+        {{ range .reading}}
+        <li>
+            {{ partial "list/books.html" (dict "Context" . "Status" "reading") }}
+        </li>
+        {{ end }}
+    {{ end }}
+</ul>
+
+<h2 class="list__key">Want to read</h2>
 <ul class="items__list">
     {{ with $.Site.Data.books }}
         {{ range .wantToRead}}
@@ -5,14 +17,25 @@
             {{ partial "list/books.html" (dict "Context" . "Status" "wantToRead") }}
         </li>
         {{ end }}
-        {{ range .reading}}
+    {{ end }}
+</ul>
+
+{{ $years := slice }}
+{{ range $.Site.Data.books.read }}
+    {{ $years = $years | append (dateFormat "2006" .endDate) }}
+{{ end }}
+{{ $years = uniq $years }}
+
+<h2 class="list__key">Finished Reading</h2>
+<ul class="items__list">
+    {{ range $years }}
+    {{ $year := . }}
+        <h3>{{ . }}</h3>
+        {{ range $.Site.Data.books.read }}
         <li>
-            {{ partial "list/books.html" (dict "Context" . "Status" "reading") }}
-        </li>
-        {{ end }}
-        {{ range .read}}
-        <li>
+            {{ if (eq (dateFormat "2006" .endDate) $year) }}
             {{ partial "list/books.html" (dict "Context" . "Status" "read") }}
+            {{ end }}
         </li>
         {{ end }}
     {{ end }}

@@ -137,15 +137,6 @@ body {
   }
 }
 
-#content {
-  -webkit-animation: fadeInAnimation ease-in 0.5s;
-          animation: fadeInAnimation ease-in 0.5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
 ::-moz-selection {
   background-color: var(--fg);
   color: var(--bg);
