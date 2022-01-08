@@ -3,7 +3,7 @@
   {{- partial "head.html" . -}}
   <body>
     {{- partial "header.html" . -}}
-    <div {{ with .Type }}class="{{ . }}"{{ end }}id="content">{{- block "main" . }} {{- end }}</div>
+    <main {{ with .Type }}class="{{ . }}"{{ end }}id="content">{{- block "main" . }} {{- end }}</main>
     {{- partial "footer.html" . -}}
   </body>
   {{ partial "helpers/darkmode" . }}

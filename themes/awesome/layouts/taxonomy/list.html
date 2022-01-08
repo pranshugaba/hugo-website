@@ -1,9 +1,8 @@
 {{ define "main" }}
-<main>
   <div class="page__header">
     <h1 class="page__title">{{ .Title | emojify }}</h1>
     {{ with .Params.Subtitle }}
-        <h2 class="page__subtitle" >{{ . | emojify }}</h2>
+        <p class="page__subtitle" >{{ . | emojify }}</p>
     {{ end }}
   </div>
     {{.Content}}
@@ -18,5 +17,4 @@
       {{ end }}
     </ul>
   {{ end }}
-</main>
 {{ end }}

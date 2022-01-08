@@ -1006,6 +1006,11 @@ h4 code {
   font-size: 0.85rem;
 }
 
+.items__heading {
+  border-bottom: 2px solid var(--fg);
+  padding: 1rem 0 0.75rem;
+}
+
 .list-mini__item .item__content {
   font-size: 1.35rem;
 }
@@ -1279,6 +1284,7 @@ thead {
   font-weight: 400;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+  letter-spacing: -0.025em;
   line-height: 1.25;
 }
 .page__date {
