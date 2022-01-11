@@ -6,10 +6,28 @@
 
 {{ if eq ($paginator.PageNumber) 1 }}
   <header class="page__header">
-    <h1 class="page__title">Hello there</h1>
-    <p class="page__subtitle" >Welcome to my site!</p>
+    <h1 class="page__title">Hello there!</h1>
+    <p class="page__subtitle" >Welcome to my site :)</p>
   </header>
   {{ .Content }}
+{{ end }}
+
+{{ if ne ($paginator.PageNumber) 1 }}
+<div class="home__pager">
+<div>
+  {{ with $paginator.HasPrev }}
+    <a href="{{ $paginator.Prev.URL }}"><- newer </a>
+  {{ end }}
+</div>
+<div>
+  Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}
+</div>
+<div>
+  {{ with $paginator.HasNext }}
+    <a href="{{ $paginator.Next.URL }}">older -> </a>
+  {{ end }}
+</div>
+</div>
 {{ end }}
 
 {{ range $paginator.PageGroups }}

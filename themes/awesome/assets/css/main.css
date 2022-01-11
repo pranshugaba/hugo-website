@@ -206,15 +206,19 @@ html {
 }
 
 h1 {
+  font-family: Fraunces, serif;
+  font-variation-settings: "wght" 400, "opsz" 72, "SOFT" 100, "WONK" 1;
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.25;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.025em;
   margin-top: 3rem;
   margin-bottom: 0.5em;
 }
 
 h2 {
+  font-family: Fraunces, serif;
+  font-variation-settings: "wght" 400, "opsz" 18, "SOFT" 100;
   font-size: 1.925rem;
   font-weight: 500;
   letter-spacing: -0.025em;
@@ -934,6 +938,8 @@ h4 code {
 }
 
 .list__key {
+  font-family: Inter, sans-serif;
+  font-variation-settings: unset;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
   font-size: 2rem;
@@ -1275,12 +1281,12 @@ thead {
   }
 }
 .page__title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
 .page__subtitle {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 400;
   margin-top: 1rem;
   margin-bottom: 1.5rem;

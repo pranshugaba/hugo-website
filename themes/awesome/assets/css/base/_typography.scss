@@ -9,15 +9,19 @@ html {
 }
 
 h1 {
+  font-family: Fraunces, serif;
+  font-variation-settings: "wght" 400, "opsz" 72, "SOFT" 100, "WONK" 1;
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.25;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.025em;
   margin-top: 3rem;
   margin-bottom: 0.5em;
 }
 
 h2 {
+  font-family: Fraunces, serif;
+  font-variation-settings: "wght" 400, "opsz" 18, "SOFT" 100;
   font-size: 1.925rem;
   font-weight: 500;
   letter-spacing: -0.025em;
