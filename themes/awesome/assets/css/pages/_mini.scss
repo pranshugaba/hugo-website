@@ -15,11 +15,8 @@
   }
   .page__content {
     font-size: 1.5rem;
-    @media (min-width: 640px) {
-      font-size: 1.6rem;
-    }
 
-    margin-top: 0.75rem;
+    margin-top: 1rem;
     margin-bottom: 6rem;
 
     p {

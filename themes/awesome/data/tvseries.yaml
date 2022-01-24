@@ -2,16 +2,30 @@ wantToWatch:
   - title: Dark
     type: Series
     channel: Netflix
+  
+  - title: Arcane
+    type: Series
+    channel: Netflix
 
 watching:
+  
+  - title: The Righteous Gemstones
+    type: Season
+    season: 2
+    channel: HBO
+  
+  - title: Archer
+    type: Season
+    season: 12
+    channel: FXX
+
   - title: Peep Show
     type: Series
     season: 9
     channel: Channel 4
-  
 
   - title: Gravity Falls
-    type: Series
+    type: Season
     season: 2
     channel: Disney
 
@@ -21,37 +35,44 @@ watching:
     channel: BBC Two Scotland
 
 watched:
-  - title: Rick and Morty
-    type: Series
-    season: 5
-    channel: adult swim
-    endDate: 2021-09-07T05:30:00+05:30
+  - title: Curb your Enthusiasm
+    type: Season
+    season: 11
+    channel: HBO
   
-  - title: Brooklyn 99
-    type: Series
-    season: 8
-    channel: NBC
-  
-  - title: Final Space
+  - title: It's Always Sunny in Philadelphia
+    type: Season
+    season: 15
+    channel: FXX
+
+  - title: What We Do in the Shadows
     type: Series
     season: 3
-    channel: Netflix
+    channel: FXX
   
   - title: Taskmaster
     type: Series
     channel: Channel 4
     season: 12
     startDate: 2021-02-01T05:30:00+05:30
-  
-  - title: What We Do in the Shadows
+
+  - title: Final Space
     type: Series
     season: 3
-    channel: FX
-  
-  - title: Curb your Enthusiasm
+    channel: Netflix
+
+  - title: Brooklyn 99
     type: Series
-    season: 11
-    channel: HBO
+    season: 8
+    channel: NBC
+  
+  - title: Rick and Morty
+    type: Series
+    season: 5
+    channel: adult swim
+    endDate: 2021-09-07T05:30:00+05:30
+  
+  
 
 done: 
   - title: Superstore 
