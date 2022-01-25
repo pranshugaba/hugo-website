@@ -519,15 +519,15 @@ figure figcaption {
   }
 }
 :root {
-  --bg: papayawhip;
-  --fg: #121212;
-  --light: papayawhip;
-  --dark: #121212;
+  --bg: #fdf6e3;
+  --fg: #002b36;
+  --light: #fdf6e3;
+  --dark: #002b36;
 }
 
 .dark-mode {
-  --bg: #121212;
-  --fg: papayawhip;
+  --bg: #002b36;
+  --fg: #fdf6e3;
 }
 
 .header {
