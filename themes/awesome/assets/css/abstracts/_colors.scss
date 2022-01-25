@@ -1,16 +1,33 @@
 $papaya: hsl(37.1, 100%, 91.8%);
 $black: #121212;
 
+
+// $gruvboxlight: #fbf1c7;
+// $gruvboxdark: #282828;
+
+
+// $light: white;
+// $dark: black;
+
+$solarizedbase3: #fdf6e3;
+$solarizedbase03: #002b36;
+$light: $solarizedbase3;
+$dark: $solarizedbase03;
+
+// $hue: 190;
+// $light: hsl($hue, 100%, 95%);
+// $dark: hsl($hue, 100%, 5%);
+
 :root {
-  --bg: #{$papaya};
-  --fg: #{$black};
-  --light: #{$papaya};
-  --dark: #{$black};
+  --bg: #{$light};
+  --fg: #{$dark};
+  --light: #{$light};
+  --dark: #{$dark};
 }
 
 .dark-mode {
-  --bg: #{$black};
-  --fg: #{$papaya};
+  --bg: #{$dark};
+  --fg: #{$light};
 }
 // @media (prefers-color-scheme: dark) {
 //   :root {
