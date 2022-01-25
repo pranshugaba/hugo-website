@@ -9,25 +9,28 @@ $black: #121212;
 // $light: white;
 // $dark: black;
 
-$solarizedbase3: #fdf6e3;
-$solarizedbase03: #002b36;
-$light: $solarizedbase3;
-$dark: $solarizedbase03;
+// $solarizedbase3: #fdf6e3;
+// $solarizedbase03: #002b36;
+// $light: $solarizedbase3;
+// $dark: $solarizedbase03;
 
-// $hue: 190;
-// $light: hsl($hue, 100%, 95%);
-// $dark: hsl($hue, 100%, 5%);
+$hue: 210;
+$lightlight: hsl($hue, 100%, 96%);
+$lightdark: hsl($hue, 100%, 12%);
+
+$darklight: hsl($hue, 100%, 94%);
+$darkdark: hsl($hue, 100%, 7%);
 
 :root {
-  --bg: #{$light};
-  --fg: #{$dark};
-  --light: #{$light};
-  --dark: #{$dark};
+  --bg: #{$lightlight};
+  --fg: #{$lightdark};
+  --light: #{$lightlight};
+  --dark: #{$lightdark};
 }
 
 .dark-mode {
-  --bg: #{$dark};
-  --fg: #{$light};
+  --bg: #{$darkdark};
+  --fg: #{$darklight};
 }
 // @media (prefers-color-scheme: dark) {
 //   :root {

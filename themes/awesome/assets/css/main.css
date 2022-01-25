@@ -519,15 +519,15 @@ figure figcaption {
   }
 }
 :root {
-  --bg: #fdf6e3;
-  --fg: #002b36;
-  --light: #fdf6e3;
-  --dark: #002b36;
+  --bg: #ebf5ff;
+  --fg: #001f3d;
+  --light: #ebf5ff;
+  --dark: #001f3d;
 }
 
 .dark-mode {
-  --bg: #002b36;
-  --fg: #fdf6e3;
+  --bg: #001224;
+  --fg: #e0f0ff;
 }
 
 .header {
@@ -1021,9 +1021,9 @@ h4 code {
   font-size: 1.2rem;
 }
 .list-mini__item .item__content p {
-  line-height: 1.6;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 .list-mini__item .item__content p:first-child {
   margin-top: 0;
@@ -1277,6 +1277,10 @@ thead {
   }
 }
 
+object {
+  max-width: 100%;
+}
+
 .home__pager {
   margin-top: 3rem;
   display: flex;
@@ -1454,5 +1458,5 @@ thead {
   }
 }
 .minis .page__content p {
-  line-height: 1.6;
+  line-height: 1.5;
 }/*# sourceMappingURL=main.css.map */

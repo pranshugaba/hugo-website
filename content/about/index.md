@@ -33,6 +33,8 @@ I try to use free and open source software as much as possible. I find that in m
 This site is built with :heart: using [Hugo](https://gohugo.io) and is hosted on [GitHub pages](https://pages.github.com/).
 The site is open source. You can find the source code on my [Github page](https://github.com/pranshugaba/).
 
+Current theme: **Blueberry**
+
 ### Some statistics
 
 
