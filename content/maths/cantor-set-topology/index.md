@@ -16,3 +16,7 @@ featured: false
 As part of my research on on stochastic games with mean-payoff objectives, I read a paper titled "Infinite games with perfect information" by Gale and Stewart. I would like to discuss some interesting properties of a topology defined on the Cantor set. 
 <!--more-->
 A two-player game with perfect information is defined as an infinite rooted tree. 
+
+This is nice
+
+{{< insert-svg "states" >}}

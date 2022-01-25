@@ -1277,8 +1277,15 @@ thead {
   }
 }
 
-object {
-  max-width: 100%;
+svg {
+  margin: 0 auto;
+  display: block;
+}
+svg path {
+  stroke: var(--fg);
+}
+svg g {
+  fill: var(--fg);
 }
 
 .home__pager {

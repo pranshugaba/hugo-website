@@ -1,0 +1,7 @@
+{{ $svgImage := .Context.Page.Resources.GetMatch (printf "%s*.svg" .Filename) }}
+{{ with $svgImage }}
+    <figure>
+        {{ .RelPermalink | readFile | safeHTML }}
+        <figcaption>This is a caption</figcaption>
+    </figure>
+{{ end }}

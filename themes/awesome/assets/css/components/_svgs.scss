@@ -1,3 +1,10 @@
-object {
-    max-width: 100%;
+svg {
+  margin: 0 auto;
+  display: block;
+  path {
+    stroke: var(--fg);
+  }
+  g {
+    fill: var(--fg);
+  }
 }
