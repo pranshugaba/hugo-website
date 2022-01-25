@@ -9,17 +9,19 @@ $black: #121212;
 // $light: white;
 // $dark: black;
 
-// $solarizedbase3: #fdf6e3;
-// $solarizedbase03: #002b36;
-// $light: $solarizedbase3;
-// $dark: $solarizedbase03;
+$solarizedbase3: #fdf6e3;
+$solarizedbase03: #002b36;
+$lightlight: $solarizedbase3;
+$lightdark: $solarizedbase03;
+$darklight: $solarizedbase3;
+$darkdark: $solarizedbase03;
 
-$hue: 210;
-$lightlight: hsl($hue, 100%, 96%);
-$lightdark: hsl($hue, 100%, 12%);
+// $hue: 210;
+// $lightlight: hsl($hue, 100%, 96%);
+// $lightdark: hsl($hue, 100%, 12%);
 
-$darklight: hsl($hue, 100%, 94%);
-$darkdark: hsl($hue, 100%, 7%);
+// $darklight: hsl($hue, 100%, 94%);
+// $darkdark: hsl($hue, 100%, 7%);
 
 :root {
   --bg: #{$lightlight};
