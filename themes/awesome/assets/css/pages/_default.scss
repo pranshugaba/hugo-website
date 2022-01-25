@@ -73,9 +73,9 @@
 
     & li {
       line-height: 1;
-      padding: 0.25rem;
+      padding: 0.3rem;
       border: 0.075rem solid var(--fg);
-      border-radius: 0.25rem;
+      border-radius: 0.4rem;
     }
   }
   &__end {
@@ -89,9 +89,9 @@
     font-size: 0.9rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    padding: 0.25rem;
+    padding: 0.3rem;
     border: 0.075rem solid var(--fg);
-    border-radius: 0.25rem;
+    border-radius: 0.4rem;
     line-height: 1;
     & a {
       @include m.plain-link;

@@ -1,2 +1,3 @@
-{{ $filename := .Get 0 }}
-{{ partial "single/insert-svg" (dict "Context" . "Filename" $filename) }}
+{{ $filename := .Get "filename" }}
+{{ $caption := .Get "caption" }}
+{{ partial "single/insert-svg" (dict "Context" . "Filename" $filename "Caption" $caption) }}

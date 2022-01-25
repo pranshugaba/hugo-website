@@ -4,9 +4,9 @@ subtitle: Maps
 map: true
 ---
 
+A playground to test out[^1] various Markdown features.
 
-
-
+[^1]: This is a footnote. 
 
 <h1>Didn't melt fairer keepsakes since Fellowship elsewhere.</h1>
 <p>Woodlands payment Osgiliath tightening. Barad-dur follow belly comforts tender tough bell? Many that live deserve death. Some that die deserve life. Outwitted teatime grasp defeated before stones reflection corset seen animals Saruman's call?</p>

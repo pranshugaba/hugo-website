@@ -138,12 +138,12 @@ body {
 }
 
 ::-moz-selection {
-  background-color: var(--fg);
+  background-color: var(--accent);
   color: var(--bg);
 }
 
 ::selection {
-  background-color: var(--fg);
+  background-color: var(--accent);
   color: var(--bg);
 }
 
@@ -296,15 +296,15 @@ a {
   text-decoration: underline;
 }
 a, a:visited {
-  color: inherit;
+  color: var(--fg);
   outline: none;
   transition: outline 0.1s ease-out;
 }
 a:hover {
-  text-decoration: none;
+  color: var(--accent);
 }
 a:focus {
-  outline: 0.15em solid var(--fg);
+  outline: 0.15em solid var(--accent);
   outline-offset: 0.125em;
   border-radius: 0.1em;
   text-decoration: none;
@@ -318,9 +318,10 @@ button {
 }
 button:hover {
   text-decoration: underline;
+  color: var(--accent);
 }
 button:focus {
-  outline: 0.15em solid var(--fg);
+  outline: 0.15em solid var(--accent);
   outline-offset: 0.2em;
 }
 
@@ -333,7 +334,7 @@ em {
 }
 
 sup {
-  font-size: small;
+  font-size: 0.75rem;
   vertical-align: super;
   margin-left: 0.1rem;
   margin-right: 0.05rem;
@@ -344,13 +345,6 @@ sub {
   vertical-align: sub;
   margin-left: 0.1rem;
   margin-right: 0.05rem;
-}
-
-.footnotes {
-  font-size: smaller;
-}
-.footnotes .footnote-backref {
-  font-size: smaller;
 }
 
 code {
@@ -373,7 +367,7 @@ hr {
 
 blockquote {
   font-size: 1.125rem;
-  border: 0.125rem solid var(--fg);
+  border: 0.125rem solid var(--accent);
   border-radius: 1rem;
   border-bottom-left-radius: 0.15rem;
   margin-block: 2.5rem;
@@ -394,8 +388,10 @@ blockquote {
 
 blockquote::before {
   content: open-quote;
+  font-family: Fraunces, sans-serif;
+  color: var(--accent);
   font-size: 3em;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1rem;
   margin-right: 0.1rem;
   vertical-align: -0.375em;
@@ -428,8 +424,8 @@ dt {
 
 figure {
   text-align: center;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 figure img {
   text-align: center;
@@ -481,7 +477,7 @@ figure .dark-image {
 figure figcaption {
   font-weight: 400;
   font-size: 0.75rem;
-  margin: 0.5rem auto;
+  margin: 0.75rem auto;
   line-height: 1.5;
 }
 
@@ -519,15 +515,24 @@ figure figcaption {
   }
 }
 :root {
-  --bg: #fdf6e3;
-  --fg: #002b36;
-  --light: #fdf6e3;
-  --dark: #002b36;
+  --bg: #ebf5ff;
+  --fg: #001f3d;
+  --accent: #cf7317;
+  --light: #ebf5ff;
+  --dark: #001f3d;
 }
 
 .dark-mode {
-  --bg: #002b36;
-  --fg: #fdf6e3;
+  --bg: #001224;
+  --fg: #e0f0ff;
+  --accent: #ffcc99;
+}
+@media print {
+  .dark-mode {
+    --bg: #ebf5ff;
+    --fg: #001f3d;
+    --accent: #cf7317;
+  }
 }
 
 .header {
@@ -1277,15 +1282,38 @@ thead {
   }
 }
 
-svg {
-  margin: 0 auto;
+.inline-svg {
   display: block;
 }
-svg path {
+.inline-svg path {
   stroke: var(--fg);
 }
-svg g {
+.inline-svg g {
   fill: var(--fg);
+}
+
+a.footnote-ref {
+  color: var(--accent);
+  text-decoration: none;
+}
+a.footnote-ref:hover {
+  text-decoration: underline;
+}
+
+.footnote-ref::before {
+  content: "[";
+}
+
+.footnote-ref::after {
+  content: "]";
+}
+
+.footnotes {
+  font-size: smaller;
+}
+.footnotes .footnote-backref {
+  font-size: smaller;
+  color: var(--accent);
 }
 
 .home__pager {
@@ -1368,9 +1396,9 @@ svg g {
 }
 .page__tags li {
   line-height: 1;
-  padding: 0.25rem;
+  padding: 0.3rem;
   border: 0.075rem solid var(--fg);
-  border-radius: 0.25rem;
+  border-radius: 0.4rem;
 }
 .page__end {
   display: flex;
@@ -1382,9 +1410,9 @@ svg g {
   font-size: 0.9rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  padding: 0.25rem;
+  padding: 0.3rem;
   border: 0.075rem solid var(--fg);
-  border-radius: 0.25rem;
+  border-radius: 0.4rem;
   line-height: 1;
 }
 .page__all a {

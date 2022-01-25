@@ -1,31 +1,35 @@
 $papaya: hsl(37.1, 100%, 91.8%);
 $black: #121212;
 
-
 // $gruvboxlight: #fbf1c7;
 // $gruvboxdark: #282828;
-
 
 // $light: white;
 // $dark: black;
 
-$solarizedbase3: #fdf6e3;
-$solarizedbase03: #002b36;
-$lightlight: $solarizedbase3;
-$lightdark: $solarizedbase03;
-$darklight: $solarizedbase3;
-$darkdark: $solarizedbase03;
+// $solarizedbase3: #fdf6e3;
+// $solarizedbase03: #002b36;
+// $solarizedblue: #268bd2;
+// $lightlight: $solarizedbase3;
+// $lightdark: $solarizedbase03;
+// $lightaccent: $solarizedblue;
+// $darklight: $solarizedbase3;
+// $darkdark: $solarizedbase03;
+// $darkaccent: pink;
 
-// $hue: 210;
-// $lightlight: hsl($hue, 100%, 96%);
-// $lightdark: hsl($hue, 100%, 12%);
+$hue: 210;
+$lightlight: hsl($hue, 100%, 96%);
+$lightdark: hsl($hue, 100%, 12%);
+$lightaccent: hsl($hue + 180, 80%, 45%);
 
-// $darklight: hsl($hue, 100%, 94%);
-// $darkdark: hsl($hue, 100%, 7%);
+$darklight: hsl($hue, 100%, 94%);
+$darkdark: hsl($hue, 100%, 7%);
+$darkaccent: hsl($hue + 180, 100%, 80%);
 
 :root {
   --bg: #{$lightlight};
   --fg: #{$lightdark};
+  --accent: #{$lightaccent};
   --light: #{$lightlight};
   --dark: #{$lightdark};
 }
@@ -33,6 +37,13 @@ $darkdark: $solarizedbase03;
 .dark-mode {
   --bg: #{$darkdark};
   --fg: #{$darklight};
+  --accent: #{$darkaccent};
+
+  @media print {
+    --bg: #{$lightlight};
+    --fg: #{$lightdark};
+    --accent: #{$lightaccent};
+  }
 }
 // @media (prefers-color-scheme: dark) {
 //   :root {

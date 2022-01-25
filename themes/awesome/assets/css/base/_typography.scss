@@ -10,7 +10,7 @@ html {
 
 h1 {
   font-family: Fraunces, serif;
-  font-variation-settings: "wght" 400, "opsz" 72, "SOFT" 100, "WONK" 1;
+  font-variation-settings: 'wght' 400, 'opsz' 72, 'SOFT' 100, 'WONK' 1;
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.25;
@@ -21,7 +21,7 @@ h1 {
 
 h2 {
   font-family: Fraunces, serif;
-  font-variation-settings: "wght" 400, "opsz" 18, "SOFT" 100;
+  font-variation-settings: 'wght' 400, 'opsz' 18, 'SOFT' 100;
   font-size: 1.925rem;
   font-weight: 500;
   letter-spacing: -0.025em;
@@ -95,17 +95,18 @@ h6 + p {
 a {
   &,
   &:visited {
-    color: inherit;
+    color: var(--fg);
     outline: none;
     transition: outline 0.1s ease-out;
   }
   text-decoration: underline;
 
   &:hover {
-    text-decoration: none;
+    // text-decoration: none;
+    color: var(--accent);
   }
   &:focus {
-    outline: 0.15em solid var(--fg);
+    outline: 0.15em solid var(--accent);
     outline-offset: 0.125em;
     border-radius: 0.1em;
     text-decoration: none;
@@ -119,9 +120,10 @@ button {
   transition: outline 0.1s ease-out;
   &:hover {
     text-decoration: underline;
+    color: var(--accent);
   }
   &:focus {
-    outline: 0.15em solid var(--fg);
+    outline: 0.15em solid var(--accent);
     outline-offset: 0.2em;
   }
 }
@@ -135,7 +137,7 @@ em {
 }
 
 sup {
-  font-size: small;
+  font-size: 0.75rem;
   vertical-align: super;
   margin-left: 0.1rem;
   margin-right: 0.05rem;
@@ -148,12 +150,6 @@ sub {
   margin-right: 0.05rem;
 }
 
-.footnotes {
-  font-size: smaller;
-  & .footnote-backref {
-    font-size: smaller;
-  }
-}
 
 code {
   font-family: 'JBMono', monospace;
@@ -175,7 +171,7 @@ hr {
 
 blockquote {
   font-size: 1.125rem;
-  border: 0.125rem solid var(--fg);
+  border: 0.125rem solid var(--accent);
   border-radius: 1rem;
   border-bottom-left-radius: 0.15rem;
   margin-block: 2.5rem;
@@ -191,8 +187,10 @@ blockquote {
 }
 blockquote::before {
   content: open-quote;
+  font-family: Fraunces, sans-serif;
+  color: var(--accent);
   font-size: 3em;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1rem;
   margin-right: 0.1rem;
   vertical-align: -0.375em;

@@ -1,5 +1,4 @@
-svg {
-  margin: 0 auto;
+.inline-svg {
   display: block;
   path {
     stroke: var(--fg);
@@ -7,4 +6,5 @@ svg {
   g {
     fill: var(--fg);
   }
+
 }

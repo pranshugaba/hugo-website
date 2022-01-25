@@ -6,8 +6,8 @@ summary: A little bit about me
 
 {{< hero position="img__right" image="yellow" alt="Pranshu stands holding a yellow umbrella in front of yellow flowers.">}}
 
-I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tifr.res.in/). 
-Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in). 
+I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tifr.res.in/).
+Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in/).
 
 My research interests include Automata Theory, Logic, Discrete Maths, and Algorithms.
 
@@ -23,34 +23,33 @@ I write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}), and
 
 ### Uses
 
-I try to use free and open source software as much as possible. I find that in most cases it is better than the non-free proprietary alternatives. 
+I try to use free and open source software as much as possible. I find that in most cases it is better than the non-free proprietary alternatives.
 
 [See what software I use ->]({{< ref "/uses" >}})
-
 
 ## About this site
 
 This site is built with :heart: using [Hugo](https://gohugo.io) and is hosted on [GitHub pages](https://pages.github.com/).
 The site is open source. You can find the source code on my [Github page](https://github.com/pranshugaba/).
 
-Current theme: **Solarized**
-
 ### Some statistics
 
+|                      Count | Section                            |
+| -------------------------: | :--------------------------------- |
+|     {{< countposts dev >}} | [Dev posts]({{< ref "/dev/" >}})   |
+|   {{< countposts maths >}} | [Maths posts]({{< ref "/maths/" >}})   |
+|   {{< countposts trips >}} | [Trips]({{< ref "/trips/" >}})     |
+| {{< countposts reviews >}} | [Reviews]({{< ref "/reviews/" >}}) |
+|   {{< countposts links >}} | [Links]({{< ref "/links/" >}})     |
+|   {{< countposts poems >}} | [Poems]({{< ref "/poems/" >}})     |
+| {{< countposts puzzles >}} | [Puzzles]({{< ref "/puzzles/" >}}) |
+| {{< countposts stories >}} | [Stories]({{< ref "/stories/" >}}) |
+|  {{< countposts comics >}} | [Comics]({{< ref "/comics/" >}})   |
+|   {{< countposts minis >}} | [Minis]({{< ref "/minis/" >}})     |
 
-|                       Count | Section                              |
-| --------------------------: | :----------------------------------- |
-|    {{< countposts minis >}} | [Minis]({{< ref "/minis/" >}})       |
-|      {{< countposts dev >}} | [Dev posts]({{< ref "/dev/" >}})     |
-|    {{< countposts trips >}} | [Trips]({{< ref "/trips/" >}})       |
-|  {{< countposts reviews >}} | [Reviews]({{< ref "/reviews/" >}})   |
-|    {{< countposts links >}} | [Links]({{< ref "/links/" >}})       |
-|    {{< countposts poems >}} | [Poems]({{< ref "/poems/" >}})       |
-|  {{< countposts puzzles >}} | [Puzzles]({{< ref "/puzzles/" >}})   |
-|  {{< countposts stories >}} | [Stories]({{< ref "/stories/" >}})   |
-|   {{< countposts comics >}} | [Comics]({{< ref "/comics/" >}})     |
+Last updated: {{< lastupdated >}}
 
-Last updated on {{< lastupdated >}}.
+Current theme: **Blueberry**
 
 ### Support
 

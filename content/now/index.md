@@ -7,13 +7,12 @@ summary: A little bit about me and my website
 
 ## TIFR
 
-I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/). I am working on a project on Stochastic Window Mean-payoff Games with [Shibashis Guha](https://www.tifr.res.in/~shibashis.guha/).
+I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/). I am working on a project on Stochastic Window Mean-payoff Games with [Prof.&nbsp;Shibashis&nbsp;Guha](https://www.tifr.res.in/~shibashis.guha/).
 
 I am attending the following courses this semester:
 - Algebra and Computation
 - Programs and Proofs
 - Topics in the study of Markov chains
-- Polynomial and applications
 - Computational Complexity
 
 
@@ -39,7 +38,7 @@ I also love watching British TV shows such as I Literally Just Told You, 8 out o
 
 [See my watch list ->]({{< ref "/watches" >}})
 
-## Playing
+## Gaming
 
 I started playing Dark Souls recently. It's tough and I am dying a lot, but that should be no surprise. I can feel myself getting better at the game, albeit gradually, with every death. 
 

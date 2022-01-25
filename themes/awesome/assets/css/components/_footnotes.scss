@@ -1,0 +1,22 @@
+a.footnote-ref {
+  color: var(--accent);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footnote-ref::before {
+  content: '[';
+}
+.footnote-ref::after {
+  content: ']';
+}
+
+.footnotes {
+  font-size: smaller;
+  & .footnote-backref {
+    font-size: smaller;
+    color: var(--accent);
+  }
+}
