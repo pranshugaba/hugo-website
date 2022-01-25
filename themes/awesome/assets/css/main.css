@@ -1434,6 +1434,11 @@ thead {
   margin-top: 1rem;
   margin-bottom: 6rem;
 }
+@media (max-width: 640px) {
+  .minis .page__content {
+    font-size: 1.25rem;
+  }
+}
 .minis .page__content p {
   line-height: 1.6;
 }/*# sourceMappingURL=main.css.map */

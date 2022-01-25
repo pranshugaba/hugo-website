@@ -14,6 +14,9 @@
     margin-bottom: 0;
   }
   .page__content {
+    @media (max-width: 640px) {
+      font-size: 1.25rem;
+    }
     font-size: 1.35rem;
 
     margin-top: 1rem;
