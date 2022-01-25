@@ -4,17 +4,43 @@ subtitle: Here's what I am doing now
 summary: A little bit about me and my website
 ---
 
-- I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/). I am working on a project on Stochastic Window Mean-payoff Games. 
 
-- I am learning functional programming with Haskell. 
+## TIFR
 
-- I am also learning to build Android apps using Jetpack Compose. 
+I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/). I am working on a project on Stochastic Window Mean-payoff Games with [Shibashis Guha](https://www.tifr.res.in/~shibashis.guha/).
 
-- {{< currently-reading >}}
+I am attending these courses this semester:
+- Algebra and Computation
+- Programs and Proofs
+- Topics in the study of Markov chains
+- Polynomial and applications
+
+
+## Learning
+
+I am learning functional programming with Haskell from _Programming in Haskell_ by Graham Hutton. I want to become proficient enough in Haskell to be able to solve puzzles on Project Euler, as well as configure [XMonad](https://xmonad.org/) --- the window manager that I use.
+
+I am learning to build Android apps using Jetpack Compose. I am putting this knowledge into practice by making an app called _Decimal Clock_. You can [get it from the Play Store](https://tenhourstudios.com/decimal-clock).
+
+मी मराठी पण शिकतोय.
+I am learning Marathi from [learn-marathi.com](https://www.learn-marathi.com/courses).
+
+## Reading
+I am currently reading _The Magus_ by John Fowles.
+
 [See my reading list ->]({{< ref "/reads" >}})
 
-- I have started watching Limmy's Show! It is a bit hard to understand the Scottish dialogue without subtitles, but I am still finding it quite funny. 
+## Watching
+
+I am currently watching Archer, Gravity Falls, and The Righteous Gemstones. 
+
+I also love watching British TV shows such as I Literally Just Told You, 8 out of 10 Cats does Countdown, and Would I Lie to You?. 
+
 [See my watch list ->]({{< ref "/watches" >}})
+
+## Playing
+
+I started playing Dark Souls recently. It's tough and I am dying a lot, but that should be no surprise. I can feel myself getting better at the game, albeit gradually, with every death. 
 
 ---
 
