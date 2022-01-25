@@ -6,7 +6,16 @@
         {{ if $pages.Prev . }}
             <div><-</div>
             {{ with $pages.Prev . }}
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                <a href="{{ .Permalink }}">
+                {{ if (eq .Section "minis")}}
+                    #{{ .Page.Params.Number }}: <em>
+                    {{ .Page.Plain | truncate 35 "..." }}
+                    </em>
+                {{ else }}
+                    {{ .Title }}
+                {{ end }}
+                </a>
+
             {{ end }}
         {{ else }}
             <div class="page__end">
@@ -18,7 +27,15 @@
         {{ if $pages.Next . }}
         <div>-></div>
             {{ with $pages.Next . }}
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <a href="{{ .Permalink }}">
+                {{ if (eq .Section "minis")}}
+                    #{{ .Page.Params.Number }}: <em>
+                    {{ .Page.Plain | truncate 35 "..." }}
+                    </em>
+                {{ else }}
+                    {{ .Title }}
+                {{ end }}
+            </a>
             {{ end }}
         {{ else }}
             <div class="page__end">

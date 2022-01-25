@@ -3,6 +3,14 @@
      {{ .Date.Format "Jan 2" }} 
   </span>
   <div class="item__details">
-    <a href="{{ .Permalink }}"> {{.Title}}</a>
+    <a href="{{ .Permalink }}"> 
+      {{ if (eq .Section "minis")}}
+        #{{ .Page.Params.Number }}:
+      <em>
+          {{ .Page.Plain | truncate 35 "..."}}
+      </em>
+      {{ else }}
+        {{ .Title }}
+      {{ end }}</a>
   </div>
 </div>

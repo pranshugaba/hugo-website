@@ -1,7 +1,15 @@
 {{ if .IsHome }} 
     Home | 
 {{ else }} 
-    {{ if .Page.Title }} 
+    {{ if (eq .Section "minis")}}
+        {{ if .Page.Params.Number }}
+            Mini #{{ .Page.Params.Number }}: {{ .Page.Plain | truncate 35 "..." }} |
+        {{ else if .Page.IsSection }}
+            {{ .Page.Section | title }} |
+        {{ else }}
+            {{ .Page.Title }} |
+        {{ end }}
+    {{ else if .Page.Title }} 
         {{ .Page.Title }} | 
     {{ end }}
 {{ end }}
