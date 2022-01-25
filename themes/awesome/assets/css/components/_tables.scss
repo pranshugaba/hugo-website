@@ -1,13 +1,27 @@
 table {
+  border-collapse: separate;
+  border: 0.08rem solid var(--fg);
   margin: 2rem auto;
+  border-radius: 0.75rem;
 }
 
-td, th {
-    border: 1px solid var(--fg);
-    padding: 0.5rem;
-    line-height: 1;
+td,
+th {
+  border-left: 0.08rem solid var(--fg);
+  border-top: 0.08rem solid var(--fg);
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+th {
+  border-top: none;
+}
+
+td:first-child,
+th:first-child {
+  border-left: none;
 }
 
 thead {
-    font-weight: 700;
+  font-weight: 700;
 }

@@ -27,14 +27,6 @@ I try to use free and open source software as much as possible. I find that in m
 
 [See what software I use ->]({{< ref "/uses" >}})
 
-### Projects
-I work on the following projects in my spare time:
-- [Maths Wiki](https://maths.wiki)
-- [Decimal Clock](https://tenhourstudios.com)
-
-### Support
-
-If you like my work, consider supporting me at [ko&#8209;fi.com/pranshugaba](https://ko-fi.com/pranshugaba).
 
 ## About this site
 
@@ -57,3 +49,7 @@ The site is open source. You can find the source code on my [Github page](https:
 |   {{< countposts comics >}} | [Comics]({{< ref "/comics/" >}})     |
 
 Last updated on {{< lastupdated >}}.
+
+### Support
+
+If you like my work, consider supporting me at [ko&#8209;fi.com/pranshugaba](https://ko-fi.com/pranshugaba).

@@ -7,27 +7,25 @@ wantToWatch:
     type: Series
     channel: Netflix
 
+  - title: Peaky Blinders
+    type: Series
+    channel: Netflix
+
 watching:
-  
   - title: The Righteous Gemstones
     type: Season
     season: 2
     channel: HBO
-  
-  - title: Archer
-    type: Season
-    season: 12
-    channel: FXX
-
-  - title: Peep Show
-    type: Series
-    season: 9
-    channel: Channel 4
 
   - title: Gravity Falls
     type: Season
     season: 2
     channel: Disney
+
+  - title: Peep Show
+    type: Series
+    season: 9
+    channel: Channel 4
 
   - title: Limmy's Show
     type: Series
@@ -35,6 +33,11 @@ watching:
     channel: BBC Two Scotland
 
 watched:
+  - title: Archer
+    type: Season
+    season: 12
+    channel: FXX
+
   - title: Curb your Enthusiasm
     type: Season
     season: 11

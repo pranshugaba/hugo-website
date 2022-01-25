@@ -9,11 +9,12 @@ summary: A little bit about me and my website
 
 I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/). I am working on a project on Stochastic Window Mean-payoff Games with [Shibashis Guha](https://www.tifr.res.in/~shibashis.guha/).
 
-I am attending these courses this semester:
+I am attending the following courses this semester:
 - Algebra and Computation
 - Programs and Proofs
 - Topics in the study of Markov chains
 - Polynomial and applications
+- Computational Complexity
 
 
 ## Learning
@@ -32,7 +33,7 @@ I am currently reading _The Magus_ by John Fowles.
 
 ## Watching
 
-I am currently watching Archer, Gravity Falls, and The Righteous Gemstones. 
+I am currently watching The Righteous Gemstones and Gravity Falls. 
 
 I also love watching British TV shows such as I Literally Just Told You, 8 out of 10 Cats does Countdown, and Would I Lie to You?. 
 
