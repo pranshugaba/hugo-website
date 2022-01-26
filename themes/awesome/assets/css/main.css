@@ -1264,7 +1264,7 @@ thead {
 }
 @media (min-width: 640px) {
   .hero {
-    margin-inline: calc((-0.1) * (90vw - 640px));
+    margin-inline: calc(-0.1 * (90vw - 640px));
     display: flex;
     align-items: center;
     justify-content: space-around;

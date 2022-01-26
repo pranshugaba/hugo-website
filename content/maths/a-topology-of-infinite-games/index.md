@@ -1,7 +1,7 @@
 ---
 title: "A Topology of Infinite Games"
-subtitle: "Some interesting properties of the Cantor set topology"
-summary: "As part of my research on stochastic games, I read a paper on Infinite games with perfect information by Gale and Stewart. "
+subtitle: ""
+summary: ""
 
 date: 2022-01-26T17:30:00+05:30
 lastmod: 2022-01-26T17:30:00+05:30
@@ -14,10 +14,18 @@ draft: true
 featured: false
 ---
 
-As part of my research on stochastic games with mean-payoff objectives, I read a paper titled _Infinite games with perfect information_[^1] by Gale and Stewart. I would like to discuss some interesting properties of a topology defined on the Cantor set. 
+I recently read a paper titled _Infinite Games with Perfect Information_ written by Gale and Stewart in 1953. In this paper, they consider two-player games that may go on forever. There is no hidden information: both player know the rules and the state of the game at all points of time. 
 
-[^1]: Gale and Stewart
+They showed that there exist games that are not strictly determined. They then tried to characterize games that are determined. I found this really interesting, and I want to share some of the results from the paper.    
 
-A two-player game with perfect information is defined as an infinite rooted tree. We have a set of positions $X$.
+## Representing games as trees
 
-{{< insert-svg filename="states" caption="A example of a position tree.">}}
+A game is represented by an infinite rooted tree $T$. Each vertex of the tree corresponds to a position of the game. Each vertex belong to either player 1 or player 2. A play of the game corresponds to an infinite traversal of states in the tree. 
+
+An objective for player 1 is a set of plays. 
+
+{{< insert-svg filename="states" caption="An example of a rooted tree.">}}
+
+## An infinite game that is not determined
+
+## A topology of games
