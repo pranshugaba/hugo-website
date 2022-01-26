@@ -8,8 +8,9 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/manifest.json"/>
-  <meta name="theme-color" content="#ebf5ff">
+  <meta name="theme-color" content="#001f3d">
 
 
   {{ $style := resources.Get "/css/main.css" }}
