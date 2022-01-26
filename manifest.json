@@ -1,0 +1,15 @@
+{
+    "name": "Pranshu Gaba",
+    "short_name": "Pranshu Gaba",
+    "icons": [{
+        "src": "favicon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }],
+    "background_color": "#001f3d",
+    "theme_color": "#ebf5ff",
+    "display": "fullscreen",
+    "description": "Personal website of Pranshu Gaba",
+    "dir": "ltr",
+    "lang": "en-IN"
+}
