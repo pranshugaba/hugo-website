@@ -7,7 +7,10 @@
   {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
-  <link rel="icon" type="image/png" href="/icon.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/manifest.json"/>
+  <meta name="theme-color" content="#ebf5ff">
+
 
   {{ $style := resources.Get "/css/main.css" }}
   {{ if hugo.IsProduction }}
