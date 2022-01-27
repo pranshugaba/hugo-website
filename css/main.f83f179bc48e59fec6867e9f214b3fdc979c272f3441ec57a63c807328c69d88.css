@@ -164,6 +164,22 @@ body {
   src: url("/fonts/Inter-italic.var.woff2") format("woff2");
 }
 @font-face {
+  font-family: "Alegreya";
+  src: url("/fonts/Alegreya/Alegreya-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Alegreya";
+  src: url("/fonts/Alegreya/Alegreya-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
   font-family: "Fraunces";
   src: url("/fonts/Fraunces-Regular.woff2") format("woff2");
   font-weight: 100 900;
@@ -1494,4 +1510,21 @@ a.footnote-ref:hover {
 }
 .minis .page__content p {
   line-height: 1.5;
+}
+
+#content.maths .page__header,
+#content.maths .page__content {
+  font-size: 120%;
+  font-family: "Alegreya", "Inter", sans-serif;
+}
+#content.maths .page__header sup,
+#content.maths .page__content sup {
+  font-size: smaller;
+}
+#content.maths .page__header .katex,
+#content.maths .page__content .katex {
+  font-size: 100%;
+}
+#content.maths .page__subtitle {
+  font-size: 140%;
 }/*# sourceMappingURL=main.css.map */
