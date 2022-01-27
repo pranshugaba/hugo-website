@@ -34,9 +34,6 @@ tag = "tags"
 
 [params]
 mainSections = [
-    "posts",
-    "thoughts",
-    "minis",
     "dev",
     "maths",
     "trips",
@@ -46,6 +43,7 @@ mainSections = [
     "puzzles",
     "stories",
     "comics",
+    "minis",
 ]
 AuthorName = "Pranshu Gaba"
 GitHubUser = "pranshugaba"

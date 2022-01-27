@@ -34,18 +34,19 @@ The site is open source. You can find the source code on my [Github page](https:
 
 ### Some statistics
 
-|                      Count | Section                            |
-| -------------------------: | :--------------------------------- |
-|     {{< countposts dev >}} | [Dev posts]({{< ref "/dev/" >}})   |
-|   {{< countposts maths >}} | [Maths posts]({{< ref "/maths/" >}})   |
-|   {{< countposts trips >}} | [Trips]({{< ref "/trips/" >}})     |
-| {{< countposts reviews >}} | [Reviews]({{< ref "/reviews/" >}}) |
-|   {{< countposts links >}} | [Links]({{< ref "/links/" >}})     |
-|   {{< countposts poems >}} | [Poems]({{< ref "/poems/" >}})     |
-| {{< countposts puzzles >}} | [Puzzles]({{< ref "/puzzles/" >}}) |
-| {{< countposts stories >}} | [Stories]({{< ref "/stories/" >}}) |
-|  {{< countposts comics >}} | [Comics]({{< ref "/comics/" >}})   |
-|   {{< countposts minis >}} | [Minis]({{< ref "/minis/" >}})     |
+|                      Count | Section                              |
+| -------------------------: | :----------------------------------- |
+|     {{< countposts dev >}} | [Dev posts]({{< ref "/dev/" >}})     |
+|   {{< countposts maths >}} | [Maths posts]({{< ref "/maths/" >}}) |
+|   {{< countposts trips >}} | [Trips]({{< ref "/trips/" >}})       |
+| {{< countposts reviews >}} | [Reviews]({{< ref "/reviews/" >}})   |
+|   {{< countposts links >}} | [Links]({{< ref "/links/" >}})       |
+|   {{< countposts poems >}} | [Poems]({{< ref "/poems/" >}})       |
+| {{< countposts puzzles >}} | [Puzzles]({{< ref "/puzzles/" >}})   |
+| {{< countposts stories >}} | [Stories]({{< ref "/stories/" >}})   |
+|  {{< countposts comics >}} | [Comics]({{< ref "/comics/" >}})     |
+|   {{< countposts minis >}} | [Minis]({{< ref "/minis/" >}})       |
+|  **{{< countpostsall >}}** | **Total**                            |
 
 Last updated: {{< lastupdated >}}
 

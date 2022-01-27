@@ -1,0 +1,2 @@
+{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ len $pages }}
