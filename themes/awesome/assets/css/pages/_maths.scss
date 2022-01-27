@@ -1,0 +1,16 @@
+#content.maths {
+  .page__header,
+  .page__content {
+    font-size: 120%;
+    font-family: 'Alegreya', 'Inter', sans-serif;
+    sup {
+      font-size: smaller;
+    }
+    .katex {
+      font-size: 100%;
+    }
+  }
+  .page__subtitle {
+    font-size: 140%;
+  }
+}
