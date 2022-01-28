@@ -271,7 +271,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 /* general typography */
 .leaflet-container {
-  font: 15px/1.5 'Inter', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  /* font: 15px/1.5 'Inter', 'Helvetica Neue', Arial, Helvetica, sans-serif; */
+  font: 15px/1.5;
 }
 
 /* general toolbar styles */
