@@ -3,12 +3,14 @@ html {
   @media (min-width: 640px) {
     font-size: 125%;
   }
-  font-family: 'Inter', sans-serif;
+  font-family: 'IBM Plex Sans', 'Inter', sans-serif;
+  font-weight: 420;
   text-underline-offset: 0.15em;
   scroll-padding-top: 1.5rem;
 }
 
 h1 {
+  // font-family: 'IBM Plex Serif', Fraunces, serif;
   font-family: Fraunces, serif;
   font-variation-settings: 'wght' 400, 'opsz' 72, 'SOFT' 100, 'WONK' 1;
   font-size: 2.5rem;
@@ -20,6 +22,7 @@ h1 {
 }
 
 h2 {
+  // font-family: 'IBM Plex Serif', Fraunces, serif;
   font-family: Fraunces, serif;
   font-variation-settings: 'wght' 400, 'opsz' 18, 'SOFT' 100;
   font-size: 1.925rem;
@@ -150,9 +153,8 @@ sub {
   margin-right: 0.05rem;
 }
 
-
 code {
-  font-family: 'JBMono', monospace;
+  font-family: 'IBM Plex Mono', 'JBMono', monospace;
   font-size: 0.9rem;
 }
 

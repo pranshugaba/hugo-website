@@ -117,7 +117,7 @@ input {
 body {
   background-color: var(--bg);
   color: var(--fg);
-  max-width: 65ch;
+  max-width: 69ch;
   margin: 0 auto;
   padding: 0.8rem;
 }
@@ -164,20 +164,20 @@ body {
   src: url("/fonts/Inter-italic.var.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Alegreya";
-  src: url("/fonts/Alegreya/Alegreya-VariableFont_wght.ttf") format("truetype");
+  font-family: "IBM Plex Sans";
   font-weight: 100 900;
-  font-style: normal;
   font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/IBMPlexSans/IBMPlexSansVar-Roman.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Alegreya";
-  src: url("/fonts/Alegreya/Alegreya-Italic-VariableFont_wght.ttf") format("truetype");
+  font-family: "IBM Plex Sans";
   font-weight: 100 900;
-  font-style: italic;
   font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("/fonts/IBMPlexSans/IBMPlexSansVar-Italic.woff2") format("woff2");
 }
 @font-face {
   font-family: "Fraunces";
@@ -209,9 +209,52 @@ body {
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: "Linux Libertine";
+  src: url("/fonts/LinuxLibertine/LinLibertine_Rah.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Linux Libertine";
+  src: url("/fonts/LinuxLibertine/LinLibertine_RIah.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Linux Libertine";
+  src: url("/fonts/LinuxLibertine/LinLibertine_RZah.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Linux Libertine";
+  src: url("/fonts/LinuxLibertine/LinLibertine_RZIah.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Linux Libertine";
+  src: url("/fonts/LinuxLibertine/LinLibertine_RBah.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Linux Libertine";
+  src: url("/fonts/LinuxLibertine/LinLibertine_RBIah.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
 html {
   font-size: 112.5%;
-  font-family: "Inter", sans-serif;
+  font-family: "IBM Plex Sans", "Inter", sans-serif;
+  font-weight: 420;
   text-underline-offset: 0.15em;
   scroll-padding-top: 1.5rem;
 }
@@ -364,7 +407,7 @@ sub {
 }
 
 code {
-  font-family: "JBMono", monospace;
+  font-family: "IBM Plex Mono", "JBMono", monospace;
   font-size: 0.9rem;
 }
 
@@ -492,8 +535,8 @@ figure .dark-image {
 }
 figure figcaption {
   font-weight: 400;
-  font-size: 0.75rem;
-  margin: 0.75rem auto;
+  font-size: 0.85rem;
+  margin: 0.5rem auto 0.75rem;
   line-height: 1.5;
 }
 
@@ -637,7 +680,7 @@ p code,
 li code,
 h4 code,
 kbd {
-  font-family: "JBMono", monospace;
+  font-family: "IBM Plex Mono", "JBMono", monospace;
   padding: 0.05rem 0.2rem;
   border: 0.075rem solid var(--fg);
   border-radius: 0.2rem;
@@ -959,7 +1002,7 @@ h4 code {
 }
 
 .list__key {
-  font-family: Inter, sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-variation-settings: unset;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
@@ -1513,18 +1556,47 @@ a.footnote-ref:hover {
 }
 
 #content.maths .page__header,
-#content.maths .page__content {
+#content.maths .page__content,
+#content.stories .page__header,
+#content.stories .page__content {
   font-size: 120%;
-  font-family: "Alegreya", "Inter", sans-serif;
-}
-#content.maths .page__header sup,
-#content.maths .page__content sup {
-  font-size: smaller;
+  font-family: "Linux Libertine", "IBM Plex Sans", sans-serif;
 }
 #content.maths .page__header .katex,
-#content.maths .page__content .katex {
+#content.maths .page__content .katex,
+#content.stories .page__header .katex,
+#content.stories .page__content .katex {
   font-size: 100%;
 }
-#content.maths .page__subtitle {
+#content.maths .page__header sup,
+#content.maths .page__content sup,
+#content.stories .page__header sup,
+#content.stories .page__content sup {
+  font-size: 0.85rem;
+}
+#content.maths .page__header p,
+#content.maths .page__content p,
+#content.stories .page__header p,
+#content.stories .page__content p {
+  line-height: 1.6;
+}
+#content.maths .page__header h1, #content.maths .page__header h2,
+#content.maths .page__content h1,
+#content.maths .page__content h2,
+#content.stories .page__header h1,
+#content.stories .page__header h2,
+#content.stories .page__content h1,
+#content.stories .page__content h2 {
+  font-family: "Linux Libertine", "IBM Plex Sans", sans-serif;
+  letter-spacing: unset;
+}
+#content.maths .page__header figcaption,
+#content.maths .page__content figcaption,
+#content.stories .page__header figcaption,
+#content.stories .page__content figcaption {
+  font-size: 85%;
+}
+#content.maths .page__subtitle,
+#content.stories .page__subtitle {
   font-size: 140%;
 }/*# sourceMappingURL=main.css.map */

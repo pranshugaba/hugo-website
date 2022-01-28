@@ -16,7 +16,7 @@
 <div class="home__pager">
 <div>
   {{ with $paginator.HasPrev }}
-    <a href="{{ $paginator.Prev.URL }}"><- newer </a>
+    <a href="{{ $paginator.Prev.URL }}">&#8592; newer </a>
   {{ end }}
 </div>
 <div>
@@ -24,7 +24,7 @@
 </div>
 <div>
   {{ with $paginator.HasNext }}
-    <a href="{{ $paginator.Next.URL }}">older -> </a>
+    <a href="{{ $paginator.Next.URL }}">older &#8594; </a>
   {{ end }}
 </div>
 </div>
@@ -50,12 +50,12 @@
 <div class="home__pager">
 <div>
   {{ with $paginator.HasPrev }}
-    <a href="{{ $paginator.Prev.URL }}"><- newer </a>
+    <a href="{{ $paginator.Prev.URL }}">&#8592; newer </a>
   {{ end }}
 </div>
 <div>
   {{ with $paginator.HasNext }}
-    <a href="{{ $paginator.Next.URL }}">older -> </a>
+    <a href="{{ $paginator.Next.URL }}">older &#8594; </a>
   {{ end }}
 </div>
 </div>

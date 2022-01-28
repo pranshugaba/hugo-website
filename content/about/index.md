@@ -17,7 +17,7 @@ My research interests include Automata Theory, Logic, Discrete Maths, and Algori
 
 I write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}), and develop apps and games. I also love photography, swimming and cycling but not both at once.
 
-[See what I am doing now ->]({{< ref "/now" >}})
+[See what I am doing now &#8594;]({{< ref "/now" >}})
 
 {{</ hero >}}
 
@@ -25,7 +25,7 @@ I write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}), and
 
 I try to use free and open source software as much as possible. I find that in most cases it is better than the non-free proprietary alternatives.
 
-[See what software I use ->]({{< ref "/uses" >}})
+[See what software I use &#8594;]({{< ref "/uses" >}})
 
 ## About this site
 

@@ -1,13 +1,25 @@
-#content.maths {
+#content.maths, 
+#content.stories {
   .page__header,
   .page__content {
     font-size: 120%;
-    font-family: 'Alegreya', 'Inter', sans-serif;
-    sup {
-      font-size: smaller;
-    }
+    font-family: 'Linux Libertine', 'IBM Plex Sans', sans-serif;
     .katex {
       font-size: 100%;
+    }
+    sup {
+      font-size: 0.85rem;
+    }
+    p {
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      font-family: 'Linux Libertine', 'IBM Plex Sans', sans-serif;
+      letter-spacing: unset;
+    }
+    figcaption {
+      font-size: 85%;
     }
   }
   .page__subtitle {

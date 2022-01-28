@@ -11,7 +11,6 @@ I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www
 
 I am attending the following courses this semester:
 - Algebra and Computation
-- Programs and Proofs
 - Topics in the study of Markov chains
 - Computational Complexity
 
@@ -28,7 +27,7 @@ I am learning Marathi from [learn-marathi.com](https://www.learn-marathi.com/cou
 ## Reading
 I am currently reading _The Magus_ by John Fowles.
 
-[See my reading list ->]({{< ref "/reads" >}})
+[See my reading list &#8594;]({{< ref "/reads" >}})
 
 ## Watching
 
@@ -36,7 +35,7 @@ I am currently watching The Righteous Gemstones and Gravity Falls.
 
 I also love watching British TV shows such as I Literally Just Told You, 8 out of 10 Cats does Countdown, and Would I Lie to You?. 
 
-[See my watch list ->]({{< ref "/watches" >}})
+[See my watch list &#8594;]({{< ref "/watches" >}})
 
 ## Gaming
 
