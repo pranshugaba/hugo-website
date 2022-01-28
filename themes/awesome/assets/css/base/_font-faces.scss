@@ -33,6 +33,23 @@
 }
 
 @font-face {
+  font-family: 'Source Serif';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url("/fonts/SourceSerif/SourceSerif4Variable-Roman.otf.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Source Serif';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url("/fonts/SourceSerif/SourceSerif4Variable-Italic.otf.woff2") format("woff2");
+}
+
+@font-face {
   font-family: 'Fraunces';
   src: url('/fonts/Fraunces-Regular.woff2') format('woff2');
   font-weight: 100 900;
@@ -66,51 +83,6 @@
   font-family: 'JBMono';
   src: url('/fonts/JetBrainsMono-Italic.woff2') format('woff2');
   font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-
-
-@font-face {
-  font-family: 'Linux Libertine';
-  src: url('/fonts/LinuxLibertine/LinLibertine_Rah.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Linux Libertine';
-  src: url('/fonts/LinuxLibertine/LinLibertine_RIah.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Linux Libertine';
-  src: url('/fonts/LinuxLibertine/LinLibertine_RZah.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Linux Libertine';
-  src: url('/fonts/LinuxLibertine/LinLibertine_RZIah.ttf') format('truetype');
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Linux Libertine';
-  src: url('/fonts/LinuxLibertine/LinLibertine_RBah.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Linux Libertine';
-  src: url('/fonts/LinuxLibertine/LinLibertine_RBIah.ttf') format('truetype');
-  font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
