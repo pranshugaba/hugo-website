@@ -17,7 +17,7 @@ featured: false
 I recently read a 1953 paper on _Infinite Games with Perfect Information_ by Gale and Stewart[^1]. In this paper, they look at two-player games played in turns that may potentially go on for infinitely many turns. Perfect information means that no information is hidden from the players: both players know the rules and the state of the game at all times. 
 
 
-A game can be seen as a set of positions, along with a set of rules that dictate the states one is only allowed to move to.  Each position belongs to either $\mathcal{P}_1$ or $\mathcal{P}_2$.   We can represent a game as a rooted tree, whose each vertex is a a state of the game. The game begins at the root, and the player whose turn it is to play picks a neighbour to move the state to.
+A game can be seen as a set of positions, along with a set of rules that dictate the states one is allowed to move to. We can represent a game as a rooted tree, whose each vertex is a a state of the game. The game begins at the root, and the player whose turn it is to play picks a neighbour to move the state to.
  
 A _play_ of the game is a traversal through this tree starting from the root.  
 
@@ -38,6 +38,11 @@ An objective for player 1 is a set of plays.
 {{< insert-svg filename="states" caption="An example of a rooted tree.">}}
 
 ## An infinite game that is not determined
+
+The paper shows an example of a infinite game that is not strictly determined. For every strategy $\sigma$ of Player 1, Player 2 has a strategy such that the resulting play is winning for Player 2. Similarly, no matter what strategy Player 2 picks, Player 1 has a strategy such that they win the game. In other words, none of the players have a winning strategy. The game goes as follows:
+
+
+
 
 ## A topology of games
 
