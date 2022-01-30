@@ -14,8 +14,12 @@ draft: true
 featured: false
 ---
 
-I recently read a 1953 paper on _Infinite Games with Perfect Information_ by Gale and Stewart[^1]. In this paper, they look at two-player games played in turns that may potentially go on for infinitely many turns. Perfect information means that no information is hidden from the players: both players know the rules and the state of the game at all times. 
+I recently read a 1953 paper on _Infinite Games with Perfect Information_ by Gale and Stewart[^1]. In this paper, they look at two-player games played in turns that may potentially go on for infinitely many turns. 
 
+
+Perfect information means that no information is hidden from the players: both players know the rules and the state of the game at all times. 
+
+## The Setup
 
 A game can be seen as a set of positions, along with a set of rules that dictate the states one is allowed to move to. We can represent a game as a rooted tree, whose each vertex is a a state of the game. The game begins at the root, and the player whose turn it is to play picks a neighbour to move the state to.
  
@@ -28,8 +32,6 @@ They encode a game as a set $X$ of positions, or states or configurations.
 The players have _strategies_ that determine how they would play when it's their turn. A player has a _winning strategy_ if they can always win irrespective of which strategy the other player employs. Of course, it is not possible for both players to have a winning strategy. However, a surprising result is that there exist games where neither of the players has a winning strategy. 
 
 They showed that there exist games that are not strictly determined. They then tried to characterize games that are determined. I found this really interesting, and I want to share some of the results from the paper.    
-
-## Representing games as trees
 
 A game is represented by an infinite rooted tree $T$. Each vertex of the tree corresponds to a position of the game. Each vertex belong to either player 1 or player 2. A play of the game corresponds to an infinite traversal of states in the tree. 
 

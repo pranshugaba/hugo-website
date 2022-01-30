@@ -10,10 +10,14 @@
       line-height: 1.6;
     }
 
-    h2 {
+    h1, h2 {
       font-family: 'Source Serif', 'IBM Plex Sans', sans-serif;
       letter-spacing: unset;
-      font-variation-settings: unset;
+      font-variation-settings: 'wght' 600, 'opsz' 36;
+    }
+
+    h2 {
+      font-variation-settings: 'wght' 500, 'opsz' 24;
     }
   }
   .page__subtitle {

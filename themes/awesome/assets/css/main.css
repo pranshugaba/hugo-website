@@ -1546,13 +1546,22 @@ a.footnote-ref:hover {
 #content.stories .page__content p {
   line-height: 1.6;
 }
+#content.maths .page__header h1, #content.maths .page__header h2,
+#content.maths .page__content h1,
+#content.maths .page__content h2,
+#content.stories .page__header h1,
+#content.stories .page__header h2,
+#content.stories .page__content h1,
+#content.stories .page__content h2 {
+  font-family: "Source Serif", "IBM Plex Sans", sans-serif;
+  letter-spacing: unset;
+  font-variation-settings: "wght" 600, "opsz" 36;
+}
 #content.maths .page__header h2,
 #content.maths .page__content h2,
 #content.stories .page__header h2,
 #content.stories .page__content h2 {
-  font-family: "Source Serif", "IBM Plex Sans", sans-serif;
-  letter-spacing: unset;
-  font-variation-settings: unset;
+  font-variation-settings: "wght" 500, "opsz" 24;
 }
 #content.maths .page__subtitle,
 #content.stories .page__subtitle {
