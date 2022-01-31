@@ -1,5 +1,5 @@
 ---
-title: "A Topology of Infinite Games"
+title: "Determinacy of Infinite Games"
 subtitle: ""
 summary: ""
 
@@ -14,10 +14,9 @@ draft: true
 featured: false
 ---
 
-I recently read a 1953 paper on _Infinite Games with Perfect Information_ by Gale and Stewart[^1]. In this paper, they look at two-player games played in turns that may potentially go on for infinitely many turns. 
+I recently read a 1953 paper on _Infinite Games with Perfect Information_ by Gale and Stewart[^1]. The paper looks at two-player turn-based games and tries to characterise games in which one of the players has a winning strategy.
 
-
-Perfect information means that no information is hidden from the players: both players know the rules and the state of the game at all times. 
+They only consider games with perfect information. No information is hidden from the players: both players know the rules and the state of the game at all times. 
 
 ## The Setup
 

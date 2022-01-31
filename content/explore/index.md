@@ -6,9 +6,6 @@ summary: A guide to explore my site
 
 ## By Sections
 
-### Personal
-- [Thoughts]({{< ref "/thoughts/" >}})
-- [Minis]({{< ref "/minis/" >}}): Byte-sized posts
 
 ### Learn
 
@@ -27,6 +24,7 @@ summary: A guide to explore my site
 - [Puzzles]({{< ref "/puzzles/" >}}): Head-scratchers and mind-benders
 - [Stories]({{< ref "/stories/" >}}): Gripping tales of awe and wonder
 - [Comics]({{< ref "/comics/" >}}): Handwritten, handdrawn, handpainted
+- [Minis]({{< ref "/minis/" >}}): Byte-sized posts
 
 
 ## By Tags
