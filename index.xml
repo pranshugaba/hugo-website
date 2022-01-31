@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pranshu Gaba</title><link>https://pranshugaba.com/</link><description>Photos, poems, puzzles, and more!</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Mon, 31 Jan 2022 18:44:47 +0530</lastBuildDate><image><url>https://pranshugaba.com/icon.png</url></image><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Mini #4</title><link>https://pranshugaba.com/minis/4/</link><pubDate>Sat, 22 Jan 2022 16:20:00 +0530</pubDate><guid>https://pranshugaba.com/minis/4/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pranshu Gaba</title><link>https://pranshugaba.com/</link><description>Photos, poems, puzzles, and more!</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 01 Feb 2022 03:55:14 +0530</lastBuildDate><image><url>https://pranshugaba.com/icon.png</url></image><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Mini #4</title><link>https://pranshugaba.com/minis/4/</link><pubDate>Sat, 22 Jan 2022 16:20:00 +0530</pubDate><guid>https://pranshugaba.com/minis/4/</guid><description>
 &lt;p>I foolishly tried to fight the guy near the bonfire in Lordran and he killed me almost immediately.&lt;/p>
 &lt;p>I respawned, and he was still trying to kill me. I jumped off a cliff, and so did he. I respawned, but he did not :)&lt;/p></description></item><item><title>Mini #3</title><link>https://pranshugaba.com/minis/3/</link><pubDate>Sat, 22 Jan 2022 12:05:19 +0530</pubDate><guid>https://pranshugaba.com/minis/3/</guid><description>
 &lt;p>I started playing Dark Souls today. It is not as hard as I expected but, then again, I have only completed the tutorial.&lt;/p>
@@ -2924,9 +2924,8 @@ Two friends walk on the footpath, shoulder to shoulder.</p>
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>While the shortcode syntax is specific to Hugo, most templating languages have a way to pass in variables. It should be possible to adapt this code for the templating language that you use.</p>
-        
+        <p>While the shortcode syntax is specific to Hugo, most templating languages have a way to pass in variables. It should be possible to adapt this code for the templating language that you use.</p>
+
     </div>
 </aside>
 <h2 id="limitations">Limitations</h2>
@@ -3203,9 +3202,8 @@ and run!</p>
         Aside
     </div>
 	<div class="admonition__content">
-        
-            <p>btw, I use arch.  If you use Arch Linux, installing Godot is even easier.  Just <code>pacman -S godot</code>!</p>
-        
+        <p>btw, I use arch.  If you use Arch Linux, installing Godot is even easier.  Just <code>pacman -S godot</code>!</p>
+
     </div>
 </aside>
 <p>This guide uses Godot 3.3.2, the latest stable version available at the time
@@ -3240,8 +3238,7 @@ You can also play the final version game to see how it works on my itch.io page.
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>Of course, the answers to these questions are not fixed; they will most likely change as you work on the game. As you build the game and test it, you might find that a feature you had planned doesn&rsquo;t do well in practice.</p>
+        <p>Of course, the answers to these questions are not fixed; they will most likely change as you work on the game. As you build the game and test it, you might find that a feature you had planned doesn&rsquo;t do well in practice.</p>
 <ul>
 <li>You might come up with a better alternative during development.</li>
 <li>Your idea might be too complex to explain to the player.</li>
@@ -3250,7 +3247,6 @@ You can also play the final version game to see how it works on my itch.io page.
 </ul>
 <p>Be open to making changes to your game as you work on it.</p>
 
-        
     </div>
 </aside>
 <p>Let&rsquo;s answer these questions for our X and O game.</p>
@@ -3420,9 +3416,8 @@ You can <NavExtLink to="/">download my assets</NavExtLink>, or you can make your
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>I made the png files for X, O, and the grid using <a href="https://inkscape.org/">Inkscape</a>. It is an excellent application for making vector art. It is free software, and I highly recommend it.</p>
-        
+        <p>I made the png files for X, O, and the grid using <a href="https://inkscape.org/" target="_blank" rel="noopener">Inkscape</a>. It is an excellent application for making vector art. It is free software, and I highly recommend it.</p>
+
     </div>
 </aside>
 <p>I have included the <code>Inter</code> font in the assets. I chose this font because it looks sharp even at low resolutions and it goes well with the &ldquo;X&rdquo; and &ldquo;O&rdquo; sprites that I have made. You can use any font that goes with your theme.</p>
@@ -3445,9 +3440,8 @@ You can <NavExtLink to="/">download my assets</NavExtLink>, or you can make your
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>You can get fonts on websites such as <a href="https://fonts.google.com/">Google fonts</a> and <a href="https://www.dafont.com/theme.php?cat=501&amp;l%5B%5D=10">dafont.com</a>. Make sure you have the rights to use the font you choose.</p>
-        
+        <p>You can get fonts on websites such as <a href="https://fonts.google.com/" target="_blank" rel="noopener">Google fonts</a> and <a href="https://www.dafont.com/theme.php?cat=501&amp;l[]=10" target="_blank" rel="noopener">dafont.com</a>. Make sure you have the rights to use the font you choose.</p>
+
     </div>
 </aside>
 <p>We need to add these assets to our project in Godot.
@@ -3475,9 +3469,8 @@ When you open Godot, you will see those files in the FileSystem tab.</p>
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>Read the <a href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/scenes_and_nodes.html">Godot docs on Scenes and Nodes</a> to understand how they work.</p>
-        
+        <p>Read the <a href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/scenes_and_nodes.html" target="_blank" rel="noopener">Godot docs on Scenes and Nodes</a> to understand how they work.</p>
+
     </div>
 </aside>
 <p>We will add a root node that will hold all nodes in our game.
@@ -3517,9 +3510,8 @@ Make a <code>scenes</code> folder in the root directory and save this scene in i
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>Scenes are saved with the <code>.tscn</code> file extension.</p>
-        
+        <p>Scenes are saved with the <code>.tscn</code> file extension.</p>
+
     </div>
 </aside>
 <p>Run the game by clicking the play button (or press <kbd>F5</kbd>). The first time you run the game, Godot will ask you to set the main scene. The main scene is the scene that loads when you run the game. Select the <code>Game.tscn</code> scene we just saved.</p>
@@ -3654,11 +3646,9 @@ I made three new <code>Label</code> nodes with names <code>WinCondition</code>, 
         Tip
     </div>
 	<div class="admonition__content">
-        
-            <p>Enable &ldquo;Grid Snap&rdquo; in the toolbar to make it easier to align items.</p>
+        <p>Enable &ldquo;Grid Snap&rdquo; in the toolbar to make it easier to align items.</p>
 <p><img src="img/grid-snap.png" alt=""></p>
 
-        
     </div>
 </aside>
 <p>Our text looks good. Next, we will add the grid.</p>
@@ -3858,11 +3848,9 @@ The contents of this script will look like this.</p>
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>Lines starting with <code>#</code> are called comments. These are for humans to read and are ignored by the compiler.</p>
+        <p>Lines starting with <code>#</code> are called comments. These are for humans to read and are ignored by the compiler.</p>
 <p>Write concise comments that will help anyone who reads your code understand how your code works. The person reading the code could also be you from the future, and Future You would thank you for the well-documented code.</p>
 
-        
     </div>
 </aside>
 <p>The <code>_ready</code> method is called when the <code>Game</code> node and all its children have entered the scene tree and have become active. Therefore, any work that we want to do when the game starts, we do it in <code>_ready</code>.
@@ -3874,12 +3862,10 @@ This mostly involves initialising variables.</p>
         Tip
     </div>
 	<div class="admonition__content">
-        
-            <p>You can <kbd>Ctrl</kbd>+Click on any inbuilt function to read its documentation. You can also search for help or open online docs directly from the script editor.</p>
-<p>If you find any Godot term unclear, refer to the <a href="https://docs.godotengine.org/en/stable/index.html">Godot docs</a>.</p>
+        <p>You can <kbd>Ctrl</kbd>+Click on any inbuilt function to read its documentation. You can also search for help or open online docs directly from the script editor.</p>
+<p>If you find any Godot term unclear, refer to the <a href="https://docs.godotengine.org/en/stable/index.html" target="_blank" rel="noopener">Godot docs</a>.</p>
 <p><img src="img/online-docs.png" alt=""></p>
 
-        
     </div>
 </aside>
 <p>Let&rsquo;s look at the gameplay loop again. The game takes decisions based on the state of the game. We need a way to store the game&rsquo;s state.</p>
@@ -3939,12 +3925,10 @@ We will be able to read/edit the properties of the nodes using these references.
         Example
     </div>
 	<div class="admonition__content">
-        
-            <p>Access the <code>Grid</code> node with <code>get_node(&quot;Grid&quot;)</code>.</p>
+        <p>Access the <code>Grid</code> node with <code>get_node(&quot;Grid&quot;)</code>.</p>
 <p>Access the <code>GridCell2</code> node with <code>get_node(&quot;Grid/GridCell2&quot;)</code>.</p>
 <p>Access the <code>CellSymbol</code> node of <code>GridCell3</code> with <code>get_node(&quot;Grid/GridCell3/CellSymbol&quot;)</code>.</p>
 
-        
     </div>
 </aside>
 <aside class="admonition   ">
@@ -3952,10 +3936,9 @@ We will be able to read/edit the properties of the nodes using these references.
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>For more details, you can read the reference page for
-<a href="https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-get-node">get_node</a></p>
-        
+        <p>For more details, you can read the reference page for
+<a href="https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-get-node" target="_blank" rel="noopener">get_node</a></p>
+
     </div>
 </aside>
 <p>Since accessing nodes is a common pattern in Godot, there is a shorthand notation for it. We can write <code>$Grid/GridSprite</code> instead of <code>get_node(&quot;Grid/GridSprite&quot;)</code>. We will follow this shorter notation from now on.</p>
@@ -3964,12 +3947,10 @@ We will be able to read/edit the properties of the nodes using these references.
         Tip
     </div>
 	<div class="admonition__content">
-        
-            <p>The Godot editor will help you autocomplete the name of the node as soon as you type the dollar symbol.
+        <p>The Godot editor will help you autocomplete the name of the node as soon as you type the dollar symbol.
 Make sure the node your script is attached to is active.</p>
 <p><img src="img/autocomplete.png" alt=""></p>
 
-        
     </div>
 </aside>
 <p>Once we have a reference to a node, we can manipulate it. Any changes that we can make in the Inspector tab, we can also make in our script. If you hover your mouse over any property in the inspector tab, you will see the name of the property that you can use in scripts.</p>
@@ -4012,9 +3993,8 @@ If you find yourself repeating the same code a lot, there is probably a better w
         Tip
     </div>
 	<div class="admonition__content">
-        
-            <p><a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">Don&rsquo;t repeat yourself</a> too often.</p>
-        
+        <p><a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank" rel="noopener">Don&rsquo;t repeat yourself</a> too often.</p>
+
     </div>
 </aside>
 <p>We <em>can</em> do better. We can make use of the <NavExtLink to="https://docs.godotengine.org/en/stable/classes/class_node.html?#class-node-method-get-children">get_children</NavExtLink> method. This method takes as an argument a reference to a node and returns an array of references to the children of the node.</p>
@@ -4023,9 +4003,8 @@ If you find yourself repeating the same code a lot, there is probably a better w
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>Also see <a href="https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-get-child">get_child</a> method.</p>
-        
+        <p>Also see <a href="https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-get-child" target="_blank" rel="noopener">get_child</a> method.</p>
+
     </div>
 </aside>
 <p>Create a node of type <code>Node2D</code> in <code>Grid</code> and name it <code>GridCells</code>. Select all nine <code>GridCell</code> nodes and drag them on to <code>GridCells</code> to make them children of <code>GridCells</code>.
@@ -4063,9 +4042,8 @@ Since all cells are empty initially, we will initialise the <code>value</code> o
         Tip
     </div>
 	<div class="admonition__content">
-        
-            <p>You can check the state of any variable using the <code>print</code> method. It is very useful for debugging.</p>
-        
+        <p>You can check the state of any variable using the <code>print</code> method. It is very useful for debugging.</p>
+
     </div>
 </aside>
 <h3 id="listening-for-clicks-using-signals">Listening for clicks using signals</h3>
@@ -4082,9 +4060,8 @@ Since all cells are empty initially, we will initialise the <code>value</code> o
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>The above code is pseudocode. It does not follow the syntax of GDScript, but it conveys a sketch of how the code would look like.</p>
-        
+        <p>The above code is pseudocode. It does not follow the syntax of GDScript, but it conveys a sketch of how the code would look like.</p>
+
     </div>
 </aside>
 <p>This is acceptable for a small game, but it would quickly get out of hand as the game becomes bigger. For every node that needs to
@@ -4109,9 +4086,8 @@ if signal is received:
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>Read the Godot docs for <a href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html">signals</a>.</p>
-        
+        <p>Read the Godot docs for <a href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html" target="_blank" rel="noopener">signals</a>.</p>
+
     </div>
 </aside>
 <p>As you have seen, signals are a very important concept in game development. We will now see how to implement this in Godot.</p>
@@ -4122,11 +4098,9 @@ Each node in Godot has some signals predefined in them. You can see the signals 
         Example
     </div>
 	<div class="admonition__content">
-        
-            <p>A sprite node can emit a signal when its texture is changed, when its visibility changes, and so on.</p>
+        <p>A sprite node can emit a signal when its texture is changed, when its visibility changes, and so on.</p>
 <p><img src="img/sprite-signals.png" alt=""></p>
 
-        
     </div>
 </aside>
 <p>We can also make our own custom signals.
@@ -4140,10 +4114,9 @@ For example, in our game, we can make a signal named <code>cell_clicked</code> f
         Warning
     </div>
 	<div class="admonition__content">
-        
-            <p>The above code won&rsquo;t work because the syntax of the <code>if</code> statement is incorrect.
+        <p>The above code won&rsquo;t work because the syntax of the <code>if</code> statement is incorrect.
 Comment this lines out for now. We will fix this soon.</p>
-        
+
     </div>
 </aside>
 <p>Nodes can also listen for signals.
@@ -4188,11 +4161,9 @@ This creates the receiver function <code>_on_GridCell_input_event</code> in <cod
         Tip
     </div>
 	<div class="admonition__content">
-        
-            <p>Notice the signal icon in the margin. This indicates that this method is called by a function. You can click on this icon to see more details about the signal.</p>
+        <p>Notice the signal icon in the margin. This indicates that this method is called by a function. You can click on this icon to see more details about the signal.</p>
 <p><img src="img/signal-icon.png" alt=""></p>
 
-        
     </div>
 </aside>
 <p>The <code>_on_GridCell_input_event</code> takes in three parameters. The signal contains some information about the <code>input_event</code> and we can access it in this method.</p>
@@ -4201,11 +4172,9 @@ This creates the receiver function <code>_on_GridCell_input_event</code> in <cod
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>Use <code>print</code> to figure out when this signal is emitted.</p>
+        <p>Use <code>print</code> to figure out when this signal is emitted.</p>
 <p><strong>Hint:</strong> Add <code>print(event)</code> to <code>_on_GridCell_input_event</code>. Run the game and work out what generates an output.</p>
 
-        
     </div>
 </aside>
 <p>If you add <code>print(event)</code> in the method and run the game, you will see that moving your mouse on a cell creates an <code>InputEventMouseMotion</code> event, and clicking on a cell creates an <code>InputEventMouseButton</code> event.</p>
@@ -4223,9 +4192,8 @@ We will filter only the mouse click events with an <code>if</code> statement.</p
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>Read the Godot docs for <a href="https://docs.godotengine.org/en/stable/classes/class_inputevent.html">inputevent</a>.</p>
-        
+        <p>Read the Godot docs for <a href="https://docs.godotengine.org/en/stable/classes/class_inputevent.html" target="_blank" rel="noopener">inputevent</a>.</p>
+
     </div>
 </aside>
 <p>This is working well. We are printing an event if and only if a cell is clicked. We can replace <code>print</code> with <code>emit_signal</code>.</p>
@@ -4246,13 +4214,11 @@ We know if a cell is clicked, but we don&rsquo;t know which cell is clicked.</p>
         Error
     </div>
 	<div class="admonition__content">
-        
-            <p>If we run the game now, we get an error:</p>
+        <p>If we run the game now, we get an error:</p>
 <pre><code>The method expected 0 arguments, but called with 1.
 </code></pre>
 <p>We get this error because the number of arguments taken by the called method does not agree with the data carried by the signal.</p>
 
-        
     </div>
 </aside>
 <p>We fix this by adding an argument to <code>play_turn</code>. We can print the name of the cell and see if it&rsquo;s correct.</p>
@@ -4525,9 +4491,8 @@ cool respite from the scorching heat<br>
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>This post was published on an older version of my site. I have rewritten my site, and many things have changed since then. This site is no longer built using Nuxt.js, but the points that I make were valid at the time of writing this post.</p>
-        
+        <p>This post was published on an older version of my site. I have rewritten my site, and many things have changed since then. This site is no longer built using Nuxt.js, but the points that I make were valid at the time of writing this post.</p>
+
     </div>
 </aside>
 <p>This site is built using Nuxt.js, and I have had a great time making it.
@@ -4568,8 +4533,7 @@ $$</p>
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>Recall how chess pieces move:</p>
+        <p>Recall how chess pieces move:</p>
 <ul>
 <li>Rooks move in straight lines up, down, left, or right.</li>
 <li>Bishops can move diagonally.</li>
@@ -4578,9 +4542,8 @@ $$</p>
 <li>Pawns attack forward-left or forward-right.</li>
 <li>Knight move in an L-shaped pattern. Two steps forward and one step sideways.</li>
 </ul>
-<p>You can practice the pieces' movements on <a href="https://lichess.org/learn">lichess.org</a>.</p>
+<p>You can practice the pieces' movements on <a href="https://lichess.org/learn" target="_blank" rel="noopener">lichess.org</a>.</p>
 
-        
     </div>
 </aside>
 <h2 id="the-problem">The Problem</h2>
@@ -4591,9 +4554,8 @@ For the sake of this problem, assume that pieces can attack other pieces of the 
         Tip
     </div>
 	<div class="admonition__content">
-        
-            <p>You may find it helpful to play around with pieces on a board on the <a href="https://lichess.org/editor/8/8/8/8/8/8/8/8_w_-_-_0_1">lichess board editor</a>.</p>
-        
+        <p>You may find it helpful to play around with pieces on a board on the <a href="https://lichess.org/editor/8/8/8/8/8/8/8/8_w_-_-_0_1" target="_blank" rel="noopener">lichess board editor</a>.</p>
+
     </div>
 </aside>
 <p>Here are 7 variants of this problem:</p>
@@ -4684,9 +4646,8 @@ For the sake of this problem, assume that pieces can attack other pieces of the 
         Tip
     </div>
 	<div class="admonition__content">
-        
-            <p>Try it out with some pencils and a long string.</p>
-        
+        <p>Try it out with some pencils and a long string.</p>
+
     </div>
 </aside>
 
@@ -4908,11 +4869,10 @@ from vibrant flowers</p>
         Info
     </div>
 	<div class="admonition__content">
-        
-            <p>Full Name: The Tale of Desperaux being a story of a mouse, a princess, some soup, and a spool of thread.<br>
+        <p>Full Name: The Tale of Desperaux being a story of a mouse, a princess, some soup, and a spool of thread.<br>
 Author: Kate DiCamillo<br>
 Illustrated by: Timothy Basil Ering</p>
-        
+
     </div>
 </aside>
 <p>The Tale of Despereaux is an excellent book. The characters are adorable and very well developed. However, the ending seems to be very abrupt.</p>
@@ -4926,15 +4886,14 @@ Illustrated by: Timothy Basil Ering</p>
         More info
     </div>
 	<div class="admonition__content">
-        
-            <p>ISBN: 9708744598698<br>
+        <p>ISBN: 9708744598698<br>
 Number of Pages: 270<br>
 Publisher: Walker Books and subsidiaries<br>
 Published: 2004<br>
 Language: English<br>
 Illustrations: Yes<br>
 Ages: 9-12</p>
-        
+
     </div>
 </aside>
 ]]></description></item></channel></rss>

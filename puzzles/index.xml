@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Puzzles by Pranshu Gaba</title><link>https://pranshugaba.com/puzzles/</link><description>Head-scratchers and mind-benders</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Mon, 31 Jan 2022 18:44:50 +0530</lastBuildDate><image><url>https://pranshugaba.com/puzzles/icon.png</url></image><atom:link href="https://pranshugaba.com/puzzles/index.xml" rel="self" type="application/rss+xml"/><item><title>A Chess Puzzle</title><link>https://pranshugaba.com/puzzles/2/</link><pubDate>Tue, 06 Apr 2021 00:30:00 +0530</pubDate><guid>https://pranshugaba.com/puzzles/2/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Puzzles by Pranshu Gaba</title><link>https://pranshugaba.com/puzzles/</link><description>Head-scratchers and mind-benders</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 01 Feb 2022 03:55:18 +0530</lastBuildDate><image><url>https://pranshugaba.com/puzzles/icon.png</url></image><atom:link href="https://pranshugaba.com/puzzles/index.xml" rel="self" type="application/rss+xml"/><item><title>A Chess Puzzle</title><link>https://pranshugaba.com/puzzles/2/</link><pubDate>Tue, 06 Apr 2021 00:30:00 +0530</pubDate><guid>https://pranshugaba.com/puzzles/2/</guid><description>
 <![CDATA[<img src="https://pranshugaba.com/puzzles/2/featured_hu345eb872bd2ee0c7684c1a1fb0528da6_62781_1080x0_resize_box_3.png" alt="" /><p>For the second puzzle, we have a chess puzzle!</p>
 <aside class="admonition   ">
     <div class="admonition__title">
         Note
     </div>
 	<div class="admonition__content">
-        
-            <p>Recall how chess pieces move:</p>
+        <p>Recall how chess pieces move:</p>
 <ul>
 <li>Rooks move in straight lines up, down, left, or right.</li>
 <li>Bishops can move diagonally.</li>
@@ -15,9 +14,8 @@
 <li>Pawns attack forward-left or forward-right.</li>
 <li>Knight move in an L-shaped pattern. Two steps forward and one step sideways.</li>
 </ul>
-<p>You can practice the pieces' movements on <a href="https://lichess.org/learn">lichess.org</a>.</p>
+<p>You can practice the pieces' movements on <a href="https://lichess.org/learn" target="_blank" rel="noopener">lichess.org</a>.</p>
 
-        
     </div>
 </aside>
 <h2 id="the-problem">The Problem</h2>
@@ -28,9 +26,8 @@ For the sake of this problem, assume that pieces can attack other pieces of the 
         Tip
     </div>
 	<div class="admonition__content">
-        
-            <p>You may find it helpful to play around with pieces on a board on the <a href="https://lichess.org/editor/8/8/8/8/8/8/8/8_w_-_-_0_1">lichess board editor</a>.</p>
-        
+        <p>You may find it helpful to play around with pieces on a board on the <a href="https://lichess.org/editor/8/8/8/8/8/8/8/8_w_-_-_0_1" target="_blank" rel="noopener">lichess board editor</a>.</p>
+
     </div>
 </aside>
 <p>Here are 7 variants of this problem:</p>
@@ -121,9 +118,8 @@ For the sake of this problem, assume that pieces can attack other pieces of the 
         Tip
     </div>
 	<div class="admonition__content">
-        
-            <p>Try it out with some pencils and a long string.</p>
-        
+        <p>Try it out with some pencils and a long string.</p>
+
     </div>
 </aside>
 

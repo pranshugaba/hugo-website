@@ -24,7 +24,7 @@
 <link rel=mask-icon href=/safari-pinned-tab.svg color=#001f3d>
 <meta name=msapplication-TileColor content="#2b5797">
 <meta name=theme-color content="#001f3d">
-<link rel=stylesheet href=https://pranshugaba.com/css/main.1af18c555bb503615580504b3e87003a84a14fa5f54b7d01993ad24f1cdf9b52.css>
+<link rel=stylesheet href=https://pranshugaba.com/css/main.d46121fd4e89b9a3bf61f5a933ceaa81545e20f87c21578a28172d7adb4697e1.css>
 <title>
 Building an X and O game using Godot |
 Pranshu Gaba
@@ -281,7 +281,7 @@ You can <navextlink to=/>download my assets</navextlink>, or you can make your o
 Note
 </div>
 <div class=admonition__content>
-<p>I made the png files for X, O, and the grid using <a href=https://inkscape.org/>Inkscape</a>. It is an excellent application for making vector art. It is free software, and I highly recommend it.</p>
+<p>I made the png files for X, O, and the grid using <a href=https://inkscape.org/ target=_blank rel=noopener>Inkscape</a>. It is an excellent application for making vector art. It is free software, and I highly recommend it.</p>
 </div>
 </aside>
 <p>I have included the <code>Inter</code> font in the assets. I chose this font because it looks sharp even at low resolutions and it goes well with the &ldquo;X&rdquo; and &ldquo;O&rdquo; sprites that I have made. You can use any font that goes with your theme.</p>
@@ -293,7 +293,7 @@ Note
 Note
 </div>
 <div class=admonition__content>
-<p>You can get fonts on websites such as <a href=https://fonts.google.com/>Google fonts</a> and <a href="https://www.dafont.com/theme.php?cat=501&l%5B%5D=10">dafont.com</a>. Make sure you have the rights to use the font you choose.</p>
+<p>You can get fonts on websites such as <a href=https://fonts.google.com/ target=_blank rel=noopener>Google fonts</a> and <a href="https://www.dafont.com/theme.php?cat=501&l[]=10" target=_blank rel=noopener>dafont.com</a>. Make sure you have the rights to use the font you choose.</p>
 </div>
 </aside>
 <p>We need to add these assets to our project in Godot.
@@ -310,7 +310,7 @@ When you open Godot, you will see those files in the FileSystem tab.</p>
 Note
 </div>
 <div class=admonition__content>
-<p>Read the <a href=https://docs.godotengine.org/en/stable/getting_started/step_by_step/scenes_and_nodes.html>Godot docs on Scenes and Nodes</a> to understand how they work.</p>
+<p>Read the <a href=https://docs.godotengine.org/en/stable/getting_started/step_by_step/scenes_and_nodes.html target=_blank rel=noopener>Godot docs on Scenes and Nodes</a> to understand how they work.</p>
 </div>
 </aside>
 <p>We will add a root node that will hold all nodes in our game.
@@ -480,7 +480,7 @@ Tip
 </div>
 <div class=admonition__content>
 <p>You can <kbd>Ctrl</kbd>+Click on any inbuilt function to read its documentation. You can also search for help or open online docs directly from the script editor.</p>
-<p>If you find any Godot term unclear, refer to the <a href=https://docs.godotengine.org/en/stable/index.html>Godot docs</a>.</p>
+<p>If you find any Godot term unclear, refer to the <a href=https://docs.godotengine.org/en/stable/index.html target=_blank rel=noopener>Godot docs</a>.</p>
 <p><img src=img/online-docs.png alt></p>
 </div>
 </aside>
@@ -552,7 +552,7 @@ Note
 </div>
 <div class=admonition__content>
 <p>For more details, you can read the reference page for
-<a href=https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-get-node>get_node</a></p>
+<a href=https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-get-node target=_blank rel=noopener>get_node</a></p>
 </div>
 </aside>
 <p>Since accessing nodes is a common pattern in Godot, there is a shorthand notation for it. We can write <code>$Grid/GridSprite</code> instead of <code>get_node("Grid/GridSprite")</code>. We will follow this shorter notation from now on.</p>
@@ -595,7 +595,7 @@ If you find yourself repeating the same code a lot, there is probably a better w
 Tip
 </div>
 <div class=admonition__content>
-<p><a href=https://en.wikipedia.org/wiki/Don%27t_repeat_yourself>Don&rsquo;t repeat yourself</a> too often.</p>
+<p><a href=https://en.wikipedia.org/wiki/Don%27t_repeat_yourself target=_blank rel=noopener>Don&rsquo;t repeat yourself</a> too often.</p>
 </div>
 </aside>
 <p>We <em>can</em> do better. We can make use of the <navextlink to=https://docs.godotengine.org/en/stable/classes/class_node.html?#class-node-method-get-children>get_children</navextlink> method. This method takes as an argument a reference to a node and returns an array of references to the children of the node.</p>
@@ -604,7 +604,7 @@ Tip
 Note
 </div>
 <div class=admonition__content>
-<p>Also see <a href=https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-get-child>get_child</a> method.</p>
+<p>Also see <a href=https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-method-get-child target=_blank rel=noopener>get_child</a> method.</p>
 </div>
 </aside>
 <p>Create a node of type <code>Node2D</code> in <code>Grid</code> and name it <code>GridCells</code>. Select all nine <code>GridCell</code> nodes and drag them on to <code>GridCells</code> to make them children of <code>GridCells</code>.
@@ -684,7 +684,7 @@ if signal is received:
 Note
 </div>
 <div class=admonition__content>
-<p>Read the Godot docs for <a href=https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html>signals</a>.</p>
+<p>Read the Godot docs for <a href=https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html target=_blank rel=noopener>signals</a>.</p>
 </div>
 </aside>
 <p>As you have seen, signals are a very important concept in game development. We will now see how to implement this in Godot.</p>
@@ -774,7 +774,7 @@ We will filter only the mouse click events with an <code>if</code> statement.</p
 Note
 </div>
 <div class=admonition__content>
-<p>Read the Godot docs for <a href=https://docs.godotengine.org/en/stable/classes/class_inputevent.html>inputevent</a>.</p>
+<p>Read the Godot docs for <a href=https://docs.godotengine.org/en/stable/classes/class_inputevent.html target=_blank rel=noopener>inputevent</a>.</p>
 </div>
 </aside>
 <p>This is working well. We are printing an event if and only if a cell is clicked. We can replace <code>print</code> with <code>emit_signal</code>.</p>
