@@ -71,6 +71,10 @@
 }
 
 .list-description__item {
+  .item__text{ 
+    border-radius: 10px;
+    width: 100%;
+  }
   .item__preview-image {
     margin-bottom: 0.75rem;
     margin-inline: auto;
@@ -78,8 +82,8 @@
   }
   @media (min-width: 640px) {
     display: flex;
-    flex-direction: row-reverse;
     gap: 1rem;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     .item__preview-image {
