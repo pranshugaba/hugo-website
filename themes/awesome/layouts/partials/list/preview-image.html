@@ -1,0 +1,21 @@
+{{ $img := (.Resources.ByType "image").GetMatch "*featured*[png,jpeg,jpg,webp]" }} 
+{{ with $img }}
+    {{ $orientation := 1 }}
+    {{ with .Exif }}
+        {{ $orientation = .Tags.Orientation }}
+    {{ end }}
+    <figure class="item__preview-image">
+        {{ $resizedImg := "" }}
+        {{ if lt .Height .Width }}
+        {{ $resizedImg = .Resize "480x" }}
+        {{ else }}
+        {{ $resizedImg = .Resize "x480" }}
+        {{ end }}
+        <img
+        src="{{ $resizedImg.Permalink }}"
+        alt="{{ $img.Title }}"
+        height="{{ $resizedImg.Height }}"
+        width="{{ $resizedImg.Width }}"
+        />
+</figure>
+{{ end }}

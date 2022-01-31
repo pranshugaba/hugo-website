@@ -34,6 +34,7 @@ tag = "tags"
 
 [params]
 mainSections = [
+    "thoughts",
     "dev",
     "maths",
     "trips",

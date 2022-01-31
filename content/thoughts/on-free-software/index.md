@@ -1,19 +1,20 @@
 ---
-title: "On Free Software"
-subtitle: "I describe the merits of free software"
-summary: "On the importance of free software"
+title: "On the Importance of Free Software"
+subtitle: "I discuss some merits of free software"
+summary: "Today is Software Freedom Day."
 
-date: 2021-09-19T12:30:00+05:30
-lastmod: 2021-09-19T12:30:00+05:30
+date: 2022-09-17T12:30:00+05:30
+lastmod: 2022-09-17T12:30:00+05:30
 
-tags: []
+tags: ["free-software", "linux"]
 
 math: false
 
 draft: true
 featured: false
 ---
-Have you read the terms and conditions that you are _forced_ to accept when you install Windows or macOS on a new PC? When you set up a new iPhone or Android device? They look scary because they are so long and written legalese. But once you read it, you will realise how much more worse it actually is. 
+
+When you set up a new computer, be it Windows or Mac, you are _forced_ to accept some terms and conditions. The same is true for Android and iPhones. Do you read the terms that you are agreeing to?  You probably don't, because they are long and written in legalese. But once you read it, you will realise how much more worse it actually is. 
 
 You bound to follow the terms and conditions that you "agreed" to, and the companies can punish you if you violate those terms. You sign away many important rights when you click on the agree button. But it does not have to be this way. I would like to introduce to you, if you don't know it already, _free software_. 
 
@@ -21,7 +22,7 @@ You bound to follow the terms and conditions that you "agreed" to, and the compa
 
 ## What is free software?
 
-Let me begin by clarifying a common misconception. 
+First: I clarify a common misconception. 
 The _free_ in the free software stands for free as in freedom, not free as in free of cost. Some languages such as French and Spanish have two different words for the two meanings. 
 For example, in Spanish, _gratis_ means free of cost whereas _libre_ means freedom.
 Unfortunately, English does not have two different words for free and this leads to confusion sometimes. 

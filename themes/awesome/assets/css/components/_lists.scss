@@ -6,7 +6,7 @@
 }
 
 .list__key {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-variation-settings: unset;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
@@ -70,6 +70,24 @@
   }
 }
 
+.list-description__item {
+  .item__preview-image {
+    margin-bottom: 0.75rem;
+    margin-inline: auto;
+    width: 100%;
+  }
+  @media (min-width: 640px) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    .item__preview-image {
+      margin: 0;
+      max-width: 240px;
+    }
+  }
+}
 .items__heading {
   border-bottom: 2px solid var(--fg);
   padding: 1rem 0 0.75rem;

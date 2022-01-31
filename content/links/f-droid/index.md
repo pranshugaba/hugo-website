@@ -6,7 +6,7 @@ summary: ""
 date: 2021-07-07T01:45:02+05:30
 lastmod: 2021-07-07T01:45:02+05:30
 
-tags: ["foss"]
+tags: ["free-software"]
 
 math: false
 
