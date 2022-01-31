@@ -4,7 +4,9 @@
 title: "The Picture Hanging Puzzle"
 subtitle: "Puzzle #1"
 summary: "Can you hang a picture so that it is easy to remove?"
-authors: ["pranshu"]
+
+number: 1
+
 tags: ["puzzles"]
 categories: []
 date: 2021-03-23T17:30:00+05:30

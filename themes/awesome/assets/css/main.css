@@ -508,7 +508,7 @@ figure .dark-image {
 }
 figure figcaption {
   font-weight: 400;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   margin: 0.5rem auto 0.75rem;
   line-height: 1.5;
 }
@@ -1339,12 +1339,19 @@ thead {
 
 .inline-svg {
   display: block;
+  margin-inline: auto;
+  max-width: 100%;
 }
-.inline-svg path {
-  stroke: var(--fg);
+@media (min-width: 640px) {
+  .inline-svg {
+    max-width: 70%;
+  }
 }
-.inline-svg g {
+.inline-svg .fg-fill {
   fill: var(--fg);
+}
+.inline-svg .fg-stroke path {
+  stroke: var(--fg);
 }
 
 a.footnote-ref {
@@ -1555,6 +1562,7 @@ a.footnote-ref:hover {
 #content.maths .page__content,
 #content.stories .page__header,
 #content.stories .page__content {
+  font-size: 110%;
   font-family: "Source Serif", "IBM Plex Sans", sans-serif;
 }
 #content.maths .page__header .katex,
@@ -1569,22 +1577,21 @@ a.footnote-ref:hover {
 #content.stories .page__content p {
   line-height: 1.6;
 }
-#content.maths .page__header h1, #content.maths .page__header h2,
+#content.maths .page__header h1,
 #content.maths .page__content h1,
-#content.maths .page__content h2,
 #content.stories .page__header h1,
-#content.stories .page__header h2,
-#content.stories .page__content h1,
-#content.stories .page__content h2 {
+#content.stories .page__content h1 {
   font-family: "Source Serif", "IBM Plex Sans", sans-serif;
   letter-spacing: unset;
-  font-variation-settings: "wght" 600, "opsz" 36;
+  font-variation-settings: "wght" 600, "opsz" 40;
 }
 #content.maths .page__header h2,
 #content.maths .page__content h2,
 #content.stories .page__header h2,
 #content.stories .page__content h2 {
-  font-variation-settings: "wght" 500, "opsz" 24;
+  font-family: "IBM Plex Sans", sans-serif;
+  letter-spacing: -0.05rem;
+  font-variation-settings: unset;
 }
 #content.maths .page__subtitle,
 #content.stories .page__subtitle {

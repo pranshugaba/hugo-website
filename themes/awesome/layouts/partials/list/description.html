@@ -7,6 +7,9 @@
       &nbsp; · &nbsp; {{ partial "helpers/location" . }}
       {{ end }}
       &nbsp; · &nbsp; <a href="/{{ .Type }}">{{ .Type | title }}</a>
+      {{ if (eq .Type "puzzles") }}
+      &nbsp; · &nbsp; #{{ .Params.Number }} 
+      {{ end }}
     </div>
     <div class="item__content">
       <div class="item__title">

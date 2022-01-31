@@ -2,6 +2,7 @@
 #content.stories {
   .page__header,
   .page__content {
+    font-size: 110%;
     font-family: 'Source Serif', 'IBM Plex Sans', sans-serif;
     .katex {
       font-size: 110%;
@@ -10,14 +11,16 @@
       line-height: 1.6;
     }
 
-    h1, h2 {
+    h1 {
       font-family: 'Source Serif', 'IBM Plex Sans', sans-serif;
       letter-spacing: unset;
-      font-variation-settings: 'wght' 600, 'opsz' 36;
+      font-variation-settings: 'wght' 600, 'opsz' 40;
     }
 
     h2 {
-      font-variation-settings: 'wght' 500, 'opsz' 24;
+      font-family: 'IBM Plex Sans', sans-serif;
+      letter-spacing: -0.05rem;
+      font-variation-settings: unset;
     }
   }
   .page__subtitle {

@@ -1,10 +1,14 @@
 .inline-svg {
   display: block;
-  path {
-    stroke: var(--fg);
+  margin-inline: auto;
+  max-width: 100%;
+  @media (min-width: 640px) {
+    max-width: 70%;
   }
-  g {
+  .fg-fill {
     fill: var(--fg);
   }
-
+  .fg-stroke path {
+    stroke: var(--fg);
+  }
 }

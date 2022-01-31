@@ -1,6 +1,6 @@
 ---
 title: Playground
-subtitle: Maps
+subtitle: Trying out stuff here
 map: true
 ---
 
@@ -257,8 +257,14 @@ A playground to test out[^1] various Markdown features.
   </fieldset>
 </form>
 
-{{< map "day1" >}}
-This is another map.
+## Chess games
 
+{{< insert-svg filename="starting-position" caption="Starting position">}}
+
+## Maps
+
+{{< map "day1" >}}
+
+This is another map.
 
 {{< map "abc" >}}
