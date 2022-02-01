@@ -259,7 +259,7 @@ A playground to test out[^1] various Markdown features.
 
 ## Chess games
 
-{{< insert-svg filename="starting-position" caption="Starting position">}}
+{{< chessboard fen="r1b2bnr/ppp1pppp/4q3/n5k1/2N2P2/3P4/PPP1P1PP/R1BQKBNR" caption="The black king is out for a stroll.">}}
 
 ## Maps
 

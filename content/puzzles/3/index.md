@@ -29,15 +29,9 @@ If you are not familiar with the rules of chess, then you can [read the rules on
 ## The Problem
 Today's puzzle is simple. I present some chess positions. For each position, you must decide whether it's white or black to play. 
 
-### 1
 Which player's turn is it to play?
 
-{{< chessboard fen="123" caption="This is a _caption_." >}}
-
-### 2
-What is the maximum number of knights you can place on an $8 \times 8$ chessboard such that no two knights attack each other? 
-
-{{< insert-svg filename="starting-position" caption="Starting position">}}
+{{< chessboard fen="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR" caption="This is the starting position of regular chess.">}}
 
 This is a starting position. White goes first. 
 

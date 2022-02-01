@@ -1,5 +1,12 @@
-{{ $xpos := mul (sub .X 1) 49 }}
-{{ $ypos := mul (sub 8 .Y) 49 }}
+{{ $xPos := .X }}
+{{ $yPos := .Y }}
+{{ if .Flip }}
+    {{ $xPos = (sub 7 .X) }}
+    {{ $yPos = (sub 7 .Y) }}
+{{ end }}
+{{ $squareLength := 49 }}
+{{ $xPos := mul $xPos $squareLength }}
+{{ $yPos := mul $yPos $squareLength }}
 {{ $pieceSymbol := "P" }}
 {{ with .Piece }}
     {{ $pieceSymbol = .}}
@@ -27,6 +34,6 @@
     {{ $pieceName = "pawn"}}
 {{ end }}
 
-<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="49" width="49" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 2048 2048" class="{{ $pieceSymbol }}" x="{{ $xpos }}" y="{{ $ypos }}">
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="49" width="49" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 2048 2048" class="{{ $pieceSymbol }}" x="{{ $xPos }}" y="{{ $yPos }}">
     {{ partial (print "helpers/chess/" $pieceColor "-" $pieceName) . }}
 </svg>

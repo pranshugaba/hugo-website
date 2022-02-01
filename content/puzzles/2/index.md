@@ -1,36 +1,23 @@
 ---
-# Documentation: https://sourcethemes.com/academic/docs/managing-content/
-
 title: "A Chess Puzzle"
 subtitle: "Puzzle #2"
 summary: "How many chess pieces can you place so no piece attacks any other piece?"
 
 number: 2
 
-authors: ["pranshu"]
 tags: ["puzzles", "chess"]
-categories: []
+
 date: 2021-04-06T00:30:00+05:30
 lastmod: 2021-04-06T00:30:00+05:30
-reading_time: false
-featured: false
-draft: false
-math: true
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder.
-# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
-image:
-  caption: ""
-  focal_point: "Top"
-  preview_only: true
-  placement: 2
 
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
-projects: []
+math: true
+
+draft: false
+featured: false
+
+image:
+  preview_only: true
+
 ---
 
 
@@ -62,7 +49,7 @@ Here are 7 variants of this problem:
 What is the maximum number of rooks you can place on a $8\times 8$ chessboard such that no two rooks attack each other?
 <img src="white-rook.svg" class="float-right"/>
 
-{{< figure src="rooks_fail.png" caption="This arrangement does not work because the rooks on g5 and g8 attack each other." alt="A chessboard with white rooks placed on b4, c7, d3, f2, g5, and g8." class="chessboard">}}
+{{< chessboard fen="6R/2R/8/6R/1R/3R/5R/8" caption="This arrangement does not work because the rooks on g5 and g8 attack each other." >}}
 
 ### 2
 What is the maximum number of knights you can place on an $8 \times 8$ chessboard such that no two knights attack each other? 

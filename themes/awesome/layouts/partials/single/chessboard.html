@@ -1,40 +1,70 @@
 {{ $showCoords := (ne .HideCoords "true")}}
 {{ $fen := .FEN }}
-{{ $fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR"}}
-<p>FEN = {{ $fen }}</p>
+{{ $flip := false }}
+{{ with .FEN }}
+    {{ $fen = . }}
+{{ else }}
+    {{ $fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR"}}
+{{ end }}
 <figure class="inline-svg">
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
     <svg version='1.1' xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 20 420 425">
         <rect width="394" height="394" fill="var(--light)" x="23" y="23"></rect>
         <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23"></rect>
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="392" viewBox="0 0 392 392" x="24" y="24">
-            {{ partial "helpers/chess/chess-squares" . }}
+            {{ partial "helpers/chess/squares" . }}
             <g>
-                {{ partial "helpers/chess-pieces" (dict "Context" . "Piece" "Q" "X" 1 "Y" 1) }}
-                {{ partial "helpers/chess-pieces" (dict "Context" . "Piece" "b" "X" 4 "Y" 8) }}
-                {{ partial "helpers/chess-pieces" (dict "Context" . "Piece" "r" "X" 2 "Y" 6) }}
-                {{ partial "helpers/chess-pieces" (dict "Context" . "Piece" "P" "X" 7 "Y" 2) }}
-                {{ partial "helpers/chess-pieces" (dict "Context" . "Piece" "P" "X" 8 "Y" 5) }}
+            {{ range $yIndex, $position := (split $fen "/") }}
+                {{ $data := newScratch}}
+                {{ $data.Set "rank" 0 }}
+                {{ range $xIndex, $piece := (split $position "") }}
+                    {{ if (and (le "1" $piece) (le $piece "8"))}}
+                        {{ $data.Add "rank" (int $piece) }}
+                    {{ else }}
+                        {{ partial "helpers/chess/pieces" (dict "Context" . "Piece" $piece "X" ($data.Get "rank") "Y" $yIndex "Flip" $flip) }}
+                        {{ $data.Add "rank" 1 }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
             </g>
         </svg>
         {{ if $showCoords }}
         <g font-size="14.7" fill="var(--fg)" font-weight="500" pointer-events="none">
-            <text x="44" y="435">a</text>
-            <text x="93" y="435">b</text>
-            <text x="142" y="435">c</text>
-            <text x="191" y="435">d</text>
-            <text x="240" y="435">e</text>
-            <text x="289" y="435">f</text>
-            <text x="338" y="435">g</text>
-            <text x="387" y="435">h</text>
-            <text y="53"  x="6">8</text>
-            <text y="102" x="6">7</text>
-            <text y="151" x="6">6</text>
-            <text y="200" x="6">5</text>
-            <text y="249" x="6">4</text>
-            <text y="298" x="6">3</text>
-            <text y="347" x="6">2</text>
-            <text y="396" x="6">1</text>
+            {{ if $flip }}
+                <text x="44" y="435">h</text>
+                <text x="93" y="435">g</text>
+                <text x="142" y="435">f</text>
+                <text x="191" y="435">e</text>
+                <text x="240" y="435">d</text>
+                <text x="289" y="435">c</text>
+                <text x="338" y="435">b</text>
+                <text x="387" y="435">a</text>
+                <text y="53"  x="6">1</text>
+                <text y="102" x="6">2</text>
+                <text y="151" x="6">3</text>
+                <text y="200" x="6">4</text>
+                <text y="249" x="6">5</text>
+                <text y="298" x="6">6</text>
+                <text y="347" x="6">7</text>
+                <text y="396" x="6">8</text>
+            {{ else }}
+                <text x="44" y="435">a</text>
+                <text x="93" y="435">b</text>
+                <text x="142" y="435">c</text>
+                <text x="191" y="435">d</text>
+                <text x="240" y="435">e</text>
+                <text x="289" y="435">f</text>
+                <text x="338" y="435">g</text>
+                <text x="387" y="435">h</text>
+                <text y="53"  x="6">8</text>
+                <text y="102" x="6">7</text>
+                <text y="151" x="6">6</text>
+                <text y="200" x="6">5</text>
+                <text y="249" x="6">4</text>
+                <text y="298" x="6">3</text>
+                <text y="347" x="6">2</text>
+                <text y="396" x="6">1</text>
+            {{ end }}
         </g>
         {{ end }}
     </svg>
