@@ -7,7 +7,7 @@ summary: "I walked 14 kilometres in South Mumbai to buy a pen refill."
 date: 2021-08-19T21:30:00+05:30
 lastmod: 2021-08-19T21:30:00+05:30
 
-tags: ["walking"]
+tags: ["walking", "cats"]
 
 math: false
 map: true
