@@ -32,6 +32,8 @@ Today's puzzle is simple. I present some chess positions. For each position, you
 ### 1
 Which player's turn is it to play?
 
+{{< chessboard fen="123" caption="This is a _caption_." >}}
+
 ### 2
 What is the maximum number of knights you can place on an $8 \times 8$ chessboard such that no two knights attack each other? 
 

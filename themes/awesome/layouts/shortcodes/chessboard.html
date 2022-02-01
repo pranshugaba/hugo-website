@@ -1,0 +1,10 @@
+{{ $fen := .Get "fen" }}
+{{ $hideCoords := "false" }}
+{{ with .Get "hideCoords" }}
+    {{ $hideCoords = . }}
+{{ end }}
+{{ $caption := ""}}
+{{ with .Get "caption" }}
+    {{ $caption = .}}
+{{ end }}
+{{ partial "single/chessboard" (dict "Context" . "FEN" $fen "HideCoords"  $hideCoords "Caption" $caption) }}
