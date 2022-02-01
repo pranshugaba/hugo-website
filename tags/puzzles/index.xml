@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>puzzles by Pranshu Gaba</title><link>https://pranshugaba.com/tags/puzzles/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 02 Feb 2022 00:37:22 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/puzzles/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/puzzles/index.xml" rel="self" type="application/rss+xml"/><item><title>Advent Puzzles 2021</title><link>https://pranshugaba.com/links/advent-puzzles-2021/</link><pubDate>Fri, 10 Dec 2021 05:30:00 +0530</pubDate><guid>https://pranshugaba.com/links/advent-puzzles-2021/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>puzzles by Pranshu Gaba</title><link>https://pranshugaba.com/tags/puzzles/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 02 Feb 2022 01:52:34 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/puzzles/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/puzzles/index.xml" rel="self" type="application/rss+xml"/><item><title>Advent Puzzles 2021</title><link>https://pranshugaba.com/links/advent-puzzles-2021/</link><pubDate>Fri, 10 Dec 2021 05:30:00 +0530</pubDate><guid>https://pranshugaba.com/links/advent-puzzles-2021/</guid><description>
 <![CDATA[<p>December is here, which means it&rsquo;s problem solving season!</p>
 <h2 id="maths">Maths</h2>
 <p><a href="https://www.mscroggs.co.uk/" target="_blank" rel="noopener">Matthew Scroggs</a> has posted the seventh edition of the <a href="https://www.mscroggs.co.uk/blog/91" target="_blank" rel="noopener">Advent calendar of maths puzzles</a> on his blog. A new puzzle is unlocked everyday, and you have until the end of the year to submit the answers. The first twenty-four puzzles each have a three digit solutions, and these solutions form the clues required to solve the main puzzle on the 25th.
@@ -48,29 +48,401 @@ For the sake of this problem, assume that pieces can attack other pieces of the 
 <p>What is the maximum number of rooks you can place on a $8\times 8$ chessboard such that no two rooks attack each other?
 <img src="white-rook.svg" class="float-right"/></p>
 
-<figure class="chessboard">
+
+
+
+
     
+
+
+
+
+
     
-    
-    
-    
-    
-        <img src="https://pranshugaba.com/puzzles/2/rooks_fail.png" alt="A chessboard with white rooks placed on b4, c7, d3, f2, g5, and g8.">
-    
-    
-    
-    <figcaption>
-        
-        
-            This arrangement does not work because the rooks on g5 and g8 attack each other.
+
+<figure class="inline-svg">
+    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+    <svg version='1.1' xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 20 420 425">
+        <rect width="394" height="394" fill="var(--light)" x="23" y="23"></rect>
+        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23"></rect>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="392" viewBox="0 0 392 392" x="24" y="24">
+            <g class="squares">
+    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="0" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="0" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="0" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="0" y="0" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="49" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="49" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="49" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="98" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="98" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="98" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="98" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="98" y="0" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="147" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="147" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="147" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="196" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="196" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="196" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="196" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="196" y="0" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="245" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="245" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="245" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="294" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="294" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="294" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="294" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="294" y="0" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="343" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="343" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="343" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+</g>
+            <g>
             
+                
+                
+                
+                    
+                        
+                    
+                
+                    
+                        
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="49" width="49" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 2048 2048" class="R" x="294" y="0">
+    <path style="color:black;" d="m1161 1706h170v137h274v-375l-222-171v-478l170-170v-205h153v-239h-1365v239h153v205l171 170v478l-222 171v375h273v-137h171v137h274v-137zm478-1330h-1230v-103h1230v103zm-155 204h-920v-136h920v136zm-170 717h-580v-478h580v478zm222 239v239h-137v-137h-308v137h-135v-137h-307v137h-137v-239h1024zm-77-887l-103 102h-663l-105-102h871zm-110 716l127 103h-904l128-103h649z" fill-rule="nonzero" transform="translate(0,2048) scale(1,-1)" display="block" fill="var(--dark)"></path>
+<g fill-rule="nonzero" fill="var(--light)">
+    <path style="color:black;" d="m1639 1672h-1230v103h1230v-103z" display="block"></path>
+    <path style="color:black;" d="m1484 1468h-920v136h920v-136z" display="block"></path>
+    <path style="color:black;" d="m1314 751h-580v478h580v-478z" display="block"></path>
+    <path style="color:black;" d="m1536 512v-239h-137v137h-308v-137h-135v137h-307v-137h-137v239h1024z" display="block"></path>
+</g>
+<path style="color:black;" d="m1459 1399-103-102h-663l-105 102h871z" fill-rule="nonzero" display="block" fill="var(--light)"></path>
+<path style="color:black;" d="m1349 683 127-103h-904l128 103h649z" fill-rule="nonzero" display="block" fill="var(--light)"></path>
+</svg>
+                        
+                    
+                
             
+                
+                
+                
+                    
+                        
+                    
+                
+                    
+                        
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="49" width="49" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 2048 2048" class="R" x="98" y="49">
+    <path style="color:black;" d="m1161 1706h170v137h274v-375l-222-171v-478l170-170v-205h153v-239h-1365v239h153v205l171 170v478l-222 171v375h273v-137h171v137h274v-137zm478-1330h-1230v-103h1230v103zm-155 204h-920v-136h920v136zm-170 717h-580v-478h580v478zm222 239v239h-137v-137h-308v137h-135v-137h-307v137h-137v-239h1024zm-77-887l-103 102h-663l-105-102h871zm-110 716l127 103h-904l128-103h649z" fill-rule="nonzero" transform="translate(0,2048) scale(1,-1)" display="block" fill="var(--dark)"></path>
+<g fill-rule="nonzero" fill="var(--light)">
+    <path style="color:black;" d="m1639 1672h-1230v103h1230v-103z" display="block"></path>
+    <path style="color:black;" d="m1484 1468h-920v136h920v-136z" display="block"></path>
+    <path style="color:black;" d="m1314 751h-580v478h580v-478z" display="block"></path>
+    <path style="color:black;" d="m1536 512v-239h-137v137h-308v-137h-135v137h-307v-137h-137v239h1024z" display="block"></path>
+</g>
+<path style="color:black;" d="m1459 1399-103-102h-663l-105 102h871z" fill-rule="nonzero" display="block" fill="var(--light)"></path>
+<path style="color:black;" d="m1349 683 127-103h-904l128 103h649z" fill-rule="nonzero" display="block" fill="var(--light)"></path>
+</svg>
+                        
+                    
+                
             
+                
+                
+                
+                    
+                        
+                    
+                
+            
+                
+                
+                
+                    
+                        
+                    
+                
+                    
+                        
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="49" width="49" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 2048 2048" class="R" x="294" y="147">
+    <path style="color:black;" d="m1161 1706h170v137h274v-375l-222-171v-478l170-170v-205h153v-239h-1365v239h153v205l171 170v478l-222 171v375h273v-137h171v137h274v-137zm478-1330h-1230v-103h1230v103zm-155 204h-920v-136h920v136zm-170 717h-580v-478h580v478zm222 239v239h-137v-137h-308v137h-135v-137h-307v137h-137v-239h1024zm-77-887l-103 102h-663l-105-102h871zm-110 716l127 103h-904l128-103h649z" fill-rule="nonzero" transform="translate(0,2048) scale(1,-1)" display="block" fill="var(--dark)"></path>
+<g fill-rule="nonzero" fill="var(--light)">
+    <path style="color:black;" d="m1639 1672h-1230v103h1230v-103z" display="block"></path>
+    <path style="color:black;" d="m1484 1468h-920v136h920v-136z" display="block"></path>
+    <path style="color:black;" d="m1314 751h-580v478h580v-478z" display="block"></path>
+    <path style="color:black;" d="m1536 512v-239h-137v137h-308v-137h-135v137h-307v-137h-137v239h1024z" display="block"></path>
+</g>
+<path style="color:black;" d="m1459 1399-103-102h-663l-105 102h871z" fill-rule="nonzero" display="block" fill="var(--light)"></path>
+<path style="color:black;" d="m1349 683 127-103h-904l128 103h649z" fill-rule="nonzero" display="block" fill="var(--light)"></path>
+</svg>
+                        
+                    
+                
+            
+                
+                
+                
+                    
+                        
+                    
+                
+                    
+                        
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="49" width="49" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 2048 2048" class="R" x="49" y="196">
+    <path style="color:black;" d="m1161 1706h170v137h274v-375l-222-171v-478l170-170v-205h153v-239h-1365v239h153v205l171 170v478l-222 171v375h273v-137h171v137h274v-137zm478-1330h-1230v-103h1230v103zm-155 204h-920v-136h920v136zm-170 717h-580v-478h580v478zm222 239v239h-137v-137h-308v137h-135v-137h-307v137h-137v-239h1024zm-77-887l-103 102h-663l-105-102h871zm-110 716l127 103h-904l128-103h649z" fill-rule="nonzero" transform="translate(0,2048) scale(1,-1)" display="block" fill="var(--dark)"></path>
+<g fill-rule="nonzero" fill="var(--light)">
+    <path style="color:black;" d="m1639 1672h-1230v103h1230v-103z" display="block"></path>
+    <path style="color:black;" d="m1484 1468h-920v136h920v-136z" display="block"></path>
+    <path style="color:black;" d="m1314 751h-580v478h580v-478z" display="block"></path>
+    <path style="color:black;" d="m1536 512v-239h-137v137h-308v-137h-135v137h-307v-137h-137v239h1024z" display="block"></path>
+</g>
+<path style="color:black;" d="m1459 1399-103-102h-663l-105 102h871z" fill-rule="nonzero" display="block" fill="var(--light)"></path>
+<path style="color:black;" d="m1349 683 127-103h-904l128 103h649z" fill-rule="nonzero" display="block" fill="var(--light)"></path>
+</svg>
+                        
+                    
+                
+            
+                
+                
+                
+                    
+                        
+                    
+                
+                    
+                        
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="49" width="49" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 2048 2048" class="R" x="147" y="245">
+    <path style="color:black;" d="m1161 1706h170v137h274v-375l-222-171v-478l170-170v-205h153v-239h-1365v239h153v205l171 170v478l-222 171v375h273v-137h171v137h274v-137zm478-1330h-1230v-103h1230v103zm-155 204h-920v-136h920v136zm-170 717h-580v-478h580v478zm222 239v239h-137v-137h-308v137h-135v-137h-307v137h-137v-239h1024zm-77-887l-103 102h-663l-105-102h871zm-110 716l127 103h-904l128-103h649z" fill-rule="nonzero" transform="translate(0,2048) scale(1,-1)" display="block" fill="var(--dark)"></path>
+<g fill-rule="nonzero" fill="var(--light)">
+    <path style="color:black;" d="m1639 1672h-1230v103h1230v-103z" display="block"></path>
+    <path style="color:black;" d="m1484 1468h-920v136h920v-136z" display="block"></path>
+    <path style="color:black;" d="m1314 751h-580v478h580v-478z" display="block"></path>
+    <path style="color:black;" d="m1536 512v-239h-137v137h-308v-137h-135v137h-307v-137h-137v239h1024z" display="block"></path>
+</g>
+<path style="color:black;" d="m1459 1399-103-102h-663l-105 102h871z" fill-rule="nonzero" display="block" fill="var(--light)"></path>
+<path style="color:black;" d="m1349 683 127-103h-904l128 103h649z" fill-rule="nonzero" display="block" fill="var(--light)"></path>
+</svg>
+                        
+                    
+                
+            
+                
+                
+                
+                    
+                        
+                    
+                
+                    
+                        
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="49" width="49" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 2048 2048" class="R" x="245" y="294">
+    <path style="color:black;" d="m1161 1706h170v137h274v-375l-222-171v-478l170-170v-205h153v-239h-1365v239h153v205l171 170v478l-222 171v375h273v-137h171v137h274v-137zm478-1330h-1230v-103h1230v103zm-155 204h-920v-136h920v136zm-170 717h-580v-478h580v478zm222 239v239h-137v-137h-308v137h-135v-137h-307v137h-137v-239h1024zm-77-887l-103 102h-663l-105-102h871zm-110 716l127 103h-904l128-103h649z" fill-rule="nonzero" transform="translate(0,2048) scale(1,-1)" display="block" fill="var(--dark)"></path>
+<g fill-rule="nonzero" fill="var(--light)">
+    <path style="color:black;" d="m1639 1672h-1230v103h1230v-103z" display="block"></path>
+    <path style="color:black;" d="m1484 1468h-920v136h920v-136z" display="block"></path>
+    <path style="color:black;" d="m1314 751h-580v478h580v-478z" display="block"></path>
+    <path style="color:black;" d="m1536 512v-239h-137v137h-308v-137h-135v137h-307v-137h-137v239h1024z" display="block"></path>
+</g>
+<path style="color:black;" d="m1459 1399-103-102h-663l-105 102h871z" fill-rule="nonzero" display="block" fill="var(--light)"></path>
+<path style="color:black;" d="m1349 683 127-103h-904l128 103h649z" fill-rule="nonzero" display="block" fill="var(--light)"></path>
+</svg>
+                        
+                    
+                
+            
+                
+                
+                
+                    
+                        
+                    
+                
+            
+            </g>
+        </svg>
         
-    </figcaption>
+        <g font-size="14.7" fill="var(--fg)" font-weight="500" pointer-events="none">
+            
+                <text x="44" y="435">a</text>
+                <text x="93" y="435">b</text>
+                <text x="142" y="435">c</text>
+                <text x="191" y="435">d</text>
+                <text x="240" y="435">e</text>
+                <text x="289" y="435">f</text>
+                <text x="338" y="435">g</text>
+                <text x="387" y="435">h</text>
+                <text y="53"  x="6">8</text>
+                <text y="102" x="6">7</text>
+                <text y="151" x="6">6</text>
+                <text y="200" x="6">5</text>
+                <text y="249" x="6">4</text>
+                <text y="298" x="6">3</text>
+                <text y="347" x="6">2</text>
+                <text y="396" x="6">1</text>
+            
+        </g>
+        
+    </svg>
+    
+        <figcaption>This arrangement does not work because the rooks on g5 and g8 attack each other.</figcaption>
     
 </figure>
-
 <h3 id="2">2</h3>
 <p>What is the maximum number of knights you can place on an $8 \times 8$ chessboard such that no two knights attack each other?
 <img src="white-knight.svg" class="float-right"/></p>
