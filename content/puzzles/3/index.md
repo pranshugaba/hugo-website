@@ -10,9 +10,9 @@ lastmod: 2022-02-01T12:30:00+05:30
 
 tags: ["chess"]
 
-math: true
+math: false
 
-draft: true
+draft: false
 featured: false
 ---
 
@@ -49,67 +49,61 @@ Here's Game 1 of the tournament. This position looks like the initial position o
 
 {{< chessboard fen="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR" caption="All pieces are in the initial position.">}}
 
-It might well be the case that the game hasn't started, in which case it would be White to move.
-The question remains: Is it possible for this position to be Black to move?
+It might be the case that the game hasn't started, which would mean that it could be White to move.
+It remains to be answered if this position could be Black to move. 
 
-We need to first see if it is necessarily true that the game hasn't started. Could it be the case that the players played some moves and then arrived back at this initial position? 
-If not, then we are done. Otherwise, we need to find out if there exists some sequence of moves that results in this position where it's Black to move.
+Could it be the case that the players played some moves and then arrived back at this initial position? 
+If not, then we are done. Otherwise, we need to find out if there exists a sequence of moves that results in this position with Black to move.
+
 
 ### Game 2
-Isn't White supposed to play first? Is this position even posible? Whose turn is it to play?
+Something's up with the knights... They seem to have switched places.  Whose turn is it to play?
 
-{{< chessboard fen="rnbqkbnr/pppp1ppp/4p3/8/8/8/PPPPPPPP/RNBQKBNR" >}}
+{{< chessboard fen="rNbqkbNr/pppppppp/8/8/8/8/PPPPPPPP/RnBQKBnR" >}}
 
 ### Game 3
-In this game, the knights are huddled in the center.
-Whose turn is it to play?
-
-{{< chessboard fen="r1bqkb1r/pppppppp/8/2Nn4/2nN4/8/PPPPPPPP/R1BQKB1R" >}}
-
-
-### Game 4
 One of Black's knights has vanished from the board! 
 Whose turn is it to play?
 
 {{< chessboard fen="rnbqkb1r/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR" >}}
 
-### Game 5
+### Game 4
 All the knights are gone!
 Whose turn is it to play?
 {{< chessboard fen="r1bqkb1r/pppppppp/8/8/8/8/PPPPPPPP/R1BQKB1R" >}}
 
-### Game 6
+### Game 5
 Uh-oh! Black is in trouble. Black has down a lot of material.
 Whose turn is it to play?
 
 {{< chessboard fen="2bqkb2/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR" >}}
 
+### Game 6
+In a standard game of chess, White goes first. So what happened here? Is this position even possible? If yes, then whose turn is it to play?
+
+{{< chessboard fen="rnbqkbnr/pppp1ppp/4p3/8/8/8/PPPPPPPP/RNBQKBNR" >}}
+
+
 ### Game 7
-This position is almost identical to the initial position, except that a pawn has moved. 
-Whose turn is it to play?
-
-{{< chessboard fen="rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR" >}}
-
-
-### Game 8
-Whose turn is it to play?
-
-{{< chessboard fen="rnbqkbnr/pppppppp/8/8/8/7P/PPPPPPP1/RNBQKBNR" >}}
-
-### Game 9
 White might be preparing for [Fool's mate](https://en.wikipedia.org/wiki/Fool%27s_mate) here.
 Whose turn is it to play?
 
 {{< chessboard fen="rnbqkbnr/pppppppp/8/8/8/5P2/PPPPP1PP/RNBQKBNR" >}}
 
-### Game 10
-The knight has forked Black's rook and queen!
+
+### Game 8
+Black has moved a pawn. All other pieces are at their initial position. Whose turn is it to play?
+
+{{< chessboard fen="rnbqkbnr/ppppppp1/7p/8/8/8/PPPPPPPP/RNBQKBNR" >}}
+
+### Game 9
+White's knight has forked Black's rook and queen!
 Whose turn is it to play?
 
 {{< chessboard fen="rnbqkbnr/pppppNpp/8/8/8/8/PPPPPPPP/R1BQKBNR" >}}
 
-### Game 11
-Here's the final position in this puzzle. The knights are back and have dispersed out.
+### Game 10
+And here's the final game in this puzzle. All the pieces are on the board.  
 Whose turn is it to play?
 Be careful: this is a tricky one! 
 
@@ -136,12 +130,11 @@ At any point of time in a game, look at the parities of the number of moves play
 
 ## Generalisation
 
-Can you find a nice and simple characterization for positions that must be White to play?
-What are the necessary and sufficient conditions for a position to be necessarily White to play? 
+Try to come up with a fast algorithm that, given a position, decides whether the position is White to play, Black to play, either, or none. 
 
-Can you come up with a fast algorithm to decide whether a given position is White to play, Black to play, either, or none?
+You could begin by finding a simple characterization for positions that must be White to play.  What are the necessary and sufficient conditions for a position to necessarily be White to play? 
 
-It might help if you try out more positions. 
+It might help if you try out more chess positions. 
 If you have access to a physical chess board, that's great! Otherwise, you can play with the board online on the [Lichess board editor](https://lichess.org/editor).
 
 
