@@ -1,5 +1,10 @@
 details summary {
   cursor: pointer;
+  &:focus-visible {
+    border-radius: 0.5rem;
+    outline: 0.15em solid var(--accent);
+    // outline-offset: 0.2em;
+  }
 }
 
 details summary > * {

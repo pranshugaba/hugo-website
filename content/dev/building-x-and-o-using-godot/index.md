@@ -72,7 +72,7 @@ You can download Godot for free from [Godot's website](https://godotengine.org/d
 your operating system, download the Standard version, and extract
 and run!
 
-{{< note class="aside" >}}
+{{< note title="Aside" >}}
 btw, I use arch.  If you use Arch Linux, installing Godot is even easier.  Just `pacman -S godot`!
 {{< /note >}}
 
@@ -279,7 +279,7 @@ I made three new `Label` nodes with names `WinCondition`, `PlayerTurn`, and `Pla
 
 {{< figure src="img/four-labels.png" >}}
 
-{{< note class="tip" >}}
+{{< note title="Tip" >}}
 Enable "Grid Snap" in the toolbar to make it easier to align items.
 
 ![](img/grid-snap.png)
@@ -400,7 +400,7 @@ The `_process` method is called every frame. Anything that must be done every fr
 
 Since the function `_ready` contains only `pass`, and `_process` is commented out, these functions don't do anything now.
 
-{{< note class="tip" >}}
+{{< note title="Tip" >}}
 You can <kbd>Ctrl</kbd>+Click on any inbuilt function to read its documentation. You can also search for help or open online docs directly from the script editor.
 
 If you find any Godot term unclear, refer to the [Godot docs](https://docs.godotengine.org/en/stable/index.html).
@@ -490,7 +490,7 @@ We will be able to read/edit the properties of the nodes using these references.
 
 We get a reference to a node using the `get_node` method. To access a node, we pass the path of the node relative to the current node (the node that the script is attached to) to `get_node`.
 
-{{< note class="example" >}}
+{{< note title="Example" >}}
 Access the `Grid` node with `get_node("Grid")`.  
 
 Access the `GridCell2` node with `get_node("Grid/GridCell2")`.  
@@ -505,7 +505,7 @@ For more details, you can read the reference page for
 
 Since accessing nodes is a common pattern in Godot, there is a shorthand notation for it. We can write `$Grid/GridSprite` instead of `get_node("Grid/GridSprite")`. We will follow this shorter notation from now on.
 
-{{< note class="tip" >}}
+{{< note title="Tip" >}}
 The Godot editor will help you autocomplete the name of the node as soon as you type the dollar symbol.
 Make sure the node your script is attached to is active.
 
@@ -546,7 +546,7 @@ func _ready():
 This code works, but there is a lot of repetition. It is difficult to read it or make changes to it.
 If you find yourself repeating the same code a lot, there is probably a better way to write it.
 
-{{< note class="tip" >}}
+{{< note title="Tip" >}}
 [Don't repeat yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) too often. 
 {{< /note >}}
 
@@ -608,7 +608,7 @@ func _ready():
 
 If you print `cells[0].value` after the initialisation, you will see it has `value` equal `0` and not `Null`.
 
-{{< note class="tip" >}}
+{{< note title="Tip" >}}
 You can check the state of any variable using the `print` method. It is very useful for debugging. 
 {{< /note >}}
 
@@ -676,7 +676,7 @@ As you have seen, signals are a very important concept in game development. We w
 Nodes in Godot can emit signals when certain events occur.
 Each node in Godot has some signals predefined in them. You can see the signals defined for any node by clicking on the Node tab next to the Inspector tab.
 
-{{< note class="example" >}}
+{{< note title="Example" >}}
 A sprite node can emit a signal when its texture is changed, when its visibility changes, and so on.
 
 ![](img/sprite-signals.png)
@@ -696,7 +696,7 @@ if cell is clicked:
     emit_signal("cell_clicked")
 ```
 
-{{< note class="warning" >}}
+{{< note title="Warning" >}}
 The above code won't work because the syntax of the `if` statement is incorrect.
 Comment this lines out for now. We will fix this soon.
 {{< /note >}}
@@ -745,7 +745,7 @@ func _on_GridCell_input_event(viewport, event, shape_idx):
     pass
 ```
 
-{{< note class="tip" >}}
+{{< note title="Tip" >}}
 Notice the signal icon in the margin. This indicates that this method is called by a function. You can click on this icon to see more details about the signal.
 
 ![](img/signal-icon.png)
@@ -809,7 +809,7 @@ Since the signal is now carrying additional data, we need to update its declarat
 signal cell_clicked(cell)
 ```
 
-{{< note class="error" >}}
+{{< note title="Error" >}}
 If we run the game now, we get an error:
 
     The method expected 0 arguments, but called with 1.

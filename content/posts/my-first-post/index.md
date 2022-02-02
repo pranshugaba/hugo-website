@@ -13,7 +13,7 @@ This is my first post on Hugo. I am going to design my own theme!
 ## Testing custom admonitions
 
 
-{{< note class="also-see" >}}
+{{< note title="Also see" >}}
 Hello, this is _italic_ and this is **bold**. 
 This is a link to [home]({{< ref "/" >}}).
 This is an image. 

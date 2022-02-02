@@ -14,7 +14,7 @@ draft: false
 featured: false
 ---
 
-{{< note class="info" >}}
+{{< note title="Info" >}}
 Full Name: The Tale of Desperaux being a story of a mouse, a princess, some soup, and a spool of thread.  
 Author: Kate DiCamillo  
 Illustrated by: Timothy Basil Ering  
@@ -32,7 +32,7 @@ The book does have a lot of humorous moments, exaggeration that is totally unlik
 
 Overall, it was a very nice experience. I would rate it 7/10
 
-{{< note class="more-info" >}}
+{{< note title="More info" >}}
 ISBN: 9708744598698  
 Number of Pages: 270  
 Publisher: Walker Books and subsidiaries  

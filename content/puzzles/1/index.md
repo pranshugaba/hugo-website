@@ -33,7 +33,7 @@ You would like to hang the painting using two nails. To allow for easy removal, 
 
  Is this feat possible? If yes, then how would you hang the painting? If no, then prove that it is impossible.
 
-{{< note class="tip" >}}
+{{< note title="Tip" >}}
 Try it out with some pencils and a long string.
  {{< /note >}}
 

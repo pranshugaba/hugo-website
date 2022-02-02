@@ -39,7 +39,7 @@ You can practice the pieces' movements on [lichess.org](https://lichess.org/lear
 You are trying to place as many white pieces on the board as possible such that no piece attacks any other piece. 
 For the sake of this problem, assume that pieces can attack other pieces of the same colour. 
 
-{{< note class="tip" >}}
+{{< note title="Tip" >}}
 You may find it helpful to play around with pieces on a board on the [lichess board editor](https://lichess.org/editor/8/8/8/8/8/8/8/8_w_-_-_0_1).
 {{< /note >}}
 

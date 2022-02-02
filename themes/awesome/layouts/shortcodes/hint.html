@@ -1,9 +1,11 @@
 {{ $optBlock := dict "display" "block" }}
 {{- $markdown := .Inner | .Page.RenderString $optBlock -}}
+{{ $title := default "Hint" (.Get "title") }}
+{{ $class := delimit (split (lower $title) " ") "-" }}
 
-<details class="admonition  {{ with .Get "class" }}{{.}}{{ end }} ">
+<details class="admonition {{ $class }} ">
     <summary class="admonition__title">
-        {{ if .Get "class" }}{{ .Get "class" | humanize }}{{ else }}Hint{{ end }}
+        {{ $title }}
     </summary>
 	<div class="admonition__content">
         {{ $markdown }}

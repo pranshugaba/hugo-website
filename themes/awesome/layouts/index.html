@@ -5,7 +5,7 @@
 {{ $paginator := .Paginate ($pages.GroupByDate "2006") $itemsPerPage }}
 
 {{ if eq ($paginator.PageNumber) 1 }}
-  <header class="page__header">
+  <header id="content" class="page__header">
     <h1 class="page__title">Hello there!</h1>
     <p class="page__subtitle" >Welcome to my site :)</p>
   </header>
@@ -13,7 +13,7 @@
 {{ end }}
 
 {{ if ne ($paginator.PageNumber) 1 }}
-<div class="home__pager">
+<div id="content" class="home__pager">
 <div>
   {{ with $paginator.HasPrev }}
     <a href="{{ $paginator.Prev.URL }}">&#8592; newer </a>

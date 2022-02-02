@@ -1392,6 +1392,10 @@ a.footnote-ref:hover {
 details summary {
   cursor: pointer;
 }
+details summary:focus-visible {
+  border-radius: 0.5rem;
+  outline: 0.15em solid var(--accent);
+}
 
 details summary > * {
   display: inline;
