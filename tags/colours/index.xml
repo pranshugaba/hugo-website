@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>colours by Pranshu Gaba</title><link>https://pranshugaba.com/tags/colours/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 02 Feb 2022 01:52:34 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/colours/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/colours/index.xml" rel="self" type="application/rss+xml"/><item><title>blue</title><link>https://pranshugaba.com/poems/blue/</link><pubDate>Tue, 17 Aug 2021 23:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/blue/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>colours by Pranshu Gaba</title><link>https://pranshugaba.com/tags/colours/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 03 Feb 2022 01:22:17 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/colours/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/colours/index.xml" rel="self" type="application/rss+xml"/><item><title>blue</title><link>https://pranshugaba.com/poems/blue/</link><pubDate>Tue, 17 Aug 2021 23:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/blue/</guid><description>
 <![CDATA[<img src="https://pranshugaba.com/poems/blue/featured_hu111d066e5bba36b8a8625aab87fe34a5_4272772_1080x0_resize_q75_box.jpg" alt="" /><p>i&rsquo;m afraid<br>
 the esteemed car<br>
 just blue itself</p>
@@ -39,7 +39,10 @@ just blue itself</p>
   &lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">span</span>&gt;
 &lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">code</span>&gt;
 </code></pre></div><p>The shortcode takes in an argument: <code>$colour</code>.  We use this parameter to set the text in the <code>code</code> tag, and we set both the text colour and the background colour to <code>$colour</code>. We then invert the colour of the text and increase the contrast to make the name of the colour legible. The end result is that the text is white if colour is bright, and black if it is dark.</p>
-<aside class="admonition   ">
+
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>

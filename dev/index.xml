@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dev posts by Pranshu Gaba</title><link>https://pranshugaba.com/dev/</link><description>Technical posts on GameDev, WebDev, and Linux</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 02 Feb 2022 01:52:32 +0530</lastBuildDate><image><url>https://pranshugaba.com/dev/icon.png</url></image><atom:link href="https://pranshugaba.com/dev/index.xml" rel="self" type="application/rss+xml"/><item><title>I broke my Arch System</title><link>https://pranshugaba.com/dev/i-broke-my-arch/</link><pubDate>Wed, 22 Dec 2021 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/i-broke-my-arch/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dev posts by Pranshu Gaba</title><link>https://pranshugaba.com/dev/</link><description>Technical posts on GameDev, WebDev, and Linux</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 03 Feb 2022 01:22:15 +0530</lastBuildDate><image><url>https://pranshugaba.com/dev/icon.png</url></image><atom:link href="https://pranshugaba.com/dev/index.xml" rel="self" type="application/rss+xml"/><item><title>I broke my Arch System</title><link>https://pranshugaba.com/dev/i-broke-my-arch/</link><pubDate>Wed, 22 Dec 2021 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/i-broke-my-arch/</guid><description>
 <![CDATA[<p>Today, I updated my system running Arch Linux after a month using <code>pacman -Syu</code>. I rebooted my system to find a black screen instead of the SDDM login screen. I tried pressing the Caps Lock key, and I could see its light toggle. This meant that things were not that bad.</p>
 <p>I changed the tty using <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F2</kbd> and logged in to my system. I tried downgrading the Linux kernel but that didn&rsquo;t help. I tried disabling the optimus-manager and sddm services, and tried starting the Xorg server using <code>startx</code> or <code>xinit</code>. None of this worked.</p>
 <p>The fix was to rebuild the optimus-manager package. It turns out that Python was upgraded from 3.9 to 3.10 in the update, and this broke Optimus Manager. I rebuilt it, and I am able to access the login screen and my window manager again.</p>
@@ -43,7 +43,10 @@ I also finally installed <code>yay</code> to manage all my AUR packages.</p>
   &lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">span</span>&gt;
 &lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">code</span>&gt;
 </code></pre></div><p>The shortcode takes in an argument: <code>$colour</code>.  We use this parameter to set the text in the <code>code</code> tag, and we set both the text colour and the background colour to <code>$colour</code>. We then invert the colour of the text and increase the contrast to make the name of the colour legible. The end result is that the text is white if colour is bright, and black if it is dark.</p>
-<aside class="admonition   ">
+
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>
@@ -321,7 +324,10 @@ Linux. Since I primarily use Linux, this is perfect for me.</p>
 <p>You can download Godot for free from <a href="https://godotengine.org/download" target="_blank" rel="noopener">Godot&rsquo;s website</a>. We will write code in GDScript and not C#, so we do not need the Mono version. Select
 your operating system, download the Standard version, and extract
 and run!</p>
-<aside class="admonition  aside ">
+
+
+
+<aside class="admonition aside">
     <div class="admonition__title">
         Aside
     </div>
@@ -357,7 +363,10 @@ You can also play the final version game to see how it works on my itch.io page.
 <li>A multiplayer game will have different input systems and networking requirements compared to a single-player game.</li>
 <li>Games developed for mobile will have a different interface compared to games developed for desktop.</li>
 </ul>
-<aside class="admonition   ">
+
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>
@@ -535,7 +544,10 @@ You can <NavExtLink to="/">download my assets</NavExtLink>, or you can make your
     
 </figure>
 
-<aside class="admonition   ">
+
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>
@@ -559,7 +571,10 @@ You can <NavExtLink to="/">download my assets</NavExtLink>, or you can make your
     
 </figure>
 
-<aside class="admonition   ">
+
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>
@@ -588,7 +603,10 @@ When you open Godot, you will see those files in the FileSystem tab.</p>
 <h2 id="building-the-interface">Building the interface</h2>
 <p>We have imported all the resources that we need in Godot. We can now start building the user interface.</p>
 <p>Whether we want to display an image, play a sound, or display some text in Godot, we do so by adding a node for it. A Godot game is made by composing together different kinds of nodes.</p>
-<aside class="admonition   ">
+
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>
@@ -629,7 +647,10 @@ Make a <code>scenes</code> folder in the root directory and save this scene in i
     
 </figure>
 
-<aside class="admonition   ">
+
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>
@@ -765,7 +786,10 @@ I made three new <code>Label</code> nodes with names <code>WinCondition</code>, 
     
 </figure>
 
-<aside class="admonition  tip ">
+
+
+
+<aside class="admonition tip">
     <div class="admonition__title">
         Tip
     </div>
@@ -967,7 +991,10 @@ The contents of this script will look like this.</p>
 <span style="color:#776e71"># Called every frame. &#39;delta&#39; is the elapsed time since the previous frame.</span>
 <span style="color:#776e71">#func _process(delta):</span>
 <span style="color:#776e71">#    pass</span>
-</code></pre></div><aside class="admonition   ">
+</code></pre></div>
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>
@@ -981,7 +1008,10 @@ The contents of this script will look like this.</p>
 This mostly involves initialising variables.</p>
 <p>The <code>_process</code> method is called every frame. Anything that must be done every frame goes in <code>_process</code>. For example, in a platformer game, we would need to update the position of the character every frame, so we would calculate its position in <code>_process</code>. We won&rsquo;t use <code>_process</code> much in this game.</p>
 <p>Since the function <code>_ready</code> contains only <code>pass</code>, and <code>_process</code> is commented out, these functions don&rsquo;t do anything now.</p>
-<aside class="admonition  tip ">
+
+
+
+<aside class="admonition tip">
     <div class="admonition__title">
         Tip
     </div>
@@ -1044,7 +1074,10 @@ The variable <code>cells</code> will be an array in which we store references to
 We store these in an array so we can access them easily.
 We will be able to read/edit the properties of the nodes using these references.</p>
 <p>We get a reference to a node using the <code>get_node</code> method. To access a node, we pass the path of the node relative to the current node (the node that the script is attached to) to <code>get_node</code>.</p>
-<aside class="admonition  example ">
+
+
+
+<aside class="admonition example">
     <div class="admonition__title">
         Example
     </div>
@@ -1055,7 +1088,10 @@ We will be able to read/edit the properties of the nodes using these references.
 
     </div>
 </aside>
-<aside class="admonition   ">
+
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>
@@ -1066,7 +1102,10 @@ We will be able to read/edit the properties of the nodes using these references.
     </div>
 </aside>
 <p>Since accessing nodes is a common pattern in Godot, there is a shorthand notation for it. We can write <code>$Grid/GridSprite</code> instead of <code>get_node(&quot;Grid/GridSprite&quot;)</code>. We will follow this shorter notation from now on.</p>
-<aside class="admonition  tip ">
+
+
+
+<aside class="admonition tip">
     <div class="admonition__title">
         Tip
     </div>
@@ -1112,7 +1151,10 @@ This is how we can control nodes from our scripts.
     cells <span style="color:#5bc4bf">=</span> [cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9]
 </code></pre></div><p>This code works, but there is a lot of repetition. It is difficult to read it or make changes to it.
 If you find yourself repeating the same code a lot, there is probably a better way to write it.</p>
-<aside class="admonition  tip ">
+
+
+
+<aside class="admonition tip">
     <div class="admonition__title">
         Tip
     </div>
@@ -1122,7 +1164,10 @@ If you find yourself repeating the same code a lot, there is probably a better w
     </div>
 </aside>
 <p>We <em>can</em> do better. We can make use of the <NavExtLink to="https://docs.godotengine.org/en/stable/classes/class_node.html?#class-node-method-get-children">get_children</NavExtLink> method. This method takes as an argument a reference to a node and returns an array of references to the children of the node.</p>
-<aside class="admonition   ">
+
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>
@@ -1161,7 +1206,10 @@ Since all cells are empty initially, we will initialise the <code>value</code> o
     <span style="color:#815ba4">for</span> cell <span style="color:#5bc4bf">in</span> cells:
         cell<span style="color:#5bc4bf">.</span>value <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">0</span>
 </code></pre></div><p>If you print <code>cells[0].value</code> after the initialisation, you will see it has <code>value</code> equal <code>0</code> and not <code>Null</code>.</p>
-<aside class="admonition  tip ">
+
+
+
+<aside class="admonition tip">
     <div class="admonition__title">
         Tip
     </div>
@@ -1179,7 +1227,10 @@ Since all cells are empty initially, we will initialise the <code>value</code> o
 <p>Here&rsquo;s one way to call <code>play_turn</code> when a cell is clicked. In <code>GridCell.gd</code>, we could check if the cell is clicked. If it is clicked, we call the <code>play_turn</code> method in <code>Game.gd</code>.</p>
 <pre tabindex="0"><code class="language-[GridCell.gd]" data-lang="[GridCell.gd]">if cell is clicked:
     call play_turn in Game.gd
-</code></pre><aside class="admonition   ">
+</code></pre>
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>
@@ -1205,7 +1256,10 @@ A better way of achieving the same effect is to use signals (also known as the o
 if signal is received:
     call play_turn
 </code></pre><p>The concerns remain separated, and the code is more organised and manageable.</p>
-<aside class="admonition   ">
+
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>
@@ -1217,7 +1271,10 @@ if signal is received:
 <p>As you have seen, signals are a very important concept in game development. We will now see how to implement this in Godot.</p>
 <p>Nodes in Godot can emit signals when certain events occur.
 Each node in Godot has some signals predefined in them. You can see the signals defined for any node by clicking on the Node tab next to the Inspector tab.</p>
-<aside class="admonition  example ">
+
+
+
+<aside class="admonition example">
     <div class="admonition__title">
         Example
     </div>
@@ -1233,7 +1290,10 @@ For example, in our game, we can make a signal named <code>cell_clicked</code> f
 </code></pre></div><p>We can get a node to emit a signal with the <code>emit_signal</code> method. In the following code, <code>cell</code> will emit the <code>cell_clicked</code> signal if it is clicked.</p>
 <div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">if</span> cell is clicked:
     emit_signal(<span style="color:#48b685">&#34;cell_clicked&#34;</span>)
-</code></pre></div><aside class="admonition  warning ">
+</code></pre></div>
+
+
+<aside class="admonition warning">
     <div class="admonition__title">
         Warning
     </div>
@@ -1280,7 +1340,10 @@ We are listening for the signal in the <code>GridCell</code> node as well. This 
 This creates the receiver function <code>_on_GridCell_input_event</code> in <code>GridCell.gd</code> for us.</p>
 <div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> _on_GridCell_input_event(viewport, event, shape_idx):
     <span style="color:#815ba4">pass</span>
-</code></pre></div><aside class="admonition  tip ">
+</code></pre></div>
+
+
+<aside class="admonition tip">
     <div class="admonition__title">
         Tip
     </div>
@@ -1291,7 +1354,10 @@ This creates the receiver function <code>_on_GridCell_input_event</code> in <cod
     </div>
 </aside>
 <p>The <code>_on_GridCell_input_event</code> takes in three parameters. The signal contains some information about the <code>input_event</code> and we can access it in this method.</p>
-<aside class="admonition   ">
+
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>
@@ -1311,7 +1377,10 @@ We will filter only the mouse click events with an <code>if</code> statement.</p
 <div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">func</span> _on_GridCell_input_event(viewport, event, shape_idx):
     <span style="color:#815ba4">if</span> event is <span style="color:#ef6155">InputEventMouseButton</span> <span style="color:#5bc4bf">and</span> event<span style="color:#5bc4bf">.</span>is_pressed():
         print(event)
-</code></pre></div><aside class="admonition   ">
+</code></pre></div>
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>
@@ -1333,7 +1402,10 @@ We know if a cell is clicked, but we don&rsquo;t know which cell is clicked.</p>
 </code></pre></div><p>Here, we are passing <code>self</code> as additional data in the signal. Any node that is listening for the <code>cell_clicked</code> signal will also get to know the node that has emitted the signal.</p>
 <p>Since the signal is now carrying additional data, we need to update its declaration to reflect this change.</p>
 <div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gdscript" data-lang="gdscript"><span style="color:#815ba4">signal</span> cell_clicked(cell)
-</code></pre></div><aside class="admonition  error ">
+</code></pre></div>
+
+
+<aside class="admonition error">
     <div class="admonition__title">
         Error
     </div>
@@ -1604,8 +1676,10 @@ We can play the game in Godot. If you had to share it with others, we do not exp
 <p>If you are curious to know how the Godot Engine works, head over <a href="https://github.com/godotengine/godot" target="_blank" rel="noopener">Godot&rsquo;s GitHub page</a> and look at its Godot&rsquo;s source code. You can see how it&rsquo;s made and how it works.
 You can report bugs and submit improvements here.</p>
 <p>If you enjoyed this guide and found it useful, consider supporting my work on <a href="https://ko-fi.com/pranshugaba" target="_blank" rel="noopener">Ko‑fi</a>. I would love to write more guides on game development and your support will go a long way.</p>
-]]></description></item><item><title>Moving my site from Hugo to Nuxt.js...</title><link>https://pranshugaba.com/dev/moving-from-hugo-to-nuxt/</link><pubDate>Tue, 11 May 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/moving-from-hugo-to-nuxt/</guid><description>
-<![CDATA[<aside class="admonition   ">
+]]></description></item><item><title>Moving my site from Hugo to Nuxt.js...</title><link>https://pranshugaba.com/dev/moving-from-hugo-to-nuxt/</link><pubDate>Tue, 11 May 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/moving-from-hugo-to-nuxt/</guid><description><![CDATA[
+
+
+<aside class="admonition note">
     <div class="admonition__title">
         Note
     </div>

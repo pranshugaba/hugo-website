@@ -24,7 +24,7 @@
 <link rel=mask-icon href=/safari-pinned-tab.svg color=#001f3d>
 <meta name=msapplication-TileColor content="#2b5797">
 <meta name=theme-color content="#001f3d">
-<link rel=stylesheet href=https://pranshugaba.com/css/main.d46121fd4e89b9a3bf61f5a933ceaa81545e20f87c21578a28172d7adb4697e1.css>
+<link rel=stylesheet href=https://pranshugaba.com/css/main.323afd27ff526fed5b151232bc4f7e2d6e0c84c6d5c1d0fedd1e8490e404e382.css>
 <title>
 Building an X and O game using Godot |
 Pranshu Gaba
@@ -185,7 +185,7 @@ You can also play the final version game to see how it works on my itch.io page.
 <li>A multiplayer game will have different input systems and networking requirements compared to a single-player game.</li>
 <li>Games developed for mobile will have a different interface compared to games developed for desktop.</li>
 </ul>
-<aside class=admonition>
+<aside class="admonition note">
 <div class=admonition__title>
 Note
 </div>
@@ -276,7 +276,7 @@ You can <navextlink to=/>download my assets</navextlink>, or you can make your o
 <figure>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/sprites.png>
 </figure>
-<aside class=admonition>
+<aside class="admonition note">
 <div class=admonition__title>
 Note
 </div>
@@ -288,7 +288,7 @@ Note
 <figure class=diagram>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/font.png>
 </figure>
-<aside class=admonition>
+<aside class="admonition note">
 <div class=admonition__title>
 Note
 </div>
@@ -305,7 +305,7 @@ When you open Godot, you will see those files in the FileSystem tab.</p>
 <h2 id=building-the-interface>Building the interface</h2>
 <p>We have imported all the resources that we need in Godot. We can now start building the user interface.</p>
 <p>Whether we want to display an image, play a sound, or display some text in Godot, we do so by adding a node for it. A Godot game is made by composing together different kinds of nodes.</p>
-<aside class=admonition>
+<aside class="admonition note">
 <div class=admonition__title>
 Note
 </div>
@@ -323,7 +323,7 @@ Make a <code>scenes</code> folder in the root directory and save this scene in i
 <figure>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/save-game-scene.png>
 </figure>
-<aside class=admonition>
+<aside class="admonition note">
 <div class=admonition__title>
 Note
 </div>
@@ -461,7 +461,8 @@ The contents of this script will look like this.</p>
 <span style=color:#776e71># Called every frame. &#39;delta&#39; is the elapsed time since the previous frame.</span>
 <span style=color:#776e71>#func _process(delta):</span>
 <span style=color:#776e71>#    pass</span>
-</code></pre></div><aside class=admonition>
+</code></pre></div>
+<aside class="admonition note">
 <div class=admonition__title>
 Note
 </div>
@@ -546,7 +547,7 @@ Example
 <p>Access the <code>CellSymbol</code> node of <code>GridCell3</code> with <code>get_node("Grid/GridCell3/CellSymbol")</code>.</p>
 </div>
 </aside>
-<aside class=admonition>
+<aside class="admonition note">
 <div class=admonition__title>
 Note
 </div>
@@ -599,7 +600,7 @@ Tip
 </div>
 </aside>
 <p>We <em>can</em> do better. We can make use of the <navextlink to=https://docs.godotengine.org/en/stable/classes/class_node.html?#class-node-method-get-children>get_children</navextlink> method. This method takes as an argument a reference to a node and returns an array of references to the children of the node.</p>
-<aside class=admonition>
+<aside class="admonition note">
 <div class=admonition__title>
 Note
 </div>
@@ -654,7 +655,8 @@ Tip
 <p>Here&rsquo;s one way to call <code>play_turn</code> when a cell is clicked. In <code>GridCell.gd</code>, we could check if the cell is clicked. If it is clicked, we call the <code>play_turn</code> method in <code>Game.gd</code>.</p>
 <pre tabindex=0><code class=language-[GridCell.gd] data-lang=[GridCell.gd]>if cell is clicked:
     call play_turn in Game.gd
-</code></pre><aside class=admonition>
+</code></pre>
+<aside class="admonition note">
 <div class=admonition__title>
 Note
 </div>
@@ -679,7 +681,7 @@ A better way of achieving the same effect is to use signals (also known as the o
 if signal is received:
     call play_turn
 </code></pre><p>The concerns remain separated, and the code is more organised and manageable.</p>
-<aside class=admonition>
+<aside class="admonition note">
 <div class=admonition__title>
 Note
 </div>
@@ -705,7 +707,8 @@ For example, in our game, we can make a signal named <code>cell_clicked</code> f
 </code></pre></div><p>We can get a node to emit a signal with the <code>emit_signal</code> method. In the following code, <code>cell</code> will emit the <code>cell_clicked</code> signal if it is clicked.</p>
 <div class=highlight><pre tabindex=0 style=color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gdscript data-lang=gdscript><span style=color:#815ba4>if</span> cell is clicked:
     emit_signal(<span style=color:#48b685>&#34;cell_clicked&#34;</span>)
-</code></pre></div><aside class="admonition warning">
+</code></pre></div>
+<aside class="admonition warning">
 <div class=admonition__title>
 Warning
 </div>
@@ -740,7 +743,8 @@ We are listening for the signal in the <code>GridCell</code> node as well. This 
 This creates the receiver function <code>_on_GridCell_input_event</code> in <code>GridCell.gd</code> for us.</p>
 <div class=highlight><pre tabindex=0 style=color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gdscript data-lang=gdscript><span style=color:#815ba4>func</span> _on_GridCell_input_event(viewport, event, shape_idx):
     <span style=color:#815ba4>pass</span>
-</code></pre></div><aside class="admonition tip">
+</code></pre></div>
+<aside class="admonition tip">
 <div class=admonition__title>
 Tip
 </div>
@@ -750,7 +754,7 @@ Tip
 </div>
 </aside>
 <p>The <code>_on_GridCell_input_event</code> takes in three parameters. The signal contains some information about the <code>input_event</code> and we can access it in this method.</p>
-<aside class=admonition>
+<aside class="admonition note">
 <div class=admonition__title>
 Note
 </div>
@@ -769,7 +773,8 @@ We will filter only the mouse click events with an <code>if</code> statement.</p
 <div class=highlight><pre tabindex=0 style=color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gdscript data-lang=gdscript><span style=color:#815ba4>func</span> _on_GridCell_input_event(viewport, event, shape_idx):
     <span style=color:#815ba4>if</span> event is <span style=color:#ef6155>InputEventMouseButton</span> <span style=color:#5bc4bf>and</span> event<span style=color:#5bc4bf>.</span>is_pressed():
         print(event)
-</code></pre></div><aside class=admonition>
+</code></pre></div>
+<aside class="admonition note">
 <div class=admonition__title>
 Note
 </div>
@@ -790,7 +795,8 @@ We know if a cell is clicked, but we don&rsquo;t know which cell is clicked.</p>
 </code></pre></div><p>Here, we are passing <code>self</code> as additional data in the signal. Any node that is listening for the <code>cell_clicked</code> signal will also get to know the node that has emitted the signal.</p>
 <p>Since the signal is now carrying additional data, we need to update its declaration to reflect this change.</p>
 <div class=highlight><pre tabindex=0 style=color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gdscript data-lang=gdscript><span style=color:#815ba4>signal</span> cell_clicked(cell)
-</code></pre></div><aside class="admonition error">
+</code></pre></div>
+<aside class="admonition error">
 <div class=admonition__title>
 Error
 </div>

@@ -551,7 +551,16 @@ figure figcaption {
   --fg: #001f3d;
   --accent: #cf7317;
   --light: #ebf5ff;
-  --dark: #001f3d;
+  --dark: #001224;
+}
+@media print {
+  :root {
+    --bg: white;
+    --fg: #121212;
+    --light: white;
+    --dark: #121212;
+    --accent: Indigo;
+  }
 }
 
 .dark-mode {
@@ -561,9 +570,11 @@ figure figcaption {
 }
 @media print {
   .dark-mode {
-    --bg: #ebf5ff;
-    --fg: #001f3d;
-    --accent: #cf7317;
+    --bg: white;
+    --fg: #121212;
+    --light: white;
+    --dark: #121212;
+    --accent: Indigo;
   }
 }
 
@@ -1376,6 +1387,26 @@ a.footnote-ref:hover {
 .footnotes .footnote-backref {
   font-size: smaller;
   color: var(--accent);
+}
+
+details summary {
+  cursor: pointer;
+}
+details summary:focus-visible {
+  border-radius: 0.5rem;
+  outline: 0.15em solid var(--accent);
+}
+
+details summary > * {
+  display: inline;
+}
+
+details .admonition__title {
+  border: none;
+}
+
+details[open] .admonition__title {
+  border-bottom: 2px solid var(--fg);
 }
 
 .home__pager {
