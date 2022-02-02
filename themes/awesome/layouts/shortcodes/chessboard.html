@@ -1,10 +1,5 @@
-{{ $fen := .Get "fen" }}
-{{ $hideCoords := "false" }}
-{{ with .Get "hideCoords" }}
-    {{ $hideCoords = . }}
-{{ end }}
-{{ $caption := ""}}
-{{ with .Get "caption" }}
-    {{ $caption = .}}
-{{ end }}
-{{ partial "single/chessboard" (dict "Context" . "FEN" $fen "HideCoords"  $hideCoords "Caption" $caption) }}
+{{ $fen := default "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR" (.Get "fen") }}
+{{ $flip := default "false" (.Get "flip") }}
+{{ $hideCoords := default "false" (.Get "hideCoords") }}
+{{ $caption := default "" (.Get "caption") }}
+{{ partial "single/chessboard" (dict "Context" . "FEN" $fen "HideCoords"  $hideCoords "Caption" $caption "Flip" $flip) }}
