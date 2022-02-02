@@ -5,7 +5,7 @@ summary: "How many chess pieces can you place so no piece attacks any other piec
 
 number: 2
 
-tags: ["puzzles", "chess"]
+tags: ["chess"]
 
 date: 2021-04-06T00:30:00+05:30
 lastmod: 2021-04-06T00:30:00+05:30

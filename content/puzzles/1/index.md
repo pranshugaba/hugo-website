@@ -1,36 +1,22 @@
 ---
-# Documentation: https://sourcethemes.com/academic/docs/managing-content/
-
 title: "The Picture Hanging Puzzle"
 subtitle: "Puzzle #1"
 summary: "Can you hang a picture so that it is easy to remove?"
 
 number: 1
 
-tags: ["puzzles"]
-categories: []
+tags: []
+
 date: 2021-03-23T17:30:00+05:30
 lastmod: 2021-03-23T17:30:00+05:30
-reading_time: false
-featured: false
-draft: false
+
 math: true
 
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder.
-# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
-image:
-  caption: ""
-  focal_point: "Top"
-  preview_only: true
-  placement: 2
+draft: false
+featured: false
 
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
-projects: []
+image:
+  preview_only: true
 ---
 
 I will be sharing some interesting maths puzzles here, somewhat semiregularly. If you solve a puzzle -- or make some progress -- do  [share your attempt with me]({{< ref "/contact" >}}). I would love to read your submissions. Interesting and enlightening reader-submitted solutions will be featured along with the following puzzle.

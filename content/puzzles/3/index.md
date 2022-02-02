@@ -14,26 +14,41 @@ math: true
 
 draft: true
 featured: false
-
-image:
-  preview_only: true
 ---
 
 
 We have another chess puzzle!
 
 {{< note >}}
-If you are not familiar with the rules of chess, then you can [read the rules on Wikipedia](https://en.wikipedia.org/wiki/Rules_of_chess) or [practice on lichess.org](https://lichess.org/learn).
+If you are not familiar with the rules of chess, then you can [read the rules on Wikipedia](https://en.wikipedia.org/wiki/Rules_of_chess) or [practice playing on lichess.org](https://lichess.org/learn).
 {{</ note >}}
 
 ## The Problem
-Today's puzzle is simple. I present some chess positions. For each position, you must decide whether it's white or black to play. 
 
-Which player's turn is it to play?
+You were organising a chess tournament. 
+When the clock struck one, all players left their games and went for lunch! They didn't keep a record of the game, and when they returned, they didn't know whose turn it was to play. 
+Can you help them out?
 
-{{< chessboard fen="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR" caption="This is the starting position of regular chess.">}}
+Assuming the games have been played, 
+For each game, you have to decide whether it's white to play or black to play. 
 
-This is a starting position. White goes first. 
+
+### Game 1
+This position looks the starting position of a standard chess game. 
+
+{{< chessboard fen="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR" caption="All pieces are in the initial position.">}}
+
+A standard chess game begins with white to play. But by just looking at this position, can you tell if the game hasn't begun. or is possible that the players have played some moves have arrived back at the initial position.
+
+Who plays next?
+
+{{< hint >}}
+If you are not familiar with the rules of chess, then you can [read the rules on Wikipedia](https://en.wikipedia.org/wiki/Rules_of_chess) or [practice playing on lichess.org](https://lichess.org/learn).
+{{</ hint >}}
+
+
+### 2
+{{< chessboard fen="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR" caption="The starting position for standard chess games.">}}
 
 
 

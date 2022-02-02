@@ -1,0 +1,15 @@
+details summary {
+  cursor: pointer;
+}
+
+details summary > * {
+  display: inline;
+}
+
+details .admonition__title {
+  border: none;
+}
+
+details[open] .admonition__title {
+  border-bottom: 2px solid var(--fg);
+}

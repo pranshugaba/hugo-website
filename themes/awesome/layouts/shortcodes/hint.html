@@ -1,0 +1,11 @@
+{{ $optBlock := dict "display" "block" }}
+{{- $markdown := .Inner | .Page.RenderString $optBlock -}}
+
+<details class="admonition  {{ with .Get "class" }}{{.}}{{ end }} ">
+    <summary class="admonition__title">
+        {{ if .Get "class" }}{{ .Get "class" | humanize }}{{ else }}Hint{{ end }}
+    </summary>
+	<div class="admonition__content">
+        {{ $markdown }}
+    </div>
+</details>

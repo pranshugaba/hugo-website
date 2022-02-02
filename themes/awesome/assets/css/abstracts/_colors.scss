@@ -1,19 +1,22 @@
-// $papaya: hsl(37.1, 100%, 91.8%);
-// $black: #121212;
 
 // $gruvboxlight: #fbf1c7;
 // $gruvboxdark: #282828;
 
-// $light: white;
-// $dark: black;
+// $lightlight: white;
+// $lightdark: black;
+// $lightaccent: purple;
+// $darklight: white;
+// $darkdark: black;
+// $darkaccent: pink;
 
+// $papaya: hsl(37.1, 100%, 91.8%);
+// $black: #121212;
 // $lightlight: $papaya;
 // $lightdark: $black;
 // $lightaccent: teal;
 // $darklight: $papaya;
 // $darkdark: $black;
 // $darkaccent: orange;
-
 
 // $solarizedbase3: #fdf6e3;
 // $solarizedbase03: #002b36;
@@ -39,7 +42,15 @@ $darkaccent: hsl($hue + 180, 100%, 80%);
   --fg: #{$lightdark};
   --accent: #{$lightaccent};
   --light: #{$lightlight};
-  --dark: #{$lightdark};
+  --dark: #{$darkdark};
+  
+  @media print {
+    --bg: #{white};
+    --fg: #{#121212};
+    --light: #{white};
+    --dark: #{#121212};
+    --accent: #{Indigo};
+  }
 }
 
 .dark-mode {
@@ -48,9 +59,11 @@ $darkaccent: hsl($hue + 180, 100%, 80%);
   --accent: #{$darkaccent};
 
   @media print {
-    --bg: #{$lightlight};
-    --fg: #{$lightdark};
-    --accent: #{$lightaccent};
+    --bg: #{white};
+    --fg: #{#121212};
+    --light: #{white};
+    --dark: #{#121212};
+    --accent: #{Indigo};
   }
 }
 // @media (prefers-color-scheme: dark) {
