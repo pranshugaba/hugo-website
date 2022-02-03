@@ -14,9 +14,11 @@ draft: true
 featured: false
 ---
 
-I recently read a 1953 paper on _Infinite Games with Perfect Information_ by Gale and Stewart[^GS53]. The paper looks at two-player turn-based games and tries to characterise games in which one of the players has a winning strategy.
+I recently read a 1953 paper on _Infinite Games with Perfect Information_ by Gale and Stewart[^GS53]. The paper tries to characterise two-player turn-based games in which one of the players has a winning strategy. If a player has a winning strategy, then they can ensure that they always win no matter how the other player plays. 
 
-They only consider games with perfect information. No information is hidden from the players: both players know the rules and the state of the game at all times. 
+In this paper, we only see games without chance moves. The way the game proceeds is completely determined by the initial position and the decisions taken by the players. For instance, we look at games such as chess, checkers, Go, Nim, and Connect 4.  We rule out games such as Snakes and Ladders, Ludo, and Catan where dice are rolled or cards are drawn. 
+
+They only consider games with perfect information. No information is hidden from the players: both players know the rules and the state of the game at all times. This excludes games like Poker and Battleship. 
 
 ## The Setup
 
