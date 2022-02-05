@@ -73,7 +73,7 @@ Whose turn is it to play?
 {{< chessboard fen="r1bqkb1r/pppppppp/8/8/8/8/PPPPPPPP/R1BQKB1R" >}}
 
 ### Game 5
-Uh-oh! Black is in trouble. Black has down a lot of material.
+Uh-oh! Black is in trouble. Black is down a lot of material.
 Whose turn is it to play?
 
 {{< chessboard fen="2bqkb2/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR" >}}

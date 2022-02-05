@@ -227,7 +227,7 @@ body {
 }
 html {
   font-size: 112.5%;
-  font-family: "IBM Plex Sans", "Inter", sans-serif;
+  font-family: "IBM Plex Sans", "Open Sans", sans-serif;
   text-underline-offset: 0.15em;
   scroll-padding-top: 1.5rem;
 }
@@ -238,7 +238,7 @@ html {
 }
 
 h1 {
-  font-family: Fraunces, serif;
+  font-family: Fraunces, "Linux Libertine", "Source Serif Pro", serif;
   font-variation-settings: "wght" 400, "opsz" 72, "SOFT" 100, "WONK" 1;
   font-size: 2.5rem;
   font-weight: 600;
