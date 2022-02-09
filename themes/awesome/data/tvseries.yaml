@@ -33,6 +33,11 @@ watching:
     channel: BBC Two Scotland
 
 watched:
+  - title: After Life
+    type: Season
+    season: 3
+    channel: Netflix
+
   - title: Archer
     type: Season
     season: 12

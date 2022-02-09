@@ -13,8 +13,8 @@ featured: false
 ---
 
 handful of seeds  
-tossed in a flowerpot ---  
-a _marathon_[^1]
+tossed in a flowerpot ---   
+_marathon_[^1]
 
 &nbsp;
 
