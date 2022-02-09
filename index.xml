@@ -1,7 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pranshu Gaba</title><link>https://pranshugaba.com/</link><description>Photos, poems, puzzles, and more!</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 05 Feb 2022 17:57:32 +0530</lastBuildDate><image><url>https://pranshugaba.com/icon.png</url></image><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>μάραθον</title><link>https://pranshugaba.com/poems/marathon/</link><pubDate>Fri, 04 Feb 2022 02:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/marathon/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pranshu Gaba</title><link>https://pranshugaba.com/</link><description>Photos, poems, puzzles, and more!</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 10 Feb 2022 02:46:20 +0530</lastBuildDate><image><url>https://pranshugaba.com/icon.png</url></image><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Research Seminars</title><link>https://pranshugaba.com/links/research-seminars/</link><pubDate>Thu, 10 Feb 2022 02:30:00 +0530</pubDate><guid>https://pranshugaba.com/links/research-seminars/</guid><description>
+<![CDATA[<p>Most research talks are being held online post lockdown, and as a result, one can access talks from all over the world.
+I came across a website that lists upcoming research seminars and makes it easier to discover interesting talks.</p>
+<p><a href="https://researchseminars.org/" target="_blank" rel="noopener">https://researchseminars.org/</a></p>
+<p>This website was launched in April 2020 shortly after lockdown began.
+It lists upcoming talks and seminars held in universities all over the world.
+You can filter talks by topic, language, institution, and more.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    
+        <img src="https://pranshugaba.com/links/research-seminars/research-seminars.png" alt="Screenshot of the homepage of researchseminars.org">
+    
+    
+    
+    <figcaption>
+        
+        
+            Screenshot of the homepage of researchseminars.org
+            
+            
+            
+        
+    </figcaption>
+    
+</figure>
+
+<p>For each talk, the site shows details such as the title, abstract, speaker, the targeted audience, and a link to the seminar&rsquo;s website.
+Most talks have a livestream link available (either interactive like Zoom / Google Meet / Microsoft Teams or viewing only such as  Youtube).
+Links for some talks are not be available unless you register on this site.</p>
+<p>Try to attend and participate in talks that pique your interest. The feeling of being able to attend a talk held halfway across the world is unmatched.</p>
+]]></description></item><item><title>μάραθον</title><link>https://pranshugaba.com/poems/marathon/</link><pubDate>Fri, 04 Feb 2022 02:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/marathon/</guid><description>
 <![CDATA[<img src="https://pranshugaba.com/poems/marathon/featured_hudc3a2ba29942b78236a62c71f9d5c4b2_1499556_1080x0_resize_q75_box.jpg" alt="" /><p>handful of seeds<br>
 tossed in a flowerpot &mdash;<br>
-a <em>marathon</em><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<em>marathon</em><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p> </p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
@@ -41,9 +76,10 @@ Does a chess position have the information required to deduce which player plays
 <li>It is an impossible position. (i.e. One cannot reach this position by playing legal moves only. Someone might have disturbed the board.)</li>
 </ul>
 <aside class="toc">
-    <h3 class="toc__heading">
-        Table of Contents
-    </h3>
+  <details open>
+    <summary>
+      <h3 class="toc__heading">Table of Contents</h3>
+    </summary>
     <nav id="TableOfContents">
   <ul>
     <li><a href="#the-problem">The Problem</a>
@@ -64,7 +100,9 @@ Does a chess position have the information required to deduce which player plays
     <li><a href="#generalisation">Generalisation</a></li>
   </ul>
 </nav>
+  </details>
 </aside>
+
 <h3 id="game-1">Game 1</h3>
 <p>Here&rsquo;s Game 1 of the tournament. This position looks like the initial position of a game.</p>
 
@@ -15025,9 +15063,10 @@ Two friends walk on the footpath, shoulder to shoulder.</p>
 <p>I have moved my Nuxt website to the nuxt subdomain, and it will remain there for posterity. I won&rsquo;t be making any changes to it. I will publish new  posts on my new website only.</p>
 ]]></description></item><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/dev/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/building-x-and-o-using-godot/</guid><description>
 <![CDATA[<aside class="toc">
-    <h3 class="toc__heading">
-        Table of Contents
-    </h3>
+  <details open>
+    <summary>
+      <h3 class="toc__heading">Table of Contents</h3>
+    </summary>
     <nav id="TableOfContents">
   <ul>
     <li><a href="#introduction">Introduction</a>
@@ -15066,6 +15105,7 @@ Two friends walk on the footpath, shoulder to shoulder.</p>
     </li>
   </ul>
 </nav>
+  </details>
 </aside>
 <h2 id="introduction">Introduction</h2>
 <p>Do you love playing video games? I sure do! I enjoy making games too, and it&rsquo;s highly likely that you would too.

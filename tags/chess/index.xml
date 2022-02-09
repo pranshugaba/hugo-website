@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>chess by Pranshu Gaba</title><link>https://pranshugaba.com/tags/chess/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 05 Feb 2022 17:57:35 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/chess/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/chess/index.xml" rel="self" type="application/rss+xml"/><item><title>Whose turn is it to play?</title><link>https://pranshugaba.com/puzzles/3/</link><pubDate>Tue, 01 Feb 2022 12:30:00 +0530</pubDate><guid>https://pranshugaba.com/puzzles/3/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>chess by Pranshu Gaba</title><link>https://pranshugaba.com/tags/chess/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 10 Feb 2022 02:46:23 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/chess/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/chess/index.xml" rel="self" type="application/rss+xml"/><item><title>Whose turn is it to play?</title><link>https://pranshugaba.com/puzzles/3/</link><pubDate>Tue, 01 Feb 2022 12:30:00 +0530</pubDate><guid>https://pranshugaba.com/puzzles/3/</guid><description>
 <![CDATA[<p>We have another chess puzzle!</p>
 
 
@@ -28,9 +28,10 @@ Does a chess position have the information required to deduce which player plays
 <li>It is an impossible position. (i.e. One cannot reach this position by playing legal moves only. Someone might have disturbed the board.)</li>
 </ul>
 <aside class="toc">
-    <h3 class="toc__heading">
-        Table of Contents
-    </h3>
+  <details open>
+    <summary>
+      <h3 class="toc__heading">Table of Contents</h3>
+    </summary>
     <nav id="TableOfContents">
   <ul>
     <li><a href="#the-problem">The Problem</a>
@@ -51,7 +52,9 @@ Does a chess position have the information required to deduce which player plays
     <li><a href="#generalisation">Generalisation</a></li>
   </ul>
 </nav>
+  </details>
 </aside>
+
 <h3 id="game-1">Game 1</h3>
 <p>Here&rsquo;s Game 1 of the tournament. This position looks like the initial position of a game.</p>
 
