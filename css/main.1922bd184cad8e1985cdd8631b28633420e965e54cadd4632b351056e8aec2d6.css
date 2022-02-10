@@ -469,8 +469,10 @@ figure img {
   border-radius: 0.5rem;
   border: 0.1rem solid var(--fg);
 }
-.dark-mode figure img {
-  filter: brightness(0.9);
+@media (prefers-color-scheme: dark) {
+  figure img {
+    filter: brightness(0.9);
+  }
 }
 figure.no-border img {
   border: none;
@@ -491,20 +493,10 @@ figure.medium figcaption {
 figure.rectangle img {
   border-radius: 0;
 }
-.dark-mode figure.diagram img {
-  filter: hue-rotate(180deg) invert(1);
-}
-figure .light-image {
-  display: inline-block;
-}
-.dark-mode figure .light-image {
-  display: none;
-}
-figure .dark-image {
-  display: none;
-}
-.dark-mode figure .dark-image {
-  display: inline-block;
+@media (prefers-color-scheme: dark) {
+  figure.diagram img {
+    filter: hue-rotate(180deg) invert(1);
+  }
 }
 figure figcaption {
   font-weight: 400;
@@ -563,21 +555,13 @@ figure figcaption {
   }
 }
 
-.dark-mode {
-  --bg: #001224;
-  --fg: #e0f0ff;
-  --accent: #ffcc99;
-}
-@media print {
-  .dark-mode {
-    --bg: white;
-    --fg: #121212;
-    --light: white;
-    --dark: #121212;
-    --accent: Indigo;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #001224;
+    --fg: #e0f0ff;
+    --accent: #ffcc99;
   }
 }
-
 .header {
   border-bottom: 2px solid var(--fg);
   padding-top: 0.5rem;
@@ -1217,16 +1201,20 @@ thead {
   border-left: 1.5px solid var(--fg);
 }
 
-.dark-mode .leaflet-layer .leaflet-tile {
-  filter: grayscale(0.8) hue-rotate(180deg) invert(1) contrast(0.95) sepia(0.2) brightness(1.1);
+@media (prefers-color-scheme: dark) {
+  .leaflet-layer .leaflet-tile {
+    filter: grayscale(0.8) hue-rotate(180deg) invert(1) contrast(0.95) brightness(1.1);
+  }
 }
 
 .leaflet-overlay-pane {
   filter: grayscale(1) invert(1);
 }
 
-.dark-mode .leaflet-overlay-pane {
-  filter: unset;
+@media (prefers-color-scheme: dark) {
+  .leaflet-overlay-pane {
+    filter: unset;
+  }
 }
 
 .route__metadata {

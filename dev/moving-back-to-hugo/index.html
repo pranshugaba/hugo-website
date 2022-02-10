@@ -24,7 +24,7 @@
 <link rel=mask-icon href=/safari-pinned-tab.svg color=#001f3d>
 <meta name=msapplication-TileColor content="#2b5797">
 <meta name=theme-color content="#001f3d">
-<link rel=stylesheet href=https://pranshugaba.com/css/main.47b697e4358890be097f3ce0070ce44dfbb8950c677884bd522e53e126a28748.css>
+<link rel=stylesheet href=https://pranshugaba.com/css/main.1922bd184cad8e1985cdd8631b28633420e965e54cadd4632b351056e8aec2d6.css>
 <title>
 ...and Back to Hugo Again |
 Pranshu Gaba
@@ -57,9 +57,10 @@ Tuesday, 6 July 2021
 <h2 id=my-short-experience-with-nuxt>My (short) experience with Nuxt</h2>
 <p>I had added many features to my site in Nuxt. I was happy with my progress; my site looked so pretty and colourful!</p>
 <figure>
+<picture>
 <source srcset=https://pranshugaba.com/dev/moving-back-to-hugo/nuxt-website-dark.webp media="(prefers-color-scheme: dark)">
-<img src=https://pranshugaba.com/dev/moving-back-to-hugo/nuxt-website-dark.webp alt="This is how my Nuxt website looked  like." class=dark-image>
-<img src=https://pranshugaba.com/dev/moving-back-to-hugo/nuxt-website-light.webp alt="This is how my Nuxt website looked  like." class=light-image>
+<img src=https://pranshugaba.com/dev/moving-back-to-hugo/nuxt-website-light.webp alt="This is how my Nuxt website looked  like.">
+</picture>
 <figcaption>
 This is how my Nuxt website looked like.
 </figcaption>
@@ -67,9 +68,10 @@ This is how my Nuxt website looked like.
 <p>I used <a href=https://tailwindcss.com/ target=_blank rel=noopener>TailwindCSS</a> to style my site, and it was amazing not having to think of class names anymore. It was easy to prototype and iterate over different styles quickly, even if it meant having a dirty HTML code overriden with dozens of classes.</p>
 <p>Another thing I loved about Nuxt is that it is based on Vue, and therefore I could make reusable components for different parts of my site. Almost everything on my site was a component: header, footer, links, figures, headings, author bios, pagination, even the dark mode switch. To make my website, I had to design the components and then assemble them together, just like Lego! It was so much fun.</p>
 <figure>
+<picture>
 <source srcset=https://pranshugaba.com/dev/moving-back-to-hugo/components-dark.webp media="(prefers-color-scheme: dark)">
-<img src=https://pranshugaba.com/dev/moving-back-to-hugo/components-dark.webp alt="Some of the components in my Nuxt website" class=dark-image>
-<img src=https://pranshugaba.com/dev/moving-back-to-hugo/components-light.webp alt="Some of the components in my Nuxt website" class=light-image>
+<img src=https://pranshugaba.com/dev/moving-back-to-hugo/components-light.webp alt="Some of the components in my Nuxt website">
+</picture>
 <figcaption>
 Some of the components in my Nuxt website
 </figcaption>
@@ -89,7 +91,9 @@ Some of the components in my Nuxt website
 <span style=color:#121212;filter:grayscale(1)invert(1)contrast(100)>#121212</span></code>. Every element has one of these two colors. This makes the colour part of the CSS very simple, and I was also able to write the dark theme in no time.</p>
 <p>I love this simple design; I think it looks crisp and clear with no distractions. The content is legible with enough contrast between the foreground and the background, much like a road sign.</p>
 <figure class=small>
+<picture>
 <img src=https://pranshugaba.com/dev/moving-back-to-hugo/road-sign.webp>
+</picture>
 </figure>
 <p>I also love the creative decisions that I have to take when I have just two colours at my disposal. There are no box-shadows, no transparency, and no colour (except for images) on this site. Any component on the site must use exactly one of the two colours in the palette.</p>
 <p>I am no longer using Tailwind to style the site; I am using <a href=https://sass-lang.com/ target=_blank rel=noopener>Sass</a> now. I do have to think of class names for each class, but using the BEM methodology helps. While Tailwind has most of the CSS features, it still lacks many newer CSS properties. I can now use all CSS properties now such as underline-offset, smooth scrolling, scroll-padding-top, etc.</p>
@@ -131,9 +135,8 @@ Hugo Colour Shortcode
 <a href=/licence/> © 2022 Pranshu Gaba </a>
 </div>
 <div class=footer__links>
-<button id=dark-mode-toggle role=button tabindex=0>toggle lights</button>
+<a href=/subscribe/>subscribe</a>
 </div>
 </footer>
 </body>
-<script>let darkMode=localStorage.getItem('darkMode');const darkModeToggle=document.querySelector('#dark-mode-toggle'),enableDarkMode=()=>{document.body.classList.add('dark-mode'),localStorage.setItem('darkMode','enabled')},disableDarkMode=()=>{document.body.classList.remove('dark-mode'),localStorage.setItem('darkMode','disabled')};darkMode==='enabled'?enableDarkMode():darkMode==='disabled'?disableDarkMode():window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches&&enableDarkMode(),darkModeToggle.addEventListener('click',()=>{darkMode=localStorage.getItem('darkMode'),darkMode!=='enabled'?enableDarkMode():disableDarkMode()})</script>
 </html>

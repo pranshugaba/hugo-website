@@ -24,7 +24,7 @@
 <link rel=mask-icon href=/safari-pinned-tab.svg color=#001f3d>
 <meta name=msapplication-TileColor content="#2b5797">
 <meta name=theme-color content="#001f3d">
-<link rel=stylesheet href=https://pranshugaba.com/css/main.47b697e4358890be097f3ce0070ce44dfbb8950c677884bd522e53e126a28748.css>
+<link rel=stylesheet href=https://pranshugaba.com/css/main.1922bd184cad8e1985cdd8631b28633420e965e54cadd4632b351056e8aec2d6.css>
 <title>
 Building an X and O game using Godot |
 Pranshu Gaba
@@ -212,7 +212,9 @@ Note
 <li>The player clicks on the squares to enter symbols.</li>
 <li>I have made a rough sketch how the interface would look like. This will be a simple game with just one scene. In more complex games, we would need more scenes.
 <figure class=diagram>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/sketch.png alt="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play.">
+</picture>
 <figcaption>
 We have the game title, some instructions, the grid, and some labels to show whose turn it is to play.
 </figcaption>
@@ -225,7 +227,9 @@ We have the game title, some instructions, the grid, and some labels to show who
 We want to explicitly state how the game receives inputs, what decisions it takes, what changes it makes, and how all of these relate to each other.</p>
 <p>&ldquo;X and O&rdquo; is a small and simple game, so its gameplay loop is simple too.</p>
 <figure class=diagram>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/gameloop.png alt="The gameplay loop">
+</picture>
 <figcaption>
 The gameplay loop
 </figcaption>
@@ -243,11 +247,15 @@ The gameplay loop
 <p>Open Godot and create a new project. We will call it <code>x-and-o</code>. Choose an empty folder to save the project in, preferably with the same name as the game.
 Select &ldquo;Create & Edit&rdquo; to create the project.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/create-project.png>
+</picture>
 </figure>
 <p>By default, when we start a new project, Godot starts in 3D mode. We are making a 2D game, so switch to 2D mode by clicking on &ldquo;2D&rdquo; at the top. The default shortcut to enter 2D mode is <kbd>Ctrl</kbd> + <kbd>F1</kbd>.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/2d-mode.png alt="Click on 2D.">
+</picture>
 <figcaption>
 Click on 2D.
 </figcaption>
@@ -258,7 +266,9 @@ Since this is our first game, we will keep it simple.
 We will target a fixed resolution, so we do not have to worry about making the layout responsive.</p>
 <p>To achieve this, open Project -> Project Settings.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/project-settings-menu.png>
+</picture>
 </figure>
 <p>In the General tab, look for the section named &ldquo;Window&rdquo; in &ldquo;Display&rdquo;.</p>
 <ul>
@@ -276,7 +286,9 @@ We show some text in our game, and we will need to load a nice font for it.</p>
 <p>I have made an assets folder that you can use to make the game. It contains <code>x.png</code>, <code>o.png</code>, <code>grid.png</code>, and <code>Inter-Regular.ttf</code>.
 You can <navextlink to=/>download my assets</navextlink>, or you can make your own.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/sprites.png>
+</picture>
 </figure>
 <aside class="admonition note">
 <div class=admonition__title>
@@ -288,7 +300,9 @@ Note
 </aside>
 <p>I have included the <code>Inter</code> font in the assets. I chose this font because it looks sharp even at low resolutions and it goes well with the &ldquo;X&rdquo; and &ldquo;O&rdquo; sprites that I have made. You can use any font that goes with your theme.</p>
 <figure class=diagram>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/font.png>
+</picture>
 </figure>
 <aside class="admonition note">
 <div class=admonition__title>
@@ -302,7 +316,9 @@ Note
 Make an <code>assets</code> folder in your game&rsquo;s root folder <code>x-and-o</code> using your file manager. (Use File Explorer if you are using Windows, Finder if you are on macOS). Move the sprites and the font in it.
 When you open Godot, you will see those files in the FileSystem tab.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/filetree.png>
+</picture>
 </figure>
 <h2 id=building-the-interface>Building the interface</h2>
 <p>We have imported all the resources that we need in Godot. We can now start building the user interface.</p>
@@ -318,12 +334,16 @@ Note
 <p>We will add a root node that will hold all nodes in our game.
 Click on <code>Create root node</code> -> <code>2D node</code> in the Scene tab. This will create a root node named <code>Node2D</code>. Rename it to <code>Game</code>.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/root-node.png>
+</picture>
 </figure>
 <p>Now that we have a root node, we can save the scene and run the game. Save the scene by pressing <kbd>Ctrl</kbd>+<kbd>S</kbd>.
 Make a <code>scenes</code> folder in the root directory and save this scene in it as <code>Game.tscn</code>.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/save-game-scene.png>
+</picture>
 </figure>
 <aside class="admonition note">
 <div class=admonition__title>
@@ -335,7 +355,9 @@ Note
 </aside>
 <p>Run the game by clicking the play button (or press <kbd>F5</kbd>). The first time you run the game, Godot will ask you to set the main scene. The main scene is the scene that loads when you run the game. Select the <code>Game.tscn</code> scene we just saved.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/play-button.png>
+</picture>
 </figure>
 <p>Of course, we haven&rsquo;t added anything to our scene yet, so we only see a blank screen when the game is run.
 Close the window (or press <kbd>F8</kbd>) to stop the preview.</p>
@@ -344,33 +366,47 @@ Close the window (or press <kbd>F8</kbd>) to stop the preview.</p>
 <h3 id=labels>Labels</h3>
 <p>We can display text in a game with a <code>Label</code> node. Select <code>Game</code> and click on the plus icon to add a child node. In the &ldquo;Create New Node&rdquo; dialog that appears, search for <code>Label</code>, and click on &ldquo;Create&rdquo;.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/label-node.png>
+</picture>
 </figure>
 <p>A <code>Label</code> node appears as a child of <code>Game</code> in the scene tab.
 Rename the name of this node to <code>GameName</code> because that&rsquo;s what it is.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/scene-tree-gamename.png>
+</picture>
 </figure>
 <p>We do not see any change in our game because the label has no text. We can add/edit the text of the <code>Label</code> by editing the <code>Text</code> property in the inspector tab. This label will display the name of the game: &ldquo;X and O&rdquo;. Change the text of the label to &ldquo;X and O&rdquo;.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/inspector-label-text.png>
+</picture>
 </figure>
 <p>The label is hard to read: it is small and is white on a white background. We will fix this by using a custom font.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/label-bad.png>
+</picture>
 </figure>
 <p>In the inspector tab, in <code>Custom Fonts</code>, enable the Font property. Click on Empty -> New DynamicFont.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/new-dynamic-font.png>
+</picture>
 </figure>
 <p>Click on &ldquo;Dynamic Font&rdquo; to show some additional settings. In Font -> Font Data, click on Empty -> Load and select your font file. We can adjust the font size in <code>Settings</code>. We would like the name of the game to be big, so I set the font size to <code>96</code>. We can also change the font colours in Custom Colours -> Font colours. Play with the parameters until you have happy with the appearance.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/dynamic-font.png>
+</picture>
 </figure>
 <p>We have three more labels to show in our interface. Repeat this process three times to end up with a total of four labels.
 I made three new <code>Label</code> nodes with names <code>WinCondition</code>, <code>PlayerTurn</code>, and <code>PlayerInstruction</code>. My game looks like this now.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/four-labels.png>
+</picture>
 </figure>
 <aside class="admonition tip">
 <div class=admonition__title>
@@ -390,15 +426,21 @@ Add a child node to <code>Grid</code> of type <code>Sprite</code>, and rename th
 We do not see any change in our game because the sprite does not have a texture. Drag and drop <code>grid.png</code> from the FileSystem to the <code>Texture</code> property of the sprite.</p>
 <p>We can see the grid in our game now, but it&rsquo;s too big for our screen. We need to scale it down.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/large-grid.png>
+</picture>
 </figure>
 <p>In <code>GridSprite</code>, in transform, set the Scale to <code>0.3</code> and <code>0.3</code>.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/scale-grid.png>
+</picture>
 </figure>
 <p>The grid fits in the screen now.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/correct-grid.png>
+</picture>
 </figure>
 <p>We want to be able to detect clicks.
 We can detect clicks in an area using the <code>Area2D</code> node. We will have nine <code>Area2D</code> nodes, one for each cell of the grid.</p>
@@ -407,12 +449,16 @@ a yellow warning symbol. Hover over it, and it tells us to add a <code>Collision
 We get this warning because we have an <code>Area2D</code> node, but we haven&rsquo;t defined its area. Add a <code>CollisionShape2D</code> as a child of <code>GridCell</code> to remove this warning.</p>
 <p>The <code>CollisionShape2D</code> now shows a warning: it needs a shape to function. Our cells are squares, so we select New RectangleShape2D in the inspector tab.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/new-rectangle-2d.png>
+</picture>
 </figure>
 <p>Resize and move the blue area so it covers one of the grid cells.
 Using Grid Snap will make it easier to fit the CollisionShape2D on the cell perfectly.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/collision-shape.png>
+</picture>
 </figure>
 <p>We would like to show &ldquo;X&rdquo; and &ldquo;O&rdquo; symbols in the cells when the game is played. Recall that we show images using the <code>Sprite</code> node.
 Add a <code>Sprite</code> as a child of <code>GridCell</code>, and rename it to <code>CellSymbol</code>. Choose the texture as <code>x.png</code>. If you are using my assets, you will need to scale it to <code>0.3</code> and translate it by <code>96</code> and <code>96</code> to centre the image in the cell.</p>
@@ -422,15 +468,21 @@ However, if we want to make any changes to this node in the future, we would hav
 <p>To save the node as a scene, right-click on the node in the Scene tab, select &ldquo;Save Branch as Scene&rdquo;, and save it as <code>GridCell.tscn</code> in the <code>scenes</code> folder.</p>
 <p>The <code>GridCell</code> node has changed to an instance of the scene. You can see the new button now. Click on the &ldquo;Open in Editor&rdquo; button to edit it.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/open-scene.png>
+</picture>
 </figure>
 <p>Duplicate the node nine times. Move the nodes so we have one in each grid. Make sure to arrange them in order, because we will refer to them later when we want to detect win conditions. Also, rename <code>GridCell</code> to <code>GridCell1</code> for consistency.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/nine-gridcells.png>
+</picture>
 </figure>
 <p>The texture that we set in the sprite in <code>GridCell</code> appears nine times in the grid. If we change the texture of the sprite in the <code>GridCell</code> scene, say to <code>x.png</code>, then observe that the sprite of every cell in the grid changes to an &ldquo;X&rdquo;.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/grid-complete.png>
+</picture>
 </figure>
 <p>Since we start the game with the empty grid, we don&rsquo;t want any of the X&rsquo;s and O&rsquo;s to show initially. We will show them one by one, programmatically, when the players play the game. For now, remove the texture from the <code>CellSymbol</code> sprite in <code>GridCell</code> to get an empty grid.</p>
 <p>We have added all the nodes needed to make the game, but the game is still static and doesn&rsquo;t do much.
@@ -441,11 +493,15 @@ We will now add the code to make it dynamic and interactive.</p>
 You can read the <a href=https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html target=_blank rel=noopener>Godot Docs for GDScript</a> for more information about GDScript.</p>
 <p>Click on the Attach Script button to attach a script to the <code>Game</code> node.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/attach-script.png>
+</picture>
 </figure>
 <p>This shows the &ldquo;Attach Script dialog&rdquo;.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/attach-script-dialog.png>
+</picture>
 </figure>
 <p>The default options are fine, click &ldquo;Create&rdquo;. This will create a file named <code>Game.gd</code>. This is where will write the logic for the game.
 The contents of this script will look like this.</p>
@@ -571,7 +627,9 @@ Make sure the node your script is attached to is active.</p>
 </aside>
 <p>Once we have a reference to a node, we can manipulate it. Any changes that we can make in the Inspector tab, we can also make in our script. If you hover your mouse over any property in the inspector tab, you will see the name of the property that you can use in scripts.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/hover-property.png>
+</picture>
 </figure>
 <p>For example, if you want to hide the <code>GridSprite</code> when the game starts, you can do the following:</p>
 <div class=highlight><pre tabindex=0 style=color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gdscript data-lang=gdscript><span style=color:#815ba4>func</span> _ready():
@@ -739,7 +797,9 @@ For each cell, when the <code>cell</code> node emits the <code>cell_clicked</cod
 We are listening for the signal in the <code>GridCell</code> node as well. This is a case where we connect a node to itself.</p>
 <p>Also note the &ldquo;Receiver method&rdquo; field says <code>_on_GridCell_input_event</code>. This is the method that will be called in the target node when the signal is emitted.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/gridcell-signal.png>
+</picture>
 </figure>
 <p>Select <code>GridCell</code> and click &ldquo;Connect&rdquo;.
 This creates the receiver function <code>_on_GridCell_input_event</code> in <code>GridCell.gd</code> for us.</p>
@@ -1033,7 +1093,9 @@ A lot of the code that we require is already in <code>_ready</code>. We would li
 <p>We need to listen for the reset button pressed in the game over screen, in which case we call the <code>start_game</code> function.</p>
 <p>Add input map in Project Settings -> Input Map. Add a <code>ui_restart</code> action. Add event Keyboard press &ldquo;R&rdquo; to it.</p>
 <figure>
+<picture>
 <img src=https://pranshugaba.com/dev/building-x-and-o-using-godot/img/reset-input.png>
+</picture>
 </figure>
 <div class=highlight><pre tabindex=0 style=color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gdscript data-lang=gdscript><span style=color:#815ba4>func</span> _process(delta):
     <span style=color:#815ba4>if</span> <span style=color:#5bc4bf>!</span>game_started:
@@ -1088,9 +1150,8 @@ torrent
 <a href=/licence/> © 2022 Pranshu Gaba </a>
 </div>
 <div class=footer__links>
-<button id=dark-mode-toggle role=button tabindex=0>toggle lights</button>
+<a href=/subscribe/>subscribe</a>
 </div>
 </footer>
 </body>
-<script>let darkMode=localStorage.getItem('darkMode');const darkModeToggle=document.querySelector('#dark-mode-toggle'),enableDarkMode=()=>{document.body.classList.add('dark-mode'),localStorage.setItem('darkMode','enabled')},disableDarkMode=()=>{document.body.classList.remove('dark-mode'),localStorage.setItem('darkMode','disabled')};darkMode==='enabled'?enableDarkMode():darkMode==='disabled'?disableDarkMode():window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches&&enableDarkMode(),darkModeToggle.addEventListener('click',()=>{darkMode=localStorage.getItem('darkMode'),darkMode!=='enabled'?enableDarkMode():disableDarkMode()})</script>
 </html>
