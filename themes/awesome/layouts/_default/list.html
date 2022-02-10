@@ -1,4 +1,5 @@
 {{ define "main" }}
+  {{ $displayStyle := .Params.Display }}
   <header class="page__header">
     <h1 class="page__title">{{ .Title | emojify }}</h1>
     {{ with .Params.Subtitle }}
@@ -12,10 +13,16 @@
     <ul class="items__list">
       {{ range .Pages }}
       <li>
-        {{ if (eq .Section "minis")}}
-          {{ partial "list/minis.html" . }}
+        {{ if $displayStyle }}
+          {{ partial (print "list/" $displayStyle ".html") . }}
         {{ else }}
-          {{ partial "list/description.html" . }}
+          {{ if (eq .Section "minis")}}
+            {{ partial "list/minis.html" . }}
+          {{ else if (eq .Section "notebooks")}}
+            {{ partial "list/archive.html" . }}
+          {{ else }}
+            {{ partial "list/description.html" . }}
+          {{ end }}
         {{ end }}
       </li>
       {{ end }}

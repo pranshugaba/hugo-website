@@ -24,7 +24,10 @@ summary: A guide to explore my site
 - [Puzzles]({{< ref "/puzzles/" >}}): Head-scratchers and mind-benders
 - [Stories]({{< ref "/stories/" >}}): Gripping tales of awe and wonder
 - [Comics]({{< ref "/comics/" >}}): Handwritten, handdrawn, handpainted
+
+### Personal
 - [Minis]({{< ref "/minis/" >}}): Byte-sized posts
+- [Notebooks]({{< ref "/notes/" >}}): Miscellaneous interesting stuff
 
 
 ## By Tags

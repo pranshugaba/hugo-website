@@ -3,11 +3,11 @@ title: Subscribe
 subtitle: "RSS feeds for this site"
 ---
 
+If you prefer to read on a feed reader, here are some RSS feeds. 
+Note that some components and figures may not render correctly in your feed reader. 
+
 Subscribe to [all posts](/index.xml), or each section individually 
 
-- [posts](/posts/index.xml)
-- [thoughts](/thoughts/index.xml)
-- [minis](/minis/index.xml)
 - [dev](/dev/index.xml)
 - [trips](/trips/index.xml)
 - [reviews](/reviews/index.xml)
@@ -16,6 +16,7 @@ Subscribe to [all posts](/index.xml), or each section individually
 - [puzzles](/puzzles/index.xml)
 - [stories](/stories/index.xml)
 - [comics](/comics/index.xml)
+- [minis](/minis/index.xml)
 
 Append `/index.xml` to the URL of any list page to get the URL for the corresponding feed. 
 
