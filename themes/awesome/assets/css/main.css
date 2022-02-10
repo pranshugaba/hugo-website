@@ -1208,7 +1208,7 @@ thead {
 }
 
 .leaflet-overlay-pane {
-  filter: grayscale(1) invert(1);
+  filter: invert(1);
 }
 
 @media (prefers-color-scheme: dark) {
