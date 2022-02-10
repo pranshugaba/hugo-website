@@ -1,10 +1,10 @@
 ---
 title: "Mini #5"
-summary: "Futurama is revived at Hulu."
+summary: "More Futurama."
 
 number: 5
 
-date: 2022-02-10T03:48:00+05:30
+date: 2022-02-10T13:30:00+05:30
 
 tags: ["tv-series", "futurama"]
 
@@ -14,4 +14,5 @@ draft: false
 featured: false
 ---
 
-Futurama revived at Hulu! 20 new episodes in 2023. 
+{{< figure src="futurama-good-news-everyone.gif" >}}
+Good news, everyone! Futurama will return with 20 new episodes in 2023!
