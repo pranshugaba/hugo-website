@@ -1,4 +1,3 @@
-
 // $gruvboxlight: #fbf1c7;
 // $gruvboxdark: #282828;
 
@@ -43,20 +42,6 @@ $darkaccent: hsl($hue + 180, 100%, 80%);
   --accent: #{$lightaccent};
   --light: #{$lightlight};
   --dark: #{$darkdark};
-  
-  @media print {
-    --bg: #{white};
-    --fg: #{#121212};
-    --light: #{white};
-    --dark: #{#121212};
-    --accent: #{Indigo};
-  }
-}
-
-.dark-mode {
-  --bg: #{$darkdark};
-  --fg: #{$darklight};
-  --accent: #{$darkaccent};
 
   @media print {
     --bg: #{white};
@@ -66,9 +51,17 @@ $darkaccent: hsl($hue + 180, 100%, 80%);
     --accent: #{Indigo};
   }
 }
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --bg: #{$black};
-//     --fg: #{$papaya};
-//   }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #{$darkdark};
+    --fg: #{$darklight};
+    --accent: #{$darkaccent};
+  }
+}
+
+// .dark-mode {
+//   --bg: #{$darkdark};
+//   --fg: #{$darklight};
+//   --accent: #{$darkaccent};
 // }

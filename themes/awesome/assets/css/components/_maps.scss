@@ -19,14 +19,19 @@
   border-top: 1.5px solid var(--fg);
   border-left: 1.5px solid var(--fg);
 }
-.dark-mode .leaflet-layer .leaflet-tile {
-  filter: grayscale(0.8) hue-rotate(180deg) invert(1) contrast(0.95) sepia(0.2) brightness(1.1);
+.leaflet-layer .leaflet-tile {
+  @media (prefers-color-scheme: dark) {
+    filter: grayscale(0.8) hue-rotate(180deg) invert(1) contrast(0.95)
+      brightness(1.1);
+  }
 }
 .leaflet-overlay-pane {
   filter: grayscale(1) invert(1);
 }
-.dark-mode .leaflet-overlay-pane {
-  filter: unset;
+.leaflet-overlay-pane {
+  @media (prefers-color-scheme: dark) {
+    filter: unset;
+  }
 }
 .route__metadata {
   margin-block: 0.5rem;

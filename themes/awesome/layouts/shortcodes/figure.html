@@ -7,13 +7,12 @@
     {{ $lightImg := .Page.Resources.GetMatch $relSrc }}
     {{ $darkSrc := .Get "dark-src" }}
     {{ $darkImg := .Page.Resources.GetMatch $darkSrc }}
-    {{ if $darkImg }}
-        <source srcset="{{ $darkImg.Permalink }}" media="(prefers-color-scheme: dark)">
-    <img src="{{ $darkImg.Permalink }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }} class="dark-image">
-    <img src="{{ $lightImg.Permalink }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }} class="light-image">
-    {{ else }}
+    <picture>
+        {{ with $darkImg }}
+        <source srcset="{{ .Permalink }}" media="(prefers-color-scheme: dark)">
+        {{ end }}
         <img src="{{ $lightImg.Permalink }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }}>
-    {{ end }}
+    </picture>
     {{ if .Get "link" }}
         </a>
     {{ end }}
