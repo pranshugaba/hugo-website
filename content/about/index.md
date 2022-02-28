@@ -50,7 +50,7 @@ The site is open source. You can find the source code on my [Github page](https:
 
 Last updated: {{< lastupdated >}}
 
-Current theme: **Blueberry**
+Current theme: **Slava Ukraini!**
 
 ### Support
 

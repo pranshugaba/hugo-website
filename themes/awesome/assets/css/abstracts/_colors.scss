@@ -27,14 +27,28 @@
 // $darkdark: $solarizedbase03;
 // $darkaccent: pink;
 
-$hue: 210;
-$lightlight: hsl($hue, 100%, 96%);
-$lightdark: hsl($hue, 100%, 12%);
-$lightaccent: hsl($hue + 180, 80%, 45%);
 
-$darklight: hsl($hue, 100%, 94%);
-$darkdark: hsl($hue, 100%, 7%);
-$darkaccent: hsl($hue + 180, 100%, 80%);
+// $hue: 210;
+// $lightlight: hsl($hue, 100%, 96%);
+// $lightdark: hsl($hue, 100%, 12%);
+// $lightaccent: hsl($hue + 180, 80%, 45%);
+
+// $darklight: hsl($hue, 100%, 94%);
+// $darkdark: hsl($hue, 100%, 7%);
+// $darkaccent: hsl($hue + 180, 100%, 80%);
+
+// $ukraineblue: #0057B8;
+// $ukraineyellow: #FFD700;
+
+$ukraineblue: #003470;
+$ukraineyellow: #ffe761;
+$lightlight: $ukraineyellow;
+$lightdark: $ukraineblue;
+$lightaccent: $ukraineblue;
+$darklight: $ukraineyellow;
+$darkdark: $ukraineblue;
+$darkaccent: $ukraineyellow;
+
 
 :root {
   --bg: #{$lightlight};
