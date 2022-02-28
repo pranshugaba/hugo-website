@@ -13,8 +13,8 @@
             "type": "image/png"
         }
     ],
-    "background_color": "#001f3d",
-    "theme_color": "#ebf5ff",
+    "background_color": "#003470",
+    "theme_color": "#ffe761",
     "display": "standalone",
     "description": "Personal website of Pranshu Gaba",
     "dir": "ltr",
