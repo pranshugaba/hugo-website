@@ -1,5 +1,4 @@
 <div class="list-description__item">
-  {{ partial "list/preview-image" . }}
   <div class="item__text">
     <div class="item__metadata">
       {{ .Date.Format "January 2" }}
@@ -10,6 +9,9 @@
       {{ if (eq .Type "puzzles") }}
       &nbsp; · &nbsp; #{{ .Params.Number }} 
       {{ end }}
+    </div>
+    <div class="item__preview-image-small">
+      {{ partial "list/preview-image" . }}
     </div>
     <div class="item__content">
       <div class="item__title">
@@ -22,5 +24,8 @@
         <a href="{{ .Permalink }}">Read &#8594;</a>
       </div>
     </div>
+  </div>
+  <div class="item__preview-image-medium">
+    {{ partial "list/preview-image" . }}
   </div>
 </div>

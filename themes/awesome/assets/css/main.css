@@ -1049,21 +1049,31 @@ h4 code {
   width: 100%;
 }
 .list-description__item .item__preview-image {
-  margin-bottom: 0.75rem;
+  margin-block: 0.75rem;
   margin-inline: auto;
   width: 100%;
+}
+@media (min-width: 640px) {
+  .list-description__item .item__preview-image-small {
+    display: none;
+  }
+}
+.list-description__item .item__preview-image-medium {
+  display: none;
+}
+@media (min-width: 640px) {
+  .list-description__item .item__preview-image-medium {
+    display: block;
+    margin: 0;
+    max-width: 240px;
+  }
 }
 @media (min-width: 640px) {
   .list-description__item {
     display: flex;
     gap: 1rem;
-    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-  }
-  .list-description__item .item__preview-image {
-    margin: 0;
-    max-width: 240px;
   }
 }
 

@@ -71,25 +71,33 @@
 }
 
 .list-description__item {
-  .item__text{ 
+  .item__text {
     border-radius: 10px;
     width: 100%;
   }
   .item__preview-image {
-    margin-bottom: 0.75rem;
+    margin-block: 0.75rem;
     margin-inline: auto;
     width: 100%;
+  }
+  .item__preview-image-small {
+    @media (min-width: 640px) {
+      display: none;
+    }
+  }
+  .item__preview-image-medium {
+    display: none;
+    @media (min-width: 640px) {
+      display: block;
+      margin: 0;
+      max-width: 240px;
+    }
   }
   @media (min-width: 640px) {
     display: flex;
     gap: 1rem;
-    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    .item__preview-image {
-      margin: 0;
-      max-width: 240px;
-    }
   }
 }
 .items__heading {
