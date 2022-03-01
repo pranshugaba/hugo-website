@@ -8,6 +8,16 @@
 // $darkdark: black;
 // $darkaccent: pink;
 
+
+// $monocolor: rgb(0, 29, 126);
+// $lightlight: white;
+// $lightdark: $monocolor;
+// $lightaccent: purple;
+// $darklight: white;
+// $darkdark: $monocolor;
+// $darkaccent: pink;
+
+
 // $papaya: hsl(37.1, 100%, 91.8%);
 // $black: #121212;
 // $lightlight: $papaya;
@@ -40,14 +50,16 @@
 // $ukraineblue: #0057B8;
 // $ukraineyellow: #FFD700;
 
-$ukraineblue: #003470;
-$ukraineyellow: #ffe761;
+$ukraineblue: hsl(212, 100%, 19%);
+$ukraineyellow: hsl(51, 100%, 80%);
+$ukraineblueaccent: hsl(212, 100%, 36%);
+$ukraineyellowaccent: hsl(51, 100%, 50%);
 $lightlight: $ukraineyellow;
 $lightdark: $ukraineblue;
-$lightaccent: $ukraineblue;
+$lightaccent: $ukraineblueaccent;
 $darklight: $ukraineyellow;
 $darkdark: $ukraineblue;
-$darkaccent: $ukraineyellow;
+$darkaccent: $ukraineyellowaccent;
 
 
 :root {

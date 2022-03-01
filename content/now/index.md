@@ -7,12 +7,12 @@ summary: A little bit about me and my website
 
 ## TIFR
 
-I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/). I am working on a project on Stochastic Window Mean-payoff Games with [Prof.&nbsp;Shibashis&nbsp;Guha](https://www.tifr.res.in/~shibashis.guha/).
-
+I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/). 
 I am attending the following courses this semester:
 - Algebra and Computation
-- Topics in the study of Markov chains
 - Computational Complexity
+- Logic, Games, and Automata
+- Algebraic Automata Theory
 
 
 ## Learning
