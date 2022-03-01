@@ -268,3 +268,5 @@ A playground to test out[^1] various Markdown features.
 This is another map.
 
 {{< map "abc" >}}
+
+{{< photo src="cat" caption="This is a photo of a _cat_." alt="Picture of a cat" >}}

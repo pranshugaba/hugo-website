@@ -1,0 +1,51 @@
+{{ $srcFile := .SrcFile }}
+{{ $altText := .AltText }}
+{{ $optBlock := dict "display" "block" }}
+{{- $caption := .Caption | .Context.Page.RenderString $optBlock -}}
+{{ $photo := (.Context.Page.Resources.ByType "image").GetMatch (printf "%s.{png,jpeg,jpg,webp}" $srcFile) }} 
+{{ $showCoords := .ShowCoords }}
+{{ with $photo}}
+    <figure class="gallery__figure">
+        {{ $big := "" }}
+        {{ if lt .Height .Width }}
+        {{ $big = .Resize "1600x" }}
+        {{ else }}
+        {{ $big = .Resize "x1600" }}
+        {{ end }}
+        {{ if $showCoords }}
+            {{ with .Exif }}
+                <div class="gallery__metadata">
+                    {{ with .Tags.DateTimeOriginal }}
+                        <div class="gallery__datetime">
+                            {{ dateFormat "2006-01-02 15:04" . }}
+                        </div>
+                    {{ end }}
+                    {{ if .Lat }}
+                    <div class="gallery__coords">
+                        <a href="https://www.openstreetmap.org/?mlat={{ .Lat }}&mlon={{ .Long }}#map=16/{{ .Lat }}/{{ .Long }}&layers=N" rel="noopener" target="_blank">({{ lang.NumFmt 3 .Lat }}°, {{ lang.NumFmt 3 .Long }}°)</a> 
+                    </div>
+                    {{ end }}
+                </div>
+            {{ end }}
+        {{ end }}
+        <img
+        src="{{ $big.Permalink }}"
+        {{ with $altText }}
+        alt="{{ . }}"
+        {{ end }}
+        height="{{ $big.Height }}"
+        width="{{ $big.Width }}"
+        />
+        {{ with $caption }}
+            <div class="gallery__caption">
+                <figcaption>
+                    {{ if not ( findRE "<[h|p][^>]*>" . ) }}
+                        <p>{{ . }}</p>
+                    {{ else }}
+                        {{ . }}
+                    {{ end }}
+                </figcaption>
+            </div>
+        {{ end }}
+    </figure>
+{{ end }}

@@ -31,7 +31,7 @@ I am currently reading _The Magus_ by John Fowles.
 
 ## Watching
 
-I am currently watching The Righteous Gemstones and Gravity Falls. 
+I am currently watching Killing Eve and Gravity Falls. 
 
 I also love watching British TV shows such as I Literally Just Told You, 8 out of 10 Cats does Countdown, and Would I Lie to You?. 
 

@@ -1,0 +1,7 @@
+{{ $showCoords := default true (.Get "showCoords") }}
+{{ $showDate := default true (.Get "showDate") }}
+{{ $showTime := default true (.Get "showTime") }}
+{{ $srcFile := .Get "src" }}
+{{ $altText := default "" (.Get "alt") }}
+{{ $caption := default "" (.Get "caption") }}
+{{ partial "single/photo" (dict "Context" . "SrcFile" $srcFile "AltText" $altText "Caption" $caption "ShowCoords"  $showCoords "ShowDate" $showDate "ShowTime" $showTime) }}
