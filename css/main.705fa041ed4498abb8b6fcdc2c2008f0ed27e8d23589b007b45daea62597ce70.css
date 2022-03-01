@@ -1049,9 +1049,15 @@ h4 code {
   width: 100%;
 }
 .list-description__item .item__preview-image {
-  margin-block: 0.75rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
   margin-inline: auto;
   width: 100%;
+}
+@media (min-width: 640px) {
+  .list-description__item .item__preview-image {
+    margin-block: 0;
+  }
 }
 @media (min-width: 640px) {
   .list-description__item .item__preview-image-small {
