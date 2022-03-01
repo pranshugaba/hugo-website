@@ -76,9 +76,13 @@
     width: 100%;
   }
   .item__preview-image {
-    margin-block: 0.75rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
     margin-inline: auto;
     width: 100%;
+    @media (min-width: 640px) {
+      margin-block: 0;
+    }
   }
   .item__preview-image-small {
     @media (min-width: 640px) {

@@ -17,6 +17,7 @@ summary: A guide to explore my site
 - [Trips]({{< ref "/trips/" >}}): My cycling and walking trips
 - [Reviews]({{< ref "/reviews/" >}}): I review books, movies, and games
 - [Links]({{< ref "/links/" >}}): Some links that I find interesting
+- [Recipes]({{< ref "/recipes/" >}}): Delicious easy-to-make vegetarian recipes
 
 ### Fun
 

@@ -12,6 +12,7 @@ Subscribe to [all posts](/index.xml), or each section individually
 - [trips](/trips/index.xml)
 - [reviews](/reviews/index.xml)
 - [links](/links/index.xml)
+- [recipes](/recipes/index.xml)
 - [poems](/poems/index.xml)
 - [puzzles](/puzzles/index.xml)
 - [stories](/stories/index.xml)
