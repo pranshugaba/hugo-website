@@ -539,10 +539,10 @@ figure figcaption {
   }
 }
 :root {
-  --bg: #ffed8a;
+  --bg: #fff09e;
   --fg: #002d61;
   --accent: #0056b8;
-  --light: #ffed8a;
+  --light: #fff09e;
   --dark: #002d61;
 }
 @media print {
@@ -558,8 +558,8 @@ figure figcaption {
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #002d61;
-    --fg: #ffed8a;
-    --accent: #ffd900;
+    --fg: #fff09e;
+    --accent: #ffe033;
   }
 }
 .header {
@@ -1044,20 +1044,19 @@ h4 code {
   font-size: 0.85rem;
 }
 
-.list-description__item .item__text {
-  border-radius: 10px;
-  width: 100%;
-}
 .list-description__item .item__preview-image {
   margin-top: 0.75rem;
   margin-bottom: 0.5rem;
   margin-inline: auto;
-  width: 100%;
 }
 @media (min-width: 640px) {
   .list-description__item .item__preview-image {
     margin-block: 0;
+    width: 240px;
   }
+}
+.list-description__item .item__preview-image-small {
+  width: 100%;
 }
 @media (min-width: 640px) {
   .list-description__item .item__preview-image-small {
@@ -1071,7 +1070,6 @@ h4 code {
   .list-description__item .item__preview-image-medium {
     display: block;
     margin: 0;
-    max-width: 240px;
   }
 }
 @media (min-width: 640px) {

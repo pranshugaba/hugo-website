@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pranshu Gaba</title><link>https://pranshugaba.com/</link><description>Photos, poems, puzzles, and more!</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 01 Mar 2022 17:58:28 +0530</lastBuildDate><image><url>https://pranshugaba.com/icon.png</url></image><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Starfruit Sandwich</title><link>https://pranshugaba.com/recipes/starfruit-sandwich/</link><pubDate>Tue, 01 Mar 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/recipes/starfruit-sandwich/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pranshu Gaba</title><link>https://pranshugaba.com/</link><description>Photos, poems, puzzles, and more!</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 02 Mar 2022 11:47:33 +0530</lastBuildDate><image><url>https://pranshugaba.com/icon.png</url></image><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Starfruit Sandwich</title><link>https://pranshugaba.com/recipes/starfruit-sandwich/</link><pubDate>Tue, 01 Mar 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/recipes/starfruit-sandwich/</guid><description>
 <![CDATA[<img src="https://pranshugaba.com/recipes/starfruit-sandwich/starfuit_sandwich_featured_hucab1bbb11ed33e4f58dd56fb89825fbc_1104066_1080x0_resize_q75_box.jpg" alt="" /><p>One day, many moons ago, I went out in Bangalore for a long walk and bought an assortment of groceries from different parts of the city: Organic spinach bread, starfruits, tomatoes, cheese cubes, rock salt, and a knife.</p>
 <p>When I returned to my room, I tried to make a sandwich from what I had bought. The result: A delicious juicy sandwich with a variety of tastes and textures that is also easy to make.</p>
 <p>The following recipe makes one sandwich. Two or three such sandwiches would make a meal.</p>
@@ -996,8 +996,7 @@ Optionally, consume some <a href="https://en.wikipedia.org/wiki/Pringles" target
     </figure>
     
 
-]]></description></item><item><title>Mini #5</title><link>https://pranshugaba.com/minis/5/</link><pubDate>Thu, 10 Feb 2022 13:30:00 +0530</pubDate><guid>https://pranshugaba.com/minis/5/</guid><description>
-<![CDATA[<p>
+]]></description></item><item><title>Mini #5</title><link>https://pranshugaba.com/minis/5/</link><pubDate>Thu, 10 Feb 2022 13:30:00 +0530</pubDate><guid>https://pranshugaba.com/minis/5/</guid><description><![CDATA[
 <figure >
     
     
@@ -1012,7 +1011,7 @@ Optionally, consume some <a href="https://en.wikipedia.org/wiki/Pringles" target
     
 </figure>
 
-Good news, everyone! Futurama will return with 20 new episodes in 2023!</p>
+<p>Good news, everyone! Futurama will return with 20 new episodes in 2023!</p>
 ]]></description></item><item><title>Research Seminars</title><link>https://pranshugaba.com/links/research-seminars/</link><pubDate>Thu, 10 Feb 2022 02:30:00 +0530</pubDate><guid>https://pranshugaba.com/links/research-seminars/</guid><description>
 <![CDATA[<p>Most research talks are being held online post lockdown, and as a result, one can access talks from all over the world.
 I came across a website that lists upcoming research seminars and makes it easier to discover interesting talks.</p>
@@ -1131,74 +1130,81 @@ Does a chess position have the information required to deduce which player plays
 <figure class="inline-svg">
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
     <svg version='1.1' xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 20 420 420">
-        <rect width="394" height="394" fill="var(--light)" x="23" y="23"></rect>
-        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23"></rect>
+        <rect width="394" height="394" fill="var(--light)" fill-opacity="0.8" x="23" y="23" rx="10px"></rect>
+        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23" rx="10px"></rect>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="392" viewBox="0 0 392 392" x="24" y="24">
+<defs>
+    <clipPath id="round-chessboard">
+        <rect width="392" height="392" x="0" y="0" rx="9px"></rect>
+    </clipPath>
+</defs>
+
+
 <g class="squares">
-    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="0" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="49" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="0" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="49" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="98" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="147" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="147" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="196" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="245" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="245" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="294" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="343" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
     <rect width="49" height="49" x="343" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="49" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="343" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
 </g>
 <g>
 
@@ -2321,6 +2327,7 @@ Does a chess position have the information required to deduce which player plays
 <text y="298" x="6">3</text>
 <text y="347" x="6">2</text>
 <text y="396" x="6">1</text></g>
+<rect width="394" height="394" stroke="var(--fg)" fill-opacity="0.0" stroke-opacity="0.2" stroke-width="2px" x="23" y="23" rx="10px"></rect>
 </svg>
 
 <figcaption>All pieces are in the initial position.</figcaption>
@@ -2342,74 +2349,81 @@ If not, then we are done. Otherwise, we need to find out if there exists a seque
 <figure class="inline-svg">
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
     <svg version='1.1' xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 20 420 420">
-        <rect width="394" height="394" fill="var(--light)" x="23" y="23"></rect>
-        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23"></rect>
+        <rect width="394" height="394" fill="var(--light)" fill-opacity="0.8" x="23" y="23" rx="10px"></rect>
+        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23" rx="10px"></rect>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="392" viewBox="0 0 392 392" x="24" y="24">
+<defs>
+    <clipPath id="round-chessboard">
+        <rect width="392" height="392" x="0" y="0" rx="9px"></rect>
+    </clipPath>
+</defs>
+
+
 <g class="squares">
-    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="0" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="49" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="0" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="49" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="98" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="147" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="147" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="196" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="245" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="245" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="294" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="343" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
     <rect width="49" height="49" x="343" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="49" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="343" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
 </g>
 <g>
 
@@ -3532,6 +3546,7 @@ If not, then we are done. Otherwise, we need to find out if there exists a seque
 <text y="298" x="6">3</text>
 <text y="347" x="6">2</text>
 <text y="396" x="6">1</text></g>
+<rect width="394" height="394" stroke="var(--fg)" fill-opacity="0.0" stroke-opacity="0.2" stroke-width="2px" x="23" y="23" rx="10px"></rect>
 </svg>
 
 </figure>
@@ -3548,74 +3563,81 @@ Whose turn is it to play?</p>
 <figure class="inline-svg">
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
     <svg version='1.1' xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 20 420 420">
-        <rect width="394" height="394" fill="var(--light)" x="23" y="23"></rect>
-        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23"></rect>
+        <rect width="394" height="394" fill="var(--light)" fill-opacity="0.8" x="23" y="23" rx="10px"></rect>
+        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23" rx="10px"></rect>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="392" viewBox="0 0 392 392" x="24" y="24">
+<defs>
+    <clipPath id="round-chessboard">
+        <rect width="392" height="392" x="0" y="0" rx="9px"></rect>
+    </clipPath>
+</defs>
+
+
 <g class="squares">
-    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="0" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="49" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="0" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="49" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="98" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="147" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="147" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="196" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="245" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="245" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="294" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="343" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
     <rect width="49" height="49" x="343" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="49" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="343" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
 </g>
 <g>
 
@@ -4704,6 +4726,7 @@ Whose turn is it to play?</p>
 <text y="298" x="6">3</text>
 <text y="347" x="6">2</text>
 <text y="396" x="6">1</text></g>
+<rect width="394" height="394" stroke="var(--fg)" fill-opacity="0.0" stroke-opacity="0.2" stroke-width="2px" x="23" y="23" rx="10px"></rect>
 </svg>
 
 </figure>
@@ -4720,74 +4743,81 @@ Whose turn is it to play?
 <figure class="inline-svg">
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
     <svg version='1.1' xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 20 420 420">
-        <rect width="394" height="394" fill="var(--light)" x="23" y="23"></rect>
-        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23"></rect>
+        <rect width="394" height="394" fill="var(--light)" fill-opacity="0.8" x="23" y="23" rx="10px"></rect>
+        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23" rx="10px"></rect>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="392" viewBox="0 0 392 392" x="24" y="24">
+<defs>
+    <clipPath id="round-chessboard">
+        <rect width="392" height="392" x="0" y="0" rx="9px"></rect>
+    </clipPath>
+</defs>
+
+
 <g class="squares">
-    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="0" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="49" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="0" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="49" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="98" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="147" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="147" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="196" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="245" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="245" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="294" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="343" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
     <rect width="49" height="49" x="343" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="49" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="343" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
 </g>
 <g>
 
@@ -5792,6 +5822,7 @@ Whose turn is it to play?
 <text y="298" x="6">3</text>
 <text y="347" x="6">2</text>
 <text y="396" x="6">1</text></g>
+<rect width="394" height="394" stroke="var(--fg)" fill-opacity="0.0" stroke-opacity="0.2" stroke-width="2px" x="23" y="23" rx="10px"></rect>
 </svg>
 
 </figure></p>
@@ -5808,74 +5839,81 @@ Whose turn is it to play?</p>
 <figure class="inline-svg">
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
     <svg version='1.1' xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 20 420 420">
-        <rect width="394" height="394" fill="var(--light)" x="23" y="23"></rect>
-        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23"></rect>
+        <rect width="394" height="394" fill="var(--light)" fill-opacity="0.8" x="23" y="23" rx="10px"></rect>
+        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23" rx="10px"></rect>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="392" viewBox="0 0 392 392" x="24" y="24">
+<defs>
+    <clipPath id="round-chessboard">
+        <rect width="392" height="392" x="0" y="0" rx="9px"></rect>
+    </clipPath>
+</defs>
+
+
 <g class="squares">
-    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="0" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="49" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="0" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="49" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="98" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="147" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="147" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="196" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="245" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="245" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="294" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="343" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
     <rect width="49" height="49" x="343" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="49" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="343" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
 </g>
 <g>
 
@@ -6856,6 +6894,7 @@ Whose turn is it to play?</p>
 <text y="298" x="6">3</text>
 <text y="347" x="6">2</text>
 <text y="396" x="6">1</text></g>
+<rect width="394" height="394" stroke="var(--fg)" fill-opacity="0.0" stroke-opacity="0.2" stroke-width="2px" x="23" y="23" rx="10px"></rect>
 </svg>
 
 </figure>
@@ -6871,74 +6910,81 @@ Whose turn is it to play?</p>
 <figure class="inline-svg">
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
     <svg version='1.1' xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 20 420 420">
-        <rect width="394" height="394" fill="var(--light)" x="23" y="23"></rect>
-        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23"></rect>
+        <rect width="394" height="394" fill="var(--light)" fill-opacity="0.8" x="23" y="23" rx="10px"></rect>
+        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23" rx="10px"></rect>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="392" viewBox="0 0 392 392" x="24" y="24">
+<defs>
+    <clipPath id="round-chessboard">
+        <rect width="392" height="392" x="0" y="0" rx="9px"></rect>
+    </clipPath>
+</defs>
+
+
 <g class="squares">
-    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="0" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="49" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="0" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="49" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="98" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="147" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="147" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="196" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="245" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="245" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="294" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="343" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
     <rect width="49" height="49" x="343" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="49" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="343" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
 </g>
 <g>
 
@@ -8069,6 +8115,7 @@ Whose turn is it to play?</p>
 <text y="298" x="6">3</text>
 <text y="347" x="6">2</text>
 <text y="396" x="6">1</text></g>
+<rect width="394" height="394" stroke="var(--fg)" fill-opacity="0.0" stroke-opacity="0.2" stroke-width="2px" x="23" y="23" rx="10px"></rect>
 </svg>
 
 </figure>
@@ -8085,74 +8132,81 @@ Whose turn is it to play?</p>
 <figure class="inline-svg">
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
     <svg version='1.1' xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 20 420 420">
-        <rect width="394" height="394" fill="var(--light)" x="23" y="23"></rect>
-        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23"></rect>
+        <rect width="394" height="394" fill="var(--light)" fill-opacity="0.8" x="23" y="23" rx="10px"></rect>
+        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23" rx="10px"></rect>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="392" viewBox="0 0 392 392" x="24" y="24">
+<defs>
+    <clipPath id="round-chessboard">
+        <rect width="392" height="392" x="0" y="0" rx="9px"></rect>
+    </clipPath>
+</defs>
+
+
 <g class="squares">
-    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="0" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="49" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="0" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="49" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="98" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="147" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="147" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="196" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="245" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="245" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="294" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="343" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
     <rect width="49" height="49" x="343" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="49" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="343" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
 </g>
 <g>
 
@@ -9283,6 +9337,7 @@ Whose turn is it to play?</p>
 <text y="298" x="6">3</text>
 <text y="347" x="6">2</text>
 <text y="396" x="6">1</text></g>
+<rect width="394" height="394" stroke="var(--fg)" fill-opacity="0.0" stroke-opacity="0.2" stroke-width="2px" x="23" y="23" rx="10px"></rect>
 </svg>
 
 </figure>
@@ -9298,74 +9353,81 @@ Whose turn is it to play?</p>
 <figure class="inline-svg">
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
     <svg version='1.1' xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 20 420 420">
-        <rect width="394" height="394" fill="var(--light)" x="23" y="23"></rect>
-        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23"></rect>
+        <rect width="394" height="394" fill="var(--light)" fill-opacity="0.8" x="23" y="23" rx="10px"></rect>
+        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23" rx="10px"></rect>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="392" viewBox="0 0 392 392" x="24" y="24">
+<defs>
+    <clipPath id="round-chessboard">
+        <rect width="392" height="392" x="0" y="0" rx="9px"></rect>
+    </clipPath>
+</defs>
+
+
 <g class="squares">
-    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="0" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="49" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="0" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="49" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="98" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="147" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="147" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="196" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="245" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="245" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="294" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="343" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
     <rect width="49" height="49" x="343" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="49" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="343" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
 </g>
 <g>
 
@@ -10492,6 +10554,7 @@ Whose turn is it to play?</p>
 <text y="298" x="6">3</text>
 <text y="347" x="6">2</text>
 <text y="396" x="6">1</text></g>
+<rect width="394" height="394" stroke="var(--fg)" fill-opacity="0.0" stroke-opacity="0.2" stroke-width="2px" x="23" y="23" rx="10px"></rect>
 </svg>
 
 </figure>
@@ -10508,74 +10571,81 @@ Whose turn is it to play?</p>
 <figure class="inline-svg">
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
     <svg version='1.1' xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 20 420 420">
-        <rect width="394" height="394" fill="var(--light)" x="23" y="23"></rect>
-        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23"></rect>
+        <rect width="394" height="394" fill="var(--light)" fill-opacity="0.8" x="23" y="23" rx="10px"></rect>
+        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23" rx="10px"></rect>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="392" viewBox="0 0 392 392" x="24" y="24">
+<defs>
+    <clipPath id="round-chessboard">
+        <rect width="392" height="392" x="0" y="0" rx="9px"></rect>
+    </clipPath>
+</defs>
+
+
 <g class="squares">
-    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="0" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="49" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="0" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="49" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="98" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="147" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="147" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="196" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="245" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="245" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="294" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="343" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
     <rect width="49" height="49" x="343" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="49" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="343" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
 </g>
 <g>
 
@@ -11672,6 +11742,7 @@ Whose turn is it to play?</p>
 <text y="298" x="6">3</text>
 <text y="347" x="6">2</text>
 <text y="396" x="6">1</text></g>
+<rect width="394" height="394" stroke="var(--fg)" fill-opacity="0.0" stroke-opacity="0.2" stroke-width="2px" x="23" y="23" rx="10px"></rect>
 </svg>
 
 </figure>
@@ -11689,74 +11760,81 @@ Be careful: this is a tricky one!</p>
 <figure class="inline-svg">
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
     <svg version='1.1' xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 20 420 420">
-        <rect width="394" height="394" fill="var(--light)" x="23" y="23"></rect>
-        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23"></rect>
+        <rect width="394" height="394" fill="var(--light)" fill-opacity="0.8" x="23" y="23" rx="10px"></rect>
+        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23" rx="10px"></rect>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="392" viewBox="0 0 392 392" x="24" y="24">
+<defs>
+    <clipPath id="round-chessboard">
+        <rect width="392" height="392" x="0" y="0" rx="9px"></rect>
+    </clipPath>
+</defs>
+
+
 <g class="squares">
-    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="0" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="49" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="0" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="49" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="98" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="147" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="147" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="196" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="245" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="245" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="294" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="343" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
     <rect width="49" height="49" x="343" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="49" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="343" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
 </g>
 <g>
 
@@ -12915,6 +12993,7 @@ Be careful: this is a tricky one!</p>
 <text y="298" x="6">3</text>
 <text y="347" x="6">2</text>
 <text y="396" x="6">1</text></g>
+<rect width="394" height="394" stroke="var(--fg)" fill-opacity="0.0" stroke-opacity="0.2" stroke-width="2px" x="23" y="23" rx="10px"></rect>
 </svg>
 
 </figure>
@@ -17679,74 +17758,81 @@ For the sake of this problem, assume that pieces can attack other pieces of the 
 <figure class="inline-svg">
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
     <svg version='1.1' xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 20 420 420">
-        <rect width="394" height="394" fill="var(--light)" x="23" y="23"></rect>
-        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23"></rect>
+        <rect width="394" height="394" fill="var(--light)" fill-opacity="0.8" x="23" y="23" rx="10px"></rect>
+        <rect width="394" height="394" fill="var(--dark)" fill-opacity="0.1" x="23" y="23" rx="10px"></rect>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="392" viewBox="0 0 392 392" x="24" y="24">
+<defs>
+    <clipPath id="round-chessboard">
+        <rect width="392" height="392" x="0" y="0" rx="9px"></rect>
+    </clipPath>
+</defs>
+
+
 <g class="squares">
-    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="343" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="0" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="0" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="0" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="49" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="0" y="0" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
+    <rect width="49" height="49" x="49" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="49" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="49" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="49" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="98" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="98" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="98" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="147" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="98" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="147" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="147" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="147" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="147" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="196" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="196" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="196" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="245" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="196" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="245" y="343" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="245" y="49" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="245" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="245" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
     <rect width="49" height="49" x="294" y="343" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="294" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="294" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="245" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="196" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="196" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="147" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="98" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="98" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="294" y="49" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="294" y="0" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="343" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="294" y="0" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="343" fill="var(--light)" fill-opacity="0.7" clip-path="url(#round-chessboard)"></rect>
     <rect width="49" height="49" x="343" y="294" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="245" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="245" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="196" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="147" fill="var(--light)"></rect>
+    <rect width="49" height="49" x="343" y="147" fill="var(--light)" fill-opacity="0.7"></rect>
     <rect width="49" height="49" x="343" y="98" fill="var(--dark)" fill-opacity="0.1"></rect>
-    <rect width="49" height="49" x="343" y="49" fill="var(--light)"></rect>
-    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1"></rect>
+    <rect width="49" height="49" x="343" y="49" fill="var(--light)" fill-opacity="0.7"></rect>
+    <rect width="49" height="49" x="343" y="0" fill="var(--dark)" fill-opacity="0.1" clip-path="url(#round-chessboard)"></rect>
 </g>
 <g>
 
@@ -18048,6 +18134,7 @@ For the sake of this problem, assume that pieces can attack other pieces of the 
 <text y="298" x="6">3</text>
 <text y="347" x="6">2</text>
 <text y="396" x="6">1</text></g>
+<rect width="394" height="394" stroke="var(--fg)" fill-opacity="0.0" stroke-opacity="0.2" stroke-width="2px" x="23" y="23" rx="10px"></rect>
 </svg>
 
 <figcaption>This arrangement does not work because the rooks on g5 and g8 attack each other.</figcaption>
