@@ -15,4 +15,5 @@ featured: false
 ---
 
 {{< figure src="futurama-good-news-everyone.gif" >}}
+
 Good news, everyone! Futurama will return with 20 new episodes in 2023!
