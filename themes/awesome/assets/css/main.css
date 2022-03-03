@@ -227,7 +227,7 @@ body {
 }
 html {
   font-size: 112.5%;
-  font-family: "IBM Plex Sans", "Open Sans", sans-serif;
+  font-family: "IBM Plex Sans", "Roboto", "Inter", "Open Sans", sans-serif;
   text-underline-offset: 0.15em;
   scroll-padding-top: 1.5rem;
 }
@@ -238,7 +238,7 @@ html {
 }
 
 h1 {
-  font-family: Fraunces, "Linux Libertine", "Source Serif Pro", serif;
+  font-family: Fraunces, "Roboto Slab", "Linux Libertine", "Source Serif Pro", serif;
   font-variation-settings: "wght" 400, "opsz" 72, "SOFT" 100, "WONK" 1;
   font-size: 2.5rem;
   font-weight: 600;
@@ -249,7 +249,7 @@ h1 {
 }
 
 h2 {
-  font-family: Fraunces, serif;
+  font-family: Fraunces, "Roboto Slab", "Linux Libertine", "Source Serif Pro", serif;
   font-variation-settings: "wght" 400, "opsz" 18, "SOFT" 100;
   font-size: 1.925rem;
   font-weight: 500;
@@ -380,7 +380,7 @@ sub {
 }
 
 code {
-  font-family: "IBM Plex Mono", "JBMono", monospace;
+  font-family: "JBMono", "Roboto Mono", monospace;
   font-size: 0.9rem;
 }
 
@@ -420,7 +420,7 @@ blockquote {
 
 blockquote::before {
   content: open-quote;
-  font-family: Fraunces, sans-serif;
+  font-family: Fraunces, "Roboto Slab", "Linux Libertine", "Source Serif Pro", serif;
   color: var(--accent);
   font-size: 3em;
   font-weight: 600;
@@ -434,7 +434,7 @@ blockquote p {
 }
 
 pre {
-  font-family: monospace;
+  font-family: "JBMono", "Roboto Mono", monospace;
 }
 
 q {
@@ -648,7 +648,7 @@ p code,
 li code,
 h4 code,
 kbd {
-  font-family: "IBM Plex Mono", "JBMono", monospace;
+  font-family: "JBMono", "Roboto Mono", monospace;
   padding: 0.05rem 0.2rem;
   border: 0.075rem solid var(--fg);
   border-radius: 0.2rem;
@@ -970,7 +970,7 @@ h4 code {
 }
 
 .list__key {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "IBM Plex Sans", "Roboto", "Inter", "Open Sans", sans-serif;
   font-variation-settings: unset;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
@@ -1622,7 +1622,7 @@ details[open] .admonition__title {
 #content.maths .page__content h2,
 #content.stories .page__header h2,
 #content.stories .page__content h2 {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "IBM Plex Sans", "Roboto", "Inter", "Open Sans", sans-serif;
   letter-spacing: -0.05rem;
   font-variation-settings: unset;
 }

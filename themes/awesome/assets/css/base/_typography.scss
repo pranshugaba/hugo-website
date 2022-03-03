@@ -1,15 +1,17 @@
+@use "../abstracts/mixins" as m;
+
 html {
   font-size: 112.5%;
   @media (min-width: 640px) {
     font-size: 125%;
   }
-  font-family: 'IBM Plex Sans', 'Open Sans', sans-serif;
+  @include m.font-family-sans-serif;
   text-underline-offset: 0.15em;
   scroll-padding-top: 1.5rem;
 }
 
 h1 {
-  font-family: Fraunces, 'Linux Libertine', 'Source Serif Pro', serif;
+  @include m.font-family-serif;
   font-variation-settings: 'wght' 400, 'opsz' 72, 'SOFT' 100, 'WONK' 1;
   font-size: 2.5rem;
   font-weight: 600;
@@ -20,7 +22,7 @@ h1 {
 }
 
 h2 {
-  font-family: Fraunces, serif;
+  @include m.font-family-serif;
   font-variation-settings: 'wght' 400, 'opsz' 18, 'SOFT' 100;
   font-size: 1.925rem;
   font-weight: 500;
@@ -151,7 +153,7 @@ sub {
 }
 
 code {
-  font-family: 'IBM Plex Mono', 'JBMono', monospace;
+  @include m.font-family-mono;
   font-size: 0.9rem;
 }
 
@@ -186,7 +188,7 @@ blockquote {
 }
 blockquote::before {
   content: open-quote;
-  font-family: Fraunces, sans-serif;
+  @include m.font-family-serif;
   color: var(--accent);
   font-size: 3em;
   font-weight: 600;
@@ -199,7 +201,7 @@ blockquote p {
 }
 
 pre {
-  font-family: monospace;
+  @include m.font-family-mono;
 }
 
 q {

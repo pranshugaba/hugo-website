@@ -10,3 +10,16 @@
   list-style: none;
   padding-left: 0;
 }
+
+@mixin font-family-sans-serif {
+  font-family: 'IBM Plex Sans', 'Roboto', 'Inter', 'Open Sans', sans-serif;
+}
+
+@mixin font-family-serif {
+  font-family: Fraunces, 'Roboto Slab', 'Linux Libertine', 'Source Serif Pro',
+    serif;
+}
+
+@mixin font-family-mono {
+  font-family: 'JBMono', 'Roboto Mono', monospace;
+}

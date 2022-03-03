@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as m;
+
 #content.maths,
 #content.stories {
   .page__header,
@@ -18,7 +20,7 @@
     }
 
     h2 {
-      font-family: 'IBM Plex Sans', sans-serif;
+      @include m.font-family-sans-serif;
       letter-spacing: -0.05rem;
       font-variation-settings: unset;
     }

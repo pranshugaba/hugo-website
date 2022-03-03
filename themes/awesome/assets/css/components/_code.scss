@@ -1,4 +1,5 @@
 @use "../abstracts/colors" as c;
+@use "../abstracts/mixins" as m;
 
 pre {
   border-radius: 0.5rem;
@@ -14,8 +15,7 @@ p code,
 li code,
 h4 code,
 kbd {
-  font-family: 'IBM Plex Mono', 'JBMono', monospace;
-  // font-family: 'JBMono', monospace;
+  @include m.font-family-mono;
   padding: 0.05rem 0.2rem;
   border: 0.075rem solid var(--fg);
   border-radius: 0.2rem;

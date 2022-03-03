@@ -6,7 +6,7 @@
 }
 
 .list__key {
-  font-family: 'IBM Plex Sans', sans-serif;
+  @include m.font-family-sans-serif;
   font-variation-settings: unset;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
