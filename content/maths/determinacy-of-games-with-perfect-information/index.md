@@ -40,23 +40,32 @@ We will now formally define a game. We will abstract away the extraneous details
 
 ## Defining a game
 
-A game can be seen as a set of positions, along with a set of rules that dictate the states one is allowed to move to. We can represent a game as a rooted tree, whose each vertex is a a state of the game. The game begins at the root, and the player whose turn it is to play picks a neighbour to move the state to.
+A game can be seen as a set of states $X$.
+The state contains information about the complete history of the game seen so far.
+In addition, we also need a set of rules that determine the set of states one is allowed to move to. 
+
+It will be convenient to represent this information as a directed graph. The vertices of the graph are the states of the game. For each state $x \in X$, the out-neighbours of $x$ are the states that one is allowed to go to from $x$. 
+
+Let $x_0$ be the initial state of the game. 
+Note that for every state $x \in X$, there is exactly one path from $x_0$ to $x$ in the graph. Therefore, what we have is a directed tree. 
+
+
 
 {{< insert-svg filename="states" caption="An example of a rooted tree.">}}
 
-A _play_ of the game is a traversal through this tree starting from the root.  
+The game begins at the root, and the player whose turn it is to play picks a neighbour to move the state to.
+
+We partition the set $X$ into two sets: $X_1$ and $X_2$. If the game is in state $x$, and  $x \in X_i$, then it is Player $i$'s turn to play next. 
+
+A _play_ of the game corresponds to a traversal of states in the tree starting from $x_0$. 
 
 For example in chess, the state of the game is completely described by the position of the pieces, whether the players have castled, and whose turn it is to play next. Unlike chess, we do not require that both players play alternating turns in our games. 
 
-They encode a game as a set $X$ of positions, or states or configurations. 
+The players have _strategies_ that determine how they would play when it's their turn. A strategy of Player 1 is a function $f \colon X_1 \to X$. 
 
-The players have _strategies_ that determine how they would play when it's their turn. A player has a _winning strategy_ if they can always win irrespective of which strategy the other player employs. Of course, it is not possible for both players to have a winning strategy. However, a surprising result is that there exist games where neither of the players has a winning strategy. 
+A player has a _winning strategy_ if they can always win irrespective of which strategy the other player employs. It is not possible for both players to have a winning strategy. However, a surprising result is that there exist games where neither of the players has a winning strategy. 
 
-They showed that there exist games that are not strictly determined. They then tried to characterize games that are determined. I found this really interesting, and I want to share some of the results from the paper.    
-
-A game is represented by an infinite rooted tree $T$. Each vertex of the tree corresponds to a position of the game. Each vertex belong to either player 1 or player 2. A play of the game corresponds to an infinite traversal of states in the tree. 
-
-An objective for player 1 is a set of plays. 
+An _objective_ for player 1 is a set of plays. 
 
 
 ## An infinite game that is not determined
