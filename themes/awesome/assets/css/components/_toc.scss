@@ -1,9 +1,10 @@
-@use "../abstracts/mixins" as m;
+@use '../abstracts/mixins' as m;
 
 .toc {
   border: 2px solid var(--fg);
   border-radius: 0.75rem;
 
+  @include m.font-family-sans-serif;
   max-width: max-content;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -11,6 +12,8 @@
   padding: 1rem 1rem;
   &__heading {
     margin-top: 0;
+    @include m.font-family-sans-serif;
+    font-size: 1.6rem;
   }
   & a {
     @include m.plain-link;

@@ -1130,6 +1130,7 @@ h4 code {
 .toc {
   border: 2px solid var(--fg);
   border-radius: 0.75rem;
+  font-family: "IBM Plex Sans", "Roboto", "Inter", "Open Sans", sans-serif;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -1139,6 +1140,8 @@ h4 code {
 }
 .toc__heading {
   margin-top: 0;
+  font-family: "IBM Plex Sans", "Roboto", "Inter", "Open Sans", sans-serif;
+  font-size: 1.6rem;
 }
 .toc a {
   text-decoration: none;
@@ -1595,14 +1598,14 @@ details[open] .admonition__title {
 #content.maths .page__content,
 #content.stories .page__header,
 #content.stories .page__content {
-  font-size: 110%;
+  font-size: 105%;
   font-family: "Source Serif", "IBM Plex Sans", sans-serif;
 }
 #content.maths .page__header .katex,
 #content.maths .page__content .katex,
 #content.stories .page__header .katex,
 #content.stories .page__content .katex {
-  font-size: 110%;
+  font-size: 105%;
 }
 #content.maths .page__header p,
 #content.maths .page__content p,
