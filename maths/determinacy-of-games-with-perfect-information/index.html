@@ -1,0 +1,154 @@
+<!doctype html><html lang=en><head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="On the determinacy of two-player turn-based infinite games with perfect information">
+<meta property="og:title" content="Determinacy of Games with Perfect Information">
+<meta property="og:description" content="On the determinacy of two-player turn-based infinite games with perfect information">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pranshugaba.com/maths/determinacy-of-games-with-perfect-information/">
+<meta property="og:image" content="https://res.cloudinary.com/pranshugaba/image/upload/w_1280,h_669,c_fill,q_auto,f_auto/w_770,c_fit,co_rgb:121212,g_south_west,x_480,y_375,l_text:inter-semibold.ttf_80_line_spacing_-6_letter_spacing_-3:Determinacy of Games with Perfect Information/w_750,c_fit,co_rgb:121212,g_north_west,x_480,y_350,l_text:inter-regular.ttf_56_letter_spacing_-1:/social.png">
+<meta property="twitter:image" content="https://res.cloudinary.com/pranshugaba/image/upload/w_1280,h_669,c_fill,q_auto,f_auto/w_770,c_fit,co_rgb:121212,g_south_west,x_480,y_375,l_text:inter-semibold.ttf_80_line_spacing_-6_letter_spacing_-3:Determinacy of Games with Perfect Information/w_750,c_fit,co_rgb:121212,g_north_west,x_480,y_350,l_text:inter-regular.ttf_56_letter_spacing_-1:/social.png">
+<meta property="article:section" content="maths">
+<meta property="article:published_time" content="2022-03-09T17:30:00+05:30">
+<meta property="article:modified_time" content="2022-03-09T17:30:00+05:30">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:site content="@pranshugaba">
+<meta name=twitter:title content="Determinacy of Games with Perfect Information">
+<meta name=twitter:description content="On the determinacy of two-player turn-based infinite games with perfect information">
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/svg+xml href=/favicon.svg>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/manifest.json>
+<link rel=mask-icon href=/safari-pinned-tab.svg color=#001f3d>
+<meta name=msapplication-TileColor content="#2b5797">
+<meta name=theme-color content="#001f3d">
+<link rel=stylesheet href=https://pranshugaba.com/css/main.f278d3c302943d2a44faab38a6c1357d65a21ee023a66b56f392dc5f34003440.css>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css integrity=sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js integrity=sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script>document.addEventListener('DOMContentLoaded',function(){renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:!0},{left:'$',right:'$',display:!1}]})})</script>
+<title>
+Determinacy of Games with Perfect Information |
+Pranshu Gaba
+</title>
+</head>
+<body><header>
+<a class=skip__nav href=#content>skip to main content</a>
+<nav class=header>
+<div class=header__logo>
+<a href=/>Pranshu Gaba</a>
+</div>
+<div class=header__sections>
+<a href=/about/>about</a>
+<a href=/contact/>contact</a>
+<a href=/now/>now</a>
+<a href=/explore/>explore</a>
+</div>
+</nav>
+</header>
+<main class=maths id=content>
+<header class=page__header>
+<div class=page__date>
+Wednesday, 9 March 2022
+</div>
+<h1 class=page__title>Determinacy of Games with Perfect Information</h1>
+</header>
+<div class=page__content>
+<p>I recently read a 1953 paper on <em>Infinite Games with Perfect Information</em> by Gale and Stewart<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>. In this paper, they look at two-player games where both players have perfect information. Given such a game, they ask if one of the players has a winning strategy. That is, does one of the players have a strategy such that they always win, no matter how the other player plays?</p>
+<p>In this post, I share some results from the paper that I found interesting. Spoiler alert &mdash; there do exist games in which neither player has a winning strategy.</p>
+<aside class=toc>
+<details open>
+<summary>
+<h2 class=toc__heading>Table of Contents</h2>
+</summary>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#overview>Overview</a></li>
+<li><a href=#defining-a-game>Defining a game</a></li>
+<li><a href=#an-infinite-game-that-is-not-determined>An infinite game that is not determined</a></li>
+<li><a href=#a-topology-of-games>A topology of games</a></li>
+<li><a href=#some-examples-of-determined-games>Some examples of determined games</a></li>
+<li><a href=#whats-next>What&rsquo;s next</a></li>
+</ul>
+</nav>
+</details>
+</aside>
+<h2 id=overview>Overview</h2>
+<p>In this paper, we only look at two-player turn-based games with perfect information and no chance moves.</p>
+<p>That was a mouthful. Let&rsquo;s look at it again, bit by bit.</p>
+<ul>
+<li><em>two-player:</em> We look at games played by two-players. They may be co-op or versus.</li>
+<li><em>turn-based:</em> The game proceeds in discrete steps. We can see the game as a sequence of turns played by the player. It does not necessarily have to alternate between the players. It is possible for the same player to play multiple turns in a row.</li>
+<li><em>perfect information:</em> This means that no information is hidden from the players. Both players know the rules and the state of the game at all times. This excludes games like Poker and Battleship.</li>
+<li><em>no chance moves:</em> There is no luck involved in the game. The way the game proceeds is completely determined by the initial position and the decisions taken by the players. We rule out games such as Snakes and Ladders, Ludo, and Catan where dice are rolled or cards are drawn.</li>
+</ul>
+<p>We will look at both finite games and infinite games. Finite games are those that end after finitely many moves, whereas infinite games go on for infinitely many moves. Most games that we play end are finite.
+Chess, Checkers, Go, and Connect 4 are some examples of finite games, whereas games of cops and robbers is an example of an infinite game.</p>
+<p>We will now formally define a game. We will abstract away the extraneous details and focus on the underlying structure of the games.</p>
+<h2 id=defining-a-game>Defining a game</h2>
+<p>We think of a game as a set of states and some relation between them. The game begins in an initial state. One of the players plays a turn, and that changes the state of the game to a new state.</p>
+<p>A game can be thought of as a set of states $X$. A state (also called position or configuration) contains information about the history of moves that the players have played so far in order to reach the current state.
+As a game is played, the game goes through different states.</p>
+<p>We partition the set $X$ into two sets: $X_1$ and $X_2$. If the game is in state $x$, and $x \in X_i$, then it is Player $i$&rsquo;s turn to play next.</p>
+<p>In addition to the set of states, we also need a set of rules to describe the rules of the game. The rulese tell us that if the game is in state $x$, then what are the possible next states the game could go to. In order words, theses are the legal moves available to the players.</p>
+<p>It will be convenient to represent this information as a directed graph $T$. The vertices of the graph are the states of the game.
+Let $x_0$ be the initial state of the game.</p>
+<p>For each state $x$, if there is a legal move that move the game to a different state $x'$, then the graph has an directed edge from $x$ to $x'$. The out-neighbours of $x$ are all the states that one is allowed to go to from $x$.
+Note that $x_0$ has no in-edges. All other states have exactly one in-edge each.</p>
+<p>For each state $x$ that is not the initial state, we denote by $f(x)$ the <em>predecessor state</em> of $x$. That is, if the game is in state $x$, then it must have been in state $f(x)$ in the previous turn. Now, for each state $x$, the inverse $f^{-1}(x)$ denotes the set of states that can be the next-states of $x$.</p>
+<p>For each state $x$ in $X$, there is exactly one path from $x_0$ to $x$ in the graph. We can find this path by repeatedly applying $f$ starting from $x$ until we eventually reach $x_0$. Therefore, the graph $T$ is a tree rooted at $x_0$. The notation $T$ now makes sense.</p>
+<figure class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="182.68782pt" height="139.16434pt" viewBox="-144.00021 -144.00013 182.68782 139.16434"><defs><path id="g1-49" d="M2.336239-4.435367c0-.188294-.0139480000000001-.195268-.209215-.195268-.446327.439352-1.080947.446326-1.366875.446326v.251059c.167373.0.627647.0 1.011208-.195268V-.571856c0 .230137.0.320797-.697384.320797H.808966V0c.12553-.006974.983313-.027895 1.241345-.027895.21619.0 1.094894.020921 1.248319.027895V-.251059H3.033624c-.697385.0-.697385-.09066-.697385-.320797V-4.435367z"/><path id="g1-50" d="M3.521793-1.26924H3.284682C3.263761-1.115816 3.194022-.704359 3.103362-.63462c-.05579.041843-.592777.041843-.690411.041843H1.129763c.732254-.648568.976339-.843836 1.39477-1.171607.516065-.411457.99726-.843835.99726-1.506351.0-.843834999999999-.739228-1.3599-1.63188-1.3599-.864757.0-1.450561.606725-1.450561 1.248319.0.355666.299876.390535.369614.390535.167373.0.369614-.118555.369614-.369614C1.17858-3.486924 1.129763-3.731009.767123-3.731009.983313-4.226152 1.457534-4.379577 1.785305-4.379577c.697385.0 1.060025.543961 1.060025 1.108842.0.606725-.432379 1.087921-.655542 1.338979L.509091-.27198C.439352-.209215.439352-.195268.439352.0H3.312578l.209215-1.26924z"/><path id="g1-51" d="M1.903861-2.329265c.54396.0.934495.376588.934495 1.122789.0.864757-.502117 1.12279-.9066 1.12279-.278954.0-.892653-.076713-1.185554-.48817C1.073973-.585803 1.150685-.81594 1.150685-.962391c0-.223163-.167372-.383562-.383562-.383562-.195267.0-.390535.118556-.390535.404484.0.655541.72528 1.080946 1.569116 1.080946.969364.0 1.638854-.648568 1.638854-1.345953.0-.54396-.446326-1.08792-1.21345-1.248319.732254-.265006.997261-.788044.997261-1.213449.0-.550934-.634621-.962391-1.408718-.962391S.592777-4.254047.592777-3.696139c0 .23711.153425.369613.36264.369613.216189.0.355666-.160398.355666-.355666.0-.202241-.139477-.348692-.355666-.36264.244085-.306849.72528-.383562.983313-.383562.313823.0.753175.153425.753175.76015.0.292902-.0976340000000002.613699-.278954.829888-.230137.265006-.425404.278954-.774097.299875C1.464508-2.524533 1.45056-2.524533 1.415691-2.517559 1.401743-2.517559 1.345953-2.503611 1.345953-2.426899 1.345953-2.329265 1.408717-2.329265 1.527273-2.329265h.376588z"/><path id="g0-115" d="M3.895392-3.726027C3.616438-3.716065 3.417186-3.496887 3.417186-3.277709c0 .139477.0896629999999998.288917.308841.288917s.458282-.169365.458282-.557908c0-.448319-.428394-.856787-1.185554-.856787-1.315069.0-1.683687 1.016189-1.683687 1.454546.0.777085.737236.926525 1.026152.986301.518058.099626 1.036115.209215 1.036115.757161.0.259028-.229141 1.09589-1.424658 1.09589-.139477.0-.9066.0-1.135741-.52802.378581.049813.627647-.249066.627647-.52802.0-.229141-.159402-.348692-.368618-.348692-.259029.0-.557908.209215-.557908.657534.0.56787.567871.966376 1.424658.966376 1.613948.0 2.00249-1.205479 2.00249-1.653798.0-.358655-.18929-.607721-.308841-.727273-.268992-.278954-.557908-.328767-.996264-.418431C2.281445-2.769614 1.882939-2.839352 1.882939-3.287671c0-.288917.239103-.896638 1.115816-.896638.249066.0.747198.0697390000000002.896637.458282z"/></defs><g id="page1" transform="matrix(2 0 0 2 0 0)"><g class="fg-stroke"><path d="M-16.98828-62.265627c0-5.156253-4.1836-9.335933-9.339846-9.335933-5.156254.0-9.335934 4.17968000000001-9.335934 9.335933.0 5.16015700000001 4.17968 9.339847 9.335934 9.339847 5.156246.0 9.339846-4.17968999999999 9.339846-9.339847z" stroke="#000" fill="none" stroke-width=".79701"/><path d="M-52.9258-12.1523c0-5.1602-4.1836-9.3399-9.3398-9.3399C-67.4219-21.4922-71.6016-17.3125-71.6016-12.1523-71.6016-6.9961-67.4219-2.8164-62.2656-2.8164c5.1562.0 9.3398-4.1797 9.3398-9.3359z" stroke="#000" fill="none" stroke-width=".79701" stroke-miterlimit="10"/><path d="M18.9453-12.1523c0-5.1602-4.1797-9.3399-9.3359-9.3399-5.1563.0-9.336 4.1797-9.336 9.3399.0 5.1562 4.1797 9.3359 9.336 9.3359 5.1562.0 9.3359-4.1797 9.3359-9.3359z" stroke="#000" fill="none" stroke-width=".79701" stroke-miterlimit="10"/><path d="M-32-54.35156-53.4648-24.4258" stroke="#000" fill="none" stroke-width=".79701" stroke-miterlimit="10" class="fg-fill"/><path d="M-55.199207-22.007777l3.699217-2.460929L-53.578113-24.265583-54.054675-26.29684z" stroke="#000" fill="none" stroke-width=".79697" stroke-miterlimit="10" stroke-linejoin="bevel"/><path d="M-20.65234-54.35156.8086-24.4258" stroke="#000" fill="none" stroke-width=".79701" stroke-miterlimit="10"/><path d="M2.542968-22.007779 1.39844-26.296844.925779-24.265592-1.152346-24.468714z" stroke="#000" fill="none" stroke-width=".79697" stroke-miterlimit="10" stroke-linejoin="bevel"/></g><g class="fg-fill"><path d="M-55.199207-22.007777l3.699217-2.460929L-53.578113-24.265583-54.054675-26.29684z"/><path d="M2.542968-22.007779 1.39844-26.296844.925779-24.265592-1.152346-24.468714z"/><g transform="matrix(1 0 0 1 -4.5697 1.3976)"><use x="-26.32745" y="-62.264205" xlink:href="#g0-115"/><use x="-21.657462" y="-60.769824" xlink:href="#g1-49"/></g><g transform="matrix(1 0 0 1 -40.5069 51.5082)"><use x="-26.32745" y="-62.264205" xlink:href="#g0-115"/><use x="-21.657462" y="-60.769824" xlink:href="#g1-50"/></g><g transform="matrix(1 0 0 1 31.36748 51.5082)"><use x="-26.32745" y="-62.264205" xlink:href="#g0-115"/><use x="-21.657462" y="-60.769824" xlink:href="#g1-51"/></g></g></g></svg>
+<figcaption>An example of a rooted tree.</figcaption>
+</figure>
+<p>The game begins at the root, and the player whose turn it is to play picks a neighbour to move the state to.</p>
+<p>A <em>play</em> of the game corresponds to a traversal of states in the tree starting from $x_0$.</p>
+<p>For example in chess, the state of the game is completely described by the position of the pieces, whether the players have castled, and whose turn it is to play next. Unlike chess, we do not require that both players play alternating turns in our games.</p>
+<p>The players have <em>strategies</em> that determine how they would play when it&rsquo;s their turn. A strategy of Player 1 is a function $\sigma \colon X_1 \to X$.</p>
+<p>A player has a <em>winning strategy</em> if they can always win irrespective of which strategy the other player employs. It is not possible for both players to have a winning strategy. However, a surprising result is that there exist games where neither of the players has a winning strategy.</p>
+<p>An <em>objective</em> for player 1 is a set of plays.</p>
+<h2 id=an-infinite-game-that-is-not-determined>An infinite game that is not determined</h2>
+<p>The paper shows an example of a infinite game that is not strictly determined. For every strategy $\sigma$ of Player 1, Player 2 has a strategy such that the resulting play is winning for Player 2. Similarly, no matter what strategy Player 2 picks, Player 1 has a strategy such that they win the game. In other words, none of the players have a winning strategy. The game goes as follows:</p>
+<h2 id=a-topology-of-games>A topology of games</h2>
+<p>We consider a topology generated by <em>cones</em>.</p>
+<h2 id=some-examples-of-determined-games>Some examples of determined games</h2>
+<p>Games in which the winning objective is an open set are determined.</p>
+<h2 id=whats-next>What&rsquo;s next</h2>
+<p>If you found this interesting, I recommend that you give the original paper a read. You may also read a follow up paper by Donald Martin<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup> where he proves that all Borel games are determined.</p>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p>Gale, David and Stewart, F. M.. &ldquo;13. Infinite Games with Perfect Information&rdquo;. <em>Contributions to the Theory of Games, Volume II</em>, Princeton University Press, 1953, pp. 245-266. <a href=https://doi.org/10.1515/9781400881970-014 target=_blank rel=noopener>https://doi.org/10.1515/9781400881970-014</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:2 role=doc-endnote>
+<p>Donald A. Martin. Borel determinacy. <em>Annals of Mathematics</em>, 102(2):363–371, 1975.&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</div>
+<div class=page__navtags>
+<ul class=page__tags>
+<li><a href=https://pranshugaba.com/tags/topology/>topology</a></li>
+<li><a href=https://pranshugaba.com/tags/game-theory/>game theory</a></li>
+</ul>
+<div class=page__all>
+<a href=/maths>all maths</a>
+</div>
+</div>
+<div class=page__nav>
+<div class=page__home>
+<a href=/><span>&#8592;</span> <span>home</span></a>
+</div>
+</div>
+</main><footer class=footer>
+<div class=footer__copyright>
+<a href=/licence/> © 2022 Pranshu Gaba </a>
+</div>
+<div class=footer__links>
+<a href=/subscribe/>subscribe</a>
+</div>
+</footer>
+</body>
+</html>
