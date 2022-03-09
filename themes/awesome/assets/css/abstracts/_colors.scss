@@ -10,7 +10,7 @@
 
 
 // $monocolor: indigo;
-// $monocolor: hsl(197, 100%, 22%);
+// // $monocolor: hsl(197, 100%, 22%);
 // $lightlight: white;
 // $lightdark: $monocolor;
 // $lightaccent: purple;
@@ -18,6 +18,16 @@
 // $darkdark: $monocolor;
 // $darkaccent: pink;
 
+$finance: #FFF1E5;
+$black: #33302e;
+$lightlight: $finance;
+$lightdark: $black;
+// $lightaccent: hsl(185, 82%, 28%);
+$lightaccent: RebeccaPurple;
+$darklight: $finance;
+$darkdark: $black;
+// $darkaccent: hsl(186, 72%, 72%);
+$darkaccent: pink;
 
 // $papaya: hsl(37.1, 100%, 91.8%);
 // $black: #121212;
@@ -51,16 +61,16 @@
 // $ukraineblue: #0057B8;
 // $ukraineyellow: #FFD700;
 
-$ukraineblue: hsl(212, 100%, 19%);
-$ukraineyellow: hsl(51, 100%, 81%);
-$ukraineblueaccent: hsl(212, 100%, 36%);
-$ukraineyellowaccent: hsl(51, 100%, 60%);
-$lightlight: $ukraineyellow;
-$lightdark: $ukraineblue;
-$lightaccent: $ukraineblueaccent;
-$darklight: $ukraineyellow;
-$darkdark: $ukraineblue;
-$darkaccent: $ukraineyellowaccent;
+// $ukraineblue: hsl(212, 100%, 19%);
+// $ukraineyellow: hsl(51, 100%, 81%);
+// $ukraineblueaccent: hsl(212, 100%, 36%);
+// $ukraineyellowaccent: hsl(51, 100%, 60%);
+// $lightlight: $ukraineyellow;
+// $lightdark: $ukraineblue;
+// $lightaccent: $ukraineblueaccent;
+// $darklight: $ukraineyellow;
+// $darkdark: $ukraineblue;
+// $darkaccent: $ukraineyellowaccent;
 
 
 :root {

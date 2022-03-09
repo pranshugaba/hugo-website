@@ -51,7 +51,7 @@ The site is open source. You can find the source code on [Github](https://github
 
 Last updated: {{< lastupdated >}}
 
-Current theme: **Slava Ukraini!**
+Current theme: **Strawberry and Chocolate**
 
 ### Support
 

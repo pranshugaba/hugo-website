@@ -539,11 +539,11 @@ figure figcaption {
   }
 }
 :root {
-  --bg: #fff09e;
-  --fg: #002d61;
-  --accent: #0056b8;
-  --light: #fff09e;
-  --dark: #002d61;
+  --bg: #FFF1E5;
+  --fg: #33302e;
+  --accent: RebeccaPurple;
+  --light: #FFF1E5;
+  --dark: #33302e;
 }
 @media print {
   :root {
@@ -557,9 +557,9 @@ figure figcaption {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #002d61;
-    --fg: #fff09e;
-    --accent: #ffe033;
+    --bg: #33302e;
+    --fg: #FFF1E5;
+    --accent: pink;
   }
 }
 .header {
