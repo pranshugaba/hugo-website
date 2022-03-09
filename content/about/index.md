@@ -37,7 +37,6 @@ The site is open source. You can find the source code on [Github](https://github
 |                      Count | Section                              |
 | -------------------------: | :----------------------------------- |
 |     {{< countposts dev >}} | [Dev posts]({{< ref "/dev/" >}})     |
-|   {{< countposts maths >}} | [Maths posts]({{< ref "/maths/" >}}) |
 |   {{< countposts trips >}} | [Trips]({{< ref "/trips/" >}})       |
 | {{< countposts reviews >}} | [Reviews]({{< ref "/reviews/" >}})   |
 |   {{< countposts links >}} | [Links]({{< ref "/links/" >}})       |

@@ -10,7 +10,6 @@ summary: A guide to explore my site
 ### Learn
 
 - [Dev]({{< ref "/dev/" >}}): Technical posts on gamedev, webdev, and Linux
-- [Maths]({{< ref "/maths/" >}}): Posts about maths and computer science
 
 ### Explore
 
