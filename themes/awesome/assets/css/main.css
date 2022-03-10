@@ -227,7 +227,7 @@ body {
 }
 html {
   font-size: 112.5%;
-  font-family: "IBM Plex Sans", "Roboto", "Inter", "Open Sans", sans-serif;
+  font-family: "IBM Plex Sans", "Roboto", sans-serif;
   text-underline-offset: 0.15em;
   scroll-padding-top: 1.5rem;
 }
@@ -238,7 +238,7 @@ html {
 }
 
 h1 {
-  font-family: Fraunces, "Roboto Slab", "Linux Libertine", "Source Serif Pro", serif;
+  font-family: Fraunces, "Roboto Slab", "Source Serif Pro", serif;
   font-variation-settings: "wght" 400, "opsz" 72, "SOFT" 100, "WONK" 1;
   font-size: 2.5rem;
   font-weight: 600;
@@ -249,7 +249,7 @@ h1 {
 }
 
 h2 {
-  font-family: Fraunces, "Roboto Slab", "Linux Libertine", "Source Serif Pro", serif;
+  font-family: Fraunces, "Roboto Slab", "Source Serif Pro", serif;
   font-variation-settings: "wght" 400, "opsz" 18, "SOFT" 100;
   font-size: 1.925rem;
   font-weight: 500;
@@ -420,7 +420,7 @@ blockquote {
 
 blockquote::before {
   content: open-quote;
-  font-family: Fraunces, "Roboto Slab", "Linux Libertine", "Source Serif Pro", serif;
+  font-family: Fraunces, "Roboto Slab", "Source Serif Pro", serif;
   color: var(--accent);
   font-size: 3em;
   font-weight: 600;
@@ -970,7 +970,7 @@ h4 code {
 }
 
 .list__key {
-  font-family: "IBM Plex Sans", "Roboto", "Inter", "Open Sans", sans-serif;
+  font-family: "IBM Plex Sans", "Roboto", sans-serif;
   font-variation-settings: unset;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
@@ -1130,7 +1130,7 @@ h4 code {
 .toc {
   border: 2px solid var(--fg);
   border-radius: 0.75rem;
-  font-family: "IBM Plex Sans", "Roboto", "Inter", "Open Sans", sans-serif;
+  font-family: "IBM Plex Sans", "Roboto", sans-serif;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -1140,8 +1140,8 @@ h4 code {
 }
 .toc__heading {
   margin-top: 0;
-  font-family: "IBM Plex Sans", "Roboto", "Inter", "Open Sans", sans-serif;
-  font-size: 1.6rem;
+  font-family: "IBM Plex Sans", "Roboto", sans-serif;
+  font-size: 1.5rem;
 }
 .toc a {
   text-decoration: none;
@@ -1592,44 +1592,4 @@ details[open] .admonition__title {
 }
 .minis .page__content p {
   line-height: 1.5;
-}
-
-#content.maths .page__header,
-#content.maths .page__content,
-#content.stories .page__header,
-#content.stories .page__content {
-  font-size: 105%;
-  font-family: "Source Serif", "IBM Plex Sans", sans-serif;
-}
-#content.maths .page__header .katex,
-#content.maths .page__content .katex,
-#content.stories .page__header .katex,
-#content.stories .page__content .katex {
-  font-size: 105%;
-}
-#content.maths .page__header p,
-#content.maths .page__content p,
-#content.stories .page__header p,
-#content.stories .page__content p {
-  line-height: 1.6;
-}
-#content.maths .page__header h1,
-#content.maths .page__content h1,
-#content.stories .page__header h1,
-#content.stories .page__content h1 {
-  font-family: "Source Serif", "IBM Plex Sans", sans-serif;
-  letter-spacing: unset;
-  font-variation-settings: "wght" 600, "opsz" 40;
-}
-#content.maths .page__header h2,
-#content.maths .page__content h2,
-#content.stories .page__header h2,
-#content.stories .page__content h2 {
-  font-family: "IBM Plex Sans", "Roboto", "Inter", "Open Sans", sans-serif;
-  letter-spacing: -0.05rem;
-  font-variation-settings: unset;
-}
-#content.maths .page__subtitle,
-#content.stories .page__subtitle {
-  font-size: 140%;
 }/*# sourceMappingURL=main.css.map */

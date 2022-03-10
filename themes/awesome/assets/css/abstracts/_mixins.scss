@@ -12,12 +12,11 @@
 }
 
 @mixin font-family-sans-serif {
-  font-family: 'IBM Plex Sans', 'Roboto', 'Inter', 'Open Sans', sans-serif;
+  font-family: 'IBM Plex Sans', 'Roboto', sans-serif;
 }
 
 @mixin font-family-serif {
-  font-family: Fraunces, 'Roboto Slab', 'Linux Libertine', 'Source Serif Pro',
-    serif;
+  font-family: Fraunces, 'Roboto Slab', 'Source Serif Pro', serif;
 }
 
 @mixin font-family-mono {
