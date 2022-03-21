@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hugo by Pranshu Gaba</title><link>https://pranshugaba.com/tags/hugo/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 22 Mar 2022 03:34:11 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/hugo/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Colour Shortcode</title><link>https://pranshugaba.com/dev/hugo-colour-shortcode/</link><pubDate>Wed, 21 Jul 2021 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/hugo-colour-shortcode/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hugo by Pranshu Gaba</title><link>https://pranshugaba.com/tags/hugo/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 22 Mar 2022 03:38:51 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/hugo/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Colour Shortcode</title><link>https://pranshugaba.com/dev/hugo-colour-shortcode/</link><pubDate>Wed, 21 Jul 2021 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/hugo-colour-shortcode/</guid><description>
 <![CDATA[<p>I was writing a <a href="https://pranshugaba.com/dev/moving-back-to-hugo/">post about my new Hugo website</a>, and I wanted to describe the colours used on this site. I wrote the names of the colours, but names do not convey the colour very well. Can you imagine what the colour #714825 looks like? What about rgb(0, 100, 255)?</p>
 <p>I thought it would be great if the reader could also see a preview of the colours. I could add images of the colours that I am describing, but that is a lot of work and not very flexible.  This is what led me to write this Hugo shortcode. I followed the <a href="https://gohugo.io/templates/shortcode-templates/" target="_blank" rel="noopener">Hugo docs on shortcodes</a> for reference.</p>
 <h2 id="usage">Usage</h2>
 <p>The following code in markdown
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">This is a colour shortcode {{&lt; colour &#34;#ff0000&#34; &gt;}}.</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>This is a colour shortcode {{&lt; colour &#34;#ff0000&#34; &gt;}}.</span></span></code></pre></div></p>
 <p>renders as</p>
 <p>This is a colour shortcode 
 <code style="background-color: #ff0000;"> 
@@ -25,16 +25,16 @@
 </ul>
 <h2 id="shortcode">Shortcode</h2>
 <p>I created a file named <code>colour.html</code> in <code>layouts/shortcodes</code>, and added the following code in it. We can now access this code in any markdown file using the <code>colour</code> shortcode.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> <span style="color:#5bc4bf">:=</span> .<span style="color:#06b6ef">Get</span> <span style="color:#f99b15">0</span> | <span style="color:#06b6ef">safeCSS</span> }}
-&lt;<span style="color:#06b6ef">code</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;background-color: {{ $colour }};&#34;</span>&gt; 
-  &lt;<span style="color:#06b6ef">span</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;
-</span><span style="color:#48b685">      color: {{ $colour }};
-</span><span style="color:#48b685">      filter:  grayscale(1) invert(1) contrast(100);
-</span><span style="color:#48b685">      &#34;</span>&gt;
-      {{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> }}
-  &lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">span</span>&gt;
-&lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">code</span>&gt;
-</code></pre></div><p>The shortcode takes in an argument: <code>$colour</code>.  We use this parameter to set the text in the <code>code</code> tag, and we set both the text colour and the background colour to <code>$colour</code>. We then invert the colour of the text and increase the contrast to make the name of the colour legible. The end result is that the text is white if colour is bright, and black if it is dark.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> <span style="color:#5bc4bf">:=</span> .<span style="color:#06b6ef">Get</span> <span style="color:#f99b15">0</span> | <span style="color:#06b6ef">safeCSS</span> }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#06b6ef">code</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;background-color: {{ $colour }};&#34;</span>&gt; 
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#06b6ef">span</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">      color: {{ $colour }};
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">      filter:  grayscale(1) invert(1) contrast(100);
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">      &#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      {{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">span</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">code</span>&gt;
+</span></span></code></pre></div><p>The shortcode takes in an argument: <code>$colour</code>.  We use this parameter to set the text in the <code>code</code> tag, and we set both the text colour and the background colour to <code>$colour</code>. We then invert the colour of the text and increase the contrast to make the name of the colour legible. The end result is that the text is white if colour is bright, and black if it is dark.</p>
 
 
 
@@ -111,17 +111,17 @@
 </ul>
 <p>The text is always legible, but the colour preview is smaller.</p>
 <p>Here&rsquo;s the shortcode for this style:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> <span style="color:#5bc4bf">:=</span> .<span style="color:#06b6ef">Get</span> <span style="color:#f99b15">0</span> | <span style="color:#06b6ef">safeCSS</span> }}
-&lt;<span style="color:#06b6ef">code</span>&gt;
-&lt;<span style="color:#06b6ef">span</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;display: inline-block;
-</span><span style="color:#48b685">    width: 1.6ch;
-</span><span style="color:#48b685">    height: 1.6ch;
-</span><span style="color:#48b685">    border-radius: 0.1rem;
-</span><span style="color:#48b685">    background-color: {{ $colour }};
-</span><span style="color:#48b685">    margin-right:5px;&#34;</span>&gt;&lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">span</span>&gt;
-    {{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> }}
-&lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">code</span>&gt;
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> <span style="color:#5bc4bf">:=</span> .<span style="color:#06b6ef">Get</span> <span style="color:#f99b15">0</span> | <span style="color:#06b6ef">safeCSS</span> }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#06b6ef">code</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#06b6ef">span</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;display: inline-block;
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    width: 1.6ch;
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    height: 1.6ch;
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    border-radius: 0.1rem;
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    background-color: {{ $colour }};
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    margin-right:5px;&#34;</span>&gt;&lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">span</span>&gt;
+</span></span><span style="display:flex;"><span>    {{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">code</span>&gt;
+</span></span></code></pre></div><hr>
 <p><a href="https://pranshugaba.com/contact/">Let me know</a> if you liked this shortcode, and which style you liked more. Feel free to use this code in your site and share your implementation with me. If you have any suggestions to improve this code, share those with me too.</p>
 ]]></description></item><item><title>...and Back to Hugo Again</title><link>https://pranshugaba.com/dev/moving-back-to-hugo/</link><pubDate>Tue, 06 Jul 2021 15:16:36 +0530</pubDate><guid>https://pranshugaba.com/dev/moving-back-to-hugo/</guid><description>
 <![CDATA[<p>Not more than 2 months ago, I had migrated my site from Hugo to Nuxt, and I had <a href="https://pranshugaba.com/dev/moving-from-hugo-to-nuxt/">written a post</a> describing why I chose to do so. Well, that didn&rsquo;t last long, and now I am back to using Hugo.</p>
@@ -260,8 +260,8 @@ I found that Nuxt is in active development, the modules are great, and the docum
 $$</p>
 <h4 id="code-blocks">Code blocks</h4>
 <p>Prism.js comes pre-installed with Nuxt. You can install themes and plugins too.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#815ba4">fn</span> <span style="color:#06b6ef">main</span>() {
-    println!(<span style="color:#48b685">&#34;Hello, world!&#34;</span>);
-}
-</code></pre></div><p>You can check out the code on <a href="https://github.com/pranshugaba/nuxt-website" target="_blank" rel="noopener">GitHub</a>  to see how I made my website using Nuxt.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#815ba4">fn</span> <span style="color:#06b6ef">main</span>() {
+</span></span><span style="display:flex;"><span>    println!(<span style="color:#48b685">&#34;Hello, world!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You can check out the code on <a href="https://github.com/pranshugaba/nuxt-website" target="_blank" rel="noopener">GitHub</a>  to see how I made my website using Nuxt.</p>
 ]]></description></item></channel></rss>
