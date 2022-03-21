@@ -227,7 +227,7 @@ body {
 }
 html {
   font-size: 112.5%;
-  font-family: "IBM Plex Sans", "Roboto", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   text-underline-offset: 0.15em;
   scroll-padding-top: 1.5rem;
 }
@@ -238,7 +238,7 @@ html {
 }
 
 h1 {
-  font-family: Fraunces, "Roboto Slab", "Source Serif Pro", serif;
+  font-family: "Fraunces", serif;
   font-variation-settings: "wght" 400, "opsz" 72, "SOFT" 100, "WONK" 1;
   font-size: 2.5rem;
   font-weight: 600;
@@ -249,7 +249,7 @@ h1 {
 }
 
 h2 {
-  font-family: Fraunces, "Roboto Slab", "Source Serif Pro", serif;
+  font-family: "Fraunces", serif;
   font-variation-settings: "wght" 400, "opsz" 18, "SOFT" 100;
   font-size: 1.925rem;
   font-weight: 500;
@@ -420,7 +420,7 @@ blockquote {
 
 blockquote::before {
   content: open-quote;
-  font-family: Fraunces, "Roboto Slab", "Source Serif Pro", serif;
+  font-family: "Fraunces", serif;
   color: var(--accent);
   font-size: 3em;
   font-weight: 600;
@@ -970,7 +970,7 @@ h4 code {
 }
 
 .list__key {
-  font-family: "IBM Plex Sans", "Roboto", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-variation-settings: unset;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
@@ -1130,7 +1130,7 @@ h4 code {
 .toc {
   border: 2px solid var(--fg);
   border-radius: 0.75rem;
-  font-family: "IBM Plex Sans", "Roboto", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -1140,8 +1140,9 @@ h4 code {
 }
 .toc__heading {
   margin-top: 0;
-  font-family: "IBM Plex Sans", "Roboto", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 1.5rem;
+  font-variation-settings: "wght" 500;
 }
 .toc a {
   text-decoration: none;

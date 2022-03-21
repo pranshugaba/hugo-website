@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>game-theory by Pranshu Gaba</title><link>https://pranshugaba.com/tags/game-theory/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 10 Mar 2022 12:01:23 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/game-theory/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/game-theory/index.xml" rel="self" type="application/rss+xml"/><item><title>Determinacy of Games with Perfect Information</title><link>https://pranshugaba.com/maths/determinacy-of-games-with-perfect-information/</link><pubDate>Wed, 09 Mar 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/maths/determinacy-of-games-with-perfect-information/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>game-theory by Pranshu Gaba</title><link>https://pranshugaba.com/tags/game-theory/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 22 Mar 2022 03:34:11 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/game-theory/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/game-theory/index.xml" rel="self" type="application/rss+xml"/><item><title>Determinacy of Games with Perfect Information</title><link>https://pranshugaba.com/maths/determinacy-of-games-with-perfect-information/</link><pubDate>Wed, 09 Mar 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/maths/determinacy-of-games-with-perfect-information/</guid><description>
 <![CDATA[<p>I recently read a 1953 paper on <em>Infinite Games with Perfect Information</em> by Gale and Stewart<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. In this paper, they look at two-player games where both players have perfect information. Given such a game, they ask if one of the players has a winning strategy. That is, does one of the players have a strategy such that they always win, no matter how the other player plays?</p>
-<p>In this post, I share some results from the paper that I found interesting. Spoiler alert &mdash; there do exist games in which neither player has a winning strategy.</p>
+<p>In this post, I share some results from the paper that I found interesting.</p>
+<p>Spoiler alert &mdash; there do exist games in which neither player has a winning strategy.</p>
 <aside class="toc">
   <details open>
     <summary>
@@ -31,11 +32,12 @@
 Chess, Checkers, Go, and Connect 4 are some examples of finite games, whereas games of cops and robbers is an example of an infinite game.</p>
 <p>We will now formally define a game. We will abstract away the extraneous details and focus on the underlying structure of the games.</p>
 <h2 id="defining-a-game">Defining a game</h2>
+<p>It will be helpful to look at the <em>state</em> of a game.</p>
 <p>We think of a game as a set of states and some relation between them. The game begins in an initial state. One of the players plays a turn, and that changes the state of the game to a new state.</p>
 <p>A game can be thought of as a set of states $X$. A state (also called position or configuration) contains information about the history of moves that the players have played so far in order to reach the current state.
 As a game is played, the game goes through different states.</p>
 <p>We partition the set $X$ into two sets: $X_1$ and $X_2$. If the game is in state $x$, and  $x \in X_i$, then it is Player $i$&rsquo;s turn to play next.</p>
-<p>In addition to the set of states, we also need a set of rules to describe the rules of the game. The rulese tell us that if the game is in state $x$, then what are the possible next states the game could go to. In order words, theses are the legal moves available to the players.</p>
+<p>In addition to the set of states, we also need a set of rules to describe the rules of the game. The rules tell us that if the game is in state $x$, then what are the possible next states the game could go to. In order words, theses are the legal moves available to the players.</p>
 <p>It will be convenient to represent this information as a directed graph $T$. The vertices of the graph are the states of the game.
 Let $x_0$ be the initial state of the game.</p>
 <p>For each state $x$, if there is a legal move that move the game to a different state $x'$, then the graph has an directed edge from $x$ to $x'$. The out-neighbours of $x$ are all the states that one is allowed to go to from $x$.
@@ -89,13 +91,17 @@ Note that $x_0$ has no in-edges. All other states have exactly one in-edge each.
     
 </figure>
 <p>The game begins at the root, and the player whose turn it is to play picks a neighbour to move the state to.</p>
-<p>A <em>play</em> of the game corresponds to a traversal of states in the tree starting from $x_0$.</p>
+<blockquote>
+<p>If the game is in state $x$, and $x \in X_i$, then Player $i$ picks a state from $f^{-1}(x)$.</p>
+</blockquote>
+<p>A <em>play</em> of the game corresponds to a traversal of states in the tree starting from $x_0$. Let $S$ denote the set of all plays.</p>
 <p>For example in chess, the state of the game is completely described by the position of the pieces, whether the players have castled, and whose turn it is to play next. Unlike chess, we do not require that both players play alternating turns in our games.</p>
+<p>An <em>objective</em> for a player is a set of plays. Out of the many directed paths in the game tree $T$, each player has a subset of these that they would like to follow. Let $S_1$ denote the objective of Player 1 and $S_2$ denote the objective set of Player 2.
+A special interest are <em>zero-sum</em> games. Player 1 wins if and only if Player 2 doesn&rsquo;t. We can write this as $S_1 = S \setminus S_2$.</p>
 <p>The players have <em>strategies</em> that determine how they would play when it&rsquo;s their turn. A strategy of Player 1 is a function $\sigma \colon X_1 \to X$.</p>
 <p>A player has a <em>winning strategy</em> if they can always win irrespective of which strategy the other player employs. It is not possible for both players to have a winning strategy. However, a surprising result is that there exist games where neither of the players has a winning strategy.</p>
-<p>An <em>objective</em> for player 1 is a set of plays.</p>
 <h2 id="an-infinite-game-that-is-not-determined">An infinite game that is not determined</h2>
-<p>The paper shows an example of a infinite game that is not strictly determined. For every strategy $\sigma$ of Player 1, Player 2 has a strategy such that the resulting play is winning for Player 2. Similarly, no matter what strategy Player 2 picks, Player 1 has a strategy such that they win the game. In other words, none of the players have a winning strategy. The game goes as follows:</p>
+<p>The paper shows an example of a infinite game that is not determined. For every strategy $\sigma$ of Player 1, Player 2 has a strategy such that the resulting play is winning for Player 2. Similarly, no matter what strategy Player 2 picks, Player 1 has a strategy such that they win the game. In other words, none of the players have a winning strategy. The game goes as follows:</p>
 <h2 id="a-topology-of-games">A topology of games</h2>
 <p>We consider a topology generated by <em>cones</em>.</p>
 <h2 id="some-examples-of-determined-games">Some examples of determined games</h2>
