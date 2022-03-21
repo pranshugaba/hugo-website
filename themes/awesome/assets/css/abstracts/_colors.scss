@@ -48,7 +48,6 @@ $darkaccent: pink;
 // $darkdark: $solarizedbase03;
 // $darkaccent: pink;
 
-
 // $hue: 210;
 // $lightlight: hsl($hue, 100%, 96%);
 // $lightdark: hsl($hue, 100%, 12%);
@@ -57,21 +56,6 @@ $darkaccent: pink;
 // $darklight: hsl($hue, 100%, 94%);
 // $darkdark: hsl($hue, 100%, 7%);
 // $darkaccent: hsl($hue + 180, 100%, 80%);
-
-// $ukraineblue: #0057B8;
-// $ukraineyellow: #FFD700;
-
-// $ukraineblue: hsl(212, 100%, 19%);
-// $ukraineyellow: hsl(51, 100%, 81%);
-// $ukraineblueaccent: hsl(212, 100%, 36%);
-// $ukraineyellowaccent: hsl(51, 100%, 60%);
-// $lightlight: $ukraineyellow;
-// $lightdark: $ukraineblue;
-// $lightaccent: $ukraineblueaccent;
-// $darklight: $ukraineyellow;
-// $darkdark: $ukraineblue;
-// $darkaccent: $ukraineyellowaccent;
-
 
 :root {
   --bg: #{$lightlight};
@@ -96,9 +80,3 @@ $darkaccent: pink;
     --accent: #{$darkaccent};
   }
 }
-
-// .dark-mode {
-//   --bg: #{$darkdark};
-//   --fg: #{$darklight};
-//   --accent: #{$darkaccent};
-// }
