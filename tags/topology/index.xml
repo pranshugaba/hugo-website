@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>topology by Pranshu Gaba</title><link>https://pranshugaba.com/tags/topology/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 22 Mar 2022 03:38:51 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/topology/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/topology/index.xml" rel="self" type="application/rss+xml"/><item><title>Determinacy of Games with Perfect Information</title><link>https://pranshugaba.com/maths/determinacy-of-games-with-perfect-information/</link><pubDate>Wed, 09 Mar 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/maths/determinacy-of-games-with-perfect-information/</guid><description>
-<![CDATA[<p>I recently read a 1953 paper on <em>Infinite Games with Perfect Information</em> by Gale and Stewart<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. In this paper, they look at two-player games where both players have perfect information. Given such a game, they ask if one of the players has a winning strategy. That is, does one of the players have a strategy such that they always win, no matter how the other player plays?</p>
-<p>In this post, I share some results from the paper that I found interesting.</p>
-<p>Spoiler alert &mdash; there do exist games in which neither player has a winning strategy.</p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>topology by Pranshu Gaba</title><link>https://pranshugaba.com/tags/topology/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 26 Mar 2022 15:12:20 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/topology/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/topology/index.xml" rel="self" type="application/rss+xml"/><item><title>Determinacy of Two-Player Games with Perfect Information</title><link>https://pranshugaba.com/maths/determinacy-of-games-with-perfect-information/</link><pubDate>Wed, 09 Mar 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/maths/determinacy-of-games-with-perfect-information/</guid><description>
+<![CDATA[<p>I recently read a 1953 paper on <em>Infinite Games with Perfect Information</em> by Gale and Stewart<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. In this paper, they look at two-player games with perfect information and ask when is such a game determined. That is, does one of the players have a strategy such that they always win, irrespective of how the other player plays?</p>
+<p>In this article, I share some results from the paper that I found interesting.
+They showed that all finite games are determined, but there exist infinite games that are not determined.</p>
 <aside class="toc">
   <details open>
     <summary>
@@ -9,40 +9,68 @@
     </summary>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#defining-a-game">Defining a game</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#game-trees">Game trees</a>
+      <ul>
+        <li><a href="#states">States</a></li>
+        <li><a href="#plays">Plays</a></li>
+        <li><a href="#objectives">Objectives</a></li>
+        <li><a href="#strategies">Strategies</a></li>
+      </ul>
+    </li>
+    <li><a href="#finite-games-are-determined">Finite games are determined</a></li>
     <li><a href="#an-infinite-game-that-is-not-determined">An infinite game that is not determined</a></li>
     <li><a href="#a-topology-of-games">A topology of games</a></li>
     <li><a href="#some-examples-of-determined-games">Some examples of determined games</a></li>
-    <li><a href="#whats-next">What&rsquo;s next</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
   </details>
 </aside>
-<h2 id="overview">Overview</h2>
-<p>In this paper, we only look at two-player turn-based games with perfect information and no chance moves.</p>
-<p>That was a mouthful. Let&rsquo;s look at it again, bit by bit.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Why are we interested in studying games? The answer is simple: It&rsquo;s because games are fun! We have been playing games for millenia. When we are playing a game, we sure would like to win. If we study games, we can better understand how the game works, and what would be a good strategy to win it. But, first, we should ask is it even possible to win? Or is the game rigged against you. Determining whether it is possible to win will be the main concern for us in this article.</p>
+<p>Here are some examples of games:</p>
 <ul>
-<li><em>two-player:</em> We look at games played by two-players. They may be co-op or versus.</li>
-<li><em>turn-based:</em> The game proceeds in discrete steps. We can see the game as a sequence of turns played by the player. It does not necessarily have to alternate between the players. It is possible for the same player to play multiple turns in a row.</li>
+<li>Chess</li>
+<li>Checkers</li>
+<li>Go</li>
+<li>Nim</li>
+<li>Tic-tac-toe</li>
+</ul>
+<p>Here are some more:</p>
+<ul>
+<li>Poker</li>
+<li>Battleship</li>
+<li>Ludo</li>
+<li>Snakes and ladders</li>
+<li>Stone, Paper, Scissors</li>
+</ul>
+<p>In this article, we will only look at games of the first kind. In particular, we want games that satisfy the following five properties:</p>
+<ul>
+<li><em>two-player:</em> The games are played by two players: Player 1 and Player 2. We will call them $\mathcal{P}_1$ and $\mathcal{P}_2$ for short.</li>
+<li><em>turn-based:</em> The moves are made turn by turn, and not simulataneously. Note that we don&rsquo;t require the turns to alternate between players. It is possible for the same player to play multiple turns in a row. Stone, Paper, Scissors is an example of simultaneous moves.</li>
 <li><em>perfect information:</em> This means that no information is hidden from the players. Both players know the rules and the state of the game at all times. This excludes games like Poker and Battleship.</li>
 <li><em>no chance moves:</em> There is no luck involved in the game. The way the game proceeds is completely determined by the initial position and the decisions taken by the players. We rule out games such as Snakes and Ladders, Ludo, and Catan where dice are rolled or cards are drawn.</li>
+<li><em>zero sum:</em> If one player wins, then the other player loses. We will not allow ties / draws.</li>
 </ul>
-<p>We will look at both finite games and infinite games. Finite games are those that end after finitely many moves, whereas infinite games go on for infinitely many moves. Most games that we play end are finite.
-Chess, Checkers, Go, and Connect 4 are some examples of finite games, whereas games of cops and robbers is an example of an infinite game.</p>
-<p>We will now formally define a game. We will abstract away the extraneous details and focus on the underlying structure of the games.</p>
-<h2 id="defining-a-game">Defining a game</h2>
+<h2 id="game-trees">Game trees</h2>
+<p>Games can be quite varied. Chess is quite different from Nim. We will develop a definition of a game that will abstract away the extraneous details and focus on the underlying structure of the games.</p>
+<h3 id="states">States</h3>
 <p>It will be helpful to look at the <em>state</em> of a game.</p>
 <p>We think of a game as a set of states and some relation between them. The game begins in an initial state. One of the players plays a turn, and that changes the state of the game to a new state.</p>
 <p>A game can be thought of as a set of states $X$. A state (also called position or configuration) contains information about the history of moves that the players have played so far in order to reach the current state.
 As a game is played, the game goes through different states.</p>
 <p>We partition the set $X$ into two sets: $X_1$ and $X_2$. If the game is in state $x$, and  $x \in X_i$, then it is Player $i$&rsquo;s turn to play next.</p>
+<h3 id="plays">Plays</h3>
 <p>In addition to the set of states, we also need a set of rules to describe the rules of the game. The rules tell us that if the game is in state $x$, then what are the possible next states the game could go to. In order words, theses are the legal moves available to the players.</p>
+<h3 id="objectives">Objectives</h3>
 <p>It will be convenient to represent this information as a directed graph $T$. The vertices of the graph are the states of the game.
 Let $x_0$ be the initial state of the game.</p>
+<h3 id="strategies">Strategies</h3>
 <p>For each state $x$, if there is a legal move that move the game to a different state $x&rsquo;$, then the graph has an directed edge from $x$ to $x&rsquo;$. The out-neighbours of $x$ are all the states that one is allowed to go to from $x$.
 Note that $x_0$ has no in-edges. All other states have exactly one in-edge each.</p>
 <p>For each state $x$ that is not the initial state, we denote by $f(x)$ the <em>predecessor state</em> of $x$. That is, if the game is in state $x$, then it must have been in state $f(x)$ in the previous turn. Now, for each state $x$, the inverse $f^{-1}(x)$ denotes the set of states that can be the next-states of $x$.</p>
+<p>We will look at both finite games and infinite games. Finite games are those that end after finitely many moves, whereas infinite games go on for infinitely many moves. Most games that we play end are finite.</p>
 <p>For each state $x$ in $X$, there is exactly one path from $x_0$ to $x$ in the graph. We can find this path by repeatedly applying $f$ starting from $x$ until we eventually reach $x_0$. Therefore, the graph $T$ is a tree rooted at $x_0$. The notation $T$ now makes sense.</p>
 
 
@@ -91,22 +119,22 @@ Note that $x_0$ has no in-edges. All other states have exactly one in-edge each.
     
 </figure>
 <p>The game begins at the root, and the player whose turn it is to play picks a neighbour to move the state to.</p>
-<blockquote>
 <p>If the game is in state $x$, and $x \in X_i$, then Player $i$ picks a state from $f^{-1}(x)$.</p>
-</blockquote>
 <p>A <em>play</em> of the game corresponds to a traversal of states in the tree starting from $x_0$. Let $S$ denote the set of all plays.</p>
 <p>For example in chess, the state of the game is completely described by the position of the pieces, whether the players have castled, and whose turn it is to play next. Unlike chess, we do not require that both players play alternating turns in our games.</p>
 <p>An <em>objective</em> for a player is a set of plays. Out of the many directed paths in the game tree $T$, each player has a subset of these that they would like to follow. Let $S_1$ denote the objective of Player 1 and $S_2$ denote the objective set of Player 2.
 A special interest are <em>zero-sum</em> games. Player 1 wins if and only if Player 2 doesn&rsquo;t. We can write this as $S_1 = S \setminus S_2$.</p>
 <p>The players have <em>strategies</em> that determine how they would play when it&rsquo;s their turn. A strategy of Player 1 is a function $\sigma \colon X_1 \to X$.</p>
 <p>A player has a <em>winning strategy</em> if they can always win irrespective of which strategy the other player employs. It is not possible for both players to have a winning strategy. However, a surprising result is that there exist games where neither of the players has a winning strategy.</p>
+<h2 id="finite-games-are-determined">Finite games are determined</h2>
 <h2 id="an-infinite-game-that-is-not-determined">An infinite game that is not determined</h2>
 <p>The paper shows an example of a infinite game that is not determined. For every strategy $\sigma$ of Player 1, Player 2 has a strategy such that the resulting play is winning for Player 2. Similarly, no matter what strategy Player 2 picks, Player 1 has a strategy such that they win the game. In other words, none of the players have a winning strategy. The game goes as follows:</p>
 <h2 id="a-topology-of-games">A topology of games</h2>
 <p>We consider a topology generated by <em>cones</em>.</p>
 <h2 id="some-examples-of-determined-games">Some examples of determined games</h2>
-<p>Games in which the winning objective is an open set are determined.</p>
-<h2 id="whats-next">What&rsquo;s next</h2>
+<p>A game is called open if the objective set of Player 1 is open.</p>
+<p>Theorem: Open games are determined.</p>
+<h2 id="conclusion">Conclusion</h2>
 <p>If you found this interesting, I recommend that you give the original paper a read. You may also read a follow up paper by Donald Martin<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> where he proves that all Borel games are determined.</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
