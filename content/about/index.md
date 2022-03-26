@@ -50,7 +50,7 @@ The site is open source. You can find the source code on [Github](https://github
 
 Last updated: {{< lastupdated >}}
 
-Current theme: **Strawberry and Chocolate**
+Current theme: **Purple and Pink**
 
 ### Support
 

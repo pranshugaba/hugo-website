@@ -8,9 +8,18 @@
 // $darkdark: black;
 // $darkaccent: pink;
 
+$hue: 270;
+$hueaccent: 330;
+$lightlight: hsl($hue, 100%, 98%);
+$lightdark: hsl($hue, 100%, 12%);
+$lightaccent: hsl($hueaccent, 100%, 42%);
 
-// $monocolor: indigo;
-// // $monocolor: hsl(197, 100%, 22%);
+$darklight: hsl($hue, 100%, 97%);
+$darkdark: hsl($hue, 100%, 9%);
+$darkaccent: hsl($hueaccent, 100%, 83%);
+
+// // $monocolor: indigo;
+// $monocolor: hsl(197, 100%, 10%);
 // $lightlight: white;
 // $lightdark: $monocolor;
 // $lightaccent: purple;
@@ -18,16 +27,16 @@
 // $darkdark: $monocolor;
 // $darkaccent: pink;
 
-$finance: #FFF1E5;
-$black: #33302e;
-$lightlight: $finance;
-$lightdark: $black;
-// $lightaccent: hsl(185, 82%, 28%);
-$lightaccent: RebeccaPurple;
-$darklight: $finance;
-$darkdark: $black;
-// $darkaccent: hsl(186, 72%, 72%);
-$darkaccent: pink;
+// $finance: #FFF1E5;
+// $black: #33302e;
+// $lightlight: $finance;
+// $lightdark: $black;
+// // $lightaccent: hsl(185, 82%, 28%);
+// $lightaccent: RebeccaPurple;
+// $darklight: $finance;
+// $darkdark: $black;
+// // $darkaccent: hsl(186, 72%, 72%);
+// $darkaccent: pink;
 
 // $papaya: hsl(37.1, 100%, 91.8%);
 // $black: #121212;

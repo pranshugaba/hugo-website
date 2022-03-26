@@ -539,11 +539,11 @@ figure figcaption {
   }
 }
 :root {
-  --bg: #FFF1E5;
-  --fg: #33302e;
-  --accent: RebeccaPurple;
-  --light: #FFF1E5;
-  --dark: #33302e;
+  --bg: #faf5ff;
+  --fg: #1f003d;
+  --accent: #d6006b;
+  --light: #faf5ff;
+  --dark: #17002e;
 }
 @media print {
   :root {
@@ -557,9 +557,9 @@ figure figcaption {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #33302e;
-    --fg: #FFF1E5;
-    --accent: pink;
+    --bg: #17002e;
+    --fg: #f7f0ff;
+    --accent: #ffa8d4;
   }
 }
 .header {
@@ -1413,6 +1413,17 @@ details .admonition__title {
 
 details[open] .admonition__title {
   border-bottom: 2px solid var(--fg);
+}
+
+input, textarea {
+  margin-inline: 0.5rem;
+  margin-block: 0.5rem;
+  padding: 0.25rem;
+  font-size: 0.8rem;
+  border: 2px solid var(--fg);
+  border-radius: 0.3rem;
+  background-color: var(--bg);
+  color: var(--fg);
 }
 
 .home__pager {

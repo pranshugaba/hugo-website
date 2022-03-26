@@ -1,0 +1,12 @@
+@use "../abstracts/mixins" as m;
+
+input, textarea {
+    margin-inline: 0.5rem;
+    margin-block: 0.5rem;
+    padding: 0.25rem;
+    font-size: 0.8rem;
+    border: 2px solid var(--fg);
+    border-radius: 0.3rem;
+    background-color: var(--bg);
+    color: var(--fg);
+}

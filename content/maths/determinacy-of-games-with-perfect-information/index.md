@@ -1,12 +1,12 @@
 ---
-title: "Determinacy of Games with Perfect Information"
+title: "Determinacy of Two-Player Games with Perfect Information"
 subtitle: ""
 summary: "On the determinacy of two-player turn-based infinite games with perfect information"
 
 date: 2022-03-09T17:30:00+05:30
 lastmod: 2022-03-09T17:30:00+05:30
 
-tags: ["topology", "game-theory"]
+tags: ["game-theory", "determinacy", "topology" ]
 
 math: true
 
@@ -14,32 +14,45 @@ draft: false
 featured: false
 ---
 
-I recently read a 1953 paper on _Infinite Games with Perfect Information_ by Gale and Stewart[^GS53]. In this paper, they look at two-player games where both players have perfect information. Given such a game, they ask if one of the players has a winning strategy. That is, does one of the players have a strategy such that they always win, no matter how the other player plays? 
+I recently read a 1953 paper on _Infinite Games with Perfect Information_ by Gale and Stewart[^GS53]. In this paper, they look at two-player games with perfect information and ask when is such a game determined. That is, does one of the players have a strategy such that they always win, irrespective of how the other player plays?
 
-In this post, I share some results from the paper that I found interesting. 
-
-Spoiler alert --- there do exist games in which neither player has a winning strategy. 
+In this article, I share some results from the paper that I found interesting. 
+They showed that all finite games are determined, but there exist infinite games that are not determined.  
 
 
 {{% toc %}}
 
-## Overview 
+## Introduction 
 
-In this paper, we only look at two-player turn-based games with perfect information and no chance moves. 
+Why are we interested in studying games? The answer is simple: It's because games are fun! We have been playing games for millenia. When we are playing a game, we sure would like to win. If we study games, we can better understand how the game works, and what would be a good strategy to win it. But, first, we should ask is it even possible to win? Or is the game rigged against you. Determining whether it is possible to win will be the main concern for us in this article. 
 
-That was a mouthful. Let's look at it again, bit by bit.
+Here are some examples of games:
+- Chess
+- Checkers
+- Go
+- Nim
+- Tic-tac-toe
 
-- _two-player:_ We look at games played by two-players. They may be co-op or versus.
-- _turn-based:_ The game proceeds in discrete steps. We can see the game as a sequence of turns played by the player. It does not necessarily have to alternate between the players. It is possible for the same player to play multiple turns in a row. 
+Here are some more: 
+- Poker
+- Battleship
+- Ludo
+- Snakes and ladders
+- Stone, Paper, Scissors
+
+In this article, we will only look at games of the first kind. In particular, we want games that satisfy the following five properties:
+
+- _two-player:_ The games are played by two players: Player 1 and Player 2. We will call them $\mathcal{P}_1$ and $\mathcal{P}_2$ for short. 
+- _turn-based:_ The moves are made turn by turn, and not simulataneously. Note that we don't require the turns to alternate between players. It is possible for the same player to play multiple turns in a row. Stone, Paper, Scissors is an example of simultaneous moves.
 - _perfect information:_ This means that no information is hidden from the players. Both players know the rules and the state of the game at all times. This excludes games like Poker and Battleship. 
 - _no chance moves:_ There is no luck involved in the game. The way the game proceeds is completely determined by the initial position and the decisions taken by the players. We rule out games such as Snakes and Ladders, Ludo, and Catan where dice are rolled or cards are drawn. 
+- _zero sum:_ If one player wins, then the other player loses. We will not allow ties / draws. 
 
-We will look at both finite games and infinite games. Finite games are those that end after finitely many moves, whereas infinite games go on for infinitely many moves. Most games that we play end are finite.
-Chess, Checkers, Go, and Connect 4 are some examples of finite games, whereas games of cops and robbers is an example of an infinite game. 
+## Game trees
 
-We will now formally define a game. We will abstract away the extraneous details and focus on the underlying structure of the games.  
+Games can be quite varied. Chess is quite different from Nim. We will develop a definition of a game that will abstract away the extraneous details and focus on the underlying structure of the games. 
 
-## Defining a game
+### States
 
 It will be helpful to look at the _state_ of a game. 
 
@@ -50,15 +63,23 @@ As a game is played, the game goes through different states.
 
 We partition the set $X$ into two sets: $X_1$ and $X_2$. If the game is in state $x$, and  $x \in X_i$, then it is Player $i$'s turn to play next. 
 
+### Plays
+
 In addition to the set of states, we also need a set of rules to describe the rules of the game. The rules tell us that if the game is in state $x$, then what are the possible next states the game could go to. In order words, theses are the legal moves available to the players. 
+
+### Objectives
 
 It will be convenient to represent this information as a directed graph $T$. The vertices of the graph are the states of the game. 
 Let $x_0$ be the initial state of the game. 
+
+### Strategies
 
 For each state $x$, if there is a legal move that move the game to a different state $x'$, then the graph has an directed edge from $x$ to $x'$. The out-neighbours of $x$ are all the states that one is allowed to go to from $x$. 
 Note that $x_0$ has no in-edges. All other states have exactly one in-edge each.
 
 For each state $x$ that is not the initial state, we denote by $f(x)$ the _predecessor state_ of $x$. That is, if the game is in state $x$, then it must have been in state $f(x)$ in the previous turn. Now, for each state $x$, the inverse $f^{-1}(x)$ denotes the set of states that can be the next-states of $x$. 
+
+We will look at both finite games and infinite games. Finite games are those that end after finitely many moves, whereas infinite games go on for infinitely many moves. Most games that we play end are finite.
 
 For each state $x$ in $X$, there is exactly one path from $x_0$ to $x$ in the graph. We can find this path by repeatedly applying $f$ starting from $x$ until we eventually reach $x_0$. Therefore, the graph $T$ is a tree rooted at $x_0$. The notation $T$ now makes sense. 
 
@@ -67,7 +88,7 @@ For each state $x$ in $X$, there is exactly one path from $x_0$ to $x$ in the gr
 
 The game begins at the root, and the player whose turn it is to play picks a neighbour to move the state to.
 
-> If the game is in state $x$, and $x \in X_i$, then Player $i$ picks a state from $f^{-1}(x)$. 
+If the game is in state $x$, and $x \in X_i$, then Player $i$ picks a state from $f^{-1}(x)$. 
 
 A _play_ of the game corresponds to a traversal of states in the tree starting from $x_0$. Let $S$ denote the set of all plays. 
 
@@ -81,6 +102,8 @@ The players have _strategies_ that determine how they would play when it's their
 A player has a _winning strategy_ if they can always win irrespective of which strategy the other player employs. It is not possible for both players to have a winning strategy. However, a surprising result is that there exist games where neither of the players has a winning strategy. 
 
 
+## Finite games are determined
+
 ## An infinite game that is not determined
 
 The paper shows an example of a infinite game that is not determined. For every strategy $\sigma$ of Player 1, Player 2 has a strategy such that the resulting play is winning for Player 2. Similarly, no matter what strategy Player 2 picks, Player 1 has a strategy such that they win the game. In other words, none of the players have a winning strategy. The game goes as follows:
@@ -91,10 +114,11 @@ The paper shows an example of a infinite game that is not determined. For every 
 We consider a topology generated by _cones_. 
 
 ## Some examples of determined games
+A game is called open if the objective set of Player 1 is open.
 
-Games in which the winning objective is an open set are determined. 
+Theorem: Open games are determined. 
 
-## What's next
+## Conclusion
 
 If you found this interesting, I recommend that you give the original paper a read. You may also read a follow up paper by Donald Martin[^Mar75] where he proves that all Borel games are determined. 
 
