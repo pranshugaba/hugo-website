@@ -5,9 +5,8 @@ subtitle: The software that I use on a daily basis
 
 ## Desktop
 
-- Arch Linux
-- XMonad
-- awesome wm
+I am running Arch Linux with XMonad on my ThinkPad P1.
+I occasionally use GNOME as well. 
 
 ## Editor
 
@@ -17,8 +16,13 @@ subtitle: The software that I use on a daily basis
 
 ## Browser
 
-- Firefox
-- Qutebrowser
+I use Firefox with these extensions:
+- uBlock Origin
+- Tridactyl
+- Dark Reader
+- Bitwarden
+- Netflix 1080p
+- SteamDB
 
 ## Reading
 
@@ -33,19 +37,24 @@ subtitle: The software that I use on a daily basis
 
 ## Art
 
+- Inkscape
 - Krita
 - Aseprite
-- Inkscape
 
 ## Photo editing
 
 - RawTherapee
 - GIMP
 
-## Video watching
+## Watching Videos
 
 - MPV
-- VLC
+
+## Music
+
+- PyRadio
+- Lollypop
+- Shortwave
 
 ## Video editing
 

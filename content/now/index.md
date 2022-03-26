@@ -11,11 +11,13 @@ I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www
 I am attending the following courses this semester:
 - Algebra and Computation
 - Computational Complexity
-- Logic, Games, and Automata
-- Algebraic Automata Theory
+- Logic, Games, and Automata (from CMI)
+- Algebraic Automata Theory (from CMI)
 
 
 ## Learning
+
+I am learning Lua to configure my Neovim editor. 
 
 I am learning functional programming with Haskell from _Programming in Haskell_ by Graham Hutton. I want to become proficient enough in Haskell to be able to solve puzzles on Project Euler, as well as configure [XMonad](https://xmonad.org/) --- the window manager that I use.
 
@@ -25,15 +27,15 @@ I am learning to build Android apps using Jetpack Compose. I am putting this kno
 I am learning Marathi from [learn-marathi.com](https://www.learn-marathi.com/courses).
 
 ## Reading
-I am currently reading _The Magus_ by John Fowles.
+{{< currently-reading >}}
 
 [See my reading list &#8594;]({{< ref "/reads" >}})
 
 ## Watching
 
-I am currently watching Killing Eve and Gravity Falls. 
+I am currently watching Trailer Park Boys and Gravity Falls. 
 
-I also love watching British TV shows such as I Literally Just Told You, 8 out of 10 Cats does Countdown, and Would I Lie to You?. 
+I also love watching British panel shows such as I Literally Just Told You, 8 out of 10 Cats does Countdown, and Would I Lie to You?. 
 
 [See my watch list &#8594;]({{< ref "/watches" >}})
 

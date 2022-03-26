@@ -1,16 +1,21 @@
 wantToRead:
-  - title: Crime and Punishment
-    author: Fyodor Dostoevsky
   - title: Dune
     author: Frank Herbert
     startDate: 2021-07-01T05:30:00+05:30
+  - title: The Lord of the Rings
+    author: J. R. R. Tolkien
+  - title: The Winds of Winter
+    author: George R. R. Martin
 
 reading:
+  - title: Crime and Punishment
+    author: Fyodor Dostoevsky
+    startDate: 2022-03-23T05:30:00+05:30
+read:
   - title: The Magus
     author: John Fowles
     startDate: 2022-01-06T05:30:00+05:30
-
-read:
+    endDate: 2022-03-22T05:30:00+05:30
   - title: A Terrible Book
     author: Jay Michael
     startDate: 2022-01-03T05:30:00+05:30

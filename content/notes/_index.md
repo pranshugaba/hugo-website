@@ -1,6 +1,6 @@
 ---
 title: Notebooks
-subtitle: Here, I collect stuff that I find interesting
-summary: Here, I collect stuff that I find interesting
+subtitle: I collect stuff that I find interesting here
+summary: I collect stuff that I find interesting
 aliases: "/notebooks"
 ---

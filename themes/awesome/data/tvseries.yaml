@@ -14,12 +14,12 @@ wantToWatch:
 watching:
   - title: Killing Eve
     type: Season
-    season: 2
+    season: 4
     channel: BBC America
 
   - title: Trailer Park Boys
     type: Season
-    season: 4
+    season: 6
     channel: Showcase
 
   - title: Gravity Falls
