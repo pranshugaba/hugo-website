@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>game-theory by Pranshu Gaba</title><link>https://pranshugaba.com/tags/game-theory/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Mon, 28 Mar 2022 19:50:56 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/game-theory/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/game-theory/index.xml" rel="self" type="application/rss+xml"/><item><title>Determinacy of Two-Player Games with Perfect Information</title><link>https://pranshugaba.com/maths/determinacy-of-games-with-perfect-information/</link><pubDate>Wed, 09 Mar 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/maths/determinacy-of-games-with-perfect-information/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>game-theory by Pranshu Gaba</title><link>https://pranshugaba.com/tags/game-theory/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 31 Mar 2022 03:52:33 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/game-theory/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/game-theory/index.xml" rel="self" type="application/rss+xml"/><item><title>Determinacy of Two-Player Games with Perfect Information</title><link>https://pranshugaba.com/maths/determinacy-of-games-with-perfect-information/</link><pubDate>Wed, 09 Mar 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/maths/determinacy-of-games-with-perfect-information/</guid><description>
 <![CDATA[<p>I recently read a 1953 paper on <em>Infinite Games with Perfect Information</em> by Gale and Stewart<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. In this paper, they look at two-player games with perfect information and ask when is such a game determined. That is, does one of the players have a strategy such that they always win, irrespective of how the other player plays?</p>
 <p>In this article, I share some results from the paper that I found interesting.
 They showed that all finite games are determined, but there exist infinite games that are not determined.</p>
@@ -51,21 +51,22 @@ They showed that all finite games are determined, but there exist infinite games
 <li><em>turn-based:</em> The moves are made turn by turn, and not simulataneously. Note that we don&rsquo;t require the turns to alternate between players. It is possible for the same player to play multiple turns in a row. Stone, Paper, Scissors is an example of simultaneous moves.</li>
 <li><em>perfect information:</em> This means that no information is hidden from the players. Both players know the rules and the state of the game at all times. This excludes games like Poker and Battleship.</li>
 <li><em>no chance moves:</em> There is no luck involved in the game. The way the game proceeds is completely determined by the initial position and the decisions taken by the players. We rule out games such as Snakes and Ladders, Ludo, and Catan where dice are rolled or cards are drawn.</li>
-<li><em>zero sum:</em> If one player wins, then the other player loses. We will not allow ties / draws.</li>
+<li><em>zero sum:</em> If one player wins, then the other player loses. We will not allow ties / draws. You may object: chess does have draws. We can resolve this issue by redefining the game. We may say that if the game is a draw, then it is a victory for Black.</li>
 </ul>
 <h2 id="game-trees">Game trees</h2>
 <p>Games can be quite varied. Chess is quite different from Nim. We will develop a definition of a game that will abstract away the extraneous details and focus on the underlying structure of the games.</p>
+<p>We will define a game to be a <em>rooted tree</em> $T$. We now describe what the vertices and the edges of the tree represent.</p>
 <h3 id="states">States</h3>
-<p>It will be helpful to look at the <em>state</em> of a game.</p>
+<p>The vertices of $T$ correspond to the <em>states</em> of the game.</p>
 <p>We think of a game as a set of states and some relation between them. The game begins in an initial state. One of the players plays a turn, and that changes the state of the game to a new state.</p>
 <p>A game can be thought of as a set of states $X$. A state (also called position or configuration) contains information about the history of moves that the players have played so far in order to reach the current state.
 As a game is played, the game goes through different states.</p>
 <p>We partition the set $X$ into two sets: $X_1$ and $X_2$. If the game is in state $x$, and  $x \in X_i$, then it is Player $i$&rsquo;s turn to play next.</p>
+<p>It will be convenient to represent this information as a directed graph $T$. The vertices of the graph are the states of the game.
+Let $x_0$ be the initial state of the game.</p>
 <h3 id="plays">Plays</h3>
 <p>In addition to the set of states, we also need a set of rules to describe the rules of the game. The rules tell us that if the game is in state $x$, then what are the possible next states the game could go to. In order words, theses are the legal moves available to the players.</p>
 <h3 id="objectives">Objectives</h3>
-<p>It will be convenient to represent this information as a directed graph $T$. The vertices of the graph are the states of the game.
-Let $x_0$ be the initial state of the game.</p>
 <h3 id="strategies">Strategies</h3>
 <p>For each state $x$, if there is a legal move that move the game to a different state $x&rsquo;$, then the graph has an directed edge from $x$ to $x&rsquo;$. The out-neighbours of $x$ are all the states that one is allowed to go to from $x$.
 Note that $x_0$ has no in-edges. All other states have exactly one in-edge each.</p>
