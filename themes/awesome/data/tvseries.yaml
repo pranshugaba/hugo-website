@@ -12,10 +12,10 @@ wantToWatch:
     channel: Netflix
 
 watching:
-  - title: Killing Eve
+  - title: Moon Knight
     type: Season
-    season: 4
-    channel: BBC America
+    season: 1
+    channel: Disney+
 
   - title: Trailer Park Boys
     type: Season
@@ -97,3 +97,8 @@ done:
     type: Series
     season: 6
     channel: NBC
+abandoned:  
+  - title: Killing Eve
+    type: Season
+    season: 4
+    channel: BBC America

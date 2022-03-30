@@ -4,22 +4,15 @@ subtitle: Hi, I am Pranshu!
 summary: A little bit about me
 ---
 
-{{< hero position="img__right" image="yellow" alt="Pranshu stands holding a yellow umbrella in front of yellow flowers.">}}
 
-I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tifr.res.in/).
+I am a PhD student in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
 Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in/).
 
-My research interests include Automata Theory, Logic, Discrete Maths, and Algorithms.
-
-{{</ hero >}}
-
-{{< hero position="img__left" image="cycling" alt="Pranshu wearing a cycling helmet and jacket.">}}
+My research interests include Automata Theory, Algebra, Logic, Combinatorics, and Algorithms.
 
 I write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}), and develop apps and games. I also love photography, swimming and cycling but not both at once.
 
 [See what I am doing now &#8594;]({{< ref "/now" >}})
-
-{{</ hero >}}
 
 ### Uses
 

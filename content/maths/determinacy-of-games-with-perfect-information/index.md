@@ -46,15 +46,17 @@ In this article, we will only look at games of the first kind. In particular, we
 - _turn-based:_ The moves are made turn by turn, and not simulataneously. Note that we don't require the turns to alternate between players. It is possible for the same player to play multiple turns in a row. Stone, Paper, Scissors is an example of simultaneous moves.
 - _perfect information:_ This means that no information is hidden from the players. Both players know the rules and the state of the game at all times. This excludes games like Poker and Battleship. 
 - _no chance moves:_ There is no luck involved in the game. The way the game proceeds is completely determined by the initial position and the decisions taken by the players. We rule out games such as Snakes and Ladders, Ludo, and Catan where dice are rolled or cards are drawn. 
-- _zero sum:_ If one player wins, then the other player loses. We will not allow ties / draws. 
+- _zero sum:_ If one player wins, then the other player loses. We will not allow ties / draws. You may object: chess does have draws. We can resolve this issue by redefining the game. We may say that if the game is a draw, then it is a victory for Black.
 
 ## Game trees
 
 Games can be quite varied. Chess is quite different from Nim. We will develop a definition of a game that will abstract away the extraneous details and focus on the underlying structure of the games. 
 
+We will define a game to be a _rooted tree_ $T$. We now describe what the vertices and the edges of the tree represent.
+
 ### States
 
-It will be helpful to look at the _state_ of a game. 
+The vertices of $T$ correspond to the _states_ of the game.
 
 We think of a game as a set of states and some relation between them. The game begins in an initial state. One of the players plays a turn, and that changes the state of the game to a new state. 
 
@@ -63,14 +65,15 @@ As a game is played, the game goes through different states.
 
 We partition the set $X$ into two sets: $X_1$ and $X_2$. If the game is in state $x$, and  $x \in X_i$, then it is Player $i$'s turn to play next. 
 
+It will be convenient to represent this information as a directed graph $T$. The vertices of the graph are the states of the game. 
+Let $x_0$ be the initial state of the game. 
+
 ### Plays
 
 In addition to the set of states, we also need a set of rules to describe the rules of the game. The rules tell us that if the game is in state $x$, then what are the possible next states the game could go to. In order words, theses are the legal moves available to the players. 
 
 ### Objectives
 
-It will be convenient to represent this information as a directed graph $T$. The vertices of the graph are the states of the game. 
-Let $x_0$ be the initial state of the game. 
 
 ### Strategies
 
