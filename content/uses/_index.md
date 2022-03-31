@@ -2,6 +2,7 @@
 title: Uses
 subtitle: The software that I use on a daily basis
 summary: All the software and hardware that I use
+display: none
 ---
 
 ## Laptop

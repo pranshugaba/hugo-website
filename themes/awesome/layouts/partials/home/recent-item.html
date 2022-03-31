@@ -1,0 +1,7 @@
+<div>
+  <h3>
+    <a href="{{ .Permalink }}"> {{ .Title }} </a>
+  </h3>
+  <div class="item__summary">{{ .Summary | markdownify }}</div>
+  <div>{{ .Date.Format "January 2, 2006" }}</div>
+</div>

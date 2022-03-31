@@ -7,28 +7,30 @@
     {{ end }}
     {{.Content}}
   </header>
-  {{ range .Pages.GroupByDate "2006" }}
-  <section id="{{ .Key }}">
-    <h2 class="list__key">{{ .Key }}</h2>
-    <ul class="items__list">
-      {{ range .Pages }}
-      <li>
-        {{ if $displayStyle }}
-          {{ partial (print "list/" $displayStyle ".html") . }}
-        {{ else }}
-          {{ if (eq .Section "minis")}}
-            {{ partial "list/minis.html" . }}
-          {{ else if (eq .Section "notebooks")}}
-            {{ partial "list/archive.html" . }}
+  {{ if (ne $displayStyle "none") }}
+    {{ range .Pages.GroupByDate "2006" }}
+    <section id="{{ .Key }}">
+      <h2 class="list__key">{{ .Key }}</h2>
+      <ul class="items__list">
+        {{ range .Pages }}
+        <li>
+          {{ if $displayStyle }}
+            {{ partial (print "list/" $displayStyle ".html") . }}
           {{ else }}
-            {{ partial "list/description.html" . }}
+            {{ if (eq .Section "minis")}}
+              {{ partial "list/minis.html" . }}
+            {{ else if (eq .Section "notebooks")}}
+              {{ partial "list/archive.html" . }}
+            {{ else }}
+              {{ partial "list/description.html" . }}
+            {{ end }}
           {{ end }}
+        </li>
         {{ end }}
-      </li>
-      {{ end }}
-    </ul>
-  </section>
-  {{ else }}
-    <p>No posts in this section yet. Check back later!</p>
-  {{ end }}
+      </ul>
+    </section>
+    {{ else }}
+      <p>No posts in this section yet. Check back later!</p>
+    {{ end }}
+  {{ end  }}
 {{ end }}

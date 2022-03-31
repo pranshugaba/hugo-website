@@ -1,0 +1,15 @@
+{{ $section := "puzzles" }}
+{{ $numberOfItems := 3}}
+{{ $sectionPages := where .Site.RegularPages "Type" $section }}
+{{ if ge (len $sectionPages) 1 }}
+<section>
+    <h2>Poems</h2>
+    <p>My poems</p>
+    {{ range first $numberOfItems $sectionPages}}
+        {{ partial "home/recent-item" . }}
+    {{ end }}
+    {{ if gt (len $sectionPages) $numberOfItems}}
+        <a href="{{ $section }}"> See all {{ $section }} &#8594;</a>
+    {{ end }}
+</section>
+{{ end }}
