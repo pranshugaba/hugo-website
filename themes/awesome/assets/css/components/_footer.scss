@@ -11,16 +11,4 @@
   align-items: baseline;
   gap: 1rem;
   line-height: 1;
-
-  & a {
-    @include m.plain-link;
-  }
-
-  #dark-mode-toggle {
-    cursor: pointer;
-    border-radius: 0.15rem;
-    @media print {
-      visibility: hidden;
-    }
-  }
 }

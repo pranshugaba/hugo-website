@@ -1,5 +1,5 @@
-<ul class="tagcloud">
-  {{range $name, $taxonomy := .Site.Taxonomies.tags}} 
+<ul class="[ tagcloud ] [ plain-link ]">
+  {{ range $name, $taxonomy := .Site.Taxonomies.tags }} 
     {{ $invariance := 3}}
     {{ $size := div (add $invariance (math.Log .Count)) $invariance }}
     {{ with $.Site.GetPage (printf "/tags/%s" $name) }}

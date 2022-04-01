@@ -33,8 +33,4 @@
     justify-content: center;
     gap: 1rem;
   }
-
-  & a {
-    @include m.plain-link;
-  }
 }

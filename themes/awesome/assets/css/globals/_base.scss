@@ -1,3 +1,16 @@
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  max-width: 69ch; // nice :)
+  margin: 0 auto;
+  padding: 0.8rem;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
 figure {
   text-align: center;
   margin-top: 2rem;
@@ -57,8 +70,4 @@ figure {
     margin: 0.5rem auto 0.75rem;
     line-height: 1.5;
   }
-}
-
-.float-right {
-  float: right;
 }

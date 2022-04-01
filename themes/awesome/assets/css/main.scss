@@ -1,5 +1,9 @@
-@use "base";
-@use "abstracts";
-@use "components";
-@use "layouts";
-@use "pages";
+@use 'globals';
+@use 'compositions';
+@use 'utilities';
+@use 'blocks';
+@use 'exceptions';
+@use 'abstracts';
+@use 'components';
+@use 'layouts';
+@use 'pages';

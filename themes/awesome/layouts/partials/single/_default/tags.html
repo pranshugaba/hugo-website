@@ -1,6 +1,6 @@
 {{ if .Section }}
 {{ $tags := .GetTerms "tags" }}
-<div class="page__navtags">
+<div class="[ page__navtags ] [ plain-link ]">
     <ul class="page__tags">
     {{ with $tags }}
         {{ range . }}

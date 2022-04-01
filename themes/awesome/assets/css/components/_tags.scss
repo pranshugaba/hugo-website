@@ -3,10 +3,6 @@
 .tagcloud {
   @include m.plain-list;
 
-  & a {
-    @include m.plain-link;
-  }
-
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;

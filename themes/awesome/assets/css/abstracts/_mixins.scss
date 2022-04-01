@@ -1,11 +1,3 @@
-@mixin plain-link {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 @mixin plain-list {
   list-style: none;
   padding-left: 0;

@@ -1,0 +1,13 @@
+.skip__nav {
+  position: absolute;
+  transform: translateY(-200%);
+  background-color: var(--bg);
+  padding: 0.1rem 0.2rem;
+
+  &:focus {
+    transform: translateY(350%);
+    @media (min-width: 640px) {
+      transform: translateY(250%);
+    }
+  }
+}

@@ -64,7 +64,6 @@
     @include m.plain-list;
 
     & a {
-      @include m.plain-link;
       &:focus {
         outline-offset: 0.5rem;
         border-radius: 1px;
@@ -94,7 +93,6 @@
     border-radius: 0.4rem;
     line-height: 1;
     & a {
-      @include m.plain-link;
       &:focus {
         outline-offset: 0.5em;
         border-radius: 1px;
