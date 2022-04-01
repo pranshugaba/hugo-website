@@ -14,6 +14,7 @@
         {{ $big = .Resize "x1080" }}
       {{ end }}
       <img
+        class="[ border-thick ]"
         src="{{ $big.Permalink }}"
         alt="{{ $img.Title }}"
         height="{{ $big.Height }}"

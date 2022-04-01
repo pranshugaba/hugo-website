@@ -6,7 +6,7 @@
     margin-bottom: 4.5rem;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid var(--fg);
+    border: var(--border-medium) solid var(--fg);
     overflow: hidden;
     max-width: max-content;
     border-radius: 0.5rem;
@@ -27,7 +27,7 @@
 
   &__caption {
     display: flex; // This is make sure the caption is not wider than the image.
-    border-top: 2px solid var(--fg);
+    border-top: var(--border-medium) solid var(--fg);
     padding-inline: 0.75rem;
     padding-block: 0;
     p {
@@ -39,7 +39,7 @@
     display: flex;
     justify-content: space-between;
     line-height: 1.25;
-    border-bottom: 2px solid var(--fg);
+    border-bottom: var(--border-medium) solid var(--fg);
     padding: 0.5rem;
     gap: 1rem;
     font-size: 0.9rem;

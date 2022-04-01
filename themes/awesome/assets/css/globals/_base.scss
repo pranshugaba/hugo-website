@@ -24,7 +24,7 @@ figure {
     width: auto;
     margin: 0 auto;
     border-radius: 0.5rem;
-    border: 0.1rem solid var(--fg);
+    border: var(--border-medium) solid var(--fg);
     @media (prefers-color-scheme: dark) {
       filter: brightness(0.9);
     }
@@ -54,14 +54,8 @@ figure {
     }
   }
 
-  &.rectangle img {
+  &.no-rounded-corner img {
     border-radius: 0;
-  }
-
-  &.diagram img {
-    @media (prefers-color-scheme: dark) {
-      filter: hue-rotate(180deg) invert(1);
-    }
   }
 
   figcaption {
@@ -70,4 +64,15 @@ figure {
     margin: 0.5rem auto 0.75rem;
     line-height: 1.5;
   }
+}
+
+input, textarea {
+    margin-inline: 0.5rem;
+    margin-block: 0.5rem;
+    padding: 0.25rem;
+    font-size: 0.8rem;
+    border: var(--border-medium) solid var(--fg);
+    border-radius: 0.3rem;
+    background-color: var(--bg);
+    color: var(--fg);
 }

@@ -1,7 +1,10 @@
+@forward 'borders';
+
 .float-right {
   float: right;
 }
 
+// links
 .plain-link a {
   text-decoration: none;
 

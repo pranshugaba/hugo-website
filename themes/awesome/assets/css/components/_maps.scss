@@ -3,21 +3,14 @@
   height: clamp(16rem, 80vh, 32rem);
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  border: 0.15rem solid var(--fg);
-}
-#mapol {
-  width: 100%;
-  height: clamp(16rem, 80vh, 32rem);
-  border-radius: 0.5rem;
-  border: 0.15rem solid var(--fg);
-  overflow: hidden;
+  border: var(--border-thick) solid var(--fg);
 }
 
 .leaflet-control-attribution {
   color: var(--fg);
   background-color: var(--bg);
-  border-top: 1.5px solid var(--fg);
-  border-left: 1.5px solid var(--fg);
+  border-top: var(--border-thin) solid var(--fg);
+  border-left: var(--border-thin) solid var(--fg);
 }
 .leaflet-layer .leaflet-tile {
   @media (prefers-color-scheme: dark) {
@@ -36,7 +29,7 @@
 .route__metadata {
   margin-block: 0.5rem;
   margin-top: -0.5rem;
-  border: 0.15rem solid var(--fg);
+  border: var(--border-thick) solid var(--fg);
   border-top: none;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
@@ -52,7 +45,7 @@
   row-gap: 0;
   margin-block: 0.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--fg);
+  border-bottom: var(--border-medium) solid var(--fg);
 }
 
 .route__name p {

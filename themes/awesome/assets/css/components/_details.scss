@@ -16,5 +16,5 @@ details .admonition__title {
 }
 
 details[open] .admonition__title {
-  border-bottom: 2px solid var(--fg);
+  border-bottom: var(--border-medium) solid var(--fg);
 }

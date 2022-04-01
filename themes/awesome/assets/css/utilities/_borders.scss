@@ -1,0 +1,10 @@
+// border widths
+.border-thin {
+  border: var(--border-thin) solid var(--fg);
+}
+.border-medium {
+  border: var(--border-medium) solid var(--fg);
+}
+.border-thick {
+  border: var(--border-thick) solid var(--fg);
+}

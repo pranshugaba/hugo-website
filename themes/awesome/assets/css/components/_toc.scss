@@ -1,7 +1,6 @@
 @use '../abstracts/mixins' as m;
 
 .toc {
-  border: 2px solid var(--fg);
   border-radius: 0.75rem;
 
   @include m.font-family-sans-serif;

@@ -17,7 +17,7 @@ h4 code,
 kbd {
   @include m.font-family-mono;
   padding: 0.05rem 0.2rem;
-  border: 0.075rem solid var(--fg);
+  border: var(--border-thin) solid var(--fg);
   border-radius: 0.2rem;
 }
 

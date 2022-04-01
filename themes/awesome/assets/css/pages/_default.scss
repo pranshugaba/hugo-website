@@ -37,9 +37,6 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     border-radius: 0.5rem;
-    & img {
-      border: 0.15rem solid var(--fg);
-    }
   }
 
   &__content {
@@ -73,7 +70,6 @@
     & li {
       line-height: 1;
       padding: 0.3rem;
-      border: 0.075rem solid var(--fg);
       border-radius: 0.4rem;
     }
   }
@@ -89,7 +85,6 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     padding: 0.3rem;
-    border: 0.075rem solid var(--fg);
     border-radius: 0.4rem;
     line-height: 1;
     & a {
@@ -105,7 +100,7 @@
     line-height: 1.75;
   }
   &__prevnext {
-    border-top: 2px solid var(--fg);
+    border-top: var(--border-medium) solid var(--fg);
     padding-top: 1rem;
     display: flex;
     gap: 1rem;

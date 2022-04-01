@@ -4,13 +4,13 @@
     <ul class="page__tags">
     {{ with $tags }}
         {{ range . }}
-            <li><a href="{{ .Permalink }}">{{ .LinkTitle | humanize | lower }}</a></li>
+            <li class="[ border-thin ]"><a href="{{ .Permalink }}">{{ .LinkTitle | humanize | lower }}</a></li>
         {{ end }}
     {{ end }}
     </ul>
 
     {{ with .Section}}
-    <div class="page__all">
+    <div class="[ page__all ] [ border-thin ]">
         <a href="/{{ . }}">all {{ . }}</a>
     </div>
     {{ end }}
