@@ -1,4 +1,82 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/Inter-roman.var.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("/fonts/Inter-italic.var.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/IBMPlexSans/IBMPlexSansVar-Roman.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("/fonts/IBMPlexSans/IBMPlexSansVar-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Serif";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/SourceSerif/SourceSerif4Variable-Roman.otf.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Serif";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("/fonts/SourceSerif/SourceSerif4Variable-Italic.otf.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/Fraunces-Regular.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/Fraunces-Italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "JBMono";
+  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JBMono";
+  src: url("/fonts/JetBrainsMono-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 *,
 *:before,
 *:after {
@@ -122,21 +200,6 @@ body {
   padding: 0.8rem;
 }
 
-.skip__nav {
-  position: absolute;
-  transform: translateY(-200%);
-  background-color: var(--bg);
-  padding: 0.1rem 0.2rem;
-}
-.skip__nav:focus {
-  transform: translateY(350%);
-}
-@media (min-width: 640px) {
-  .skip__nav:focus {
-    transform: translateY(250%);
-  }
-}
-
 ::-moz-selection {
   background-color: var(--accent);
   color: var(--bg);
@@ -147,84 +210,90 @@ body {
   color: var(--bg);
 }
 
-@font-face {
-  font-family: "Inter";
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-  font-named-instance: "Regular";
-  src: url("/fonts/Inter-roman.var.woff2") format("woff2");
+figure {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
-@font-face {
-  font-family: "Inter";
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: italic;
-  font-named-instance: "Italic";
-  src: url("/fonts/Inter-italic.var.woff2") format("woff2");
+figure img {
+  text-align: center;
+  max-height: 640px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--fg);
 }
-@font-face {
-  font-family: "IBM Plex Sans";
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-  font-named-instance: "Regular";
-  src: url("/fonts/IBMPlexSans/IBMPlexSansVar-Roman.woff2") format("woff2");
+@media (prefers-color-scheme: dark) {
+  figure img {
+    filter: brightness(0.9);
+  }
 }
-@font-face {
-  font-family: "IBM Plex Sans";
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: italic;
-  font-named-instance: "Italic";
-  src: url("/fonts/IBMPlexSans/IBMPlexSansVar-Italic.woff2") format("woff2");
+figure.no-border img {
+  border: none;
+  border-radius: 0;
 }
-@font-face {
-  font-family: "Source Serif";
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-  font-named-instance: "Regular";
-  src: url("/fonts/SourceSerif/SourceSerif4Variable-Roman.otf.woff2") format("woff2");
+figure.small img {
+  max-height: 240px;
 }
-@font-face {
-  font-family: "Source Serif";
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: italic;
-  font-named-instance: "Italic";
-  src: url("/fonts/SourceSerif/SourceSerif4Variable-Italic.otf.woff2") format("woff2");
+figure.small figcaption {
+  max-width: 30ch;
 }
-@font-face {
-  font-family: "Fraunces";
-  src: url("/fonts/Fraunces-Regular.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+figure.medium img {
+  max-height: 480px;
 }
-@font-face {
-  font-family: "Fraunces";
-  src: url("/fonts/Fraunces-Italic.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+figure.medium figcaption {
+  max-width: 45ch;
 }
-@font-face {
-  font-family: "JBMono";
-  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+figure.rectangle img {
+  border-radius: 0;
+}
+@media (prefers-color-scheme: dark) {
+  figure.diagram img {
+    filter: hue-rotate(180deg) invert(1);
+  }
+}
+figure figcaption {
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+  font-size: 0.9rem;
+  margin: 0.5rem auto 0.75rem;
+  line-height: 1.5;
 }
-@font-face {
-  font-family: "JBMono";
-  src: url("/fonts/JetBrainsMono-Italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
+
+a {
+  text-decoration: underline;
 }
+a, a:visited {
+  color: var(--fg);
+  outline: none;
+  transition: outline 0.1s ease-out;
+}
+a:hover {
+  color: var(--accent);
+}
+a:focus {
+  outline: 0.15em solid var(--accent);
+  outline-offset: 0.125em;
+  border-radius: 0.1em;
+  text-decoration: none;
+}
+
+button {
+  all: unset;
+  padding: 0.1rem;
+  outline: none;
+  transition: outline 0.1s ease-out;
+}
+button:hover {
+  text-decoration: underline;
+  color: var(--accent);
+}
+button:focus {
+  outline: 0.15em solid var(--accent);
+  outline-offset: 0.2em;
+}
+
 html {
   font-size: 112.5%;
   font-family: "IBM Plex Sans", sans-serif;
@@ -324,39 +393,6 @@ h6 + p {
   margin-top: 0.75rem;
 }
 
-a {
-  text-decoration: underline;
-}
-a, a:visited {
-  color: var(--fg);
-  outline: none;
-  transition: outline 0.1s ease-out;
-}
-a:hover {
-  color: var(--accent);
-}
-a:focus {
-  outline: 0.15em solid var(--accent);
-  outline-offset: 0.125em;
-  border-radius: 0.1em;
-  text-decoration: none;
-}
-
-button {
-  all: unset;
-  padding: 0.1rem;
-  outline: none;
-  transition: outline 0.1s ease-out;
-}
-button:hover {
-  text-decoration: underline;
-  color: var(--accent);
-}
-button:focus {
-  outline: 0.15em solid var(--accent);
-  outline-offset: 0.2em;
-}
-
 strong {
   font-weight: 700;
 }
@@ -454,61 +490,6 @@ dt {
   font-weight: 500;
 }
 
-figure {
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-figure img {
-  text-align: center;
-  max-height: 640px;
-  max-width: 100%;
-  height: auto;
-  width: auto;
-  margin: 0 auto;
-  border-radius: 0.5rem;
-  border: 0.1rem solid var(--fg);
-}
-@media (prefers-color-scheme: dark) {
-  figure img {
-    filter: brightness(0.9);
-  }
-}
-figure.no-border img {
-  border: none;
-  border-radius: 0;
-}
-figure.small img {
-  max-height: 240px;
-}
-figure.small figcaption {
-  max-width: 30ch;
-}
-figure.medium img {
-  max-height: 480px;
-}
-figure.medium figcaption {
-  max-width: 45ch;
-}
-figure.rectangle img {
-  border-radius: 0;
-}
-@media (prefers-color-scheme: dark) {
-  figure.diagram img {
-    filter: hue-rotate(180deg) invert(1);
-  }
-}
-figure figcaption {
-  font-weight: 400;
-  font-size: 0.9rem;
-  margin: 0.5rem auto 0.75rem;
-  line-height: 1.5;
-}
-
-.float-right {
-  float: right;
-}
-
 @media print {
   html {
     font-size: 80%;
@@ -522,6 +503,32 @@ figure figcaption {
     max-width: 75%;
   }
 }
+.float-right {
+  float: right;
+}
+
+.plain-link a {
+  text-decoration: none;
+}
+.plain-link a:hover {
+  text-decoration: underline;
+}
+
+.skip__nav {
+  position: absolute;
+  transform: translateY(-200%);
+  background-color: var(--bg);
+  padding: 0.1rem 0.2rem;
+}
+.skip__nav:focus {
+  transform: translateY(350%);
+}
+@media (min-width: 640px) {
+  .skip__nav:focus {
+    transform: translateY(250%);
+  }
+}
+
 @-webkit-keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -530,6 +537,7 @@ figure figcaption {
     opacity: 1;
   }
 }
+
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -599,12 +607,6 @@ figure figcaption {
     margin-top: 0;
   }
 }
-.header a {
-  text-decoration: none;
-}
-.header a:hover {
-  text-decoration: underline;
-}
 
 .footer {
   margin-top: 2rem;
@@ -617,21 +619,6 @@ figure figcaption {
   align-items: baseline;
   gap: 1rem;
   line-height: 1;
-}
-.footer a {
-  text-decoration: none;
-}
-.footer a:hover {
-  text-decoration: underline;
-}
-.footer #dark-mode-toggle {
-  cursor: pointer;
-  border-radius: 0.15rem;
-}
-@media print {
-  .footer #dark-mode-toggle {
-    visibility: hidden;
-  }
 }
 
 pre {
@@ -1144,12 +1131,6 @@ h4 code {
   font-size: 1.5rem;
   font-variation-settings: "wght" 500;
 }
-.toc a {
-  text-decoration: none;
-}
-.toc a:hover {
-  text-decoration: underline;
-}
 
 .tagcloud {
   list-style: none;
@@ -1160,12 +1141,6 @@ h4 code {
   align-items: baseline;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
-}
-.tagcloud a {
-  text-decoration: none;
-}
-.tagcloud a:hover {
-  text-decoration: underline;
 }
 
 table {
@@ -1319,12 +1294,6 @@ thead {
   padding: 0.5rem;
   gap: 1rem;
   font-size: 0.9rem;
-}
-.gallery__metadata a {
-  text-decoration: none;
-}
-.gallery__metadata a:hover {
-  text-decoration: underline;
 }
 
 .hero__figure {
@@ -1494,12 +1463,6 @@ input, textarea {
   list-style: none;
   padding-left: 0;
 }
-.page__tags a {
-  text-decoration: none;
-}
-.page__tags a:hover {
-  text-decoration: underline;
-}
 .page__tags a:focus {
   outline-offset: 0.5rem;
   border-radius: 1px;
@@ -1524,12 +1487,6 @@ input, textarea {
   border: 0.075rem solid var(--fg);
   border-radius: 0.4rem;
   line-height: 1;
-}
-.page__all a {
-  text-decoration: none;
-}
-.page__all a:hover {
-  text-decoration: underline;
 }
 .page__all a:focus {
   outline-offset: 0.5em;
