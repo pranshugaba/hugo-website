@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pranshu Gaba</title><link>https://pranshugaba.com/</link><description>Photos, poems, puzzles, and more!</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 02 Apr 2022 00:05:44 +0530</lastBuildDate><image><url>https://pranshugaba.com/icon.png</url></image><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Mini #6</title><link>https://pranshugaba.com/minis/6/</link><pubDate>Sun, 27 Mar 2022 06:24:00 +0530</pubDate><guid>https://pranshugaba.com/minis/6/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pranshu Gaba</title><link>https://pranshugaba.com/</link><description>Photos, poems, puzzles, and more!</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 02 Apr 2022 01:13:53 +0530</lastBuildDate><image><url>https://pranshugaba.com/icon.png</url></image><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Mini #6</title><link>https://pranshugaba.com/minis/6/</link><pubDate>Sun, 27 Mar 2022 06:24:00 +0530</pubDate><guid>https://pranshugaba.com/minis/6/</guid><description>
 &lt;p>I had A Dream of Spring in which The Winds of Winter arrived.&lt;/p></description></item><item><title>Starfruit Sandwich</title><link>https://pranshugaba.com/recipes/starfruit-sandwich/</link><pubDate>Tue, 01 Mar 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/recipes/starfruit-sandwich/</guid><description>
 <![CDATA[<img src="https://pranshugaba.com/recipes/starfruit-sandwich/starfuit_sandwich_featured_hucab1bbb11ed33e4f58dd56fb89825fbc_1104066_1080x0_resize_q75_box.jpg" alt="" /><p>One day, many moons ago, I went out in Bangalore for a long walk and bought an assortment of groceries from different parts of the city: Organic spinach bread, starfruits, tomatoes, cheese cubes, rock salt, and a knife.</p>
 <p>When I returned to my room, I tried to make a sandwich from what I had bought. The result: A delicious juicy sandwich with a variety of tastes and textures that is also easy to make.</p>
@@ -1091,7 +1091,7 @@ Does a chess position have the information required to deduce which player plays
 <li>It could be either White or Black to play</li>
 <li>It is an impossible position. (i.e. One cannot reach this position by playing legal moves only. Someone might have disturbed the board.)</li>
 </ul>
-<aside class="[ toc ] [ plain-link ]">
+<aside class="[ toc ] [ plain-link border-medium ]">
   <details open>
     <summary>
       <h2 class="toc__heading">Table of Contents</h2>
@@ -16177,7 +16177,7 @@ Two friends walk on the footpath, shoulder to shoulder.</p>
 <p>I like my stack now. It is boring, and that&rsquo;s a good thing. I have redesigned my site twice in the last three months, and have spent hardly any time writing content. I am done adding new features to this site now.  I might polish up the code and publish it as a theme on <a href="https://themes.gohugo.io/" target="_blank" rel="noopener">Hugo themes</a>. Everything has been setup for me to write content and post it. I just need to start writing now.</p>
 <p>I have moved my Nuxt website to the nuxt subdomain, and it will remain there for posterity. I won&rsquo;t be making any changes to it. I will publish new  posts on my new website only.</p>
 ]]></description></item><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/dev/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/building-x-and-o-using-godot/</guid><description>
-<![CDATA[<aside class="[ toc ] [ plain-link ]">
+<![CDATA[<aside class="[ toc ] [ plain-link border-medium ]">
   <details open>
     <summary>
       <h2 class="toc__heading">Table of Contents</h2>
