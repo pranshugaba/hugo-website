@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>chess by Pranshu Gaba</title><link>https://pranshugaba.com/tags/chess/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 02 Apr 2022 01:13:56 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/chess/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/chess/index.xml" rel="self" type="application/rss+xml"/><item><title>Whose turn is it to play?</title><link>https://pranshugaba.com/puzzles/3/</link><pubDate>Tue, 01 Feb 2022 12:30:00 +0530</pubDate><guid>https://pranshugaba.com/puzzles/3/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>chess by Pranshu Gaba</title><link>https://pranshugaba.com/tags/chess/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sun, 03 Apr 2022 01:03:27 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/chess/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/chess/index.xml" rel="self" type="application/rss+xml"/><item><title>Whose turn is it to play?</title><link>https://pranshugaba.com/puzzles/3/</link><pubDate>Tue, 01 Feb 2022 12:30:00 +0530</pubDate><guid>https://pranshugaba.com/puzzles/3/</guid><description>
 <![CDATA[<p>We have another chess puzzle!</p>
 
 
@@ -27,7 +27,7 @@ Does a chess position have the information required to deduce which player plays
 <li>It could be either White or Black to play</li>
 <li>It is an impossible position. (i.e. One cannot reach this position by playing legal moves only. Someone might have disturbed the board.)</li>
 </ul>
-<aside class="[ toc ] [ plain-link border-medium ]">
+<aside class="[ toc ] [ plain-link border-medium border-radius-large ]">
   <details open>
     <summary>
       <h2 class="toc__heading">Table of Contents</h2>
@@ -11943,7 +11943,7 @@ Be careful: this is a tricky one!</p>
     <summary class="admonition__title">
         Hint 1
     </summary>
-	<div class="admonition__content">
+	<div class="admonition__content flow">
         <p>Given a chess position, how do we show that it&rsquo;s White&rsquo;s turn to play next?
 We must show that for all sequences of legal moves that result in the given position, the last move of the sequence must have been played by Black. That would mean that it&rsquo;s White to move in the given position. Moreover, we must also show that at least one such sequence exists.</p>
 <p>Showing that a position is Black to play uses similar reasoning.</p>
@@ -11959,7 +11959,7 @@ We must show that for all sequences of legal moves that result in the given posi
     <summary class="admonition__title">
         Hint 2
     </summary>
-	<div class="admonition__content">
+	<div class="admonition__content flow">
         <p>At any point of time in a game, look at the parities of the number of moves played by White and the number of moves played by Black. What does it mean if both are odd? What happens when one is odd and one is even?</p>
 
     </div>
