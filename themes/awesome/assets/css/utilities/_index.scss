@@ -1,14 +1,20 @@
-@forward 'borders';
+// @forward 'borders';
 
-.float-right {
-  float: right;
-}
+// .float-right {
+//   float: right;
+// }
 
-// links
-.plain-link a {
-  text-decoration: none;
+// // links
+// .plain-link a {
+//   text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
-  }
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
+
+.wrapper {
+  max-width: 69ch; // nice :)
+  margin-inline: auto;
+  padding: 0.8rem;
 }

@@ -75,16 +75,7 @@ main {
 }
 
 body {
-  line-height: 1.6;
-  @media (min-width: 640px) {
-    line-height: 1.75;
-  }
-}
-
-ol,
-ul {
-  padding-left: 2rem;
-  list-style-position: outside;
+  line-height: 1.5;
 }
 
 blockquote,

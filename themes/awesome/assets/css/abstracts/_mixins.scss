@@ -2,15 +2,3 @@
   list-style: none;
   padding-left: 0;
 }
-
-@mixin font-family-sans-serif {
-  font-family: 'IBM Plex Sans', sans-serif;
-}
-
-@mixin font-family-serif {
-  font-family: 'Fraunces', serif;
-}
-
-@mixin font-family-mono {
-  font-family: 'JBMono', 'Roboto Mono', monospace;
-}

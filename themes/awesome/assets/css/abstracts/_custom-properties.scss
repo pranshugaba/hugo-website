@@ -1,0 +1,45 @@
+// Colors
+$hue: 270;
+$hueaccent: 330;
+$lightlight: hsl($hue, 100%, 98%);
+$lightdark: hsl($hue, 100%, 12%);
+$lightaccent: hsl($hueaccent, 100%, 42%);
+
+$darklight: hsl($hue, 100%, 97%);
+$darkdark: hsl($hue, 100%, 9%);
+$darkaccent: hsl($hueaccent, 100%, 83%);
+
+:root {
+  // Colors
+  --bg: #{$lightlight};
+  --fg: #{$lightdark};
+  --accent: #{$lightaccent};
+  --light: #{$lightlight};
+  --dark: #{$darkdark};
+
+  @media print {
+    --bg: #{white};
+    --fg: #{#121212};
+    --light: #{white};
+    --dark: #{#121212};
+    --accent: #{Indigo};
+  }
+
+//   @media (prefers-color-scheme: dark) {
+//     --bg: #{$darkdark};
+//     --fg: #{$darklight};
+//     --accent: #{$darkaccent};
+//   }
+
+  // Fonts
+  --font-sans-serif: 'IBM Plex Sans', sans-serif;
+  --font-serif: 'Fraunces', serif;
+  --font-mono: 'JBMono', 'Roboto Mono', monospace;
+
+  --font-size-100: 0.625rem;
+  --font-size-200: 0.75rem;
+  --font-size-300: 0.875rem;
+  --font-size-400: 1rem;
+  --font-size-500: 1.25rem;
+  --font-size-800: 2rem;
+}

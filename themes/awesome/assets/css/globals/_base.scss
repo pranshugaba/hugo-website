@@ -1,9 +1,21 @@
+// TODO: add margins on footnote-ref
+// TODO: Style buttons when you add a button
+html {
+  font-size: 112.5%;
+  @media (min-width: 640px) {
+    font-size: 125%;
+  }
+  @media print {
+    font-size: 80%;
+  }
+  font-family: var(--font-sans-serif);
+  scroll-padding-top: 1.5rem;
+}
+
 body {
   background-color: var(--bg);
   color: var(--fg);
-  max-width: 69ch; // nice :)
-  margin: 0 auto;
-  padding: 0.8rem;
+  text-underline-offset: 0.15em;
 }
 
 ::selection {
@@ -11,68 +23,115 @@ body {
   color: var(--bg);
 }
 
-figure {
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-
-  img {
-    text-align: center;
-    max-height: 640px;
-    max-width: 100%;
-    height: auto;
-    width: auto;
-    margin: 0 auto;
-    border-radius: 0.5rem;
-    border: var(--border-medium) solid var(--fg);
-    @media (prefers-color-scheme: dark) {
-      filter: brightness(0.9);
-    }
-  }
-
-  &.no-border {
-    img {
-      border: none;
-      border-radius: 0;
-    }
-  }
-
-  &.small {
-    img {
-      max-height: 240px;
-    }
-    figcaption {
-      max-width: 30ch;
-    }
-  }
-  &.medium {
-    img {
-      max-height: 480px;
-    }
-    figcaption {
-      max-width: 45ch;
-    }
-  }
-
-  &.no-rounded-corner img {
-    border-radius: 0;
-  }
-
-  figcaption {
-    font-weight: 400;
-    font-size: 0.9rem;
-    margin: 0.5rem auto 0.75rem;
-    line-height: 1.5;
+// Typography.scss
+body {
+  line-height: 1.6;
+  @media (min-width: 640px) {
+    line-height: 1.75;
   }
 }
 
-input, textarea {
-    margin-inline: 0.5rem;
-    margin-block: 0.5rem;
-    padding: 0.25rem;
-    font-size: 0.8rem;
-    border: var(--border-medium) solid var(--fg);
-    border-radius: 0.3rem;
-    background-color: var(--bg);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25;
+  margin-top: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-variation-settings: 'opsz' 96, 'SOFT' 100, 'WONK' 1;
+  font-size: 2.75rem;
+  font-weight: 420;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-variation-settings: 'opsz' 72, 'SOFT' 100, 'WONK' 0;
+  font-size: 2rem;
+  font-weight: 420;
+}
+
+h3 {
+  font-family: var(--font-sans-serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+h4 {
+  font-family: var(--font-sans-serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+h5 {
+  font-family: var(--font-sans-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-family: var(--font-sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+sup {
+  font-size: var(--font-size-200);
+  vertical-align: super;
+}
+
+sub {
+  font-size: var(--font-size-200);
+  vertical-align: sub;
+}
+
+pre {
+  font-family: var(--font-mono);
+}
+
+q {
+  quotes: '“' '”' '‘' '’';
+}
+q::before {
+  content: open-quote;
+}
+q::after {
+  content: close-quote;
+}
+
+// Links.scss
+
+a {
+  &,
+  &:visited {
     color: var(--fg);
+    outline: none;
+    transition: outline 0.1s ease-out;
+  }
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+    color: var(--accent);
+  }
+  &:focus {
+    outline: 0.15em solid var(--accent);
+    outline-offset: 0.125em;
+    border-radius: 0.1em;
+    text-decoration: none;
+  }
 }

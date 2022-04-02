@@ -1,66 +1,73 @@
-@use "../abstracts/mixins" as m;
+figure {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
-html {
-  font-size: 112.5%;
-  @media (min-width: 640px) {
-    font-size: 125%;
+  img {
+    text-align: center;
+    max-height: 640px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    border: var(--border-medium) solid var(--fg);
+    @media (prefers-color-scheme: dark) {
+      filter: brightness(0.9);
+    }
   }
-  @include m.font-family-sans-serif;
-  text-underline-offset: 0.15em;
-  scroll-padding-top: 1.5rem;
+
+  &.no-border {
+    img {
+      border: none;
+      border-radius: 0;
+    }
+  }
+
+  &.small {
+    img {
+      max-height: 240px;
+    }
+    figcaption {
+      max-width: 30ch;
+    }
+  }
+  &.medium {
+    img {
+      max-height: 480px;
+    }
+    figcaption {
+      max-width: 45ch;
+    }
+  }
+
+  &.no-rounded-corner img {
+    border-radius: 0;
+  }
+
+  figcaption {
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin: 0.5rem auto 0.75rem;
+    line-height: 1.5;
+  }
 }
 
-h1 {
-  @include m.font-family-serif;
-  font-variation-settings: 'wght' 400, 'opsz' 72, 'SOFT' 100, 'WONK' 1;
-  font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -0.025em;
-  margin-top: 3rem;
-  margin-bottom: 0.5em;
+input, textarea {
+    margin-inline: 0.5rem;
+    margin-block: 0.5rem;
+    padding: 0.25rem;
+    font-size: 0.8rem;
+    border: var(--border-medium) solid var(--fg);
+    border-radius: 0.3rem;
+    background-color: var(--bg);
+    color: var(--fg);
 }
 
-h2 {
-  @include m.font-family-serif;
-  font-variation-settings: 'wght' 400, 'opsz' 18, 'SOFT' 100;
-  font-size: 1.925rem;
-  font-weight: 500;
-  letter-spacing: -0.025em;
-  line-height: 1.25;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: -0.025em;
-  line-height: 1.35;
-  margin-top: 1.5em;
-  margin-bottom: 0.25em;
-}
-
-h4 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: -0.025em;
-  margin-top: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-h5 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-h6 {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-top: 2rem;
-  margin-bottom: 0;
+ol,
+ul {
+  padding-left: 2rem;
+  list-style-position: outside;
 }
 
 ul,
@@ -93,28 +100,6 @@ h4 + p,
 h5 + p,
 h6 + p {
   margin-top: 0.75rem;
-}
-
-strong {
-  font-weight: 700;
-}
-
-em {
-  font-style: italic;
-}
-
-sup {
-  font-size: 0.75rem;
-  vertical-align: super;
-  margin-left: 0.1rem;
-  margin-right: 0.05rem;
-}
-
-sub {
-  font-size: small;
-  vertical-align: sub;
-  margin-left: 0.1rem;
-  margin-right: 0.05rem;
 }
 
 code {
@@ -163,20 +148,6 @@ blockquote::before {
 }
 blockquote p {
   display: inline;
-}
-
-pre {
-  @include m.font-family-mono;
-}
-
-q {
-  quotes: '“' '”' '‘' '’';
-}
-q::before {
-  content: open-quote;
-}
-q::after {
-  content: close-quote;
 }
 
 dt {
