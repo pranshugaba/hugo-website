@@ -1,9 +1,6 @@
-@use "../abstracts/mixins" as m;
-
-.footer {
+.site__footer {
   margin-top: 2rem;
   padding-top: 1rem;
-  padding-bottom: 0.5rem;
   border-top: var(--border-medium) solid var(--fg);
   display: flex;
   flex-wrap: wrap;

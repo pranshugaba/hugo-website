@@ -4,17 +4,19 @@
 //   float: right;
 // }
 
-// // links
-// .plain-link a {
-//   text-decoration: none;
+// links
+a.plain-link,
+.plain-link > a {
+  text-decoration: none;
 
-//   &:hover {
-//     text-decoration: underline;
-//   }
-// }
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 .wrapper {
   max-width: 69ch; // nice :)
   margin-inline: auto;
-  padding: 0.8rem;
+  padding-inline: 0.75rem;
+  padding-block: 1.25rem;
 }

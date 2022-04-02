@@ -25,11 +25,11 @@ $darkaccent: hsl($hueaccent, 100%, 83%);
     --accent: #{Indigo};
   }
 
-//   @media (prefers-color-scheme: dark) {
-//     --bg: #{$darkdark};
-//     --fg: #{$darklight};
-//     --accent: #{$darkaccent};
-//   }
+  //   @media (prefers-color-scheme: dark) {
+  //     --bg: #{$darkdark};
+  //     --fg: #{$darklight};
+  //     --accent: #{$darkaccent};
+  //   }
 
   // Fonts
   --font-sans-serif: 'IBM Plex Sans', sans-serif;
@@ -41,5 +41,22 @@ $darkaccent: hsl($hueaccent, 100%, 83%);
   --font-size-300: 0.875rem;
   --font-size-400: 1rem;
   --font-size-500: 1.25rem;
+  --font-size-600: 1.5rem;
   --font-size-800: 2rem;
+
+  // margin / padding sizes
+  --size-100: 0.1rem;
+  --size-200: 0.2rem;
+  --size-300: 0.5rem;
+  --size-400: 1rem;
+  --size-500: 1.25rem;
+  --size-600: 1.5rem;
+  --size-700: 2rem;
+  --size-800: 3rem;
+  --size-900: 4rem;
+
+  // border widths
+  --border-thin: 0.075rem;
+  --border-medium: 0.1rem;
+  --border-thick: 0.125rem;
 }

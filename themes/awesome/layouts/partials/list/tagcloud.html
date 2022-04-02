@@ -1,10 +1,10 @@
-<ul class="[ tagcloud ] [ plain-link ]">
+<ul class="tagcloud">
   {{ range $name, $taxonomy := .Site.Taxonomies.tags }} 
     {{ $invariance := 3}}
     {{ $size := div (add $invariance (math.Log .Count)) $invariance }}
     {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
     <li>
-        <a href="{{ .Permalink }}" 
+        <a class="plain-link" href="{{ .Permalink }}" 
         style="font-size: {{ $size }}em;">{{$name}}</a>
     </li>
     {{end}}
