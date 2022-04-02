@@ -38,7 +38,7 @@ h4,
 h5,
 h6 {
   line-height: 1.25;
-  margin-top: 2.5em;
+  margin-top: 2em;
   margin-bottom: 0.5em;
 }
 
@@ -87,6 +87,11 @@ strong {
 
 em {
   font-style: italic;
+}
+
+hr {
+  color: var(--fg);
+  border: var(--border-hairline) solid var(--fg);
 }
 
 sup {

@@ -56,7 +56,14 @@ $darkaccent: hsl($hueaccent, 100%, 83%);
   --size-900: 4rem;
 
   // border widths
+  --border-hairline: 1px;
   --border-thin: 0.075rem;
   --border-medium: 0.1rem;
   --border-thick: 0.125rem;
+
+  // border radii
+  --border-radius-tiny: 0.1rem;
+  --border-radius-small: 0.25rem;
+  --border-radius-medium: 0.5rem;
+  --border-radius-large: 0.75rem;
 }

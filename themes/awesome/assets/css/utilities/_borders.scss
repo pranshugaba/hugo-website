@@ -8,3 +8,11 @@
 .border-thick {
   border: var(--border-thick) solid var(--fg);
 }
+
+.border-radius-tiny {
+  border-radius: var(--border-radius-tiny);
+}
+
+.border-radius-medium {
+  border-radius: var(--border-radius-medium);
+}

@@ -24,9 +24,14 @@
   --size-700: 2rem;
   --size-800: 3rem;
   --size-900: 4rem;
+  --border-hairline: 1px;
   --border-thin: 0.075rem;
   --border-medium: 0.1rem;
   --border-thick: 0.125rem;
+  --border-radius-tiny: 0.1rem;
+  --border-radius-small: 0.25rem;
+  --border-radius-medium: 0.5rem;
+  --border-radius-large: 0.75rem;
 }
 @media print {
   :root {
@@ -268,7 +273,7 @@ h4,
 h5,
 h6 {
   line-height: 1.25;
-  margin-top: 2.5em;
+  margin-top: 2em;
   margin-bottom: 0.5em;
 }
 
@@ -319,6 +324,11 @@ em {
   font-style: italic;
 }
 
+hr {
+  color: var(--fg);
+  border: var(--border-hairline) solid var(--fg);
+}
+
 sup {
   font-size: var(--font-size-200);
   vertical-align: super;
@@ -365,11 +375,11 @@ a:focus {
 }
 
 a.plain-link,
-.plain-link > a {
+.plain-link a {
   text-decoration: none;
 }
 a.plain-link:hover,
-.plain-link > a:hover {
+.plain-link a:hover {
   text-decoration: underline;
 }
 
@@ -378,6 +388,11 @@ a.plain-link:hover,
   margin-inline: auto;
   padding-inline: 0.75rem;
   padding-block: 1.25rem;
+}
+@media print {
+  .wrapper {
+    max-width: inherit;
+  }
 }
 
 .site__header {

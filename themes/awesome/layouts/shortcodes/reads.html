@@ -30,11 +30,11 @@
     {{ range $years }}
     {{ $year := . }}
         {{ range $.Site.Data.books.read }}
-        <li>
-            {{ if (eq (dateFormat "2006" .endDate) $year) }}
+        {{ if (eq (dateFormat "2006" .endDate) $year) }}
+            <li>
             {{ partial "list/books.html" (dict "Context" . "Status" "read") }}
-            {{ end }}
-        </li>
+            </li>
+        {{ end }}
         {{ end }}
     {{ end }}
 </ul>

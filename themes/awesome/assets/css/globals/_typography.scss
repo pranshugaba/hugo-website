@@ -53,6 +53,14 @@ figure {
   }
 }
 
+@media print {
+  figure {
+    img {
+      max-width: 75%;
+    }
+  }
+}
+
 input, textarea {
     margin-inline: 0.5rem;
     margin-block: 0.5rem;
@@ -116,8 +124,6 @@ figcaption {
 hr {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  color: var(--fg);
-  border: 1px solid var(--fg);
 }
 
 blockquote {
