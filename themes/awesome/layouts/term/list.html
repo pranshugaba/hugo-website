@@ -8,7 +8,7 @@
   {{ range .Pages.GroupByDate "2006" }}
   <section id="{{ .Key }}">
     <h2 class="list__key">{{ .Key }}</h2>
-    <ul class="items__list">
+    <ul class="[ items__list ] [ flow ]">
       {{ range .Pages }}
       <li>
         {{ if (eq .Section "minis")}}

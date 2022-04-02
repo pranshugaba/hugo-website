@@ -907,6 +907,13 @@ h4 code {
 .items__list {
   list-style: none;
   padding-left: 0;
+  --flow-space: 4.5rem;
+}
+
+.books__list {
+  list-style: none;
+  padding-left: 0;
+  --flow-space: 2rem;
 }
 
 .list__key {
@@ -955,15 +962,6 @@ h4 code {
   }
 }
 
-.list-books__item {
-  margin-top: 2.25rem;
-}
-
-.list-description__item,
-.list-mini__item {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-}
 .list-description__item .item__metadata,
 .list-mini__item .item__metadata {
   font-size: 0.85rem;
@@ -1406,7 +1404,6 @@ figure figcaption {
   }
 }
 .page__title {
-  font-size: 2.75rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }

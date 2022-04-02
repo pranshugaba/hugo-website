@@ -2,6 +2,11 @@
 
 .items__list {
   @include m.plain-list;
+  --flow-space: 4.5rem;
+}
+.books__list {
+  @include m.plain-list;
+  --flow-space: 2rem;
 }
 
 .list__key {
@@ -44,14 +49,8 @@
   }
 }
 
-.list-books__item {
-  margin-top: 2.25rem;
-}
 .list-description__item,
 .list-mini__item {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-
   .item__metadata {
     font-size: 0.85rem;
     margin-bottom: 0.25rem;
