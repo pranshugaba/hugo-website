@@ -1,8 +1,8 @@
 table {
   border-collapse: separate;
   border: var(--border-thin) solid var(--fg);
-  margin: 2rem auto;
-  border-radius: 0.75rem;
+  margin-inline: auto;
+  border-radius: var(--border-radius-large)
 }
 
 td,

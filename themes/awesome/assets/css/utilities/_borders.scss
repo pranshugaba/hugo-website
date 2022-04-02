@@ -13,6 +13,13 @@
   border-radius: var(--border-radius-tiny);
 }
 
+.border-radius-small {
+  border-radius: var(--border-radius-small);
+}
 .border-radius-medium {
   border-radius: var(--border-radius-medium);
+}
+
+.border-radius-large {
+  border-radius: var(--border-radius-large);
 }

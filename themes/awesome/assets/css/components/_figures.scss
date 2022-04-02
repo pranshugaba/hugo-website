@@ -1,0 +1,62 @@
+figure {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  img {
+    text-align: center;
+    max-height: 640px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    border: var(--border-medium) solid var(--fg);
+    @media (prefers-color-scheme: dark) {
+      filter: brightness(0.9);
+    }
+  }
+
+  &.no-border {
+    img {
+      border: none;
+      border-radius: 0;
+    }
+  }
+
+  &.small {
+    img {
+      max-height: 240px;
+    }
+    figcaption {
+      max-width: 30ch;
+    }
+  }
+  &.medium {
+    img {
+      max-height: 480px;
+    }
+    figcaption {
+      max-width: 45ch;
+    }
+  }
+
+  &.no-rounded-corner img {
+    border-radius: 0;
+  }
+
+  figcaption {
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin: 0.5rem auto 0.75rem;
+    line-height: 1.5;
+  }
+}
+
+@media print {
+  figure {
+    img {
+      max-width: 75%;
+    }
+  }
+}

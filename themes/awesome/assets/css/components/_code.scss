@@ -1,11 +1,6 @@
-@use "../abstracts/colors" as c;
-@use "../abstracts/mixins" as m;
-
 pre {
   border-radius: 0.5rem;
   padding: 0.75rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   overflow-x: auto;
   font-variant-ligatures: none;
   line-height: 1.25;
@@ -15,7 +10,7 @@ p code,
 li code,
 h4 code,
 kbd {
-  @include m.font-family-mono;
+  font-family: var(--font-mono);
   padding: 0.05rem 0.2rem;
   border: var(--border-thin) solid var(--fg);
   border-radius: 0.2rem;

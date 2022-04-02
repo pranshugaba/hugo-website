@@ -1,9 +1,6 @@
-@use "../abstracts/mixins" as m;
-
 .gallery {
   &__figure {
-    margin-top: 2rem;
-    margin-bottom: 4.5rem;
+    --flow-space: 3em;
     margin-left: auto;
     margin-right: auto;
     border: var(--border-medium) solid var(--fg);

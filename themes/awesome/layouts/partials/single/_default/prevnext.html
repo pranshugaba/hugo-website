@@ -1,4 +1,4 @@
-<div class="page__nav">
+<nav class="page__nav">
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 {{ if (in .Site.Params.mainSections .Type) }}
     <div class="page__prevnext">
@@ -49,4 +49,4 @@
     <a href="/"><span>&#8592;</span> <span>home</span></a>
     </div>
 {{ end }}
-</div>
+</nav>

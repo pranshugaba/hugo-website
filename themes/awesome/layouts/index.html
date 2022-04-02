@@ -9,7 +9,9 @@
     <h1 class="page__title">Hello there!</h1>
     <p class="page__subtitle" >Welcome to my site :)</p>
   </header>
-  {{ .Content }}
+  <div class="flow">
+    {{ .Content }}
+  </div>
 {{ end }}
 
 {{ if ne ($paginator.PageNumber) 1 }}

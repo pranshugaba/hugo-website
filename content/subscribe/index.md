@@ -25,7 +25,9 @@ For example, to follow the `haiku` tag at
 {{< highlight shell >}}
 https://pranshugaba.com/tags/haiku
 {{< /highlight >}}
+
 go to
+
 {{< highlight shell >}}
 https://pranshugaba.com/tags/haiku/index.xml
 {{< /highlight >}}

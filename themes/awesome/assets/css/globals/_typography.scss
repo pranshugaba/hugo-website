@@ -1,101 +1,33 @@
-figure {
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-
-  img {
-    text-align: center;
-    max-height: 640px;
-    max-width: 100%;
-    height: auto;
-    width: auto;
-    margin: 0 auto;
-    border-radius: 0.5rem;
-    border: var(--border-medium) solid var(--fg);
-    @media (prefers-color-scheme: dark) {
-      filter: brightness(0.9);
-    }
-  }
-
-  &.no-border {
-    img {
-      border: none;
-      border-radius: 0;
-    }
-  }
-
-  &.small {
-    img {
-      max-height: 240px;
-    }
-    figcaption {
-      max-width: 30ch;
-    }
-  }
-  &.medium {
-    img {
-      max-height: 480px;
-    }
-    figcaption {
-      max-width: 45ch;
-    }
-  }
-
-  &.no-rounded-corner img {
-    border-radius: 0;
-  }
-
-  figcaption {
-    font-weight: 400;
-    font-size: 0.9rem;
-    margin: 0.5rem auto 0.75rem;
-    line-height: 1.5;
-  }
-}
-
-@media print {
-  figure {
-    img {
-      max-width: 75%;
-    }
-  }
-}
-
-input, textarea {
-    margin-inline: 0.5rem;
-    margin-block: 0.5rem;
-    padding: 0.25rem;
-    font-size: 0.8rem;
-    border: var(--border-medium) solid var(--fg);
-    border-radius: 0.3rem;
-    background-color: var(--bg);
-    color: var(--fg);
+input,
+textarea {
+  margin-inline: 0.5rem;
+  margin-block: 0.5rem;
+  padding: 0.25rem;
+  font-size: 0.8rem;
+  border: var(--border-medium) solid var(--fg);
+  border-radius: 0.3rem;
+  background-color: var(--bg);
+  color: var(--fg);
 }
 
 ol,
 ul {
+  --flow-space: 1rem;
   padding-left: 2rem;
   list-style-position: outside;
 }
 
-ul,
-ol {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
+// ul,
+// ol {
+//   margin-top: 0.5rem;
+//   margin-bottom: 0.5rem;
+// }
 
 li {
-  margin-bottom: 0.5rem;
+  margin-block: 0.5rem;
 }
 
-p {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
 
-p + p {
-  margin-top: 1.5rem;
-}
 p:first-child {
   margin-top: 0.75rem;
 }
@@ -103,28 +35,16 @@ p:last-child {
   margin-bottom: 0.75rem;
 }
 
-h3 + p,
-h4 + p,
-h5 + p,
-h6 + p {
-  margin-top: 0.75rem;
-}
-
 code {
-  @include m.font-family-mono;
+  font-family: var(--font-mono);
   font-size: 0.9rem;
 }
 
-figcaption {
-  font-size: 0.8rem;
-  max-width: 69ch;
-  text-align: center;
-}
-
-hr {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
+// figcaption {
+//   font-size: 0.8rem;
+//   max-width: 69ch;
+//   text-align: center;
+// }
 
 blockquote {
   font-size: 1.125rem;
@@ -144,7 +64,7 @@ blockquote {
 }
 blockquote::before {
   content: open-quote;
-  @include m.font-family-serif;
+  font-family: var(--font-serif);
   color: var(--accent);
   font-size: 3em;
   font-weight: 600;

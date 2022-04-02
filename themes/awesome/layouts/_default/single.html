@@ -1,12 +1,14 @@
 {{ define "main"}}
-  <header class="page__header">
-    {{ partial "single/_default/date" . }}
-    {{ partial "single/_default/title" . }}
-    {{ partial "single/_default/subtitle" . }}
-    {{ partial "single/_default/location" . }}
-  </header>
-  {{ partial "single/_default/cover-image.html" . }}
-  {{ partial "single/_default/page-content.html" . }}
-  {{ partial "single/_default/tags" . }}
+  <article class="[ flow ]">
+    <header class="[ page__header ] [ flow ]">
+      {{ partial "single/_default/date" . }}
+      {{ partial "single/_default/title" . }}
+      {{ partial "single/_default/subtitle" . }}
+      {{ partial "single/_default/location" . }}
+    </header>
+    {{ partial "single/_default/cover-image.html" . }}
+    {{ partial "single/_default/page-content.html" . }}
+    {{ partial "single/_default/tags" . }}
+  </article>
   {{ partial "single/_default/prevnext" . }}
 {{ end }}

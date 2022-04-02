@@ -1,8 +1,8 @@
-// @forward 'borders';
+@forward 'borders';
 
-// .float-right {
-//   float: right;
-// }
+.float-right {
+  float: right;
+}
 
 // links
 a.plain-link,
@@ -12,6 +12,10 @@ a.plain-link,
   &:hover {
     text-decoration: underline;
   }
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1.6em);
 }
 
 .wrapper {

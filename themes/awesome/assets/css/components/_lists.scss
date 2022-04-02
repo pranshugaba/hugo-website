@@ -1,4 +1,3 @@
-@use '../abstracts/colors' as c;
 @use '../abstracts/mixins' as m;
 
 .items__list {
@@ -6,8 +5,10 @@
 }
 
 .list__key {
-  @include m.font-family-sans-serif;
+  font-family: var(--font-sans-serif);
   font-variation-settings: unset;
+  font-weight: 500;
+  line-height: 1;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
   font-size: 2rem;

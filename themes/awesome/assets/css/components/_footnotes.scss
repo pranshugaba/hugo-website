@@ -14,9 +14,13 @@ a.footnote-ref {
 }
 
 .footnotes {
-  font-size: smaller;
+  font-size: var(--font-size-300);
   & .footnote-backref {
-    font-size: smaller;
+    font-size: var(--font-size-300);
     color: var(--accent);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

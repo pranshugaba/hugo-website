@@ -7,6 +7,13 @@ details summary {
   }
 }
 
+details {
+  --flow-space: 2rem;
+}
+
+details .admonition__content {
+  --flow-space: 1.5rem;
+}
 details summary > * {
   display: inline;
 }
