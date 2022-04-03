@@ -1,12 +1,11 @@
 .gallery {
   &__figure {
     --flow-space: 3em;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     border: var(--border-medium) solid var(--fg);
     overflow: hidden;
     max-width: max-content;
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius-medium);
     img {
       border-radius: 0;
       border: none;

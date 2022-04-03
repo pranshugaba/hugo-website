@@ -17,6 +17,12 @@ $darkaccent: hsl($hueaccent, 100%, 83%);
   --light: #{$lightlight};
   --dark: #{$darkdark};
 
+  @media (prefers-color-scheme: dark) {
+    --bg: #{$darkdark};
+    --fg: #{$darklight};
+    --accent: #{$darkaccent};
+  }
+
   @media print {
     --bg: #{white};
     --fg: #{#121212};
@@ -24,12 +30,6 @@ $darkaccent: hsl($hueaccent, 100%, 83%);
     --dark: #{#121212};
     --accent: #{Indigo};
   }
-
-  //   @media (prefers-color-scheme: dark) {
-  //     --bg: #{$darkdark};
-  //     --fg: #{$darklight};
-  //     --accent: #{$darkaccent};
-  //   }
 
   // Fonts
   --font-sans-serif: 'IBM Plex Sans', sans-serif;

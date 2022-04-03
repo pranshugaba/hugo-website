@@ -27,3 +27,10 @@ a.plain-link,
     max-width: inherit;
   }
 }
+
+.full-bleed {
+  --width: 100vw;
+  --half-width: calc(var(--width) / 2);
+  width: var(--width);
+  margin-left: calc(50% - var(--half-width));
+}
