@@ -5,25 +5,24 @@ summary: A little bit about me
 ---
 
 
-I am a PhD student in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
+I am a second-year PhD student in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
 Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in/).
 
-My research interests include Automata Theory, Algebra, Logic, Combinatorics, and Algorithms.
+My research interests include Logic, Automata, and Games, as well as Algebra and Combinatorics.
 
-I write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}), and develop apps and games. I also love photography, swimming and cycling but not both at once.
+Outside of academics, I like to write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}). I also love photography, swimming, and [cycling](../tags/cycling).
 
 [See what I am doing now &#8594;]({{< ref "/now" >}})
 
-### Uses
-
-I try to use free and open source software as much as possible. I find that in most cases it is better than the non-free proprietary alternatives.
-
-[See what software I use &#8594;]({{< ref "/uses" >}})
 
 ## About this site
 
+This is my personal corner of the internet. Here, I share things that I have made: [poems]({{< ref "poems" >}}), [puzzles]({{< ref "puzzles" >}}), [tutorials]({{< ref "dev" >}}), and more. I also share [interesting links]({{< ref "links" >}}) that I come across.
+
+
 This site is built with :heart: using [Hugo](https://gohugo.io) and is hosted on [GitHub pages](https://pages.github.com/).
 The site is open source. You can find the source code on [Github](https://github.com/pranshugaba/hugo-website/).
+You can [subscribe to my feed]({{< ref "subscribe" >}}) to get notified when I add a post. 
 
 ### Some statistics
 

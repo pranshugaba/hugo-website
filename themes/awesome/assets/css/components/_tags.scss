@@ -2,8 +2,8 @@
 
 .tagcloud {
   @include m.plain-list;
-
-  margin-top: 2rem;
+  
+  line-height: 1.5;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;

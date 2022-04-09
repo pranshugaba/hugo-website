@@ -1125,7 +1125,7 @@ h4 code {
 .tagcloud {
   list-style: none;
   padding-left: 0;
-  margin-top: 2rem;
+  line-height: 1.5;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;

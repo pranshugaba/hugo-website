@@ -17,11 +17,7 @@ I am attending the following courses this semester:
 
 ## Learning
 
-I am learning Lua to configure my Neovim editor. 
-
-I am learning functional programming with Haskell from _Programming in Haskell_ by Graham Hutton. I want to become proficient enough in Haskell to be able to solve puzzles on Project Euler, as well as configure [XMonad](https://xmonad.org/) --- the window manager that I use.
-
-I am learning to build Android apps using Jetpack Compose. I am putting this knowledge into practice by making an app called _Decimal Clock_. You can [get it from the Play Store](https://tenhourstudios.com/decimal-clock).
+I am learning [Rust](https://rust-lang.org) by reading the [Rust book](https://doc.rust-lang.org/book/) and solving the [Rustlings](https://github.com/rust-lang/rustlings/) exercises. 
 
 मी मराठी पण शिकतोय.
 I am learning Marathi from [learn-marathi.com](https://www.learn-marathi.com/courses).
