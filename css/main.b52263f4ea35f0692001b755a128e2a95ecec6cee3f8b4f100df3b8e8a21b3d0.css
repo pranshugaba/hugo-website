@@ -5,8 +5,8 @@
   --accent: hsl(330deg, 100%, 42%);
   --light: hsl(270deg, 100%, 98%);
   --dark: hsl(270deg, 100%, 9%);
-  --font-sans-serif: "IBM Plex Sans", sans-serif;
-  --font-serif: "Fraunces", serif;
+  --font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --font-serif: var(--font-sans-serif);
   --font-mono: "JBMono", "Roboto Mono", monospace;
   --font-size-100: 0.625rem;
   --font-size-200: 0.75rem;
@@ -286,16 +286,14 @@ h6 {
 
 h1 {
   font-family: var(--font-serif);
-  font-variation-settings: "opsz" 96, "SOFT" 100, "WONK" 1;
   font-size: 2.75rem;
-  font-weight: 420;
+  font-weight: 500;
 }
 
 h2 {
   font-family: var(--font-serif);
-  font-variation-settings: "opsz" 72, "SOFT" 100, "WONK" 0;
   font-size: 2rem;
-  font-weight: 420;
+  font-weight: 500;
 }
 
 h3 {
