@@ -19,6 +19,8 @@ I am attending the following courses this semester:
 
 I am learning [Rust](https://rust-lang.org) by reading the [Rust book](https://doc.rust-lang.org/book/) and solving the [Rustlings](https://github.com/rust-lang/rustlings/) exercises. 
 
+I am learning to build Android apps using Jetpack Compose. I am putting this knowledge into practice by making an app called _Decimal Clock_. You can [get it from the Play Store](https://tenhourstudios.com/decimal-clock).
+
 मी मराठी पण शिकतोय.
 I am learning Marathi from [learn-marathi.com](https://www.learn-marathi.com/courses).
 
