@@ -7,7 +7,7 @@
   --dark: hsl(0deg, 0%, 11%);
   --font-sans-serif: Inter, sans-serif;
   --font-serif: Bitter, "Source Serif", ui-serif, serif;
-  --font-mono: "Fira Mono", monospace;
+  --font-mono: "Fira Code", monospace;
   --font-size-100: 0.625rem;
   --font-size-200: 0.75rem;
   --font-size-300: 0.875rem;
@@ -1443,7 +1443,7 @@ figure figcaption {
 }
 .page__subtitle {
   font-size: 1.35rem;
-  font-weight: 400;
+  font-weight: 450;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   line-height: 1.25;
