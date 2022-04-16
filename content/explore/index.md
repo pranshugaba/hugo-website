@@ -1,10 +1,10 @@
 ---
 title: Explore
-subtitle: A guide to explore my site
+subtitle: Navigate my site
 summary: A guide to explore my site
 ---
 
-## Sections
+## by Sections
 
 ### Learn
 
@@ -29,6 +29,6 @@ summary: A guide to explore my site
 - [Notebooks]({{< ref "/notes/" >}}): Miscellaneous interesting stuff
 
 
-## Tags
+## by Tags
 
 {{< tagcloud >}}
