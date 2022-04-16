@@ -3,32 +3,34 @@
     display: flex;
     justify-content: space-between;
   }
-  border-bottom: var(--border-medium) solid var(--fg);
-  padding-bottom: 1rem;
   margin-bottom: 2rem;
   line-height: 1;
+  border-bottom: var(--border-medium) solid var(--fg);
+  padding-bottom: 1rem;
 }
 
 .header__logo {
   margin: 0;
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
+  @media (min-width: 640px) {
+    margin-bottom: 0;
+  }
   text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: -0.025em;
   @media (min-width: 640px) {
     text-align: left;
   }
 }
 
 .header__sections {
-  margin-top: 1rem;
-  @media (min-width: 640px) {
-    margin-top: 0;
-  }
+  margin-left: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  line-height: 1.5;
   gap: 1rem;
 }
 

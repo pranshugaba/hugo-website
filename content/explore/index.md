@@ -4,8 +4,7 @@ subtitle: A guide to explore my site
 summary: A guide to explore my site
 ---
 
-## By Sections
-
+## Sections
 
 ### Learn
 
@@ -30,15 +29,11 @@ summary: A guide to explore my site
 - [Notebooks]({{< ref "/notes/" >}}): Miscellaneous interesting stuff
 
 
-## By Tags
+## Tags
 
 {{< tagcloud >}}
 
-## By Archive
-
-If you would like to see a list of everything posted on this site, head to the [archive]({{< ref "/archive/" >}}).
-
-## By Feeds
+## Feeds
 
 You can read my posts using a feed reader!
 Paste the following address in your favourite feed reader. 

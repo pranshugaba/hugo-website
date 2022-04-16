@@ -1,14 +1,11 @@
 // Colors
-$hue: 270;
-$hueaccent: 330;
-$lightlight: hsl($hue, 100%, 98%);
-$lightdark: hsl($hue, 100%, 12%);
-$lightaccent: hsl($hueaccent, 100%, 42%);
+$lightlight: white;
+$lightdark: black;
+$lightaccent: hsl(210, 100%, 42%);
 
-$darklight: hsl($hue, 100%, 97%);
-$darkdark: hsl($hue, 100%, 9%);
-$darkaccent: hsl($hueaccent, 100%, 83%);
-
+$darklight: white;
+$darkdark: hsl(0, 0%, 11%);
+$darkaccent: hsl(210, 100%, 69%);
 :root {
   // Colors
   --bg: #{$lightlight};
@@ -32,14 +29,9 @@ $darkaccent: hsl($hueaccent, 100%, 83%);
   }
 
   // Fonts
-  --font-sans-serif: system-ui, -apple-system, 'Segoe UI', Roboto, Arial,
-    'Noto Sans', 'Oxygen', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    'Liberation Sans', Cantarell, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
-  --font-serif: var(--font-sans-serif);
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-sans-serif: Inter, sans-serif;
+  --font-serif: Bitter, 'Source Serif', ui-serif, serif;
+  --font-mono: 'Fira Mono', monospace;
 
   --font-size-100: 0.625rem;
   --font-size-200: 0.75rem;

@@ -2,7 +2,7 @@
 
 .page {
   &__header {
-    margin-top: 3rem;
+    margin-top: 4rem;
     @media (min-width: 640px) {
       margin-top: min(6rem, 20vh);
     }
@@ -17,7 +17,6 @@
     font-weight: 400;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-    letter-spacing: -0.025em;
     line-height: 1.25;
   }
   &__date {

@@ -1,10 +1,27 @@
 @font-face {
+  font-family: 'Bitter';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Bitter/Bitter-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf')
+    format('truetype');
+}
+@font-face {
   font-family: 'Inter';
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url("/fonts/Inter-roman.var.woff2") format("woff2");
+  src: url('/fonts/Inter-roman.var.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Inter';
@@ -12,7 +29,7 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url("/fonts/Inter-italic.var.woff2") format("woff2");
+  src: url('/fonts/Inter-italic.var.woff2') format('woff2');
 }
 
 @font-face {
@@ -21,7 +38,7 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url("/fonts/IBMPlexSans/IBMPlexSansVar-Roman.woff2") format("woff2");
+  src: url('/fonts/IBMPlexSans/IBMPlexSansVar-Roman.woff2') format('woff2');
 }
 @font-face {
   font-family: 'IBM Plex Sans';
@@ -29,7 +46,7 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url("/fonts/IBMPlexSans/IBMPlexSansVar-Italic.woff2") format("woff2");
+  src: url('/fonts/IBMPlexSans/IBMPlexSansVar-Italic.woff2') format('woff2');
 }
 
 @font-face {
@@ -38,7 +55,8 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url("/fonts/SourceSerif/SourceSerif4Variable-Roman.otf.woff2") format("woff2");
+  src: url('/fonts/SourceSerif/SourceSerif4Variable-Roman.otf.woff2')
+    format('woff2');
 }
 @font-face {
   font-family: 'Source Serif';
@@ -46,7 +64,8 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url("/fonts/SourceSerif/SourceSerif4Variable-Italic.otf.woff2") format("woff2");
+  src: url('/fonts/SourceSerif/SourceSerif4Variable-Italic.otf.woff2')
+    format('woff2');
 }
 
 @font-face {
@@ -84,5 +103,14 @@
   src: url('/fonts/JetBrainsMono-Italic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('/fonts/Fira_Code/FiraCode-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
   font-display: swap;
 }

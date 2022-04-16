@@ -8,9 +8,6 @@
     {{.Content}}
   </header>
   {{ if (ne $displayStyle "none") }}
-    {{ range .Pages.GroupByDate "2006" }}
-    <section id="{{ .Key }}">
-      <h2 class="list__key">{{ .Key }}</h2>
       <ul class="[ items__list ] [ flow ]">
         {{ range .Pages }}
         <li>
@@ -28,9 +25,7 @@
         </li>
         {{ end }}
       </ul>
-    </section>
     {{ else }}
       <p>No posts in this section yet. Check back later!</p>
     {{ end }}
-  {{ end  }}
 {{ end }}

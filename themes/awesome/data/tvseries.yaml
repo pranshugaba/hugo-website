@@ -12,6 +12,12 @@ wantToWatch:
     channel: Netflix
 
 watching:
+  - title: Taskmaster
+    type: Series
+    channel: Channel 4
+    season: 13
+    startDate: 2021-02-01T05:30:00+05:30
+
   - title: Moon Knight
     type: Season
     season: 1
@@ -68,11 +74,6 @@ watched:
     season: 3
     channel: FXX
   
-  - title: Taskmaster
-    type: Series
-    channel: Channel 4
-    season: 12
-    startDate: 2021-02-01T05:30:00+05:30
 
   - title: Final Space
     type: Series

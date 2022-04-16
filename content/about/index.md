@@ -17,7 +17,7 @@ Outside of academics, I like to write [poems]({{< ref "/poems" >}}) and [puzzles
 
 ## About this site
 
-This is my personal corner of the internet. Here, I share things that I have made: [poems]({{< ref "poems" >}}), [puzzles]({{< ref "puzzles" >}}), [tutorials]({{< ref "dev" >}}), and more. I also share [interesting links]({{< ref "links" >}}) that I come across.
+This is my corner of the internet. Here, I share things that I have made: [poems]({{< ref "poems" >}}), [puzzles]({{< ref "puzzles" >}}), [tutorials]({{< ref "dev" >}}), and more. I also share [interesting links]({{< ref "links" >}}) that I come across.
 
 
 This site is built with :heart: using [Hugo](https://gohugo.io) and is hosted on [GitHub pages](https://pages.github.com/).
@@ -42,7 +42,7 @@ You can [subscribe to my feed]({{< ref "subscribe" >}}) to get notified when I a
 
 Last updated: {{< lastupdated >}}
 
-Current theme: **Purple and Pink**
+Current theme: **Blue accents**
 
 ### Support
 

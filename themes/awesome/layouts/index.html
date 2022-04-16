@@ -1,64 +1,9 @@
 {{ define "main" }}
- 
-{{ $itemsPerPage := 10 }}
-{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-{{ $paginator := .Paginate ($pages.GroupByDate "2006") $itemsPerPage }}
-
-{{ if eq ($paginator.PageNumber) 1 }}
-  <header id="content" class="page__header">
-    <h1 class="page__title">Hello there!</h1>
-    <p class="page__subtitle" >Welcome to my site :)</p>
-  </header>
-  <div class="flow">
-    {{ .Content }}
-  </div>
-{{ end }}
-
-{{ if ne ($paginator.PageNumber) 1 }}
-<div id="content" class="home__pager">
-<div>
-  {{ with $paginator.HasPrev }}
-    <a href="{{ $paginator.Prev.URL }}">&#8592; newer </a>
-  {{ end }}
-</div>
-<div>
-  Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}
-</div>
-<div>
-  {{ with $paginator.HasNext }}
-    <a href="{{ $paginator.Next.URL }}">older &#8594; </a>
-  {{ end }}
-</div>
-</div>
-{{ end }}
-
-{{ range $paginator.PageGroups }}
-<section id="{{ .Key }}">
-  <h2 class="list__key">{{ .Key }}</h2>
-  <ul class="[ items__list ] [ flow ]">
-      {{ range .Pages }}
-      <li>
-        {{ if (eq .Section "minis")}}
-          {{ partial "list/minis.html" . }}
-        {{ else }}
-          {{ partial "list/description.html" . }}
-        {{ end }}
-      </li>
-      {{ end }}
-  </ul>
-</section>
-{{ end }}
-
-<div class="home__pager">
-<div>
-  {{ with $paginator.HasPrev }}
-    <a href="{{ $paginator.Prev.URL }}">&#8592; newer </a>
-  {{ end }}
-</div>
-<div>
-  {{ with $paginator.HasNext }}
-    <a href="{{ $paginator.Next.URL }}">older &#8594; </a>
-  {{ end }}
-</div>
+<header id="content" class="page__header">
+  <h1 class="page__title">Pranshu Gaba</h1>
+  <p class="page__subtitle" >PhD Student</p>
+</header>
+<div class="flow">
+  {{ .Content }}
 </div>
 {{ end }}
