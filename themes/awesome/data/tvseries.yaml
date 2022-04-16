@@ -1,4 +1,19 @@
 wantToWatch:
+  - title: Better Call Saul
+    type: Series
+    season: 6
+    channel: AMC
+
+  - title: Barry
+    type: Series
+    season: 3
+    channel: HBO
+  
+  - title: Russian Doll
+    type: Series
+    season: 2
+    channel: Netflix
+
   - title: Dark
     type: Series
     channel: Netflix

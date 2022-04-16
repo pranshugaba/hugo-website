@@ -1,21 +1,8 @@
 ---
-title: About me
-subtitle: Hi, I am Pranshu!
-summary: A little bit about me
+title: About this site
+subtitle: Colophon
+summary: A little bit about this site
 ---
-
-
-I am a second-year PhD student in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
-Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in/).
-
-My research interests include Logic, Automata, and Games, as well as Algebra and Combinatorics.
-
-Outside of academics, I like to write [poems]({{< ref "/poems" >}}) and [puzzles]({{< ref "/puzzles" >}}). I also love photography, swimming, and [cycling](../tags/cycling).
-
-[See what I am doing now &#8594;]({{< ref "/now" >}})
-
-
-## About this site
 
 This is my corner of the internet. Here, I share things that I have made: [poems]({{< ref "poems" >}}), [puzzles]({{< ref "puzzles" >}}), [tutorials]({{< ref "dev" >}}), and more. I also share [interesting links]({{< ref "links" >}}) that I come across.
 
@@ -43,6 +30,19 @@ You can [subscribe to my feed]({{< ref "subscribe" >}}) to get notified when I a
 Last updated: {{< lastupdated >}}
 
 Current theme: **Blue accents**
+
+
+### Feeds
+
+You can read my posts using a feed reader!
+Paste the following address in your favourite feed reader. 
+
+{{< highlight shell >}}
+https://pranshugaba.com/index.xml
+{{< /highlight >}}
+
+You can also subscribe to only select sections. 
+For more details, visit the [subscribe page]({{< ref "/subscribe" >}}).
 
 ### Support
 

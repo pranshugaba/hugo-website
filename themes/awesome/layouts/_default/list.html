@@ -1,12 +1,14 @@
 {{ define "main" }}
   {{ $displayStyle := .Params.Display }}
-  <header class="page__header">
+  <header class="[ page__header ] [ flow ]">
     <h1 class="page__title">{{ .Title | emojify }}</h1>
     {{ with .Params.Subtitle }}
         <p class="page__subtitle" >{{ . | emojify }}</p>
     {{ end }}
-    {{.Content}}
   </header>
+  <article class="[ flow ]">
+    {{.Content}}
+  </article>
   {{ if (ne $displayStyle "none") }}
       <ul class="[ items__list ] [ flow ]">
         {{ range .Pages }}
@@ -23,9 +25,9 @@
             {{ end }}
           {{ end }}
         </li>
+        {{ else }}
+          <p>No posts in this section yet. Check back later!</p>
+          </ul>
         {{ end }}
-      </ul>
-    {{ else }}
-      <p>No posts in this section yet. Check back later!</p>
     {{ end }}
 {{ end }}

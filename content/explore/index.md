@@ -32,15 +32,3 @@ summary: A guide to explore my site
 ## Tags
 
 {{< tagcloud >}}
-
-## Feeds
-
-You can read my posts using a feed reader!
-Paste the following address in your favourite feed reader. 
-
-{{< highlight shell >}}
-https://pranshugaba.com/index.xml
-{{< /highlight >}}
-
-You can also subscribe to only select sections. 
-For more details, visit the [subscribe page]({{< ref "/subscribe" >}}).
