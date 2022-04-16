@@ -1,18 +1,13 @@
 @charset "UTF-8";
 :root {
-  --bg: hsl(270deg, 100%, 98%);
-  --fg: hsl(270deg, 100%, 12%);
-  --accent: hsl(330deg, 100%, 42%);
-  --light: hsl(270deg, 100%, 98%);
-  --dark: hsl(270deg, 100%, 9%);
-  --font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, Arial,
-    "Noto Sans", "Oxygen", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    "Liberation Sans", Cantarell, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif: var(--font-sans-serif);
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --bg: white;
+  --fg: black;
+  --accent: hsl(210deg, 100%, 42%);
+  --light: white;
+  --dark: hsl(0deg, 0%, 11%);
+  --font-sans-serif: Inter, sans-serif;
+  --font-serif: Bitter, "Source Serif", ui-serif, serif;
+  --font-mono: "Fira Mono", monospace;
   --font-size-100: 0.625rem;
   --font-size-200: 0.75rem;
   --font-size-300: 0.875rem;
@@ -40,9 +35,9 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: hsl(270deg, 100%, 9%);
-    --fg: hsl(270deg, 100%, 97%);
-    --accent: hsl(330deg, 100%, 83%);
+    --bg: hsl(0deg, 0%, 11%);
+    --fg: white;
+    --accent: hsl(210deg, 100%, 69%);
   }
 }
 @media print {
@@ -55,6 +50,22 @@
   }
 }
 
+@font-face {
+  font-family: "Bitter";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/Bitter/Bitter-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Bitter";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("/fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf") format("truetype");
+}
 @font-face {
   font-family: "Inter";
   font-weight: 100 900;
@@ -131,6 +142,13 @@
   src: url("/fonts/JetBrainsMono-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url("/fonts/Fira_Code/FiraCode-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
   font-display: swap;
 }
 *,
@@ -239,7 +257,7 @@ input {
 
 html {
   font-size: 112.5%;
-  font-family: var(--font-sans-serif);
+  font-family: var(--font-serif);
   scroll-padding-top: 1.5rem;
 }
 @media (min-width: 640px) {
@@ -304,7 +322,6 @@ h3 {
   font-family: var(--font-sans-serif);
   font-size: 1.6rem;
   font-weight: 500;
-  letter-spacing: -0.01em;
 }
 
 h4 {
@@ -526,10 +543,10 @@ a.plain-link:hover,
 }
 
 .site__header {
-  border-bottom: var(--border-medium) solid var(--fg);
-  padding-bottom: 1rem;
   margin-bottom: 2rem;
   line-height: 1;
+  border-bottom: var(--border-medium) solid var(--fg);
+  padding-bottom: 1rem;
 }
 @media (min-width: 640px) {
   .site__header {
@@ -540,10 +557,16 @@ a.plain-link:hover,
 
 .header__logo {
   margin: 0;
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
   text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: -0.025em;
+}
+@media (min-width: 640px) {
+  .header__logo {
+    margin-bottom: 0;
+  }
 }
 @media (min-width: 640px) {
   .header__logo {
@@ -552,17 +575,13 @@ a.plain-link:hover,
 }
 
 .header__sections {
-  margin-top: 1rem;
+  margin-left: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  line-height: 1.5;
   gap: 1rem;
-}
-@media (min-width: 640px) {
-  .header__sections {
-    margin-top: 0;
-  }
 }
 
 .skip__nav {
@@ -1410,7 +1429,7 @@ figure figcaption {
 }
 
 .page__header {
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-bottom: 3rem;
 }
 @media (min-width: 640px) {
@@ -1427,7 +1446,6 @@ figure figcaption {
   font-weight: 400;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  letter-spacing: -0.025em;
   line-height: 1.25;
 }
 .page__date {
@@ -1545,7 +1563,6 @@ figure figcaption {
   font-size: 1.25rem;
 }
 .minis .page__number {
-  letter-spacing: unset;
   font-size: 1.25rem;
   font-weight: 400;
   margin-top: 3rem;
