@@ -1,9 +1,9 @@
 {{ define "main" }}
 <header id="content" class="page__header">
-  <h1 class="page__title">Pranshu Gaba</h1>
-  <p class="page__subtitle" >PhD Student</p>
+  <h1 class="page__title">{{ .Title }}</h1>
+  <p class="page__subtitle" >{{ .Params.Subtitle }}</p>
 </header>
-<div class="flow">
+<article class="flow">
   {{ .Content }}
-</div>
+</article>
 {{ end }}
