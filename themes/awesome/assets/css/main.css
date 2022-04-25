@@ -4,7 +4,7 @@
   --fg: black;
   --accent: hsl(210deg, 100%, 42%);
   --light: white;
-  --dark: hsl(0deg, 0%, 13%);
+  --dark: hsl(0deg, 0%, 12%);
   --font-sans-serif: Inter, sans-serif;
   --font-serif: Bitter, ui-serif, serif;
   --font-mono: "JBMono", monospace;
@@ -12,8 +12,9 @@
   --font-size-200: 0.75rem;
   --font-size-300: 0.875rem;
   --font-size-400: 1rem;
-  --font-size-500: 1.25rem;
-  --font-size-600: 1.5rem;
+  --font-size-500: 1.125rem;
+  --font-size-600: 1.25rem;
+  --font-size-700: 1.5rem;
   --font-size-800: 2rem;
   --size-100: 0.1rem;
   --size-200: 0.2rem;
@@ -35,7 +36,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: hsl(0deg, 0%, 13%);
+    --bg: hsl(0deg, 0%, 12%);
     --fg: white;
     --accent: hsl(210deg, 100%, 69%);
   }
@@ -209,6 +210,7 @@ html {
   font-size: 112.5%;
   font-family: var(--font-sans-serif);
   scroll-padding-top: 1.5rem;
+  text-underline-offset: 0.16em;
 }
 @media (min-width: 640px) {
   html {
@@ -279,7 +281,8 @@ h2 {
 
 h3 {
   font-family: var(--font-sans-serif);
-  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -983,17 +986,25 @@ h4 code {
 }
 .list-archive__item .item__date,
 .list-books__item .item__date {
-  font-size: smaller;
+  font-size: var(--font-size-300);
 }
 @media (min-width: 640px) {
   .list-archive__item,
 .list-books__item {
     margin-bottom: 1rem;
     display: flex;
-    flex-direction: row-reverse;
     gap: 0.5rem;
     justify-content: space-between;
   }
+}
+
+.list-archive__item .item__details {
+  font-size: var(--font-size-400);
+  font-weight: 600;
+}
+
+.list-books__item {
+  flex-direction: row-reverse;
 }
 
 .list-description__item .item__metadata,
@@ -1405,20 +1416,20 @@ figure figcaption {
 }
 @media (min-width: 800px) {
   .home {
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 2fr 7fr;
   }
 }
 .home__profile {
   margin-top: 1rem;
 }
 .home__profile__picture {
-  max-width: 20ch;
+  max-width: 240px;
   margin-inline: auto;
   display: block;
   width: 100%;
   height: auto;
   border-radius: var(--border-radius-large);
-  border: var(--border-thick) solid var(--fg);
+  border: var(--border-medium) solid var(--fg);
 }
 .home__profile__text {
   text-align: center;
@@ -1430,7 +1441,7 @@ figure figcaption {
 }
 
 .profile__primary {
-  font-size: var(--font-size-500);
+  font-size: var(--font-size-600);
   font-weight: 500;
   letter-spacing: -0.025em;
   line-height: 1.25;

@@ -1,7 +1,4 @@
 <div class="list-archive__item">
-  <span class="item__date">
-     {{ .Date.Format "Jan 2" }} 
-  </span>
   <div class="item__details">
     <a href="{{ .Permalink }}"> 
       {{ if (eq .Section "minis")}}
@@ -13,4 +10,7 @@
         {{ .Title }}
       {{ end }}</a>
   </div>
+  <span class="item__date">
+     {{ .Date.Format "Jan 2" }} 
+  </span>
 </div>

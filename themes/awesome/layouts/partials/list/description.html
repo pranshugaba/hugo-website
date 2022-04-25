@@ -5,7 +5,6 @@
       {{ with .Params.Location }}
       &nbsp; · &nbsp; {{ partial "helpers/location" . }}
       {{ end }}
-      &nbsp; · &nbsp; <a href="/{{ .Type }}">{{ .Type | title }}</a>
       {{ if (eq .Type "puzzles") }}
       &nbsp; · &nbsp; #{{ .Params.Number }} 
       {{ end }}

@@ -10,6 +10,7 @@ html {
   }
   font-family: var(--font-sans-serif);
   scroll-padding-top: 1.5rem;
+  text-underline-offset: 0.16em;
 }
 
 body {
@@ -64,7 +65,8 @@ h2 {
 
 h3 {
   font-family: var(--font-sans-serif);
-  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 

@@ -1,11 +1,13 @@
 ---
-title: About me
-subtitle: Hi, I am Pranshu!
+title: About
+subtitle: A little bit about me and this site
 summary: A little bit about me
 display: none
 ---
 
+## About me
 
+My name is Pranshu Gaba. 
 I am a second-year PhD student in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
 Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in/).
 

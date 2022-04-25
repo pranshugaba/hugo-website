@@ -37,16 +37,25 @@
 .list-books__item {
   margin-bottom: 2rem;
   & .item__date {
-    font-size: smaller;
+    font-size: var(--font-size-300);
   }
 
   @media (min-width: 640px) {
     margin-bottom: 1rem;
     display: flex;
-    flex-direction: row-reverse;
     gap: 0.5rem;
     justify-content: space-between;
   }
+}
+
+.list-archive__item {
+  .item__details {
+    font-size: var(--font-size-400);
+    font-weight: 600;
+  }
+}
+.list-books__item {
+  flex-direction: row-reverse;
 }
 
 .list-description__item,

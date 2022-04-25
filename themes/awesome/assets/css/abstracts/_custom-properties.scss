@@ -17,7 +17,7 @@ $lightdark: black;
 $lightaccent: hsl(210, 100%, 42%);
 
 $darklight: white;
-$darkdark: hsl(0, 0%, 13%);
+$darkdark: hsl(0, 0%, 12%);
 $darkaccent: hsl(210, 100%, 69%);
 
 :root {
@@ -54,8 +54,9 @@ $darkaccent: hsl(210, 100%, 69%);
   --font-size-200: 0.75rem;
   --font-size-300: 0.875rem;
   --font-size-400: 1rem;
-  --font-size-500: 1.25rem;
-  --font-size-600: 1.5rem;
+  --font-size-500: 1.125rem;
+  --font-size-600: 1.25rem;
+  --font-size-700: 1.5rem;
   --font-size-800: 2rem;
 
   // margin / padding sizes

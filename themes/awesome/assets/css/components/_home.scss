@@ -8,19 +8,19 @@
   grid-template-columns: 1fr;
   align-items: center;
   @media (min-width: 800px) {
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 2fr 7fr;
   }
 
   &__profile {
     margin-top: 1rem;
     &__picture {
-      max-width: 20ch;
+      max-width: 240px;
       margin-inline: auto;
       display: block;
       width: 100%;
       height: auto;
       border-radius: var(--border-radius-large);
-      border: var(--border-thick) solid var(--fg);
+      border: var(--border-medium) solid var(--fg);
     }
     &__text {
       text-align: center;
@@ -38,7 +38,7 @@
 
 .profile {
   &__primary {
-    font-size: var(--font-size-500);
+    font-size: var(--font-size-600);
     font-weight: 500;
     letter-spacing: -0.025em;
     line-height: 1.25;
