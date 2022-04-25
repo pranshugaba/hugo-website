@@ -35,7 +35,11 @@ a.plain-link,
   margin-left: calc(50% - var(--half-width));
 }
 
-#content {
+.header-width {
+  max-width: var(--header-width);
+  margin-inline: auto;
+}
+.content-width {
   max-width: var(--content-width);
   margin-inline: auto;
 }
