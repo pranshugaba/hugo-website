@@ -500,7 +500,12 @@ a.plain-link:hover,
   margin-left: calc(50% - var(--half-width));
 }
 
-#content {
+.header-width {
+  max-width: var(--header-width);
+  margin-inline: auto;
+}
+
+.content-width {
   max-width: var(--content-width);
   margin-inline: auto;
 }
@@ -1417,6 +1422,7 @@ figure figcaption {
 }
 .home__profile__text {
   text-align: center;
+  margin-top: 1rem;
 }
 .home__content .page__header {
   margin-top: 0rem;
@@ -1425,8 +1431,13 @@ figure figcaption {
 
 .profile__primary {
   font-size: var(--font-size-500);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
 }
 .profile__secondary {
+  margin-top: 0.25rem;
   font-size: var(--font-size-300);
 }
 
