@@ -1,0 +1,46 @@
+.home {
+  display: grid;
+  max-width: calc(var(--header-width) - 2rem);
+  margin-block-start: 3rem;
+  margin-inline: auto;
+  column-gap: 3rem;
+  row-gap: 2rem;
+  grid-template-columns: 1fr;
+  align-items: center;
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 4fr;
+  }
+
+  &__profile {
+    // background-color: red;
+    margin-top: 1rem;
+    &__picture {
+      max-width: 20ch;
+      margin-inline: auto;
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: var(--border-radius-large);
+      border: var(--border-thick) solid var(--fg);
+    }
+    &__text {
+      text-align: center;
+    }
+  }
+  &__content {
+    .page__header {
+      margin-top: 0rem;
+      margin-bottom: 2rem;
+    }
+    // background-color: blue;
+  }
+}
+
+.profile {
+  &__primary {
+    font-size: var(--font-size-500);
+  }
+  &__secondary {
+    font-size: var(--font-size-300);
+  }
+}

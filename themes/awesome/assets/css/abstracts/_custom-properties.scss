@@ -1,13 +1,30 @@
 // Colors
+// $my-color-scheme: (
+//   light: (
+//     "fg": white,
+//     "bg": black,
+//     "accent": hsl(210, 100%, 42%),
+//   ),
+//   dark: (
+//     "fg": white,
+//     "bg": hsl(0, 0%, 11%),
+//     "accent": hsl(210, 100%, 69%),
+//   ),
+// );
+
 $lightlight: white;
 $lightdark: black;
 $lightaccent: hsl(210, 100%, 42%);
 
 $darklight: white;
-$darkdark: hsl(0, 0%, 11%);
+$darkdark: hsl(0, 0%, 13%);
 $darkaccent: hsl(210, 100%, 69%);
+
 :root {
   // Colors
+  // @each $name, $color in $my-color-scheme {
+  //   --#{$name}: $color;
+  // }
   --bg: #{$lightlight};
   --fg: #{$lightdark};
   --accent: #{$lightaccent};

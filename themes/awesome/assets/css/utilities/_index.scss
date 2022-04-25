@@ -19,7 +19,7 @@ a.plain-link,
 }
 
 .wrapper {
-  max-width: 69ch; // nice :)
+  // max-width: 69ch; // nice :)
   margin-inline: auto;
   padding-inline: 0.75rem;
   padding-block: 1.25rem;
@@ -33,4 +33,9 @@ a.plain-link,
   --half-width: calc(var(--width) / 2);
   width: var(--width);
   margin-left: calc(50% - var(--half-width));
+}
+
+#content {
+  max-width: var(--content-width);
+  margin-inline: auto;
 }

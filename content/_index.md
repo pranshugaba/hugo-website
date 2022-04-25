@@ -1,10 +1,10 @@
 ---
-title: Hi there!
+title: Hello there!
 subtitle: Welcome to my site
 summary: Personal website of Pranshu Gaba. Here I share photos, poems, puzzles, and more!
 ---
 
-I am Pranshu Gaba. I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tifr.res.in). 
+I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tifr.res.in). 
 My research interests include Logic, Automata, and Games, as well as Algebra and Combinatorics.
 
 I occasionally publish 

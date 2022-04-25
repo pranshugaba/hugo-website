@@ -40,6 +40,15 @@ h6 {
   margin-top: 2em;
   margin-bottom: 0.5em;
 }
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  // background-color: red;
+  --flow-space: 0;
+}
 
 h1 {
   font-family: var(--font-serif);
@@ -137,3 +146,8 @@ a {
     text-decoration: none;
   }
 }
+
+// a[href*="//"]:not([href*="pranshugaba.com"]):not([href*="localhost"])
+// {
+//   color: gray;
+// }

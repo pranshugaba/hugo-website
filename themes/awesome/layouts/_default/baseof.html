@@ -4,7 +4,7 @@
   <body>
     <div class="wrapper">
       {{- partial "header.html" . -}}
-      <main {{ with .Type }}class="{{ . }}"{{ end }}{{ if (eq .Kind "page")}}id="content"{{ end }}>{{- block "main" . }} {{- end }}</main>
+      <main {{ with .Type }}class="{{ . }}"{{ end }}{{ if not .IsHome }}id="content"{{ end }}>{{- block "main" . }} {{- end }}</main>
       {{- partial "footer.html" . -}}
     </div>
   </body>

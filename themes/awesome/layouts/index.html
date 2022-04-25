@@ -1,9 +1,21 @@
 {{ define "main" }}
-<header id="content" class="page__header">
-  <h1 class="page__title">{{ .Title }}</h1>
-  <p class="page__subtitle" >{{ .Params.Subtitle }}</p>
-</header>
-<article class="flow">
-  {{ .Content }}
-</article>
+<div class="home">
+  <div class="home__profile">
+    <img class="home__profile__picture" width="400" height="400" src="/profile.png" alt="" />
+    <div class="home__profile__text">
+      <p class="profile__primary">Pranshu Gaba</p>
+      <p class="profile__secondary">PhD Student</p>
+      <p class="profile__secondary">TIFR, Mumbai</p>
+    </div>
+  </div>
+  <div class="home__content">
+    <header class="page__header">
+      <h1 class="page__title">{{ .Title }}</h1>
+      <p class="page__subtitle" >{{ .Params.Subtitle }}</p>
+    </header>
+    <article class="flow">
+      {{ .Content }}
+    </article>
+  </div>
+</div>
 {{ end }}

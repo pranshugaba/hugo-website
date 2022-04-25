@@ -1,4 +1,6 @@
 .site__footer {
+  max-width: var(--header-width);
+  margin-inline: auto;
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: var(--border-medium) solid var(--fg);

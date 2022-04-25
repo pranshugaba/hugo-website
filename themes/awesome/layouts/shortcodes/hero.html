@@ -2,7 +2,7 @@
 
 {{- $heroText := .Inner | markdownify -}}
 
-{{ $imgName := "*jpg" }}
+{{ $imgName := "*[webp,png,jpg,jpeg]" }}
 {{ with .Get "image" }}
     {{ $imgName = . }}
 {{ end }}
