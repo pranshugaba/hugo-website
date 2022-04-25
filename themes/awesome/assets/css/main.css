@@ -5,7 +5,7 @@
   --accent: hsl(210deg, 100%, 42%);
   --light: white;
   --dark: hsl(0deg, 0%, 11%);
-  --font-sans-serif: sans-serif;
+  --font-sans-serif: Inter, sans-serif;
   --font-serif: Bitter, ui-serif, serif;
   --font-mono: "JBMono", monospace;
   --font-size-100: 0.625rem;
@@ -65,6 +65,22 @@
   font-style: italic;
   font-named-instance: "Italic";
   src: url("/fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/Inter-roman.var.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("/fonts/Inter-italic.var.woff2") format("woff2");
 }
 @font-face {
   font-family: "JBMono";
@@ -186,7 +202,7 @@ input {
 
 html {
   font-size: 112.5%;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans-serif);
   scroll-padding-top: 1.5rem;
 }
 @media (min-width: 640px) {

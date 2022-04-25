@@ -1,5 +1,6 @@
 <nav class="page__nav">
-{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ $pages := where .Site.RegularPages "Type" "in" .Section }}
+{{ $section := .Section | singularize }}
 {{ if (in .Site.Params.mainSections .Type) }}
     <div class="page__prevnext">
         <div class="page__prev">
@@ -19,7 +20,7 @@
             {{ end }}
         {{ else }}
             <div class="page__end">
-            This is the oldest post.
+            This is the oldest {{ $section }}.
             </div>
         {{ end }}
         </div>
@@ -39,7 +40,7 @@
             {{ end }}
         {{ else }}
             <div class="page__end">
-            This is the newest post.
+            This is the newest {{ $section }}.
             </div>
         {{end}}
         </div>
