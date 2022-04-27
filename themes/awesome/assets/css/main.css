@@ -282,13 +282,13 @@ h2 {
 h3 {
   font-family: var(--font-sans-serif);
   letter-spacing: -0.02em;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
 }
 
 h4 {
   font-family: var(--font-sans-serif);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
@@ -1441,15 +1441,83 @@ figure figcaption {
 }
 
 .profile__primary {
-  font-size: var(--font-size-600);
+  font-size: var(--font-size-700);
   font-weight: 500;
   letter-spacing: -0.025em;
   line-height: 1.25;
   margin-bottom: 0.5rem;
 }
+@media (min-width: 800px) {
+  .profile__primary {
+    font-size: var(--font-size-600);
+  }
+}
 .profile__secondary {
   margin-top: 0.25rem;
+  font-size: var(--font-size-400);
+}
+@media (min-width: 800px) {
+  .profile__secondary {
+    font-size: var(--font-size-300);
+  }
+}
+
+.recent {
+  --item-padding: 0.8rem;
+  max-width: var(--header-width);
+  margin-inline: auto;
+}
+.recent__group {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  margin-block: 2rem;
+}
+@media (min-width: 640px) {
+  .recent__group {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .recent__group {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.recent__section {
+  border: var(--border-medium) solid var(--fg);
+  border-radius: var(--border-radius-medium);
+}
+.recent__section__title {
+  margin-block: 0;
+  padding-inline: var(--item-padding);
+  padding-block: 0.5rem;
+  font-size: var(--font-size-500);
+  font-weight: 600;
+  border-bottom: var(--border-medium) solid var(--fg);
+}
+.recent__section__seeall {
+  text-align: right;
+  padding: var(--item-padding);
   font-size: var(--font-size-300);
+}
+.recent__item {
+  padding-inline: var(--item-padding);
+  padding-block: 0.5rem;
+}
+.recent__item__title {
+  font-size: var(--font-size-400);
+  line-height: 1.5;
+  font-weight: 600;
+}
+.recent__item__summary {
+  margin-top: 0.25rem;
+  font-size: var(--font-size-300);
+  line-height: 1.5;
+}
+.recent__item__date {
+  margin-top: 0.75rem;
+  font-size: var(--font-size-200);
 }
 
 .page__header {
