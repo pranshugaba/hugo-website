@@ -1,6 +1,6 @@
 ---
 title: "Mini #6"
-summary: "When will Winds of Winter come?"
+summary: "When will the Winds of Winter arrive?"
 
 number: 6
 

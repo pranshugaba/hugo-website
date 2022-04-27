@@ -1472,44 +1472,58 @@ figure figcaption {
 }
 @media (min-width: 480px) {
   .recent__group {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    display: grid;
     gap: 1rem;
-    -ms-scroll-snap-type: y mandatory;
-        scroll-snap-type: y mandatory;
+    grid-auto-flow: column;
+    grid-auto-columns: 55%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    -ms-scroll-snap-type: inline mandatory;
+        scroll-snap-type: inline mandatory;
+  }
+}
+@media (min-width: 960px) {
+  .recent__group {
+    grid-auto-columns: 36%;
   }
 }
 .recent__section {
   width: 100%;
+  display: flex;
+  flex-direction: column;
   margin-block: 2rem;
   border: var(--border-medium) solid var(--fg);
   border-radius: var(--border-radius-medium);
 }
 @media (min-width: 480px) {
   .recent__section {
+    margin-block: 0 1rem;
     scroll-snap-align: start;
-    scroll-snap-stop: always;
-    margin-block: 0;
-    flex: 0 0 auto;
-    width: 75%;
   }
-}
-@media (min-width: 800px) {
-  .recent__section {
-    width: calc(50% - 6rem);
+  .recent__section:last-child {
+    scroll-snap-align: end;
   }
 }
 .recent__section__title {
   margin-block: 0;
   padding-inline: var(--item-padding);
-  padding-block: 0.5rem;
-  font-size: var(--font-size-500);
+  -webkit-padding-before: var(--item-padding);
+          padding-block-start: var(--item-padding);
+  font-size: var(--font-size-700);
   font-weight: 600;
+}
+.recent__section__description {
+  padding-inline: var(--item-padding);
+  -webkit-padding-after: var(--item-padding);
+          padding-block-end: var(--item-padding);
+  margin-top: 0.25rem;
+  line-height: 1.5;
   border-bottom: var(--border-medium) solid var(--fg);
+  font-size: var(--font-size-300);
 }
 .recent__section__seeall {
   text-align: right;
+  margin-top: auto;
   padding: var(--item-padding);
   font-size: var(--font-size-300);
 }
@@ -1523,7 +1537,7 @@ figure figcaption {
   font-weight: 600;
 }
 .recent__item__summary {
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
   font-size: var(--font-size-300);
   line-height: 1.5;
 }

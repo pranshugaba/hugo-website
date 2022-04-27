@@ -4,12 +4,13 @@
 {{ if ge (len $sectionPages) 1 }}
 <section class="recent__section">
     <h3 class="recent__section__title">{{ $section | humanize }}</h3>
+    <p class="recent__section__description">{{ with site.GetPage $section }}{{ .Params.Subtitle }}{{ end }}</p>
     {{ range first $numberOfItems $sectionPages}}
         {{ partial "home/recent-item" . }}
     {{ end }}
     {{ if gt (len $sectionPages) $numberOfItems}}
     <div class="recent__section__seeall" >
-        <a href="{{ $section }}"> See all {{ len $sectionPages }} {{ $section }} &#8594;</a>
+        <a href="/{{ $section }}"> See all {{ len $sectionPages }} {{ $section }} &#8594;</a>
     </div>
     {{ end }}
 </section>

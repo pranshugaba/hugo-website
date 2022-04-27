@@ -22,33 +22,4 @@
     <article class="flow">{{ .Content }}</article>
   </div>
 </div>
-<div class="recent">
-  <h2>Recent posts</h2>
-  <h3>Learn</h3>
-  <div class="recent__group">
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "dev") }}
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "maths") }}
-  </div>
-  <h3>Explore</h3>
-  <div class="recent__group">
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "trips") }}
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "reviews") }}
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "links") }}
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "recipes") }}
-  </div>
-  <h3>Fun</h3>
-  <div class="recent__group">
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "puzzles") }} 
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "poems") }}
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "stories") }}
-    {{ partial "home/recent-section" (dict "Context" .  "SectionName" "comics") }}
-  </div>
-
-  <h3>Personal</h3>
-  <div class="recent__group">
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "posts") }}
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "minis") }}
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "thoughts") }}
-  </div>
-</div>
 {{ end }}
