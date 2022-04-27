@@ -21,7 +21,7 @@
             {{ else if (eq .Section "notebooks")}}
               {{ partial "list/archive.html" . }}
             {{ else }}
-              {{ partial "list/description.html" . }}
+              {{ partial "list/minimal-section.html" . }}
             {{ end }}
           {{ end }}
         </li>

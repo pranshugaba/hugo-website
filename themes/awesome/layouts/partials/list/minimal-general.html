@@ -1,0 +1,24 @@
+<div class="list-minimal__item">
+  <div class="item__text">
+    <div class="item__content">
+      <div class="item__title">
+        <a href="{{ .Permalink }}">
+          {{ if (eq .Type "puzzles") }}
+            #{{ .Params.Number }}
+          {{ end }}
+          {{.Title}}</a>
+      </div>
+      <div class="item__summary">
+        {{ .Summary | markdownify }}
+      </div>
+    </div>
+    <div class="item__metadata">
+      {{ .Date.Format "January 2, 2006" }}
+      &nbsp; · &nbsp; 
+      <a href="/{{ .Type }}">{{ .Type | humanize }}</a>
+      {{ with .Params.Location }}
+      &nbsp; · &nbsp; {{ partial "helpers/location" . }}
+      {{ end }}
+    </div>
+  </div>
+</div>

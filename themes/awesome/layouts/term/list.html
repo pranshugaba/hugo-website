@@ -5,20 +5,15 @@
   </div>
   {{.Content}}
 
-  {{ range .Pages.GroupByDate "2006" }}
-  <section id="{{ .Key }}">
-    <h2 class="list__key">{{ .Key }}</h2>
-    <ul class="[ items__list ] [ flow ]">
-      {{ range .Pages }}
-      <li>
-        {{ if (eq .Section "minis")}}
-          {{ partial "list/minis.html" . }}
-        {{ else }}
-          {{ partial "list/description.html" . }}
-        {{ end }}
-      </li>
+  <ul class="[ items__list ] [ flow ]">
+    {{ range .Pages }}
+    <li>
+      {{ if (eq .Section "minis")}}
+        {{ partial "list/minis.html" . }}
+      {{ else }}
+        {{ partial "list/minimal-general.html" . }}
       {{ end }}
-    </ul>
-  </section>
-  {{ end }}
+    </li>
+    {{ end }}
+  </ul>
 {{ end }}

@@ -50,8 +50,8 @@
 
 .list-archive__item {
   .item__details {
-    font-size: var(--font-size-400);
-    font-weight: 600;
+    font-size: var(--font-size-500);
+    font-weight: 500;
   }
 }
 .list-books__item {
@@ -130,5 +130,21 @@
       margin-top: 0.5rem;
       margin-bottom: 0.5rem;
     }
+  }
+}
+
+.list-minimal__item {
+  .item__title {
+    font-weight: 600;
+    font-size: var(--font-size-700);
+  }
+  .item__summary {
+    margin-top: 0.5rem;
+    font-size: var(--font-size-400);
+    line-height: 1.5;
+  }
+  .item__metadata {
+    margin-top: 0.75rem;
+    font-size: var(--font-size-200);
   }
 }

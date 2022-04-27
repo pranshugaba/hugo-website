@@ -1,13 +1,12 @@
 .recent {
   --item-padding: 0.8rem;
-  max-width: var(--header-width);
   margin-inline: auto;
   &__group {
     @media (min-width: 480px) {
       display: grid;
       gap: 1rem;
       grid-auto-flow: column;
-      grid-auto-columns: 55%;
+      grid-auto-columns: 63%;
 
       overflow-x: auto;
       overscroll-behavior-inline: contain;
@@ -63,12 +62,12 @@
       font-weight: 600;
     }
     &__summary {
-      margin-top: 0.5rem;
+      margin-top: 0.25rem;
       font-size: var(--font-size-300);
       line-height: 1.5;
     }
     &__date {
-      margin-top: 0.75rem;
+      margin-top: 0.5rem;
       font-size: var(--font-size-200);
     }
   }

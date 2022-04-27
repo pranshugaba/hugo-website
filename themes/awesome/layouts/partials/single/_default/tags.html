@@ -11,7 +11,7 @@
 
     {{ with .Section}}
     <div class="[ page__all ] [ plain-link border-thin ]">
-        <a href="/{{ . }}">all {{ . }}</a>
+        <a href="/{{ . }}">all {{ with site.GetPage . }}{{ .Title | lower}}{{ end }}</a>
     </div>
     {{ end }}
 </div> 

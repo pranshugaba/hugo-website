@@ -1,9 +1,11 @@
 ---
 title: Blog
-subtitle: I occasionally write stuff here
+subtitle: I write stuff
 summary: A guide to explore my site
 wide: true
 ---
+
+Here, you will find my recent posts across different categories. If you would like to see a list of all the posts in a single page, head to the [archive]({{< ref "/archive" >}}).
 
 {{< recent-posts >}}
 
