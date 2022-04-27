@@ -53,7 +53,8 @@
 
 :root {
   --header-width: 84ch;
-  --content-width: 69ch;
+  --wide-width: calc(var(--header-width) - 2rem);
+  --content-width: 63ch;
 }
 
 @font-face {
@@ -508,6 +509,11 @@ a.plain-link:hover,
   margin-inline: auto;
 }
 
+.wide-width {
+  max-width: var(--wide-width);
+  margin-inline: auto;
+}
+
 .content-width {
   max-width: var(--content-width);
   margin-inline: auto;
@@ -575,14 +581,44 @@ a.plain-link:hover,
   max-width: var(--header-width);
   margin-inline: auto;
   margin-top: 2rem;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   border-top: var(--border-medium) solid var(--fg);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
   line-height: 1;
+}
+@media (min-width: 640px) {
+  .site__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+  }
+}
+@media (min-width: 640px) {
+  .site__footer {
+    padding-top: 1rem;
+  }
+}
+
+.footer__copyright {
+  display: block;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+@media (min-width: 640px) {
+  .footer__copyright {
+    margin: 0;
+    text-align: left;
+  }
+}
+
+.footer__links {
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 1rem;
 }
 
 a.footnote-ref {
@@ -999,8 +1035,8 @@ h4 code {
 }
 
 .list-archive__item .item__details {
-  font-size: var(--font-size-400);
-  font-weight: 600;
+  font-size: var(--font-size-500);
+  font-weight: 500;
 }
 
 .list-books__item {
@@ -1085,6 +1121,20 @@ h4 code {
 .list-mini__item .item__content figure {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.list-minimal__item .item__title {
+  font-weight: 600;
+  font-size: var(--font-size-700);
+}
+.list-minimal__item .item__summary {
+  margin-top: 0.5rem;
+  font-size: var(--font-size-400);
+  line-height: 1.5;
+}
+.list-minimal__item .item__metadata {
+  margin-top: 0.75rem;
+  font-size: var(--font-size-200);
 }
 
 .admonition {
@@ -1404,7 +1454,6 @@ figure figcaption {
 }
 .home {
   display: grid;
-  max-width: calc(var(--header-width) - 2rem);
   -webkit-margin-before: 3rem;
           margin-block-start: 3rem;
   margin-inline: auto;
@@ -1464,7 +1513,6 @@ figure figcaption {
 
 .recent {
   --item-padding: 0.8rem;
-  max-width: var(--header-width);
   margin-inline: auto;
 }
 .recent__group {
@@ -1475,7 +1523,7 @@ figure figcaption {
     display: grid;
     gap: 1rem;
     grid-auto-flow: column;
-    grid-auto-columns: 55%;
+    grid-auto-columns: 63%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     -ms-scroll-snap-type: inline mandatory;
@@ -1537,12 +1585,12 @@ figure figcaption {
   font-weight: 600;
 }
 .recent__item__summary {
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
   font-size: var(--font-size-300);
   line-height: 1.5;
 }
 .recent__item__date {
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
   font-size: var(--font-size-200);
 }
 
