@@ -3,19 +3,28 @@
   max-width: var(--header-width);
   margin-inline: auto;
   &__group {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 1fr;
-    @media (min-width: 640px) {
-      grid-template-columns: 1fr 1fr;
+    @media (min-width: 480px) {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 1rem;
+      scroll-snap-type: y mandatory;
     }
-    @media (min-width: 1024px) {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    gap: 1rem;
     margin-block: 2rem;
   }
   &__section {
+    width: 100%;
+    margin-block: 2rem;
+    @media (min-width: 480px) {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      margin-block: 0;
+      flex: 0 0 auto;
+      width: 75%;
+    }
+    @media (min-width: 800px) {
+      width: calc(50% - 6rem);
+    }
     border: var(--border-medium) solid var(--fg);
     border-radius: var(--border-radius-medium);
     &__title {

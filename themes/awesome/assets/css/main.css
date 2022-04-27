@@ -1468,25 +1468,37 @@ figure figcaption {
   margin-inline: auto;
 }
 .recent__group {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 1fr;
-  gap: 1rem;
   margin-block: 2rem;
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .recent__group {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (min-width: 1024px) {
-  .recent__group {
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1rem;
+    -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
   }
 }
 .recent__section {
+  width: 100%;
+  margin-block: 2rem;
   border: var(--border-medium) solid var(--fg);
   border-radius: var(--border-radius-medium);
+}
+@media (min-width: 480px) {
+  .recent__section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    margin-block: 0;
+    flex: 0 0 auto;
+    width: 75%;
+  }
+}
+@media (min-width: 800px) {
+  .recent__section {
+    width: calc(50% - 6rem);
+  }
 }
 .recent__section__title {
   margin-block: 0;
