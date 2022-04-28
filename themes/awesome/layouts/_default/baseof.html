@@ -8,4 +8,18 @@
       {{- partial "footer.html" . -}}
     </div>
   </body>
+  {{ if .IsHome }}
+    <script>
+      console.log("Oh, hello there! Welcome to my website.\n A curious one you are. Find all easter eggs on this site you must. Yrsssss.")
+      let title = document.getElementById('obiwan');
+      let subtitle = document.getElementById('kenobi');
+      title.onclick = function() {
+        subtitle.innerHTML = "General Kenobi";
+        subtitle.title = "This is where the fun begins."
+        console.log("This is where the fun begins.")
+        title.title = "";
+        subtitle.id = "grievous";
+      }
+    </script>
+  {{ end }}
 </html>

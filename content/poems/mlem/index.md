@@ -13,5 +13,5 @@ featured: false
 ---
 
 golden cat  
-on the red suitcase ---  
+on a red suitcase ---  
 does a mlem

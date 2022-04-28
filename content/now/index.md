@@ -17,9 +17,7 @@ I am attending the following courses this semester:
 
 ## Learning
 
-I am learning [Rust](https://rust-lang.org) by reading the [Rust book](https://doc.rust-lang.org/book/) and solving the [Rustlings](https://github.com/rust-lang/rustlings/) exercises. 
-
-I am learning to build Android apps using Jetpack Compose. I am putting this knowledge into practice by making an app called _Decimal Clock_. You can [get it from the Play Store](https://tenhourstudios.com/decimal-clock).
+I am learning [Rust](https://rust-lang.org) by reading the [Rust book](https://doc.rust-lang.org/book/) and solving the [Rustlings](https://github.com/rust-lang/rustlings/) exercises. I am currently trying to implement the [PNGme](https://picklenerd.github.io/pngme_book/) project. 
 
 मी मराठी पण शिकतोय.
 I am learning Marathi from [learn-marathi.com](https://www.learn-marathi.com/courses).
@@ -31,7 +29,7 @@ I am learning Marathi from [learn-marathi.com](https://www.learn-marathi.com/cou
 
 ## Watching
 
-I am currently watching Trailer Park Boys and Gravity Falls. 
+I am currently watching Moon Knight and Gravity Falls. 
 
 I also love watching British panel shows such as I Literally Just Told You, 8 out of 10 Cats does Countdown, and Would I Lie to You?. 
 

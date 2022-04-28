@@ -8,7 +8,7 @@ display: none
 ## Laptop
 
 I am running [Arch Linux](https://archlinux.org) on my ThinkPad P1, btw.
-While I mainly use [XMonad](https://xmonad.org), I occasionally use GNOME too. 
+While I mainly use [XMonad](https://xmonad.org), I occasionally use GNOME on Wayland. 
 
 ### Text Editor
 
