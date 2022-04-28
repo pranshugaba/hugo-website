@@ -1,49 +1,51 @@
 <nav class="page__nav">
-    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ $pages := where .Site.RegularPages "Type" "in" .Section }}
     {{ if (in .Site.Params.mainSections .Type) }}
-        <div class="page__prevnext">
-            <div class="page__prev">
-            {{ if $pages.Prev . }}
-                <div>&#8592;</div>
-                {{ with $pages.Prev . }}
+        {{ if ge (len $pages) 2 }}
+            <div class="page__prevnext">
+                <div class="page__prev">
+                {{ if $pages.Prev . }}
+                    <div>&#8592;</div>
+                    {{ with $pages.Prev . }}
+                        <a href="{{ .Permalink }}">
+                        {{ if (eq .Section "minis")}}
+                            #{{ .Page.Params.Number }}: <em>
+                            {{ .Page.Plain | truncate 35 "..." }}
+                            </em>
+                        {{ else }}
+                            {{ .Title }}
+                        {{ end }}
+                        </a>
+        
+                    {{ end }}
+                {{ else }}
+                    <div class="page__end">
+                    This is the oldest {{ with site.GetPage .Section }}{{ .Title | lower | singularize }}{{ end }}.
+                    </div>
+                {{ end }}
+                </div>
+                <div class="page__next">
+                {{ if $pages.Next . }}
+                <div>&#8594;</div>
+                    {{ with $pages.Next . }}
                     <a href="{{ .Permalink }}">
-                    {{ if (eq .Section "minis")}}
-                        #{{ .Page.Params.Number }}: <em>
-                        {{ .Page.Plain | truncate 35 "..." }}
-                        </em>
-                    {{ else }}
-                        {{ .Title }}
-                    {{ end }}
+                        {{ if (eq .Section "minis")}}
+                            #{{ .Page.Params.Number }}: <em>
+                            {{ .Page.Plain | truncate 35 "..." }}
+                            </em>
+                        {{ else }}
+                            {{ .Title }}
+                        {{ end }}
                     </a>
-    
-                {{ end }}
-            {{ else }}
-                <div class="page__end">
-                This is the oldest post.
-                </div>
-            {{ end }}
-            </div>
-            <div class="page__next">
-            {{ if $pages.Next . }}
-            <div>&#8594;</div>
-                {{ with $pages.Next . }}
-                <a href="{{ .Permalink }}">
-                    {{ if (eq .Section "minis")}}
-                        #{{ .Page.Params.Number }}: <em>
-                        {{ .Page.Plain | truncate 35 "..." }}
-                        </em>
-                    {{ else }}
-                        {{ .Title }}
                     {{ end }}
-                </a>
-                {{ end }}
-            {{ else }}
-                <div class="page__end">
-                This is the newest post.
+                {{ else }}
+                    <div class="page__end">
+                    This is the newest {{ with site.GetPage .Section }}{{ .Title | lower | singularize }}{{ end }}.
+                    </div>
+                {{end}}
                 </div>
-            {{end}}
             </div>
-        </div>
+        {{ end }}
     {{ else }}
         <div class="page__home">
         <a href="/"><span>&#8592;</span> <span>home</span></a>

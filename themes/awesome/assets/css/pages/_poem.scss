@@ -1,16 +1,44 @@
 .poems {
-  .page__header {
-    margin-top: 3rem;
+  .items__list {
+    max-width: var(--content-width);
+    margin-inline: auto;
+  }
+  max-width: var(--header-width);
+  .page__featuredimage {
+    @media (min-width: 960px) {
+      margin-block: 1rem;
+    }
+  }
+  .page__header,
+  .page__navtags,
+  .page__nav {
+    max-width: var(--content-width);
+    margin-inline: auto;
   }
   .page__content {
     font-size: 1.125rem;
-    @media (min-width: 640px) {
-      font-size: 1.25rem;
-    }
+    // @media (min-width: 640px) {
+    //   font-size: 1.25rem;
+    // }
     max-width: max-content;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
     margin-bottom: 7.5rem;
+    @media (min-width: 960px) {
+      margin: 0;
+      justify-self: center;
+    }
+  }
+}
+
+.poem__grid {
+  @media (min-width: 960px) {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 7fr 4fr;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
   }
 }

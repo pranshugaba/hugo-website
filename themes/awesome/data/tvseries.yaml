@@ -8,11 +8,6 @@ wantToWatch:
     type: Series
     season: 3
     channel: HBO
-  
-  - title: Russian Doll
-    type: Series
-    season: 2
-    channel: Netflix
 
   - title: Dark
     type: Series
@@ -37,6 +32,11 @@ watching:
     type: Season
     season: 1
     channel: Disney+
+  
+  - title: Eastbound & Down
+    type: Series
+    season: 1
+    channel: HBO
 
   - title: Trailer Park Boys
     type: Season
@@ -59,6 +59,11 @@ watching:
     channel: BBC Two Scotland
 
 watched:
+  - title: Russian Doll
+    type: Series
+    season: 2
+    channel: Netflix
+  
   - title: The Righteous Gemstones
     type: Season
     season: 2

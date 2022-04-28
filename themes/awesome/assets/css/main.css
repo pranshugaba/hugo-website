@@ -1512,7 +1512,7 @@ figure figcaption {
 }
 
 .recent {
-  --item-padding: 0.8rem;
+  --item-padding: 0.75rem;
   margin-inline: auto;
 }
 .recent__group {
@@ -1577,7 +1577,7 @@ figure figcaption {
 }
 .recent__item {
   padding-inline: var(--item-padding);
-  padding-block: 0.5rem;
+  padding-block: calc(var(--item-padding) / 2);
 }
 .recent__item__title {
   font-size: var(--font-size-400);
@@ -1703,8 +1703,23 @@ figure figcaption {
   justify-content: end;
 }
 
-.poems .page__header {
-  margin-top: 3rem;
+.poems {
+  max-width: var(--header-width);
+}
+.poems .items__list {
+  max-width: var(--content-width);
+  margin-inline: auto;
+}
+@media (min-width: 960px) {
+  .poems .page__featuredimage {
+    margin-block: 1rem;
+  }
+}
+.poems .page__header,
+.poems .page__navtags,
+.poems .page__nav {
+  max-width: var(--content-width);
+  margin-inline: auto;
 }
 .poems .page__content {
   font-size: 1.125rem;
@@ -1716,9 +1731,21 @@ figure figcaption {
   margin-top: 1rem;
   margin-bottom: 7.5rem;
 }
-@media (min-width: 640px) {
+@media (min-width: 960px) {
   .poems .page__content {
-    font-size: 1.25rem;
+    margin: 0;
+    justify-self: center;
+  }
+}
+
+@media (min-width: 960px) {
+  .poem__grid {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 7fr 4fr;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
   }
 }
 
