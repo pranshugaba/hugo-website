@@ -73,7 +73,7 @@ This file is in BETA. Please test and contribute to the discussion:
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
         <link rel="stylesheet" href="/css/main.css"/>
       </head>
-      <body>
+      <body class="content-width wrapper">
         <nav class="container-md px-3 py-2 mt-2 mt-md-5 mb-5 markdown-body">
           <p class="bg-yellow-light ml-n1 px-2 py-2 mb-1">
             <strong>This is a web feed,</strong> also known as an RSS feed. <strong>Subscribe</strong> by copying the URL from the address bar into your newsreader.
