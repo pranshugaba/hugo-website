@@ -1,0 +1,12 @@
+{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ $pages := where $pages "Type" "ne" "minis" }}
+{{ $related := $pages.Related . | first 3 }}
+
+{{ with $related }}
+<h3>See Also</h3>
+<ul>
+	{{ range . }}
+	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+	{{ end }}
+</ul>
+{{ end }}
