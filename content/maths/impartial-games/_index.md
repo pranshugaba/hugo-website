@@ -14,7 +14,6 @@ draft: true
 featured: false
 
 display: series
-series_complete: false
 coming_soon:
   - 'Winning Strategies'
   - 'Partisan games'

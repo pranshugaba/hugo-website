@@ -1,20 +1,32 @@
 {{ $pageIndex := (add .PageIndex 1) }}
 {{ $context := .Context }}
+{{ $comingSoon := .ComingSoon }}
 <div class="list-series__item">
   <div class="item__text">
     <div class="item__content">
       <div class="item__title">
-        <a href="{{ $context.Permalink }}">
-          {{ $pageIndex }}. {{ $context.Title }}</a>
+        {{ if .ComingSoon }}
+          {{ $pageIndex }}. {{ $context }}
+        {{ else }}
+          <a href="{{ $context.Permalink }}"> 
+            {{ $pageIndex }}. {{ $context.Title }}
+          </a>
+          {{ end }}
       </div>
       <div class="item__summary">
-        {{ $context.Summary | markdownify }}
+        {{ if .ComingSoon }}
+          Coming soon...
+        {{ else }}
+          {{ $context.Summary | markdownify }}
+        {{ end }}
       </div>
     </div>
-    <div class="item__metadata">
-      {{ $context.Date.Format "January 2, 2006" }}
-      {{ with $context.Params.Location }}
-      &nbsp; · &nbsp; {{ partial "helpers/location" $context }}
-      {{ end }}
-    </div>
+    {{ if not .ComingSoon}}
+      <div class="item__metadata">
+        {{ $context.Date.Format "January 2, 2006" }}
+        {{ with $context.Params.Location }}
+        &nbsp; · &nbsp; {{ partial "helpers/location" $context }}
+        {{ end }}
+      </div>
+    {{ end }}
 </div>

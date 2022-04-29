@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ $displayStyle := .Params.Display }}
-  {{ $seriesComplete := .Params.series_complete }}
   {{ $pages := .Pages }}
+  {{ $comingSoon := .Params.coming_soon }}
   {{ if (eq $displayStyle "series") }}
     {{ $pages = $pages.Reverse }}
   {{ end }}
@@ -38,5 +38,13 @@
           <p>No posts in this section yet. Check back later!</p>
           </ul>
         {{ end }}
+    {{ end }}
+    {{ if (eq $displayStyle "series")}}
+      {{ range $index, $title := $comingSoon }}
+        {{ $pageIndex := add $index (len $pages) }}
+        <li>
+            {{ partial "list/series.html" (dict "Context" . "PageIndex" $pageIndex "ComingSoon" true) }}
+        </li>
+      {{ end }}
     {{ end }}
 {{ end }}
