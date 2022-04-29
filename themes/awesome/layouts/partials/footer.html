@@ -5,5 +5,8 @@
   <div class="[ footer__links ] [ plain-link ]">
     <a href="/archive/">archive</a>
     <a href="/subscribe/">subscribe</a>
+    {{ if not .IsHome}}
+      <a href="/">home</a>
+    {{ end }}
   </div>
 </footer>

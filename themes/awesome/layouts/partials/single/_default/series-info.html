@@ -1,0 +1,38 @@
+{{ $context := .Context }}
+{{ $top := .Top }}
+{{ $currentIndex := $context.File.ContentBaseName}} 
+{{ $totalIndex := (len $context.CurrentSection.Pages) }}
+{{ $pages := $context.CurrentSection.Pages }}
+{{ $comingSoon := $context.CurrentSection.Params.coming_soon }}
+
+{{ with $context }}
+  {{ if ne .Section .CurrentSection.File.ContentBaseName }}
+  <div class="[ series-info ] [ flow ]">
+    <p>
+      This post is part {{ $currentIndex }} of {{ $totalIndex }} of the <a href="{{ .CurrentSection.Permalink }}">{{ .CurrentSection.Title }}</a> series.
+    </p>
+    {{ if $top }}
+      {{ with $pages.Prev .}}
+      <p>
+        You may want to read <a href="{{ .Permalink }}">Part {{ .File.ContentBaseName }}: {{ .Title }}</a> if you haven't already.
+      </p>
+      {{ end }}
+    {{ else }}
+      {{ with $pages.Next .}}
+      <p>
+        Proceed to <a href="{{ .Permalink }}">Part {{ .File.ContentBaseName }}: {{ .Title }}</a>.
+      </p>
+      {{ else }}
+      <p>
+        {{ if $comingSoon }}
+          This is the final post of this series&mldr; as of now. <em>Part {{ add $totalIndex 1 }}: {{ range $comingSoon | first 1}}{{ . }}</em>{{ end }}
+          is coming soon.
+        {{ else}}
+          This is the final post of this series.
+        {{ end }}
+      </p>
+      {{ end }}
+    {{ end }}
+  </div>
+  {{ end }}
+{{ end }}

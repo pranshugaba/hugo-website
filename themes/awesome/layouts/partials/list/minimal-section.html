@@ -11,6 +11,15 @@
       <div class="item__summary">
         {{ .Summary | markdownify }}
       </div>
+      {{ if .Pages }}
+        <ol>
+          {{ range $pageIndex, $page := .Pages.Reverse }}
+            <li>
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+          {{ end }}
+        </ol>
+      {{ end }}
     </div>
     <div class="item__metadata">
       {{ .Date.Format "January 2, 2006" }}

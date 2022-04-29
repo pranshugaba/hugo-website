@@ -14,3 +14,12 @@
     padding-block: 1rem;
   }
 }
+
+.series-info {
+  --flow-space: 1rem;
+  line-height: 1.5;
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+  border: var(--border-medium) solid var(--fg);
+  border-radius: var(--border-radius-large);
+}
