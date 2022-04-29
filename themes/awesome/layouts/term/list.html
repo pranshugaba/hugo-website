@@ -6,7 +6,7 @@
   {{.Content}}
 
   <ul class="[ items__list ] [ flow ]">
-    {{ range .Pages }}
+    {{ range .RegularPages }}
     <li>
       {{ if (eq .Section "minis")}}
         {{ partial "list/minis.html" . }}

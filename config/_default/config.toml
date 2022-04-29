@@ -36,6 +36,7 @@ tag = "tags"
 mainSections = [
     "thoughts",
     "dev",
+    "maths",
     "trips",
     "reviews",
     "links",

@@ -1,5 +1,10 @@
 {{ define "main" }}
   {{ $displayStyle := .Params.Display }}
+  {{ $seriesComplete := .Params.series_complete }}
+  {{ $pages := .Pages }}
+  {{ if (eq $displayStyle "series") }}
+    {{ $pages = $pages.Reverse }}
+  {{ end }}
   <header class="[ page__header ] [ flow ]">
     <h1 class="page__title">{{ .Title | emojify }}</h1>
     {{ with .Params.Subtitle }}
@@ -10,11 +15,15 @@
     {{.Content}}
   </article>
   {{ if (ne $displayStyle "none") }}
-      <ul class="[ items__list ] [ flow ]">
-        {{ range .Pages }}
+      <ul class="[ items__list list-{{ $displayStyle }} ] [ flow ]">
+        {{ range $pageIndex, $page := $pages }}
         <li>
           {{ if $displayStyle }}
-            {{ partial (print "list/" $displayStyle ".html") . }}
+            {{ if (eq $displayStyle "series")}}
+              {{ partial "list/series.html" (dict "Context" . "PageIndex" $pageIndex "ComingSoon" false) }}
+            {{ else }}
+              {{ partial (print "list/" $displayStyle ".html") . }}
+            {{ end }}
           {{ else }}
             {{ if (eq .Section "minis")}}
               {{ partial "list/minis.html" . }}

@@ -1,6 +1,6 @@
 ---
-title: "Impartial Games"
-subtitle: ""
+title: "Sprague-Grundy theorem"
+subtitle: "An introduction to nimbers."
 summary: ""
 
 date: 2022-01-30T17:30:00+05:30
@@ -14,8 +14,4 @@ draft: true
 featured: false
 ---
 
-We look at two-player _impartial games_. These are games where 
-
-## Nimber
-
-## Sprague-Grundy theorem
+Sprague-Grundy Theorem

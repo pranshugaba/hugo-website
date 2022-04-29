@@ -10,7 +10,7 @@ tags: ["game-theory", "determinacy", "topology" ]
 
 math: true
 
-draft: false
+draft: true
 featured: false
 ---
 

@@ -16,6 +16,7 @@
   </div>
   <h2>Learn</h2>
   <div class="recent__group">
+    {{ partial "home/recent-section" (dict "Context" . "SectionName" "maths") }}
     {{ partial "home/recent-section" (dict "Context" . "SectionName" "dev") }}
   </div>
   <h2>Personal</h2>

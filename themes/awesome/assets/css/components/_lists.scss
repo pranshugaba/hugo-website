@@ -148,3 +148,19 @@
     font-size: var(--font-size-200);
   }
 }
+
+.list-series__item {
+  .item__title {
+    font-weight: 600;
+    font-size: var(--font-size-600);
+  }
+  .item__summary {
+    margin-top: 0.5rem;
+    font-size: var(--font-size-400);
+    line-height: 1.5;
+  }
+  .item__metadata {
+    margin-top: 0.75rem;
+    font-size: var(--font-size-200);
+  }
+}

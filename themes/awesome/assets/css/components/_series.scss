@@ -1,0 +1,16 @@
+.list-series {
+  margin-top: 2rem;
+  border: var(--border-medium) solid var(--fg);
+  border-radius: var(--border-radius-large);
+  & > li {
+    margin-block: 0;
+    &:not(:last-child) {
+      border-bottom: var(--border-medium) solid var(--fg);
+    }
+  }
+
+  &__item {
+    padding-inline: 1rem;
+    padding-block: 1rem;
+  }
+}
