@@ -1,18 +1,19 @@
-{{ if .Section }}
+{{ if (in .Site.Params.mainSections .Type) }}
 {{ $tags := .GetTerms "tags" }}
-<div class="page__navtags">
-    <ul class="page__tags">
-    {{ with $tags }}
+{{ with $tags }}
+    <div class="page__navtags">
+        <div class="page__tags__heading">Tags:</div>
+        <ul class="page__tags">
         {{ range . }}
-            <li class="[ border-thin plain-link ]"><a href="{{ .Permalink }}">{{ .LinkTitle | humanize | lower }}</a></li>
+            <li class="[ border-medium plain-link ]"><a href="{{ .Permalink }}">{{ .LinkTitle | humanize | lower }}</a></li>
         {{ end }}
-    {{ end }}
-    </ul>
+        </ul>
+    </div> 
+{{ end }}
 
     {{ with .Section}}
-    <div class="[ page__all ] [ plain-link border-thin ]">
-        <a href="/{{ . }}">all {{ with site.GetPage . }}{{ .Title | lower}}{{ end }}</a>
+    <div class="page__seeall">
+        <a href="/{{ . }}" class="page__seeall__link">See all {{ with site.GetPage . }}{{ .Title | lower}}{{ end }} &#8594;</a>
     </div>
     {{ end }}
-</div> 
 {{ end }}

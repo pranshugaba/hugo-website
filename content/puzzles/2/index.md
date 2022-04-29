@@ -3,8 +3,6 @@ title: "A Chess Puzzle"
 subtitle: "Puzzle #2"
 summary: "How many chess pieces can you place so no piece attacks any other piece?"
 
-number: 2
-
 tags: ["chess"]
 
 date: 2021-04-06T00:30:00+05:30

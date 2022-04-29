@@ -3,8 +3,6 @@ title: "The Picture Hanging Puzzle"
 subtitle: "Puzzle #1"
 summary: "Can you hang a picture so that it is easy to remove?"
 
-number: 1
-
 tags: []
 
 date: 2021-03-23T17:30:00+05:30

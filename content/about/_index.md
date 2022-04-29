@@ -13,25 +13,30 @@ Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https:/
 
 ### Education
 
-Relevant coursework at TIFR:
+- Tata Institute of Fundamental Research, Mumbai 
+    - PhD in Theoretical Computer Science (in progress)
+    - Sep 2020 -- July 2025 (expected)
+    - Coursework
+        - Algebraic Automata theory
+        - Logic, Automata, and Games
+        - Algebra and Computation
+        - Computational Complexity
+        - Online Algorithms
 
-- Algebraic Automata theory
-- Logic, Automata, and Games
-- Algebra and Computation
-- Computational Complexity
-- Online Algorithms
 
-Relevant coursework at IISc:
+- Indian Institute of Science, Bangalore
+    - Bachelor of Science (Research)
+    - August 2016 -- July 2020
+    - Coursework
+        - Automata and Computability
+        - Game theory
+        - Graph theory
+        - Combinatorics
+        - Algebra I and II
+        - Topology
+        - Measure theory
 
-- Automata and Computability
-- Game theory
-- Graph theory
-- Combinatorics
-- Algebra I and II
-- Topology
-- Measure theory
-
-### Hobbies
+### Extracurricular Activities
 
 I like to [walk]({{< ref "/tags/walking" >}}) or [cycle]({{< ref "/tags/cycling" >}}) around the city and explore new places. I like to do some street [photography]({{< ref "/poems" >}}), eat street food, and play with street cats and dogs on the way.
 

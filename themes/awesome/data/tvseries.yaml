@@ -3,11 +3,16 @@ wantToWatch:
     type: Series
     season: 6
     channel: AMC
-
-  - title: Barry
+  
+  - title: Undone
+    type: Series
+    season: 2
+    channel: Amazon
+  
+  - title: The Boys
     type: Series
     season: 3
-    channel: HBO
+    channel: Amazon
 
   - title: Dark
     type: Series
@@ -27,6 +32,11 @@ watching:
     channel: Channel 4
     season: 13
     startDate: 2021-02-01T05:30:00+05:30
+
+  - title: Barry
+    type: Series
+    season: 3
+    channel: HBO
 
   - title: Moon Knight
     type: Season
@@ -94,7 +104,6 @@ watched:
     season: 3
     channel: FXX
   
-
   - title: Final Space
     type: Series
     season: 3
@@ -111,6 +120,11 @@ watched:
     channel: adult swim
     endDate: 2021-09-07T05:30:00+05:30
   
+  - title: Invincible
+    type: Series
+    season: 1
+    channel: Amazon
+    endDate: 2021-09-07T05:30:00+05:30
   
 
 done: 

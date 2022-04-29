@@ -6,7 +6,7 @@
       &nbsp; · &nbsp; {{ partial "helpers/location" . }}
       {{ end }}
       {{ if (eq .Type "puzzles") }}
-      &nbsp; · &nbsp; #{{ .Params.Number }} 
+      &nbsp; · &nbsp; #{{ .File.ContentBaseName }} 
       {{ end }}
     </div>
     <div class="item__preview-image-small">

@@ -4,7 +4,7 @@
       <div class="item__title">
         <a href="{{ .Permalink }}">
           {{ if (eq .Type "puzzles") }}
-            #{{ .Params.Number }}:
+            #{{ .File.ContentBaseName }}:
           {{ end }}
           {{.Title}}</a>
       </div>

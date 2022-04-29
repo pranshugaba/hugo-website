@@ -49,15 +49,18 @@
     margin-top: 4rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 0.75rem;
     align-items: baseline;
-    justify-content: space-between;
   }
 
   &__tags {
     display: flex;
-    gap: 0.5rem;
-    font-size: 0.9rem;
+    gap: 0.75rem;
+    // font-size: 0.9rem;
+    &__heading {
+      font-size: var(--font-size-600);
+      font-weight: 500;
+    }
 
     @include m.plain-list;
 
@@ -95,6 +98,13 @@
       }
     }
   }
+  &__seeall {
+    margin-inline: auto;
+    max-width: var(--content-width);
+    &__link {
+      font-size: var(--font-size-500);
+    }
+  }
 
   &__nav {
     margin-top: 1rem;
@@ -119,6 +129,18 @@
     text-align: right;
     & a {
       justify-content: end;
+    }
+  }
+  &__related {
+    max-width: var(--content-width);
+    margin-inline: auto;
+    padding-top: 2rem;
+    &__heading {
+      border-top: var(--border-medium) solid var(--fg);
+      font-family: var(--font-sans-serif);
+      font-size: var(--font-size-700);
+      padding-top: 2rem;
+      margin-top: 1rem;
     }
   }
 }

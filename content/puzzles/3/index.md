@@ -3,8 +3,6 @@ title: "Whose turn is it to play?"
 subtitle: "Puzzle #3"
 summary: "You are given a chess position. Can you determine whose turn it is to play?"
 
-number: 3
-
 date: 2022-02-01T12:30:00+05:30
 lastmod: 2022-02-01T12:30:00+05:30
 
