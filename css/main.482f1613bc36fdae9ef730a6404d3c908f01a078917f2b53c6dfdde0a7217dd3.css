@@ -29,8 +29,8 @@
   --border-thin: 0.075rem;
   --border-medium: 0.1rem;
   --border-thick: 0.125rem;
-  --border-radius-tiny: 0.1rem;
-  --border-radius-small: 0.25rem;
+  --border-radius-tiny: 0.25rem;
+  --border-radius-small: 0.375rem;
   --border-radius-medium: 0.5rem;
   --border-radius-large: 0.75rem;
   --border-radius-xl: 1rem;
@@ -482,6 +482,10 @@ a.plain-link,
 a.plain-link:hover,
 .plain-link a:hover {
   text-decoration: underline;
+}
+a.plain-link:focus,
+.plain-link a:focus {
+  text-decoration: none;
 }
 
 .flow > * + * {
@@ -1676,23 +1680,27 @@ figure figcaption {
   align-items: baseline;
 }
 .page__tags {
-  display: flex;
-  gap: 0.75rem;
   list-style: none;
   padding-left: 0;
+  display: flex;
+  gap: 0.75rem;
 }
 .page__tags__heading {
   font-size: var(--font-size-600);
   font-weight: 500;
 }
-.page__tags a:focus {
-  outline-offset: 0.5rem;
-  border-radius: 1px;
+.page__tags__link {
+  border: var(--border-medium) solid var(--fg);
+  padding: 0.25rem;
+  border-radius: var(--border-radius-small);
+  text-decoration: none;
 }
-.page__tags li {
-  line-height: 1;
-  padding: 0.3rem;
-  border-radius: 0.4rem;
+.page__tags__link:hover {
+  border-color: var(--accent);
+}
+.page__tags__link:focus {
+  outline-offset: 0.25rem;
+  border-radius: var(--border-radius-small);
 }
 .page__end {
   display: flex;
