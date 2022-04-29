@@ -54,27 +54,27 @@
   }
 
   &__tags {
+    @include m.plain-list;
     display: flex;
     gap: 0.75rem;
-    // font-size: 0.9rem;
+   
     &__heading {
       font-size: var(--font-size-600);
       font-weight: 500;
     }
 
-    @include m.plain-list;
-
-    & a {
-      &:focus {
-        outline-offset: 0.5rem;
-        border-radius: 1px;
+    &__link {
+      border: var(--border-medium) solid var(--fg);
+      padding: 0.25rem;
+      border-radius: var(--border-radius-small);
+      text-decoration: none;
+      &:hover {
+        border-color: var(--accent);
       }
-    }
-
-    & li {
-      line-height: 1;
-      padding: 0.3rem;
-      border-radius: 0.4rem;
+      &:focus {
+        outline-offset: 0.25rem;
+        border-radius: var(--border-radius-small);
+      }
     }
   }
   &__end {

@@ -5,7 +5,7 @@
         <div class="page__tags__heading">Tags:</div>
         <ul class="page__tags">
         {{ range . }}
-            <li class="[ border-medium plain-link ]"><a href="{{ .Permalink }}">{{ .LinkTitle | humanize | lower }}</a></li>
+            <li><a class="page__tags__link" href="{{ .Permalink }}">{{ .LinkTitle | humanize | lower }}</a></li>
         {{ end }}
         </ul>
     </div> 
