@@ -12,8 +12,8 @@
   border-top: var(--border-thin) solid var(--fg);
   border-left: var(--border-thin) solid var(--fg);
 }
-.leaflet-layer .leaflet-tile {
-  @media (prefers-color-scheme: dark) {
+.dark-mode {
+  .leaflet-layer .leaflet-tile {
     filter: grayscale(0.8) hue-rotate(180deg) invert(1) contrast(0.95)
       brightness(1.1);
   }
@@ -21,8 +21,8 @@
 .leaflet-overlay-pane {
   filter: invert(1);
 }
-.leaflet-overlay-pane {
-  @media (prefers-color-scheme: dark) {
+.dark-mode {
+  .leaflet-overlay-pane {
     filter: unset;
   }
 }

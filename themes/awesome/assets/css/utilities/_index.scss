@@ -39,14 +39,20 @@ a.plain-link,
 }
 
 .header-width {
-  max-width: var(--header-width);
+  @media screen {
+    max-width: var(--header-width);
+  }
   margin-inline: auto;
 }
 .wide-width {
-  max-width: var(--wide-width);
+  @media screen {
+    max-width: var(--wide-width);
+  }
   margin-inline: auto;
 }
 .content-width {
-  max-width: var(--content-width);
+  @media screen {
+    max-width: var(--content-width);
+  }
   margin-inline: auto;
 }

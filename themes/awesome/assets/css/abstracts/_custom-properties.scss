@@ -31,12 +31,6 @@ $darkaccent: hsl(210, 100%, 69%);
   --light: #{$lightlight};
   --dark: #{$darkdark};
 
-  @media (prefers-color-scheme: dark) {
-    --bg: #{$darkdark};
-    --fg: #{$darklight};
-    --accent: #{$darkaccent};
-  }
-
   @media print {
     --bg: #{white};
     --fg: #{#121212};
@@ -83,4 +77,40 @@ $darkaccent: hsl(210, 100%, 69%);
   --border-radius-large: 0.75rem;
   --border-radius-xl: 1rem;
   --border-radius-circle: 100%;
+}
+
+.dark-mode {
+  --bg: #{$darkdark};
+  --fg: #{$darklight};
+  --accent: #{$darkaccent};
+  @media print {
+    --bg: #{white};
+    --fg: #{#121212};
+    --light: #{white};
+    --dark: #{#121212};
+    --accent: #{Indigo};
+  }
+}
+
+button {
+  all: unset;
+  padding: 0.1rem;
+  outline: none;
+  transition: outline 0.1s ease-out;
+  &:hover {
+    text-decoration: underline;
+    color: var(--accent);
+  }
+  &:focus {
+    outline: 0.15em solid var(--accent);
+    outline-offset: 0.2em;
+  }
+}
+
+.site__footer #dark-mode-toggle {
+  cursor: pointer;
+  border-radius: 0.15rem;
+  @media print {
+    display: none;
+  }
 }

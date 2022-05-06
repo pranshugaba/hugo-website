@@ -29,7 +29,7 @@ I am learning Marathi from [learn-marathi.com](https://www.learn-marathi.com/cou
 
 ## Watching
 
-I am currently watching Moon Knight and Gravity Falls. 
+I am currently watching Barry and Gravity Falls. 
 
 I also love watching British panel shows such as I Literally Just Told You, 8 out of 10 Cats does Countdown, and Would I Lie to You?. 
 

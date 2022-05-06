@@ -36,13 +36,6 @@
   --border-radius-xl: 1rem;
   --border-radius-circle: 100%;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: hsl(0deg, 0%, 12%);
-    --fg: white;
-    --accent: hsl(210deg, 100%, 69%);
-  }
-}
 @media print {
   :root {
     --bg: white;
@@ -50,6 +43,46 @@
     --light: white;
     --dark: #121212;
     --accent: Indigo;
+  }
+}
+
+.dark-mode {
+  --bg: hsl(0deg, 0%, 12%);
+  --fg: white;
+  --accent: hsl(210deg, 100%, 69%);
+}
+@media print {
+  .dark-mode {
+    --bg: white;
+    --fg: #121212;
+    --light: white;
+    --dark: #121212;
+    --accent: Indigo;
+  }
+}
+
+button {
+  all: unset;
+  padding: 0.1rem;
+  outline: none;
+  transition: outline 0.1s ease-out;
+}
+button:hover {
+  text-decoration: underline;
+  color: var(--accent);
+}
+button:focus {
+  outline: 0.15em solid var(--accent);
+  outline-offset: 0.2em;
+}
+
+.site__footer #dark-mode-toggle {
+  cursor: pointer;
+  border-radius: 0.15rem;
+}
+@media print {
+  .site__footer #dark-mode-toggle {
+    display: none;
   }
 }
 
@@ -511,18 +544,30 @@ a.plain-link:focus,
 }
 
 .header-width {
-  max-width: var(--header-width);
   margin-inline: auto;
+}
+@media screen {
+  .header-width {
+    max-width: var(--header-width);
+  }
 }
 
 .wide-width {
-  max-width: var(--wide-width);
   margin-inline: auto;
+}
+@media screen {
+  .wide-width {
+    max-width: var(--wide-width);
+  }
 }
 
 .content-width {
-  max-width: var(--content-width);
   margin-inline: auto;
+}
+@media screen {
+  .content-width {
+    max-width: var(--content-width);
+  }
 }
 
 .site__header {
@@ -1249,20 +1294,16 @@ thead {
   border-left: var(--border-thin) solid var(--fg);
 }
 
-@media (prefers-color-scheme: dark) {
-  .leaflet-layer .leaflet-tile {
-    filter: grayscale(0.8) hue-rotate(180deg) invert(1) contrast(0.95) brightness(1.1);
-  }
+.dark-mode .leaflet-layer .leaflet-tile {
+  filter: grayscale(0.8) hue-rotate(180deg) invert(1) contrast(0.95) brightness(1.1);
 }
 
 .leaflet-overlay-pane {
   filter: invert(1);
 }
 
-@media (prefers-color-scheme: dark) {
-  .leaflet-overlay-pane {
-    filter: unset;
-  }
+.dark-mode .leaflet-overlay-pane {
+  filter: unset;
 }
 
 .route__metadata {
@@ -1436,11 +1477,6 @@ figure img {
   border-radius: 0.5rem;
   border: var(--border-medium) solid var(--fg);
 }
-@media (prefers-color-scheme: dark) {
-  figure img {
-    filter: brightness(0.9);
-  }
-}
 figure.no-border img {
   border: none;
   border-radius: 0;
@@ -1465,6 +1501,10 @@ figure figcaption {
   font-size: 0.9rem;
   margin: 0.5rem auto 0.75rem;
   line-height: 1.5;
+}
+
+.dark-mode figure img {
+  filter: brightness(0.9);
 }
 
 @media print {
@@ -1767,8 +1807,12 @@ figure figcaption {
   max-width: var(--header-width);
 }
 .poems .items__list {
-  max-width: var(--content-width);
   margin-inline: auto;
+}
+@media screen {
+  .poems .items__list {
+    max-width: var(--content-width);
+  }
 }
 @media (min-width: 960px) {
   .poems .page__featuredimage {
@@ -1778,8 +1822,14 @@ figure figcaption {
 .poems .page__header,
 .poems .page__navtags,
 .poems .page__nav {
-  max-width: var(--content-width);
   margin-inline: auto;
+}
+@media screen {
+  .poems .page__header,
+.poems .page__navtags,
+.poems .page__nav {
+    max-width: var(--content-width);
+  }
 }
 .poems .page__content {
   font-size: 1.125rem;

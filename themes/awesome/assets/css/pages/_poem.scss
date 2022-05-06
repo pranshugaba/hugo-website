@@ -1,6 +1,8 @@
 .poems {
   .items__list {
-    max-width: var(--content-width);
+    @media screen {
+      max-width: var(--content-width);
+    }
     margin-inline: auto;
   }
   max-width: var(--header-width);
@@ -12,7 +14,9 @@
   .page__header,
   .page__navtags,
   .page__nav {
-    max-width: var(--content-width);
+    @media screen {
+      max-width: var(--content-width);
+    }
     margin-inline: auto;
   }
   .page__content {

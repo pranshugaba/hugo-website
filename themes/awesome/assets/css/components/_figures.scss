@@ -12,9 +12,6 @@ figure {
     margin: 0 auto;
     border-radius: 0.5rem;
     border: var(--border-medium) solid var(--fg);
-    @media (prefers-color-scheme: dark) {
-      filter: brightness(0.9);
-    }
   }
 
   &.no-border {
@@ -50,6 +47,12 @@ figure {
     font-size: 0.9rem;
     margin: 0.5rem auto 0.75rem;
     line-height: 1.5;
+  }
+}
+
+.dark-mode {
+  figure img {
+    filter: brightness(0.9);
   }
 }
 

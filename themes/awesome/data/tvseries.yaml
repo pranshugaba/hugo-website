@@ -38,10 +38,6 @@ watching:
     season: 3
     channel: HBO
 
-  - title: Moon Knight
-    type: Season
-    season: 1
-    channel: Disney+
   
   - title: Eastbound & Down
     type: Series
@@ -132,6 +128,10 @@ done:
     type: Series
     season: 6
     channel: NBC
+  - title: Moon Knight
+    type: Season
+    season: 1
+    channel: Disney+
 abandoned:  
   - title: Killing Eve
     type: Season
