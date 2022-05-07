@@ -7,7 +7,7 @@ display: none
 
 ## About me
 
-I am a second-year PhD student in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
+Hi, I'm Pranshu. I am a currently a second-year PhD student in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
 My research interests include Logic, Automata, and Games, as well as Algebra and Combinatorics.
 Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in/).
 
@@ -40,11 +40,11 @@ Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https:/
 
 I like to [walk]({{< ref "/tags/walking" >}}) or [cycle]({{< ref "/tags/cycling" >}}) around the city and explore new places. I like to do some street [photography]({{< ref "/poems" >}}), eat street food, and play with street cats and dogs on the way.
 
-I like to write [puzzles]({{< ref "/puzzles" >}}). While I enjoy solving puzzles---I occasionally solve problems on Project Euler---I enjoy creating puzzles even more. Writing a puzzle that others would find interesting and would want to solve is very challenging indeed.
+I like to write [puzzles]({{< ref "/puzzles" >}}). While I enjoy solving puzzles --- I occasionally solve problems on Project Euler --- I enjoy creating puzzles even more. Writing a puzzle that others would find interesting and would want to solve is very challenging indeed.
 
-I love programming. I have previously dabbled with Kotlin and Haskell, and I am currently learning Rust. I hope to make CLI and GUI applications using Rust. I also love doing front-end web development (CSS).
+I love programming. I have previously dabbled with Kotlin and Haskell, and I am currently learning Rust. I would like to make CLI and GUI applications and games using Rust. I also love doing front-end web development (CSS).
 
-In my spare time, I [read books]({{< ref "/now#reading" >}}), [watch TV series]({{< ref "/now#watching" >}}), or play bullet chess (1+0) on [lichess.org](https://lichess.org).
+In my free time, I [read books]({{< ref "/now#reading" >}}), [watch TV series]({{< ref "/now#watching" >}}), or play bullet chess (1+0) on [lichess.org](https://lichess.org).
 
 ## About this site
 

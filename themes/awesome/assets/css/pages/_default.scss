@@ -46,8 +46,8 @@
   }
 
   &__navtags {
-    margin-top: 4rem;
-    align-items: baseline;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
   }
 
   &__tags {
@@ -63,14 +63,6 @@
       font-family: var(--font-sans-serif);
       font-weight: 500;
     }
-
-    // &__link {
-    //   font-size: var(--font-size-400);
-    //   text-decoration: none;
-    //   &:hover {
-    //     text-decoration: underline;
-    //   }
-    // }
   }
   &__end {
     display: flex;
@@ -120,6 +112,7 @@
   &__next {
     width: 50%;
     max-width: 25ch;
+    margin-block: 0.25rem;
   }
   &__next {
     margin-left: auto;
