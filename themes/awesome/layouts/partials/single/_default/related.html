@@ -4,7 +4,7 @@
 
 {{ with $related }}
 <div class="page__related">
-	<h2 class="page__related__heading">See Also</h2>
+	<h2 class="page__related__heading">Related pages</h2>
 	<ul>
 		{{ range . }}
 		<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
@@ -12,3 +12,8 @@
 	</ul>
 </div>
 {{ end }}
+    {{ with .Section}}
+    <div class="page__seeall">
+        <a href="/{{ . }}" class="page__seeall__link">See all {{ with site.GetPage . }}{{ .Title | lower}}{{ end }} &#8594;</a>
+    </div>
+    {{ end }}
