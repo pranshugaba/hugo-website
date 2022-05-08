@@ -6,7 +6,7 @@ summary: 'A short ride in Charkop and Gorai.'
 date: 2021-07-30T14:00:00+05:30
 lastmod: 2021-07-30T14:00:00+05:30
 
-tags: ['cycling']
+tags: ['cycling', 'mumbai', 'gorai']
 
 map: true
 math: false

@@ -1,9 +1,9 @@
 ---
-title: "Two Ants at the Lake"
-subtitle: "A Limerick"
-summary: "A Limerick"
+title: 'Two Ants at the Lake'
+subtitle: 'A Limerick'
+summary: 'A Limerick'
 
-tags: ["limerick", "ants"]
+tags: ['limerick', 'ants', 'bengaluru']
 
 date: 2019-07-09T23:00:00+05:30
 lastmod: 2019-07-09T23:00:00+05:30
