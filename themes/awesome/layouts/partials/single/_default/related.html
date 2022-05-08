@@ -12,10 +12,3 @@
 	</ul>
 </div>
 {{ end }}
-{{ if (in .Site.Params.mainSections .Type) }}
-    {{ with .Section}}
-    <div class="page__seeall">
-        <a href="/{{ . }}" class="page__seeall__link">See all {{ with site.GetPage . }}{{ .Title | lower}}{{ end }} &#8594;</a>
-    </div>
-    {{ end }}
-{{ end }}
