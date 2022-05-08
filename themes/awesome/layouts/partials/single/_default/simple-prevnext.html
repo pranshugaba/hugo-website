@@ -1,4 +1,4 @@
-<nav class="[ page__nav ] [ flow ]">
+<nav class="page__nav">
     {{ $pages := where .Site.RegularPages "Type" "in" .Section }}
     {{ $pageType := "pages"}}
     {{ with site.GetPage .Section }}
