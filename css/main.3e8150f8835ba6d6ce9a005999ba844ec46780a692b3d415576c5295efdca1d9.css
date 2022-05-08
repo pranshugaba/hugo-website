@@ -99,6 +99,7 @@ button:focus {
   font-style: normal;
   font-named-instance: "Regular";
   src: url("/fonts/Bitter/Bitter-VariableFont_wght.ttf") format("truetype");
+  unicode-range: U+0025-00FF;
 }
 @font-face {
   font-family: "Bitter";
@@ -107,6 +108,7 @@ button:focus {
   font-style: italic;
   font-named-instance: "Italic";
   src: url("/fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf") format("truetype");
+  unicode-range: U+0025-00FF;
 }
 @font-face {
   font-family: "Inter";
