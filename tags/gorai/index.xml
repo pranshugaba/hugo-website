@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gorai by Pranshu Gaba</title><link>https://pranshugaba.com/tags/gorai/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sun, 08 May 2022 11:05:10 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/gorai/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/gorai/index.xml" rel="self" type="application/rss+xml"/><item><title>Cycling to Gorai</title><link>https://pranshugaba.com/trips/cycling-to-gorai/</link><pubDate>Fri, 30 Jul 2021 14:00:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-to-gorai/</guid><description>
+<![CDATA[<h2 id="map">Map</h2>
+
+<div>
+  <div id="gorai" class="leaflet-map"></div>
+  <div class="route__metadata">
+    <div class="route__name">
+      <div>
+        <p id="gorai__name"></p>
+        <p id="gorai__start-time"></p>
+      </div>
+      <p id="gorai__type"></p>
+    </div>
+    <div class="route__stats">
+      <p id="gorai__distance"></p>
+      <p id="gorai__duration"></p>
+      <p id="gorai__speed"></p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    {
+      let coords = [19.18, 72.82];
+      let zoomLevel = 12;
+      var corner1 = L.latLng(18.743, 73.394),
+      corner2 = L.latLng(19.470, 72.507),
+      bounds = L.latLngBounds(corner1, corner2);
+      let mymap = L.map('gorai', {
+        fullscreenControl: true,
+        preferCanvas: true,
+        zoomSnap: 0.5,
+        zoomDelta: 0.5,
+        scrollWheelZoom: false,
+      }).setView(coords, zoomLevel);
+
+         const ATTR =
+        '&copy; <a href="https://stadiamaps.com/" target="_blank" rel="noopener">Stadia Maps</a>, ' +
+        '&copy; <a href="https://openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> ' +
+        '&copy; <a href="http://openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a>';
+      const TILES_URL =
+        'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png';
+
+      let Stadia_OSMBright = L.tileLayer(TILES_URL, {
+        minZoom: 3,
+        maxZoom: 18,
+        attribution: ATTR,
+      });
+      Stadia_OSMBright.addTo(mymap);
+
+      let darkMode = localStorage.getItem('darkMode');
+      if (darkMode === 'enabled'){
+        console.log("IT is dark in here")
+      }
+      else {
+        console.log("IT is light out here")
+      }
+
+      L.control.scale({ imperial: false }).addTo(mymap);
+
+      let gpx = 'gorai.gpx'; 
+      
+      function formatNumber (number, precision = 3) {
+        if (typeof number === 'undefined' || number === null) return ''
+      
+        if (number === 0) return '0'
+      
+        const roundedValue = round(precision, number)
+        const floorValue = Math.floor(roundedValue)
+      
+        const isInteger = Math.abs(floorValue - roundedValue) < Number.EPSILON
+      
+        const numberOfFloorDigits = String(floorValue).length
+        const numberOfDigits = String(roundedValue).length
+      
+        if (numberOfFloorDigits > precision) {
+          return String(floorValue)
+        } else {
+          const padding = isInteger ? precision - numberOfFloorDigits : precision - numberOfDigits + 1
+      
+          if (padding > 0) {
+            if (isInteger) {
+              return `${String(floorValue)}.${'0'.repeat(padding)}`
+            } else {
+              return `${String(roundedValue)}${'0'.repeat(padding)}`
+            }
+          } else {
+            return String(roundedValue)
+          }
+        }
+      }
+      
+      function round (precision, number) {
+        return parseFloat(number.toPrecision(precision))
+      }
+      
+      function formatDate(date) {
+        const options = {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          timeZone: "Asia/Kolkata"
+        };
+        return new Intl.DateTimeFormat("en-in", options).format(date);
+      }
+
+      new L.GPX(gpx, {
+        async: true,
+        marker_options: {
+          shadowUrl: '/img/shadow.png',
+          endIconUrl: '/img/enda.png',
+          startIconUrl: '/img/starta.png',
+          iconSize: [50, 50],
+          iconAnchor: [25, 48],
+        },
+        polyline_options: {
+          color: 'azure',
+          opacity: 0.9,
+          weight: 3,
+          lineCap: 'round',
+        },
+      })
+        .on('loaded', function (e) {
+          mymap.fitBounds(e.target.getBounds(), {
+            padding: [10, 10],
+          });
+          
+          let name = e.target.get_name();
+          document.getElementById(
+            'gorai__name'
+          ).innerText = name;
+          
+          let ex_type = e.target.get_exercise_type();
+          if (ex_type){
+            document.getElementById(
+              'gorai__type'
+            ).innerText = ex_type;
+          }
+          
+          let distance = e.target.get_distance() / 1000;
+          document.getElementById(
+            'gorai__distance'
+          ).innerText = `Distance: ${formatNumber(distance)} km`;
+         
+
+          let duration = e.target.get_duration();
+          let duration_string = e.target.get_duration_string(duration);
+          if (duration) {
+            document.getElementById(
+              'gorai__duration'
+            ).innerText = `Duration: ${duration_string}`;
+         
+            let moving_speed = e.target.get_moving_speed();
+            let speed = moving_speed;
+            if (speed >= Infinity) {
+              speed = e.target.get_average_speed();
+            }
+            document.getElementById(
+              'gorai__speed'
+            ).innerText = `Avg. Speed: ${formatNumber(speed)} km/h`;
+          }
+          
+          let start_time = new Date(e.target.get_time());
+          let formatted_time = formatDate(start_time);
+          if (formatted_time) {
+            document.getElementById(
+              'gorai__start-time'
+            ).innerText = formatted_time;
+          }
+        })
+        .addTo(mymap);
+    }
+</script>
+
+<style>
+  #gorai__name {
+    font-weight: 600;
+  }
+</style>
+<h2 id="gallery">Gallery</h2>
+
+
+
+    
+
+
+
+
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 12:26
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.214980999999998&mlon=72.813693#map=16/19.214980999999998/72.813693&layers=N" rel="noopener" target="_blank">(19.215°, 72.814°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_122630_hu5d189c2e0707f2cb80e3933d2f28e84b_1763215_1600x0_resize_q75_box.jpg"
+        
+        alt="A dog sits on a parked car."
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 12:36
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.214804972222222&mlon=72.81188697222223#map=16/19.214804972222222/72.81188697222223&layers=N" rel="noopener" target="_blank">(19.215°, 72.812°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_123643_hu46d9b95d6e2780b8bfb612d9dec67f2b_1871057_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:01
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.233382972222223&mlon=72.82400799999999#map=16/19.233382972222223/72.82400799999999&layers=N" rel="noopener" target="_blank">(19.233°, 72.824°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_130128_huef38318174eaf4b4f7ed97668207aec9_4111724_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:03
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.234608972222222&mlon=72.82171097222222#map=16/19.234608972222222/72.82171097222222&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_130355_hu060547e8cec4944d35b3e53ffd54d093_427668_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:04
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.234611&mlon=72.82170297222221#map=16/19.234611/72.82170297222221&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_130408_huce2dc2b8b8ce4e14cb035adb56a9b8f9_560231_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:05
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.234579&mlon=72.82172097222222#map=16/19.234579/72.82172097222222&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_130510_hu07b414ab596c6cfd12c0b7c65f4172ef_587519_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:05
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.234595972222223&mlon=72.82171799999999#map=16/19.234595972222223/72.82171799999999&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_130528_huf45c29bd9236a072943d7074b3865ef4_703603_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="628"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:05
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.234608972222222&mlon=72.821736#map=16/19.234608972222222/72.821736&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_130540_hua4aeb528ce93a5bef99043b736122d60_543945_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:08
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.234584972222223&mlon=72.82176497222221#map=16/19.234584972222223/72.82176497222221&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_130833_hu44ea05286d354dae71a201465a992f8a_649878_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:09
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.234560972222223&mlon=72.82181097222222#map=16/19.234560972222223/72.82181097222222&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_130906_hu5b0b3e0156a7744387bd95271ff76999_1659219_0x1600_resize_q75_box.jpg"
+        
+        alt=""
+        height="1600"
+        width="1200"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:09
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.234567972222223&mlon=72.82181299999999#map=16/19.234567972222223/72.82181299999999&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_130911_hu41cd2037c7cb6deffd3c1afbd817bb8b_1220939_0x1600_resize_q75_box.jpg"
+        
+        alt=""
+        height="1600"
+        width="1200"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:09
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.234560972222223&mlon=72.82181197222222#map=16/19.234560972222223/72.82181197222222&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_130916_hu0bd53b9ddb1c854e18f907ca9199f081_1118665_0x1600_resize_q75_box.jpg"
+        
+        alt=""
+        height="1600"
+        width="1200"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:10
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.234566&mlon=72.82182399999999#map=16/19.234566/72.82182399999999&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_131023_huac59436fdb9a38101f0fc28816d49d3f_626866_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:11
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.234414&mlon=72.82205599999999#map=16/19.234414/72.82205599999999&layers=N" rel="noopener" target="_blank">(19.234°, 72.822°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_131159_hucd9c75b3500304ae6a32efbae734365f_590515_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:14
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.23326197222222&mlon=72.82450097222222#map=16/19.23326197222222/72.82450097222222&layers=N" rel="noopener" target="_blank">(19.233°, 72.825°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_131412_huba30770af5d1e7bf1bcbc3f0d2c57715_1881769_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:16
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.23249797222222&mlon=72.82879899999999#map=16/19.23249797222222/72.82879899999999&layers=N" rel="noopener" target="_blank">(19.232°, 72.829°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_131608_huc2c9e78c730f44f6ce95cc5d66aa8270_1206209_0x1600_resize_q75_box.jpg"
+        
+        alt=""
+        height="1600"
+        width="1200"
+        />
+        
+        
+        
+    </figure>
+    
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            2021-07-30 13:16
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.23245297222222&mlon=72.828805#map=16/19.23245297222222/72.828805&layers=N" rel="noopener" target="_blank">(19.232°, 72.829°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/cycling-to-gorai/gorai/IMG_20210730_131634_hu91fc5ae909b51458892e7946430b3cb9_1858781_1600x0_resize_q75_box.jpg"
+        
+        alt=""
+        height="1200"
+        width="1600"
+        />
+        
+        
+        
+    </figure>
+    
+
+]]></description></item></channel></rss>

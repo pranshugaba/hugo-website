@@ -631,7 +631,7 @@ a.plain-link:focus,
 .site__footer {
   max-width: var(--header-width);
   margin-inline: auto;
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding-top: 1.5rem;
   border-top: var(--border-medium) solid var(--fg);
   line-height: 1;
@@ -1713,8 +1713,8 @@ figure figcaption {
   margin-bottom: 2.5rem;
 }
 .page__navtags {
-  margin-top: 4rem;
-  align-items: baseline;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
 }
 .page__tags {
   list-style: none;
@@ -1774,6 +1774,7 @@ figure figcaption {
 .page__prev, .page__next {
   width: 50%;
   max-width: 25ch;
+  margin-block: 0.25rem;
 }
 .page__next {
   margin-left: auto;
