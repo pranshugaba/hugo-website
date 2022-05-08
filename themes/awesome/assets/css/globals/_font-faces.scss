@@ -5,7 +5,9 @@
   font-style: normal;
   font-named-instance: 'Regular';
   src: url('/fonts/Bitter/Bitter-VariableFont_wght.ttf') format('truetype');
+  unicode-range: U+0025-00FF;
 }
+
 @font-face {
   font-family: 'Bitter';
   font-weight: 100 900;
@@ -14,6 +16,7 @@
   font-named-instance: 'Italic';
   src: url('/fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf')
     format('truetype');
+  unicode-range: U+0025-00FF;
 }
 
 @font-face {
@@ -22,7 +25,7 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url("/fonts/Inter-roman.var.woff2") format("woff2");
+  src: url('/fonts/Inter-roman.var.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Inter';
@@ -30,7 +33,7 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url("/fonts/Inter-italic.var.woff2") format("woff2");
+  src: url('/fonts/Inter-italic.var.woff2') format('woff2');
 }
 @font-face {
   font-family: 'JBMono';
