@@ -19,7 +19,8 @@ lastmod = ["lastmod", ":git", ":default"]
 
 [markup]
 [markup.highlight]
-style = "paraiso-dark"
+style = "perldoc"
+noClasses = false
 [markup.goldmark]
 [markup.goldmark.parser.attribute]
 block = true

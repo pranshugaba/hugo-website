@@ -9,43 +9,39 @@ math: true
 
 This is my first post on Hugo. I am going to design my own theme!
 
-
 ## Testing custom admonitions
 
-
 {{< note title="Also see" >}}
-Hello, this is _italic_ and this is **bold**. 
+Hello, this is _italic_ and this is **bold**.
 This is a link to [home]({{< ref "/" >}}).
-This is an image. 
+This is an image.
 
 - these are
-- some 
+- some
 - bullet points.
-{{< /note >}}
+  {{< /note >}}
 
 ## Other cool stuff
 
-
 Here's a simple footnote[^1], and here's a longer one.
-
 
 [^1]: This is the first footnote.
 
 $$\sum_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6}$$
 
-This is inline math.  $e^{i\pi} + 1 = 0$. 
+This is inline math. $e^{i\pi} + 1 = 0$.
 
-{{< highlight go "linenos=table,hl_lines=5-7,linenostart=199" >}}
+{{< highlight go "linenos=table,hl_lines=5-7" >}}
 package main
 
 import "fmt"
 
 func main() {
-	fmt.Println("Hello, World!")
+fmt.Println("Hello, World!")
 }
 {{< /highlight >}}
 
-``` rust
+```go
 package main
 
 import "fmt"
@@ -55,6 +51,15 @@ func main() {
 }
 ```
 
-## Todo 
+``` rust
+use rand::prelude::*;
+
+// Greets the user
+fn hello_world(name: &str) {
+	println!("Hello {}", name);
+}
+```
+
+## Todo
 
 - [ ] Interesting functions in Hugo
