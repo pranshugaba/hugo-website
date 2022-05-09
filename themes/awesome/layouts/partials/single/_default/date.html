@@ -1,10 +1,10 @@
 {{ if .Date }}
 <div class="page__date">
-    {{ .Date.Format "Monday, 2 January 2006" }}
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>
     {{ if .Lastmod }}
         {{ if (gt .Lastmod .Date)}}
         <div class="page__lastmod">
-        Last updated on {{ .Lastmod.Format "2 January 2006" }}
+        Last updated on <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2 January 2006" }}</time>
         </div>
         {{ end }}
     {{ end }}

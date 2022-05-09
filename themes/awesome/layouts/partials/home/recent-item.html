@@ -4,5 +4,5 @@
       {{ if (eq .Type "puzzles") }}#{{ .File.ContentBaseName }}:{{ end }}  {{ .Title }} </a> 
   </p>
   <div class="recent__item__summary">{{ .Summary | markdownify }}</div>
-  <p class="recent__item__date">{{ .Date.Format "January 2, 2006" }}</p>
+  <p class="recent__item__date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
 </article>

@@ -11,6 +11,6 @@
       {{ end }}</a>
   </div>
   <span class="item__date">
-     {{ .Date.Format "Jan 2" }} 
+     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2" }}</time> 
   </span>
 </div>

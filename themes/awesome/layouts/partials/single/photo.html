@@ -17,7 +17,7 @@
                 <div class="gallery__metadata">
                     {{ with .Tags.DateTimeOriginal }}
                         <div class="gallery__datetime">
-                            {{ dateFormat "2006-01-02 15:04" . }}
+                            <time datetime="{{ dateFormat "2006-01-02T15:04-0700" . }}">{{ dateFormat "2006-01-02 15:04" . }}</time>
                         </div>
                     {{ end }}
                     {{ if .Lat }}

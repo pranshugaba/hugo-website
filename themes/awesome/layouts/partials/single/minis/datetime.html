@@ -1,8 +1,9 @@
 {{ if .Date }}
 <div class="page__date">
-    {{ .Date.Format "Monday, 2 January 2006" }}<br/>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>
+    <br/>
 </div>
 <div class="page__time">
-    {{ .Date.Format "3:04 pm" }}
+    <time datetime="{{ .Date.Format "15:04" }}">{{ .Date.Format "3:04 pm" }}</time>
 </div>
 {{ end }}

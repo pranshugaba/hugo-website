@@ -6,7 +6,7 @@
       currently reading
     {{ else }}
       {{ with .Context.endDate }}
-        {{ dateFormat "Jan 2006" . }}
+        <time datetime="{{ dateFormat "2006-01" . }}">{{ dateFormat "January 2006" . }}</time>
       {{ end }}
     {{ end }}
   </span>

@@ -23,7 +23,7 @@
     </div>
     {{ if not .ComingSoon}}
       <div class="item__metadata">
-        {{ $context.Date.Format "January 2, 2006" }}
+        <time datetime="{{ $context.Date.Format "2006-01-02" }}">{{ $context.Date.Format "January 2, 2006" }}</time>
         {{ with $context.Params.Location }}
         &nbsp; · &nbsp; {{ partial "helpers/location" $context }}
         {{ end }}
