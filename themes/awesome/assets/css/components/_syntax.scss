@@ -1,26 +1,47 @@
 :root {
-  // perldoc
-  --chroma-bg: #eeeedd;
-  // --chroma-err: #a61717;
-  // --chroma-err-bg: #e3d2d2;
-  --chroma-fg: var(--fg);
-  --chroma-keyword: #8b008b;
-  --chroma-comment: #228b22;
-  --chroma-string: #cd5555;
-  --chroma-number: #b452cd;
+  // tokyo night light
+  --chroma-bg: #f4f0ed;
+  --chroma-fg: #5e5245;
+  --chroma-black: #e9e1db;
+  --chroma-red: #d7898c;
+  --chroma-green: #83b887;
+  --chroma-yellow: #c29830;
+  --chroma-blue: #485f84;
+  --chroma-magenta: #be79bb;
+  --chroma-cyan: #729893;
+  --chroma-white: #a38d78;
+  --chroma-brblack: #ded2c8;
+  --chroma-brred: #c65333;
+  --chroma-brgreen: #659e69;
+  --chroma-bryellow: #c29830;
+  --chroma-brblue: #485f84;
+  --chroma-brmagenta: #854882;
+  --chroma-brcyan: #436460;
+  --chroma-brwhite: #867462;
 }
 .dark-mode {
-  // native
-  --chroma-bg: #202020;
-  --chroma-fg: #d0d0d0;
-  --chroma-keyword: #6ab825;
-  --chroma-comment: #999999;
-  --chroma-string: #ed9d13;
-  --chroma-number: #79c3fb;
+  --chroma-fg: #ece1d7;
+  --chroma-black: #352f2a;
+  --chroma-red: #b65c60;
+  --chroma-green: #78997a;
+  --chroma-yellow: #ebc06d;
+  --chroma-blue: #9aacce;
+  --chroma-magenta: #b380b0;
+  --chroma-cyan: #86a3a3;
+  --chroma-white: #a38d78;
+  --chroma-brblack: #4d453e;
+  --chroma-brred: #f17c64;
+  --chroma-brgreen: #99d59d;
+  --chroma-bryellow: #ebc06d;
+  --chroma-brblue: #9aacce;
+  --chroma-brmagenta: #ce9bcb;
+  --chroma-brcyan: #88b3b2;
+  --chroma-brwhite: #c1a78e;
+  --chroma-bg: hsl(30, 14%, 20%);
 }
 
 .highlight {
-  border: var(--border-medium) solid var(--fg);
+  border: var(--border-medium) solid var(--chroma-fg);
   border-radius: var(--border-radius-medium);
 }
 /* Background */
@@ -38,11 +59,11 @@
   }
   /* Other */
   .x {
+    color: var(--chroma-blue);
   }
   /* Error */
   .err {
-    color: var(--chroma-err);
-    background-color: var(--chroma-err-bg);
+    color: var(--chroma-red);
   }
   /* CodeLine */
   .cl {
@@ -87,41 +108,42 @@
   }
   /* Keyword */
   .k {
-    color: var(--chroma-keyword);
+    color: var(--chroma-brred);
     font-weight: bold;
   }
   /* KeywordConstant */
   .kc {
-    color: var(--chroma-keyword);
+    color: var(--chroma-brcyan);
     font-weight: bold;
   }
   /* KeywordDeclaration */
   .kd {
-    color: var(--chroma-keyword);
+    color: var(--chroma-brcyan);
     font-weight: bold;
   }
   /* KeywordNamespace */
   .kn {
-    color: var(--chroma-keyword);
+    color: var(--chroma-brcyan);
     font-weight: bold;
   }
   /* KeywordPseudo */
   .kp {
-    color: var(--chroma-keyword);
+    color: var(--chroma-brcyan);
     font-weight: bold;
   }
   /* KeywordReserved */
   .kr {
-    color: var(--chroma-keyword);
+    color: var(--chroma-brcyan);
     font-weight: bold;
   }
   /* KeywordType */
   .kt {
-    color: #00688b;
+    color: var(--chroma-brcyan);
     font-weight: bold;
   }
   /* Name */
   .n {
+    color: var(--chroma-variable);
   }
   /* NameAttribute */
   .na {
@@ -129,19 +151,22 @@
   }
   /* NameBuiltin */
   .nb {
-    color: #658b00;
+    color: var(--chroma-brcyan);
+    font-weight: bold;
   }
   /* NameBuiltinPseudo */
   .bp {
+    color: var(--chroma-blue);
+    font-weight: bold;
   }
   /* NameClass */
   .nc {
-    color: #008b45;
+    color: var(--chroma-brcyan);
     font-weight: bold;
   }
   /* NameConstant */
   .no {
-    color: #00688b;
+    color: var(--chroma-brcyan);
   }
   /* NameDecorator */
   .nd {
@@ -152,12 +177,12 @@
   }
   /* NameException */
   .ne {
-    color: #008b45;
+    color: var(--chroma-blue);
     font-weight: bold;
   }
   /* NameFunction */
   .nf {
-    color: #008b45;
+    color: var(--chroma-blue);
   }
   /* NameFunctionMagic */
   .fm {
@@ -172,13 +197,14 @@
   }
   /* NameOther */
   .nx {
+    color: var(--chroma-blue);
   }
   /* NameProperty */
   .py {
   }
   /* NameTag */
   .nt {
-    color: var(--chroma-keyword);
+    color: var(--chroma-red);
     font-weight: bold;
   }
   /* NameVariable */
@@ -205,44 +231,44 @@
   }
   /* LiteralString */
   .s {
-    color: var(--chroma-string);
+    color: var(--chroma-brmagenta);
   }
   /* LiteralStringAffix */
   .sa {
-    color: var(--chroma-string);
+    color: var(--chroma-brmagenta);
   }
   /* LiteralStringBacktick */
   .sb {
-    color: var(--chroma-string);
+    color: var(--chroma-brmagenta);
   }
   /* LiteralStringChar */
   .sc {
-    color: var(--chroma-string);
+    color: var(--chroma-brmagenta);
   }
   /* LiteralStringDelimiter */
   .dl {
-    color: var(--chroma-string);
+    color: var(--chroma-brmagenta);
   }
   /* LiteralStringDoc */
   .sd {
-    color: var(--chroma-string);
+    color: var(--chroma-brmagenta);
   }
   /* LiteralStringDouble */
   .s2 {
-    color: var(--chroma-string);
+    color: var(--chroma-brmagenta);
   }
   /* LiteralStringEscape */
   .se {
-    color: var(--chroma-string);
+    color: var(--chroma-brmagenta);
   }
   /* LiteralStringHeredoc */
   .sh {
-    color: #1c7e71;
+    color: var(--chroma-brmagenta);
     font-style: italic;
   }
   /* LiteralStringInterpol */
   .si {
-    color: var(--chroma-string);
+    color: var(--chroma-red);
   }
   /* LiteralStringOther */
   .sx {
@@ -262,34 +288,35 @@
   }
   /* LiteralNumber */
   .m {
-    color: var(--chroma-number);
+    color: var(--chroma-brmagenta);
   }
   /* LiteralNumberBin */
   .mb {
-    color: var(--chroma-number);
+    color: var(--chroma-brmagenta);
   }
   /* LiteralNumberFloat */
   .mf {
-    color: var(--chroma-number);
+    color: var(--chroma-brmagenta);
   }
   /* LiteralNumberHex */
   .mh {
-    color: var(--chroma-number);
+    color: var(--chroma-brmagenta);
   }
   /* LiteralNumberInteger */
   .mi {
-    color: var(--chroma-number);
+    color: var(--chroma-brmagenta);
   }
   /* LiteralNumberIntegerLong */
   .il {
-    color: var(--chroma-number);
+    color: var(--chroma-brmagenta);
   }
   /* LiteralNumberOct */
   .mo {
-    color: var(--chroma-number);
+    color: var(--chroma-brmagenta);
   }
   /* Operator */
   .o {
+    color: var(--chroma-brred);
   }
   /* OperatorWord */
   .ow {
@@ -297,22 +324,23 @@
   }
   /* Punctuation */
   .p {
+    color: var(--chroma-yellow);
   }
   /* Comment */
   .c {
-    color: var(--chroma-comment);
+    color: var(--chroma-white);
   }
   /* CommentHashbang */
   .ch {
-    color: var(--chroma-comment);
+    color: var(--chroma-white);
   }
   /* CommentMultiline */
   .cm {
-    color: var(--chroma-comment);
+    color: var(--chroma-white);
   }
   /* CommentSingle */
   .c1 {
-    color: var(--chroma-comment);
+    color: var(--chroma-white);
   }
   /* CommentSpecial */
   .cs {
@@ -321,7 +349,7 @@
   }
   /* CommentPreproc */
   .cp {
-    color: #1e889b;
+    color: var(--chroma-yellow);
   }
   /* CommentPreprocFile */
   .cpf {
