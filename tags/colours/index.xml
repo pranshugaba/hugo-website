@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>colours by Pranshu Gaba</title><link>https://pranshugaba.com/tags/colours/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sun, 08 May 2022 12:20:07 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/colours/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/colours/index.xml" rel="self" type="application/rss+xml"/><item><title>blue</title><link>https://pranshugaba.com/poems/blue/</link><pubDate>Tue, 17 Aug 2021 23:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/blue/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>colours by Pranshu Gaba</title><link>https://pranshugaba.com/tags/colours/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Mon, 09 May 2022 08:49:47 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/colours/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/colours/index.xml" rel="self" type="application/rss+xml"/><item><title>blue</title><link>https://pranshugaba.com/poems/blue/</link><pubDate>Tue, 17 Aug 2021 23:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/blue/</guid><description>
 <![CDATA[<img src="https://pranshugaba.com/poems/blue/blue_featured_hu111d066e5bba36b8a8625aab87fe34a5_4272772_1080x0_resize_q75_box.jpg" alt="" /><p>i&rsquo;m afraid<br>
 the esteemed car<br>
 just blue itself</p>
@@ -7,7 +7,7 @@ just blue itself</p>
 <p>I thought it would be great if the reader could also see a preview of the colours. I could add images of the colours that I am describing, but that is a lot of work and not very flexible.  This is what led me to write this Hugo shortcode. I followed the <a href="https://gohugo.io/templates/shortcode-templates/" target="_blank" rel="noopener">Hugo docs on shortcodes</a> for reference.</p>
 <h2 id="usage">Usage</h2>
 <p>The following code in markdown
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>This is a colour shortcode {{&lt; colour &#34;#ff0000&#34; &gt;}}.</span></span></code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">This is a colour shortcode {{&lt; colour &#34;#ff0000&#34; &gt;}}.</span></span></code></pre></div></p>
 <p>renders as</p>
 <p>This is a colour shortcode 
 <code style="background-color: #ff0000;"> 
@@ -29,15 +29,15 @@ just blue itself</p>
 </ul>
 <h2 id="shortcode">Shortcode</h2>
 <p>I created a file named <code>colour.html</code> in <code>layouts/shortcodes</code>, and added the following code in it. We can now access this code in any markdown file using the <code>colour</code> shortcode.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> <span style="color:#5bc4bf">:=</span> .<span style="color:#06b6ef">Get</span> <span style="color:#f99b15">0</span> | <span style="color:#06b6ef">safeCSS</span> }}
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#06b6ef">code</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;background-color: {{ $colour }};&#34;</span>&gt; 
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#06b6ef">span</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#48b685">      color: {{ $colour }};
-</span></span></span><span style="display:flex;"><span><span style="color:#48b685">      filter:  grayscale(1) invert(1) contrast(100);
-</span></span></span><span style="display:flex;"><span><span style="color:#48b685">      &#34;</span>&gt;
-</span></span><span style="display:flex;"><span>      {{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> }}
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">span</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">code</span>&gt;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span> <span class="err">$</span><span class="nx">colour</span> <span class="o">:=</span> <span class="p">.</span><span class="nx">Get</span> <span class="mi">0</span> <span class="p">|</span> <span class="nx">safeCSS</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">code</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;background-color: {{ $colour }};&#34;</span><span class="p">&gt;</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nx">span</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">      color: {{ $colour }};
+</span></span></span><span class="line"><span class="cl"><span class="s">      filter:  grayscale(1) invert(1) contrast(100);
+</span></span></span><span class="line"><span class="cl"><span class="s">      &#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{{</span> <span class="err">$</span><span class="nx">colour</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="o">/</span><span class="nx">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="o">/</span><span class="nx">code</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>The shortcode takes in an argument: <code>$colour</code>.  We use this parameter to set the text in the <code>code</code> tag, and we set both the text colour and the background colour to <code>$colour</code>. We then invert the colour of the text and increase the contrast to make the name of the colour legible. The end result is that the text is white if colour is bright, and black if it is dark.</p>
 
 
@@ -115,16 +115,16 @@ just blue itself</p>
 </ul>
 <p>The text is always legible, but the colour preview is smaller.</p>
 <p>Here&rsquo;s the shortcode for this style:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> <span style="color:#5bc4bf">:=</span> .<span style="color:#06b6ef">Get</span> <span style="color:#f99b15">0</span> | <span style="color:#06b6ef">safeCSS</span> }}
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#06b6ef">code</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#06b6ef">span</span> <span style="color:#06b6ef">style</span>=<span style="color:#48b685">&#34;display: inline-block;
-</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    width: 1.6ch;
-</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    height: 1.6ch;
-</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    border-radius: 0.1rem;
-</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    background-color: {{ $colour }};
-</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    margin-right:5px;&#34;</span>&gt;&lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">span</span>&gt;
-</span></span><span style="display:flex;"><span>    {{ <span style="color:#ef6155">$</span><span style="color:#06b6ef">colour</span> }}
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">/</span><span style="color:#06b6ef">code</span>&gt;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span> <span class="err">$</span><span class="nx">colour</span> <span class="o">:=</span> <span class="p">.</span><span class="nx">Get</span> <span class="mi">0</span> <span class="p">|</span> <span class="nx">safeCSS</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">code</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">span</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;display: inline-block;
+</span></span></span><span class="line"><span class="cl"><span class="s">    width: 1.6ch;
+</span></span></span><span class="line"><span class="cl"><span class="s">    height: 1.6ch;
+</span></span></span><span class="line"><span class="cl"><span class="s">    border-radius: 0.1rem;
+</span></span></span><span class="line"><span class="cl"><span class="s">    background-color: {{ $colour }};
+</span></span></span><span class="line"><span class="cl"><span class="s">    margin-right:5px;&#34;</span><span class="p">&gt;&lt;</span><span class="o">/</span><span class="nx">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{{</span> <span class="err">$</span><span class="nx">colour</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="o">/</span><span class="nx">code</span><span class="p">&gt;</span>
 </span></span></code></pre></div><hr>
 <p><a href="https://pranshugaba.com/contact/">Let me know</a> if you liked this shortcode, and which style you liked more. Feel free to use this code in your site and share your implementation with me. If you have any suggestions to improve this code, share those with me too.</p>
 ]]></description></item><item><title>pink</title><link>https://pranshugaba.com/poems/pink/</link><pubDate>Wed, 17 Jul 2019 16:40:33 +0530</pubDate><guid>https://pranshugaba.com/poems/pink/</guid><description>
