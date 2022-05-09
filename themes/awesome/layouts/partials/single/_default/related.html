@@ -5,7 +5,7 @@
 {{ with $related }}
 <div class="page__related">
 	<h2 class="page__related__heading">Related pages</h2>
-	<ul>
+	<ul class="page__related__ul">
 		{{ range . }}
 		<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 		{{ end }}

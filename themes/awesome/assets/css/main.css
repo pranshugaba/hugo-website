@@ -1573,9 +1573,9 @@ figure figcaption {
 @media (min-width: 480px) {
   .recent__group {
     display: grid;
-    gap: 1rem;
+    gap: 1.6rem;
     grid-auto-flow: column;
-    grid-auto-columns: 63%;
+    grid-auto-columns: 64%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     -ms-scroll-snap-type: inline mandatory;
@@ -1584,14 +1584,14 @@ figure figcaption {
 }
 @media (min-width: 960px) {
   .recent__group {
-    grid-auto-columns: 42%;
+    grid-auto-columns: 40%;
   }
 }
 .recent__section {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-block: 2rem;
+  margin-block: 2.5rem;
   border: var(--border-medium) solid var(--fg);
   border-radius: var(--border-radius-medium);
 }
@@ -1746,6 +1746,9 @@ figure figcaption {
   font-family: var(--font-sans-serif);
   font-size: var(--font-size-600);
   margin-top: 1rem;
+}
+.page__related__ul {
+  margin-block: 1rem;
 }
 .page__nav__heading {
   font-family: var(--font-sans-serif);

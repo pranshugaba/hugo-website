@@ -4,16 +4,16 @@
   &__group {
     @media (min-width: 480px) {
       display: grid;
-      gap: 1rem;
+      gap: 1.6rem;
       grid-auto-flow: column;
-      grid-auto-columns: 63%;
+      grid-auto-columns: 64%;
 
       overflow-x: auto;
       overscroll-behavior-inline: contain;
       scroll-snap-type: inline mandatory;
     }
     @media (min-width: 960px) {
-      grid-auto-columns: 42%;
+      grid-auto-columns: 40%;
     }
     margin-block: 2rem;
   }
@@ -21,7 +21,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-block: 2rem;
+    margin-block: 2.5rem;
     @media (min-width: 480px) {
       margin-block: 0 1rem;
       scroll-snap-align: start;
