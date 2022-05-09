@@ -20,6 +20,7 @@
       <p class="page__subtitle" id="kenobi">{{ .Params.Subtitle }}</p>
     </header>
     <article class="flow">{{ .Content }}</article>
+    {{ partial "home/recent-home" . }}
   </div>
 </div>
 {{ end }}

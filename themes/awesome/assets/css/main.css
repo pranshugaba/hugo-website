@@ -1295,6 +1295,19 @@ h4 code {
   font-size: var(--font-size-200);
 }
 
+.list-home__item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+.list-home__item .item__date {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-300);
+}
+.list-home__item .item__details {
+  font-weight: 500;
+}
+
 .admonition {
   border: var(--border-medium) solid var(--fg);
   border-radius: 0.5rem;
@@ -1614,7 +1627,7 @@ figure figcaption {
        column-gap: 3rem;
   row-gap: 2rem;
   grid-template-columns: 1fr;
-  align-items: center;
+  align-items: flex-start;
 }
 @media (min-width: 800px) {
   .home {
@@ -1640,6 +1653,17 @@ figure figcaption {
 .home__content .page__header {
   margin-top: 0rem;
   margin-bottom: 2rem;
+}
+.home__recent {
+  --flow-space: 0.5rem;
+  margin-block: 1rem;
+}
+.home__recent__heading {
+  font-family: var(--font-sans-serif);
+  font-size: var(--font-size-500);
+}
+.home__recent__seeall {
+  margin-top: 1rem;
 }
 
 .profile__primary {

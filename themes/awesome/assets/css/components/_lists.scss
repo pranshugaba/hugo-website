@@ -164,3 +164,16 @@
     font-size: var(--font-size-200);
   }
 }
+
+.list-home__item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  .item__date {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-300);
+  }
+  .item__details {
+    font-weight: 500;
+  }
+}
