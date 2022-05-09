@@ -5,7 +5,7 @@
   <div class="item__details">
     <a href="{{ .Permalink }}"> 
       {{ if (eq .Section "minis")}}
-        #{{ .Page.Params.Number }}:
+        Mini #{{ .Page.Params.Number }}:
       <em>
           {{ .Page.Plain | truncate 35 "..."}}
       </em>

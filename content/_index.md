@@ -8,4 +8,4 @@ wide: true
 I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tifr.res.in). 
 My research interests include Logic, Automata, and Games, as well as Algebra and Combinatorics.
 
-I write puzzles, poems, and more on my [blog]({{< ref "/blog" >}}). Here are my three newest posts:
+I write puzzles, poems, and more on my [blog]({{< ref "/blog" >}}). Here are three of my newest posts:

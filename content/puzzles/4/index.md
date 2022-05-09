@@ -3,8 +3,8 @@ title: "Untitled Puzzle"
 subtitle: "Puzzle #4"
 summary: "Unknown puzzle"
 
-date: 2022-05-03T12:30:00+05:30
-lastmod: 2022-05-03T12:30:00+05:30
+date: 2022-07-03T12:30:00+05:30
+lastmod: 2022-07-03T12:30:00+05:30
 
 tags: ["geometry", "graph-theory"]
 
