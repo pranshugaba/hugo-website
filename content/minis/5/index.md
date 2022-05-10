@@ -1,14 +1,10 @@
 ---
-title: "Mini #5"
-summary: "More Futurama."
-
-number: 5
+title: 'Mini #5'
+summary: 'More Futurama.'
 
 date: 2022-02-10T13:30:00+05:30
 
-tags: ["tv-series", "futurama"]
-
-math: false
+tags: ['tv-series', 'futurama']
 
 draft: false
 featured: false

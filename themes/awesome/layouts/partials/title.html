@@ -2,12 +2,10 @@
     Home | 
 {{ else }} 
     {{ if (eq .Section "minis")}}
-        {{ if .Page.Params.Number }}
-            Mini #{{ .Page.Params.Number }}: {{ .Page.Plain | truncate 35 "..." }} |
-        {{ else if .Page.IsSection }}
+        {{ if .Page.IsSection }}
             {{ .Page.Section | title }} |
         {{ else }}
-            {{ .Page.Title }} |
+            Mini #{{ .File.ContentBaseName }}: {{ .Page.Plain | truncate 35 "..." }} |
         {{ end }}
     {{ else if .Page.Title }} 
         {{ .Page.Title }} | 

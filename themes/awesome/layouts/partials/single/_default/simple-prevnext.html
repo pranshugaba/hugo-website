@@ -13,7 +13,7 @@
                             <div class="page__nav__prev__title"> <span>&#8592;</span> Previous {{ $pageType | singularize }}</div>
                             <a href="{{ .Permalink }}">
                             {{ if (eq .Section "minis")}}
-                                #{{ .Page.Params.Number }}: <em>
+                                #{{ .File.ContentBaseName }}: <em>
                                 {{ .Page.Plain | truncate 35 "..." }}
                                 </em>
                             {{ else }}
@@ -29,7 +29,7 @@
                     <div class="page__nav__next__title">Next {{ $pageType | singularize }} <span>&#8594;</span></div>
                     <a href="{{ .Permalink }}">
                         {{ if (eq .Section "minis")}}
-                            #{{ .Page.Params.Number }}: <em>
+                            #{{ .File.ContentBaseName }}: <em>
                             {{ .Page.Plain | truncate 35 "..." }}
                             </em>
                         {{ else }}

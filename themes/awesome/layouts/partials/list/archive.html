@@ -2,11 +2,14 @@
   <div class="item__details">
     <a href="{{ .Permalink }}"> 
       {{ if (eq .Section "minis")}}
-        #{{ .Page.Params.Number }}:
+        Mini #{{ .File.ContentBaseName }}:
       <em>
           {{ .Page.Plain | truncate 35 "..."}}
       </em>
       {{ else }}
+        {{ if (eq .Type "puzzles")}}
+            Puzzle #{{ .File.ContentBaseName }}:
+        {{ end }}
         {{ .Title }}
       {{ end }}</a>
   </div>

@@ -4,7 +4,7 @@
     {{ with .Params.Location }}
     &nbsp; · &nbsp; {{ partial "helpers/location" . }}
     {{ end }}
-    &nbsp; · &nbsp; #{{ .Params.Number }} 
+    &nbsp; · &nbsp; #{{ .File.ContentBaseName }} 
   </div>
   <div class="item__content">
       {{ .Content }}

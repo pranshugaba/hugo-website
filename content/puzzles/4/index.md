@@ -1,12 +1,12 @@
 ---
-title: "Untitled Puzzle"
-subtitle: "Puzzle #4"
-summary: "Unknown puzzle"
+title: 'Untitled Puzzle'
+subtitle: 'Puzzle #4'
+summary: 'Unknown puzzle'
 
 date: 2022-07-03T12:30:00+05:30
 lastmod: 2022-07-03T12:30:00+05:30
 
-tags: ["geometry", "graph-theory"]
+tags: ['geometry', 'graph-theory']
 
 math: false
 
