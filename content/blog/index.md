@@ -11,5 +11,8 @@ Here, you will find my recent posts across different categories. If you would li
 
 ---
 
-## Tags
+## Popular tags
+
 {{< tagcloud >}}
+
+[See all tags &#8594;]({{< ref "/tags" >}})

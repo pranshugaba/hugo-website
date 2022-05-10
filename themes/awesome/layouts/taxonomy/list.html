@@ -7,7 +7,7 @@
   </div>
     {{.Content}}
   {{ if eq .RelPermalink "/tags/" }}
-    {{ partial "list/tagcloud.html" . }}
+    {{ partial "list/tagcloud2.html" . }}
   {{ else }}
     <ul class="items__list">
       {{ range .Pages }}

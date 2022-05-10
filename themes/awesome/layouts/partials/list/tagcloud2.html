@@ -1,0 +1,36 @@
+{{ $letters := split "ABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
+{{ $tagsByLetters := dict }}
+
+{{ range site.Taxonomies.tags }}
+    {{ $currentTag := . }}
+    {{ $tagName := .Page.Name }}
+    {{ $firstLetter := upper (substr $tagName 0 1)}}
+    {{ if not (in $letters $firstLetter) }}
+        {{ $firstLetter = "#" }}
+    {{ end }}
+    {{ $tagsWithCurrentLetter := slice }}
+    {{ with index $tagsByLetters $firstLetter }}
+        {{ $tagsWithCurrentLetter = . | append (dict $tagName $currentTag) }}
+    {{ else }}
+        {{ $tagsWithCurrentLetter = slice (dict $tagName $currentTag) }}
+    {{ end }}
+    {{ $tagsByLetters = merge $tagsByLetters (dict $firstLetter $tagsWithCurrentLetter) }}
+{{ end }}
+
+{{ range $letter, $tags := $tagsByLetters }}
+    <h2 class="tagcloud__heading">{{ $letter }}</h2>
+    <ul class="tagcloud">
+        {{ range $tagIndex, $tag := $tags }}
+            {{ range $tagName, $tagPages := $tag }}
+                {{ $invariance := 10}}
+                {{ $size := div (add $invariance (math.Log $tagPages.Count)) $invariance }}
+                {{ with site.GetPage (printf "/tags/%s" $tagName) }}
+                <li>
+                    <a class="plain-link" href="{{ .Permalink }}" 
+                    style="font-size: {{ $size }}em;">{{$tagName}}</a>
+                </li>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </ul>
+{{ end }}

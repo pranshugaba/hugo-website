@@ -1,12 +1,14 @@
 <ul class="tagcloud">
   {{ range $name, $taxonomy := .Site.Taxonomies.tags }} 
-    {{ $invariance := 5}}
-    {{ $size := div (add $invariance (math.Log .Count)) $invariance }}
-    {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-    <li>
-        <a class="plain-link" href="{{ .Permalink }}" 
-        style="font-size: {{ $size }}em;">{{$name}}</a>
-    </li>
-    {{end}}
+    {{ if ge .Count 2 }}
+      {{ $invariance := 7}}
+      {{ $size := div (add $invariance (math.Log .Count)) (add $invariance 1) }}
+      {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+      <li>
+          <a class="plain-link" href="{{ .Permalink }}" 
+          style="font-size: {{ $size }}rem;">{{$name}}</a>
+      </li>
+      {{ end }}
+    {{ end }}
   {{end}}
 </ul>
