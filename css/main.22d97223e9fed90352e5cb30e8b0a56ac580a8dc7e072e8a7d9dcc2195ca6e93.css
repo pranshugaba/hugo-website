@@ -727,7 +727,7 @@ h4 code {
 
 :root {
   --chroma-bg: #f4f0ed;
-  --chroma-fg: #5e5245;
+  --chroma-fg: #4f453b;
   --chroma-black: #e9e1db;
   --chroma-red: #d7898c;
   --chroma-green: #83b887;
@@ -764,7 +764,7 @@ h4 code {
   --chroma-brmagenta: #ce9bcb;
   --chroma-brcyan: #88b3b2;
   --chroma-brwhite: #c1a78e;
-  --chroma-bg: hsl(30, 14%, 20%);
+  --chroma-bg: #2a2520;
 }
 
 .highlight {
@@ -1355,6 +1355,11 @@ h4 code {
   align-items: baseline;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
+}
+.tagcloud__heading {
+  font-size: var(--font-size-700);
+  margin-top: 2.5rem;
+  margin-bottom: 0.25rem;
 }
 
 table {
