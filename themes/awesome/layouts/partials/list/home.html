@@ -1,7 +1,4 @@
 <div class="list-home__item">
-  <span class="item__date">
-     <time>{{ .Date.Format "2006-01-02" }}</time>
-  </span>
   <div class="item__details">
     <a href="{{ .Permalink }}"> 
       {{ if (eq .Section "minis")}}
@@ -16,4 +13,7 @@
         {{ .Title }}
       {{ end }}</a>
   </div>
+  <span class="item__date">
+     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time>
+  </span>
 </div>

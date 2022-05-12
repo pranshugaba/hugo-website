@@ -1,13 +1,17 @@
 {{ define "main" }}
 <div class="home">
   <div class="home__profile">
-    <img
-      class="home__profile__picture"
-      width="400"
-      height="400"
-      src="/profile.jpg"
-      alt="Portrait of Pranshu Gaba standing in front of yellow flowers."
-    />
+    <picture>
+      <source type="image/webp" srcset="profile.webp">
+      <source type="image/jpeg" srcset="profile.jpg">
+      <img
+        class="home__profile__picture"
+        width="400"
+        height="400"
+        src="/profile.jpg"
+        alt="Portrait of Pranshu Gaba standing in front of yellow flowers."
+      />
+    </picture>
     <div class="home__profile__text">
       <p class="profile__primary">Pranshu Gaba</p>
       <p class="profile__secondary">PhD Student</p>

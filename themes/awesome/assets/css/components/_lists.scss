@@ -33,7 +33,6 @@
   line-height: 1.35;
 }
 
-.list-archive__item,
 .list-books__item {
   margin-bottom: 2rem;
   & .item__date {
@@ -48,12 +47,6 @@
   }
 }
 
-.list-archive__item {
-  .item__details {
-    font-size: var(--font-size-500);
-    font-weight: 500;
-  }
-}
 .list-books__item {
   flex-direction: row-reverse;
 }
@@ -166,14 +159,38 @@
 }
 
 .list-home__item {
-  display: flex;
+  margin-block: 0.75rem;
+  display: grid;
+  grid-template-columns: auto 6ch;
   align-items: baseline;
-  gap: 1rem;
+  column-gap: 0rem;
+  @media (min-width: 640px) {
+    column-gap: 0.5rem;
+  }
   .item__date {
-    font-family: var(--font-mono);
     font-size: var(--font-size-300);
+    text-align: right;
   }
   .item__details {
+    font-weight: 500;
+  }
+}
+
+.list-archive__item {
+  margin-block: 1.25rem;
+  display: grid;
+  grid-template-columns: auto 6ch;
+  align-items: baseline;
+  column-gap: 0.5rem;
+  @media (min-width: 640px) {
+    column-gap: 1.5rem;
+  }
+  & .item__date {
+    font-size: var(--font-size-300);
+    text-align: right;
+  }
+  .item__details {
+    font-size: var(--font-size-500);
     font-weight: 500;
   }
 }
