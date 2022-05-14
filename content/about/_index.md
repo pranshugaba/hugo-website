@@ -7,7 +7,7 @@ display: none
 
 ## About me
 
-Hi, I'm Pranshu. I am a currently a second-year PhD student in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
+Hi, I'm Pranshu. I am currently a second-year PhD student in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
 My research interests include Logic, Automata, and Games, as well as Algebra and Combinatorics.
 Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in/).
 
