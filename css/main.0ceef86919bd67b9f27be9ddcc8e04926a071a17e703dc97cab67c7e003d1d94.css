@@ -1287,23 +1287,21 @@ h4 code {
   font-size: var(--font-size-200);
 }
 
-.list-home__item {
-  margin-block: 1rem;
-  display: grid;
-  grid-template-columns: auto 6ch;
-  align-items: baseline;
-  -moz-column-gap: 0rem;
-       column-gap: 0rem;
-}
 @media (min-width: 640px) {
   .list-home__item {
+    margin-block: 1rem;
+    display: grid;
+    grid-template-columns: auto 10ch;
+    align-items: baseline;
+    -moz-column-gap: 0rem;
+         column-gap: 0rem;
     margin-block: 0.75rem;
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
   }
 }
 .list-home__item .item__date {
-  font-size: var(--font-size-300);
+  font-size: var(--font-size-250);
   text-align: right;
 }
 .list-home__item .item__details {
@@ -1686,15 +1684,16 @@ figure figcaption {
   margin-bottom: 2rem;
 }
 .home__recent {
-  --flow-space: 0.5rem;
-  margin-block: 1rem;
+  margin-block: 2rem;
 }
 .home__recent__heading {
   font-family: var(--font-sans-serif);
-  font-size: var(--font-size-500);
+  font-size: var(--font-size-600);
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 .home__recent__seeall {
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
 .profile__primary {
