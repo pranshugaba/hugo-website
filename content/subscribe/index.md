@@ -6,27 +6,27 @@ subtitle: "RSS feeds for this site"
 If you prefer to read on a feed reader, here are some RSS feeds. 
 Note that some components and figures may not render correctly in your feed reader. 
 
-Subscribe to [all posts](/index.xml), or each section individually 
+Subscribe to [everything all in one feed](/index.xml), or each section individually 
 
-- [dev](/dev/index.xml)
+- [posts](/posts/index.xml)
 - [trips](/trips/index.xml)
 - [reviews](/reviews/index.xml)
-- [links](/links/index.xml)
 - [recipes](/recipes/index.xml)
-- [poems](/poems/index.xml)
 - [puzzles](/puzzles/index.xml)
+- [poems](/poems/index.xml)
 - [stories](/stories/index.xml)
 - [comics](/comics/index.xml)
+- [dev](/dev/index.xml)
 - [minis](/minis/index.xml)
 
-Append `/index.xml` to the URL of any list page to get the URL for the corresponding feed. 
+To subscribe to a specific tag, append `/index.xml` to the URL of the tag page to get the URL for the corresponding feed. 
 
-For example, to follow the `haiku` tag at 
+For example, say you would like to follow the `haiku` tag. It is available at
 {{< highlight shell >}}
 https://pranshugaba.com/tags/haiku
 {{< /highlight >}}
 
-go to
+The feed corresponding to this tag is at
 
 {{< highlight shell >}}
 https://pranshugaba.com/tags/haiku/index.xml

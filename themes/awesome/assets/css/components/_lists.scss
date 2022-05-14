@@ -159,12 +159,13 @@
 }
 
 .list-home__item {
-  margin-block: 0.75rem;
+  margin-block: 1rem;
   display: grid;
   grid-template-columns: auto 6ch;
   align-items: baseline;
   column-gap: 0rem;
   @media (min-width: 640px) {
+    margin-block: 0.75rem;
     column-gap: 0.5rem;
   }
   .item__date {
@@ -177,13 +178,14 @@
 }
 
 .list-archive__item {
-  margin-block: 1.25rem;
+  margin-block: 1.5rem;
   display: grid;
   grid-template-columns: auto 6ch;
   align-items: baseline;
   column-gap: 0.5rem;
   @media (min-width: 640px) {
     column-gap: 1.5rem;
+    margin-block: 1.25rem;
   }
   & .item__date {
     font-size: var(--font-size-300);

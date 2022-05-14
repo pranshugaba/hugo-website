@@ -1288,7 +1288,7 @@ h4 code {
 }
 
 .list-home__item {
-  margin-block: 0.75rem;
+  margin-block: 1rem;
   display: grid;
   grid-template-columns: auto 6ch;
   align-items: baseline;
@@ -1297,6 +1297,7 @@ h4 code {
 }
 @media (min-width: 640px) {
   .list-home__item {
+    margin-block: 0.75rem;
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
   }
@@ -1310,7 +1311,7 @@ h4 code {
 }
 
 .list-archive__item {
-  margin-block: 1.25rem;
+  margin-block: 1.5rem;
   display: grid;
   grid-template-columns: auto 6ch;
   align-items: baseline;
@@ -1321,6 +1322,7 @@ h4 code {
   .list-archive__item {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
+    margin-block: 1.25rem;
   }
 }
 .list-archive__item .item__date {

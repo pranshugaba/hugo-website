@@ -1,7 +1,7 @@
 ---
 
 title: Posts
-subtitle: General posts
+subtitle: Interesting things, websites, places, etc.
 summary: My posts
 
 ---
