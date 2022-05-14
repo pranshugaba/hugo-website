@@ -1,1 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts by Pranshu Gaba</title><link>https://pranshugaba.com/posts/</link><description>General posts</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 12 May 2022 23:28:02 +0530</lastBuildDate><image><url>https://pranshugaba.com/posts/icon.png</url></image><atom:link href="https://pranshugaba.com/posts/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts by Pranshu Gaba</title><link>https://pranshugaba.com/posts/</link><description>Interesting things, websites, places, etc.</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 14 May 2022 23:18:49 +0530</lastBuildDate><image><url>https://pranshugaba.com/posts/icon.png</url></image><atom:link href="https://pranshugaba.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Research Seminars</title><link>https://pranshugaba.com/posts/research-seminars/</link><pubDate>Thu, 10 Feb 2022 02:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/research-seminars/</guid><description>
+<![CDATA[<p>Most research talks are being held online post lockdown, and as a result, one can access talks from all over the world.
+I came across a website that lists upcoming research seminars and makes it easier to discover interesting talks.</p>
+<p><a href="https://researchseminars.org/" target="_blank" rel="noopener">https://researchseminars.org/</a></p>
+<p>This website was launched in April 2020 shortly after lockdown began.
+It lists upcoming talks and seminars held in universities all over the world.
+You can filter talks by topic, language, institution, and more.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    <picture>
+        
+        <img src="https://pranshugaba.com/posts/research-seminars/research-seminars.png" alt="Screenshot of the homepage of researchseminars.org">
+    </picture>
+    
+    
+    <figcaption>
+        
+        
+            Screenshot of the homepage of researchseminars.org
+            
+            
+            
+        
+    </figcaption>
+    
+</figure>
+
+<p>For each talk, the site shows details such as the title, abstract, speaker, the targeted audience, and a link to the seminar&rsquo;s website.
+Most talks have a livestream link available (either interactive like Zoom / Google Meet / Microsoft Teams or viewing only such as Youtube).
+Links for some talks are not be available unless you register on this site.</p>
+<p>Try to attend and participate in talks that pique your interest. The feeling of being able to attend a talk held halfway across the world is unmatched.</p>
+]]></description></item><item><title>Advent Puzzles 2021</title><link>https://pranshugaba.com/posts/advent-puzzles-2021/</link><pubDate>Fri, 10 Dec 2021 05:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/advent-puzzles-2021/</guid><description>
+<![CDATA[<p>December is here, which means it&rsquo;s problem solving season!</p>
+<h2 id="maths">Maths</h2>
+<p><a href="https://www.mscroggs.co.uk/" target="_blank" rel="noopener">Matthew Scroggs</a> has posted the seventh edition of the <a href="https://www.mscroggs.co.uk/blog/91" target="_blank" rel="noopener">Advent calendar of maths puzzles</a> on his blog. A new puzzle is unlocked everyday, and you have until the end of the year to submit the answers. The first twenty-four puzzles each have a three digit solutions, and these solutions form the clues required to solve the main puzzle on the 25th.
+Ten people who solve all puzzles correctly are randomly selected to win a T-shirt!</p>
+<p>The problems are mostly from number theory and combinatorics, which are coincidentally two of my favourite areas of mathematics. I believe most people would find the problems interesting and challenging. I have solved the last three editions of this advent, and plan to solve it this year as well.</p>
+<h2 id="programming">Programming</h2>
+<p>This year, we get the seventh <a href="https://adventofcode.com/" target="_blank" rel="noopener">Advent of Code</a> by <a href="http://was.tl/" target="_blank" rel="noopener">Eric Wastl</a>. Two programming puzzles are unlocked every day.
+Solving these puzzles requires basic programming skills, but more importantly, critical thinking skills.
+You are free to use any programming language to solve them. You can even use pen and paper, although I would not recommend it.
+I recently started learning the functional programming language Haskell, and I am using it to solve these puzzles. I am loving the experience so far.</p>
+<hr>
+<p>If you know any other puzzles happening in December (or any other time of the year really), <a href="https://pranshugaba.com/contact/">let me know</a>!</p>
+]]></description></item></channel></rss>
