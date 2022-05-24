@@ -11,6 +11,10 @@ reading:
   - title: Crime and Punishment
     author: Fyodor Dostoevsky
     startDate: 2022-03-23T05:30:00+05:30
+  - title: Following the Equator 
+    author: Mark Twain
+    startDate: 2022-05-23T05:30:00+05:30
+
 read:
   - title: The Magus
     author: John Fowles
