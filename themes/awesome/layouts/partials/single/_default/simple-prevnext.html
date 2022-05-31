@@ -2,7 +2,11 @@
     {{ $pages := where .Site.RegularPages "Type" "in" .Section }}
     {{ $pageType := "pages"}}
     {{ with site.GetPage .Section }}
+      {{ with .Params.short_term }}
+        {{ $pageType = . }}
+      {{ else  }}
         {{ $pageType = .Title | lower }}
+      {{ end  }}
     {{ end }}
     {{ if (in .Site.Params.mainSections .Type) }}
         {{ if ge (len $pages) 2 }}
@@ -19,6 +23,9 @@
                         {{ else }}
                             {{ if (eq .Type "puzzles") }}
                                 #{{ .File.ContentBaseName }}:
+                            {{ end }}
+                            {{ if (eq .Type "newsletter") }}
+                                {{ partial "helpers/newsletter-issue" . }}:
                             {{ end }}
                             {{ .Title }}
                         {{ end }}
@@ -39,6 +46,9 @@
                             {{ if (eq .Type "puzzles") }}
                                 #{{ .File.ContentBaseName }}:
                             {{ end }}
+                            {{ if (eq .Type "newsletter") }}
+                                {{ partial "helpers/newsletter-issue" . }}:
+                            {{ end }}
                             {{ .Title }}
                         {{ end }}
                     </a>
@@ -47,7 +57,7 @@
             {{ end }}
             {{ with .Section}}
             <div class="page__seeall">
-                <a href="/{{ . }}" class="page__seeall__link">See all {{ with site.GetPage . }}{{ .Title | lower}}{{ end }} &#8594;</a>
+              <a href="/{{ . }}" class="page__seeall__link">See all {{ $pageType }} &#8594;</a>
             </div>
             {{ end }}
         {{ end }}

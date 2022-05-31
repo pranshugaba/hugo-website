@@ -10,6 +10,9 @@
         {{ if (eq .Type "puzzles")}}
             Puzzle #{{ .File.ContentBaseName }}:
         {{ end }}
+        {{ if (eq .Type "newsletter") }}
+            {{ partial "helpers/newsletter-issue" . }}:
+        {{ end }}
         {{ .Title }}
       {{ end }}</a>
   </div>

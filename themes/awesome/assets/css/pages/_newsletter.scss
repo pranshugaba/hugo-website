@@ -1,0 +1,11 @@
+.newsletter {
+  .page {
+    &__header{
+      margin-top: 4rem;
+    }
+    &__weekdate {
+      margin-bottom: 3rem;
+      font-size: var(--font-size-600);
+    }
+  }
+}

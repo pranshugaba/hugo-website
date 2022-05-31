@@ -7,12 +7,7 @@ summary: A little bit about me and my website
 
 ## TIFR
 
-I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/). 
-I am attending the following courses this semester:
-- Algebra and Computation
-- Computational Complexity
-- Logic, Games, and Automata (from CMI)
-- Algebraic Automata Theory (from CMI)
+I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/). I am currently reading papers to decide a research problem to work on.
 
 
 ## Learning

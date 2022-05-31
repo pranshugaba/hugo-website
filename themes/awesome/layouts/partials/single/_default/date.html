@@ -8,5 +8,8 @@
         </div>
         {{ end }}
     {{ end }}
+    {{ if eq .Section "newsletter" }}
+        <p class="page__weekdate">Issue: {{ partial "helpers/newsletter-issue" . }}</p>
+    {{ end }}
 </div>
 {{ end }}

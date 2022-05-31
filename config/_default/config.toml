@@ -13,6 +13,7 @@ paginate = 10                                                                   
 summaryLength = 50                                                                                             # Length of text in words to show in a .Summary
 titleCaseStyle = "Chicago"
 
+disablePathToLower = true
 
 [frontmatter]
 lastmod = ["lastmod", ":git", ":default"]
@@ -60,6 +61,7 @@ mainSections = [
     "stories",
     "comics",
     "minis",
+    "newsletter",
 ]
 AuthorName = "Pranshu Gaba"
 GitHubUser = "pranshugaba"

@@ -184,7 +184,7 @@
     grid-template-columns: auto 6ch;
     align-items: baseline;
     column-gap: 1.5rem;
-    margin-block: 1.25rem;
+    margin-block: 1rem;
   }
   .item__date {
     font-size: var(--font-size-300);
@@ -195,4 +195,8 @@
     font-size: var(--font-size-500);
     font-weight: 500;
   }
+}
+
+.list-content {
+  margin-block: 3rem;
 }

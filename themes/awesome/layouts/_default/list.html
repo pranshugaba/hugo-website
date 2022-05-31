@@ -11,7 +11,7 @@
         <p class="page__subtitle" >{{ . | emojify }}</p>
     {{ end }}
   </header>
-  <article class="[ flow ]">
+  <article class="[ list-content ] [ flow ]">
     {{.Content}}
   </article>
   {{ if (ne $displayStyle "none") }}

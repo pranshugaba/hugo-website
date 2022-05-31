@@ -1,6 +1,9 @@
 @use '../abstracts/mixins' as m;
 
 .page {
+  &__date {
+    margin-top: 0rem;
+  }
   &__header {
     margin-top: 4rem;
     @media (min-width: 640px) {
@@ -19,9 +22,6 @@
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     line-height: 1.25;
-  }
-  &__date {
-    margin-top: 0rem;
   }
   &__location {
     margin-top: 0.75rem;
@@ -53,7 +53,9 @@
   &__tags {
     @include m.plain-list;
     display: flex;
-    gap: 0.75rem;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    column-gap: 0.75rem;
     & > li {
       margin-block: 0;
     }

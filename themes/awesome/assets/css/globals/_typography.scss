@@ -27,7 +27,6 @@ li {
   margin-block: 0.5rem;
 }
 
-
 p:first-child {
   margin-top: 0.75rem;
 }
@@ -47,33 +46,37 @@ code {
 // }
 
 blockquote {
-  font-size: 1.125rem;
+  font-size: var(--font-size-400);
   border: var(--border-thick) solid var(--accent);
-  border-radius: 1rem;
-  border-bottom-left-radius: 0.15rem;
+  border-radius: var(--border-radius-large);
+  border-bottom-left-radius: var(--border-radius-tiny);
   margin-block: 2.5rem;
   margin-inline: auto;
-  padding-block: 1.25rem;
-  padding-inline: 2ch;
+  padding-block: 0.25rem;
+  padding-inline: 0.8rem;
   quotes: '“' '”' '‘' '’';
-  width: 90%;
+  width: 100%;
   @media (min-width: 640px) {
     width: max-content;
-    max-width: 80%;
+    max-width: 90%;
+    padding-inline: 1rem;
   }
 }
-blockquote::before {
-  content: open-quote;
-  font-family: var(--font-serif);
-  color: var(--accent);
-  font-size: 3em;
-  font-weight: 600;
-  line-height: 1rem;
-  margin-right: 0.1rem;
-  vertical-align: -0.375em;
-}
+// blockquote::before {
+//   content: open-quote;
+//   font-family: var(--font-serif);
+//   color: var(--accent);
+//   font-size: 3em;
+//   font-weight: 600;
+//   line-height: 1rem;
+//   margin-right: 0.1rem;
+//   vertical-align: -0.375em;
+// }
 blockquote p {
-  display: inline;
+  margin-block: 1.35rem;
+}
+blockquote cite {
+  display: inline-block;
 }
 
 dt {

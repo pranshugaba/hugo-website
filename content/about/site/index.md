@@ -21,19 +21,20 @@ I have hidden a number of easter eggs across this site. How many can you find?
 
 ## Some statistics
 
-|                      Count | Section                             |
-| -------------------------: | :---------------------------------- |
-|   {{< countposts posts >}} | [Posts]({{< ref "/posts/" >}})      |
-|   {{< countposts trips >}} | [Trips]({{< ref "/trips/" >}})      |
-| {{< countposts recipes >}} | [Recipes]({{< ref "/recipes/" >}})  |
-| {{< countposts reviews >}} | [Reviews]({{< ref "/reviews/" >}})  |
-| {{< countposts puzzles >}} | [Puzzles]({{< ref "/puzzles/" >}})  |
-|   {{< countposts poems >}} | [Poems]({{< ref "/poems/" >}})      |
-| {{< countposts stories >}} | [Stories]({{< ref "/stories/" >}})  |
-|  {{< countposts comics >}} | [Comics]({{< ref "/comics/" >}})    |
-|     {{< countposts dev >}} | [Dev articles]({{< ref "/dev/" >}}) |
-|   {{< countposts minis >}} | [Minis]({{< ref "/minis/" >}})      |
-|  **{{< countpostsall >}}** | **Total**                           |
+|                         Count | Section                                         |
+| ----------------------------: | :---------------------------------------------- |
+|      {{< countposts posts >}} | [Posts]({{< ref "/posts/" >}})                  |
+|      {{< countposts trips >}} | [Trips]({{< ref "/trips/" >}})                  |
+|    {{< countposts recipes >}} | [Recipes]({{< ref "/recipes/" >}})              |
+|    {{< countposts reviews >}} | [Reviews]({{< ref "/reviews/" >}})              |
+|    {{< countposts puzzles >}} | [Puzzles]({{< ref "/puzzles/" >}})              |
+|      {{< countposts poems >}} | [Poems]({{< ref "/poems/" >}})                  |
+|    {{< countposts stories >}} | [Stories]({{< ref "/stories/" >}})              |
+|     {{< countposts comics >}} | [Comics]({{< ref "/comics/" >}})                |
+|        {{< countposts dev >}} | [Dev articles]({{< ref "/dev/" >}})             |
+|      {{< countposts minis >}} | [Minis]({{< ref "/minis/" >}})                  |
+| {{< countposts newsletter >}} | [Newsletter issues]({{< ref "/newsletter/" >}}) |
+|     **{{< countpostsall >}}** | **Total**                                       |
 
 Last updated: {{< lastupdated >}}
 

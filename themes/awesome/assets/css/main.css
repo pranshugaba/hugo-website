@@ -439,39 +439,33 @@ code {
 }
 
 blockquote {
-  font-size: 1.125rem;
+  font-size: var(--font-size-400);
   border: var(--border-thick) solid var(--accent);
-  border-radius: 1rem;
-  border-bottom-left-radius: 0.15rem;
+  border-radius: var(--border-radius-large);
+  border-bottom-left-radius: var(--border-radius-tiny);
   margin-block: 2.5rem;
   margin-inline: auto;
-  padding-block: 1.25rem;
-  padding-inline: 2ch;
+  padding-block: 0.25rem;
+  padding-inline: 0.8rem;
   quotes: "“" "”" "‘" "’";
-  width: 90%;
+  width: 100%;
 }
 @media (min-width: 640px) {
   blockquote {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    max-width: 80%;
+    max-width: 90%;
+    padding-inline: 1rem;
   }
 }
 
-blockquote::before {
-  content: open-quote;
-  font-family: var(--font-serif);
-  color: var(--accent);
-  font-size: 3em;
-  font-weight: 600;
-  line-height: 1rem;
-  margin-right: 0.1rem;
-  vertical-align: -0.375em;
+blockquote p {
+  margin-block: 1.35rem;
 }
 
-blockquote p {
-  display: inline;
+blockquote cite {
+  display: inline-block;
 }
 
 dt {
@@ -1318,7 +1312,7 @@ h4 code {
     align-items: baseline;
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
-    margin-block: 1.25rem;
+    margin-block: 1rem;
   }
 }
 .list-archive__item .item__date {
@@ -1329,6 +1323,10 @@ h4 code {
   margin-block: 0.25rem;
   font-size: var(--font-size-500);
   font-weight: 500;
+}
+
+.list-content {
+  margin-block: 3rem;
 }
 
 .admonition {
@@ -1622,7 +1620,7 @@ figure.small figcaption {
   max-width: 30ch;
 }
 figure.medium img {
-  max-height: 480px;
+  max-height: 360px;
 }
 figure.medium figcaption {
   max-width: 45ch;
@@ -1815,6 +1813,9 @@ figure figcaption {
   border-radius: var(--border-radius-large);
 }
 
+.page__date {
+  margin-top: 0rem;
+}
 .page__header {
   margin-top: 4rem;
   margin-bottom: 3rem;
@@ -1835,9 +1836,6 @@ figure figcaption {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   line-height: 1.25;
-}
-.page__date {
-  margin-top: 0rem;
 }
 .page__location {
   margin-top: 0.75rem;
@@ -1866,7 +1864,10 @@ figure figcaption {
   list-style: none;
   padding-left: 0;
   display: flex;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
 }
 .page__tags > li {
   margin-block: 0;
@@ -1999,4 +2000,12 @@ figure figcaption {
 }
 .minis .page__content p {
   line-height: 1.5;
+}
+
+.newsletter .page__header {
+  margin-top: 4rem;
+}
+.newsletter .page__weekdate {
+  margin-bottom: 3rem;
+  font-size: var(--font-size-600);
 }/*# sourceMappingURL=main.css.map */
