@@ -46,14 +46,6 @@
       });
       Stadia_OSMBright.addTo(mymap);
 
-      let darkMode = localStorage.getItem('darkMode');
-      if (darkMode === 'enabled'){
-        console.log("IT is dark in here")
-      }
-      else {
-        console.log("IT is light out here")
-      }
-
       L.control.scale({ imperial: false }).addTo(mymap);
 
       let gpx = '{{ .Route }}.gpx'; // URL to your GPX file or the GPX itself
@@ -88,7 +80,7 @@
         }
       }
       
-      function round (precision, number) {
+      function round(precision, number) {
         return parseFloat(number.toPrecision(precision))
       }
       

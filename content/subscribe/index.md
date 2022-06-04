@@ -6,16 +6,20 @@ summary: 'Ways to keep updated'
 
 ## Newsletter
 
-I publish a weekly newsletter in which I share updates. Here is a link to the most recent issue:
+I publish a weekly newsletter in which I share updates. Here are links to some of the recent issues:
 
 {{< recent-newsletters >}}
 
 There are three ways to access my newsletter. Pick your favourite:
 
-1. You can sign up at http://newsletter.pranshugaba.com and get the latest issue emailed straight to your inbox.
-1. Alternatively, if you do not wish to share your email id, you could add the following feed to your favourite feed reader and you will be notified by your reader when a new issue is uploaded.   
-`https://pranshugaba.com/newsletters/index.xml`  
-[Read more about using feed readers &#8594;]({{< ref "/subscribe#feed-readers" >}})
+1. You can sign up at http://newsletter.pranshugaba.com and get the latest issue emailed straight to your inbox. (If you have subscribed but are not receiving newsletter emails, they are probably going to your spam folder. Mark these emails as "not spam" so that future issues will not go in spam.)
+1. Alternatively, if you do not wish to share your email id, you could add the following feed to your favourite feed reader. 
+
+    ```
+    https://pranshugaba.com/newsletters/index.xml
+    ```
+    You will be notified by your reader when a new issue is uploaded.  
+    [Read more about using feed readers &#8594;]({{< ref "/subscribe#feed-readers" >}})
 1. All issues will also be available on my website at [https://pranshugaba.com/newsletter]({{< ref "/newsletter" >}}). You can bookmark this page and browse through it anytime you like.
 
 

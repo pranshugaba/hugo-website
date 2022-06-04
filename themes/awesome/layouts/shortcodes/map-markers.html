@@ -1,0 +1,2 @@
+{{ $images := .Get 0 }}
+{{ partial "single/map-markers" (dict "Context" . "Images" $images) }}

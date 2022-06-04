@@ -1,3 +1,30 @@
+watching:
+  - title: Barry
+    type: Series
+    season: 3
+    channel: HBO
+  
+  - title: Gravity Falls
+    type: Season
+    season: 2
+    channel: Disney
+
+  - title: Stranger Things
+    type: Series
+    channel: Netflix
+    season: 4
+
+  - title: Taskmaster
+    type: Series
+    channel: Channel 4
+    season: 13
+    startDate: 2021-02-01T05:30:00+05:30
+
+  - title: Peep Show
+    type: Series
+    season: 9
+    channel: Channel 4
+
 wantToWatch:
   - title: Better Call Saul
     type: Series
@@ -26,19 +53,6 @@ wantToWatch:
     type: Series
     channel: Netflix
 
-watching:
-  - title: Taskmaster
-    type: Series
-    channel: Channel 4
-    season: 13
-    startDate: 2021-02-01T05:30:00+05:30
-
-  - title: Barry
-    type: Series
-    season: 3
-    channel: HBO
-
-  
   - title: Eastbound & Down
     type: Series
     season: 1
@@ -48,17 +62,7 @@ watching:
     type: Season
     season: 6
     channel: Showcase
-
-  - title: Gravity Falls
-    type: Season
-    season: 2
-    channel: Disney
-
-  - title: Peep Show
-    type: Series
-    season: 9
-    channel: Channel 4
-
+  
   - title: Limmy's Show
     type: Series
     season: 1

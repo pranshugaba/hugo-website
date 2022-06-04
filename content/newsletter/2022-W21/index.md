@@ -37,7 +37,7 @@ All issues will also be available on my website at [https://pranshugaba.com/news
 
 - I shared [a picture of the Gateway of India]({{< ref "/minis/9" >}}) which was lit up beautifully on Thursday.
 - I wrote a photopoem called _sunset_.
-  {{< figure src="sunset.webp"  alt="Sun setting at the beach" class="small" >}}
+  {{< figure src="sunset.webp"  alt="Sun setting at the beach" class="medium" >}}
   [Read the accompanying poem &#8594;]({{< ref "/poems/sunset" >}})
 - I wrote this issue of the newsletter, and set up my website to be able to add more issues! (sorry, this is getting meta...)
 
@@ -68,11 +68,11 @@ _Numb Little Bug_ by Em Beihold
 
 Mark Twain's take on crossing the International Date Line:
 
-> Sept. 8.—Sunday. We are moving so nearly south that we cross only about two meridians of longitude a day. This morning we were in longitude 178 west from Greenwich, and 57 degrees west from San Francisco. To-morrow we shall be close to the center of the globe—the 180th degree of west longitude and 180th degree of east longitude.
+> Sept. 8.---Sunday. We are moving so nearly south that we cross only about two meridians of longitude a day. This morning we were in longitude 178 west from Greenwich, and 57 degrees west from San Francisco. To-morrow we shall be close to the center of the globe---the 180th degree of west longitude and 180th degree of east longitude.
 >
-> And then we must drop out a day—lose a day out of our lives, a day never to be found again. We shall all die one day earlier than from the beginning of time we were foreordained to die. We shall be a day behindhand all through eternity. We shall always be saying to the other angels, “Fine day today,” and they will be always retorting, “But it isn’t to-day, it’s tomorrow.” We shall be in a state of confusion all the time and shall never know what true happiness is.
+> And then we must drop out a day---lose a day out of our lives, a day never to be found again. We shall all die one day earlier than from the beginning of time we were foreordained to die. We shall be a day behindhand all through eternity. We shall always be saying to the other angels, "Fine day today," and they will be always retorting, "But it isn't to-day, it's tomorrow." We shall be in a state of confusion all the time and shall never know what true happiness is.
 >
-> <cite>-- Excerpt from [_Following the Equator_, by Mark Twain](https://www.gutenberg.org/files/2895/2895-h/2895-h.htm)</cite>
+> <cite>--- Excerpt from [_Following the Equator_, by Mark Twain](https://www.gutenberg.org/files/2895/2895-h/2895-h.htm)</cite>
 
 &nbsp;
 

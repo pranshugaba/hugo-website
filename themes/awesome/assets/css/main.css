@@ -425,6 +425,14 @@ li {
   margin-block: 0.5rem;
 }
 
+li p + p {
+  margin-top: 0.75rem;
+}
+
+li p:last-child {
+  margin-bottom: 1.6rem;
+}
+
 p:first-child {
   margin-top: 0.75rem;
 }
@@ -460,12 +468,14 @@ blockquote {
   }
 }
 
-blockquote p {
-  margin-block: 1.35rem;
+blockquote > p {
+  margin-block: 0.75rem;
+  text-indent: 1rem;
 }
 
 blockquote cite {
-  display: inline-block;
+  display: block;
+  text-align: right;
 }
 
 dt {
