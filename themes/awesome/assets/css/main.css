@@ -100,7 +100,7 @@ button:focus {
   font-style: normal;
   font-named-instance: "Regular";
   src: url("/fonts/Bitter/Bitter-VariableFont_wght.ttf") format("truetype");
-  unicode-range: U+0025-00FF;
+  unicode-range: U+0000-007F;
 }
 @font-face {
   font-family: "Bitter";
@@ -109,7 +109,7 @@ button:focus {
   font-style: italic;
   font-named-instance: "Italic";
   src: url("/fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf") format("truetype");
-  unicode-range: U+0025-00FF;
+  unicode-range: U+0000-007F;
 }
 @font-face {
   font-family: "Inter";
@@ -1635,6 +1635,12 @@ figure.medium img {
 figure.medium figcaption {
   max-width: 45ch;
 }
+figure.large img {
+  max-height: 420px;
+}
+figure.large figcaption {
+  max-width: 60ch;
+}
 figure.no-rounded-corner img {
   border-radius: 0;
 }
@@ -1845,7 +1851,7 @@ figure figcaption {
   letter-spacing: -0.02em;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 .page__location {
   margin-top: 0.75rem;

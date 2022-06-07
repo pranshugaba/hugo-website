@@ -37,6 +37,14 @@ figure {
       max-width: 45ch;
     }
   }
+  &.large {
+    img {
+      max-height: 420px;
+    }
+    figcaption {
+      max-width: 60ch;
+    }
+  }
 
   &.no-rounded-corner img {
     border-radius: 0;

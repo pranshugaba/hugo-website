@@ -5,7 +5,7 @@
   font-style: normal;
   font-named-instance: 'Regular';
   src: url('/fonts/Bitter/Bitter-VariableFont_wght.ttf') format('truetype');
-  unicode-range: U+0025-00FF;
+  unicode-range: U+0000-007F, ;
 }
 
 @font-face {
@@ -16,7 +16,7 @@
   font-named-instance: 'Italic';
   src: url('/fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf')
     format('truetype');
-  unicode-range: U+0025-00FF;
+  unicode-range: U+0000-007F;
 }
 
 @font-face {
