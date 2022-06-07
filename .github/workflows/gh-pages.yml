@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main # Set a branch to deploy
-  schedule:
-    - cron: '41 09 * * 6' # Run every Saturday 09:41 UTC / 15:11 IST
 jobs:
   deploy:
     runs-on: ubuntu-20.04
