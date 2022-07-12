@@ -13,4 +13,4 @@ featured: false
 I went to a book fair and bought a bunch of books.
 The books were sold by weight at ₹300/kg, so I got them at a real bargain. :books:
 
-{{< figure src="books.webp" alt="A stack of eight books including Treasure Island and Kidnapped by R L Stevenson." class="medium" >}}
+{{< figure src="books_featured.webp" alt="A stack of eight books including Treasure Island and Kidnapped by R L Stevenson." class="medium" >}}

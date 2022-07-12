@@ -13,4 +13,4 @@ featured: false
 
 The Gateway of India was lit in purple and pink for the promotion of Stranger Things 4. A rare glimpse. 
 
-{{< figure src="gateway.webp" alt="Light show projected on the Gateway of India" class="medium" >}}
+{{< figure src="gateway_featured.webp" alt="Light show projected on the Gateway of India" class="medium" >}}

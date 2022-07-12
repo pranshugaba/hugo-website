@@ -1842,12 +1842,22 @@ figure figcaption {
   align-items: center;
   justify-items: center;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(9.1rem, 1fr));
   line-height: 0;
 }
 .photowall .photowall__container,
 .home__recent__photowall .photowall__container {
   aspect-ratio: 1;
+}
+.photowall .photowall__container a,
+.home__recent__photowall .photowall__container a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.photowall .photowall__container a:focus,
+.home__recent__photowall .photowall__container a:focus {
+  border-radius: 0.5em;
 }
 .photowall .photowall__container .photowall__image,
 .home__recent__photowall .photowall__container .photowall__image {
@@ -1856,8 +1866,14 @@ figure figcaption {
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0;
-  border: var(--border-medium) solid var(--fg);
   border-radius: var(--border-radius-medium);
+  border: var(--border-thick) solid var(--fg);
+}
+.photowall .photowall__container .photowall__image:hover,
+.home__recent__photowall .photowall__container .photowall__image:hover {
+  filter: brightness(1.05) contrast(1.05);
+  border-color: var(--accent);
+  border-width: 0.2rem;
 }
 
 .page__date {

@@ -17,4 +17,4 @@ I hope I get better at these languages after reading these books.
 
 There's also a book on linguistic puzzles. It looks like these would be fun to solve.
 
-{{< figure src="books_kk.webp" alt="A stack of six books." class="medium" >}}
+{{< figure src="books_kk_featured.webp" alt="A stack of six books." class="medium" >}}
