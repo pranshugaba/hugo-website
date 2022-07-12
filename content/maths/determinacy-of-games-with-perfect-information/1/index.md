@@ -10,7 +10,7 @@ tags: ['game-theory']
 
 math: true
 
-draft: false
+draft: true
 featured: false
 ---
 

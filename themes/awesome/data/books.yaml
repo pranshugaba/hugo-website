@@ -11,11 +11,18 @@ reading:
   - title: Anna Karenina
     author: Leo Tolstoy
     startDate: 2022-06-04T05:30:00+05:30
+  - title: New York
+    author: Edward Rutherfurd
+    startDate: 2022-07-12T05:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: Treasure Island
+    author: Robert Louis Stevenson
+    startDate: 2022-06-13T05:30:00+05:30
+    endDate: 2022-06-30T01:30:00+05:30
   - title: Crime and Punishment
     author: Fyodor Dostoevsky
     startDate: 2022-03-23T05:30:00+05:30

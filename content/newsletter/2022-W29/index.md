@@ -1,14 +1,14 @@
 ---
-title: 'My weekly newsletter #4'
+title: 'My weekly newsletter'
 subtitle: ''
-summary: 'The fourth issue of my weekly newsletter.'
+summary: 'Back after a hiatus'
 
-date: 2022-06-18T17:30:00+05:30
-lastmod: 2022-06-18T17:30:00+05:30
+date: 2022-07-16T17:30:00+05:30
+lastmod: 2022-07-16T17:30:00+05:30
 
 tags: []
 
-week: 24
+week: 29
 
 draft: true
 featured: false

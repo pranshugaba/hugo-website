@@ -7,7 +7,15 @@
         {{ else }}
             Mini #{{ .File.ContentBaseName }}: {{ .Page.Plain | truncate 35 "..." }} |
         {{ end }}
-    {{ else if .Page.Title }} 
+    {{ else }}
+        {{ if .Page.Title }} 
+            {{ if .IsPage }}
+                {{ if (eq .Type "puzzles") }}#{{ .File.ContentBaseName }}:{{ end }}
+                {{ if (eq .Type "newsletter") }}
+                        {{ partial "helpers/newsletter-issue" . }}:
+                {{ end }}
+            {{ end }}
+        {{ end }}
         {{ .Page.Title }} | 
     {{ end }}
 {{ end }}

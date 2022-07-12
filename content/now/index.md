@@ -24,15 +24,13 @@ I am learning Marathi from [learn-marathi.com](https://www.learn-marathi.com/cou
 
 ## Watching
 
-I am currently watching Barry and Gravity Falls. 
-
-I also love watching British panel shows such as I Literally Just Told You, 8 out of 10 Cats does Countdown, and Would I Lie to You?. 
+I am currently watching Better Call Saul, Only Murders in the Building, and What We Do in the Shadows.
 
 [See my watch list &#8594;]({{< ref "/watches" >}})
 
 ## Gaming
 
-I started playing Dark Souls recently. It's tough and I am dying a lot, but that should be no surprise. I can feel myself getting better at the game, albeit gradually, with every death. 
+I play Dark Souls, Sekiro, Hollow Knight, Undertale, and Uncharted 3 nowadays. 
 
 ---
 

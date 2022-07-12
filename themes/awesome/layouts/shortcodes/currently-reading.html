@@ -1,6 +1,6 @@
 {{ range first 1 $.Site.Data.books.reading }}
     I am currently reading <em>{{ .title }}</em> by {{ .author }} 
-    {{ if eq (len site.Data.books.reading) 2 }} and {{ range first 1 (after 1 site.Data.books.reading) }} <em>{{ .title }}</em> by {{ .author }}{{ end }}{{ end }}.
+    {{ if ge (len site.Data.books.reading) 2 }} and {{ range first 1 (after 1 site.Data.books.reading) }} <em>{{ .title }}</em> by {{ .author }}{{ end }}{{ end }}.
 {{ end }}
 {{ range first 1 $.Site.Data.books.read }}
     Before that, I read <em>{{ .title }}</em> by {{ .author }}.
