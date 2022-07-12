@@ -25,11 +25,11 @@
       object-fit: cover;
       margin: 0;
       border-radius: var(--border-radius-medium);
-      border: var(--border-thick) solid var(--fg);
+      border: var(--border-medium) solid var(--fg);
       &:hover {
-        filter: brightness(1.05) contrast(1.05);
         border-color: var(--accent);
-        border-width: 0.2rem;
+        border-width: var(--border-thick);
+        filter: opacity(0.85);
       }
     }
   }

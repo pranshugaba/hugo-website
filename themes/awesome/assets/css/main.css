@@ -30,6 +30,7 @@
   --border-thin: 0.075rem;
   --border-medium: 0.1rem;
   --border-thick: 0.125rem;
+  --border-extrathick: 0.2rem;
   --border-radius-tiny: 0.25rem;
   --border-radius-small: 0.375rem;
   --border-radius-medium: 0.5rem;
@@ -1867,13 +1868,13 @@ figure figcaption {
      object-fit: cover;
   margin: 0;
   border-radius: var(--border-radius-medium);
-  border: var(--border-thick) solid var(--fg);
+  border: var(--border-medium) solid var(--fg);
 }
 .photowall .photowall__container .photowall__image:hover,
 .home__recent__photowall .photowall__container .photowall__image:hover {
-  filter: brightness(1.05) contrast(1.05);
   border-color: var(--accent);
-  border-width: 0.2rem;
+  border-width: var(--border-thick);
+  filter: opacity(0.85);
 }
 
 .page__date {
