@@ -1,0 +1,7 @@
+{{ $pages := .Site.RegularPages }}
+
+<div class="photowall">
+    {{ range $pages }}
+        {{ partial "single/photowall-image" . }}
+    {{ end }}
+</div>

@@ -1,0 +1,20 @@
+{{ $numberOfItems := 6 }}
+{{ $pages := .Site.RegularPages }}
+{{ $imagePages := slice }}
+{{ range $pages }}
+    {{ $img := (.Resources.ByType "image").GetMatch "*featured*[png,jpeg,jpg,webp]" }} 
+    {{ if $img }}
+        {{ $imagePages = $imagePages | append . }}
+    {{ end }}
+{{ end }}
+<div class="home__recent [ flow ]">
+    <h2 class="home__recent__heading">Recent photos</h2>
+    <div class="home__recent__photowall">
+        {{ range first $numberOfItems $imagePages }}
+            {{ partial "single/photowall-image" . }}
+        {{ end }}
+    </div>
+    <div class="home__recent__seeall" >
+        <a href="/photos"> See all photos &#8594;</a>
+    </div>
+</div>
