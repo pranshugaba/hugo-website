@@ -9,9 +9,9 @@
       {{ $big := "" }}
       {{ $small := "" }}
       {{ if lt .Height .Width }}
-        {{ $big = .Resize "1280x webp" }}
+        {{ $big = .Resize "1280x webp q85" }}
       {{ else }}
-        {{ $big = .Resize "x1280 webp" }}
+        {{ $big = .Resize "x1440 webp q85" }}
       {{ end }}
       <img
         class="[ border-thick ]"
