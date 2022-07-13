@@ -5,9 +5,9 @@
     <figure class="gallery__figure">
         {{ $big := "" }}
         {{ if lt .Height .Width }}
-        {{ $big = .Resize "1600x" }}
+        {{ $big = .Resize "1600x webp" }}
         {{ else }}
-        {{ $big = .Resize "x1600" }}
+        {{ $big = .Resize "x1600 webp" }}
         {{ end }}
         {{ if $showCoords }}
             {{ with .Exif }}

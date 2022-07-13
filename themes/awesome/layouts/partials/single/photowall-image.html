@@ -3,12 +3,7 @@
 {{ with $img }}
     <div class="photowall__container">
         <a href="{{ $page.Permalink }}" class="photowall__anchor"> 
-            {{ $resizedImg := "" }}
-            {{ if lt .Height .Width }}
-            {{ $resizedImg = .Resize "360x" }}
-            {{ else }}
-            {{ $resizedImg = .Resize "x360" }}
-            {{ end }}
+            {{ $resizedImg := .Fill "420x420 Center webp q85" }}
             <img
             src="{{ $resizedImg.Permalink }}"
             alt="{{ $img.Title }}"
