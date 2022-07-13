@@ -1,6 +1,6 @@
 {{ $numberOfItems := 3}}
 {{ $pages := .Site.RegularPages  }}
-<div class="home__recent [ flow ]">
+<div class="[ flow ]">
     {{ range first $numberOfItems (where $pages "Section" "eq" "newsletter") }}
         {{ partial "list/home" . }}
     {{ end }}
