@@ -10,7 +10,7 @@ tags: ['space', 'sekiro', 'minions', 'maths', 'games', 'gamedev']
 
 week: 28
 
-draft: true
+draft: false
 featured: false
 ---
 
