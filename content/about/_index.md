@@ -38,7 +38,7 @@ Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https:/
 
 ### Hobbies
 
-I like to [walk]({{< ref "/tags/walking" >}}) or [cycle]({{< ref "/tags/cycling" >}}) around the city and explore new places. I like to do some street [photography]({{< ref "/poems" >}}), eat street food, and play with street cats and dogs on the way.
+I like to [walk]({{< ref "/tags/walking" >}}) or [cycle]({{< ref "/tags/cycling" >}}) around the city and explore new places. I like to do some street [photography]({{< ref "/photos" >}}), eat street food, and play with street cats and dogs on the way.
 
 I like to write [puzzles]({{< ref "/puzzles" >}}). While I enjoy solving puzzles --- I occasionally solve problems on Project Euler --- I enjoy creating puzzles even more. Writing a puzzle that others would find interesting and would want to solve is very challenging indeed.
 
