@@ -1,4 +1,6 @@
 wantToRead:
+  - title: Fire and Blood
+    author: George R. R. Martin
   - title: Dune
     author: Frank Herbert
     startDate: 2021-07-01T05:30:00+05:30
@@ -6,14 +8,10 @@ wantToRead:
     author: J. R. R. Tolkien
   - title: The Winds of Winter
     author: George R. R. Martin
-
 reading:
-  - title: Anna Karenina
-    author: Leo Tolstoy
-    startDate: 2022-06-04T05:30:00+05:30
-  - title: New York
-    author: Edward Rutherfurd
-    startDate: 2022-07-12T05:30:00+05:30
+  - title: The Book Thief
+    author: Markus Zusak
+    startDate: 2022-08-18T05:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
@@ -47,3 +45,10 @@ read:
     author: Dennis Lehane
     startDate: 2020-11-20T05:30:00+05:30
     endDate: 2020-11-21T05:30:00+05:30
+other:
+  - title: Anna Karenina
+    author: Leo Tolstoy
+    startDate: 2022-06-04T05:30:00+05:30
+  - title: New York
+    author: Edward Rutherfurd
+    startDate: 2022-07-12T05:30:00+05:30

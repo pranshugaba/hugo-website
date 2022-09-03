@@ -1,14 +1,15 @@
 watching:
-  - title: Better Call Saul
-    type: Series
-    season: 6
-    channel: AMC
   
-  - title: Only Murders in the Building
+  - title: House of the Dragon
     type: Series
-    season: 2
-    channel: Hulu
-  
+    season: 1
+    channel: HBO
+
+  - title: The Rehearsal
+    type: Series
+    season: 1
+    channel: HBO
+
   - title: What We Do in the Shadows
     type: Series
     season: 4
@@ -53,6 +54,16 @@ wantToWatch:
     channel: BBC Two Scotland
 
 watched:
+  - title: Only Murders in the Building
+    type: Series
+    season: 2
+    channel: Hulu
+
+  - title: Better Call Saul
+    type: Series
+    season: 6
+    channel: AMC
+
   - title: The Boys
     type: Series
     season: 3

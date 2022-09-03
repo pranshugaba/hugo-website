@@ -12,10 +12,9 @@ I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www
 
 ## Learning
 
-I am learning [Rust](https://rust-lang.org) by reading the [Rust book](https://doc.rust-lang.org/book/) and solving the [Rustlings](https://github.com/rust-lang/rustlings/) exercises. I am currently trying to implement the [PNGme](https://picklenerd.github.io/pngme_book/) project. 
+I am learning [Rust](https://rust-lang.org) by reading the [Rust book](https://doc.rust-lang.org/book/) and solving the [Rustlings](https://github.com/rust-lang/rustlings/) exercises. 
 
-मी मराठी पण शिकतोय.
-I am learning Marathi from [learn-marathi.com](https://www.learn-marathi.com/courses).
+Ich lerne Deutsch. I am learning German.
 
 ## Reading
 {{< currently-reading >}}
@@ -24,7 +23,7 @@ I am learning Marathi from [learn-marathi.com](https://www.learn-marathi.com/cou
 
 ## Watching
 
-I am currently watching Better Call Saul, Only Murders in the Building, and What We Do in the Shadows.
+I am currently watching House of the Dragon, The Rehearsal, and What We Do in the Shadows.
 
 [See my watch list &#8594;]({{< ref "/watches" >}})
 
