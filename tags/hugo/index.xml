@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hugo by Pranshu Gaba</title><link>https://pranshugaba.com/tags/hugo/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 03 Sep 2022 14:10:12 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/hugo/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Colour Shortcode</title><link>https://pranshugaba.com/dev/hugo-colour-shortcode/</link><pubDate>Wed, 21 Jul 2021 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/hugo-colour-shortcode/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hugo by Pranshu Gaba</title><link>https://pranshugaba.com/tags/hugo/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sun, 02 Oct 2022 09:21:19 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/hugo/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Colour Shortcode</title><link>https://pranshugaba.com/dev/hugo-colour-shortcode/</link><pubDate>Wed, 21 Jul 2021 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/hugo-colour-shortcode/</guid><description>
 <![CDATA[<p>I was writing a <a href="https://pranshugaba.com/dev/moving-back-to-hugo/">post about my new Hugo website</a>, and I wanted to describe the colours used on this site. I wrote the names of the colours, but names do not convey the colour very well. Can you imagine what the colour #714825 looks like? What about rgb(0, 100, 255)?</p>
 <p>I thought it would be great if the reader could also see a preview of the colours. I could add images of the colours that I am describing, but that is a lot of work and not very flexible.  This is what led me to write this Hugo shortcode. I followed the <a href="https://gohugo.io/templates/shortcode-templates/" target="_blank" rel="noopener">Hugo docs on shortcodes</a> for reference.</p>
 <h2 id="usage">Usage</h2>
@@ -52,13 +52,13 @@
 <ul>
 <li>
 <p>When the luminosity of the colour is close to 50% and the saturation is low, neither black nor white text has enough contrast with the chosen colour, and the text is not as legible. Example: 
-<code style="background-color: hsl(180, 10%,  50%);"> 
-<span style="color: hsl(180, 10%,  50%);filter:  grayscale(1) invert(1) contrast(100);">hsl(180, 10%,  50%)</span></code></p>
+ <code style="background-color: hsl(180, 10%,  50%);"> 
+ <span style="color: hsl(180, 10%,  50%);filter:  grayscale(1) invert(1) contrast(100);">hsl(180, 10%,  50%)</span></code></p>
 </li>
 <li>
 <p>The text is not legible when the colour is transparent. This is because the text is transparent too, and does not have enough contrast with the background. Example: 
-<code style="background-color: rgba(120, 0, 240, 0.3);"> 
-<span style="color: rgba(120, 0, 240, 0.3);filter:  grayscale(1) invert(1) contrast(100);">rgba(120, 0, 240, 0.3)</span></code></p>
+ <code style="background-color: rgba(120, 0, 240, 0.3);"> 
+ <span style="color: rgba(120, 0, 240, 0.3);filter:  grayscale(1) invert(1) contrast(100);">rgba(120, 0, 240, 0.3)</span></code></p>
 </li>
 </ul>
 <h2 id="alternate-style">Alternate style</h2>
@@ -192,8 +192,8 @@
 <h2 id="my-new-site-built-with-hugo">My new site built with Hugo</h2>
 <p>I had a not-so-great experience with a readymade theme before, so this time I decided to write my own theme. I decided I would keep my site simple so it is easy to maintain and not too distracting to look at.</p>
 <p>My site uses only two colours: 
-<code style="background-color: papayawhip;"> 
-<span style="color: papayawhip;filter:  grayscale(1) invert(1) contrast(100);">papayawhip</span></code> and 
+ <code style="background-color: papayawhip;"> 
+ <span style="color: papayawhip;filter:  grayscale(1) invert(1) contrast(100);">papayawhip</span></code> and 
 <code style="background-color: #121212;"> 
 <span style="color: #121212;filter:  grayscale(1) invert(1) contrast(100);">#121212</span></code>. Every element has one of these two colors. This makes the colour part of the CSS very simple, and I was also able to write the dark theme in no time.</p>
 <p>I love this simple design; I think it looks crisp and clear with no distractions. The content is legible with enough contrast between the foreground and the background, much like a road sign.</p>

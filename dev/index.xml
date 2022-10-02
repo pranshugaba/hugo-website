@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dev articles by Pranshu Gaba</title><link>https://pranshugaba.com/dev/</link><description>On GameDev, WebDev, and Linux</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 03 Sep 2022 14:09:52 +0530</lastBuildDate><image><url>https://pranshugaba.com/dev/icon.png</url></image><atom:link href="https://pranshugaba.com/dev/index.xml" rel="self" type="application/rss+xml"/><item><title>I broke my Arch System</title><link>https://pranshugaba.com/dev/i-broke-my-arch/</link><pubDate>Wed, 22 Dec 2021 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/i-broke-my-arch/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dev articles by Pranshu Gaba</title><link>https://pranshugaba.com/dev/</link><description>On GameDev, WebDev, and Linux</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sun, 02 Oct 2022 09:21:03 +0530</lastBuildDate><image><url>https://pranshugaba.com/dev/icon.png</url></image><atom:link href="https://pranshugaba.com/dev/index.xml" rel="self" type="application/rss+xml"/><item><title>I broke my Arch System</title><link>https://pranshugaba.com/dev/i-broke-my-arch/</link><pubDate>Wed, 22 Dec 2021 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/i-broke-my-arch/</guid><description>
 <![CDATA[<p>Today, I updated my system running Arch Linux after a month using <code>pacman -Syu</code>. I rebooted my system to find a black screen instead of the SDDM login screen. I tried pressing the Caps Lock key, and I could see its light toggle. This meant that things were not that bad.</p>
 <p>I changed the tty using <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F2</kbd> and logged in to my system. I tried downgrading the Linux kernel but that didn&rsquo;t help. I tried disabling the optimus-manager and sddm services, and tried starting the Xorg server using <code>startx</code> or <code>xinit</code>. None of this worked.</p>
 <p>The fix was to rebuild the optimus-manager package. It turns out that Python was upgraded from 3.9 to 3.10 in the update, and this broke Optimus Manager. I rebuilt it, and I am able to access the login screen and my window manager again.</p>
@@ -60,13 +60,13 @@ I also finally installed <code>yay</code> to manage all my AUR packages.</p>
 <ul>
 <li>
 <p>When the luminosity of the colour is close to 50% and the saturation is low, neither black nor white text has enough contrast with the chosen colour, and the text is not as legible. Example: 
-<code style="background-color: hsl(180, 10%,  50%);"> 
-<span style="color: hsl(180, 10%,  50%);filter:  grayscale(1) invert(1) contrast(100);">hsl(180, 10%,  50%)</span></code></p>
+ <code style="background-color: hsl(180, 10%,  50%);"> 
+ <span style="color: hsl(180, 10%,  50%);filter:  grayscale(1) invert(1) contrast(100);">hsl(180, 10%,  50%)</span></code></p>
 </li>
 <li>
 <p>The text is not legible when the colour is transparent. This is because the text is transparent too, and does not have enough contrast with the background. Example: 
-<code style="background-color: rgba(120, 0, 240, 0.3);"> 
-<span style="color: rgba(120, 0, 240, 0.3);filter:  grayscale(1) invert(1) contrast(100);">rgba(120, 0, 240, 0.3)</span></code></p>
+ <code style="background-color: rgba(120, 0, 240, 0.3);"> 
+ <span style="color: rgba(120, 0, 240, 0.3);filter:  grayscale(1) invert(1) contrast(100);">rgba(120, 0, 240, 0.3)</span></code></p>
 </li>
 </ul>
 <h2 id="alternate-style">Alternate style</h2>
@@ -200,8 +200,8 @@ I also finally installed <code>yay</code> to manage all my AUR packages.</p>
 <h2 id="my-new-site-built-with-hugo">My new site built with Hugo</h2>
 <p>I had a not-so-great experience with a readymade theme before, so this time I decided to write my own theme. I decided I would keep my site simple so it is easy to maintain and not too distracting to look at.</p>
 <p>My site uses only two colours: 
-<code style="background-color: papayawhip;"> 
-<span style="color: papayawhip;filter:  grayscale(1) invert(1) contrast(100);">papayawhip</span></code> and 
+ <code style="background-color: papayawhip;"> 
+ <span style="color: papayawhip;filter:  grayscale(1) invert(1) contrast(100);">papayawhip</span></code> and 
 <code style="background-color: #121212;"> 
 <span style="color: #121212;filter:  grayscale(1) invert(1) contrast(100);">#121212</span></code>. Every element has one of these two colors. This makes the colour part of the CSS very simple, and I was also able to write the dark theme in no time.</p>
 <p>I love this simple design; I think it looks crisp and clear with no distractions. The content is legible with enough contrast between the foreground and the background, much like a road sign.</p>
@@ -397,29 +397,29 @@ You can also play the final version game to see how it works on my itch.io page.
 <li>The player clicks on the squares to enter symbols.</li>
 <li>I have made a rough sketch how the interface would look like. This will be a simple game with just one scene. In more complex games, we would need more scenes.
 
-<figure class="diagram">
-    
-    
-    
-    
-    
-    <picture>
-        
-        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/sketch.png" alt="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play.">
-    </picture>
-    
-    
-    <figcaption>
-        
-        
-            We have the game title, some instructions, the grid, and some labels to show whose turn it is to play.
-            
-            
-            
-        
-    </figcaption>
-    
-</figure>
+  <figure class="diagram">
+      
+      
+      
+      
+      
+      <picture>
+          
+          <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/sketch.png" alt="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play.">
+      </picture>
+      
+      
+      <figcaption>
+          
+          
+              We have the game title, some instructions, the grid, and some labels to show whose turn it is to play.
+              
+              
+              
+          
+      </figcaption>
+      
+  </figure>
 </li>
 <li>We will describe the gameplay loop using a flowchart. It will also tell us how long a session will last.</li>
 </ul>

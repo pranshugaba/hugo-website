@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>godot by Pranshu Gaba</title><link>https://pranshugaba.com/tags/godot/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 03 Sep 2022 14:10:12 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/godot/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/godot/index.xml" rel="self" type="application/rss+xml"/><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/dev/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/building-x-and-o-using-godot/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>godot by Pranshu Gaba</title><link>https://pranshugaba.com/tags/godot/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sun, 02 Oct 2022 09:21:19 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/godot/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/godot/index.xml" rel="self" type="application/rss+xml"/><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/dev/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/building-x-and-o-using-godot/</guid><description>
 <![CDATA[<aside class="[ toc ] [ plain-link border-medium border-radius-large ]">
   <details open>
     <summary>
@@ -166,29 +166,29 @@ You can also play the final version game to see how it works on my itch.io page.
 <li>The player clicks on the squares to enter symbols.</li>
 <li>I have made a rough sketch how the interface would look like. This will be a simple game with just one scene. In more complex games, we would need more scenes.
 
-<figure class="diagram">
-    
-    
-    
-    
-    
-    <picture>
-        
-        <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/sketch.png" alt="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play.">
-    </picture>
-    
-    
-    <figcaption>
-        
-        
-            We have the game title, some instructions, the grid, and some labels to show whose turn it is to play.
-            
-            
-            
-        
-    </figcaption>
-    
-</figure>
+  <figure class="diagram">
+      
+      
+      
+      
+      
+      <picture>
+          
+          <img src="https://pranshugaba.com/dev/building-x-and-o-using-godot/img/sketch.png" alt="We have the game title, some instructions, the grid, and some labels to show whose turn it is to play.">
+      </picture>
+      
+      
+      <figcaption>
+          
+          
+              We have the game title, some instructions, the grid, and some labels to show whose turn it is to play.
+              
+              
+              
+          
+      </figcaption>
+      
+  </figure>
 </li>
 <li>We will describe the gameplay loop using a flowchart. It will also tell us how long a session will last.</li>
 </ul>
