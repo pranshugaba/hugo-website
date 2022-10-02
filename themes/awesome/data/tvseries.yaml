@@ -9,11 +9,12 @@ watching:
     type: Series
     season: 1
     channel: HBO
-
-  - title: What We Do in the Shadows
+  
+  - title: Taskmaster
     type: Series
-    season: 4
-    channel: FXX
+    channel: Channel 4
+    season: 14
+    startDate: 2021-02-01T05:30:00+05:30
 
   - title: Ranking of Kings
     type: Series
@@ -21,10 +22,6 @@ watching:
     channel: Fuji TV
 
 wantToWatch:
-  - title: Undone
-    type: Series
-    season: 2
-    channel: Amazon
   
   - title: Dark
     type: Series
@@ -33,6 +30,14 @@ wantToWatch:
   - title: Arcane
     type: Series
     channel: Netflix
+  
+  - title: The Sopranos
+    type: Series
+    channel: HBO
+  
+  - title: Succession
+    type: Series
+    channel: HBO
 
   - title: Peaky Blinders
     type: Series
@@ -54,6 +59,11 @@ wantToWatch:
     channel: BBC Two Scotland
 
 watched:
+  - title: What We Do in the Shadows
+    type: Series
+    season: 4
+    channel: FXX
+
   - title: Only Murders in the Building
     type: Series
     season: 2
@@ -93,11 +103,6 @@ watched:
     season: 2
     channel: Disney
 
-  - title: Taskmaster
-    type: Series
-    channel: Channel 4
-    season: 13
-    startDate: 2021-02-01T05:30:00+05:30
 
   - title: Russian Doll
     type: Series
@@ -167,3 +172,7 @@ abandoned:
     type: Season
     season: 4
     channel: BBC America
+  - title: Undone
+    type: Series
+    season: 2
+    channel: Amazon
