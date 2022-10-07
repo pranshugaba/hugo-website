@@ -1,7 +1,4 @@
 wantToRead:
-  - title: Fire and Blood
-    author: George R. R. Martin
-    startDate: 2022-10-02T05:30:00+05:30
   - title: Dune
     author: Frank Herbert
     startDate: 2021-07-01T05:30:00+05:30
@@ -12,9 +9,9 @@ wantToRead:
   - title: The Winds of Winter
     author: George R. R. Martin
 reading:
-  - title: Twenty Thousand Leagues under the Sea
-    author: Jules Verne
-    startDate: 2022-10-05T21:30:00+05:30
+  - title: Fire and Blood
+    author: George R. R. Martin
+    startDate: 2022-10-02T05:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30

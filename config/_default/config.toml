@@ -15,7 +15,7 @@ titleCaseStyle = "Chicago"
 
 disablePathToLower = true
 
-timeout = 120000
+timeout = 300000
 
 [frontmatter]
 lastmod = ["lastmod", ":git", ":default"]
