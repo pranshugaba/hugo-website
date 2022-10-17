@@ -1,0 +1,6 @@
+{{ range first 1 $.Site.Data.tvseries.watching }}
+    I am currently watching season {{ .season }} of <em>{{ .title }}</em>{{ if ge (len site.Data.tvseries.watching) 2 }} and {{ range first 1 (after 1 site.Data.tvseries.watching) }} season {{ .season }} of <em>{{ .title }}</em>{{ end }}{{ end }}.
+{{ end }}
+{{ range first 1 $.Site.Data.tvseries.watched }}
+    Before that, I watched season {{ .season }} of <em>{{ .title }}</em>.
+{{ end }}

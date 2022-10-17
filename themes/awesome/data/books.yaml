@@ -12,14 +12,18 @@ wantToRead:
   - title: The Winds of Winter
     author: George R. R. Martin
 reading:
-  - title: Twenty Thousand Leagues under the Sea
-    author: Jules Verne
-    startDate: 2022-10-05T21:30:00+05:30
+  - title: Project Hail Mary
+    author: Andy Weir
+    startDate: 2022-10-17T12:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: Twenty Thousand Leagues under the Sea
+    author: Jules Verne
+    startDate: 2022-10-05T21:30:00+05:30
+    endDate: 2022-10-17T10:30:00+05:30
   - title: The Book Thief
     author: Markus Zusak
     startDate: 2022-08-18T05:30:00+05:30
