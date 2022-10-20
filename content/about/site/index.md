@@ -26,7 +26,6 @@ I have hidden a number of easter eggs across this site. How many can you find?
 |      {{< countposts posts >}} | [Posts]({{< ref "/posts/" >}})                  |
 |      {{< countposts trips >}} | [Trips]({{< ref "/trips/" >}})                  |
 |    {{< countposts recipes >}} | [Recipes]({{< ref "/recipes/" >}})              |
-|    {{< countposts reviews >}} | [Reviews]({{< ref "/reviews/" >}})              |
 |    {{< countposts puzzles >}} | [Puzzles]({{< ref "/puzzles/" >}})              |
 |      {{< countposts poems >}} | [Poems]({{< ref "/poems/" >}})                  |
 |    {{< countposts stories >}} | [Stories]({{< ref "/stories/" >}})              |
@@ -34,6 +33,7 @@ I have hidden a number of easter eggs across this site. How many can you find?
 |        {{< countposts dev >}} | [Dev articles]({{< ref "/dev/" >}})             |
 |      {{< countposts minis >}} | [Minis]({{< ref "/minis/" >}})                  |
 | {{< countposts newsletter >}} | [Newsletter issues]({{< ref "/newsletter/" >}}) |
+|   {{< countposts thoughts >}} | [Thoughts]({{< ref "/thoughts/" >}})            |
 |     **{{< countpostsall >}}** | **Total**                                       |
 
 Last updated: {{< lastupdated >}}

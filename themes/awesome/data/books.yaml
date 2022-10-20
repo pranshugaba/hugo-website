@@ -1,25 +1,36 @@
 wantToRead:
-  - title: Fire and Blood
-    author: George R. R. Martin
-    startDate: 2022-10-02T05:30:00+05:30
+  - title: Elantris
+    author: Brandon Sanderson
   - title: Dune
     author: Frank Herbert
     startDate: 2021-07-01T05:30:00+05:30
+  - title: The Colour of Magic
+    author: Terry Pratchett
   - title: In Europe
     author: Geert Mak
+  - title: It
+    author: Stephen King
   - title: The Lord of the Rings
     author: J. R. R. Tolkien
   - title: The Winds of Winter
     author: George R. R. Martin
 reading:
-  - title: Project Hail Mary
-    author: Andy Weir
-    startDate: 2022-10-17T12:30:00+05:30
+  - title: Fire and Blood
+    author: George R. R. Martin
+    startDate: 2022-10-20T15:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: The Metamorphosis
+    author: Franz Kafka
+    startDate: 2022-10-19T19:30:00+05:30
+    endDate: 2022-10-20T12:30:00+05:30
+  - title: Project Hail Mary
+    author: Andy Weir
+    startDate: 2022-10-17T12:30:00+05:30
+    endDate: 2022-10-19T18:30:00+05:30
   - title: Twenty Thousand Leagues under the Sea
     author: Jules Verne
     startDate: 2022-10-05T21:30:00+05:30

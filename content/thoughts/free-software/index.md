@@ -1,5 +1,5 @@
 ---
-title: "On the Importance of Free Software"
+title: "The Importance of Free Software"
 subtitle: "I discuss some merits of free software"
 summary: "Today is Software Freedom Day."
 

@@ -42,7 +42,6 @@ If you are only interested in subscribing to certain sections, you can do that a
 
 - [posts](/posts/index.xml)
 - [trips](/trips/index.xml)
-- [reviews](/reviews/index.xml)
 - [recipes](/recipes/index.xml)
 - [puzzles](/puzzles/index.xml)
 - [poems](/poems/index.xml)
@@ -50,6 +49,7 @@ If you are only interested in subscribing to certain sections, you can do that a
 - [comics](/comics/index.xml)
 - [dev](/dev/index.xml)
 - [minis](/minis/index.xml)
+- [thoughts](/thoughts/index.xml)
 
 ### Tags
 

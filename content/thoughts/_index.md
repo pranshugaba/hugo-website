@@ -1,7 +1,5 @@
 ---
-
 title: Thoughts
-subtitle: My thoughts
-summary: My thoughts
-
+subtitle: My thoughts on things
+summary: My thoughts on some things that I have read or watched
 ---
