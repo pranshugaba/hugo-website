@@ -1,8 +1,13 @@
 watching:
   
-  - title: House of the Dragon
+  - title: Spy × Family
     type: Series
     season: 1
+    channel: TV Tokyo
+  
+  - title: The White Lotus
+    type: Series
+    season: 2
     channel: HBO
 
   - title: The Rehearsal
@@ -59,6 +64,11 @@ wantToWatch:
     channel: BBC Two Scotland
 
 watched:
+  - title: House of the Dragon
+    type: Series
+    season: 1
+    channel: HBO
+
   - title: What We Do in the Shadows
     type: Series
     season: 4
@@ -79,10 +89,6 @@ watched:
     season: 3
     channel: Amazon
   
-  - title: Spy × Family
-    type: Series
-    season: 1
-    channel: TV Tokyo
 
   - title: Stranger Things
     type: Series

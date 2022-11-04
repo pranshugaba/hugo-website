@@ -1,9 +1,10 @@
 wantToRead:
-  - title: Elantris
-    author: Brandon Sanderson
   - title: Dune
     author: Frank Herbert
     startDate: 2021-07-01T05:30:00+05:30
+  - title: Fire and Blood
+    author: George R. R. Martin
+    startDate: 2022-10-20T15:30:00+05:30
   - title: The Colour of Magic
     author: Terry Pratchett
   - title: In Europe
@@ -15,14 +16,22 @@ wantToRead:
   - title: The Winds of Winter
     author: George R. R. Martin
 reading:
-  - title: Fire and Blood
-    author: George R. R. Martin
-    startDate: 2022-10-20T15:30:00+05:30
+  - title: Moby Dick
+    author: Herman Melville
+    startDate: 2022-10-30T05:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: Elantris
+    author: Brandon Sanderson
+    startDate: 2022-10-24T19:30:00+05:30
+    endDate: 2022-10-29T12:30:00+05:30
+  - title: The Mysterious Affair at Styles
+    author: Agatha Christie
+    startDate: 2022-10-21T19:30:00+05:30
+    endDate: 2022-10-23T12:30:00+05:30
   - title: The Metamorphosis
     author: Franz Kafka
     startDate: 2022-10-19T19:30:00+05:30
