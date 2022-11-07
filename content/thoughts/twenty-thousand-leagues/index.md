@@ -1,12 +1,12 @@
 ---
 title: "Twenty Thousand Leagues under the Sea"
-subtitle: "Translated by MTB"
-summary: "I read this book, and here's my review of it. "
+subtitle: "An exciting under-the-sea around-the-world adventure by Jules Verne"
+summary: "An exciting under-the-sea around-the-world adventure by Jules Verne"
 
 date: 2022-10-17T17:30:00+05:30
 lastmod: 2022-10-17T17:30:00+05:30
 
-tags: ["book-reviews"]
+tags: ["book-reviews", "science-fiction"]
 
 math: false
 
@@ -21,11 +21,16 @@ Author: Jules Verne
 {{< /note >}}
 -->
 
+I read the book Twenty Thousand Leagues under the Sea, originally published in French as *Vingt mille lieues sous les mers* by Julese Verne. 
+I read an English translation by MTB (full name?). 
+My copy of the book was 450 pages long, and it took me around 2 weeks to finish reading it. 
+
+This story was written and published serially. A new chapter would be released every fortnight from March 1869 to June 1870.
+As a consequence, the format of this story is not unlike a TV serial you would see nowadays. Each chapter (or episode) ends on a cliffhanger, and didn't have much reference to the chapters before it. 
+
 {{< note title="Warning" >}}
 Spoilers for this book lie ahead. 
 {{< /note >}}
-
-Consisting of about 450 pages, I finished reading this in 2 weeks. Being a serialized story, I found that each chapter would end on a cliff hanger and didn't have much reference to the chapters before it. 
 
 It took me a long time to realize that a league is in fact a unit of length. It is about three miles or about 4.82 kilometers. It is roughly the distance one can walk in an hour. 
 
@@ -37,11 +42,16 @@ Twenty thousand leagues translates to about 100,000 kilometers, and the radius o
 The book started out strongly. 
 It is more of a experience than a plot. 
 I need to look up more on how much information was known to people in the late 19th century. 
-I am not sure if there is a sea on in the middle of and
+I am not sure if there is a sea on in the middle of antarctica.
+
+Every other chapter contains an exhaustively long list of all the flora and
+fauna that the Professor sees under the sea. 
+
+
+Since this is a serialized story, I don't think Verne had the planned out the
+ending in advance. 
 
 Some issues specific to my edition: Many full stops and commas were missing. 
-
-
 
 <!--
 {{< note title="More info" >}}

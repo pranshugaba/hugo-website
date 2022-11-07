@@ -6,7 +6,7 @@ summary: "I read this book, and here's my review of it. "
 date: 2022-10-19T18:30:00+05:30
 lastmod: 2022-10-19T18:30:00+05:30
 
-tags: ["book-reviews"]
+tags: ["book-reviews", "science-fiction", "space"]
 
 math: false
 
