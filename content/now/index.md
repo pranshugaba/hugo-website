@@ -23,7 +23,7 @@ problems on [Project Euler](https://projecteuler.net).
 ## Watching
 {{< currently-watching >}}
 
-[See my watch list &#8594;]({{< ref "/watches" >}})
+[See my watching list &#8594;]({{< ref "/watches" >}})
 
 ## Gaming
 

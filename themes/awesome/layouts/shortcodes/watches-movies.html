@@ -1,0 +1,18 @@
+{{ with $.Site.Data.movies }}
+<ul class="[ books__list ] [ flow ]">
+  <h3 class="items__heading">Want to watch</h3>
+  {{ range .wantToWatch}}
+  <li>
+    {{ partial "list/tvseries.html" (dict "Context" . "Status" "wantToWatch") }}
+  </li>
+  {{ end }}
+</ul>
+<ul class="[ books__list ] [ flow ]">
+  <h3 class="items__heading">Watched</h3>
+  {{ range .watched}}
+  <li>
+    {{ partial "list/tvseries.html" (dict "Context" . "Status" "watched") }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
