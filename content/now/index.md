@@ -27,7 +27,7 @@ problems on [Project Euler](https://projecteuler.net).
 
 ## Gaming
 
-I play Dark Souls, Sekiro, Hollow Knight, Undertale, and Uncharted 3 nowadays. 
+I play Stardew Valley, Dark Souls, and Uncharted 3 nowadays. 
 
 ---
 

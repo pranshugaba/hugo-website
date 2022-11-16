@@ -7,10 +7,16 @@ wantToRead:
     startDate: 2022-10-20T15:30:00+05:30
   - title: The Colour of Magic
     author: Terry Pratchett
+  - title: The Sword of Kaigen
+    author: M. L. Wang
   - title: In Europe
     author: Geert Mak
   - title: It
     author: Stephen King
+  - title: "Mistborn: The Final Empire"
+    author: Brandon Sanderson
+  - title: Wuthering Heights
+    author: Emily Brontë
   - title: The Lord of the Rings
     author: J. R. R. Tolkien
   - title: The Winds of Winter
@@ -19,6 +25,9 @@ reading:
   - title: Moby Dick
     author: Herman Melville
     startDate: 2022-10-30T05:30:00+05:30
+  - title: The Song of Achilles
+    author: Madeline Miller
+    startDate: 2022-11-15T05:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
