@@ -5,11 +5,6 @@ watching:
     season: 1
     channel: TV Tokyo
   
-  - title: The White Lotus
-    type: Series
-    season: 2
-    channel: HBO
-  
   - title: University Challenge
     type: Series
     season: 52
@@ -37,6 +32,10 @@ wantToWatch:
     type: Series
     channel: Netflix
   
+  - title: Wednesday
+    type: Series
+    channel: Netflix
+
   - title: Arcane
     type: Series
     channel: Netflix
@@ -65,6 +64,11 @@ wantToWatch:
     channel: BBC Two Scotland
 
 watched:
+  - title: The White Lotus
+    type: Series
+    season: 2
+    channel: HBO
+  
   - title: The Rehearsal
     type: Series
     season: 1

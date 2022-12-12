@@ -9,6 +9,10 @@ wantToRead:
     author: Terry Pratchett
   - title: The Sword of Kaigen
     author: M. L. Wang
+  - title: Middlemarch
+    author: George Eliot
+  - title: The Blade Itself
+    author: Joe Abercrombie
   - title: In Europe
     author: Geert Mak
   - title: It
@@ -17,6 +21,9 @@ wantToRead:
     author: Brandon Sanderson
   - title: Wuthering Heights
     author: Emily Brontë
+  - title: The Song of Achilles
+    author: Madeline Miller
+    startDate: 2022-11-15T05:30:00+05:30
   - title: The Lord of the Rings
     author: J. R. R. Tolkien
   - title: The Winds of Winter
@@ -25,9 +32,6 @@ reading:
   - title: Moby Dick
     author: Herman Melville
     startDate: 2022-10-30T05:30:00+05:30
-  - title: The Song of Achilles
-    author: Madeline Miller
-    startDate: 2022-11-15T05:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
