@@ -7,18 +7,12 @@ wantToRead:
     startDate: 2022-10-20T15:30:00+05:30
   - title: The Colour of Magic
     author: Terry Pratchett
-  - title: The Sword of Kaigen
-    author: M. L. Wang
-  - title: Middlemarch
-    author: George Eliot
   - title: The Blade Itself
     author: Joe Abercrombie
   - title: In Europe
     author: Geert Mak
   - title: It
     author: Stephen King
-  - title: "Mistborn: The Final Empire"
-    author: Brandon Sanderson
   - title: Wuthering Heights
     author: Emily Brontë
   - title: The Song of Achilles
@@ -29,6 +23,9 @@ wantToRead:
   - title: The Winds of Winter
     author: George R. R. Martin
 reading:
+  - title: Middlemarch
+    author: George Eliot
+    startDate: 2022-12-28T05:30:00+05:30
   - title: Moby Dick
     author: Herman Melville
     startDate: 2022-10-30T05:30:00+05:30
@@ -37,6 +34,14 @@ reading:
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: "Mistborn: The Final Empire"
+    author: Brandon Sanderson
+    startDate: 2022-12-22T19:30:00+05:30
+    endDate: 2022-12-27T12:30:00+05:30
+  - title: The Sword of Kaigen
+    author: M. L. Wang
+    startDate: 2022-12-16T19:30:00+05:30
+    endDate: 2022-12-13T12:30:00+05:30
   - title: Elantris
     author: Brandon Sanderson
     startDate: 2022-10-24T19:30:00+05:30

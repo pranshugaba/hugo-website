@@ -21,7 +21,7 @@ Author: Jules Verne
 {{< /note >}}
 -->
 
-I read the book Twenty Thousand Leagues under the Sea, originally published in French as *Vingt mille lieues sous les mers* by Julese Verne. 
+I read the book Twenty Thousand Leagues under the Sea, originally published in French as *Vingt mille lieues sous les mers* by Jules Verne. 
 I read an English translation by MTB (full name?). 
 My copy of the book was 450 pages long, and it took me around 2 weeks to finish reading it. 
 
@@ -29,7 +29,7 @@ This story was written and published serially. A new chapter would be released e
 As a consequence, the format of this story is not unlike a TV serial you would see nowadays. Each chapter (or episode) ends on a cliffhanger, and didn't have much reference to the chapters before it. 
 
 {{< note title="Warning" >}}
-Spoilers for this book lie ahead. 
+Spoilers for this book ahead. 
 {{< /note >}}
 
 It took me a long time to realize that a league is in fact a unit of length. It is about three miles or about 4.82 kilometers. It is roughly the distance one can walk in an hour. 

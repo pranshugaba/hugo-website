@@ -7,13 +7,14 @@ summary: A little bit about me and my website
 
 ## PhD
 
-I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/). I am currently reading papers to decide a research problem to work on.
+I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/). 
 
 
 ## Learning
 
 I am learning [Rust](https://rust-lang.org) by reading the [Rust book](https://doc.rust-lang.org/book/) and solving 
 problems on [Project Euler](https://projecteuler.net). 
+I am also trying out game development in Rust using the [Bevy game engine](https://bevyengine.org/).
 
 ## Reading
 {{< currently-reading >}}
