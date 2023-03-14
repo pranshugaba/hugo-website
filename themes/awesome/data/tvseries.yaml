@@ -1,20 +1,24 @@
 watching:
-  
+  - title: The Last of Us
+    type: Season
+    season: 1
+    channel: HBO
+
   - title: Spy × Family
     type: Series
     season: 1
     channel: TV Tokyo
   
+  - title: Archer
+    type: Season
+    season: 13
+    channel: FXX
+
   - title: University Challenge
     type: Series
     season: 52
     channel: BBC
 
-  - title: Succession
-    type: Series
-    season: 3
-    channel: HBO
-  
   - title: Taskmaster
     type: Series
     channel: Channel 4
@@ -27,11 +31,10 @@ watching:
     channel: Fuji TV
 
 wantToWatch:
-  
   - title: Dark
     type: Series
     channel: Netflix
-  
+
   - title: Wednesday
     type: Series
     channel: Netflix
@@ -39,11 +42,31 @@ wantToWatch:
   - title: Arcane
     type: Series
     channel: Netflix
-  
+
+  - title: Curb your Enthusiasm
+    type: Season
+    season: 12
+    channel: HBO
+
+  - title: Barry
+    type: Series
+    season: 4
+    channel: HBO
+
+  - title: The Righteous Gemstones
+    type: Season
+    season: 3
+    channel: HBO
+
+  - title: Succession
+    type: Series
+    season: 4
+    channel: HBO
+
   - title: The Sopranos
     type: Series
     channel: HBO
-  
+
   - title: Peaky Blinders
     type: Series
     channel: Netflix
@@ -57,7 +80,7 @@ wantToWatch:
     type: Season
     season: 6
     channel: Showcase
-  
+
   - title: Limmy's Show
     type: Series
     season: 1
@@ -68,12 +91,12 @@ watched:
     type: Series
     season: 2
     channel: HBO
-  
+
   - title: The Rehearsal
     type: Series
     season: 1
     channel: HBO
-  
+
   - title: House of the Dragon
     type: Series
     season: 1
@@ -98,7 +121,6 @@ watched:
     type: Series
     season: 3
     channel: Amazon
-  
 
   - title: Stranger Things
     type: Series
@@ -109,48 +131,27 @@ watched:
     type: Series
     season: 9
     channel: Channel 4
-  - title: Barry
-    type: Series
-    season: 3
-    channel: HBO
 
   - title: Gravity Falls
     type: Season
     season: 2
     channel: Disney
 
-
   - title: Russian Doll
     type: Series
     season: 2
     channel: Netflix
-  
-  - title: The Righteous Gemstones
-    type: Season
-    season: 2
-    channel: HBO
 
   - title: After Life
     type: Season
     season: 3
     channel: Netflix
 
-  - title: Archer
-    type: Season
-    season: 12
-    channel: FXX
-
-  - title: Curb your Enthusiasm
-    type: Season
-    season: 11
-    channel: HBO
-  
   - title: It's Always Sunny in Philadelphia
     type: Season
     season: 15
     channel: FXX
 
-  
   - title: Final Space
     type: Series
     season: 3
@@ -160,22 +161,21 @@ watched:
     type: Series
     season: 8
     channel: NBC
-  
+
   - title: Rick and Morty
     type: Series
     season: 5
     channel: adult swim
     endDate: 2021-09-07T05:30:00+05:30
-  
+
   - title: Invincible
     type: Series
     season: 1
     channel: Amazon
     endDate: 2021-09-07T05:30:00+05:30
-  
 
-done: 
-  - title: Superstore 
+done:
+  - title: Superstore
     type: Series
     season: 6
     channel: NBC
@@ -183,7 +183,7 @@ done:
     type: Season
     season: 1
     channel: Disney+
-abandoned:  
+abandoned:
   - title: Killing Eve
     type: Season
     season: 4

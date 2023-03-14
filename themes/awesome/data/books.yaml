@@ -11,8 +11,6 @@ wantToRead:
     author: Joe Abercrombie
   - title: In Europe
     author: Geert Mak
-  - title: It
-    author: Stephen King
   - title: Wuthering Heights
     author: Emily Brontë
   - title: The Song of Achilles
@@ -23,9 +21,6 @@ wantToRead:
   - title: The Winds of Winter
     author: George R. R. Martin
 reading:
-  - title: Middlemarch
-    author: George Eliot
-    startDate: 2022-12-28T05:30:00+05:30
   - title: Moby Dick
     author: Herman Melville
     startDate: 2022-10-30T05:30:00+05:30
@@ -34,14 +29,30 @@ reading:
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: The Little Prince
+    author: Antoine de Saint-Exupéry
+    startDate: 2023-03-04T20:30:00+05:30
+    endDate: 2023-03-04T21:30:00+05:30
+  - title: It
+    author: Stephen King
+    startDate: 2023-01-30T07:30:00+05:30
+    endDate: 2023-02-22T13:30:00+05:30
+  - title: The Beach
+    author: Alex Garland
+    startDate: 2023-01-27T07:30:00+05:30
+    endDate: 2023-01-29T13:30:00+05:30
+  - title: Middlemarch
+    author: George Eliot
+    startDate: 2022-12-28T05:30:00+05:30
+    endDate: 2023-01-26T19:30:00+05:30
   - title: "Mistborn: The Final Empire"
     author: Brandon Sanderson
     startDate: 2022-12-22T19:30:00+05:30
     endDate: 2022-12-27T12:30:00+05:30
   - title: The Sword of Kaigen
     author: M. L. Wang
-    startDate: 2022-12-16T19:30:00+05:30
-    endDate: 2022-12-13T12:30:00+05:30
+    startDate: 2022-12-13T19:30:00+05:30
+    endDate: 2022-12-16T12:30:00+05:30
   - title: Elantris
     author: Brandon Sanderson
     startDate: 2022-10-24T19:30:00+05:30
