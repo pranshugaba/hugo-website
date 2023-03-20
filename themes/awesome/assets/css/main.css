@@ -423,8 +423,14 @@ textarea {
 ol,
 ul {
   --flow-space: 1rem;
-  padding-left: 2rem;
+  padding-left: 1rem;
   list-style-position: outside;
+}
+@media (min-width: 640px) {
+  ol,
+  ul {
+    padding-left: 2rem;
+  }
 }
 
 li {
