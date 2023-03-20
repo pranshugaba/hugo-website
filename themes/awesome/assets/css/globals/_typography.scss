@@ -24,13 +24,16 @@ ul {
 // }
 
 li {
-  margin-block: 0.5rem;
+  margin-block: 0.6rem;
 }
 li p + p {
   margin-top: 0.75rem;
 }
+li figure {
+  margin-block: 1rem;
+}
 li p:last-child {
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
 }
 p:first-child {
   margin-top: 0.75rem;
@@ -41,7 +44,7 @@ p:last-child {
 
 code {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  // font-size: 0.9rem;
 }
 
 // figcaption {

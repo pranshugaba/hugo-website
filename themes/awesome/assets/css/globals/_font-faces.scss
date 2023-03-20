@@ -4,7 +4,7 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url('/fonts/Bitter/Bitter-VariableFont_wght.ttf') format('truetype');
+  src: url('/fonts/Bitter/Bitter-Roman.woff2') format('woff2');
   unicode-range: U+0000-007F, ;
 }
 
@@ -14,38 +14,135 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url('/fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf')
-    format('truetype');
+  src: url('/fonts/Bitter/Bitter-Italic.woff2')
+    format('woff2');
   unicode-range: U+0000-007F;
 }
 
+
 @font-face {
-  font-family: 'Inter';
-  font-weight: 100 900;
+  font-family: 'IBM Plex Sans';
+  font-weight: 100 700;
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url('/fonts/Inter-roman.var.woff2') format('woff2');
+  src: url('/fonts/IBMPlexSans/IBMPlexSansVar-Roman.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'Inter';
-  font-weight: 100 900;
+  font-family: 'IBM Plex Sans';
+  font-weight: 100 700;
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url('/fonts/Inter-italic.var.woff2') format('woff2');
+  src: url('/fonts/IBMPlexSans/IBMPlexSansVar-Italic.woff2') format('woff2');
 }
+
 @font-face {
-  font-family: 'JBMono';
-  src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
-  font-weight: 400;
+  font-family: 'Cascadia Code';
+  font-weight: 200 700;
+  font-display: swap;
   font-style: normal;
-  font-display: swap;
+  font-named-instance: 'Regular';
+  src: url('/fonts/CascadiaCode/CascadiaCode-Roman.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'JBMono';
-  src: url('/fonts/JetBrainsMono-Italic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
+  font-family: 'Cascadia Code';
+  font-weight: 200 700;
   font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/fonts/IBMPlexSans/CascadiaCode-Italic.woff2') format('woff2');
 }
+
+//@font-face {
+//  font-family: 'JBMono';
+//  src: url('/fonts/JBMono/JetBrainsMono-Regular.woff2') format('woff2');
+//  font-weight: 400;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//@font-face {
+//  font-family: 'JBMono';
+//  src: url('/fonts/JBMono/JetBrainsMono-Italic.woff2') format('woff2');
+//  font-weight: 400;
+//  font-style: italic;
+//  font-display: swap;
+//}
+
+//@font-face {
+  //font-family: 'Inter';
+  //font-weight: 100 900;
+  //font-display: swap;
+  //font-style: normal;
+  //font-named-instance: 'Regular';
+  //src: url('/fonts/Inter/Inter-Roman.woff2') format('woff2');
+//}
+//@font-face {
+  //font-family: 'Inter';
+  //font-weight: 100 900;
+  //font-display: swap;
+  //font-style: italic;
+  //font-named-instance: 'Italic';
+  //src: url('/fonts/Inter/Inter-Italic.woff2') format('woff2');
+//}
+
+//@font-face {
+//  font-family: 'Golos UI';
+//  font-weight: 100 900;
+//  font-display: swap;
+//  font-style: normal;
+//  font-named-instance: 'Regular';
+//  src: url('/fonts/Golos/GolosUI.woff2') format('woff2');
+//}
+//@font-face {
+//  font-family: 'Golos Text';
+//  font-weight: 100 900;
+//  font-display: swap;
+//  font-style: normal;
+//  font-named-instance: 'Regular';
+//  src: url('/fonts/Golos/GolosText.woff2') format('woff2');
+//}
+//@font-face {
+//  font-family: 'Manrope';
+//  font-weight: 200 800;
+//  font-display: swap;
+//  font-style: normal;
+//  font-named-instance: 'Regular';
+//  src: url('/fonts/Manrope/Manrope.woff2') format('woff2');
+//}
+//
+//@font-face {
+//  font-family: 'Public Sans';
+//  font-weight: 100 900;
+//  font-display: swap;
+//  font-style: normal;
+//  font-named-instance: 'Regular';
+//  src: url('/fonts/PublicSans/PublicSans-Roman.ttf') format('truetype');
+//}
+//
+//@font-face {
+//  font-family: 'Public Sans';
+//  font-weight: 100 900;
+//  font-display: swap;
+//  font-style: italic;
+//  font-named-instance: 'Italic';
+//  src: url('/fonts/PublicSans/PublicSans-Italic.ttf') format('truetype');
+//}
+//
+//@font-face {
+//  font-family: 'Figtree';
+//  font-weight: 100 900;
+//  font-display: swap;
+//  font-style: normal;
+//  font-named-instance: 'Regular';
+//  src: url('/fonts/Figtree/Figtree-Roman.ttf') format('truetype');
+//}
+//
+//@font-face {
+//  font-family: 'Figtree';
+//  font-weight: 100 900;
+//  font-display: swap;
+//  font-style: italic;
+//  font-named-instance: 'Italic';
+//  src: url('/fonts/Figtree/Figtree-Italic.ttf') format('truetype');
+//}

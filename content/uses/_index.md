@@ -7,12 +7,13 @@ display: none
 
 ## Laptop
 
-I am running [Arch Linux](https://archlinux.org) on my ThinkPad P1, btw.
-While I mainly use [XMonad](https://xmonad.org), I occasionally use GNOME on Wayland. 
+I use [Arch Linux](https://archlinux.org), btw, on my ThinkPad P1 as my daily driver. 
+I used to use the tiling window manager [XMonad](https://xmonad.org). 
+However, I find the touchpad gestures of [GNOME on Wayland](https://www.gnome.org/) much smoother and a joy to use, and since XMonad does not support Wayland, I now use GNOME as my desktop environment. I still prefer XMonad when I am on desktop.
 
 ### Text Editor
 
-I mostly use [Neovim](neovim) to edit text files. I used to use VSCodium, but I have prefer Neovim now.
+I mostly use [Neovim](neovim) to edit text files. I occasionally use VSCodium as well.
 
 ### Browser
 
@@ -27,7 +28,7 @@ I use Firefox with these extensions:
 ### Reading
 
 - zathura
-- Okular
+- evince
 - foliate
 
 ### Note taking
@@ -62,7 +63,11 @@ I use Firefox with these extensions:
 
 ## Phone
 I am using an Android phone. Some notable apps: 
+- Aegis Authenticator
 - AntennaPod
+- arXiv eXplorer
+- Audio Spectrum Analyzer
+- Barcode Scanner
 - DNS66
 - Document Viewer
 - FitoTrack
@@ -71,8 +76,18 @@ I am using an Android phone. Some notable apps:
 - mpv-android
 - NiceFeed
 - Open Camera
-- Organic Map
+- Organic Maps
 - Pie Launcher
+- QDict
+- Read You
 - Shader Editor
+- Simpletask
+- Simple File Manager
+- Simple Gallery
+- SimpleMarkdown
 - Survival Manual
 - Termux
+- Tracker Control
+- Tiddloid
+- Trail Sense
+- Tuner

@@ -2,6 +2,9 @@
   <p class="recent__item__title">
     <a href="{{ .Permalink }}">
       {{ if (eq .Type "puzzles") }}#{{ .File.ContentBaseName }}:{{ end }}
+      {{ if (eq .Type "thoughts") }}
+            {{ partial "helpers/thoughts-prefix" . }}
+        {{ end }}
       {{ if (eq .Type "newsletter") }}
             {{ partial "helpers/newsletter-issue" . }}:
         {{ end }}

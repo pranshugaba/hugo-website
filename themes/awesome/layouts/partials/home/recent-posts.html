@@ -13,15 +13,15 @@
     {{ partial "home/recent-section" (dict "Context" . "SectionName" "stories") }}
     {{ partial "home/recent-section" (dict "Context" .  "SectionName" "comics") }}
   </div>
+  <h2>Personal</h2>
+  <div class="recent__group">
+    {{ partial "home/recent-section" (dict "Context" . "SectionName" "thoughts") }}
+    {{ partial "home/recent-section" (dict "Context" . "SectionName" "newsletter") }}
+    {{ partial "home/recent-section" (dict "Context" . "SectionName" "minis") }}
+  </div>
   <h2>Learn</h2>
   <div class="recent__group">
     {{ partial "home/recent-section" (dict "Context" . "SectionName" "maths") }}
     {{ partial "home/recent-section" (dict "Context" . "SectionName" "dev") }}
-  </div>
-  <h2>Personal</h2>
-  <div class="recent__group">
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "thoughts") }}
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "minis") }}
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "newsletter") }}
   </div>
 </div>

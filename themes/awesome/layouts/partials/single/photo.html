@@ -2,15 +2,15 @@
 {{ $altText := .AltText }}
 {{ $optBlock := dict "display" "block" }}
 {{- $caption := .Caption | .Context.Page.RenderString $optBlock -}}
-{{ $photo := (.Context.Page.Resources.ByType "image").GetMatch (printf "%s.{png,jpeg,jpg,webp}" $srcFile) }} 
+{{ $photo := .Context.Page.Resources.GetMatch $srcFile }} 
 {{ $showCoords := .ShowCoords }}
 {{ with $photo}}
     <figure class="gallery__figure">
         {{ $big := "" }}
         {{ if lt .Height .Width }}
-        {{ $big = .Resize "1600x webp" }}
+        {{ $big = .Resize "1600x webp q80" }}
         {{ else }}
-        {{ $big = .Resize "x1600 webp" }}
+        {{ $big = .Resize "x1600 webp q80" }}
         {{ end }}
         {{ if $showCoords }}
             {{ with .Exif }}

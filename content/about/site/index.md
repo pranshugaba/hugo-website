@@ -9,11 +9,15 @@ This website is my personal corner of the internet. Here, I share things that I 
 ## How it's made
 
 This site is built using a static site generator called [Hugo](https://gohugo.io). I write my content in Markdown, and Hugo automatically generates the relevant HTML files.
-I designed and wrote the theme on my own. You can find the source code for the site on [my Github profile](https://github.com/pranshugaba/hugo-website/).
+I designed and wrote the theme on my own. You can find the source code for the site on [its Github repository](https://github.com/pranshugaba/hugo-website/).
 
 (Note: I write this theme for my personal use only. I am more focussed on adding features rather than keeping it organised. As a result, the code is a mess, and anyone other than me would find it difficult to make sense of it. If you love this theme and would like to use it in your own site, [let me know]({{< ref "/contact" >}}). I will try to clean it up and publish it.)
 
-This site is built and deployed using [Github actions](https://github.com/features/actions) and is hosted on [GitHub pages](https://pages.github.com/).
+This site is deployed using [Github actions](https://github.com/features/actions) and is hosted on [GitHub pages](https://pages.github.com/).
+
+### Font faces
+
+This site uses [IBM Plex Sans](https://github.com/IBM/plex) as the primary sans-serif font, [<span style="font-family: var(--font-serif)">Bitter<span>](https://github.com/solmatas/Bitter) as the serif font for headings, and [<span style="font-family: var(--font-mono)">Cascadia Code</span>](https://github.com/microsoft/cascadia-code) for monospaced text. 
 
 ### Easter eggs
 

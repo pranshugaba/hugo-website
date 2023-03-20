@@ -7,14 +7,13 @@ summary: A little bit about me and my website
 
 ## PhD
 
-I am a PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/). 
+I am a third-year PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/).
+I am working on Formal Methods with my advisor [Shibashis Guha](https://www.tifr.res.in/~shibashis.guha/).
 
 
 ## Learning
 
-I am learning [Rust](https://rust-lang.org) by reading the [Rust book](https://doc.rust-lang.org/book/) and solving 
-problems on [Project Euler](https://projecteuler.net). 
-I am also trying out game development in Rust using the [Bevy game engine](https://bevyengine.org/).
+I am learning game development using the [Godot game engine](https://www.godotengine.org). 
 
 ## Reading
 {{< currently-reading >}}
@@ -28,7 +27,7 @@ I am also trying out game development in Rust using the [Bevy game engine](https
 
 ## Gaming
 
-I play Stardew Valley, Dark Souls, and Uncharted 3 nowadays. 
+I play Stardew Valley, Linelight, and Uncharted 3 nowadays. 
 
 ---
 

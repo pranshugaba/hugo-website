@@ -7,7 +7,7 @@ display: none
 
 ## About me
 
-Hi, I'm Pranshu. I am currently a second-year PhD student in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
+Hi, I'm Pranshu. I am currently a third-year PhD student in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
 My research interests include Logic, Automata, and Games, as well as Algebra and Combinatorics.
 Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in/).
 
@@ -42,9 +42,12 @@ I like to [walk]({{< ref "/tags/walking" >}}) or [cycle]({{< ref "/tags/cycling"
 
 I like to write [puzzles]({{< ref "/puzzles" >}}). While I enjoy solving puzzles --- I occasionally solve problems on Project Euler --- I enjoy creating puzzles even more. Writing a puzzle that others would find interesting and would want to solve is very challenging indeed.
 
-I love programming. I have previously dabbled with Kotlin and Haskell, and I am currently learning Rust. I would like to make CLI and GUI applications and games using Rust. I also love doing front-end web development (CSS).
+I love programming. 
+I have previously dabbled with functional programming in Haskell as well as Android app development in Kotlin. 
+I am currently learning game development using the Godot game engine.
 
-In my free time, I [read books]({{< ref "/now#reading" >}}), [watch TV series]({{< ref "/now#watching" >}}), or play bullet chess (1+0) on [lichess.org](https://lichess.org).
+In my free time, I [read books]({{< ref "/now#reading" >}}), solve the [New York Times crossword](https://www.nytimes.com/crosswords) and [Spelling Bee](https://www.nytimes.com/puzzles/spelling-bee), or play bullet chess (1+0) on [lichess.org](https://lichess.org).
+
 
 ## About this site
 

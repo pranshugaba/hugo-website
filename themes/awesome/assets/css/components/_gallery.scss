@@ -15,9 +15,9 @@
       text-align: left;
       font-size: 1rem;
       // https://stackoverflow.com/questions/9769587/set-div-to-have-its-siblings-width/37034774
-      flex-grow: 1;       // Image not wider than image
-      width: 0;           // Image not wider than image
-      margin-block: 0;    // Image not wider than image 
+      flex-grow: 1; // Image not wider than image
+      width: 0; // Image not wider than image
+      margin-block: 0; // Image not wider than image
     }
   }
 
@@ -26,7 +26,9 @@
     border-top: var(--border-medium) solid var(--fg);
     padding-inline: 0.75rem;
     padding-block: 0;
-    p {
+    p,
+    p:first-child,
+    p:last-child {
       margin-top: 0.75rem;
       margin-bottom: 0.75rem;
     }

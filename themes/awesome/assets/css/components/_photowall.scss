@@ -36,10 +36,10 @@
       object-fit: cover;
       margin: 0;
       border-radius: var(--border-radius-medium);
-      border: var(--border-thin) solid var(--fg);
+      border: var(--border-medium) solid var(--fg);
       &:hover {
         border-color: var(--accent);
-        border-width: var(--border-thick);
+        border-width: var(--border-extrathick);
         filter: opacity(0.85);
       }
     }

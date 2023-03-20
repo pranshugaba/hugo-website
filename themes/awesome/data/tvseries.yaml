@@ -4,11 +4,6 @@ watching:
     season: 1
     channel: HBO
 
-  - title: Spy × Family
-    type: Series
-    season: 1
-    channel: TV Tokyo
-  
   - title: Archer
     type: Season
     season: 13
@@ -87,6 +82,11 @@ wantToWatch:
     channel: BBC Two Scotland
 
 watched:
+  - title: Spy × Family
+    type: Series
+    season: 1
+    channel: TV Tokyo
+
   - title: The White Lotus
     type: Series
     season: 2
@@ -167,6 +167,12 @@ watched:
     season: 5
     channel: adult swim
     endDate: 2021-09-07T05:30:00+05:30
+ 
+  - title: People Just Do Nothing
+    type: Series
+    season: 5
+    channel: BBC
+    endDate: 2021-12-13T05:30:00+05:30
 
   - title: Invincible
     type: Series

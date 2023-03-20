@@ -12,8 +12,9 @@ h4 code,
 kbd {
   font-family: var(--font-mono);
   padding: 0.05rem 0.2rem;
-  border: var(--border-thin) solid var(--fg);
+  border: var(--border-medium) solid var(--fg);
   border-radius: 0.2rem;
+  font-size: 0.9rem;
 }
 
 h4 code {

@@ -1,1 +1,1 @@
-<h1 class="page__title">{{ .Title | emojify }}</h1>
+<h1 class="page__title">{{ if (eq .Type "thoughts" . )}} <span class="page__title__prefix">{{ partial "helpers/thoughts-prefix" . }}</span>{{ end }}{{ .Title | emojify }}</h1>

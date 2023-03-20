@@ -4,26 +4,32 @@ subtitle: "Keep updated with what's new on this site"
 summary: 'Ways to keep updated'
 ---
 
+## Feed readers
+
+Feed readers are great way to access feeds of your favourite sites in one place. 
+- If you are using Linux, then I recommend [Feeds](https://gfeeds.gabmus.org/) (a graphical application) or [newsboat](https://github.com/newsboat/newsboat) (a command-line application).
+- If you use an Android device, then [Read You](https://f-droid.org/en/packages/me.ash.reader/) is an excellent feed reader. 
+
+Add the feeds listed below in your feed reader and you will be able to read them in the feed reader itself.
+These feed readers keep track of which pages you have already read, and can also notify you when a new post is uploaded.
+
 ## Newsletter feed
 
-I publish a weekly newsletter in which I share updates. Here are links to some of the recent issues:
+I publish a newsletter in which I share updates about myself and this site. Here are links to some of the recent issues:
 
 {{< recent-newsletters >}}
 
-Add the following feed to your favourite feed reader.
+Add the following feed to your feed reader to subscribe to my newsletter.
 
 ```shell
 https://pranshugaba.com/newsletters/index.xml
 ```
 
-You will be notified by your reader when a new issue is uploaded.  
-[Read how to use feed readers &#8594;]({{< ref "/subscribe#feed-readers" >}})
-
 All past issues are also available to read on this website at [https://pranshugaba.com/newsletter]({{< ref "/newsletter" >}}). You can bookmark this page and browse through it anytime you like.
 
 ## Other feeds
 
-Here are some RSS feeds for other parts of my website. (Note that some components and figures may not render correctly in your feed reader.)
+Here are some feeds for other parts of my website. (Note that some components and figures may not render correctly in your feed reader.)
 
 ### Everything
 
@@ -51,7 +57,7 @@ If you are only interested in subscribing to certain sections, you can do that a
 ### Tags
 
 You can browse pages on my website by [tags]({{< ref "/tags" >}}).
-If you are interested in a particular tag and would like to subsribe to it, append `/index.xml` to the URL of the tag page to get the URL for the corresponding feed.
+If you are interested in a particular tag and would like to subscribe to it, append `/index.xml` to the URL of the tag page to get the URL for the corresponding feed.
 
 For example, say you would like to follow the `haiku` tag. It is available at
 
@@ -64,7 +70,3 @@ The feed corresponding to this tag is at
 ```shell
 https://pranshugaba.com/tags/haiku/index.xml
 ```
-
-## Feed readers
-
-I recommend [newsboat](https://github.com/newsboat/newsboat) if you are on Linux, and [Read You](https://f-droid.org/en/packages/me.ash.reader/) for Android.

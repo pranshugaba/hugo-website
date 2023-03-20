@@ -29,12 +29,12 @@
             {{ else }}
                 {{ $title = .Title | replaceRE "," "%252C" | replaceRE "\\?" "%253F" | replaceRE "/" "%252F" | replaceRE "#" "%2523" }}
             {{ end }}
-            {{ $titleString := print "w_1280,h_669,c_fill,q_auto,f_auto/w_1130,c_fit,co_rgb:f7f0ff,g_south_west,x_60,y_240,l_text:inter-semibold.ttf_80_line_spacing_1:" $title "/" }}
+            {{ $titleString := print "w_1280,h_669,c_fill,q_auto,f_auto/w_1130,c_fit,co_rgb:f7f0ff,g_south_west,x_60,y_240,l_text:plex-semibold.ttf_80_line_spacing_1:" $title "/" }}
             {{ $subtitle := " " }}
             {{ with .Params.Subtitle }}
                 {{ $subtitle = . | replaceRE "," "%252C" | replaceRE "\\?" "%253F" | replaceRE "/" "%252F" | replaceRE "#" "%2523" }}
             {{ end }}
-            {{ $subtitleString := print "w_1130,c_fit,co_rgb:f7f0ff,g_north_west,x_60,y_480,l_text:inter-regular.ttf_48_line_spacing_3:" $subtitle "/" }}
+            {{ $subtitleString := print "w_1130,c_fit,co_rgb:f7f0ff,g_north_west,x_60,y_480,l_text:plex-regular.ttf_48_line_spacing_3:" $subtitle "/" }}
             {{ $imageURL := print "https://res.cloudinary.com/pranshugaba/image/upload/" $titleString $subtitleString "social_image.png" }}
             <meta property="og:image" content="{{ $imageURL }}"/>
             <meta property="twitter:image" content="{{ $imageURL }}"/>

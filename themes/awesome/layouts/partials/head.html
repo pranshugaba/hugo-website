@@ -25,6 +25,9 @@
   {{ if .Params.map }}
     {{ partial "helpers/maphead" . }}
   {{ end }}
+  {{ if .Params.maplibre }}
+    {{ partial "helpers/maplibrehead" . }}
+  {{ end }}
 
   {{ if .Params.math }}
     {{ partial "helpers/katex.html" . }}

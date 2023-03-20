@@ -9,6 +9,9 @@
           {{ if (eq .Type "newsletter") }}
               {{ partial "helpers/newsletter-issue" . }}:
           {{ end }}
+          {{ if (eq .Type "thoughts") }}
+              {{ partial "helpers/thoughts-prefix" . }}
+          {{ end }}
           {{.Title}}</a>
       </div>
       <div class="item__summary">

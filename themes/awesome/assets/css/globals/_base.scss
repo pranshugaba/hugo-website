@@ -1,16 +1,17 @@
 // TODO: add margins on footnote-ref
 // TODO: Style buttons when you add a button
 html {
-  font-size: 112.5%;
+  font-size: 115%;
   @media (min-width: 640px) {
-    font-size: 125%;
+    font-size: 130%;
   }
   @media print {
     font-size: 80%;
   }
   font-family: var(--font-sans-serif);
+  font-weight: 400;
   scroll-padding-top: 1.5rem;
-  text-underline-offset: 0.16em;
+  text-underline-offset: 0.14em;
 }
 
 body {
@@ -27,7 +28,7 @@ body {
 body {
   line-height: 1.6;
   @media (min-width: 640px) {
-    line-height: 1.75;
+    line-height: 1.7;
   }
 }
 
@@ -53,14 +54,16 @@ h6 + p {
 
 h1 {
   font-family: var(--font-serif);
-  font-size: 2.75rem;
+  font-size: 2.6rem;
   font-weight: 500;
+  font-variation-settings: 'wght' 500;
 }
 
 h2 {
   font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: 500;
+  font-variation-settings: 'wght' 500;
 }
 
 h3 {
