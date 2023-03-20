@@ -2,12 +2,12 @@
 :root {
   --bg: white;
   --fg: black;
-  --accent: hsl(210deg, 100%, 42%);
+  --accent: hsl(210, 100%, 42%);
   --light: white;
-  --dark: hsl(0deg, 0%, 12%);
-  --font-sans-serif: Inter, sans-serif;
+  --dark: hsl(0, 0%, 12%);
+  --font-sans-serif: "IBM Plex Sans", sans-serif;
   --font-serif: Bitter, ui-serif, serif;
-  --font-mono: "JBMono", monospace;
+  --font-mono: "Cascadia Code", monospace;
   --font-size-100: 0.625rem;
   --font-size-200: 0.75rem;
   --font-size-250: 0.825rem;
@@ -49,9 +49,9 @@
 }
 
 .dark-mode {
-  --bg: hsl(0deg, 0%, 12%);
+  --bg: hsl(0, 0%, 12%);
   --fg: white;
-  --accent: hsl(210deg, 100%, 69%);
+  --accent: hsl(210, 100%, 69%);
 }
 @media print {
   .dark-mode {
@@ -100,7 +100,7 @@ button:focus {
   font-display: swap;
   font-style: normal;
   font-named-instance: "Regular";
-  src: url("/fonts/Bitter/Bitter-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/Bitter/Bitter-Roman.woff2") format("woff2");
   unicode-range: U+0000-007F;
 }
 @font-face {
@@ -109,38 +109,40 @@ button:focus {
   font-display: swap;
   font-style: italic;
   font-named-instance: "Italic";
-  src: url("/fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/Bitter/Bitter-Italic.woff2") format("woff2");
   unicode-range: U+0000-007F;
 }
 @font-face {
-  font-family: "Inter";
-  font-weight: 100 900;
+  font-family: "IBM Plex Sans";
+  font-weight: 100 700;
   font-display: swap;
   font-style: normal;
   font-named-instance: "Regular";
-  src: url("/fonts/Inter-roman.var.woff2") format("woff2");
+  src: url("/fonts/IBMPlexSans/IBMPlexSansVar-Roman.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Inter";
-  font-weight: 100 900;
+  font-family: "IBM Plex Sans";
+  font-weight: 100 700;
   font-display: swap;
   font-style: italic;
   font-named-instance: "Italic";
-  src: url("/fonts/Inter-italic.var.woff2") format("woff2");
+  src: url("/fonts/IBMPlexSans/IBMPlexSansVar-Italic.woff2") format("woff2");
 }
 @font-face {
-  font-family: "JBMono";
-  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "Cascadia Code";
+  font-weight: 200 700;
+  font-display: swap;
   font-style: normal;
-  font-display: swap;
+  font-named-instance: "Regular";
+  src: url("/fonts/CascadiaCode/CascadiaCode-Roman.woff2") format("woff2");
 }
 @font-face {
-  font-family: "JBMono";
-  src: url("/fonts/JetBrainsMono-Italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
+  font-family: "Cascadia Code";
+  font-weight: 200 700;
   font-display: swap;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("/fonts/IBMPlexSans/CascadiaCode-Italic.woff2") format("woff2");
 }
 *,
 *:before,
@@ -247,14 +249,15 @@ input {
 }
 
 html {
-  font-size: 112.5%;
+  font-size: 115%;
   font-family: var(--font-sans-serif);
+  font-weight: 400;
   scroll-padding-top: 1.5rem;
-  text-underline-offset: 0.16em;
+  text-underline-offset: 0.14em;
 }
 @media (min-width: 640px) {
   html {
-    font-size: 125%;
+    font-size: 130%;
   }
 }
 @media print {
@@ -283,7 +286,7 @@ body {
 }
 @media (min-width: 640px) {
   body {
-    line-height: 1.75;
+    line-height: 1.7;
   }
 }
 
@@ -309,14 +312,16 @@ h6 + p {
 
 h1 {
   font-family: var(--font-serif);
-  font-size: 2.75rem;
+  font-size: 2.6rem;
   font-weight: 500;
+  font-variation-settings: "wght" 500;
 }
 
 h2 {
   font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: 500;
+  font-variation-settings: "wght" 500;
 }
 
 h3 {
@@ -423,15 +428,19 @@ ul {
 }
 
 li {
-  margin-block: 0.5rem;
+  margin-block: 0.6rem;
 }
 
 li p + p {
   margin-top: 0.75rem;
 }
 
+li figure {
+  margin-block: 1rem;
+}
+
 li p:last-child {
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 p:first-child {
@@ -444,7 +453,6 @@ p:last-child {
 
 code {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
 }
 
 blockquote {
@@ -461,7 +469,6 @@ blockquote {
 }
 @media (min-width: 640px) {
   blockquote {
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     max-width: 90%;
@@ -530,7 +537,7 @@ a.plain-link:focus,
 }
 
 .flow > * + * {
-  margin-top: var(--flow-space, 1.6em);
+  margin-top: var(--flow-space, 1.2em);
 }
 
 .wrapper {
@@ -598,8 +605,9 @@ a.plain-link:focus,
   margin-bottom: 1rem;
   font-family: var(--font-serif);
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
+  font-variation-settings: "wght" 600;
 }
 @media (min-width: 640px) {
   .header__logo {
@@ -722,8 +730,9 @@ h4 code,
 kbd {
   font-family: var(--font-mono);
   padding: 0.05rem 0.2rem;
-  border: var(--border-thin) solid var(--fg);
+  border: var(--border-medium) solid var(--fg);
   border-radius: 0.2rem;
+  font-size: 0.9rem;
 }
 
 h4 code {
@@ -900,7 +909,6 @@ h4 code {
   white-space: pre;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   margin-right: 0.4em;
   padding: 0 0.4em 0 0.4em;
@@ -910,7 +918,6 @@ h4 code {
   white-space: pre;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   margin-right: 0.4em;
   padding: 0 0.4em 0 0.4em;
@@ -1153,7 +1160,6 @@ h4 code {
 }
 @media (min-height: 320px) {
   .list__key {
-    position: -webkit-sticky;
     position: sticky;
     top: 0px;
   }
@@ -1188,7 +1194,6 @@ h4 code {
 .list-mini__item .item__metadata {
   font-size: 0.85rem;
   margin-bottom: 0.25rem;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -1366,7 +1371,6 @@ h4 code {
 .toc {
   font-family: var(--font-sans-serif);
   --flow-space: 2rem;
-  max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
   padding: 1rem 1rem;
@@ -1376,6 +1380,9 @@ h4 code {
   font-family: var(--font-sans-serif);
   font-size: 1.5rem;
   font-variation-settings: "wght" 500;
+}
+.toc li {
+  margin-block: 0.25rem;
 }
 
 .tagcloud {
@@ -1496,7 +1503,6 @@ thead {
   margin-inline: auto;
   border: var(--border-medium) solid var(--fg);
   overflow: hidden;
-  max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
   border-radius: var(--border-radius-medium);
@@ -1519,7 +1525,9 @@ thead {
   padding-inline: 0.75rem;
   padding-block: 0;
 }
-.gallery__caption p {
+.gallery__caption p,
+.gallery__caption p:first-child,
+.gallery__caption p:last-child {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
@@ -1607,8 +1615,7 @@ details[open] .admonition__title {
 
 figure {
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  --flow-space: 1.2em;
 }
 figure img {
   text-align: center;
@@ -1740,8 +1747,7 @@ figure figcaption {
     grid-auto-columns: 64%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-    -ms-scroll-snap-type: inline mandatory;
-        scroll-snap-type: inline mandatory;
+    scroll-snap-type: inline mandatory;
   }
 }
 @media (min-width: 960px) {
@@ -1849,7 +1855,7 @@ figure figcaption {
 }
 @media (min-width: 360px) {
   .photowall,
-.home__recent__photowall {
+  .home__recent__photowall {
     grid-template-columns: 1fr 1fr;
     -moz-column-gap: 0.75rem;
          column-gap: 0.75rem;
@@ -1858,7 +1864,7 @@ figure figcaption {
 }
 @media (min-width: 600px) {
   .photowall,
-.home__recent__photowall {
+  .home__recent__photowall {
     grid-template-columns: 1fr 1fr 1fr;
     -moz-column-gap: 1rem;
          column-gap: 1rem;
@@ -1887,12 +1893,12 @@ figure figcaption {
      object-fit: cover;
   margin: 0;
   border-radius: var(--border-radius-medium);
-  border: var(--border-thin) solid var(--fg);
+  border: var(--border-medium) solid var(--fg);
 }
 .photowall .photowall__container .photowall__image:hover,
 .home__recent__photowall .photowall__container .photowall__image:hover {
   border-color: var(--accent);
-  border-width: var(--border-thick);
+  border-width: var(--border-extrathick);
   filter: opacity(0.85);
 }
 
@@ -2033,14 +2039,13 @@ figure figcaption {
 }
 @media screen {
   .poems .page__header,
-.poems .page__navtags,
-.poems .page__nav {
+  .poems .page__navtags,
+  .poems .page__nav {
     max-width: var(--content-width);
   }
 }
 .poems .page__content {
   font-size: 1.125rem;
-  max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
   margin-left: auto;
