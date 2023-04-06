@@ -27,7 +27,7 @@ I am learning game development using the [Godot game engine](https://www.godoten
 
 ## Gaming
 
-I play Stardew Valley, Linelight, and Uncharted 3 nowadays. 
+I play Stardew Valley, Linelight, and Uncharted 4 nowadays. 
 
 ---
 

@@ -1,9 +1,33 @@
 wantToWatch:
+  - title: 'Spider-Man: Across the Spider-Verse'
+    language: English
+    releaseYear: 2023
+  - title: Beau is Afraid
+    language: English
+    releaseYear: 2023
+  - title: Renfield
+    language: English
+    releaseYear: 2023
+  - title: Dungeons and Dragons
+    language: English
+    releaseYear: 2023
   - title: Triangle of Sadness
     language: English
     releaseYear: 2022
 
 watched:
+  - title: 'John Wick: Chapter 4'
+    language: English
+    releaseYear: 2023
+    startDate: 2023-04-01T15:55:00+05:30
+  - title: Shrek 2
+    language: English
+    releaseYear: 2004
+    startDate: 2023-03-21T20:30:00+05:30
+  - title: Shrek
+    language: English
+    releaseYear: 2001
+    startDate: 2023-03-18T20:30:00+05:30
   - title: The Whale
     language: English
     releaseYear: 2022
