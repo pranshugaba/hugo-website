@@ -7,7 +7,7 @@ lastomd: 2023-03-18T18:23:00+05:30
 
 tags: ['iisc', 'bengaluru']
 
-draft: true
+draft: false
 featured: false
 ---
 
