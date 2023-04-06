@@ -1,4 +1,224 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gamedev by Pranshu Gaba</title><link>https://pranshugaba.com/tags/gamedev/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Mon, 20 Mar 2023 19:13:40 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/gamedev/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/gamedev/index.xml" rel="self" type="application/rss+xml"/><item><title>New Space Images</title><link>https://pranshugaba.com/newsletter/2022-W28/</link><pubDate>Sat, 16 Jul 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/newsletter/2022-W28/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gamedev by Pranshu Gaba</title><link>https://pranshugaba.com/tags/gamedev/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 06 Apr 2023 14:05:57 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/gamedev/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/gamedev/index.xml" rel="self" type="application/rss+xml"/><item><title>Godot 4.0 released</title><link>https://pranshugaba.com/dev/godot-4-released/</link><pubDate>Mon, 06 Mar 2023 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/godot-4-released/</guid><description>
+<![CDATA[<p>After being in development for years, version 4.0 of <a href="https://www.youtube.com/watch?v=chXAjMQrcZk" target="_blank" rel="noopener">the game engine Godot</a> was released this week.
+It is a big release and I am excited to try it out!
+Nathan from GDQuest posted an half-hour long video describing the highlights of <a href="https://www.youtube.com/watch?v=chXAjMQrcZk" target="_blank" rel="noopener">what&rsquo;s new in this version</a>.
+You can read more about the release on <a href="https://godotengine.org/article/godot-4-0-sets-sail/" target="_blank" rel="noopener">the official blog post</a>.</p>
+<p>The courses on GDQuest are an excellent resource to learn game development with Godot.
+There is a 50% off sale going on because of this special occasion till March 8.
+Check it out if you are interested in learning how to make games.</p>
+<p>In related news, version 0.10 of <a href="https://bevyengine.org/" target="_blank" rel="noopener">Bevy</a>, another game engine, was <a href="https://bevyengine.org/news/bevy-0-10/" target="_blank" rel="noopener">released today</a>.
+Bevy is written in Rust, which means that you can use Bevy to make <em>blazingly fast</em> games.</p>
+]]></description></item><item><title>Adieu 2022 / Welcome 2023</title><link>https://pranshugaba.com/newsletter/2023-W01/</link><pubDate>Sat, 07 Jan 2023 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/newsletter/2023-W01/</guid><description>
+<![CDATA[<img src="https://pranshugaba.com/newsletter/2023-W01/haifa_pano_featured_hu88052e123a2a59cb75aea14f524a9187_683708_1080x0_resize_q75_h2_box_2.webp" alt="" /><p>The year 2022 is over, and a new year has begun.
+In this issue of my newsletter, I share some highlights of the past year, as well as some goals that I have set for the coming year.</p>
+<p>As always, if you would like to read previous issues, you can do so at <a href="https://pranshugaba.com/newsletter/">https://pranshugaba.com/newsletter</a></p>
+<h2 id="my-highlights-of-2022">My highlights of 2022</h2>
+<h3 id="travel-in-2022">Travel in 2022</h3>
+<p>I travelled to a fair share of new places in 2022.</p>
+<h4 id="kolkata">Kolkata</h4>
+<p>I went to a friends&rsquo; wedding in Kolkata in April. It was my first visit to the city, and I loved the sights and the foods there.
+I walked across the Hooghly river along the Howrah bridge, bought novels from College street, and ate some roadside phuchka.
+
+<figure >
+    
+    
+    
+    
+    
+    <picture>
+        
+        <img src="https://pranshugaba.com/newsletter/2023-W01/kolkata_bridge.webp" alt="Walking across the Hooghly along the Howrah bridge">
+    </picture>
+    
+    
+    <figcaption>
+        
+        
+            Walking across the Hooghly along the Howrah bridge
+            
+            
+            
+        
+    </figcaption>
+    
+</figure>
+</p>
+<h4 id="israel">Israel</h4>
+<p>I attended the <a href="https://www.floc2022.org" target="_blank" rel="noopener">FLoC conference</a> in Haifa, Israel in August.
+This was my first time in a new country on my own and it was an amazing experience.</p>
+<p>Haifa is one of the most beautiful cities I have ever been to.
+The city sits on a hill, which means that walking in the city is akin to trekking.
+Haifa also abuts the beautiful Mediterranean sea and it was a delight to swim in those cool blue waters.
+While I missed some of the Indian spices in the food there, I loved the bread, the hummus, and the falafels.
+
+<figure >
+    
+    
+    
+    
+    
+    <picture>
+        
+        <img src="https://pranshugaba.com/newsletter/2023-W01/haifa_pano_featured.webp" alt="A panorama of the city of Haifa and the port">
+    </picture>
+    
+    
+    <figcaption>
+        
+        
+            A panorama of the city of Haifa and the port
+            
+            
+            
+        
+    </figcaption>
+    
+</figure>
+</p>
+<h4 id="chennai">Chennai</h4>
+<p>I attended the <a href="https://www.fsttcs.org.in/2022/" target="_blank" rel="noopener">FSTTCS conference</a> in IIT Madras in December.
+The campus of IIT Madras (along with Guindy national park) is a literally a forest in the middle of the city and is teeming with deer and monkeys.
+I had never seen so many deer up close before.</p>
+<p>Chennai is great city to go for a walk in.
+I went for a <a href="https://madrasinherited.in/walk/kutchery/" target="_blank" rel="noopener">heritage walk</a> on Kutchery road in Mylapore where I learnt about the rich history of the various shops and establishments in that locality.
+
+<figure >
+    
+    
+    
+    
+    
+    <picture>
+        
+        <img src="https://pranshugaba.com/newsletter/2023-W01/chennai_pano.webp" alt="A panorama of Marina beach from atop the Chennai lighthouse">
+    </picture>
+    
+    
+    <figcaption>
+        
+        
+            A panorama of Marina beach from atop the Chennai lighthouse
+            
+            
+            
+        
+    </figcaption>
+    
+</figure>
+</p>
+<h3 id="books-in-2022">Books in 2022</h3>
+<p>After a slump of 4 years, I picked up reading this year again.
+Here are some of the books that I read this year and particularly enjoyed:</p>
+<ul>
+<li><em>The Stranger</em> by Albert Camus<br>
+A short novella in two parts. A very interesting read. I cannot say anything more about this book without spoiling it.</li>
+<li><em>A Terrible Book</em> by Jay Micheal<br>
+This bellyachingly hilarious book is a parody of almost every literary trope that exists. It is available as an eBook for $0.99 on Kindle, and nowhere else. The author remains elusive, but it is not for a lack of trying. I am not able to find any information about the author other than his short bio and brilliantly drawn self-portrait on this book&rsquo;s listing on Amazon.</li>
+<li><em>Crime and Punishment</em> by Fyodor Dostoevsky<br>
+This book shares themes with <em>The Stranger</em>.
+This book is about what drives a man to kill a person, and the mental anguish that he suffers as a consequence.
+The plot slows down and is drawn out at times, but I think that it is necessary to better understand the plight of the antihero.</li>
+<li><em>The Book Thief</em> by Markus Zusak<br>
+Set during the Second World War, this story follows the life of a little girl living in Nazi Germany who loves to read books. A tale narrated by Death himself, you can&rsquo;t not read this.</li>
+<li><em>Project Hail Mary</em> by Andy Weir<br>
+While this book is science fiction, but it doesn&rsquo;t read as such.
+Everything that happens in the story seems scientifically plausible; you might as well be reading the logs of a real astronaut.
+It is great to see the thought process of the protagonist as he tackles the problems he encounters.
+Once I started reading it, it was downright impossible to put it down.
+I finished reading it in less than three days.</li>
+<li><em>Elantris</em> by Brandon Sanderson<br>
+This is a fantasy novel and one of the first books published by Brandon Sanderson.
+The story is told through the points-of-view of three characters: a prince, a princess, and a priest, each having different motives and personalities.
+It is particularly fun when these characters interact and you experience the same scene from different viewpoints.
+I also loved the magic system in this story.
+This is a standalone book and a complete story on its own. All in all, it&rsquo;s a very satisfying and thrilling book.</li>
+<li><em>The Sword of Kaigen</em> by M. L. Wang<br>
+This is a fantasy book with a Japanesque setting.
+I could feel some vibes of  <em>Avatar: The Last Airbender</em> while reading this book, primarily because some characters can manipulate the elements around them.
+If you liked that show, then you will probably enjoy reading this book.</li>
+</ul>
+<p>There are many more books that I have read and would like to read.
+You can have a look at my <a href="https://pranshugaba.com/reads/">reading list</a> that I regularly keep up-to-date.</p>
+<h3 id="tv-shows-and-movies-in-2022">TV Shows and Movies in 2022</h3>
+<p>It was a great year for movies and TV Shows.
+Here are some of my favourites of the year.</p>
+<h4 id="tv-shows">TV Shows</h4>
+<ul>
+<li><em>Barry (season 3)</em><br>
+The penultimate season of the series.
+This show is an unusual combination of drama and comedy, where the eponymous character Barry is both an actor and an assassin.
+Now, his worlds are about to collide.
+Barry is played by Bill Hader who is amazing in this role.
+He also writes and directs some of the episodes.</li>
+<li><em>The Rehearsal (season 1)</em><br>
+A masterpiece by Nathan Fielder. Very meta. It is safe to say that this show is like none other. I was surprised to find out that there will be another season of this show.</li>
+<li><em>Better Call Saul (season 6)</em><br>
+A satisfying end to the chicanery of Saul Goodman and to the Breaking Bad universe. It&rsquo;s all gone now. Bravo Vince!</li>
+<li><em>House of the Dragon (season 1)</em><br>
+I will be honest, my expectations for this show were super low after seeing how <em>Game of Thrones</em> ended.
+However, I was convinced otherwise before the first episode ended.
+This show has a lot of plotting, stabbing, and backstabbing, and keeps you at the edge of your seat.
+George R. R. Martin is, of course, a masterful story teller, and the showrunners Ryan Condal and Miguel Sapochnik have done an excellent job translating it to screen.
+A special shout-out to Paddy Considine, who was phenomenal as King Viserys.
+This was a rare occurence where I watched the show before reading the book.
+I have got to read <em>Fire and Blood</em> now.</li>
+</ul>
+<h4 id="movies">Movies</h4>
+<ul>
+<li><em>The Unbearable Weight of Massive Talent</em><br>
+An amazing action-comedy movie starring Nicholas Cage as Nick Cage, as well as Pedro Pascal. This is a fun movie to watch.</li>
+<li><em>Chello Show</em><br>
+A Gujarati movie about a boy fascinated by movies.</li>
+<li><em>Bullet Train</em><br>
+Another action-comedy movie. As the name suggests, this almost entirely takes place on a bullet train. This movie has great action sequences, and the dialogue and story are quite good too.</li>
+<li><em>Glass Onion</em><br>
+While I didn&rsquo;t like it as much as <em>Knives Out</em>, it was still entertaining to see Detective Benoit Blanc back on screen.</li>
+<li><em>The Menu</em><br>
+Anya Tayloy-Joy and Ralph Fiennes are great in this, and so are the supporting cast.
+Not sure if this is a horror or a comedy.
+It is definitely absurd.
+A culinary delight.</li>
+</ul>
+<h3 id="games-in-2022">Games in 2022</h3>
+<p>Some games that I discovered and enjoyed playing this year:</p>
+<ul>
+<li><em>Duotrigordle / Redactle / Worldle</em><br>
+Wordle became popular at the start of this year, and we saw many new *le games.
+These were the ones that I played the most.</li>
+<li><em>NYTimes spelling bee and crossword</em><br>
+I try to solve the NYT Spelling Bee daily and the crossword whenever I can. I can usually only solve the Mondays and Tuesdays crosswords.</li>
+<li><em>Dark Souls</em><br>
+I started playing Dark Souls. I was initially hesitant, or even scared to play it. However, the Souls-like games are so good and they have spoiled most other games for me. Praise the sun! \o/</li>
+</ul>
+<h2 id="my-goals-for-2023">My goals for 2023</h2>
+<p>I have set some goals for myself for this year.</p>
+<h3 id="reading-and-writing">Reading and writing</h3>
+<p>I would like to write more often and on a regular basis.
+I want to be uploading new content on this website more frequently.
+I also want to read more books this year.</p>
+<h3 id="getting-fit">Getting fit</h3>
+<p>I will start going to the gym or cycling regularly.</p>
+<h3 id="languages">Languages</h3>
+<p>I want to learn more languages and become a hyperpolyglot.
+I plan to achieve</p>
+<ul>
+<li>native fluency in ગુજરાતી,</li>
+<li>moderate fluency in français, and</li>
+<li>basic conversational fluency in मराठी and Deutsch.</li>
+</ul>
+<p>I will use flashcards and Rosetta Stone to improve my vocabulary and grammar.
+I will also try to read literature, watch movies, and connect with native speakers to practice and get better at these languages.</p>
+<h3 id="game-development">Game development</h3>
+<p>I want to get good at game development.
+By the end of the year, I want to be comfortable enough with the game engine Godot that creating simple arcade style games such as Tetris, Pacman, and Flappy Bird are second-nature to me.
+I would also like to make and publish one or two moderately complex games.
+I would need to collaborate with someone for the aspects of gamedev that are not my fortes such as pixel art and sound design.</p>
+<hr>
+<p>I will also post some short term goals, and from time to time share updates on how I am progressing along these goals for 2023.
+<a href="https://pranshugaba.com/contact/">Let me know</a> what have you planned for this new year!</p>
+<p> </p>
+<p>That&rsquo;s all for now! See you in the next one. 👋</p>
+]]></description></item><item><title>New Space Images</title><link>https://pranshugaba.com/newsletter/2022-W28/</link><pubDate>Sat, 16 Jul 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/newsletter/2022-W28/</guid><description>
 <![CDATA[<p>Hello there!</p>
 <p>I am back after a bit of a break. To make up for it, here&rsquo;s a longer than usual issue of my newsletter where I share updates about me, this site, and other miscellaneous things.
 Here&rsquo;s what&rsquo;s new since the last issue:</p>
