@@ -1,4 +1,7 @@
 wantToWatch:
+  - title: 'Guardians of the Galaxy: Vol. 3'
+    language: English
+    releaseYear: 2023
   - title: 'Spider-Man: Across the Spider-Verse'
     language: English
     releaseYear: 2023
@@ -16,6 +19,14 @@ wantToWatch:
     releaseYear: 2022
 
 watched:
+  - title: Suzume
+    language: Japanese
+    releaseYear: 2023
+    startDate: 2023-04-23T16:15:00+05:30
+  - title: The Super Mario Bros. Movie
+    language: English
+    releaseYear: 2023
+    startDate: 2023-04-23T11:55:00+05:30
   - title: 'John Wick: Chapter 4'
     language: English
     releaseYear: 2023

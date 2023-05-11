@@ -1,17 +1,12 @@
 watching:
   - title: Hunter × Hunter
     type: Series
-    season: 1
+    season: 3
     channel: Nippon TV
   
   - title: The Last of Us
     type: Season
     season: 1
-    channel: HBO
-
-  - title: Succession
-    type: Series
-    season: 4
     channel: HBO
 
   - title: University Challenge
@@ -66,6 +61,11 @@ wantToWatch:
     season: 1
     channel: HBO
 
+  - title: It's Always Sunny in Philadelphia
+    type: Season
+    season: 16
+    channel: FXX
+
   - title: Trailer Park Boys
     type: Season
     season: 6
@@ -87,6 +87,11 @@ wantToWatch:
     channel: Wit Studio
 
 watched:
+  
+  - title: Incastrati
+    type: Season
+    season: 2
+    channel: Netflix
 
   - title: Archer
     type: Season
@@ -158,10 +163,6 @@ watched:
     season: 3
     channel: Netflix
 
-  - title: It's Always Sunny in Philadelphia
-    type: Season
-    season: 15
-    channel: FXX
 
   - title: Final Space
     type: Series
@@ -201,6 +202,12 @@ done:
     season: 1
     channel: Disney+
 abandoned:
+
+  - title: Succession
+    type: Series
+    season: 4
+    channel: HBO
+
   - title: Killing Eve
     type: Season
     season: 4
