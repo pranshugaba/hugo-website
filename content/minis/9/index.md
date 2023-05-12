@@ -5,7 +5,7 @@ summary: 'Upside Down'
 date: 2022-05-26T20:17:00+05:30
 lastmod: 2022-05-26T20:17:00+05:30
 
-tags: ['lights', 'tv-shows', 'stranger-things']
+tags: ['lights', 'tv-series', 'stranger-things']
 
 draft: false
 featured: false

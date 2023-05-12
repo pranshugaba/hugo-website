@@ -6,7 +6,7 @@ summary: "A review of the year gone by and some goals for the year to come"
 date: 2023-01-07T17:30:00+05:30
 lastmod: 2023-01-07T17:30:00+05:30
 
-tags: ['books', 'games', 'movies', 'tv-shows', 'travel', 'gamedev']
+tags: ['books', 'games', 'movies', 'tv-series', 'travel', 'gamedev']
 
 week: '01'
 

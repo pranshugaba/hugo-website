@@ -22,7 +22,7 @@ I publish a newsletter in which I share updates about myself and this site. Here
 Add the following feed to your feed reader to subscribe to my newsletter.
 
 ```shell
-https://pranshugaba.com/newsletters/index.xml
+https://pranshugaba.com/newsletter/index.xml
 ```
 
 All past issues are also available to read on this website at [https://pranshugaba.com/newsletter]({{< ref "/newsletter" >}}). You can bookmark this page and browse through it anytime you like.
