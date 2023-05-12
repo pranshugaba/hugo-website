@@ -7,34 +7,31 @@ display: none
 
 ## About me
 
-Hi, I'm Pranshu. I am currently a third-year PhD student in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
-My research interests include Logic, Automata, and Games, as well as Algebra and Combinatorics.
-Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in/).
+Hi, I'm Pranshu.  :wave:
 
 ### Education
 
-- Tata Institute of Fundamental Research, Mumbai 
-    - PhD in Theoretical Computer Science (in progress)
-    - Sep 2020 -- July 2025 (expected)
-    - Coursework
-        - Algebraic Automata theory
-        - Logic, Automata, and Games
-        - Algebra and Computation
-        - Computational Complexity
-        - Online Algorithms
+#### TIFR, Mumbai
+I am a third-year PhD student in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
+My research interests include Logic, Automata, and Games.
+Some relevant courses that I have taken include 
+- Algebraic Automata Theory
+- Logic, Automata, and Games
+- Algebra and Computation
+- Computational Complexity
+- Online Algorithms
 
-
-- Indian Institute of Science, Bangalore
-    - Bachelor of Science (Research)
-    - August 2016 -- July 2020
-    - Coursework
-        - Automata and Computability
-        - Game theory
-        - Graph theory
-        - Combinatorics
-        - Algebra I and II
-        - Topology
-        - Measure theory
+#### IISc, Bangalore
+Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in/) from 2016 to 2020.
+Some courses that I took in IISc include  
+- Automata and Computability 
+- Graphics and Visualization
+- Game theory 
+- Graph theory 
+- Combinatorics 
+- Algebra I and II 
+- Topology 
+- Measure theory
 
 ### Hobbies
 
@@ -48,6 +45,7 @@ I am currently learning game development using the Godot game engine.
 
 In my free time, I [read books]({{< ref "/now#reading" >}}), solve the [New York Times crossword](https://www.nytimes.com/crosswords) and [Spelling Bee](https://www.nytimes.com/puzzles/spelling-bee), or play bullet chess (1+0) on [lichess.org](https://lichess.org).
 
+{{< figure src="lotus.webp" caption="Me looking at purple lotuses in a pond" alt="Picture of Pranshu looking at purple lotuses in a pond" >}}
 
 ## About this site
 
