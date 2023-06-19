@@ -2,9 +2,10 @@ wantToRead:
   - title: Dune
     author: Frank Herbert
     startDate: 2021-07-01T05:30:00+05:30
+  - title: Maus
+    author: Art Spiegelman
   - title: Fire and Blood
     author: George R. R. Martin
-    startDate: 2022-10-20T15:30:00+05:30
   - title: The Colour of Magic
     author: Terry Pratchett
   - title: The Blade Itself
@@ -20,15 +21,24 @@ wantToRead:
     author: J. R. R. Tolkien
   - title: The Winds of Winter
     author: George R. R. Martin
+
 reading:
-  - title: Moby Dick
-    author: Herman Melville
-    startDate: 2022-10-30T05:30:00+05:30
+  - title: Lolita
+    author: Vladimir Nabokov
+    startDate: 2023-06-17T09:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: Frankenstein, or The Modern Prometheus
+    author: Mary Wollstonecraft Shelley
+    startDate: 2023-05-30T05:30:00+05:30
+    endDate: 2023-06-17T09:30:00+05:30
+  - title: Moby Dick
+    author: Herman Melville
+    startDate: 2022-10-30T05:30:00+05:30
+    endDate: 2023-05-29T05:30:00+05:30
   - title: The Little Prince
     author: Antoine de Saint-Exupéry
     startDate: 2023-03-04T20:30:00+05:30

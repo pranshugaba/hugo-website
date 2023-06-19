@@ -1,11 +1,5 @@
 wantToWatch:
-  - title: 'Guardians of the Galaxy: Vol. 3'
-    language: English
-    releaseYear: 2023
-  - title: 'Spider-Man: Across the Spider-Verse'
-    language: English
-    releaseYear: 2023
-  - title: Beau is Afraid
+  - title: Asteroid City
     language: English
     releaseYear: 2023
   - title: Renfield
@@ -19,6 +13,30 @@ wantToWatch:
     releaseYear: 2022
 
 watched:
+  - title: 'Spider-Man: Across the Spider-Verse'
+    language: English
+    releaseYear: 2023
+  - title: 'Spider-Man: Into the Spider-Verse'
+    language: English
+    releaseYear: 2018
+  - title: 'Guardians of the Galaxy: Vol. 3'
+    language: English
+    releaseYear: 2023
+  - title: Night on Earth
+    language: English
+    releaseYear: 1991
+  - title: Beau is Afraid
+    language: English
+    releaseYear: 2023
+  - title: 'The Lord of the Rings: The Return of the King'
+    language: English
+    releaseYear: 2003
+  - title: 'The Lord of the Rings: The Two Towers'
+    language: English
+    releaseYear: 2002
+  - title: 'The Lord of the Rings: The Fellowship of the Ring'
+    language: English
+    releaseYear: 2001
   - title: Suzume
     language: Japanese
     releaseYear: 2023
