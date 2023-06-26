@@ -1,0 +1,30 @@
+{{ $numberOfItems := 3 }}
+
+{{ $newsItems := "" }}
+{{ with $.Site.Data.news }}
+    {{ $newsItems = $.Site.Data.news }}
+{{ end }}
+
+<div class="home__recent [ flow ]">
+    <h3 class="home__recent__heading">News</h3>
+    <ul>
+    {{ with $newsItems }}
+        {{ range first $numberOfItems . }}
+        <li>
+            {{ .description | markdownify }}
+            {{ with .newsDate }}
+                <span class="item__date">
+                    <time datetime="{{ dateFormat "2006-01-02" . }}">{{ dateFormat "Jan 02, 2006" . }}</time>
+                </span>
+            {{ end }}
+        </li>
+        {{ end }}
+    {{ end }}
+    </ul>
+    {{ if gt (len $newsItems) $numberOfItems}}
+        <div class="home__recent__seeall" >
+            <a href="/news"> See all news &#8594;</a>
+        </div>
+    {{ end }}
+</div>
+

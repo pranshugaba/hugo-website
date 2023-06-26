@@ -16,12 +16,6 @@
       <p class="profile__primary">Pranshu Gaba</p>
       <p class="profile__secondary"><a href="/about">About me &#8594;</a></p>
     </div>
-    {{/*  <div class="home__profile__news">
-      <h3>News</h3>
-        <p>this is nice</p>
-        <p>this is nice</p>
-        <p>this is nice</p>
-    </div>  */}}
   </div>
   <div class="home__content">
     <header class="page__header">
@@ -29,6 +23,7 @@
       <p class="page__subtitle" id="kenobi">{{ .Params.Subtitle }}</p>
     </header>
     <article class="flow">{{ .Content }}</article>
+    {{ partial "home/recent-news" . }}
     {{ partial "home/recent-home" . }}
     {{ partial "home/recent-photos" . }}
   </div>

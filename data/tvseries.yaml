@@ -3,6 +3,11 @@ watching:
     type: Season
     season: 16
     channel: FXX
+  
+  - title: 'NPC D&D'
+    type: Season
+    season: 1
+    channel: VLDL
 
   - title: Barry
     type: Series

@@ -1,0 +1,9 @@
+upcoming:
+  - title: Stochastic Window Mean-payoff Games
+    abstract: 'Stochastic two-player games model systems with an environment that is both adversarial and stochastic. The environment is modelled by a player (Player 2) who tries to prevent the system (Player 1) from achieving its objective. We consider window mean-payoff objectives: these are finitary versions of the traditional mean-payoff objective, obtained by replacing the long-run average of the payoffs by average payoffs computed over a finite sliding window. We present complexity bounds and algorithmic solutions for computing strategies of Player 1 to ensure that the objective is satisfied with positive probability, with probability 1, or with probability at least p, regardless of the strategy of Player 2. The solution crucially relies on a reduction to the special case of non-stochastic two-player games with the same objective. We also give a general characterisation of prefix-independent objectives for which this reduction holds. This is a joint work with Laurent Doyen and Shibashis Guha.'
+    eventName: FMUpdate 2023
+    eventLink: 'https://fmindia.cmi.ac.in/update2023/'
+    date: 2023-06-29T05:30:00+05:30
+    location: IIT Goa, India
+    slides:
+    recording:

@@ -1,7 +1,7 @@
-upcoming:
+- description: 'I am giving a talk on _Stochastic Window Mean Payoff Games_ at [FMUpdate&nbsp;2023](https://fmindia.cmi.ac.in/update2023/)'
+  date: 2023-06-13T17:30:00+05:30
+  link: 'https://fmindia.cmi.ac.in/update2023/'
 
-past:
-  -
-    description: New preprint "Stochastic Window Mean Payoff Games" uploaded on arXiv
-    date: 2023-04-23T17:30:00+05:30
-    link: 'https://arxiv.org/abs/2304.11563'
+- description: New preprint [_Stochastic Window Mean Payoff Games_](https://arxiv.org/abs/2304.11563) uploaded on arXiv
+  date: 2023-04-23T17:30:00+05:30
+  link: 'https://arxiv.org/abs/2304.11563'
