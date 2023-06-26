@@ -1683,7 +1683,6 @@ figure figcaption {
        column-gap: 3rem;
   row-gap: 2rem;
   grid-template-columns: 1fr;
-  align-items: flex-start;
 }
 @media (min-width: 800px) {
   .home {
@@ -1719,11 +1718,11 @@ figure figcaption {
   font-family: var(--font-sans-serif);
   font-size: var(--font-size-700);
   letter-spacing: -0.01em;
-  margin-top: 1.25rem;
-  margin-bottom: 1.5rem;
+  margin-block: 1.25rem;
 }
 .home__recent__seeall {
-  margin-top: 1.5rem;
+  -webkit-margin-before: 1.5rem;
+          margin-block-start: 1.5rem;
 }
 
 .profile__primary {
