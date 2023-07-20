@@ -4,6 +4,11 @@ watching:
     season: 16
     channel: FXX
   
+  - title: I Think You Should Leave with Tim Robinson
+    type: Season
+    season: 2
+    channel: Netflix
+  
   - title: 'NPC D&D'
     type: Season
     season: 1
