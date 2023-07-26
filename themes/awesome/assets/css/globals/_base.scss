@@ -3,7 +3,7 @@
 html {
   font-size: 115%;
   @media (min-width: 640px) {
-    font-size: 130%;
+    font-size: 125%;
   }
   @media print {
     font-size: 80%;
@@ -54,41 +54,47 @@ h6 + p {
 
 h1 {
   font-family: var(--font-serif);
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   font-weight: 500;
   font-variation-settings: 'wght' 500;
+  text-wrap: balance;
 }
 
 h2 {
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 500;
   font-variation-settings: 'wght' 500;
+  text-wrap: balance;
 }
 
 h3 {
   font-family: var(--font-sans-serif);
   letter-spacing: -0.02em;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 500;
+  text-wrap: balance;
 }
 
 h4 {
   font-family: var(--font-sans-serif);
   font-size: 1.2rem;
   font-weight: 500;
+  text-wrap: balance;
 }
 
 h5 {
   font-family: var(--font-sans-serif);
   font-size: 1.125rem;
   font-weight: 600;
+  text-wrap: balance;
 }
 
 h6 {
   font-family: var(--font-sans-serif);
   font-size: 1rem;
   font-weight: 600;
+  text-wrap: balance;
 }
 
 strong {
