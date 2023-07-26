@@ -23,14 +23,18 @@ wantToRead:
     author: George R. R. Martin
 
 reading:
-  - title: Lolita
-    author: Vladimir Nabokov
-    startDate: 2023-06-17T09:30:00+05:30
+  - title: The Lions of Al-Rassan
+    author: Guy Gavriel Kay
+    startDate: 2023-07-26T00:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: Lolita
+    author: Vladimir Nabokov
+    startDate: 2023-06-17T09:30:00+05:30
+    endDate: 2023-07-16T10:00:00+05:30
   - title: Frankenstein, or The Modern Prometheus
     author: Mary Wollstonecraft Shelley
     startDate: 2023-05-30T05:30:00+05:30
