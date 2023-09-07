@@ -1,0 +1,9 @@
+<ul class="[ talks__list ] [ flow ]">
+    {{ with $.Site.Data.talks }}
+        {{ range . }}
+        <li>
+            {{ partial "list/talks.html" . }}
+        </li>
+        {{ end }}
+    {{ end }}
+</ul>

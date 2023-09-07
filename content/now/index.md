@@ -7,7 +7,7 @@ summary: A little bit about me and my website
 
 ## PhD
 
-I am a third-year PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/).
+I am a fourth-year PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/).
 I am working on Formal Methods with my advisor [Shibashis Guha](https://www.tifr.res.in/~shibashis.guha/).
 
 
@@ -27,7 +27,7 @@ I am learning game development using the [Godot game engine](https://www.godoten
 
 ## Gaming
 
-I play _Fallout: New Vegas_, _Linelight_, and _Uncharted 4_ nowadays. 
+I play _Uncharted 4_ and _PlateUp!_ nowadays. 
 
 ---
 

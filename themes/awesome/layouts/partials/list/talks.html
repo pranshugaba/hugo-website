@@ -1,0 +1,17 @@
+<div class="list-talks__item">
+  <div class="item__details">
+      <div class="item__title">{{ .title }}</div> 
+      <div class="item__abstract">{{ .abstract | markdownify }}</div> 
+      {{ with .eventName }}
+        <div class="item__eventName">{{ . }}</div> 
+      {{ end }}
+  </div>
+  <div class="item__date">
+    {{ with .date }}
+        <time datetime="{{ dateFormat "2006-01-02T15:04:00-07:00" . }}">{{ dateFormat "January 2, 2006 3:04 PM" . }}</time>
+    {{ end }}
+    {{ with .location }}
+      <div class="item__location">{{ . }}</div> 
+    {{ end }}
+  </div>
+</div>

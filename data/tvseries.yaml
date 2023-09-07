@@ -4,11 +4,6 @@ watching:
     season: 16
     channel: FXX
   
-  - title: I Think You Should Leave with Tim Robinson
-    type: Season
-    season: 2
-    channel: Netflix
-  
   - title: 'NPC D&D'
     type: Season
     season: 1
@@ -27,8 +22,18 @@ watching:
   - title: Taskmaster
     type: Series
     channel: Channel 4
-    season: 14
+    season: 15
     startDate: 2021-02-01T05:30:00+05:30
+
+  - title: University Challenge
+    type: Series
+    season: 53
+    channel: BBC
+
+  - title: Only Connect
+    type: Series
+    season: 19
+    channel: BBC
 
 wantToWatch:
   - title: Dark
@@ -87,6 +92,11 @@ wantToWatch:
     channel: Wit Studio
 
 watched:
+  - title: I Think You Should Leave with Tim Robinson
+    type: Season
+    season: 3
+    channel: Netflix
+  
   - title: Hunter × Hunter
     type: Series
     season: 6
@@ -96,11 +106,6 @@ watched:
     type: Season
     season: 1
     channel: Netflix
-
-  - title: University Challenge
-    type: Series
-    season: 52
-    channel: BBC
 
   - title: Incastrati
     type: Season
