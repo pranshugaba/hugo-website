@@ -11,10 +11,6 @@ I am a fourth-year PhD student in Theoretical Computer Science at [TIFR, Mumbai]
 I am working on Formal Methods with my advisor [Shibashis Guha](https://www.tifr.res.in/~shibashis.guha/).
 
 
-## Learning
-
-I am learning game development using the [Godot game engine](https://www.godotengine.org). 
-
 ## Reading
 {{< currently-reading >}}
 

@@ -1,13 +1,4 @@
 wantToWatch:
-  - title: Barbie
-    language: English
-    releaseYear: 2023
-  - title: Oppenheimer
-    language: English
-    releaseYear: 2023
-  - title: Asteroid City
-    language: English
-    releaseYear: 2023
   - title: Renfield
     language: English
     releaseYear: 2023
@@ -19,6 +10,15 @@ wantToWatch:
     releaseYear: 2022
 
 watched:
+  - title: Asteroid City
+    language: English
+    releaseYear: 2023
+  - title: Oppenheimer
+    language: English
+    releaseYear: 2023
+  - title: Barbie
+    language: English
+    releaseYear: 2023
   - title: 'Mission: Impossible - Dead Reckoning Part One'
     language: English
     releaseYear: 2023
