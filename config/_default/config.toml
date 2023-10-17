@@ -52,6 +52,7 @@ tag = "tags"
 [params]
 mainSections = [
     "posts",
+    "a-propos-de-moi",
     "thoughts",
     "dev",
     "maths",

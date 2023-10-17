@@ -27,17 +27,18 @@ I have hidden a number of easter eggs across this site. How many can you find?
 
 |                         Count | Section                                         |
 | ----------------------------: | :---------------------------------------------- |
-|      {{< countposts posts >}} | [Posts]({{< ref "/posts/" >}})                  |
-|      {{< countposts trips >}} | [Trips]({{< ref "/trips/" >}})                  |
-|    {{< countposts recipes >}} | [Recipes]({{< ref "/recipes/" >}})              |
-|    {{< countposts puzzles >}} | [Puzzles]({{< ref "/puzzles/" >}})              |
-|      {{< countposts poems >}} | [Poems]({{< ref "/poems/" >}})                  |
-|    {{< countposts stories >}} | [Stories]({{< ref "/stories/" >}})              |
-|     {{< countposts comics >}} | [Comics]({{< ref "/comics/" >}})                |
-|        {{< countposts dev >}} | [Dev articles]({{< ref "/dev/" >}})             |
-|      {{< countposts minis >}} | [Minis]({{< ref "/minis/" >}})                  |
-| {{< countposts newsletter >}} | [Newsletter issues]({{< ref "/newsletter/" >}}) |
-|   {{< countposts thoughts >}} | [Thoughts]({{< ref "/thoughts/" >}})            |
+|      {{< countposts posts >}} | [posts]({{< ref "/posts/" >}})                  |
+|      {{< countposts trips >}} | [trips]({{< ref "/trips/" >}})                  |
+|    {{< countposts recipes >}} | [recipes]({{< ref "/recipes/" >}})              |
+|    {{< countposts puzzles >}} | [puzzles]({{< ref "/puzzles/" >}})              |
+|      {{< countposts poems >}} | [poems]({{< ref "/poems/" >}})                  |
+|    {{< countposts stories >}} | [stories]({{< ref "/stories/" >}})              |
+|     {{< countposts comics >}} | [comics]({{< ref "/comics/" >}})                |
+| {{< countposts newsletter >}} | [newsletter issues]({{< ref "/newsletter/" >}}) |
+| {{< countposts a-propos-de-moi >}} | [à propos de moi]({{< ref "/a-propos-de-moi/" >}}) |
+|   {{< countposts thoughts >}} | [thoughts]({{< ref "/thoughts/" >}})            |
+|      {{< countposts minis >}} | [minis]({{< ref "/minis/" >}})                  |
+|        {{< countposts dev >}} | [dev articles]({{< ref "/dev/" >}})             |
 |     **{{< countpostsall >}}** | **Total**                                       |
 
 Last updated: {{< lastupdated >}}

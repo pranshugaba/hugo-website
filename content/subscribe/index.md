@@ -50,9 +50,10 @@ If you are only interested in subscribing to certain sections, you can do that a
 - [poems](/poems/index.xml)
 - [stories](/stories/index.xml)
 - [comics](/comics/index.xml)
-- [dev](/dev/index.xml)
-- [minis](/minis/index.xml)
 - [thoughts](/thoughts/index.xml)
+- [à propos de moi](/a-propos-de-moi/index.xml)
+- [minis](/minis/index.xml)
+- [dev](/dev/index.xml)
 
 ### Tags
 
