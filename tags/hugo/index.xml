@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hugo by Pranshu Gaba</title><link>https://pranshugaba.com/tags/hugo/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 18 Oct 2023 01:03:34 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/hugo/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Colour Shortcode</title><link>https://pranshugaba.com/dev/hugo-colour-shortcode/</link><pubDate>Wed, 21 Jul 2021 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/hugo-colour-shortcode/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hugo by Pranshu Gaba</title><link>https://pranshugaba.com/tags/hugo/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 18 Oct 2023 22:27:28 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/hugo/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Colour Shortcode</title><link>https://pranshugaba.com/dev/hugo-colour-shortcode/</link><pubDate>Wed, 21 Jul 2021 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/hugo-colour-shortcode/</guid><description>
 <![CDATA[<p>I was writing a <a href="https://pranshugaba.com/dev/moving-back-to-hugo/">post about my new Hugo website</a>, and I wanted to describe the colours used on this site. I wrote the names of the colours, but names do not convey the colour very well. Can you imagine what the colour #714825 looks like? What about rgb(0, 100, 255)?</p>
 <p>I thought it would be great if the reader could also see a preview of the colours. I could add images of the colours that I am describing, but that is a lot of work and not very flexible.  This is what led me to write this Hugo shortcode. I followed the <a href="https://gohugo.io/templates/shortcode-templates/" target="_blank" rel="noopener">Hugo docs on shortcodes</a> for reference.</p>
 <h2 id="usage">Usage</h2>
@@ -144,7 +144,6 @@
     
     <figcaption>
         
-        
             This is how my Nuxt website looked  like.
             
             
@@ -153,6 +152,7 @@
     </figcaption>
     
 </figure>
+
 
 <p>I used <a href="https://tailwindcss.com/" target="_blank" rel="noopener">TailwindCSS</a> to style my site, and it was amazing not having to think of class names anymore. It was easy to prototype and iterate over different styles quickly, even if it meant having a dirty HTML code overriden with dozens of classes.</p>
 <p>Another thing I loved about Nuxt is that it is based on Vue, and therefore I could make reusable components for different parts of my site. Almost everything on my site was a component: header, footer, links, figures, headings, author bios, pagination, even the dark mode switch. To make my website, I had to design the components and then assemble them together, just like Lego! It was so much fun.</p>
@@ -173,7 +173,6 @@
     
     <figcaption>
         
-        
             Some of the components in my Nuxt website
             
             
@@ -182,6 +181,7 @@
     </figcaption>
     
 </figure>
+
 
 <p>Once I finished adding features to my site, I wrote a tutorial on game development: <a href="https://pranshugaba.com/dev/building-x-and-o-using-godot/">Building an X and O game in Godot</a>. It was a long article &ndash; about 7000 words long &ndash; and it was filled with notes, figures, and codefences. With a post this big, I was beginning to face performance issues.</p>
 <p>The site was taking too long to build. The initial build of the site would take more than 17 seconds to complete, and the server would take up about 1.5 GB of memory. I found out that one of the main offenders was Tailwind. I switched Tailwind to JIT mode, and the startup build time reduced to 6 seconds. But this increased again as I added custom styling.</p>
@@ -211,6 +211,7 @@
     
     
 </figure>
+
 
 <p>I also love the creative decisions that I have to take when I have just two colours at my disposal. There are no box-shadows, no transparency, and no colour (except for images) on this site. Any component on the site must use exactly one of the two colours in the palette.</p>
 <p>I am no longer using Tailwind to style the site; I am using <a href="https://sass-lang.com/" target="_blank" rel="noopener">Sass</a> now. I do have to think of class names for each class, but using the BEM methodology helps. While Tailwind has most of the CSS features, it still lacks many newer CSS properties. I can now use all CSS properties now such as underline-offset, smooth scrolling, scroll-padding-top, etc.</p>

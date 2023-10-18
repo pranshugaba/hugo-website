@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>godot by Pranshu Gaba</title><link>https://pranshugaba.com/tags/godot/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 18 Oct 2023 01:03:34 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/godot/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/godot/index.xml" rel="self" type="application/rss+xml"/><item><title>Godot 4.0 released</title><link>https://pranshugaba.com/dev/godot-4-released/</link><pubDate>Mon, 06 Mar 2023 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/godot-4-released/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>godot by Pranshu Gaba</title><link>https://pranshugaba.com/tags/godot/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 18 Oct 2023 22:27:28 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/godot/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/godot/index.xml" rel="self" type="application/rss+xml"/><item><title>Godot 4.0 released</title><link>https://pranshugaba.com/dev/godot-4-released/</link><pubDate>Mon, 06 Mar 2023 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/godot-4-released/</guid><description>
 <![CDATA[<p>After being in development for years, version 4.0 of <a href="https://www.youtube.com/watch?v=chXAjMQrcZk" target="_blank" rel="noopener">the game engine Godot</a> was released this week.
 It is a big release and I am excited to try it out!
 Nathan from GDQuest posted an half-hour long video describing the highlights of <a href="https://www.youtube.com/watch?v=chXAjMQrcZk" target="_blank" rel="noopener">what&rsquo;s new in this version</a>.
@@ -190,7 +190,6 @@ You can also play the final version game to see how it works on my itch.io page.
       
       <figcaption>
           
-          
               We have the game title, some instructions, the grid, and some labels to show whose turn it is to play.
               
               
@@ -199,6 +198,7 @@ You can also play the final version game to see how it works on my itch.io page.
       </figcaption>
       
   </figure>
+  
 </li>
 <li>We will describe the gameplay loop using a flowchart. It will also tell us how long a session will last.</li>
 </ul>
@@ -221,7 +221,6 @@ We want to explicitly state how the game receives inputs, what decisions it take
     
     <figcaption>
         
-        
             The gameplay loop
             
             
@@ -230,6 +229,7 @@ We want to explicitly state how the game receives inputs, what decisions it take
     </figcaption>
     
 </figure>
+
 
 <p>To summarise:</p>
 <ul>
@@ -258,6 +258,7 @@ Select &ldquo;Create &amp; Edit&rdquo; to create the project.</p>
     
 </figure>
 
+
 <p>By default, when we start a new project, Godot starts in 3D mode. We are making a 2D game, so switch to 2D mode by clicking on &ldquo;2D&rdquo; at the top. The default shortcut to enter 2D mode is <kbd>Ctrl</kbd> + <kbd>F1</kbd>.</p>
 
 <figure >
@@ -274,7 +275,6 @@ Select &ldquo;Create &amp; Edit&rdquo; to create the project.</p>
     
     <figcaption>
         
-        
             Click on 2D.
             
             
@@ -283,6 +283,7 @@ Select &ldquo;Create &amp; Edit&rdquo; to create the project.</p>
     </figcaption>
     
 </figure>
+
 
 <p>Screens come in a variety of shapes and sizes. Some are square, some are tall, some are wide.
 We want our game to render correctly on all screens.
@@ -303,6 +304,7 @@ We will target a fixed resolution, so we do not have to worry about making the l
     
     
 </figure>
+
 
 <p>In the General tab, look for the section named &ldquo;Window&rdquo; in &ldquo;Display&rdquo;.</p>
 <ul>
@@ -337,6 +339,7 @@ You can <NavExtLink to="/">download my assets</NavExtLink>, or you can make your
 
 
 
+
 <aside class="admonition note">
     <div class="admonition__title">
         Note
@@ -361,6 +364,7 @@ You can <NavExtLink to="/">download my assets</NavExtLink>, or you can make your
     
     
 </figure>
+
 
 
 
@@ -391,6 +395,7 @@ When you open Godot, you will see those files in the FileSystem tab.</p>
     
     
 </figure>
+
 
 <h2 id="building-the-interface">Building the interface</h2>
 <p>We have imported all the resources that we need in Godot. We can now start building the user interface.</p>
@@ -424,6 +429,7 @@ Click on <code>Create root node</code> -&gt; <code>2D node</code> in the Scene t
     
 </figure>
 
+
 <p>Now that we have a root node, we can save the scene and run the game. Save the scene by pressing <kbd>Ctrl</kbd>+<kbd>S</kbd>.
 Make a <code>scenes</code> folder in the root directory and save this scene in it as <code>Game.tscn</code>.</p>
 
@@ -440,6 +446,7 @@ Make a <code>scenes</code> folder in the root directory and save this scene in i
     
     
 </figure>
+
 
 
 
@@ -469,6 +476,7 @@ Make a <code>scenes</code> folder in the root directory and save this scene in i
     
 </figure>
 
+
 <p>Of course, we haven&rsquo;t added anything to our scene yet, so we only see a blank screen when the game is run.
 Close the window (or press <kbd>F8</kbd>) to stop the preview.</p>
 <p>We look to our sketch to help us build the interface. We need a grid, some X&rsquo;s, some O&rsquo;s, and some text labels.</p>
@@ -490,6 +498,7 @@ Close the window (or press <kbd>F8</kbd>) to stop the preview.</p>
     
 </figure>
 
+
 <p>A <code>Label</code> node appears as a child of <code>Game</code> in the scene tab.
 Rename the name of this node to <code>GameName</code> because that&rsquo;s what it is.</p>
 
@@ -507,6 +516,7 @@ Rename the name of this node to <code>GameName</code> because that&rsquo;s what 
     
 </figure>
 
+
 <p>We do not see any change in our game because the label has no text. We can add/edit the text of the <code>Label</code> by editing the <code>Text</code> property in the inspector tab. This label will display the name of the game: &ldquo;X and O&rdquo;. Change the text of the label to &ldquo;X and O&rdquo;.</p>
 
 <figure >
@@ -522,6 +532,7 @@ Rename the name of this node to <code>GameName</code> because that&rsquo;s what 
     
     
 </figure>
+
 
 <p>The label is hard to read: it is small and is white on a white background. We will fix this by using a custom font.</p>
 
@@ -539,6 +550,7 @@ Rename the name of this node to <code>GameName</code> because that&rsquo;s what 
     
 </figure>
 
+
 <p>In the inspector tab, in <code>Custom Fonts</code>, enable the Font property. Click on Empty -&gt; New DynamicFont.</p>
 
 <figure >
@@ -554,6 +566,7 @@ Rename the name of this node to <code>GameName</code> because that&rsquo;s what 
     
     
 </figure>
+
 
 <p>Click on &ldquo;Dynamic Font&rdquo; to show some additional settings. In Font -&gt; Font Data, click on Empty -&gt; Load and select your font file. We can adjust the font size in <code>Settings</code>. We would like the name of the game to be big, so I set the font size to <code>96</code>. We can also change the font colours in Custom Colours -&gt; Font colours. Play with the parameters until you have happy with the appearance.</p>
 
@@ -571,6 +584,7 @@ Rename the name of this node to <code>GameName</code> because that&rsquo;s what 
     
 </figure>
 
+
 <p>We have three more labels to show in our interface. Repeat this process three times to end up with a total of four labels.
 I made three new <code>Label</code> nodes with names <code>WinCondition</code>, <code>PlayerTurn</code>, and <code>PlayerInstruction</code>. My game looks like this now.</p>
 
@@ -587,6 +601,7 @@ I made three new <code>Label</code> nodes with names <code>WinCondition</code>, 
     
     
 </figure>
+
 
 
 
@@ -624,6 +639,7 @@ We do not see any change in our game because the sprite does not have a texture.
     
 </figure>
 
+
 <p>In <code>GridSprite</code>, in transform, set the Scale to <code>0.3</code> and <code>0.3</code>.</p>
 
 <figure >
@@ -640,6 +656,7 @@ We do not see any change in our game because the sprite does not have a texture.
     
 </figure>
 
+
 <p>The grid fits in the screen now.</p>
 
 <figure >
@@ -655,6 +672,7 @@ We do not see any change in our game because the sprite does not have a texture.
     
     
 </figure>
+
 
 <p>We want to be able to detect clicks.
 We can detect clicks in an area using the <code>Area2D</code> node. We will have nine <code>Area2D</code> nodes, one for each cell of the grid.</p>
@@ -677,6 +695,7 @@ We get this warning because we have an <code>Area2D</code> node, but we haven&rs
     
 </figure>
 
+
 <p>Resize and move the blue area so it covers one of the grid cells.
 Using Grid Snap will make it easier to fit the CollisionShape2D on the cell perfectly.</p>
 
@@ -693,6 +712,7 @@ Using Grid Snap will make it easier to fit the CollisionShape2D on the cell perf
     
     
 </figure>
+
 
 <p>We would like to show &ldquo;X&rdquo; and &ldquo;O&rdquo; symbols in the cells when the game is played. Recall that we show images using the <code>Sprite</code> node.
 Add a <code>Sprite</code> as a child of <code>GridCell</code>, and rename it to <code>CellSymbol</code>. Choose the texture as <code>x.png</code>. If you are using my assets, you will need to scale it to <code>0.3</code> and translate it by <code>96</code> and <code>96</code> to centre the image in the cell.</p>
@@ -716,6 +736,7 @@ However, if we want to make any changes to this node in the future, we would hav
     
 </figure>
 
+
 <p>Duplicate the node nine times. Move the nodes so we have one in each grid. Make sure to arrange them in order, because we will refer to them later when we want to detect win conditions. Also, rename <code>GridCell</code> to <code>GridCell1</code> for consistency.</p>
 
 <figure >
@@ -732,6 +753,7 @@ However, if we want to make any changes to this node in the future, we would hav
     
 </figure>
 
+
 <p>The texture that we set in the sprite in <code>GridCell</code> appears nine times in the grid. If we change the texture of the sprite in the <code>GridCell</code> scene, say to <code>x.png</code>, then observe that the sprite of every cell in the grid changes to an &ldquo;X&rdquo;.</p>
 
 <figure >
@@ -747,6 +769,7 @@ However, if we want to make any changes to this node in the future, we would hav
     
     
 </figure>
+
 
 <p>Since we start the game with the empty grid, we don&rsquo;t want any of the X&rsquo;s and O&rsquo;s to show initially. We will show them one by one, programmatically, when the players play the game. For now, remove the texture from the <code>CellSymbol</code> sprite in <code>GridCell</code> to get an empty grid.</p>
 <p>We have added all the nodes needed to make the game, but the game is still static and doesn&rsquo;t do much.
@@ -771,6 +794,7 @@ You can read the <a href="https://docs.godotengine.org/en/stable/getting_started
     
 </figure>
 
+
 <p>This shows the &ldquo;Attach Script dialog&rdquo;.</p>
 
 <figure >
@@ -786,6 +810,7 @@ You can read the <a href="https://docs.godotengine.org/en/stable/getting_started
     
     
 </figure>
+
 
 <p>The default options are fine, click &ldquo;Create&rdquo;. This will create a file named <code>Game.gd</code>. This is where will write the logic for the game.
 The contents of this script will look like this.</p>
@@ -943,6 +968,7 @@ Make sure the node your script is attached to is active.</p>
     
     
 </figure>
+
 
 <p>For example, if you want to hide the <code>GridSprite</code> when the game starts, you can do the following:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
@@ -1149,6 +1175,7 @@ We are listening for the signal in the <code>GridCell</code> node as well. This 
     
     
 </figure>
+
 
 <p>Select <code>GridCell</code> and click &ldquo;Connect&rdquo;.
 This creates the receiver function <code>_on_GridCell_input_event</code> in <code>GridCell.gd</code> for us.</p>
@@ -1468,6 +1495,7 @@ A lot of the code that we require is already in <code>_ready</code>. We would li
     
     
 </figure>
+
 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_process</span><span class="p">(</span><span class="n">delta</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">!</span><span class="n">game_started</span><span class="p">:</span>
