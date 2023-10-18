@@ -11,16 +11,13 @@
         {{ with $darkImg }}
         <source srcset="{{ .Permalink }}" media="(prefers-color-scheme: dark)">
         {{ end }}
-        <img src="{{ $lightImg.Permalink }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }}>
+        <img src="{{ $lightImg.Permalink }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }}{{ if (.Get "title") }}{{ if isset .Params "title" }}title="{{ .Get "title" }}"{{ end }}{{ end }}>
     </picture>
     {{ if .Get "link" }}
         </a>
     {{ end }}
     {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr") }}
     <figcaption>
-        {{ if isset .Params "title" }}
-            <h4>{{ .Get "title" }}</h4>
-        {{ end }}
         {{ if or (.Get "caption") (.Get "attr") }}
             {{ .Get "caption" | markdownify }}
             {{ with .Get "attrlink" }}
