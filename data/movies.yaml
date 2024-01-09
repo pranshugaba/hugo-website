@@ -10,6 +10,30 @@ wantToWatch:
     releaseYear: 2022
 
 watched:
+  - title: Dream Scenario
+    language: English
+    releaseYear: 2023
+  - title: Migration
+    language: English
+    releaseYear: 2023
+  - title: Wonka
+    language: English
+    releaseYear: 2023
+  - title: The Eras Tour
+    language: English
+    releaseYear: 2023
+  - title: Three of Us
+    language: Hindi
+    releaseYear: 2023
+  - title: Interstellar
+    language: English
+    releaseYear: 2014
+  - title: Guide
+    language: Hindi
+    releaseYear: 1965
+  - title: Jewel Thief
+    language: Hindi
+    releaseYear: 1967
   - title: Asteroid City
     language: English
     releaseYear: 2023

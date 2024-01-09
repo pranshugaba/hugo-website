@@ -19,12 +19,6 @@ watching:
     season: 1
     channel: HBO
 
-  - title: Taskmaster
-    type: Series
-    channel: Channel 4
-    season: 16
-    startDate: 2021-02-01T05:30:00+05:30
-
   - title: University Challenge
     type: Series
     season: 53
@@ -34,6 +28,11 @@ watching:
     type: Series
     season: 19
     channel: BBC
+
+  - title: Archer
+    type: Season
+    season: 14
+    channel: FXX
 
 wantToWatch:
   - title: Dark
@@ -92,6 +91,12 @@ wantToWatch:
     channel: Wit Studio
 
 watched:
+  - title: Taskmaster
+    type: Series
+    channel: Channel 4
+    season: 16
+    startDate: 2021-02-01T05:30:00+05:30
+
   - title: I Think You Should Leave with Tim Robinson
     type: Season
     season: 3
@@ -112,14 +117,9 @@ watched:
     season: 2
     channel: Netflix
 
-  - title: Archer
-    type: Season
-    season: 13
-    channel: FXX
-
   - title: Spy × Family
     type: Series
-    season: 1
+    season: 2
     channel: TV Tokyo
 
   - title: The White Lotus

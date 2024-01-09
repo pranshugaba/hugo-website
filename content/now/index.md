@@ -23,7 +23,7 @@ I am working on Formal Methods with my advisor [Shibashis Guha](https://www.tifr
 
 ## Gaming
 
-I play _Uncharted 4_ and _PlateUp!_ nowadays. 
+I play _Bloodborne_ and _PlateUp!_ nowadays. 
 
 ---
 

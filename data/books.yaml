@@ -8,8 +8,6 @@ wantToRead:
     author: George R. R. Martin
   - title: The Colour of Magic
     author: Terry Pratchett
-  - title: The Blade Itself
-    author: Joe Abercrombie
   - title: In Europe
     author: Geert Mak
   - title: Wuthering Heights
@@ -23,14 +21,26 @@ wantToRead:
     author: George R. R. Martin
 
 reading:
-  - title: Riddley Walker
-    author: Russell Hoban
-    startDate: 2023-09-02T05:30:00+05:30
+  - title: Last Argument of Kings
+    author: Joe Abercrombie
+    startDate: 2024-01-09T09:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: Before They Are Hanged
+    author: Joe Abercrombie
+    startDate: 2023-12-31T17:30:00+05:30
+    endDate: 2024-01-09T00:20:00+05:30
+  - title: The Blade Itself
+    author: Joe Abercrombie
+    startDate: 2023-12-15T05:30:00+05:30
+    endDate: 2023-12-31T16:00:00+05:30
+  - title: Riddley Walker
+    author: Russell Hoban
+    startDate: 2023-09-02T05:30:00+05:30
+    endDate: 2023-12-15T01:00:00+05:30
   - title: The Lions of Al-Rassan
     author: Guy Gavriel Kay
     startDate: 2023-07-26T00:30:00+05:30
