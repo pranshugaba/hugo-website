@@ -21,14 +21,18 @@ wantToRead:
     author: George R. R. Martin
 
 reading:
-  - title: Last Argument of Kings
+  - title: Best Served Cold
     author: Joe Abercrombie
-    startDate: 2024-01-09T09:30:00+05:30
+    startDate: 2024-01-14T14:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: Last Argument of Kings
+    author: Joe Abercrombie
+    startDate: 2024-01-09T09:30:00+05:30
+    endDate: 2024-01-13T12:30:00+05:30
   - title: Before They Are Hanged
     author: Joe Abercrombie
     startDate: 2023-12-31T17:30:00+05:30
