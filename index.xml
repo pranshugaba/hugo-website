@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hello there! by Pranshu Gaba</title><link>https://pranshugaba.com/</link><description>Welcome to my site</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 31 Jan 2024 14:53:30 +0530</lastBuildDate><image><url>https://pranshugaba.com/icon.png</url></image><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>white horse</title><link>https://pranshugaba.com/poems/white-horse/</link><pubDate>Mon, 23 Oct 2023 19:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/white-horse/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hello there! by Pranshu Gaba</title><link>https://pranshugaba.com/</link><description>Welcome to my site</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 31 Jan 2024 17:09:41 +0530</lastBuildDate><image><url>https://pranshugaba.com/icon.png</url></image><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Friends all over the world</title><link>https://pranshugaba.com/puzzles/4/</link><pubDate>Wed, 31 Jan 2024 15:30:00 +0530</pubDate><guid>https://pranshugaba.com/puzzles/4/</guid><description>
+<![CDATA[<p>I love solving crosswords.
+I started solving them in 2020, during lockdown, and haven&rsquo;t stopped since.
+I solve the <a href="https://www.nytimes.com/crosswords" target="_blank" rel="noopener">New York Times Crossword</a> everyday.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>Lately, I have started solving crosswords on <a href="https://www.puzzmo.com/" target="_blank" rel="noopener">Puzzmo</a>, a website that launched in late 2023.
+In addition to the Crossword, the site also features puzzles such as Typeshift, Flipart, and Really Bad Chess everyday.</p>
+<p>At the start of this month, Puzzmo ran an open submission contest where any Puzzmo user could create and submit a crossword puzzle (as long as they have not been paid to create a crossword before).
+If accepted, you would be paid for it and your submission would appear on Puzzmo sometime later this year.</p>
+<p>I had never made a crossword puzzle before and I was fascinated by it.
+I decided to try my hand at it and quickly discovered how difficult it is to create an American style crossword.
+The number of constraints that one needs to juggle is immense.
+The hardest for me were the lack of unchecked squares and two-letter words.
+Even with the help of crossword constructing tools (I used <a href="https://crosshare.org/" target="_blank" rel="noopener">Crosshare</a> and <a href="https://flathub.org/apps/org.gnome.Crosswords.Editor" target="_blank" rel="noopener">Gnome Crosswords editor</a>) to draw the grid and suggest words, I found myself struggling to satisfy all the constraints.
+I tried (and failed) to incorporate rotational, or even vertical, symmetry in my puzzle, but in the end, I am content that I was even able to come up with a grid and fill it with words.</p>
+<p>Next came writing the clues, and I was not prepared for that! Striking the right balance between a gimme or unsolvable was tough. The holy grail of clues in my opinion is one that looks cryptic at first glance, but with some lateral thinking and an aha moment, gives a feeling of brilliance and satisfaction and makes the solver feel smart. Clue writing is something that I will get better at only with practice.</p>
+<p>I was notified yesterday that my puzzle wasn&rsquo;t accepted because it has a lot of &ldquo;gluey&rdquo; fill, a view that I agree with.
+However, I am still proud of my construction and can share it with you now!
+I have published my puzzle on <a href="https://crosshare.org" target="_blank" rel="noopener">Crosshare</a>, a free and open-source website where you can construct and publish crosswords, and also solve crosswords published by other users.
+I can&rsquo;t wait for you to try it!</p>
+<p><a href="https://crosshare.org/crosswords/sobSCDSRTAGdM91977rn/friends-all-over-the-world" target="_blank" rel="noopener">Solve my crossword on Crosshare.org →</a></p>
+
+<figure >
+    
+    
+    
+    
+    
+    <picture>
+        
+        <source srcset="https://pranshugaba.com/puzzles/4/crossword-dark.webp" media="(prefers-color-scheme: dark)">
+        
+        <img src="https://pranshugaba.com/puzzles/4/crossword-light.webp" alt="A screenshot of my crossword">
+    </picture>
+    
+    
+    <figcaption>
+        
+            A screenshot of my crossword
+            
+            
+            
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>I now have a greater appreciation for all those who construct crossword puzzles.
+I would like to thank Puzzmo for conducting this open submission week!
+I had a great time creating the puzzle and I look forward to constructing more in the future :)</p>
+<p>Good luck, have fun!</p>
+<hr>
+<p><a href="https://pranshugaba.com/contact/">Write to me!</a></p>
+<ul>
+<li>
+<p>If you are stuck on a clue, let me know and I will give you a hint. Also, feel free to search the web for any trivia that you do not know.</p>
+</li>
+<li>
+<p>I would love your feedback. Did you find the puzzle interesting? Or was it too easy / too difficult?</p>
+</li>
+<li>
+<p>If you have any puzzles that you would like featured in this series, share those with me too!</p>
+</li>
+</ul>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Or, at least, I attempt to solve it everyday.
+The difficulty of NYT crosswords increases as the week progresses.
+I am usually able to solve Mondays to Thursdays, but Fridays, Saturdays and Sundays still elude me.
+For instance, I have a 66-week streak for Mondays, but have only solved 2 or 3 Saturdays so far.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></description></item><item><title>white horse</title><link>https://pranshugaba.com/poems/white-horse/</link><pubDate>Mon, 23 Oct 2023 19:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/white-horse/</guid><description>
 <![CDATA[<img src="https://pranshugaba.com/poems/white-horse/white-horse-featured_hu61a905a050123249a6c119f8239abb24_4604505_1080x0_resize_q75_box.jpg" alt="" /><p>amidst the garbage dump<br>
 beside the mangroves one finds<br>
 a majestic white horse</p>
