@@ -67,11 +67,11 @@ I did the theming and styling from scratch and am adding features gradually. I w
 
 Install `remark-math` and `rehype-katex` modules and we are good to go!
 
-I can have inline math $e^{i\pi} + 1 = 0$, and displaystyle math too!
+I can have inline math \(e^{i\pi} + 1 = 0\), and displaystyle math too!
 
-$$
+\[
 \sum_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6}
-$$
+\]
 
 #### Code blocks
 

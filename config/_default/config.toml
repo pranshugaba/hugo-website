@@ -21,20 +21,27 @@ timeout = 300000
 lastmod = ["lastmod", ":git", ":default"]
 
 [markup]
-[markup.highlight]
-style = "perldoc"
-noClasses = false
-[markup.goldmark]
-[markup.goldmark.parser.attribute]
-block = true
-[markup.goldmark.renderer]
-unsafe = true
+  [markup.highlight]
+    style = "perldoc"
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.parser.attribute]
+      block = true
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+
 
 [minify]
-minifyOutput = true
+  minifyOutput = true
 
 [taxonomies]
-tag = "tags"
+  tag = "tags"
 
 
 [related]
@@ -50,25 +57,25 @@ tag = "tags"
 
 
 [params]
-mainSections = [
-    "posts",
-    "a-propos-de-moi",
-    "thoughts",
-    "dev",
-    "maths",
-    "trips",
-    "thoughts",
-    "recipes",
-    "poems",
-    "puzzles",
-    "stories",
-    "comics",
-    "minis",
-    "newsletter",
-]
-AuthorName = "Pranshu Gaba"
-GitHubUser = "pranshugaba"
+  mainSections = [
+      "posts",
+      "a-propos-de-moi",
+      "thoughts",
+      "dev",
+      "maths",
+      "trips",
+      "thoughts",
+      "recipes",
+      "poems",
+      "puzzles",
+      "stories",
+      "comics",
+      "minis",
+      "newsletter",
+  ]
+  AuthorName = "Pranshu Gaba"
+  GitHubUser = "pranshugaba"
 
 [author]
-name = "Pranshu Gaba"
-email = "pranshu@pranshugaba.com"
+  name = "Pranshu Gaba"
+  email = "pranshu@pranshugaba.com"

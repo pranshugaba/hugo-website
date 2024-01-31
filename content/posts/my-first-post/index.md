@@ -27,9 +27,9 @@ Here's a simple footnote[^1], and here's a longer one.
 
 [^1]: This is the first footnote.
 
-$$\sum_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6}$$
+\[\sum_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6}\]
 
-This is inline math. $e^{i\pi} + 1 = 0$.
+This is inline math. \(e^{i\pi} + 1 = 0\).
 
 {{< highlight go "linenos=table,hl_lines=5-7" >}}
 package main

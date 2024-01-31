@@ -18,7 +18,7 @@ featured: false
 
 ## An infinite game that is not determined
 
-The paper shows an example of a infinite game that is not determined. For every strategy $\sigma$ of Player 1, Player 2 has a strategy such that the resulting play is winning for Player 2. Similarly, no matter what strategy Player 2 picks, Player 1 has a strategy such that they win the game. In other words, none of the players have a winning strategy. The game goes as follows:
+The paper shows an example of a infinite game that is not determined. For every strategy \(\sigma\) of Player 1, Player 2 has a strategy such that the resulting play is winning for Player 2. Similarly, no matter what strategy Player 2 picks, Player 1 has a strategy such that they win the game. In other words, none of the players have a winning strategy. The game goes as follows:
 
 ## A topology of games
 

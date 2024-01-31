@@ -39,17 +39,17 @@ Try it out with some pencils and a long string.
 
 ### Level 2
 
-Now suppose you want to hang the painting using $n$ nails. You would like to painting to fall on removing any one nail.
+Now suppose you want to hang the painting using \(n\) nails. You would like to painting to fall on removing any one nail.
 
-For what values of $n$ is this possible? 
+For what values of \(n\) is this possible? 
 In the cases it is possible, how would you hang the painting?
 
 ### Level 3
 
-Suppose you want to hang the painting using $n$ nails. This time, you would like the painting to fall on removing any $m$ nails. The painting should not fall if you remove fewer than $m$ nails.
-You may assume $1 \le m \le n$. 
+Suppose you want to hang the painting using \(n\) nails. This time, you would like the painting to fall on removing any \(m\) nails. The painting should not fall if you remove fewer than \(m\) nails.
+You may assume \(1 \le m \le n\). 
 
-For what values of $m$ and $n$ is this possible? 
+For what values of \(m\) and \(n\) is this possible? 
 In the cases it is possible, how would you go about hanging the painting?
 
 {{% puzzles/feedback %}}

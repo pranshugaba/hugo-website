@@ -38,29 +38,29 @@ Since all of India follows the same timezone (Indian Standard Time UTC+05:30), i
 The time at which local noon occurs at a place depends on the difference between the longitude of that place and the longitude corresponding to the timezone offset of that place.
 
 In particular, given the timezone offset and the longitude of a place, the following formula calculates when local noon occurs there:
-$$LN(z, \ell) = \left( \frac{z}{24}  - \frac{\ell}{360} \right) \times 24 \times 60$$
+\[LN(z, \ell) = \left( \frac{z}{24}  - \frac{\ell}{360} \right) \times 24 \times 60\]
 Here,
 
-- $z$ is the timezone offset of the place. It is the number of hours the local timezone is ahead of UTC. It is a number between -12 and +12.
-- $\ell$ is the longitude of the place. It must be a number between -180 and +180.
-- $LN(z, \ell)$ is the number of minutes after 12:00 that local noon occurs at. If this value is negative, then local noon occurs before 12:00.
+- \(z\) is the timezone offset of the place. It is the number of hours the local timezone is ahead of UTC. It is a number between -12 and +12.
+- \(\ell\) is the longitude of the place. It must be a number between -180 and +180.
+- \(LN(z, \ell)\) is the number of minutes after 12:00 that local noon occurs at. If this value is negative, then local noon occurs before 12:00.
 
-We can look at an example. The timezone in Mumbai is +5:30, so we have $z_{\text{Mumbai}} = 5.5$. The longitude of Mumbai is 72.8 degrees east, therefore, $l_{\text{Mumbai}} = 72.8$. Substituting these values in the above formula gives
-$$ LN(5.5, 72.8) = \left( \frac{5.5}{24} - \frac{72.8}{360} \right) \times 24 \times 60,$$
+We can look at an example. The timezone in Mumbai is +5:30, so we have \(z_{\text{Mumbai}} = 5.5\). The longitude of Mumbai is 72.8 degrees east, therefore, \(l_{\text{Mumbai}} = 72.8\). Substituting these values in the above formula gives
+\[ LN(5.5, 72.8) = \left( \frac{5.5}{24} - \frac{72.8}{360} \right) \times 24 \times 60,\]
 which is approximately equal to 38. This tells us that local noon in Mumbai should be around 12:38 PM.
 
-Why does this formula work? The difference in the parentheses indicates a fraction of Earth's complete rotation. The term $\frac{z}{24}$ is the fraction of a rotation that timezone is ahead of UTC, and $\frac{\ell}{360}$ is the fraction of a rotation that the longitude is ahead of the prime meridian.
+Why does this formula work? The difference in the parentheses indicates a fraction of Earth's complete rotation. The term \(\frac{z}{24}\) is the fraction of a rotation that timezone is ahead of UTC, and \(\frac{\ell}{360}\) is the fraction of a rotation that the longitude is ahead of the prime meridian.
 The difference shows the fraction of a turn that Earth must rotate for the longitude of the place to reach the longitude corresponding to the timezone of the place.
 
-We multiply this difference by $24 \times 60$ to convert the fraction into minutes (since there are $24 \times 60$ minutes in a day). This formula also agrees with the observation we made: the further east you go in the same timezone, the earlier local noon occurs.
+We multiply this difference by \(24 \times 60\) to convert the fraction into minutes (since there are \(24 \times 60\) minutes in a day). This formula also agrees with the observation we made: the further east you go in the same timezone, the earlier local noon occurs.
 
-The formula makes one assumption. It assumes that if the difference $\frac{z}{24} - \frac{\ell}{360}$ at a place is zero, then $LN(z, \ell)$ is also zero there, and local noon coincides with noon.
+The formula makes one assumption. It assumes that if the difference \(\frac{z}{24} - \frac{\ell}{360}\) at a place is zero, then \(LN(z, \ell)\) is also zero there, and local noon coincides with noon.
 Is this a valid assumption to make?
 
-For every timezone, there exists a longitude for which this difference is zero. We call this the longitude corresponding to the timezone, and it is equal to $\frac{z}{24} \times 360$.
+For every timezone, there exists a longitude for which this difference is zero. We call this the longitude corresponding to the timezone, and it is equal to \(\frac{z}{24} \times 360\).
 For example, the longitude corresponding to the Indian timezone is
-$$\frac{5.5}{24} \times 360,$$
-which is equal to $82.5^{\circ} \text{E}$.
+\[\frac{5.5}{24} \times 360,\]
+which is equal to \(82.5^{\circ} \text{E}\).
 The city of Vindhyachal in Uttar Pradesh, India lies on the 82.5 degrees east meridian.
 Is it true that local noon is at 12:00 everyday in Vindhyachal?
 Equivalently, is local noon in Mumbai at 12.38 PM everyday?
@@ -113,7 +113,7 @@ Places outside the tropics never observe Zero Shadow Day as the Sun can never be
 
 ### Zero Shadow Day in Mumbai
 
-I stay in Mumbai, which is at latitude $19.1^{\circ} \text{N} $. At this latitude, the Zero Shadow Days are 15 May and 28 August.
+I stay in Mumbai, which is at latitude \(19.1^{\circ} \text{N} \). At this latitude, the Zero Shadow Days are 15 May and 28 August.
 Around local noon, (which happens to be around 12.20 PM), if it is sunny, we will get to experience Zero Shadow.
 
 It usually rains in Mumbai in August. The sky is covered with grey clouds which diffuse the sunlight, and objects don't have distinct shadows. In a way, this is also "Zero Shadow", but there is no interesting astronomical phenomenon at play here.
