@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>colours by Pranshu Gaba</title><link>https://pranshugaba.com/tags/colours/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 31 Jan 2024 14:04:38 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/colours/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/colours/index.xml" rel="self" type="application/rss+xml"/><item><title>high</title><link>https://pranshugaba.com/poems/high/</link><pubDate>Thu, 02 Jun 2022 23:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/high/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>colours by Pranshu Gaba</title><link>https://pranshugaba.com/tags/colours/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 31 Jan 2024 14:53:36 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/colours/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/colours/index.xml" rel="self" type="application/rss+xml"/><item><title>high</title><link>https://pranshugaba.com/poems/high/</link><pubDate>Thu, 02 Jun 2022 23:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/high/</guid><description>
 <![CDATA[<img src="https://pranshugaba.com/poems/high/high_featured_huf647e58f5767d770e809995d4edc9be8_798652_1080x0_resize_q75_box.jpg" alt="" /><p>white plane flies high<br>
 against a sky so bright &mdash;<br>
 it appears black</p>
@@ -60,13 +60,13 @@ just blue itself</p>
 <ul>
 <li>
 <p>When the luminosity of the colour is close to 50% and the saturation is low, neither black nor white text has enough contrast with the chosen colour, and the text is not as legible. Example: 
- <code style="background-color: hsl(180, 10%,  50%);"> 
- <span style="color: hsl(180, 10%,  50%);filter:  grayscale(1) invert(1) contrast(100);">hsl(180, 10%,  50%)</span></code></p>
+<code style="background-color: hsl(180, 10%,  50%);"> 
+<span style="color: hsl(180, 10%,  50%);filter:  grayscale(1) invert(1) contrast(100);">hsl(180, 10%,  50%)</span></code></p>
 </li>
 <li>
 <p>The text is not legible when the colour is transparent. This is because the text is transparent too, and does not have enough contrast with the background. Example: 
- <code style="background-color: rgba(120, 0, 240, 0.3);"> 
- <span style="color: rgba(120, 0, 240, 0.3);filter:  grayscale(1) invert(1) contrast(100);">rgba(120, 0, 240, 0.3)</span></code></p>
+<code style="background-color: rgba(120, 0, 240, 0.3);"> 
+<span style="color: rgba(120, 0, 240, 0.3);filter:  grayscale(1) invert(1) contrast(100);">rgba(120, 0, 240, 0.3)</span></code></p>
 </li>
 </ul>
 <h2 id="alternate-style">Alternate style</h2>

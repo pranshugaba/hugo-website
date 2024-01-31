@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nuxtjs by Pranshu Gaba</title><link>https://pranshugaba.com/tags/nuxtjs/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 31 Jan 2024 14:04:44 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/nuxtjs/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/nuxtjs/index.xml" rel="self" type="application/rss+xml"/><item><title>...and Back to Hugo Again</title><link>https://pranshugaba.com/dev/moving-back-to-hugo/</link><pubDate>Tue, 06 Jul 2021 15:16:36 +0530</pubDate><guid>https://pranshugaba.com/dev/moving-back-to-hugo/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nuxtjs by Pranshu Gaba</title><link>https://pranshugaba.com/tags/nuxtjs/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 31 Jan 2024 14:53:42 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/nuxtjs/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/nuxtjs/index.xml" rel="self" type="application/rss+xml"/><item><title>...and Back to Hugo Again</title><link>https://pranshugaba.com/dev/moving-back-to-hugo/</link><pubDate>Tue, 06 Jul 2021 15:16:36 +0530</pubDate><guid>https://pranshugaba.com/dev/moving-back-to-hugo/</guid><description>
 <![CDATA[<p>Not more than 2 months ago, I had migrated my site from Hugo to Nuxt, and I had <a href="https://pranshugaba.com/dev/moving-from-hugo-to-nuxt/">written a post</a> describing why I chose to do so. Well, that didn&rsquo;t last long, and now I am back to using Hugo.</p>
 <h2 id="my-short-experience-with-nuxt">My (short) experience with Nuxt</h2>
 <p>I had added many features to my site in Nuxt. I was happy with my progress; my site looked so pretty and colourful!</p>
@@ -67,8 +67,8 @@
 <h2 id="my-new-site-built-with-hugo">My new site built with Hugo</h2>
 <p>I had a not-so-great experience with a readymade theme before, so this time I decided to write my own theme. I decided I would keep my site simple so it is easy to maintain and not too distracting to look at.</p>
 <p>My site uses only two colours: 
- <code style="background-color: papayawhip;"> 
- <span style="color: papayawhip;filter:  grayscale(1) invert(1) contrast(100);">papayawhip</span></code> and 
+<code style="background-color: papayawhip;"> 
+<span style="color: papayawhip;filter:  grayscale(1) invert(1) contrast(100);">papayawhip</span></code> and 
 <code style="background-color: #121212;"> 
 <span style="color: #121212;filter:  grayscale(1) invert(1) contrast(100);">#121212</span></code>. Every element has one of these two colors. This makes the colour part of the CSS very simple, and I was also able to write the dark theme in no time.</p>
 <p>I love this simple design; I think it looks crisp and clear with no distractions. The content is legible with enough contrast between the foreground and the background, much like a road sign.</p>
@@ -130,10 +130,10 @@ I found that Nuxt is in active development, the modules are great, and the docum
 <p>I did the theming and styling from scratch and am adding features gradually. I was able to match all the features offered in Hugo, and then some.</p>
 <h4 id="math-equations">Math equations</h4>
 <p>Install <code>remark-math</code> and <code>rehype-katex</code> modules and we are good to go!</p>
-<p>I can have inline math $e^{i\pi} + 1 = 0$, and displaystyle math too!</p>
-<p>$$
+<p>I can have inline math \(e^{i\pi} + 1 = 0\), and displaystyle math too!</p>
+\[
 \sum_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6}
-$$</p>
+\]
 <h4 id="code-blocks">Code blocks</h4>
 <p>Prism.js comes pre-installed with Nuxt. You can install themes and plugins too.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">

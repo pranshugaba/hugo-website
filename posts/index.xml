@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts by Pranshu Gaba</title><link>https://pranshugaba.com/posts/</link><description>Interesting things, websites, places, etc.</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 31 Jan 2024 14:04:32 +0530</lastBuildDate><image><url>https://pranshugaba.com/posts/icon.png</url></image><atom:link href="https://pranshugaba.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>SoME #2</title><link>https://pranshugaba.com/posts/some-2/</link><pubDate>Wed, 13 Jul 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/some-2/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts by Pranshu Gaba</title><link>https://pranshugaba.com/posts/</link><description>Interesting things, websites, places, etc.</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 31 Jan 2024 14:53:30 +0530</lastBuildDate><image><url>https://pranshugaba.com/posts/icon.png</url></image><atom:link href="https://pranshugaba.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>SoME #2</title><link>https://pranshugaba.com/posts/some-2/</link><pubDate>Wed, 13 Jul 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/some-2/</guid><description>
 <![CDATA[<h2 id="last-year">Last year</h2>
 <p>Last summer, <a href="https://www.3blue1brown.com/about" target="_blank" rel="noopener">Grant Sanderson of 3Blue1Brown</a> held a contest named SoME #1. The name is short for <em>The Summer of Math Exposition</em>. In this contest, Grant asked people to submit maths explainers &mdash; something that explains a concept in maths (or physics or computer science). This explainer could be of any form: a short video, a blog post, an interactive webpage, or even a game! The goal of this contest was to encourage more people to create explainers.</p>
 <p>There are multiple benefits to this. One, it improves the collection of resources available to all for learning new things (More than a 1000 entries were submitted!). Everyone has a different learning style, and similarly, everyone has a different teaching style. Even if someone has made a video explaining a particular concept, the way you explain the same topic will be different. Some people will find their content easier to understand, and some will find your content easier to understand. The more high-quality content there is out there, the higher the chance that you will find something that you can connect to.</p>
@@ -34,25 +34,31 @@ Five winners will be selected who each will be awarded a Golden Pi creature and 
 <p>Since all of India follows the same timezone (Indian Standard Time UTC+05:30), it follows that local noon does not occur at noon in most places.
 The time at which local noon occurs at a place depends on the difference between the longitude of that place and the longitude corresponding to the timezone offset of that place.</p>
 <p>In particular, given the timezone offset and the longitude of a place, the following formula calculates when local noon occurs there:
-$$LN(z, \ell) = \left( \frac{z}{24}  - \frac{\ell}{360} \right) \times 24 \times 60$$
+</p>
+\[LN(z, \ell) = \left( \frac{z}{24}  - \frac{\ell}{360} \right) \times 24 \times 60\]
+<p>
 Here,</p>
 <ul>
-<li>$z$ is the timezone offset of the place. It is the number of hours the local timezone is ahead of UTC. It is a number between -12 and +12.</li>
-<li>$\ell$ is the longitude of the place. It must be a number between -180 and +180.</li>
-<li>$LN(z, \ell)$ is the number of minutes after 12:00 that local noon occurs at. If this value is negative, then local noon occurs before 12:00.</li>
+<li>\(z\) is the timezone offset of the place. It is the number of hours the local timezone is ahead of UTC. It is a number between -12 and +12.</li>
+<li>\(\ell\) is the longitude of the place. It must be a number between -180 and +180.</li>
+<li>\(LN(z, \ell)\) is the number of minutes after 12:00 that local noon occurs at. If this value is negative, then local noon occurs before 12:00.</li>
 </ul>
-<p>We can look at an example. The timezone in Mumbai is +5:30, so we have $z_{\text{Mumbai}} = 5.5$. The longitude of Mumbai is 72.8 degrees east, therefore, $l_{\text{Mumbai}} = 72.8$. Substituting these values in the above formula gives
-$$ LN(5.5, 72.8) = \left( \frac{5.5}{24} - \frac{72.8}{360} \right) \times 24 \times 60,$$
+<p>We can look at an example. The timezone in Mumbai is +5:30, so we have \(z_{\text{Mumbai}} = 5.5\). The longitude of Mumbai is 72.8 degrees east, therefore, \(l_{\text{Mumbai}} = 72.8\). Substituting these values in the above formula gives
+</p>
+\[ LN(5.5, 72.8) = \left( \frac{5.5}{24} - \frac{72.8}{360} \right) \times 24 \times 60,\]
+<p>
 which is approximately equal to 38. This tells us that local noon in Mumbai should be around 12:38 PM.</p>
-<p>Why does this formula work? The difference in the parentheses indicates a fraction of Earth&rsquo;s complete rotation. The term $\frac{z}{24}$ is the fraction of a rotation that timezone is ahead of UTC, and $\frac{\ell}{360}$ is the fraction of a rotation that the longitude is ahead of the prime meridian.
+<p>Why does this formula work? The difference in the parentheses indicates a fraction of Earth&rsquo;s complete rotation. The term \(\frac{z}{24}\) is the fraction of a rotation that timezone is ahead of UTC, and \(\frac{\ell}{360}\) is the fraction of a rotation that the longitude is ahead of the prime meridian.
 The difference shows the fraction of a turn that Earth must rotate for the longitude of the place to reach the longitude corresponding to the timezone of the place.</p>
-<p>We multiply this difference by $24 \times 60$ to convert the fraction into minutes (since there are $24 \times 60$ minutes in a day). This formula also agrees with the observation we made: the further east you go in the same timezone, the earlier local noon occurs.</p>
-<p>The formula makes one assumption. It assumes that if the difference $\frac{z}{24} - \frac{\ell}{360}$ at a place is zero, then $LN(z, \ell)$ is also zero there, and local noon coincides with noon.
+<p>We multiply this difference by \(24 \times 60\) to convert the fraction into minutes (since there are \(24 \times 60\) minutes in a day). This formula also agrees with the observation we made: the further east you go in the same timezone, the earlier local noon occurs.</p>
+<p>The formula makes one assumption. It assumes that if the difference \(\frac{z}{24} - \frac{\ell}{360}\) at a place is zero, then \(LN(z, \ell)\) is also zero there, and local noon coincides with noon.
 Is this a valid assumption to make?</p>
-<p>For every timezone, there exists a longitude for which this difference is zero. We call this the longitude corresponding to the timezone, and it is equal to $\frac{z}{24} \times 360$.
+<p>For every timezone, there exists a longitude for which this difference is zero. We call this the longitude corresponding to the timezone, and it is equal to \(\frac{z}{24} \times 360\).
 For example, the longitude corresponding to the Indian timezone is
-$$\frac{5.5}{24} \times 360,$$
-which is equal to $82.5^{\circ} \text{E}$.
+</p>
+\[\frac{5.5}{24} \times 360,\]
+<p>
+which is equal to \(82.5^{\circ} \text{E}\).
 The city of Vindhyachal in Uttar Pradesh, India lies on the 82.5 degrees east meridian.
 Is it true that local noon is at 12:00 everyday in Vindhyachal?
 Equivalently, is local noon in Mumbai at 12.38 PM everyday?
@@ -85,7 +91,7 @@ All places that lie between the Tropic of Cancer and Tropic of Capricorn experie
 The tropics observe Zero Shadow Day only once a year. The Tropic of Cancer sees Zero Shadow Day on the summer solstice and the Tropic of Capricorn sees it on the winter solstice.
 Places outside the tropics never observe Zero Shadow Day as the Sun can never be overhead those places.</p>
 <h3 id="zero-shadow-day-in-mumbai">Zero Shadow Day in Mumbai</h3>
-<p>I stay in Mumbai, which is at latitude $19.1^{\circ} \text{N} $. At this latitude, the Zero Shadow Days are 15 May and 28 August.
+<p>I stay in Mumbai, which is at latitude \(19.1^{\circ} \text{N} \). At this latitude, the Zero Shadow Days are 15 May and 28 August.
 Around local noon, (which happens to be around 12.20 PM), if it is sunny, we will get to experience Zero Shadow.</p>
 <p>It usually rains in Mumbai in August. The sky is covered with grey clouds which diffuse the sunlight, and objects don&rsquo;t have distinct shadows. In a way, this is also &ldquo;Zero Shadow&rdquo;, but there is no interesting astronomical phenomenon at play here.</p>
 <h3 id="zero-shadow-day-at-your-location">Zero Shadow Day at your location</h3>

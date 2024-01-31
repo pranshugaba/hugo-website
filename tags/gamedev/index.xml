@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gamedev by Pranshu Gaba</title><link>https://pranshugaba.com/tags/gamedev/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 31 Jan 2024 14:04:42 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/gamedev/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/gamedev/index.xml" rel="self" type="application/rss+xml"/><item><title>Godot 4.0 released</title><link>https://pranshugaba.com/dev/godot-4-released/</link><pubDate>Mon, 06 Mar 2023 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/godot-4-released/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gamedev by Pranshu Gaba</title><link>https://pranshugaba.com/tags/gamedev/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 31 Jan 2024 14:53:41 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/gamedev/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/gamedev/index.xml" rel="self" type="application/rss+xml"/><item><title>Godot 4.0 released</title><link>https://pranshugaba.com/dev/godot-4-released/</link><pubDate>Mon, 06 Mar 2023 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/godot-4-released/</guid><description>
 <![CDATA[<p>After being in development for years, version 4.0 of <a href="https://www.youtube.com/watch?v=chXAjMQrcZk" target="_blank" rel="noopener">the game engine Godot</a> was released this week.
 It is a big release and I am excited to try it out!
 Nathan from GDQuest posted an half-hour long video describing the highlights of <a href="https://www.youtube.com/watch?v=chXAjMQrcZk" target="_blank" rel="noopener">what&rsquo;s new in this version</a>.
@@ -217,7 +217,7 @@ I would need to collaborate with someone for the aspects of gamedev that are not
 <p>I will also post some short term goals, and from time to time share updates on how I am progressing along these goals for 2023.
 <a href="https://pranshugaba.com/contact/">Let me know</a> what have you planned for this new year!</p>
 <p> </p>
-<p>That&rsquo;s all for now! See you in the next one. 👋</p>
+<p>That&rsquo;s all for now! See you in the next one. &#x1f44b;</p>
 ]]></description></item><item><title>New Space Images</title><link>https://pranshugaba.com/newsletter/2022-W28/</link><pubDate>Sat, 16 Jul 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/newsletter/2022-W28/</guid><description>
 <![CDATA[<p>Hello there!</p>
 <p>I am back after a bit of a break. To make up for it, here&rsquo;s a longer than usual issue of my newsletter where I share updates about me, this site, and other miscellaneous things.
@@ -356,7 +356,7 @@ Check out the <a href="https://www.nasa.gov/webbfirstimages/" target="_blank" re
 <a href="https://www.youtube.com/watch?v=WXwgZL4zx9o" target="_blank" rel="noopener">Watch on YouTube →</a></li>
 </ul>
 <p> </p>
-<p>That&rsquo;s all for this week! See you in the next one. 👋</p>
+<p>That&rsquo;s all for this week! See you in the next one. &#x1f44b;</p>
 ]]></description></item><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/dev/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/building-x-and-o-using-godot/</guid><description>
 <![CDATA[<aside class="[ toc ] [ plain-link border-medium border-radius-large ]">
   <details open>

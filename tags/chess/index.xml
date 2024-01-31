@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>chess by Pranshu Gaba</title><link>https://pranshugaba.com/tags/chess/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 31 Jan 2024 14:04:38 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/chess/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/chess/index.xml" rel="self" type="application/rss+xml"/><item><title>Whose turn is it to play?</title><link>https://pranshugaba.com/puzzles/3/</link><pubDate>Tue, 01 Feb 2022 12:30:00 +0530</pubDate><guid>https://pranshugaba.com/puzzles/3/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>chess by Pranshu Gaba</title><link>https://pranshugaba.com/tags/chess/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 31 Jan 2024 14:53:36 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/chess/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/chess/index.xml" rel="self" type="application/rss+xml"/><item><title>Whose turn is it to play?</title><link>https://pranshugaba.com/puzzles/3/</link><pubDate>Tue, 01 Feb 2022 12:30:00 +0530</pubDate><guid>https://pranshugaba.com/puzzles/3/</guid><description>
 <![CDATA[<p>We have another chess puzzle!</p>
 
 
@@ -12029,7 +12029,7 @@ For the sake of this problem, assume that pieces can attack other pieces of the 
 </aside>
 <p>Here are 7 variants of this problem:</p>
 <h3 id="1">1</h3>
-<p>What is the maximum number of rooks you can place on a $8\times 8$ chessboard such that no two rooks attack each other?
+<p>What is the maximum number of rooks you can place on a \(8\times 8\) chessboard such that no two rooks attack each other?
 <img src="white-rook.svg" class="float-right"/></p>
 
 
@@ -12424,22 +12424,22 @@ For the sake of this problem, assume that pieces can attack other pieces of the 
 
 </figure>
 <h3 id="2">2</h3>
-<p>What is the maximum number of knights you can place on an $8 \times 8$ chessboard such that no two knights attack each other?
+<p>What is the maximum number of knights you can place on an \(8 \times 8\) chessboard such that no two knights attack each other?
 <img src="white-knight.svg" class="float-right"/></p>
 <h3 id="3">3</h3>
-<p>What is the maximum number of bishops you can place on an $8\times 8$ chessboard such that no two bishops attack each other?
+<p>What is the maximum number of bishops you can place on an \(8\times 8\) chessboard such that no two bishops attack each other?
 <img src="white-bishop.svg" class="float-right"/></p>
 <h3 id="4">4</h3>
-<p>What is the maximum number of kings you can place on an $8\times 8$ chessboard such that no two kings attack each other?
+<p>What is the maximum number of kings you can place on an \(8\times 8\) chessboard such that no two kings attack each other?
 <img src="white-king.svg" class="float-right"/></p>
 <h3 id="5">5</h3>
-<p>What is the maximum number of pawns you can place on an $8 \times 8$ chessboard such that no pawn attacks any other pawn?
+<p>What is the maximum number of pawns you can place on an \(8 \times 8\) chessboard such that no pawn attacks any other pawn?
 <img src="white-pawn.svg" class="float-right"/></p>
 <h3 id="6">6</h3>
-<p>What is the maximum number of queens you can place on an $8 \times 8$ chessboard such that no two queens attack each other?
+<p>What is the maximum number of queens you can place on an \(8 \times 8\) chessboard such that no two queens attack each other?
 <img src="white-queen.svg" class="float-right"/></p>
 <h3 id="7">7</h3>
-<p>What is the maximum number of chess pieces you can place on an $8\times 8$ chessboard such that no piece attacks any other piece? You are free to use kings, queens, rooks, bishops, knights, and pawns.</p>
+<p>What is the maximum number of chess pieces you can place on an \(8\times 8\) chessboard such that no piece attacks any other piece? You are free to use kings, queens, rooks, bishops, knights, and pawns.</p>
 <div align=center>
 <img src="white-king.svg"/>
 <img src="white-queen.svg"/>
