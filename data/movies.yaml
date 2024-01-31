@@ -1,4 +1,13 @@
 wantToWatch:
+  - title: Spider-man: Beyond the spider-verse
+    language: English
+    releaseYear: 2024
+  - title: Despicable Me 4
+    language: English
+    releaseYear: 2024
+  - title: Kung Fu Panda 4
+    language: English
+    releaseYear: 2024
   - title: Renfield
     language: English
     releaseYear: 2023
@@ -10,6 +19,9 @@ wantToWatch:
     releaseYear: 2022
 
 watched:
+  - title: Jaane bhi do yaaro
+    language: Hindi
+    releaseYear: 1983
   - title: Dream Scenario
     language: English
     releaseYear: 2023

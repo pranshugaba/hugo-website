@@ -1,7 +1,4 @@
 wantToRead:
-  - title: Dune
-    author: Frank Herbert
-    startDate: 2021-07-01T05:30:00+05:30
   - title: Maus
     author: Art Spiegelman
   - title: Fire and Blood
@@ -21,14 +18,18 @@ wantToRead:
     author: George R. R. Martin
 
 reading:
-  - title: Best Served Cold
-    author: Joe Abercrombie
-    startDate: 2024-01-14T14:30:00+05:30
+  - title: Dune
+    author: Frank Herbert
+    startDate: 2021-07-01T05:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: Best Served Cold
+    author: Joe Abercrombie
+    startDate: 2024-01-14T14:30:00+05:30
+    endDate: 2024-01-28T02:30:00+05:30
   - title: Last Argument of Kings
     author: Joe Abercrombie
     startDate: 2024-01-09T09:30:00+05:30
