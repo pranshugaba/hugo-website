@@ -1,6 +1,6 @@
 ---
 title: "The Picture Hanging Puzzle"
-subtitle: "Puzzle #1"
+subtitle: "Can you hang a picture so that it is easy to remove?"
 summary: "Can you hang a picture so that it is easy to remove?"
 
 tags: []

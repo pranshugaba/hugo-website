@@ -1,6 +1,6 @@
 ---
 title: "A Chess Puzzle"
-subtitle: "Puzzle #2"
+subtitle: "How many chess pieces can you place so no piece attacks any other piece?"
 summary: "How many chess pieces can you place so no piece attacks any other piece?"
 
 tags: ["chess"]

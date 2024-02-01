@@ -11,5 +11,8 @@
     {{ if eq .Section "newsletter" }}
         <p class="page__weekdate">Issue: {{ partial "helpers/newsletter-issue" . }}</p>
     {{ end }}
+    {{ if eq .Type "puzzles" }}
+        <p class="page__weekdate">Puzzle #{{ partial "helpers/puzzle-number" . }}</p>
+    {{ end }}
 </div>
 {{ end }}

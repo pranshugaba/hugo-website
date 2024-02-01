@@ -1,6 +1,6 @@
 ---
 title: "Whose turn is it to play?"
-subtitle: "Puzzle #3"
+subtitle: "Given a chess position, can you determine whose turn it is to play?"
 summary: "You are given a chess position. Can you determine whose turn it is to play?"
 
 date: 2022-02-01T12:30:00+05:30
