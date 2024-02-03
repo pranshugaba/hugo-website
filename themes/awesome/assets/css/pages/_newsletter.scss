@@ -1,10 +1,11 @@
-.newsletter {
+.newsletter,
+.puzzles {
   .page {
-    &__header{
+    &__header {
       margin-top: 4rem;
     }
     &__weekdate {
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
       font-size: var(--font-size-600);
     }
   }

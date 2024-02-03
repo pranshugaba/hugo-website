@@ -1938,6 +1938,7 @@ figure figcaption {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   line-height: 1.5;
+  text-wrap: balance;
 }
 .page__location {
   margin-top: 0.75rem;
@@ -2103,10 +2104,12 @@ figure figcaption {
   line-height: 1.5;
 }
 
-.newsletter .page__header {
+.newsletter .page__header,
+.puzzles .page__header {
   margin-top: 4rem;
 }
-.newsletter .page__weekdate {
-  margin-bottom: 3rem;
+.newsletter .page__weekdate,
+.puzzles .page__weekdate {
+  margin-bottom: 2.5rem;
   font-size: var(--font-size-600);
 }/*# sourceMappingURL=main.css.map */
