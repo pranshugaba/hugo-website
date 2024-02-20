@@ -19,6 +19,18 @@ wantToWatch:
     releaseYear: 2022
 
 watched:
+  - title: The Holdovers
+    language: English
+    releaseYear: 2024
+    startDate: 2024-02-18T14:45:00+05:30
+  - title: Anatomy of a Fall
+    language: English
+    releaseYear: 2023
+    startDate: 2024-02-17T16:45:00+05:30
+  - title: Dune
+    language: English
+    releaseYear: 2021
+    startDate: 2024-02-15T12:55:00+05:30
   - title: Jaane bhi do yaaro
     language: Hindi
     releaseYear: 1983

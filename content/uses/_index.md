@@ -7,9 +7,16 @@ display: none
 
 ## Laptop
 
-I use [Arch Linux](https://archlinux.org), btw, on my ThinkPad P1 as my daily driver. 
-I used to use the tiling window manager [XMonad](https://xmonad.org). 
-However, I find the touchpad gestures of [GNOME on Wayland](https://www.gnome.org/) much smoother and a joy to use, and since XMonad does not support Wayland, I now use GNOME as my desktop environment. I still prefer XMonad when I am on desktop.
+I run [Arch Linux](https://archlinux.org) (btw) on my ThinkPad P1 as my daily driver. 
+I use [hyprland](https://hyprland.org/), a beautiful tiling window compositor for Wayland. 
+I absolutely love using tiling window managers. 
+Their customizability and efficiency is streets ahead compared to floating window managers.
+
+Previously, I used the [GNOME desktop environment](https://www.gnome.org/).
+It is simple, elegant, stable, and a joy to use.
+However, it is no match for a tiling window manager. 
+Even more previously, I used to use the tiling window manager [XMonad](https://xmonad.org). However, I had to switch as it does not support Wayland (yet).
+
 
 ### Text Editor
 
@@ -35,12 +42,13 @@ I use Firefox with these extensions:
 
 - Joplin
 - Xournalpp
+- Rnote
 
 ### Art
 
 - Inkscape
 - Krita
-- Aseprite
+- LibreSprite
 
 ### Photo editing
 
@@ -54,8 +62,8 @@ I use Firefox with these extensions:
 ### Music
 
 - PyRadio
-- Lollypop
 - Shortwave
+- Amberol
 
 ### Video editing
 
@@ -65,14 +73,18 @@ I use Firefox with these extensions:
 I am using an Android phone. Some notable apps: 
 - Aegis Authenticator
 - AntennaPod
+- AnkiDroid
 - arXiv eXplorer
 - Audio Spectrum Analyzer
+- Auxio
+- Aves Libre
 - Barcode Scanner
-- DNS66
+- Bitwarden
 - Document Viewer
 - FitoTrack
 - KOReader
 - Librera Reader
+- Markor
 - mpv-android
 - NiceFeed
 - Open Camera
@@ -81,13 +93,13 @@ I am using an Android phone. Some notable apps:
 - QDict
 - Read You
 - Shader Editor
-- Simpletask
-- Simple File Manager
-- Simple Gallery
-- SimpleMarkdown
+- Signal
+- Stellarium
 - Survival Manual
 - Termux
 - Tracker Control
 - Tiddloid
 - Trail Sense
 - Tuner
+- URLCheck
+- URL Radio

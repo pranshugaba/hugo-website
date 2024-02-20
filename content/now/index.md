@@ -9,6 +9,7 @@ summary: A little bit about me and my website
 
 I am a fourth-year PhD student in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/).
 I am working on Formal Methods with my advisor [Shibashis Guha](https://www.tifr.res.in/~shibashis.guha/).
+My area of interest is [reactive synthesis](https://en.wikipedia.org/wiki/Reactive_synthesis).
 
 
 ## Reading

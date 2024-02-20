@@ -9,11 +9,6 @@ watching:
     season: 53
     channel: BBC
 
-  - title: Only Connect
-    type: Series
-    season: 19
-    channel: BBC
-
   - title: 'NPC D&D'
     type: Season
     season: 1
@@ -100,7 +95,18 @@ wantToWatch:
     season: 1
     channel: Wit Studio
 
+  - title: Invincible
+    type: Series
+    season: 2
+    channel: Amazon
+    endDate: 2021-09-07T05:30:00+05:30
+
 watched:
+  - title: Only Connect
+    type: Series
+    season: 19
+    channel: BBC
+
   - title: Archer
     type: Season
     season: 14
@@ -208,12 +214,6 @@ watched:
     season: 5
     channel: BBC
     endDate: 2021-12-13T05:30:00+05:30
-
-  - title: Invincible
-    type: Series
-    season: 1
-    channel: Amazon
-    endDate: 2021-09-07T05:30:00+05:30
 
 done:
   - title: Superstore
