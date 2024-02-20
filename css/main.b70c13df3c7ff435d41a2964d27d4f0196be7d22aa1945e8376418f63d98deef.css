@@ -284,11 +284,6 @@ body {
 body {
   line-height: 1.6;
 }
-@media (min-width: 640px) {
-  body {
-    line-height: 1.7;
-  }
-}
 
 h1,
 h2,
@@ -549,7 +544,7 @@ a.plain-link:focus,
 }
 
 .flow > * + * {
-  margin-top: var(--flow-space, 1.25em);
+  margin-top: var(--flow-space, 1.2em);
 }
 
 .wrapper {
@@ -1340,7 +1335,7 @@ h4 code {
     align-items: baseline;
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
-    margin-block: 1rem;
+    margin-block: 0;
   }
 }
 .list-archive__item .item__date {
