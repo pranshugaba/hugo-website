@@ -1,11 +1,11 @@
 ---
 title: 'poké ball'
-subtitle: 'a haiku'
-summary: 'a haiku'
+subtitle: 'a poem'
+summary: 'a poem'
 
 alt: "View of a restaurant that looks like a poké ball from above"
 
-tags: ['haiku', 'airports', 'pokemon', 'singapore']
+tags: ['airports', 'pokemon', 'singapore']
 
 date: 2024-02-29T19:30:00+05:30
 lastmod: 2024-02-29T19:30:00+05:30

@@ -20,7 +20,7 @@ wantToRead:
 reading:
   - title: Dune Messiah
     author: Frank Herbert
-    startDate: 2024-01-24T15:30:00+05:30
+    startDate: 2024-02-24T15:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
@@ -29,7 +29,7 @@ read:
   - title: Dune
     author: Frank Herbert
     startDate: 2021-07-01T05:30:00+05:30
-    endDate: 2024-01-24T02:30:00+05:30
+    endDate: 2024-02-24T02:30:00+05:30
   - title: Best Served Cold
     author: Joe Abercrombie
     startDate: 2024-01-14T14:30:00+05:30
