@@ -1,28 +1,29 @@
-<div id="map" class="leaflet-map" style="width: 100%; height: 300px"></div>
+<div id="mapdiv" style="width: 100%; height: 500px"></div>
 <script>
   let map = new maplibregl.Map({
-    container: 'map',
+    container: 'mapdiv',
     style: 'https://tiles.stadiamaps.com/styles/osm_bright.json', // stylesheet location
     center: [72.82, 19.22], // starting position [lng, lat]
-    zoom: 10, // starting zoom
-    hash: true,
-    maplibreLogo: true,
-    logoPosition: 'top-left',
+    zoom: 11, // starting zoom
+    hash: false,
+    // maplibreLogo: true,
+    logoPosition: 'top-right',
     //    cooperativeGestures: true,
   });
+
   let nav = new maplibregl.NavigationControl({
     visualizePitch: true,
   });
-  map.addControl(nav, 'top-right');
-  var scale = new maplibregl.ScaleControl({
+  map.addControl(nav, 'top-left');
+
+  let scale = new maplibregl.ScaleControl({
     maxWidth: 80,
-    unit: 'imperial',
+    unit: 'metric',
   });
   map.addControl(scale);
 
-  scale.setUnit('metric');
-  map.addControl(new maplibregl.FullscreenControl());
-  // add to map
+  let fullScreen = new maplibregl.FullscreenControl()
+  map.addControl(fullScreen, 'top-left');
 
   //  let marker = new maplibregl.Marker({ color: '#abcdef' })
   //    .setLngLat([72.82, 19.22])
@@ -31,7 +32,7 @@
   map.on('load', function () {
     map.addSource('route', {
       type: 'geojson',
-      data: './day2.geojson',
+      data: './day3.geojson',
     });
     map.addLayer({
       id: 'route',
