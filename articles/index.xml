@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts by Pranshu Gaba</title><link>https://pranshugaba.com/posts/</link><description>Interesting things, websites, places, etc.</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 29 Feb 2024 20:33:21 +0530</lastBuildDate><image><url>https://pranshugaba.com/posts/icon.png</url></image><atom:link href="https://pranshugaba.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>SoME #2</title><link>https://pranshugaba.com/posts/some-2/</link><pubDate>Wed, 13 Jul 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/some-2/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Articles by Pranshu Gaba</title><link>https://pranshugaba.com/articles/</link><description>Interesting things, websites, places, etc.</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Mon, 04 Mar 2024 15:36:02 +0530</lastBuildDate><image><url>https://pranshugaba.com/articles/icon.png</url></image><atom:link href="https://pranshugaba.com/articles/index.xml" rel="self" type="application/rss+xml"/><item><title>SoME #2</title><link>https://pranshugaba.com/articles/some-2/</link><pubDate>Wed, 13 Jul 2022 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/articles/some-2/</guid><description>
 <![CDATA[<h2 id="last-year">Last year</h2>
 <p>Last summer, <a href="https://www.3blue1brown.com/about" target="_blank" rel="noopener">Grant Sanderson of 3Blue1Brown</a> held a contest named SoME #1. The name is short for <em>The Summer of Math Exposition</em>. In this contest, Grant asked people to submit maths explainers &mdash; something that explains a concept in maths (or physics or computer science). This explainer could be of any form: a short video, a blog post, an interactive webpage, or even a game! The goal of this contest was to encourage more people to create explainers.</p>
 <p>There are multiple benefits to this. One, it improves the collection of resources available to all for learning new things (More than a 1000 entries were submitted!). Everyone has a different learning style, and similarly, everyone has a different teaching style. Even if someone has made a video explaining a particular concept, the way you explain the same topic will be different. Some people will find their content easier to understand, and some will find your content easier to understand. The more high-quality content there is out there, the higher the chance that you will find something that you can connect to.</p>
@@ -23,7 +23,7 @@ A repository has been setup on GitHub to help people with complementary skills t
 Five winners will be selected who each will be awarded a Golden Pi creature and a prize money of $1000 sponsored by Brilliant. Very exciting!</p>
 <p>I will not have time to make a video this year, but I will write a series on the <em>Determinacy of Two-player Games with Perfect Information</em>. The topic is inspired by some papers that I recently read that were written by Gale and Stewart and by Donald Martin. I will upload the series on this site.</p>
 <p>Good luck! I hope you make some awesome maths explainers!</p>
-]]></description></item><item><title>Zero Shadow Day</title><link>https://pranshugaba.com/posts/zero-shadow-day/</link><pubDate>Sun, 15 May 2022 12:35:00 +0530</pubDate><guid>https://pranshugaba.com/posts/zero-shadow-day/</guid><description>
+]]></description></item><item><title>Zero Shadow Day</title><link>https://pranshugaba.com/articles/zero-shadow-day/</link><pubDate>Sun, 15 May 2022 12:35:00 +0530</pubDate><guid>https://pranshugaba.com/articles/zero-shadow-day/</guid><description>
 <![CDATA[<p>When the clock strikes twelve during the day, we say it&rsquo;s noon. We may perceive this to be the time when the Sun is at its highest point in the sky. However, this is rarely, if ever, true.</p>
 <p>To avoid confusion, let&rsquo;s say when the clock reads 12:00, it is <em>noon</em>, and when the Sun is at its highest, it is <em>local noon</em>. It will soon be clear why it&rsquo;s called it local noon.</p>
 <h2 id="why-is-noon-not-the-same-as-local-noon">Why is noon not the same as local noon?</h2>
@@ -118,7 +118,7 @@ It encourages me to write more.</p>
 </li>
 </ol>
 </div>
-]]></description></item><item><title>Research Seminars</title><link>https://pranshugaba.com/posts/research-seminars/</link><pubDate>Thu, 10 Feb 2022 02:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/research-seminars/</guid><description>
+]]></description></item><item><title>Research Seminars</title><link>https://pranshugaba.com/articles/research-seminars/</link><pubDate>Thu, 10 Feb 2022 02:30:00 +0530</pubDate><guid>https://pranshugaba.com/articles/research-seminars/</guid><description>
 <![CDATA[<p>Most research talks are being held online post lockdown, and as a result, one can access talks from all over the world.
 I came across a website that lists upcoming research seminars and makes it easier to discover interesting talks.</p>
 <p><a href="https://researchseminars.org/" target="_blank" rel="noopener">https://researchseminars.org/</a></p>
@@ -134,7 +134,7 @@ You can filter talks by topic, language, institution, and more.</p>
     
     <picture>
         
-        <img src="https://pranshugaba.com/posts/research-seminars/research-seminars.png" alt="Screenshot of the homepage of researchseminars.org">
+        <img src="https://pranshugaba.com/articles/research-seminars/research-seminars.png" alt="Screenshot of the homepage of researchseminars.org">
     </picture>
     
     
@@ -154,7 +154,7 @@ You can filter talks by topic, language, institution, and more.</p>
 Most talks have a livestream link available (either interactive like Zoom / Google Meet / Microsoft Teams or viewing only such as Youtube).
 Links for some talks are not be available unless you register on this site.</p>
 <p>Try to attend and participate in talks that pique your interest. The feeling of being able to attend a talk held halfway across the world is unmatched.</p>
-]]></description></item><item><title>Advent Puzzles 2021</title><link>https://pranshugaba.com/posts/advent-puzzles-2021/</link><pubDate>Fri, 10 Dec 2021 05:30:00 +0530</pubDate><guid>https://pranshugaba.com/posts/advent-puzzles-2021/</guid><description>
+]]></description></item><item><title>Advent Puzzles 2021</title><link>https://pranshugaba.com/articles/advent-puzzles-2021/</link><pubDate>Fri, 10 Dec 2021 05:30:00 +0530</pubDate><guid>https://pranshugaba.com/articles/advent-puzzles-2021/</guid><description>
 <![CDATA[<p>December is here, which means it&rsquo;s problem solving season!</p>
 <h2 id="maths">Maths</h2>
 <p><a href="https://www.mscroggs.co.uk/" target="_blank" rel="noopener">Matthew Scroggs</a> has posted the seventh edition of the <a href="https://www.mscroggs.co.uk/blog/91" target="_blank" rel="noopener">Advent calendar of maths puzzles</a> on his blog. A new puzzle is unlocked everyday, and you have until the end of the year to submit the answers. The first twenty-four puzzles each have a three digit solutions, and these solutions form the clues required to solve the main puzzle on the 25th.
@@ -167,4 +167,42 @@ You are free to use any programming language to solve them. You can even use pen
 I recently started learning the functional programming language Haskell, and I am using it to solve these puzzles. I am loving the experience so far.</p>
 <hr>
 <p>If you know any other puzzles happening in December (or any other time of the year really), <a href="https://pranshugaba.com/contact/">let me know</a>!</p>
+]]></description></item><item><title>The Tale of Despereaux</title><link>https://pranshugaba.com/articles/the-tale-of-despereaux/</link><pubDate>Mon, 17 Aug 2015 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/articles/the-tale-of-despereaux/</guid><description><![CDATA[
+
+
+<aside class="admonition info">
+    <div class="admonition__title">
+        Info
+    </div>
+	<div class="admonition__content">
+        <p>Full Name: The Tale of Desperaux being a story of a mouse, a princess, some soup, and a spool of thread.<br>
+Author: Kate DiCamillo<br>
+Illustrated by: Timothy Basil Ering</p>
+
+    </div>
+</aside>
+<p>The Tale of Despereaux is an excellent book. The characters are adorable and very well developed. However, the ending seems to be very abrupt.</p>
+<p>This story is set in a world where mice and rats can speak. It is wonderful to listen to what these animals have to say. Their behavior is portrayed very similar to human behavior. And just like humans, there are heroes and villains among mice and rats, who will go against the wind, do something incredible; because they want to do it, and are not influenced by what others say.</p>
+<p>The writer frequently talks to the reader, often at the end of each chapter, making it more enticing to read ahead.</p>
+<p>The book consists of four parts, the author calls it 4 books. In the first three books, the author introduces three main characters. Their history is well narrated, in quite detail. The story jumps forward and backward in time very often. This is not difficult to follow and adds to the narrative. The time jumps make it more interesting.  In the fourth book the three characters meet and have nice interactions. I felt that the ending was very short, not very detailed. It is sad because the reader wants to read more about these lovable characters. But then again, I understand that writing an ending is always the toughest part.</p>
+<p>The book does have a lot of humorous moments, exaggeration that is totally unlikely and also slightly dark humor.</p>
+<p>Overall, it was a very nice experience. I would rate it 7/10</p>
+
+
+
+<aside class="admonition more-info">
+    <div class="admonition__title">
+        More info
+    </div>
+	<div class="admonition__content">
+        <p>ISBN: 9708744598698<br>
+Number of Pages: 270<br>
+Publisher: Walker Books and subsidiaries<br>
+Published: 2004<br>
+Language: English<br>
+Illustrations: Yes<br>
+Ages: 9-12</p>
+
+    </div>
+</aside>
 ]]></description></item></channel></rss>
