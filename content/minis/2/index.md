@@ -12,4 +12,4 @@ featured: false
 ---
 
 So excited for season 3 of What We Do in the Shadows! Starting September 2.
-:male_vampire: :female_vampire: :male_vampire: :bald_man: :bat:
+:vampire_man: :vampire_woman: :vampire_man: :bald_man: :bat:

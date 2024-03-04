@@ -1,7 +1,0 @@
-{{ $numberOfItems := 3}}
-{{ $pages := .Site.RegularPages  }}
-<div class="[ flow ]">
-    {{ range first $numberOfItems (where $pages "Section" "eq" "newsletter") }}
-        {{ partial "list/home" . }}
-    {{ end }}
-</div>

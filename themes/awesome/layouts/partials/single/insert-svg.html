@@ -1,7 +1,0 @@
-{{ $svgImage := .Context.Page.Resources.GetMatch (printf "%s*.svg" .Filename) }}
-<figure class="inline-svg">
-    {{ $svgImage.RelPermalink | readFile | safeHTML }}
-    {{ with .Caption }}
-    <figcaption>{{ . | markdownify }}</figcaption>
-    {{ end }}
-</figure>
