@@ -6,10 +6,8 @@
       {{ partial "single/_default/subtitle" . }}
       {{ partial "single/_default/location" . }}
     </header>
-    {{ partial "single/_default/series-info.html" (dict "Context" . "Top" true) }}
     {{ partial "single/_default/cover-image.html" . }}
     {{ partial "single/_default/page-content.html" . }}
-    {{ partial "single/_default/series-info.html" (dict "Context" . "Top" false) }}
     {{ partial "single/_default/tags" . }}
   </article>
   {{ partial "single/_default/related" . }}
