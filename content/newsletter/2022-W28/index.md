@@ -21,7 +21,7 @@ Here's what's new since the last issue:
 
 ## Recent updates
 
-- Grant Sanderson of [3Blue1Brown](https://en.wikipedia.org/wiki/3Blue1Brown) is back this year with another Summer of Maths Exposition (SoME #2). The goal of this contest is to encourage people to create some awesome maths explainers. You can [read my post on SoME #2]({{< ref "/posts/some-2" >}}) for more details about the contest. There's only one month left to submit your explainers, so this is a good time to get started!
+- Grant Sanderson of [3Blue1Brown](https://en.wikipedia.org/wiki/3Blue1Brown) is back this year with another Summer of Maths Exposition (SoME #2). The goal of this contest is to encourage people to create some awesome maths explainers. You can [read my article on SoME #2]({{< ref "/articles/some-2" >}}) for more details about the contest. There's only one month left to submit your explainers, so this is a good time to get started!
 
 - The GMTK Game Jam 2022 is live! The GMTK game jam started in 2017 and has been taking place every year in July since then. The theme of this year's jam is "Roll of the Dice". You must create and share a playable game based on the theme in less than 50 hours. It is not easy to create a game that works and is also fun to play in this short period of time, and yet each year, we see some amazing games come out of these game jams.  
   [Read more about the GMTK game jam 2022 &#8594;](https://itch.io/jam/gmtk-jam-2022)

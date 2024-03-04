@@ -10,9 +10,6 @@
         {{ if (eq .Type "puzzles")}}
             Puzzle #{{ .File.ContentBaseName }}:
         {{ end }}
-        {{ if (eq .Type "thoughts")}}
-            {{ partial "helpers/thoughts-prefix" . }}
-        {{ end }}
         {{ if (eq .Type "newsletter") }}
             {{ partial "helpers/newsletter-issue" . }}:
         {{ end }}

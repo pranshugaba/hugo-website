@@ -4,7 +4,7 @@ subtitle: Colophon
 summary: A little bit about this site
 ---
 
-This website is my personal corner of the internet. Here, I share things that I have made: [poems]({{< ref "poems" >}}), [puzzles]({{< ref "puzzles" >}}), and more. I write [posts]({{< ref "posts" >}}) about interesting things, websites, places, videos, etc. that I come across. This site is also a way for me to experiment and play around with CSS and JavaScript.
+This website is my personal corner of the internet. Here, I share things that I have made: [poems]({{< ref "poems" >}}), [puzzles]({{< ref "puzzles" >}}), and more. I write [articles]({{< ref "articles" >}}) about interesting things, websites, places, videos, etc. that I come across. This site is also a way for me to experiment and play around with CSS and JavaScript.
 
 ## How it's made
 
@@ -27,7 +27,7 @@ I have hidden a number of easter eggs across this site. How many can you find?
 
 |                         Count | Section                                         |
 | ----------------------------: | :---------------------------------------------- |
-|      {{< countposts posts >}} | [posts]({{< ref "/posts/" >}})                  |
+|      {{< countposts articles >}} | [articles]({{< ref "/articles/" >}})                  |
 |      {{< countposts trips >}} | [trips]({{< ref "/trips/" >}})                  |
 |    {{< countposts recipes >}} | [recipes]({{< ref "/recipes/" >}})              |
 |    {{< countposts puzzles >}} | [puzzles]({{< ref "/puzzles/" >}})              |
@@ -36,7 +36,6 @@ I have hidden a number of easter eggs across this site. How many can you find?
 |     {{< countposts comics >}} | [comics]({{< ref "/comics/" >}})                |
 | {{< countposts newsletter >}} | [newsletter issues]({{< ref "/newsletter/" >}}) |
 | {{< countposts a-propos-de-moi >}} | [à propos de moi]({{< ref "/a-propos-de-moi/" >}}) |
-|   {{< countposts thoughts >}} | [thoughts]({{< ref "/thoughts/" >}})            |
 |      {{< countposts minis >}} | [minis]({{< ref "/minis/" >}})                  |
 |        {{< countposts dev >}} | [dev articles]({{< ref "/dev/" >}})             |
 |     **{{< countpostsall >}}** | **Total**                                       |

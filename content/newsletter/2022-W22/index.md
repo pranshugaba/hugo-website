@@ -22,7 +22,7 @@ In case you missed last week's issue, you can read it on my website at https://p
 
 ## What's new on my website
 
-- It was Zero Shadow Day on May 15 in Mumbai. I [wrote a post explaining what is “Zero Shadow Day”]({{< ref "/posts/zero-shadow-day" >}}) and when you can expect to see it at your place.
+- It was Zero Shadow Day on May 15 in Mumbai. I [wrote an article explaining what is “Zero Shadow Day”]({{< ref "/articles/zero-shadow-day" >}}) and when you can expect to see it at your place.
 - I wrote a photopoem titled _high_. Here's the photo
   {{< figure src="high.webp"  alt="Sun setting at the beach" class="medium" >}}
   and [here's the poem &#8594;]({{< ref "/poems/high" >}})

@@ -1,10 +1,11 @@
 <div class="recent">
   <h2>Explore</h2>
   <div class="recent__group">
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "posts") }}
+    {{ partial "home/recent-section" (dict "Context" . "SectionName" "articles") }}
+    {{ partial "home/recent-section" (dict "Context" . "SectionName" "dev") }}
     {{ partial "home/recent-section" (dict "Context" . "SectionName" "trips") }}
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "lists") }}
     {{ partial "home/recent-section" (dict "Context" . "SectionName" "recipes") }}
+    {{ partial "home/recent-section" (dict "Context" . "SectionName" "lists") }}
   </div>
   <h2>Fun</h2>
   <div class="recent__group">
@@ -17,12 +18,6 @@
   <div class="recent__group">
     {{ partial "home/recent-section" (dict "Context" . "SectionName" "newsletter") }}
     {{ partial "home/recent-section" (dict "Context" . "SectionName" "a-propos-de-moi") }}
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "thoughts") }}
     {{ partial "home/recent-section" (dict "Context" . "SectionName" "minis") }}
-  </div>
-  <h2>Learn</h2>
-  <div class="recent__group">
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "maths") }}
-    {{ partial "home/recent-section" (dict "Context" . "SectionName" "dev") }}
   </div>
 </div>

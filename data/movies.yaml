@@ -19,6 +19,10 @@ wantToWatch:
     releaseYear: 2022
 
 watched:
+  - title: "Dune: Part Two"
+    language: English
+    releaseYear: 2024
+    startDate: 2024-03-02T09:00:00+05:30
   - title: The Holdovers
     language: English
     releaseYear: 2024
