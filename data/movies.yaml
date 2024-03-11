@@ -19,6 +19,10 @@ wantToWatch:
     releaseYear: 2022
 
 watched:
+  - title: Laapataa Ladies
+    language: Hindi
+    releaseYear: 2024
+    startDate: 2024-03-07T15:45:00+05:30
   - title: "Dune: Part Two"
     language: English
     releaseYear: 2024
