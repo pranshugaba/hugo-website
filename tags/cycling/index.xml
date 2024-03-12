@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cycling by Pranshu Gaba</title><link>https://pranshugaba.com/tags/cycling/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 12 Mar 2024 02:28:15 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/cycling/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/cycling/index.xml" rel="self" type="application/rss+xml"/><item><title>Cycling home from TIFR</title><link>https://pranshugaba.com/trips/cycling-home-from-tifr/</link><pubDate>Fri, 18 Feb 2022 09:30:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-home-from-tifr/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cycling by Pranshu Gaba</title><link>https://pranshugaba.com/tags/cycling/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 12 Mar 2024 12:45:09 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/cycling/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/cycling/index.xml" rel="self" type="application/rss+xml"/><item><title>Cycling home from TIFR</title><link>https://pranshugaba.com/trips/cycling-home-from-tifr/</link><pubDate>Fri, 18 Feb 2022 09:30:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-home-from-tifr/</guid><description>
 <![CDATA[<p>I cycled home from TIFR. I left at 5.45 am and reached home by 9.15 am.</p>
 <p>In spite of taking a longer route today, I was surprisingly much less tired compared to the <a href="https://pranshugaba.com/trips/cycling-to-tifr/">last time I cycled to TIFR</a>.</p>
 <p>I got to see Rainbow on the way!</p>
@@ -21,153 +21,228 @@
     </div>
   </div>
 </div>
-
-
 <script>
-    {
-      let coords = [19.18, 72.82];
-      let zoomLevel = 12;
-      var corner1 = L.latLng(18.743, 73.394),
-      corner2 = L.latLng(19.470, 72.507),
-      bounds = L.latLngBounds(corner1, corner2);
-      let mymap = L.map('cycling-2022-02-18', {
-        fullscreenControl: true,
-        preferCanvas: true,
-        zoomSnap: 0.5,
-        zoomDelta: 0.5,
-        scrollWheelZoom: false,
-      }).setView(coords, zoomLevel);
+  fetch("cycling-2022-02-18.geojson") 
+    .then(response => response.json())
+    .then(data => {
+      console.log("cycling-2022-02-18");
+      console.log(data);
+      const gj = data;
+      const initialCoords = [72.82, 19.22]; 
+      const initialZoom = 12;
 
-         const ATTR =
-        '&copy; <a href="https://stadiamaps.com/" target="_blank" rel="noopener">Stadia Maps</a>, ' +
-        '&copy; <a href="https://openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> ' +
-        '&copy; <a href="http://openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a>';
-      const TILES_URL =
-        'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png';
+      const maxBoundPadding = 0.42;
 
-      let Stadia_OSMBright = L.tileLayer(TILES_URL, {
-        minZoom: 3,
-        maxZoom: 18,
-        attribution: ATTR,
+      const routeName = getRouteName(gj);
+
+      const activityType = getActivityType(gj);
+      
+      const coordinates = getCoordinates(gj);
+      
+
+      const bounds = coordinates.reduce((bounds, coord) => 
+        { return bounds.extend(coord); },
+        new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+       
+      const maxBoundSW = [ bounds._sw.lng - maxBoundPadding, bounds._sw.lat - maxBoundPadding];
+      const maxBoundNE = [ bounds._ne.lng + maxBoundPadding, bounds._ne.lat + maxBoundPadding];
+      const maxBounds = new maplibregl.LngLatBounds(maxBoundSW, maxBoundNE);
+      
+      const startCoordinate = coordinates.at(0);
+      const endCoordinate = coordinates.at(-1);
+
+      const routeTurfLine = turf.lineString(coordinates);
+      const routeLength = turf.length(routeTurfLine);
+
+      
+
+      const map = new maplibregl.Map({
+        container: 'cycling-2022-02-18',
+        style: 'https://tiles.stadiamaps.com/styles/osm_bright.json', 
+        center: initialCoords, 
+        zoom: initialZoom, 
+        hash: false,
+        maxBounds: maxBounds,
+        
       });
-      Stadia_OSMBright.addTo(mymap);
 
-      L.control.scale({ imperial: false }).addTo(mymap);
+      map.fitBounds(bounds, {
+          padding: 60,
+      });
+      
+      
+      
+      
 
-      let gpx = 'cycling-2022-02-18.gpx'; 
+      let nav = new maplibregl.NavigationControl({
+        visualizePitch: true,
+      });
+      map.addControl(nav, 'top-left');
       
-      function formatNumber (number, precision = 3) {
-        if (typeof number === 'undefined' || number === null) return ''
+      let fullScreen = new maplibregl.FullscreenControl();
+      map.addControl(fullScreen, 'top-left');
+
+      let scale = new maplibregl.ScaleControl({
+        maxWidth: 80,
+        unit: 'metric',
+      });
+      map.addControl(scale);
+
+      let logo = new maplibregl.LogoControl({
+        compact: true,
+      });
+  
+      map.addControl(logo, 'top-right');
+
+      const markerStart = new maplibregl.Marker({ color: '#33aa66' })
+        .setLngLat(startCoordinate)
+        .addTo(map);
+
+      const markerEnd = new maplibregl.Marker({ color: '#aa4433' })
+        .setLngLat(endCoordinate)
+        .addTo(map);
+
+      map.on('load', () => {
+        map.addSource('route', {
+          type: 'geojson',
+          data: gj,
+        });
+
+        map.addLayer({
+          id: 'route',
+          type: 'line',
+          source: 'route',
+          layout: {
+            'line-join': 'round',
+            'line-cap': 'round',
+          },
+          paint: {
+            'line-color': '#2e2e2e',
+            'line-width': 3,
+            'line-opacity': 0.8,
+          },
+        });
+
+        document.getElementById(
+          'cycling-2022-02-18__name'
+        ).innerText = routeName;
       
-        if (number === 0) return '0'
-      
-        const roundedValue = round(precision, number)
-        const floorValue = Math.floor(roundedValue)
-      
-        const isInteger = Math.abs(floorValue - roundedValue) < Number.EPSILON
-      
-        const numberOfFloorDigits = String(floorValue).length
-        const numberOfDigits = String(roundedValue).length
-      
-        if (numberOfFloorDigits > precision) {
-          return String(floorValue)
-        } else {
-          const padding = isInteger ? precision - numberOfFloorDigits : precision - numberOfDigits + 1
-      
-          if (padding > 0) {
-            if (isInteger) {
-              return `${String(floorValue)}.${'0'.repeat(padding)}`
-            } else {
-              return `${String(roundedValue)}${'0'.repeat(padding)}`
-            }
-          } else {
-            return String(roundedValue)
-          }
+        if (activityType){
+          document.getElementById(
+            'cycling-2022-02-18__type'
+          ).innerText = activityType;
         }
-      }
-      
-      function round(precision, number) {
-        return parseFloat(number.toPrecision(precision))
-      }
-      
-      function formatDate(date) {
-        const options = {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-          hour: "numeric",
-          minute: "numeric",
-          timeZone: "Asia/Kolkata"
-        };
-        return new Intl.DateTimeFormat("en-in", options).format(date);
-      }
+        
+        document.getElementById(
+          'cycling-2022-02-18__distance'
+        ).innerText = `Distance: ${formatNumber(routeLength)} km`;
+        
+        
+        const timestamps = getTimestamps(gj);
+        const startTime = new Date(timestamps.at(0));
+        const endTime = new Date(timestamps.at(-1));
 
-      new L.GPX(gpx, {
-        async: true,
-        marker_options: {
-          shadowUrl: '/img/shadow.png',
-          endIconUrl: '/img/enda.png',
-          startIconUrl: '/img/starta.png',
-          iconSize: [50, 50],
-          iconAnchor: [25, 48],
-        },
-        polyline_options: {
-          color: 'azure',
-          opacity: 0.9,
-          weight: 3,
-          lineCap: 'round',
-        },
-      })
-        .on('loaded', function (e) {
-          mymap.fitBounds(e.target.getBounds(), {
-            padding: [10, 10],
-          });
-          
-          let name = e.target.get_name();
-          document.getElementById(
-            'cycling-2022-02-18__name'
-          ).innerText = name;
-          
-          let ex_type = e.target.get_exercise_type();
-          if (ex_type){
-            document.getElementById(
-              'cycling-2022-02-18__type'
-            ).innerText = ex_type;
-          }
-          
-          let distance = e.target.get_distance() / 1000;
-          document.getElementById(
-            'cycling-2022-02-18__distance'
-          ).innerText = `Distance: ${formatNumber(distance)} km`;
-         
+        const duration = Math.abs(endTime - startTime); 
 
-          let duration = e.target.get_duration();
-          let duration_string = e.target.get_duration_string(duration);
-          if (duration) {
-            document.getElementById(
-              'cycling-2022-02-18__duration'
-            ).innerText = `Duration: ${duration_string}`;
-         
-            let moving_speed = e.target.get_moving_speed();
-            let speed = moving_speed;
-            if (speed >= Infinity) {
-              speed = e.target.get_average_speed();
-            }
-            document.getElementById(
-              'cycling-2022-02-18__speed'
-            ).innerText = `Avg. Speed: ${formatNumber(speed)} km/h`;
-          }
-          
-          let start_time = new Date(e.target.get_time());
-          let formatted_time = formatDate(start_time);
-          if (formatted_time) {
-            document.getElementById(
-              'cycling-2022-02-18__start-time'
-            ).innerText = formatted_time;
-          }
-        })
-        .addTo(mymap);
+        const avgSpeed = routeLength / (duration / 36e5);
+        document.getElementById(
+          'cycling-2022-02-18__start-time'
+        ).innerText = formatDate(startTime);
+
+        if (duration){
+          document.getElementById(
+            'cycling-2022-02-18__duration'
+          ).innerText = `Duration: ${formatDuration(duration)}`;
+          document.getElementById(
+            'cycling-2022-02-18__speed'
+          ).innerText = `Avg. Speed: ${formatNumber(avgSpeed)} km/h`;
+        }
+      });
+    })
+    .catch(function (err) {
+      console.log(err.message);
+    })
+  ;
+
+  
+  function getActivityType(geojson) {
+    return geojson.features[0].properties.type;
+  }
+  
+  function getRouteName(geojson) {
+    return geojson.features[0].properties.name;
+  }
+  
+  function getCoordinates(geojson) {
+    return geojson.features[0].geometry.coordinates;
+  }
+  
+  function getTimestamps(geojson) {
+    return geojson.features[0].properties.coordTimes
+  }
+  
+  function formatNumber (number, precision = 3) {
+    if (typeof number === 'undefined' || number === null) return ''
+  
+    if (number === 0) return '0'
+  
+    const roundedValue = round(precision, number)
+    const floorValue = Math.floor(roundedValue)
+  
+    const isInteger = Math.abs(floorValue - roundedValue) < Number.EPSILON
+  
+    const numberOfFloorDigits = String(floorValue).length
+    const numberOfDigits = String(roundedValue).length
+  
+    if (numberOfFloorDigits > precision) {
+      return String(floorValue)
+    } else {
+      const padding = isInteger ? precision - numberOfFloorDigits : precision - numberOfDigits + 1
+  
+      if (padding > 0) {
+        if (isInteger) {
+          return `${String(floorValue)}.${'0'.repeat(padding)}`
+        } else {
+          return `${String(roundedValue)}${'0'.repeat(padding)}`
+        }
+      } else {
+        return String(roundedValue)
+      }
     }
+  }
+  
+  function round(precision, number) {
+    return parseFloat(number.toPrecision(precision))
+  }
+  
+  function formatDate(date) {
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      timeZone: "Asia/Kolkata"
+    };
+    return new Intl.DateTimeFormat("en-in", options).format(date);
+  }
+
+  function formatDuration(duration) {
+    const seconds = Math.floor(duration / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    
+    if (days >= 1) {
+      return `${days}d ${hours % 24}h`;
+    } else if (hours >= 1){
+      return `${hours}h ${minutes % 60}m`;
+    } else if (minutes >= 0) {
+      return `${minutes}m ${seconds % 60}s`;
+    } else {
+      return "";
+    }
+  }
 </script>
 
 <style>
@@ -175,6 +250,8 @@
     font-weight: 600;
   }
 </style>
+
+
 <h2 id="gallery">Gallery</h2>
 
 
@@ -946,153 +1023,228 @@
     </div>
   </div>
 </div>
-
-
 <script>
-    {
-      let coords = [19.18, 72.82];
-      let zoomLevel = 12;
-      var corner1 = L.latLng(18.743, 73.394),
-      corner2 = L.latLng(19.470, 72.507),
-      bounds = L.latLngBounds(corner1, corner2);
-      let mymap = L.map('tifr', {
-        fullscreenControl: true,
-        preferCanvas: true,
-        zoomSnap: 0.5,
-        zoomDelta: 0.5,
-        scrollWheelZoom: false,
-      }).setView(coords, zoomLevel);
+  fetch("tifr.geojson") 
+    .then(response => response.json())
+    .then(data => {
+      console.log("tifr");
+      console.log(data);
+      const gj = data;
+      const initialCoords = [72.82, 19.22]; 
+      const initialZoom = 12;
 
-         const ATTR =
-        '&copy; <a href="https://stadiamaps.com/" target="_blank" rel="noopener">Stadia Maps</a>, ' +
-        '&copy; <a href="https://openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> ' +
-        '&copy; <a href="http://openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a>';
-      const TILES_URL =
-        'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png';
+      const maxBoundPadding = 0.42;
 
-      let Stadia_OSMBright = L.tileLayer(TILES_URL, {
-        minZoom: 3,
-        maxZoom: 18,
-        attribution: ATTR,
+      const routeName = getRouteName(gj);
+
+      const activityType = getActivityType(gj);
+      
+      const coordinates = getCoordinates(gj);
+      
+
+      const bounds = coordinates.reduce((bounds, coord) => 
+        { return bounds.extend(coord); },
+        new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+       
+      const maxBoundSW = [ bounds._sw.lng - maxBoundPadding, bounds._sw.lat - maxBoundPadding];
+      const maxBoundNE = [ bounds._ne.lng + maxBoundPadding, bounds._ne.lat + maxBoundPadding];
+      const maxBounds = new maplibregl.LngLatBounds(maxBoundSW, maxBoundNE);
+      
+      const startCoordinate = coordinates.at(0);
+      const endCoordinate = coordinates.at(-1);
+
+      const routeTurfLine = turf.lineString(coordinates);
+      const routeLength = turf.length(routeTurfLine);
+
+      
+
+      const map = new maplibregl.Map({
+        container: 'tifr',
+        style: 'https://tiles.stadiamaps.com/styles/osm_bright.json', 
+        center: initialCoords, 
+        zoom: initialZoom, 
+        hash: false,
+        maxBounds: maxBounds,
+        
       });
-      Stadia_OSMBright.addTo(mymap);
 
-      L.control.scale({ imperial: false }).addTo(mymap);
+      map.fitBounds(bounds, {
+          padding: 60,
+      });
+      
+      
+      
+      
 
-      let gpx = 'tifr.gpx'; 
+      let nav = new maplibregl.NavigationControl({
+        visualizePitch: true,
+      });
+      map.addControl(nav, 'top-left');
       
-      function formatNumber (number, precision = 3) {
-        if (typeof number === 'undefined' || number === null) return ''
+      let fullScreen = new maplibregl.FullscreenControl();
+      map.addControl(fullScreen, 'top-left');
+
+      let scale = new maplibregl.ScaleControl({
+        maxWidth: 80,
+        unit: 'metric',
+      });
+      map.addControl(scale);
+
+      let logo = new maplibregl.LogoControl({
+        compact: true,
+      });
+  
+      map.addControl(logo, 'top-right');
+
+      const markerStart = new maplibregl.Marker({ color: '#33aa66' })
+        .setLngLat(startCoordinate)
+        .addTo(map);
+
+      const markerEnd = new maplibregl.Marker({ color: '#aa4433' })
+        .setLngLat(endCoordinate)
+        .addTo(map);
+
+      map.on('load', () => {
+        map.addSource('route', {
+          type: 'geojson',
+          data: gj,
+        });
+
+        map.addLayer({
+          id: 'route',
+          type: 'line',
+          source: 'route',
+          layout: {
+            'line-join': 'round',
+            'line-cap': 'round',
+          },
+          paint: {
+            'line-color': '#2e2e2e',
+            'line-width': 3,
+            'line-opacity': 0.8,
+          },
+        });
+
+        document.getElementById(
+          'tifr__name'
+        ).innerText = routeName;
       
-        if (number === 0) return '0'
-      
-        const roundedValue = round(precision, number)
-        const floorValue = Math.floor(roundedValue)
-      
-        const isInteger = Math.abs(floorValue - roundedValue) < Number.EPSILON
-      
-        const numberOfFloorDigits = String(floorValue).length
-        const numberOfDigits = String(roundedValue).length
-      
-        if (numberOfFloorDigits > precision) {
-          return String(floorValue)
-        } else {
-          const padding = isInteger ? precision - numberOfFloorDigits : precision - numberOfDigits + 1
-      
-          if (padding > 0) {
-            if (isInteger) {
-              return `${String(floorValue)}.${'0'.repeat(padding)}`
-            } else {
-              return `${String(roundedValue)}${'0'.repeat(padding)}`
-            }
-          } else {
-            return String(roundedValue)
-          }
+        if (activityType){
+          document.getElementById(
+            'tifr__type'
+          ).innerText = activityType;
         }
-      }
-      
-      function round(precision, number) {
-        return parseFloat(number.toPrecision(precision))
-      }
-      
-      function formatDate(date) {
-        const options = {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-          hour: "numeric",
-          minute: "numeric",
-          timeZone: "Asia/Kolkata"
-        };
-        return new Intl.DateTimeFormat("en-in", options).format(date);
-      }
+        
+        document.getElementById(
+          'tifr__distance'
+        ).innerText = `Distance: ${formatNumber(routeLength)} km`;
+        
+        
+        const timestamps = getTimestamps(gj);
+        const startTime = new Date(timestamps.at(0));
+        const endTime = new Date(timestamps.at(-1));
 
-      new L.GPX(gpx, {
-        async: true,
-        marker_options: {
-          shadowUrl: '/img/shadow.png',
-          endIconUrl: '/img/enda.png',
-          startIconUrl: '/img/starta.png',
-          iconSize: [50, 50],
-          iconAnchor: [25, 48],
-        },
-        polyline_options: {
-          color: 'azure',
-          opacity: 0.9,
-          weight: 3,
-          lineCap: 'round',
-        },
-      })
-        .on('loaded', function (e) {
-          mymap.fitBounds(e.target.getBounds(), {
-            padding: [10, 10],
-          });
-          
-          let name = e.target.get_name();
-          document.getElementById(
-            'tifr__name'
-          ).innerText = name;
-          
-          let ex_type = e.target.get_exercise_type();
-          if (ex_type){
-            document.getElementById(
-              'tifr__type'
-            ).innerText = ex_type;
-          }
-          
-          let distance = e.target.get_distance() / 1000;
-          document.getElementById(
-            'tifr__distance'
-          ).innerText = `Distance: ${formatNumber(distance)} km`;
-         
+        const duration = Math.abs(endTime - startTime); 
 
-          let duration = e.target.get_duration();
-          let duration_string = e.target.get_duration_string(duration);
-          if (duration) {
-            document.getElementById(
-              'tifr__duration'
-            ).innerText = `Duration: ${duration_string}`;
-         
-            let moving_speed = e.target.get_moving_speed();
-            let speed = moving_speed;
-            if (speed >= Infinity) {
-              speed = e.target.get_average_speed();
-            }
-            document.getElementById(
-              'tifr__speed'
-            ).innerText = `Avg. Speed: ${formatNumber(speed)} km/h`;
-          }
-          
-          let start_time = new Date(e.target.get_time());
-          let formatted_time = formatDate(start_time);
-          if (formatted_time) {
-            document.getElementById(
-              'tifr__start-time'
-            ).innerText = formatted_time;
-          }
-        })
-        .addTo(mymap);
+        const avgSpeed = routeLength / (duration / 36e5);
+        document.getElementById(
+          'tifr__start-time'
+        ).innerText = formatDate(startTime);
+
+        if (duration){
+          document.getElementById(
+            'tifr__duration'
+          ).innerText = `Duration: ${formatDuration(duration)}`;
+          document.getElementById(
+            'tifr__speed'
+          ).innerText = `Avg. Speed: ${formatNumber(avgSpeed)} km/h`;
+        }
+      });
+    })
+    .catch(function (err) {
+      console.log(err.message);
+    })
+  ;
+
+  
+  function getActivityType(geojson) {
+    return geojson.features[0].properties.type;
+  }
+  
+  function getRouteName(geojson) {
+    return geojson.features[0].properties.name;
+  }
+  
+  function getCoordinates(geojson) {
+    return geojson.features[0].geometry.coordinates;
+  }
+  
+  function getTimestamps(geojson) {
+    return geojson.features[0].properties.coordTimes
+  }
+  
+  function formatNumber (number, precision = 3) {
+    if (typeof number === 'undefined' || number === null) return ''
+  
+    if (number === 0) return '0'
+  
+    const roundedValue = round(precision, number)
+    const floorValue = Math.floor(roundedValue)
+  
+    const isInteger = Math.abs(floorValue - roundedValue) < Number.EPSILON
+  
+    const numberOfFloorDigits = String(floorValue).length
+    const numberOfDigits = String(roundedValue).length
+  
+    if (numberOfFloorDigits > precision) {
+      return String(floorValue)
+    } else {
+      const padding = isInteger ? precision - numberOfFloorDigits : precision - numberOfDigits + 1
+  
+      if (padding > 0) {
+        if (isInteger) {
+          return `${String(floorValue)}.${'0'.repeat(padding)}`
+        } else {
+          return `${String(roundedValue)}${'0'.repeat(padding)}`
+        }
+      } else {
+        return String(roundedValue)
+      }
     }
+  }
+  
+  function round(precision, number) {
+    return parseFloat(number.toPrecision(precision))
+  }
+  
+  function formatDate(date) {
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      timeZone: "Asia/Kolkata"
+    };
+    return new Intl.DateTimeFormat("en-in", options).format(date);
+  }
+
+  function formatDuration(duration) {
+    const seconds = Math.floor(duration / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    
+    if (days >= 1) {
+      return `${days}d ${hours % 24}h`;
+    } else if (hours >= 1){
+      return `${hours}h ${minutes % 60}m`;
+    } else if (minutes >= 0) {
+      return `${minutes}m ${seconds % 60}s`;
+    } else {
+      return "";
+    }
+  }
 </script>
 
 <style>
@@ -1100,6 +1252,8 @@
     font-weight: 600;
   }
 </style>
+
+
 ]]></description></item><item><title>Cycling to Gorai</title><link>https://pranshugaba.com/trips/cycling-to-gorai/</link><pubDate>Fri, 30 Jul 2021 14:00:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-to-gorai/</guid><description>
 <![CDATA[<h2 id="map">Map</h2>
 
@@ -1120,153 +1274,228 @@
     </div>
   </div>
 </div>
-
-
 <script>
-    {
-      let coords = [19.18, 72.82];
-      let zoomLevel = 12;
-      var corner1 = L.latLng(18.743, 73.394),
-      corner2 = L.latLng(19.470, 72.507),
-      bounds = L.latLngBounds(corner1, corner2);
-      let mymap = L.map('gorai', {
-        fullscreenControl: true,
-        preferCanvas: true,
-        zoomSnap: 0.5,
-        zoomDelta: 0.5,
-        scrollWheelZoom: false,
-      }).setView(coords, zoomLevel);
+  fetch("gorai.geojson") 
+    .then(response => response.json())
+    .then(data => {
+      console.log("gorai");
+      console.log(data);
+      const gj = data;
+      const initialCoords = [72.82, 19.22]; 
+      const initialZoom = 12;
 
-         const ATTR =
-        '&copy; <a href="https://stadiamaps.com/" target="_blank" rel="noopener">Stadia Maps</a>, ' +
-        '&copy; <a href="https://openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> ' +
-        '&copy; <a href="http://openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a>';
-      const TILES_URL =
-        'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png';
+      const maxBoundPadding = 0.42;
 
-      let Stadia_OSMBright = L.tileLayer(TILES_URL, {
-        minZoom: 3,
-        maxZoom: 18,
-        attribution: ATTR,
+      const routeName = getRouteName(gj);
+
+      const activityType = getActivityType(gj);
+      
+      const coordinates = getCoordinates(gj);
+      
+
+      const bounds = coordinates.reduce((bounds, coord) => 
+        { return bounds.extend(coord); },
+        new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+       
+      const maxBoundSW = [ bounds._sw.lng - maxBoundPadding, bounds._sw.lat - maxBoundPadding];
+      const maxBoundNE = [ bounds._ne.lng + maxBoundPadding, bounds._ne.lat + maxBoundPadding];
+      const maxBounds = new maplibregl.LngLatBounds(maxBoundSW, maxBoundNE);
+      
+      const startCoordinate = coordinates.at(0);
+      const endCoordinate = coordinates.at(-1);
+
+      const routeTurfLine = turf.lineString(coordinates);
+      const routeLength = turf.length(routeTurfLine);
+
+      
+
+      const map = new maplibregl.Map({
+        container: 'gorai',
+        style: 'https://tiles.stadiamaps.com/styles/osm_bright.json', 
+        center: initialCoords, 
+        zoom: initialZoom, 
+        hash: false,
+        maxBounds: maxBounds,
+        
       });
-      Stadia_OSMBright.addTo(mymap);
 
-      L.control.scale({ imperial: false }).addTo(mymap);
+      map.fitBounds(bounds, {
+          padding: 60,
+      });
+      
+      
+      
+      
 
-      let gpx = 'gorai.gpx'; 
+      let nav = new maplibregl.NavigationControl({
+        visualizePitch: true,
+      });
+      map.addControl(nav, 'top-left');
       
-      function formatNumber (number, precision = 3) {
-        if (typeof number === 'undefined' || number === null) return ''
+      let fullScreen = new maplibregl.FullscreenControl();
+      map.addControl(fullScreen, 'top-left');
+
+      let scale = new maplibregl.ScaleControl({
+        maxWidth: 80,
+        unit: 'metric',
+      });
+      map.addControl(scale);
+
+      let logo = new maplibregl.LogoControl({
+        compact: true,
+      });
+  
+      map.addControl(logo, 'top-right');
+
+      const markerStart = new maplibregl.Marker({ color: '#33aa66' })
+        .setLngLat(startCoordinate)
+        .addTo(map);
+
+      const markerEnd = new maplibregl.Marker({ color: '#aa4433' })
+        .setLngLat(endCoordinate)
+        .addTo(map);
+
+      map.on('load', () => {
+        map.addSource('route', {
+          type: 'geojson',
+          data: gj,
+        });
+
+        map.addLayer({
+          id: 'route',
+          type: 'line',
+          source: 'route',
+          layout: {
+            'line-join': 'round',
+            'line-cap': 'round',
+          },
+          paint: {
+            'line-color': '#2e2e2e',
+            'line-width': 3,
+            'line-opacity': 0.8,
+          },
+        });
+
+        document.getElementById(
+          'gorai__name'
+        ).innerText = routeName;
       
-        if (number === 0) return '0'
-      
-        const roundedValue = round(precision, number)
-        const floorValue = Math.floor(roundedValue)
-      
-        const isInteger = Math.abs(floorValue - roundedValue) < Number.EPSILON
-      
-        const numberOfFloorDigits = String(floorValue).length
-        const numberOfDigits = String(roundedValue).length
-      
-        if (numberOfFloorDigits > precision) {
-          return String(floorValue)
-        } else {
-          const padding = isInteger ? precision - numberOfFloorDigits : precision - numberOfDigits + 1
-      
-          if (padding > 0) {
-            if (isInteger) {
-              return `${String(floorValue)}.${'0'.repeat(padding)}`
-            } else {
-              return `${String(roundedValue)}${'0'.repeat(padding)}`
-            }
-          } else {
-            return String(roundedValue)
-          }
+        if (activityType){
+          document.getElementById(
+            'gorai__type'
+          ).innerText = activityType;
         }
-      }
-      
-      function round(precision, number) {
-        return parseFloat(number.toPrecision(precision))
-      }
-      
-      function formatDate(date) {
-        const options = {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-          hour: "numeric",
-          minute: "numeric",
-          timeZone: "Asia/Kolkata"
-        };
-        return new Intl.DateTimeFormat("en-in", options).format(date);
-      }
+        
+        document.getElementById(
+          'gorai__distance'
+        ).innerText = `Distance: ${formatNumber(routeLength)} km`;
+        
+        
+        const timestamps = getTimestamps(gj);
+        const startTime = new Date(timestamps.at(0));
+        const endTime = new Date(timestamps.at(-1));
 
-      new L.GPX(gpx, {
-        async: true,
-        marker_options: {
-          shadowUrl: '/img/shadow.png',
-          endIconUrl: '/img/enda.png',
-          startIconUrl: '/img/starta.png',
-          iconSize: [50, 50],
-          iconAnchor: [25, 48],
-        },
-        polyline_options: {
-          color: 'azure',
-          opacity: 0.9,
-          weight: 3,
-          lineCap: 'round',
-        },
-      })
-        .on('loaded', function (e) {
-          mymap.fitBounds(e.target.getBounds(), {
-            padding: [10, 10],
-          });
-          
-          let name = e.target.get_name();
-          document.getElementById(
-            'gorai__name'
-          ).innerText = name;
-          
-          let ex_type = e.target.get_exercise_type();
-          if (ex_type){
-            document.getElementById(
-              'gorai__type'
-            ).innerText = ex_type;
-          }
-          
-          let distance = e.target.get_distance() / 1000;
-          document.getElementById(
-            'gorai__distance'
-          ).innerText = `Distance: ${formatNumber(distance)} km`;
-         
+        const duration = Math.abs(endTime - startTime); 
 
-          let duration = e.target.get_duration();
-          let duration_string = e.target.get_duration_string(duration);
-          if (duration) {
-            document.getElementById(
-              'gorai__duration'
-            ).innerText = `Duration: ${duration_string}`;
-         
-            let moving_speed = e.target.get_moving_speed();
-            let speed = moving_speed;
-            if (speed >= Infinity) {
-              speed = e.target.get_average_speed();
-            }
-            document.getElementById(
-              'gorai__speed'
-            ).innerText = `Avg. Speed: ${formatNumber(speed)} km/h`;
-          }
-          
-          let start_time = new Date(e.target.get_time());
-          let formatted_time = formatDate(start_time);
-          if (formatted_time) {
-            document.getElementById(
-              'gorai__start-time'
-            ).innerText = formatted_time;
-          }
-        })
-        .addTo(mymap);
+        const avgSpeed = routeLength / (duration / 36e5);
+        document.getElementById(
+          'gorai__start-time'
+        ).innerText = formatDate(startTime);
+
+        if (duration){
+          document.getElementById(
+            'gorai__duration'
+          ).innerText = `Duration: ${formatDuration(duration)}`;
+          document.getElementById(
+            'gorai__speed'
+          ).innerText = `Avg. Speed: ${formatNumber(avgSpeed)} km/h`;
+        }
+      });
+    })
+    .catch(function (err) {
+      console.log(err.message);
+    })
+  ;
+
+  
+  function getActivityType(geojson) {
+    return geojson.features[0].properties.type;
+  }
+  
+  function getRouteName(geojson) {
+    return geojson.features[0].properties.name;
+  }
+  
+  function getCoordinates(geojson) {
+    return geojson.features[0].geometry.coordinates;
+  }
+  
+  function getTimestamps(geojson) {
+    return geojson.features[0].properties.coordTimes
+  }
+  
+  function formatNumber (number, precision = 3) {
+    if (typeof number === 'undefined' || number === null) return ''
+  
+    if (number === 0) return '0'
+  
+    const roundedValue = round(precision, number)
+    const floorValue = Math.floor(roundedValue)
+  
+    const isInteger = Math.abs(floorValue - roundedValue) < Number.EPSILON
+  
+    const numberOfFloorDigits = String(floorValue).length
+    const numberOfDigits = String(roundedValue).length
+  
+    if (numberOfFloorDigits > precision) {
+      return String(floorValue)
+    } else {
+      const padding = isInteger ? precision - numberOfFloorDigits : precision - numberOfDigits + 1
+  
+      if (padding > 0) {
+        if (isInteger) {
+          return `${String(floorValue)}.${'0'.repeat(padding)}`
+        } else {
+          return `${String(roundedValue)}${'0'.repeat(padding)}`
+        }
+      } else {
+        return String(roundedValue)
+      }
     }
+  }
+  
+  function round(precision, number) {
+    return parseFloat(number.toPrecision(precision))
+  }
+  
+  function formatDate(date) {
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      timeZone: "Asia/Kolkata"
+    };
+    return new Intl.DateTimeFormat("en-in", options).format(date);
+  }
+
+  function formatDuration(duration) {
+    const seconds = Math.floor(duration / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    
+    if (days >= 1) {
+      return `${days}d ${hours % 24}h`;
+    } else if (hours >= 1){
+      return `${hours}h ${minutes % 60}m`;
+    } else if (minutes >= 0) {
+      return `${minutes}m ${seconds % 60}s`;
+    } else {
+      return "";
+    }
+  }
 </script>
 
 <style>
@@ -1274,6 +1503,8 @@
     font-weight: 600;
   }
 </style>
+
+
 <h2 id="gallery">Gallery</h2>
 
 
@@ -1870,153 +2101,228 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
     </div>
   </div>
 </div>
-
-
 <script>
-    {
-      let coords = [19.18, 72.82];
-      let zoomLevel = 12;
-      var corner1 = L.latLng(18.743, 73.394),
-      corner2 = L.latLng(19.470, 72.507),
-      bounds = L.latLngBounds(corner1, corner2);
-      let mymap = L.map('decathlon', {
-        fullscreenControl: true,
-        preferCanvas: true,
-        zoomSnap: 0.5,
-        zoomDelta: 0.5,
-        scrollWheelZoom: false,
-      }).setView(coords, zoomLevel);
+  fetch("decathlon.geojson") 
+    .then(response => response.json())
+    .then(data => {
+      console.log("decathlon");
+      console.log(data);
+      const gj = data;
+      const initialCoords = [72.82, 19.22]; 
+      const initialZoom = 12;
 
-         const ATTR =
-        '&copy; <a href="https://stadiamaps.com/" target="_blank" rel="noopener">Stadia Maps</a>, ' +
-        '&copy; <a href="https://openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> ' +
-        '&copy; <a href="http://openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a>';
-      const TILES_URL =
-        'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png';
+      const maxBoundPadding = 0.42;
 
-      let Stadia_OSMBright = L.tileLayer(TILES_URL, {
-        minZoom: 3,
-        maxZoom: 18,
-        attribution: ATTR,
+      const routeName = getRouteName(gj);
+
+      const activityType = getActivityType(gj);
+      
+      const coordinates = getCoordinates(gj);
+      
+
+      const bounds = coordinates.reduce((bounds, coord) => 
+        { return bounds.extend(coord); },
+        new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+       
+      const maxBoundSW = [ bounds._sw.lng - maxBoundPadding, bounds._sw.lat - maxBoundPadding];
+      const maxBoundNE = [ bounds._ne.lng + maxBoundPadding, bounds._ne.lat + maxBoundPadding];
+      const maxBounds = new maplibregl.LngLatBounds(maxBoundSW, maxBoundNE);
+      
+      const startCoordinate = coordinates.at(0);
+      const endCoordinate = coordinates.at(-1);
+
+      const routeTurfLine = turf.lineString(coordinates);
+      const routeLength = turf.length(routeTurfLine);
+
+      
+
+      const map = new maplibregl.Map({
+        container: 'decathlon',
+        style: 'https://tiles.stadiamaps.com/styles/osm_bright.json', 
+        center: initialCoords, 
+        zoom: initialZoom, 
+        hash: false,
+        maxBounds: maxBounds,
+        
       });
-      Stadia_OSMBright.addTo(mymap);
 
-      L.control.scale({ imperial: false }).addTo(mymap);
+      map.fitBounds(bounds, {
+          padding: 60,
+      });
+      
+      
+      
+      
 
-      let gpx = 'decathlon.gpx'; 
+      let nav = new maplibregl.NavigationControl({
+        visualizePitch: true,
+      });
+      map.addControl(nav, 'top-left');
       
-      function formatNumber (number, precision = 3) {
-        if (typeof number === 'undefined' || number === null) return ''
+      let fullScreen = new maplibregl.FullscreenControl();
+      map.addControl(fullScreen, 'top-left');
+
+      let scale = new maplibregl.ScaleControl({
+        maxWidth: 80,
+        unit: 'metric',
+      });
+      map.addControl(scale);
+
+      let logo = new maplibregl.LogoControl({
+        compact: true,
+      });
+  
+      map.addControl(logo, 'top-right');
+
+      const markerStart = new maplibregl.Marker({ color: '#33aa66' })
+        .setLngLat(startCoordinate)
+        .addTo(map);
+
+      const markerEnd = new maplibregl.Marker({ color: '#aa4433' })
+        .setLngLat(endCoordinate)
+        .addTo(map);
+
+      map.on('load', () => {
+        map.addSource('route', {
+          type: 'geojson',
+          data: gj,
+        });
+
+        map.addLayer({
+          id: 'route',
+          type: 'line',
+          source: 'route',
+          layout: {
+            'line-join': 'round',
+            'line-cap': 'round',
+          },
+          paint: {
+            'line-color': '#2e2e2e',
+            'line-width': 3,
+            'line-opacity': 0.8,
+          },
+        });
+
+        document.getElementById(
+          'decathlon__name'
+        ).innerText = routeName;
       
-        if (number === 0) return '0'
-      
-        const roundedValue = round(precision, number)
-        const floorValue = Math.floor(roundedValue)
-      
-        const isInteger = Math.abs(floorValue - roundedValue) < Number.EPSILON
-      
-        const numberOfFloorDigits = String(floorValue).length
-        const numberOfDigits = String(roundedValue).length
-      
-        if (numberOfFloorDigits > precision) {
-          return String(floorValue)
-        } else {
-          const padding = isInteger ? precision - numberOfFloorDigits : precision - numberOfDigits + 1
-      
-          if (padding > 0) {
-            if (isInteger) {
-              return `${String(floorValue)}.${'0'.repeat(padding)}`
-            } else {
-              return `${String(roundedValue)}${'0'.repeat(padding)}`
-            }
-          } else {
-            return String(roundedValue)
-          }
+        if (activityType){
+          document.getElementById(
+            'decathlon__type'
+          ).innerText = activityType;
         }
-      }
-      
-      function round(precision, number) {
-        return parseFloat(number.toPrecision(precision))
-      }
-      
-      function formatDate(date) {
-        const options = {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-          hour: "numeric",
-          minute: "numeric",
-          timeZone: "Asia/Kolkata"
-        };
-        return new Intl.DateTimeFormat("en-in", options).format(date);
-      }
+        
+        document.getElementById(
+          'decathlon__distance'
+        ).innerText = `Distance: ${formatNumber(routeLength)} km`;
+        
+        
+        const timestamps = getTimestamps(gj);
+        const startTime = new Date(timestamps.at(0));
+        const endTime = new Date(timestamps.at(-1));
 
-      new L.GPX(gpx, {
-        async: true,
-        marker_options: {
-          shadowUrl: '/img/shadow.png',
-          endIconUrl: '/img/enda.png',
-          startIconUrl: '/img/starta.png',
-          iconSize: [50, 50],
-          iconAnchor: [25, 48],
-        },
-        polyline_options: {
-          color: 'azure',
-          opacity: 0.9,
-          weight: 3,
-          lineCap: 'round',
-        },
-      })
-        .on('loaded', function (e) {
-          mymap.fitBounds(e.target.getBounds(), {
-            padding: [10, 10],
-          });
-          
-          let name = e.target.get_name();
-          document.getElementById(
-            'decathlon__name'
-          ).innerText = name;
-          
-          let ex_type = e.target.get_exercise_type();
-          if (ex_type){
-            document.getElementById(
-              'decathlon__type'
-            ).innerText = ex_type;
-          }
-          
-          let distance = e.target.get_distance() / 1000;
-          document.getElementById(
-            'decathlon__distance'
-          ).innerText = `Distance: ${formatNumber(distance)} km`;
-         
+        const duration = Math.abs(endTime - startTime); 
 
-          let duration = e.target.get_duration();
-          let duration_string = e.target.get_duration_string(duration);
-          if (duration) {
-            document.getElementById(
-              'decathlon__duration'
-            ).innerText = `Duration: ${duration_string}`;
-         
-            let moving_speed = e.target.get_moving_speed();
-            let speed = moving_speed;
-            if (speed >= Infinity) {
-              speed = e.target.get_average_speed();
-            }
-            document.getElementById(
-              'decathlon__speed'
-            ).innerText = `Avg. Speed: ${formatNumber(speed)} km/h`;
-          }
-          
-          let start_time = new Date(e.target.get_time());
-          let formatted_time = formatDate(start_time);
-          if (formatted_time) {
-            document.getElementById(
-              'decathlon__start-time'
-            ).innerText = formatted_time;
-          }
-        })
-        .addTo(mymap);
+        const avgSpeed = routeLength / (duration / 36e5);
+        document.getElementById(
+          'decathlon__start-time'
+        ).innerText = formatDate(startTime);
+
+        if (duration){
+          document.getElementById(
+            'decathlon__duration'
+          ).innerText = `Duration: ${formatDuration(duration)}`;
+          document.getElementById(
+            'decathlon__speed'
+          ).innerText = `Avg. Speed: ${formatNumber(avgSpeed)} km/h`;
+        }
+      });
+    })
+    .catch(function (err) {
+      console.log(err.message);
+    })
+  ;
+
+  
+  function getActivityType(geojson) {
+    return geojson.features[0].properties.type;
+  }
+  
+  function getRouteName(geojson) {
+    return geojson.features[0].properties.name;
+  }
+  
+  function getCoordinates(geojson) {
+    return geojson.features[0].geometry.coordinates;
+  }
+  
+  function getTimestamps(geojson) {
+    return geojson.features[0].properties.coordTimes
+  }
+  
+  function formatNumber (number, precision = 3) {
+    if (typeof number === 'undefined' || number === null) return ''
+  
+    if (number === 0) return '0'
+  
+    const roundedValue = round(precision, number)
+    const floorValue = Math.floor(roundedValue)
+  
+    const isInteger = Math.abs(floorValue - roundedValue) < Number.EPSILON
+  
+    const numberOfFloorDigits = String(floorValue).length
+    const numberOfDigits = String(roundedValue).length
+  
+    if (numberOfFloorDigits > precision) {
+      return String(floorValue)
+    } else {
+      const padding = isInteger ? precision - numberOfFloorDigits : precision - numberOfDigits + 1
+  
+      if (padding > 0) {
+        if (isInteger) {
+          return `${String(floorValue)}.${'0'.repeat(padding)}`
+        } else {
+          return `${String(roundedValue)}${'0'.repeat(padding)}`
+        }
+      } else {
+        return String(roundedValue)
+      }
     }
+  }
+  
+  function round(precision, number) {
+    return parseFloat(number.toPrecision(precision))
+  }
+  
+  function formatDate(date) {
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      timeZone: "Asia/Kolkata"
+    };
+    return new Intl.DateTimeFormat("en-in", options).format(date);
+  }
+
+  function formatDuration(duration) {
+    const seconds = Math.floor(duration / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    
+    if (days >= 1) {
+      return `${days}d ${hours % 24}h`;
+    } else if (hours >= 1){
+      return `${hours}h ${minutes % 60}m`;
+    } else if (minutes >= 0) {
+      return `${minutes}m ${seconds % 60}s`;
+    } else {
+      return "";
+    }
+  }
 </script>
 
 <style>
@@ -2024,6 +2330,8 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
     font-weight: 600;
   }
 </style>
+
+
 <h2 id="gallery">Gallery</h2>
 
 
