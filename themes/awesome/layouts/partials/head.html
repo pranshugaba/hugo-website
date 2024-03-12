@@ -23,10 +23,7 @@
   {{ end }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
   {{ if .Params.map }}
-    {{ partial "helpers/maphead" . }}
-  {{ end }}
-  {{ if .Params.maplibre }}
-    {{ partialCached "helpers/maplibrehead" . }}
+    {{ partialCached "helpers/maphead" . }}
   {{ end }}
 
   {{ if .Params.math }}

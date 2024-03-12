@@ -2,10 +2,9 @@
 title: Playground
 subtitle: Trying out stuff here
 map: true
-maplibre: true
 ---
 
-{{< maplibre >}}
+{{< map "day3" >}}
 
 A playground to test out[^1] various Markdown features.
 
