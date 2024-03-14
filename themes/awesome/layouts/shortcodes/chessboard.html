@@ -2,4 +2,4 @@
 {{ $flip := default "false" (.Get "flip") }}
 {{ $hideCoords := default "false" (.Get "hideCoords") }}
 {{ $caption := default "" (.Get "caption") }}
-{{ partial "single/chessboard" (dict "Context" . "FEN" $fen "HideCoords"  $hideCoords "Caption" $caption "Flip" $flip) }}
+{{ partial "components/chess/chessboard" (dict "Context" . "FEN" $fen "HideCoords"  $hideCoords "Caption" $caption "Flip" $flip) }}

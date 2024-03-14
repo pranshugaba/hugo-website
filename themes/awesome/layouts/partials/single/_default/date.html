@@ -8,11 +8,9 @@
         </div>
         {{ end }}
     {{ end }}
-    {{ if eq .Section "newsletter" }}
-        <p class="page__weekdate">Issue: {{ partial "helpers/newsletter-issue" . }}</p>
-    {{ end }}
-    {{ if eq .Type "puzzles" }}
-        <p class="page__weekdate">Puzzle #{{ partial "helpers/puzzle-number" . }}</p>
-    {{ end }}
+    <p class="page__weekdate">
+        {{- partial "single/post-prefix" . -}}
+        {{- partial "single/post-id" . -}}
+    </p>
 </div>
 {{ end }}

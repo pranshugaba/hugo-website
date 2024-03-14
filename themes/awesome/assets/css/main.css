@@ -2058,11 +2058,13 @@ figure figcaption {
 }
 
 .newsletter .page__header,
-.puzzles .page__header {
+.puzzles .page__header,
+.comics .page__header {
   margin-top: 4rem;
 }
 .newsletter .page__weekdate,
-.puzzles .page__weekdate {
+.puzzles .page__weekdate,
+.comics .page__weekdate {
   margin-bottom: 2.5rem;
   font-size: var(--font-size-600);
 }/*# sourceMappingURL=main.css.map */

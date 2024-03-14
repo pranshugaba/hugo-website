@@ -12,7 +12,7 @@
         <rect width="392" height="392" x="0" y="0" rx="9px"></rect>
     </clipPath>
 </defs>
-{{ partial "helpers/chess/squares" . }}
+{{ partial "components/chess/squares" . }}
 <g>
 {{ range $yIndex, $position := (split $fen "/") }}
     {{ $data := newScratch}}
@@ -21,7 +21,7 @@
         {{ if (and (le "1" $piece) (le $piece "8"))}}
             {{ $data.Add "rank" (int $piece) }}
         {{ else }}
-            {{ partial "helpers/chess/pieces" (dict "Context" . "Piece" $piece "X" ($data.Get "rank") "Y" $yIndex "Flip" $flip) }}
+            {{ partial "components/chess/pieces" (dict "Context" . "Piece" $piece "X" ($data.Get "rank") "Y" $yIndex "Flip" $flip) }}
             {{ $data.Add "rank" 1 }}
         {{ end }}
     {{ end }}
@@ -29,7 +29,7 @@
 </g>
 </svg>
 {{ if $showCoords }}
-{{- partial "helpers/chess/rank-labels" (dict "Context" . "Flip" $flip) -}}
+{{- partial "components/chess/rank-labels" (dict "Context" . "Flip" $flip) -}}
 {{ end }}
 <rect width="394" height="394" stroke="var(--fg)" fill-opacity="0.0" stroke-opacity="0.2" stroke-width="2px" x="23" y="23" rx="10px"></rect>
 </svg>

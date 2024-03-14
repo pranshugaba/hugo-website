@@ -21,12 +21,8 @@
                             {{ .Page.Plain | truncate 35 "..." }}
                             </em>
                         {{ else }}
-                            {{ if (eq .Type "puzzles") }}
-                                #{{ .File.ContentBaseName }}:
-                            {{ end }}
-                            {{ if (eq .Type "newsletter") }}
-                                {{ partial "helpers/newsletter-issue" . }}:
-                            {{ end }}
+                            {{- partial "single/post-id" . -}}
+                            {{- partial "single/post-id-title-separator" . -}}
                             {{ .Title }}
                         {{ end }}
                         </a>
@@ -43,12 +39,8 @@
                             {{ .Page.Plain | truncate 35 "..." }}
                             </em>
                         {{ else }}
-                            {{ if (eq .Type "puzzles") }}
-                                #{{ .File.ContentBaseName }}:
-                            {{ end }}
-                            {{ if (eq .Type "newsletter") }}
-                                {{ partial "helpers/newsletter-issue" . }}:
-                            {{ end }}
+                            {{- partial "single/post-id" . -}}
+                            {{- partial "single/post-id-title-separator" . -}}
                             {{ .Title }}
                         {{ end }}
                     </a>

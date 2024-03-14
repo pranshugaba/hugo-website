@@ -14,4 +14,4 @@
     {{ $showStats = . }}
 {{ end }}
 
-{{ partial "single/map" (dict "Context" . "Route" $route "Points" $points "ShowStats" $showStats) }}
+{{ partial "components/maplibre/map" (dict "Context" . "Route" $route "Points" $points "ShowStats" $showStats) }}

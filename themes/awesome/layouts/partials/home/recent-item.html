@@ -1,11 +1,10 @@
 <article class="recent__item">
   <p class="recent__item__title">
     <a href="{{ .Permalink }}">
-      {{ if (eq .Type "puzzles") }}#{{ .File.ContentBaseName }}:{{ end }}
-      {{ if (eq .Type "newsletter") }}
-            {{ partial "helpers/newsletter-issue" . }}:
-        {{ end }}
-      {{ .Title }} </a> 
+      {{- partial "single/post-id" . -}}
+      {{- partial "single/post-id-title-separator" . -}}
+      {{ .Title }} 
+    </a> 
   </p>
   <div class="recent__item__summary">{{ .Summary | markdownify }}</div>
   <p class="recent__item__date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>

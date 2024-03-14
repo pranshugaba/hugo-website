@@ -8,7 +8,7 @@
     {{ end }}
   </header>
   <article class="[ list-content ] [ flow ]">
-    {{.Content}}
+    {{ .Content }}
   </article>
   {{ if (ne $displayStyle "none") }}
       <ul class="[ items__list list-{{ $displayStyle }} ] [ flow ]">
@@ -19,8 +19,6 @@
           {{ else }}
             {{ if (eq .Section "minis")}}
               {{ partial "list/minis.html" . }}
-            {{ else if (eq .Section "notebooks")}}
-              {{ partial "list/archive.html" . }}
             {{ else }}
               {{ partial "list/minimal-section.html" . }}
             {{ end }}
@@ -28,7 +26,7 @@
         </li>
         {{ else }}
           <p>No posts in this section yet. Check back later!</p>
-          </ul>
         {{ end }}
+      </ul>
     {{ end }}
 {{ end }}

@@ -3,13 +3,10 @@
     <div class="item__content">
       <div class="item__title">
         <a href="{{ .Permalink }}">
-          {{ if (eq .Type "puzzles") }}
-            #{{ .File.ContentBaseName }}:
-          {{ end }}
-          {{ if (eq .Type "newsletter") }}
-              {{ partial "helpers/newsletter-issue" . }}:
-          {{ end }}
-          {{.Title}}</a>
+          {{- partial "single/post-id" . -}}
+          {{- partial "single/post-id-title-separator" . -}}
+          {{.Title}}
+        </a>
       </div>
       <div class="item__summary">
         {{ .Summary | markdownify }}

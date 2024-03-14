@@ -3,16 +3,13 @@
     <a href="{{ .Permalink }}"> 
       {{ if (eq .Section "minis")}}
         Mini #{{ .File.ContentBaseName }}:
-      <em>
+        <em>
           {{ .Page.Plain | truncate 35 "..."}}
-      </em>
+        </em>
       {{ else }}
-        {{ if (eq .Type "puzzles")}}
-            Puzzle #{{ .File.ContentBaseName }}:
-        {{ end }}
-        {{ if (eq .Type "newsletter") }}
-            {{ partial "helpers/newsletter-issue" . }}:
-        {{ end }}
+        {{- partial "single/post-prefix" . -}}
+        {{- partial "single/post-id" . -}}
+        {{- partial "single/post-id-title-separator" . -}}
         {{ .Title }}
       {{ end }}</a>
   </div>

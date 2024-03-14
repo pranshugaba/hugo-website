@@ -1,0 +1,7 @@
+{{ if (eq .Type "puzzles") }}
+    Puzzle
+{{ else if (eq .Type "minis") }}
+    Mini
+{{ else if (eq .Type "comics") }}
+    Comic
+{{ end }}
