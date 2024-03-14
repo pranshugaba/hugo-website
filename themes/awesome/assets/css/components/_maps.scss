@@ -22,12 +22,12 @@
   // border-color: var(--fg)!important;
 }
 
-.dark-mode {
-  .leaflet-layer .leaflet-tile {
-    filter: grayscale(0.8) hue-rotate(180deg) invert(1) contrast(0.95)
-      brightness(1.1);
-  }
-}
+// .dark-mode {
+//   .leaflet-layer .leaflet-tile {
+//     filter: grayscale(0.8) hue-rotate(180deg) invert(1) contrast(0.95)
+//       brightness(1.1);
+//   }
+// }
 
 .route__metadata {
   margin-block-start: -0.5rem;

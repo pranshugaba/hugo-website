@@ -6,8 +6,10 @@
       {{ partial "single/_default/subtitle" . }}
       {{ partial "single/_default/location" . }}
     </header>
-    {{ partial "single/_default/cover-image.html" . }}
-    {{ partial "single/_default/page-content.html" . }}
+      <div {{ if (eq .Type "poems") }}class="poem__grid"{{ end }}>
+      {{ partial "single/_default/cover-image.html" . }}
+      {{ partial "single/_default/page-content.html" . }}
+      </div>
     {{ partial "single/_default/tags" . }}
   </article>
   {{ partial "single/_default/related" . }}

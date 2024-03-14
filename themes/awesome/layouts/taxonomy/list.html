@@ -5,9 +5,9 @@
         <p class="page__subtitle" >{{ . | emojify }}</p>
     {{ end }}
   </div>
-    {{.Content}}
+    {{ .Content }}
   {{ if eq .RelPermalink "/tags/" }}
-    {{ partial "list/tagcloud2.html" . }}
+    {{ partial "list/tagcloud-alphabetical.html" . }}
   {{ else }}
     <ul class="items__list">
       {{ range .Pages }}

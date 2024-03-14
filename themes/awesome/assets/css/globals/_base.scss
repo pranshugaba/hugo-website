@@ -27,9 +27,6 @@ body {
 // Typography.scss
 body {
   line-height: 1.6;
-  // @media (min-width: 640px) {
-  //   line-height: 1.7;
-  // }
 }
 
 h1,
@@ -136,7 +133,6 @@ q::after {
 }
 
 // Links.scss
-
 a {
   &,
   &:visited {
@@ -158,7 +154,34 @@ a {
   }
 }
 
-// a[href*="//"]:not([href*="pranshugaba.com"]):not([href*="localhost"])
-// {
-//   color: gray;
-// }
+a[href*="//"]:not([href*="pranshugaba.com"]):not([href*="localhost"])
+{
+  // color: gray;
+  text-decoration-style: dotted;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  all: unset;
+  padding: 0.1rem;
+  outline: none;
+  transition: outline 0.1s ease-out;
+  border-radius: 0.15rem;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+    color: var(--accent);
+  }
+  &:focus {
+    outline: 0.15em solid var(--accent);
+    outline-offset: 0.2em;
+  }
+}
+
+.dark-mode-toggle {
+  @media print {
+    display: none;
+  }
+}

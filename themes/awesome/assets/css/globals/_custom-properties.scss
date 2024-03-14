@@ -1,42 +1,28 @@
-// Colors
-// $my-color-scheme: (
-//   light: (
-//     "fg": white,
-//     "bg": black,
-//     "accent": hsl(210, 100%, 42%),
-//   ),
-//   dark: (
-//     "fg": white,
-//     "bg": hsl(0, 0%, 11%),
-//     "accent": hsl(210, 100%, 69%),
-//   ),
-// );
-
+// Define light mode colors
 $lightlight: white;
 $lightdark: black;
 $lightaccent: hsl(210, 100%, 42%);
 
+// Define dark mode colors
 $darklight: white;
 $darkdark: hsl(0, 0%, 12%);
 $darkaccent: hsl(210, 100%, 69%);
 
 :root {
-  // Colors
-  // @each $name, $color in $my-color-scheme {
-  //   --#{$name}: $color;
-  // }
+  // Set colors (light mode)
   --bg: #{$lightlight};
   --fg: #{$lightdark};
   --accent: #{$lightaccent};
   --light: #{$lightlight};
   --dark: #{$darkdark};
 
+  // Set colors (dark mode)
   @media print {
     --bg: #{white};
     --fg: #{#121212};
+    --accent: #{Indigo};
     --light: #{white};
     --dark: #{#121212};
-    --accent: #{Indigo};
   }
 
   // Fonts
@@ -79,6 +65,11 @@ $darkaccent: hsl(210, 100%, 69%);
   --border-radius-large: 0.75rem;
   --border-radius-xl: 1rem;
   --border-radius-circle: 100%;
+
+  // page widths
+  --header-width: 84ch;
+  --wide-width: calc(var(--header-width) - 2rem);
+  --content-width: 69ch;
 }
 
 .dark-mode {
@@ -91,28 +82,5 @@ $darkaccent: hsl(210, 100%, 69%);
     --light: #{white};
     --dark: #{#121212};
     --accent: #{Indigo};
-  }
-}
-
-button {
-  all: unset;
-  padding: 0.1rem;
-  outline: none;
-  transition: outline 0.1s ease-out;
-  &:hover {
-    text-decoration: underline;
-    color: var(--accent);
-  }
-  &:focus {
-    outline: 0.15em solid var(--accent);
-    outline-offset: 0.2em;
-  }
-}
-
-.dark-mode-toggle {
-  cursor: pointer;
-  border-radius: 0.15rem;
-  @media print {
-    display: none;
   }
 }

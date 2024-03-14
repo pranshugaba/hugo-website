@@ -1,4 +1,4 @@
-@use '../abstracts/mixins' as m;
+@use '../globals/mixins' as m;
 
 .items__list {
   @include m.plain-list;
