@@ -37,14 +37,17 @@
   --border-radius-large: 0.75rem;
   --border-radius-xl: 1rem;
   --border-radius-circle: 100%;
+  --header-width: 84ch;
+  --wide-width: calc(var(--header-width) - 2rem);
+  --content-width: 69ch;
 }
 @media print {
   :root {
     --bg: white;
     --fg: #121212;
+    --accent: Indigo;
     --light: white;
     --dark: #121212;
-    --accent: Indigo;
   }
 }
 
@@ -61,37 +64,6 @@
     --dark: #121212;
     --accent: Indigo;
   }
-}
-
-button {
-  all: unset;
-  padding: 0.1rem;
-  outline: none;
-  transition: outline 0.1s ease-out;
-}
-button:hover {
-  text-decoration: underline;
-  color: var(--accent);
-}
-button:focus {
-  outline: 0.15em solid var(--accent);
-  outline-offset: 0.2em;
-}
-
-.dark-mode-toggle {
-  cursor: pointer;
-  border-radius: 0.15rem;
-}
-@media print {
-  .dark-mode-toggle {
-    display: none;
-  }
-}
-
-:root {
-  --header-width: 84ch;
-  --wide-width: calc(var(--header-width) - 2rem);
-  --content-width: 69ch;
 }
 
 @font-face {
@@ -407,6 +379,36 @@ a:focus {
   outline-offset: 0.125em;
   border-radius: 0.1em;
   text-decoration: none;
+}
+
+a[href*="//"]:not([href*="pranshugaba.com"]):not([href*=localhost]) {
+  text-decoration-style: dotted;
+}
+a[href*="//"]:not([href*="pranshugaba.com"]):not([href*=localhost]):hover {
+  text-decoration: underline;
+}
+
+button {
+  all: unset;
+  padding: 0.1rem;
+  outline: none;
+  transition: outline 0.1s ease-out;
+  border-radius: 0.15rem;
+  cursor: pointer;
+}
+button:hover {
+  text-decoration: underline;
+  color: var(--accent);
+}
+button:focus {
+  outline: 0.15em solid var(--accent);
+  outline-offset: 0.2em;
+}
+
+@media print {
+  .dark-mode-toggle {
+    display: none;
+  }
 }
 
 input,
@@ -1440,10 +1442,6 @@ thead {
 .maplibregl-ctrl-scale,
 .maplibregl-ctrl-attrib {
   font-size: var(--font-size-100) !important;
-}
-
-.dark-mode .leaflet-layer .leaflet-tile {
-  filter: grayscale(0.8) hue-rotate(180deg) invert(1) contrast(0.95) brightness(1.1);
 }
 
 .route__metadata {
