@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cats by Pranshu Gaba</title><link>https://pranshugaba.com/tags/cats/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 12 Mar 2024 12:45:03 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/cats/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/cats/index.xml" rel="self" type="application/rss+xml"/><item><title>mlem</title><link>https://pranshugaba.com/poems/mlem/</link><pubDate>Thu, 28 Apr 2022 17:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/mlem/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cats by Pranshu Gaba</title><link>https://pranshugaba.com/tags/cats/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 14 Mar 2024 13:12:39 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/cats/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/cats/index.xml" rel="self" type="application/rss+xml"/><item><title>mlem</title><link>https://pranshugaba.com/poems/mlem/</link><pubDate>Thu, 28 Apr 2022 17:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/mlem/</guid><description>
 <![CDATA[<img src="https://pranshugaba.com/poems/mlem/mlem_featured_hu583d63ca804bf0d1bbb594dd04e5a577_1117605_1080x0_resize_q75_box.jpg" alt="" /><p>golden cat<br>
 on a red suitcase &mdash;<br>
 does a mlem</p>
@@ -8,29 +8,44 @@ does a mlem</p>
 <p>Here&rsquo;s the route that I walked and some pictures that I took. It&rsquo;s mostly cats and buildings, but there&rsquo;s also a dog and some reptiles.</p>
 <h2 id="map">Map</h2>
 
+
+
+
+
+    
+
+
+
+
+
+
 <div>
-  <div id="refill" class="leaflet-map"></div>
+  <div id="refill" class="maplibre-map"></div>
   <div class="route__metadata">
     <div class="route__name">
       <div>
         <p id="refill__name"></p>
-        <p id="refill__start-time"></p>
+        
+          <p id="refill__start-time"></p>
+        
       </div>
-      <p id="refill__type"></p>
+      
+        <p id="refill__type"></p>
+      
     </div>
-    <div class="route__stats">
-      <p id="refill__distance"></p>
-      <p id="refill__duration"></p>
-      <p id="refill__speed"></p>
-    </div>
+    
+      <div class="route__stats">
+        <p id="refill__distance"></p>
+        <p id="refill__duration"></p>
+        <p id="refill__speed"></p>
+      </div>
+    
   </div>
 </div>
 <script>
   fetch("refill.geojson") 
     .then(response => response.json())
     .then(data => {
-      console.log("refill");
-      console.log(data);
       const gj = data;
       const initialCoords = [72.82, 19.22]; 
       const initialZoom = 12;
@@ -254,7 +269,6 @@ does a mlem</p>
     font-weight: 600;
   }
 </style>
-
 
 <h2 id="gallery">Gallery</h2>
 

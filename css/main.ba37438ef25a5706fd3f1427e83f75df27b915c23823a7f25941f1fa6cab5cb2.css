@@ -78,12 +78,12 @@ button:focus {
   outline-offset: 0.2em;
 }
 
-.site__footer #dark-mode-toggle {
+.dark-mode-toggle {
   cursor: pointer;
   border-radius: 0.15rem;
 }
 @media print {
-  .site__footer #dark-mode-toggle {
+  .dark-mode-toggle {
     display: none;
   }
 }
@@ -1422,7 +1422,7 @@ thead {
   font-weight: 700;
 }
 
-.leaflet-map {
+.maplibre-map {
   width: 100%;
   height: clamp(16rem, 80vh, 32rem);
   border-top-left-radius: 0.5rem;
@@ -1430,46 +1430,40 @@ thead {
   border: var(--border-thick) solid var(--fg);
 }
 
-.leaflet-control-attribution {
-  color: var(--fg);
-  background-color: var(--bg);
-  border-top: var(--border-thin) solid var(--fg);
-  border-left: var(--border-thin) solid var(--fg);
+.maplibregl-ctrl-top-left,
+.maplibregl-ctrl-top-right,
+.maplibregl-ctrl-bottom-left,
+.maplibregl-ctrl-bottom-right {
+  font-family: var(--font-sans-serif);
+}
+
+.maplibregl-ctrl-scale,
+.maplibregl-ctrl-attrib {
+  font-size: var(--font-size-100) !important;
 }
 
 .dark-mode .leaflet-layer .leaflet-tile {
   filter: grayscale(0.8) hue-rotate(180deg) invert(1) contrast(0.95) brightness(1.1);
 }
 
-.leaflet-overlay-pane {
-  filter: invert(1);
-}
-
-.dark-mode .leaflet-overlay-pane {
-  filter: unset;
-}
-
 .route__metadata {
-  margin-block: 0.5rem;
-  margin-top: -0.5rem;
+  margin-block-start: -0.5rem;
+  margin-block-end: 0.5rem;
   border: var(--border-thick) solid var(--fg);
   border-top: none;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   padding-inline: 0.75rem;
   padding-block-start: 0.75rem;
-  padding-block-end: 0.5rem;
 }
 
 .route__name {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-block: 0.5rem;
   gap: 1.5rem;
   row-gap: 0;
-  margin-block: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: var(--border-medium) solid var(--fg);
 }
 
 .route__name p {
@@ -1481,6 +1475,9 @@ thead {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-block: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: var(--border-medium) solid var(--fg);
   gap: 1.5rem;
   row-gap: 0;
 }
@@ -2061,11 +2058,13 @@ figure figcaption {
 }
 
 .newsletter .page__header,
-.puzzles .page__header {
+.puzzles .page__header,
+.comics .page__header {
   margin-top: 4rem;
 }
 .newsletter .page__weekdate,
-.puzzles .page__weekdate {
+.puzzles .page__weekdate,
+.comics .page__weekdate {
   margin-bottom: 2.5rem;
   font-size: var(--font-size-600);
 }/*# sourceMappingURL=main.css.map */

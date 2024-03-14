@@ -1,29 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gorai by Pranshu Gaba</title><link>https://pranshugaba.com/tags/gorai/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 12 Mar 2024 12:45:10 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/gorai/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/gorai/index.xml" rel="self" type="application/rss+xml"/><item><title>Cycling to Gorai</title><link>https://pranshugaba.com/trips/cycling-to-gorai/</link><pubDate>Fri, 30 Jul 2021 14:00:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-to-gorai/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gorai by Pranshu Gaba</title><link>https://pranshugaba.com/tags/gorai/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 14 Mar 2024 13:12:45 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/gorai/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/gorai/index.xml" rel="self" type="application/rss+xml"/><item><title>Cycling to Gorai</title><link>https://pranshugaba.com/trips/cycling-to-gorai/</link><pubDate>Fri, 30 Jul 2021 14:00:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-to-gorai/</guid><description>
 <![CDATA[<h2 id="map">Map</h2>
 
+
+
+
+
+    
+
+
+
+
+
+
 <div>
-  <div id="gorai" class="leaflet-map"></div>
+  <div id="gorai" class="maplibre-map"></div>
   <div class="route__metadata">
     <div class="route__name">
       <div>
         <p id="gorai__name"></p>
-        <p id="gorai__start-time"></p>
+        
+          <p id="gorai__start-time"></p>
+        
       </div>
-      <p id="gorai__type"></p>
+      
+        <p id="gorai__type"></p>
+      
     </div>
-    <div class="route__stats">
-      <p id="gorai__distance"></p>
-      <p id="gorai__duration"></p>
-      <p id="gorai__speed"></p>
-    </div>
+    
+      <div class="route__stats">
+        <p id="gorai__distance"></p>
+        <p id="gorai__duration"></p>
+        <p id="gorai__speed"></p>
+      </div>
+    
   </div>
 </div>
 <script>
   fetch("gorai.geojson") 
     .then(response => response.json())
     .then(data => {
-      console.log("gorai");
-      console.log(data);
       const gj = data;
       const initialCoords = [72.82, 19.22]; 
       const initialZoom = 12;
@@ -247,7 +262,6 @@
     font-weight: 600;
   }
 </style>
-
 
 <h2 id="gallery">Gallery</h2>
 

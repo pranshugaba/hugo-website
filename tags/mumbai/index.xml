@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mumbai by Pranshu Gaba</title><link>https://pranshugaba.com/tags/mumbai/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 12 Mar 2024 12:45:11 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/mumbai/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/mumbai/index.xml" rel="self" type="application/rss+xml"/><item><title>white horse</title><link>https://pranshugaba.com/poems/white-horse/</link><pubDate>Mon, 23 Oct 2023 19:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/white-horse/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mumbai by Pranshu Gaba</title><link>https://pranshugaba.com/tags/mumbai/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 14 Mar 2024 13:12:47 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/mumbai/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/mumbai/index.xml" rel="self" type="application/rss+xml"/><item><title>white horse</title><link>https://pranshugaba.com/poems/white-horse/</link><pubDate>Mon, 23 Oct 2023 19:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/white-horse/</guid><description>
 <![CDATA[<img src="https://pranshugaba.com/poems/white-horse/white-horse-featured_hu61a905a050123249a6c119f8239abb24_4604505_1080x0_resize_q75_box.jpg" alt="" /><p>amidst the garbage dump<br>
 beside the mangroves one finds<br>
 a majestic white horse</p>
@@ -142,29 +142,44 @@ say bye-bye</p>
 <p>I got to see Rainbow on the way!</p>
 <h2 id="map">Map</h2>
 
+
+
+
+
+    
+
+
+
+
+
+
 <div>
-  <div id="cycling-2022-02-18" class="leaflet-map"></div>
+  <div id="cycling-2022-02-18" class="maplibre-map"></div>
   <div class="route__metadata">
     <div class="route__name">
       <div>
         <p id="cycling-2022-02-18__name"></p>
-        <p id="cycling-2022-02-18__start-time"></p>
+        
+          <p id="cycling-2022-02-18__start-time"></p>
+        
       </div>
-      <p id="cycling-2022-02-18__type"></p>
+      
+        <p id="cycling-2022-02-18__type"></p>
+      
     </div>
-    <div class="route__stats">
-      <p id="cycling-2022-02-18__distance"></p>
-      <p id="cycling-2022-02-18__duration"></p>
-      <p id="cycling-2022-02-18__speed"></p>
-    </div>
+    
+      <div class="route__stats">
+        <p id="cycling-2022-02-18__distance"></p>
+        <p id="cycling-2022-02-18__duration"></p>
+        <p id="cycling-2022-02-18__speed"></p>
+      </div>
+    
   </div>
 </div>
 <script>
   fetch("cycling-2022-02-18.geojson") 
     .then(response => response.json())
     .then(data => {
-      console.log("cycling-2022-02-18");
-      console.log(data);
       const gj = data;
       const initialCoords = [72.82, 19.22]; 
       const initialZoom = 12;
@@ -388,7 +403,6 @@ say bye-bye</p>
     font-weight: 600;
   }
 </style>
-
 
 <h2 id="gallery">Gallery</h2>
 
@@ -1144,29 +1158,44 @@ say bye-bye</p>
 <p>It was an exciting but exhausting ride. I left at 5.20 am and reached TIFR at 8.35 am. I mainly cycled along S V road and Dr. Annie Besant road.</p>
 <p>I got to see a rainbow on the way!</p>
 
+
+
+
+
+    
+
+
+
+
+
+
 <div>
-  <div id="tifr" class="leaflet-map"></div>
+  <div id="tifr" class="maplibre-map"></div>
   <div class="route__metadata">
     <div class="route__name">
       <div>
         <p id="tifr__name"></p>
-        <p id="tifr__start-time"></p>
+        
+          <p id="tifr__start-time"></p>
+        
       </div>
-      <p id="tifr__type"></p>
+      
+        <p id="tifr__type"></p>
+      
     </div>
-    <div class="route__stats">
-      <p id="tifr__distance"></p>
-      <p id="tifr__duration"></p>
-      <p id="tifr__speed"></p>
-    </div>
+    
+      <div class="route__stats">
+        <p id="tifr__distance"></p>
+        <p id="tifr__duration"></p>
+        <p id="tifr__speed"></p>
+      </div>
+    
   </div>
 </div>
 <script>
   fetch("tifr.geojson") 
     .then(response => response.json())
     .then(data => {
-      console.log("tifr");
-      console.log(data);
       const gj = data;
       const initialCoords = [72.82, 19.22]; 
       const initialZoom = 12;
@@ -1391,36 +1420,50 @@ say bye-bye</p>
   }
 </style>
 
-
 ]]></description></item><item><title>An Evening Excursion</title><link>https://pranshugaba.com/trips/walking-in-south-mumbai/</link><pubDate>Thu, 19 Aug 2021 21:30:00 +0530</pubDate><guid>https://pranshugaba.com/trips/walking-in-south-mumbai/</guid><description>
 <![CDATA[<p>I have my qualifier exams tomorrow, and my pen is almost out of ink. I wanted to buy a refill, but the general store in TIFR does not stock refills for the pen that I use. So I decided to walk to a stationery store in Colaba market and buy a refill.</p>
 <p>The nearest stationery store is 3 kilometres from TIFR, and a round trip to the store would have been just over 6 kilometres. However, I felt like doing some sightseeing, and I ended up walking more than 14 kilometres.</p>
 <p>Here&rsquo;s the route that I walked and some pictures that I took. It&rsquo;s mostly cats and buildings, but there&rsquo;s also a dog and some reptiles.</p>
 <h2 id="map">Map</h2>
 
+
+
+
+
+    
+
+
+
+
+
+
 <div>
-  <div id="refill" class="leaflet-map"></div>
+  <div id="refill" class="maplibre-map"></div>
   <div class="route__metadata">
     <div class="route__name">
       <div>
         <p id="refill__name"></p>
-        <p id="refill__start-time"></p>
+        
+          <p id="refill__start-time"></p>
+        
       </div>
-      <p id="refill__type"></p>
+      
+        <p id="refill__type"></p>
+      
     </div>
-    <div class="route__stats">
-      <p id="refill__distance"></p>
-      <p id="refill__duration"></p>
-      <p id="refill__speed"></p>
-    </div>
+    
+      <div class="route__stats">
+        <p id="refill__distance"></p>
+        <p id="refill__duration"></p>
+        <p id="refill__speed"></p>
+      </div>
+    
   </div>
 </div>
 <script>
   fetch("refill.geojson") 
     .then(response => response.json())
     .then(data => {
-      console.log("refill");
-      console.log(data);
       const gj = data;
       const initialCoords = [72.82, 19.22]; 
       const initialZoom = 12;
@@ -1644,7 +1687,6 @@ say bye-bye</p>
     font-weight: 600;
   }
 </style>
-
 
 <h2 id="gallery">Gallery</h2>
 
@@ -2648,29 +2690,44 @@ They offer instant prints for just ₹30.</p>
 ]]></description></item><item><title>Cycling to Gorai</title><link>https://pranshugaba.com/trips/cycling-to-gorai/</link><pubDate>Fri, 30 Jul 2021 14:00:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-to-gorai/</guid><description>
 <![CDATA[<h2 id="map">Map</h2>
 
+
+
+
+
+    
+
+
+
+
+
+
 <div>
-  <div id="gorai" class="leaflet-map"></div>
+  <div id="gorai" class="maplibre-map"></div>
   <div class="route__metadata">
     <div class="route__name">
       <div>
         <p id="gorai__name"></p>
-        <p id="gorai__start-time"></p>
+        
+          <p id="gorai__start-time"></p>
+        
       </div>
-      <p id="gorai__type"></p>
+      
+        <p id="gorai__type"></p>
+      
     </div>
-    <div class="route__stats">
-      <p id="gorai__distance"></p>
-      <p id="gorai__duration"></p>
-      <p id="gorai__speed"></p>
-    </div>
+    
+      <div class="route__stats">
+        <p id="gorai__distance"></p>
+        <p id="gorai__duration"></p>
+        <p id="gorai__speed"></p>
+      </div>
+    
   </div>
 </div>
 <script>
   fetch("gorai.geojson") 
     .then(response => response.json())
     .then(data => {
-      console.log("gorai");
-      console.log(data);
       const gj = data;
       const initialCoords = [72.82, 19.22]; 
       const initialZoom = 12;
@@ -2894,7 +2951,6 @@ They offer instant prints for just ₹30.</p>
     font-weight: 600;
   }
 </style>
-
 
 <h2 id="gallery">Gallery</h2>
 
@@ -3475,29 +3531,44 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
 <p>Here&rsquo;s the route that I took, as well as some interesting photos I clicked on the way.</p>
 <h2 id="map">Map</h2>
 
+
+
+
+
+    
+
+
+
+
+
+
 <div>
-  <div id="decathlon" class="leaflet-map"></div>
+  <div id="decathlon" class="maplibre-map"></div>
   <div class="route__metadata">
     <div class="route__name">
       <div>
         <p id="decathlon__name"></p>
-        <p id="decathlon__start-time"></p>
+        
+          <p id="decathlon__start-time"></p>
+        
       </div>
-      <p id="decathlon__type"></p>
+      
+        <p id="decathlon__type"></p>
+      
     </div>
-    <div class="route__stats">
-      <p id="decathlon__distance"></p>
-      <p id="decathlon__duration"></p>
-      <p id="decathlon__speed"></p>
-    </div>
+    
+      <div class="route__stats">
+        <p id="decathlon__distance"></p>
+        <p id="decathlon__duration"></p>
+        <p id="decathlon__speed"></p>
+      </div>
+    
   </div>
 </div>
 <script>
   fetch("decathlon.geojson") 
     .then(response => response.json())
     .then(data => {
-      console.log("decathlon");
-      console.log(data);
       const gj = data;
       const initialCoords = [72.82, 19.22]; 
       const initialZoom = 12;
@@ -3721,7 +3792,6 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
     font-weight: 600;
   }
 </style>
-
 
 <h2 id="gallery">Gallery</h2>
 

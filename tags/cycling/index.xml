@@ -1,32 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cycling by Pranshu Gaba</title><link>https://pranshugaba.com/tags/cycling/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 12 Mar 2024 12:45:09 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/cycling/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/cycling/index.xml" rel="self" type="application/rss+xml"/><item><title>Cycling home from TIFR</title><link>https://pranshugaba.com/trips/cycling-home-from-tifr/</link><pubDate>Fri, 18 Feb 2022 09:30:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-home-from-tifr/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cycling by Pranshu Gaba</title><link>https://pranshugaba.com/tags/cycling/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 14 Mar 2024 13:12:44 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/cycling/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/cycling/index.xml" rel="self" type="application/rss+xml"/><item><title>Cycling home from TIFR</title><link>https://pranshugaba.com/trips/cycling-home-from-tifr/</link><pubDate>Fri, 18 Feb 2022 09:30:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-home-from-tifr/</guid><description>
 <![CDATA[<p>I cycled home from TIFR. I left at 5.45 am and reached home by 9.15 am.</p>
 <p>In spite of taking a longer route today, I was surprisingly much less tired compared to the <a href="https://pranshugaba.com/trips/cycling-to-tifr/">last time I cycled to TIFR</a>.</p>
 <p>I got to see Rainbow on the way!</p>
 <h2 id="map">Map</h2>
 
+
+
+
+
+    
+
+
+
+
+
+
 <div>
-  <div id="cycling-2022-02-18" class="leaflet-map"></div>
+  <div id="cycling-2022-02-18" class="maplibre-map"></div>
   <div class="route__metadata">
     <div class="route__name">
       <div>
         <p id="cycling-2022-02-18__name"></p>
-        <p id="cycling-2022-02-18__start-time"></p>
+        
+          <p id="cycling-2022-02-18__start-time"></p>
+        
       </div>
-      <p id="cycling-2022-02-18__type"></p>
+      
+        <p id="cycling-2022-02-18__type"></p>
+      
     </div>
-    <div class="route__stats">
-      <p id="cycling-2022-02-18__distance"></p>
-      <p id="cycling-2022-02-18__duration"></p>
-      <p id="cycling-2022-02-18__speed"></p>
-    </div>
+    
+      <div class="route__stats">
+        <p id="cycling-2022-02-18__distance"></p>
+        <p id="cycling-2022-02-18__duration"></p>
+        <p id="cycling-2022-02-18__speed"></p>
+      </div>
+    
   </div>
 </div>
 <script>
   fetch("cycling-2022-02-18.geojson") 
     .then(response => response.json())
     .then(data => {
-      console.log("cycling-2022-02-18");
-      console.log(data);
       const gj = data;
       const initialCoords = [72.82, 19.22]; 
       const initialZoom = 12;
@@ -250,7 +265,6 @@
     font-weight: 600;
   }
 </style>
-
 
 <h2 id="gallery">Gallery</h2>
 
@@ -1006,29 +1020,44 @@
 <p>It was an exciting but exhausting ride. I left at 5.20 am and reached TIFR at 8.35 am. I mainly cycled along S V road and Dr. Annie Besant road.</p>
 <p>I got to see a rainbow on the way!</p>
 
+
+
+
+
+    
+
+
+
+
+
+
 <div>
-  <div id="tifr" class="leaflet-map"></div>
+  <div id="tifr" class="maplibre-map"></div>
   <div class="route__metadata">
     <div class="route__name">
       <div>
         <p id="tifr__name"></p>
-        <p id="tifr__start-time"></p>
+        
+          <p id="tifr__start-time"></p>
+        
       </div>
-      <p id="tifr__type"></p>
+      
+        <p id="tifr__type"></p>
+      
     </div>
-    <div class="route__stats">
-      <p id="tifr__distance"></p>
-      <p id="tifr__duration"></p>
-      <p id="tifr__speed"></p>
-    </div>
+    
+      <div class="route__stats">
+        <p id="tifr__distance"></p>
+        <p id="tifr__duration"></p>
+        <p id="tifr__speed"></p>
+      </div>
+    
   </div>
 </div>
 <script>
   fetch("tifr.geojson") 
     .then(response => response.json())
     .then(data => {
-      console.log("tifr");
-      console.log(data);
       const gj = data;
       const initialCoords = [72.82, 19.22]; 
       const initialZoom = 12;
@@ -1253,33 +1282,47 @@
   }
 </style>
 
-
 ]]></description></item><item><title>Cycling to Gorai</title><link>https://pranshugaba.com/trips/cycling-to-gorai/</link><pubDate>Fri, 30 Jul 2021 14:00:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-to-gorai/</guid><description>
 <![CDATA[<h2 id="map">Map</h2>
 
+
+
+
+
+    
+
+
+
+
+
+
 <div>
-  <div id="gorai" class="leaflet-map"></div>
+  <div id="gorai" class="maplibre-map"></div>
   <div class="route__metadata">
     <div class="route__name">
       <div>
         <p id="gorai__name"></p>
-        <p id="gorai__start-time"></p>
+        
+          <p id="gorai__start-time"></p>
+        
       </div>
-      <p id="gorai__type"></p>
+      
+        <p id="gorai__type"></p>
+      
     </div>
-    <div class="route__stats">
-      <p id="gorai__distance"></p>
-      <p id="gorai__duration"></p>
-      <p id="gorai__speed"></p>
-    </div>
+    
+      <div class="route__stats">
+        <p id="gorai__distance"></p>
+        <p id="gorai__duration"></p>
+        <p id="gorai__speed"></p>
+      </div>
+    
   </div>
 </div>
 <script>
   fetch("gorai.geojson") 
     .then(response => response.json())
     .then(data => {
-      console.log("gorai");
-      console.log(data);
       const gj = data;
       const initialCoords = [72.82, 19.22]; 
       const initialZoom = 12;
@@ -1503,7 +1546,6 @@
     font-weight: 600;
   }
 </style>
-
 
 <h2 id="gallery">Gallery</h2>
 
@@ -2084,29 +2126,44 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
 <p>Here&rsquo;s the route that I took, as well as some interesting photos I clicked on the way.</p>
 <h2 id="map">Map</h2>
 
+
+
+
+
+    
+
+
+
+
+
+
 <div>
-  <div id="decathlon" class="leaflet-map"></div>
+  <div id="decathlon" class="maplibre-map"></div>
   <div class="route__metadata">
     <div class="route__name">
       <div>
         <p id="decathlon__name"></p>
-        <p id="decathlon__start-time"></p>
+        
+          <p id="decathlon__start-time"></p>
+        
       </div>
-      <p id="decathlon__type"></p>
+      
+        <p id="decathlon__type"></p>
+      
     </div>
-    <div class="route__stats">
-      <p id="decathlon__distance"></p>
-      <p id="decathlon__duration"></p>
-      <p id="decathlon__speed"></p>
-    </div>
+    
+      <div class="route__stats">
+        <p id="decathlon__distance"></p>
+        <p id="decathlon__duration"></p>
+        <p id="decathlon__speed"></p>
+      </div>
+    
   </div>
 </div>
 <script>
   fetch("decathlon.geojson") 
     .then(response => response.json())
     .then(data => {
-      console.log("decathlon");
-      console.log(data);
       const gj = data;
       const initialCoords = [72.82, 19.22]; 
       const initialZoom = 12;
@@ -2330,7 +2387,6 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
     font-weight: 600;
   }
 </style>
-
 
 <h2 id="gallery">Gallery</h2>
 
