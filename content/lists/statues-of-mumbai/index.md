@@ -23,8 +23,9 @@ I will continually update this list as I come across more statues.
 
 Some statues can be seen in day or night. Click on "toggle lights" at the bottom of the page to change the time in the photos.
 
+{{< dark-mode-toggle-button >}}
+
 There are currently 4 statues on this list. Click on a marker on a map to jump to that statue, or just scroll through the pictures.
 
-{{< map-markers "statues" >}}
 
 If you know some statues that could be added to this list, [let me know]({{< ref "/contact" >}})!

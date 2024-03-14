@@ -23,7 +23,7 @@ I got to see Rainbow on the way!
 
 ## Map
 
-{{< map "cycling-2022-02-18" >}}
+{{< map route="cycling-2022-02-18" >}}
 
 ## Gallery
 

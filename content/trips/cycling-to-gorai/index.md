@@ -17,7 +17,7 @@ featured: false
 
 ## Map
 
-{{< map "gorai" >}}
+{{< map route="gorai" >}}
 
 ## Gallery
 

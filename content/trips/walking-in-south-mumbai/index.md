@@ -23,7 +23,7 @@ Here's the route that I walked and some pictures that I took. It's mostly cats a
 
 ## Map
 
-{{< map "refill" >}}
+{{< map route="refill" >}}
 
 ## Gallery
 

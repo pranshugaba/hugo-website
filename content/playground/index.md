@@ -4,7 +4,7 @@ subtitle: Trying out stuff here
 map: true
 ---
 
-{{< map "day3" >}}
+{{< map route="day3" >}}
 
 A playground to test out[^1] various Markdown features.
 
@@ -265,10 +265,10 @@ A playground to test out[^1] various Markdown features.
 
 ## Maps
 
-{{< map "day1" >}}
+{{< map route="day1" >}}
 
 This is another map.
 
-{{< map "abc" >}}
+{{< map route="abc" >}}
 
 {{< photo src="cat.jpg" caption="This is a photo of a _cat_." alt="Picture of a cat" >}}

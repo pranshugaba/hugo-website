@@ -1,26 +1,30 @@
 <div>
-  <div id="{{ .Route }}" class="leaflet-map"></div>
+  <div id="{{ .Route }}" class="maplibre-map"></div>
   <div class="route__metadata">
     <div class="route__name">
       <div>
         <p id="{{ .Route }}__name"></p>
-        <p id="{{ .Route }}__start-time"></p>
+        {{ if .ShowStats }}
+          <p id="{{ .Route }}__start-time"></p>
+        {{ end }}
       </div>
-      <p id="{{ .Route }}__type"></p>
+      {{ if .ShowStats }}
+        <p id="{{ .Route }}__type"></p>
+      {{ end }}
     </div>
-    <div class="route__stats">
-      <p id="{{ .Route }}__distance"></p>
-      <p id="{{ .Route }}__duration"></p>
-      <p id="{{ .Route }}__speed"></p>
-    </div>
+    {{ if .ShowStats}}
+      <div class="route__stats">
+        <p id="{{ .Route }}__distance"></p>
+        <p id="{{ .Route }}__duration"></p>
+        <p id="{{ .Route }}__speed"></p>
+      </div>
+    {{ end }}
   </div>
 </div>
 <script>
   fetch("{{ .Route }}.geojson") // URL to geojson file
     .then(response => response.json())
     .then(data => {
-      console.log("{{ .Route }}");
-      console.log(data);
       const gj = data;
       const initialCoords = [72.82, 19.22]; // starting position [lng, lat]
       const initialZoom = 12;

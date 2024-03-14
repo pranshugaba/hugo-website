@@ -1,2 +1,17 @@
-{{ $routeName := .Get 0 }}
-{{ partial "single/map" (dict "Context" . "Route" $routeName) }}
+{{ $route := "" }}
+{{ $points := "" }}
+{{ $showStats := true }}
+
+{{ with .Get "route" }}
+    {{ $route = . }}
+{{ end }}
+
+{{ with .Get "points" }}
+    {{ $points = . }}
+{{ end }}
+
+{{ with .Get "showStats" }}
+    {{ $showStats = . }}
+{{ end }}
+
+{{ partial "single/map" (dict "Context" . "Route" $route "Points" $points "ShowStats" $showStats) }}

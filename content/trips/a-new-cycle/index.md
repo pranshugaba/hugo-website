@@ -24,7 +24,7 @@ Here's the route that I took, as well as some interesting photos I clicked on th
 
 ## Map
 
-{{< map "decathlon" >}}
+{{< map route="decathlon" >}}
 
 ## Gallery
 

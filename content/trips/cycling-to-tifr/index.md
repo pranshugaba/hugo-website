@@ -20,4 +20,4 @@ It was an exciting but exhausting ride. I left at 5.20 am and reached TIFR at 8.
 
 I got to see a rainbow on the way!
 
-{{< map "tifr" >}}
+{{< map route="tifr" >}}
