@@ -1,6 +1,20 @@
-{{ $dir := .Get "dir" }}
-{{ $showCoords := false }}
-{{ with .Get "showCoords" }}
-    {{ $showCoords = . }}
+{{ $Context := . }}
+
+{{ $dataSource := .Get "src" }}
+{{ $showCoords := default false (.Get "showCoords") }}
+{{ $showDate := default true (.Get "showDate") }}
+{{ $showTime := default true (.Get "showTime") }}
+
+{{ $data := "" }}
+
+{{ with .Page.Resources.Get $dataSource }}
+    {{ with unmarshal .Content }}
+        {{ $data = . }}
+    {{ end }}
+{{ else }}
+    {{ errorf "Unable to get page resource %q" $dataSource }}
 {{ end }}
-{{ partial "single/gallery" (dict "Context" . "Directory" $dir "ShowCoords"  $showCoords) }}
+
+{{ range $data.photos }}
+    {{ partial "single/photo" (dict "Context" $Context "SrcFile" .filename "AltText" .alt "Caption" .caption "ShowCoords"  $showCoords "ShowDate" $showDate "ShowTime" $showTime) }}
+{{ end }}

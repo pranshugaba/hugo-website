@@ -21,4 +21,4 @@ featured: false
 
 ## Gallery
 
-{{< gallery dir="gorai" showCoords="true" >}}
+{{< gallery src="gorai.toml" showCoords="true" >}}

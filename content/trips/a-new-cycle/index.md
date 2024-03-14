@@ -28,4 +28,4 @@ Here's the route that I took, as well as some interesting photos I clicked on th
 
 ## Gallery
 
-{{< gallery dir="decathlon" showCoords="true" >}}
+{{< gallery src="decathlon.toml" showCoords="true" >}}

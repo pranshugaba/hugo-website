@@ -27,4 +27,4 @@ Here's the route that I walked and some pictures that I took. It's mostly cats a
 
 ## Gallery
 
-{{< gallery dir="refill" showCoords="true" >}}
+{{< gallery src="refill.toml" showCoords="true" >}}

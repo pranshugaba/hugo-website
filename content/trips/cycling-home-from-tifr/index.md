@@ -27,4 +27,4 @@ I got to see Rainbow on the way!
 
 ## Gallery
 
-{{< gallery dir="cycling-2022-02-18" showCoords="true" >}}
+{{< gallery src="cycling-2022-02-18.toml" showCoords="true" >}}
