@@ -1,6 +1,9 @@
 .gallery {
   &__figure {
-    --flow-space: 3em;
+    &:first-of-type {
+      --flow-space: var(--size-500);
+    }
+    --flow-space: var(--size-800);
     margin-inline: auto;
     border: var(--border-medium) solid var(--fg);
     overflow: hidden;
@@ -13,7 +16,7 @@
     }
     figcaption {
       text-align: left;
-      font-size: 1rem;
+      font-size: var(--font-size-400);
       // https://stackoverflow.com/questions/9769587/set-div-to-have-its-siblings-width/37034774
       flex-grow: 1; // Image not wider than image
       width: 0; // Image not wider than image
@@ -24,13 +27,12 @@
   &__caption {
     display: flex; // This is make sure the caption is not wider than the image.
     border-top: var(--border-medium) solid var(--fg);
-    padding-inline: 0.75rem;
+    padding-inline: var(--size-300);
     padding-block: 0;
     p,
     p:first-child,
     p:last-child {
-      margin-top: 0.75rem;
-      margin-bottom: 0.75rem;
+      margin-block: var(--size-300);
     }
   }
   &__metadata {
@@ -38,8 +40,8 @@
     justify-content: space-between;
     line-height: 1.25;
     border-bottom: var(--border-medium) solid var(--fg);
-    padding: 0.5rem;
+    padding: var(--size-200);
     gap: 1rem;
-    font-size: 0.9rem;
+    font-size: var(--font-size-300);
   }
 }

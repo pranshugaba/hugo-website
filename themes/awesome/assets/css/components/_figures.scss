@@ -1,6 +1,6 @@
 figure {
   text-align: center;
-  --flow-space: 1.2em;
+  --flow-space: var(--size-500);
 
   img {
     text-align: center;
@@ -9,7 +9,7 @@ figure {
     height: auto;
     width: auto;
     margin: 0 auto;
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius-medium);
     border: var(--border-medium) solid var(--fg);
   }
 
@@ -51,9 +51,9 @@ figure {
 
   figcaption {
     font-weight: 400;
-    font-size: 0.85rem;
-    margin: 0.1rem auto 0.9rem;
-    line-height: 1.5;
+    font-size: var(--font-size-200);
+    margin: var(--size-50) auto var(--size-400);
+    max-width: 69ch;
   }
 }
 

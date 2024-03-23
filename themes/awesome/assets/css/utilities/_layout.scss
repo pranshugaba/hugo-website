@@ -3,14 +3,14 @@
 }
 
 .flow > * + * {
-  margin-top: var(--flow-space, 1.25em);
+  margin-block-start: var(--flow-space, 1.25em);
 }
 
 .wrapper {
   // max-width: 69ch; // nice :)
   margin-inline: auto;
-  padding-inline: 0.75rem;
-  padding-block: 1.25rem;
+  padding-inline: var(--size-300);
+  padding-block: var(--size-500);
   @media print {
     max-width: inherit;
   }
@@ -20,7 +20,7 @@
   --width: 100vw;
   --half-width: calc(var(--width) / 2);
   width: var(--width);
-  margin-left: calc(50% - var(--half-width));
+  margin-inline-start: calc(50% - var(--half-width));
 }
 
 .header-width {

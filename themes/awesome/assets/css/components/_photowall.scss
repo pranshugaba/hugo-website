@@ -7,19 +7,21 @@
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
   grid-template-columns: 1fr;
-  column-gap: 1rem;
-  row-gap: 2rem;
+  column-gap: var(--size-400);
+  row-gap: var(--size-700);
   @media (min-width: 360px) {
     grid-template-columns: 1fr 1fr;
-    column-gap: 0.75rem;
-    row-gap: 0.75rem;
+    column-gap: var(--size-300);
+    row-gap: var(--size-300);
   }
   @media (min-width: 600px) {
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 1rem;
-    row-gap: 1rem;
+    column-gap: var(--size-400);
+    row-gap: var(--size-400);
   }
+  
   line-height: 0;
+ 
   .photowall__container {
     aspect-ratio: 1;
     a {
@@ -48,7 +50,7 @@
 
 .photowall {
   @media (min-width: 800px) {
-    column-gap: 1.5rem;
-    row-gap: 1.5rem;
+    column-gap: var(--size-600);
+    row-gap: var(--size-600);
   }
 }

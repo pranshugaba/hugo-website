@@ -1,29 +1,30 @@
 .recent {
-  --item-padding: 0.75rem;
+  --item-padding: var(--size-300);
   margin-inline: auto;
   &__group {
     @media (min-width: 480px) {
       display: grid;
-      gap: 1.6rem;
+      gap: var(--size-600);
       grid-auto-flow: column;
       grid-auto-columns: 64%;
 
-      overflow-x: auto;
+      overflow-inline: auto;
       overscroll-behavior-inline: contain;
       scroll-snap-type: inline mandatory;
     }
     @media (min-width: 960px) {
       grid-auto-columns: 40%;
     }
-    margin-block: 2rem;
   }
+  
   &__section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-block: 2.5rem;
+    margin-block: var(--size-500) var(--size-800);
+
     @media (min-width: 480px) {
-      margin-block: 0 1rem;
+      margin-block: 0 var(--size-400);
       scroll-snap-align: start;
       &:last-child {
         scroll-snap-align: end;
@@ -41,33 +42,31 @@
     &__description {
       padding-inline: var(--item-padding);
       padding-block-end: var(--item-padding);
-      margin-top: 0.25rem;
-      line-height: 1.5;
-      border-bottom: var(--border-medium) solid var(--fg);
+      margin-block-start: calc(var(--item-padding) / 2);
+      border-block-end: var(--border-medium) solid var(--fg);
       font-size: var(--font-size-300);
     }
     &__seeall {
       text-align: right;
-      margin-top: auto;
+      margin-block-start: auto;
       padding: var(--item-padding);
       font-size: var(--font-size-300);
     }
   }
+  
   &__item {
     padding-inline: var(--item-padding);
     padding-block: calc(var(--item-padding) / 2);
     &__title {
       font-size: var(--font-size-400);
-      line-height: 1.5;
       font-weight: 600;
     }
     &__summary {
-      margin-top: 0.25rem;
+      margin-block-start: calc(var(--item-padding) / 2);
       font-size: var(--font-size-300);
-      line-height: 1.5;
     }
     &__date {
-      margin-top: 0.5rem;
+      margin-block-start: var(--size-200);
       font-size: var(--font-size-200);
     }
   }

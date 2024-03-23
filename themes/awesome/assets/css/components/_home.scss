@@ -1,16 +1,17 @@
 .home {
   display: grid;
-  margin-block-start: 3rem;
+  margin-block-start: var(--size-700);
   margin-inline: auto;
-  column-gap: 3rem;
-  row-gap: 2rem;
+  column-gap: var(--size-800);
+  row-gap: var(--size-400);
   grid-template-columns: 1fr;
   @media (min-width: 800px) {
     grid-template-columns: 2fr 7fr;
   }
 
   &__profile {
-    margin-top: 1rem;
+    margin-top: var(--size-400);
+
     &__picture {
       max-width: 160px;
       margin-inline: auto;
@@ -20,43 +21,42 @@
       border-radius: var(--border-radius-xl);
       border: var(--border-medium) solid var(--fg);
     }
+
     &__text {
       text-align: center;
-      margin-top: 1.5rem;
+
+      .profile {
+        &__primary {
+          font-size: var(--font-size-600);
+          font-weight: 500;
+          letter-spacing: -0.025em;
+          margin-block-start: var(--size-600);
+        }
+        &__secondary {
+          margin-top: var(--size-200);
+          font-size: var(--font-size-300);
+        }
+      }
     }
   }
   &__content {
     .page__header {
-      margin-top: 0rem;
-      margin-bottom: 2rem;
+      margin-block-start: 0;
+      margin-block-end: var(--size-600);
     }
   }
   &__recent {
     border-top: var(--border-medium) solid var(--fg);
-    padding-top: 0.5rem;
-    margin-block: 2rem;
+    padding-top: var(--size-200);
+    margin-block: var(--size-700);
     &__heading {
       font-family: var(--font-sans-serif);
       font-size: var(--font-size-700);
       letter-spacing: -0.01em;
-      margin-block: 1.25rem;
+      margin-block: var(--size-500);
     }
     &__seeall {
-      margin-block-start: 1.5rem;
+      margin-block-start: var(--size-600);
     }
-  }
-}
-
-.profile {
-  &__primary {
-    font-size: var(--font-size-600);
-    font-weight: 500;
-    letter-spacing: -0.025em;
-    line-height: 1.25;
-    margin-bottom: 0.5rem;
-  }
-  &__secondary {
-    margin-top: 0.25rem;
-    font-size: var(--font-size-300);
   }
 }

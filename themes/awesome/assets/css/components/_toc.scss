@@ -2,7 +2,9 @@
   --flow-space: var(--size-700);
   font-family: var(--font-sans-serif);
   max-width: max-content;
-  padding: var(--size-300);
+  padding-inline: var(--size-300);
+  padding-block-start: var(--size-300);
+  padding-block-end: var(--size-200);
 
   &__heading {
     font-family: var(--font-sans-serif);

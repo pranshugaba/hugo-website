@@ -1,18 +1,18 @@
 details summary {
   cursor: pointer;
   &:focus-visible {
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius-medium);
     outline: 0.15em solid var(--accent);
     // outline-offset: 0.2em;
   }
 }
 
 details {
-  --flow-space: 2rem;
+  --flow-space: var(--size-700);
 }
 
 details .admonition__content {
-  --flow-space: 1.5rem;
+  --flow-space: var(--size-400);
 }
 details summary > * {
   display: inline;
