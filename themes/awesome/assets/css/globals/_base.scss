@@ -12,6 +12,7 @@ html {
   font-weight: 400;
   scroll-padding-top: 1.5rem;
   text-underline-offset: 0.14em;
+  scrollbar-color: var(--accent) var(--bg);
 }
 
 body {
@@ -24,9 +25,9 @@ body {
   color: var(--bg);
 }
 
-// Typography.scss
+// Typography
 body {
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 h1,
@@ -39,13 +40,13 @@ h6 {
   margin-top: 2em;
   margin-bottom: 0.5em;
 }
+
 h1 + p,
 h2 + p,
 h3 + p,
 h4 + p,
 h5 + p,
 h6 + p {
-  // background-color: red;
   --flow-space: 0;
 }
 
@@ -184,4 +185,94 @@ button {
   @media print {
     display: none;
   }
+}
+
+input,
+textarea {
+  margin-inline: 0.5rem;
+  margin-block: 0.5rem;
+  padding: 0.25rem;
+  font-size: 0.8rem;
+  border: var(--border-medium) solid var(--fg);
+  border-radius: 0.3rem;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+ol,
+ul {
+  --flow-space: 1rem;
+  padding-left: 1rem;
+  @media (min-width: 640px) {
+    padding-left: 2rem;
+  }
+  list-style-position: outside;
+}
+
+// ul,
+// ol {
+//   margin-top: 0.5rem;
+//   margin-bottom: 0.5rem;
+// }
+
+li {
+  margin-block: 0.6rem;
+}
+li p + p {
+  margin-top: 0.75rem;
+}
+li figure {
+  margin-block: 1rem;
+}
+li p:last-child {
+  margin-bottom: 1rem;
+}
+p:first-child {
+  margin-top: 0.75rem;
+}
+p:last-child {
+  margin-bottom: 0.75rem;
+}
+
+code {
+  font-family: var(--font-mono);
+  // font-size: 0.9rem;
+}
+
+// figcaption {
+//   font-size: 0.8rem;
+//   max-width: 69ch;
+//   text-align: center;
+// }
+
+blockquote {
+  font-size: var(--font-size-400);
+  border: var(--border-thick) solid var(--accent);
+  border-radius: var(--border-radius-large);
+  border-bottom-left-radius: var(--border-radius-tiny);
+  margin-block: 2.5rem;
+  margin-inline: auto;
+  padding-block: 0.25rem;
+  padding-inline: 0.8rem;
+  quotes: '“' '”' '‘' '’';
+  width: 100%;
+  @media (min-width: 640px) {
+    width: max-content;
+    max-width: 90%;
+    padding-inline: 1rem;
+  }
+}
+
+blockquote > p {
+  margin-block: 0.75rem;
+  text-indent: 1rem;
+}
+blockquote cite {
+  display: block;
+  text-align: right;
+}
+
+dt {
+  margin-top: 1rem;
+  font-weight: 500;
 }

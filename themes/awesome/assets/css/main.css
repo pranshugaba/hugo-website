@@ -5,8 +5,35 @@
   --accent: hsl(210, 100%, 42%);
   --light: white;
   --dark: hsl(0, 0%, 12%);
+}
+@media print {
+  :root {
+    --bg: white;
+    --fg: #121212;
+    --accent: indigo;
+    --light: white;
+    --dark: #121212;
+  }
+}
+
+.dark-mode {
+  --bg: hsl(0, 0%, 12%);
+  --fg: white;
+  --accent: hsl(210, 100%, 69%);
+}
+@media print {
+  .dark-mode {
+    --bg: white;
+    --fg: #121212;
+    --accent: indigo;
+    --light: white;
+    --dark: #121212;
+  }
+}
+
+:root {
   --font-sans-serif: "IBM Plex Sans", sans-serif;
-  --font-serif: Bitter, ui-serif, serif;
+  --font-serif: "Bitter", ui-serif, serif;
   --font-mono: "Cascadia Code", monospace;
   --font-size-100: 0.625rem;
   --font-size-200: 0.75rem;
@@ -17,9 +44,10 @@
   --font-size-600: 1.25rem;
   --font-size-700: 1.5rem;
   --font-size-800: 2rem;
-  --size-100: 0.1rem;
-  --size-200: 0.2rem;
-  --size-300: 0.5rem;
+  --size-50: 0.1rem;
+  --size-100: 0.2rem;
+  --size-200: 0.5rem;
+  --size-300: 0.75rem;
   --size-400: 1rem;
   --size-500: 1.25rem;
   --size-600: 1.5rem;
@@ -41,31 +69,8 @@
   --wide-width: calc(var(--header-width) - 2rem);
   --content-width: 69ch;
 }
-@media print {
-  :root {
-    --bg: white;
-    --fg: #121212;
-    --accent: Indigo;
-    --light: white;
-    --dark: #121212;
-  }
-}
 
-.dark-mode {
-  --bg: hsl(0, 0%, 12%);
-  --fg: white;
-  --accent: hsl(210, 100%, 69%);
-}
-@media print {
-  .dark-mode {
-    --bg: white;
-    --fg: #121212;
-    --light: white;
-    --dark: #121212;
-    --accent: Indigo;
-  }
-}
-
+/* Display fonts */
 @font-face {
   font-family: "Bitter";
   font-weight: 100 900;
@@ -84,6 +89,7 @@
   src: url("/fonts/Bitter/Bitter-Italic.woff2") format("woff2");
   unicode-range: U+0000-00FF;
 }
+/* Text fonts */
 @font-face {
   font-family: "IBM Plex Sans";
   font-weight: 100 700;
@@ -100,6 +106,7 @@
   font-named-instance: "Italic";
   src: url("/fonts/IBMPlexSans/IBMPlexSansVar-Italic.woff2") format("woff2");
 }
+/* Monospace fonts */
 @font-face {
   font-family: "Cascadia Code";
   font-weight: 200 700;
@@ -114,7 +121,7 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: "Italic";
-  src: url("/fonts/IBMPlexSans/CascadiaCode-Italic.woff2") format("woff2");
+  src: url("/fonts/CascadiaCode/CascadiaCode-Italic.woff2") format("woff2");
 }
 *,
 *:before,
@@ -226,6 +233,7 @@ html {
   font-weight: 400;
   scroll-padding-top: 1.5rem;
   text-underline-offset: 0.14em;
+  scrollbar-color: var(--accent) var(--bg);
 }
 @media (min-width: 640px) {
   html {
@@ -254,7 +262,7 @@ body {
 }
 
 body {
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 h1,
@@ -532,21 +540,8 @@ dt {
   float: right;
 }
 
-a.plain-link,
-.plain-link a {
-  text-decoration: none;
-}
-a.plain-link:hover,
-.plain-link a:hover {
-  text-decoration: underline;
-}
-a.plain-link:focus,
-.plain-link a:focus {
-  text-decoration: none;
-}
-
 .flow > * + * {
-  margin-top: var(--flow-space, 1.2em);
+  margin-top: var(--flow-space, 1.25em);
 }
 
 .wrapper {
@@ -592,6 +587,19 @@ a.plain-link:focus,
   .content-width {
     max-width: var(--content-width);
   }
+}
+
+a.plain-link,
+.plain-link a {
+  text-decoration: none;
+}
+a.plain-link:hover,
+.plain-link a:hover {
+  text-decoration: underline;
+}
+a.plain-link:focus,
+.plain-link a:focus {
+  text-decoration: none;
 }
 
 .site__header {
@@ -736,7 +744,8 @@ pre {
 p code,
 li code,
 h4 code,
-kbd {
+kbd,
+samp {
   font-family: var(--font-mono);
   padding: 0.05rem 0.2rem;
   border: var(--border-medium) solid var(--fg);
@@ -1342,17 +1351,15 @@ h4 code {
 
 .admonition {
   border: var(--border-medium) solid var(--fg);
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-medium);
 }
 .admonition__title, .admonition__content {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-inline: var(--size-300);
 }
 .admonition__title {
   font-weight: 700;
   line-height: 1.25;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-block: var(--size-200);
   border-bottom: var(--border-medium) solid var(--fg);
 }
 .admonition img {
@@ -1364,16 +1371,16 @@ h4 code {
 }
 
 .toc {
+  --flow-space: var(--size-700);
   font-family: var(--font-sans-serif);
-  --flow-space: 2rem;
   max-width: -moz-max-content;
   max-width: max-content;
-  padding: 1rem 1rem;
+  padding: var(--size-300);
 }
 .toc__heading {
-  margin-top: 0;
   font-family: var(--font-sans-serif);
   font-size: 1.5rem;
+  font-size: var(--font-size-600);
   font-variation-settings: "wght" 500;
 }
 .toc li {
@@ -1383,7 +1390,7 @@ h4 code {
 .tagcloud {
   list-style: none;
   padding-left: 0;
-  line-height: 1.5;
+  line-height: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -1392,8 +1399,8 @@ h4 code {
 }
 .tagcloud__heading {
   font-size: var(--font-size-700);
-  margin-top: 2.5rem;
-  margin-bottom: 0.25rem;
+  margin-block-start: var(--size-800);
+  margin-block-end: var(--size-200);
 }
 
 table {

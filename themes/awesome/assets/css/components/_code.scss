@@ -9,7 +9,8 @@ pre {
 p code,
 li code,
 h4 code,
-kbd {
+kbd,
+samp {
   font-family: var(--font-mono);
   padding: 0.05rem 0.2rem;
   border: var(--border-medium) solid var(--fg);

@@ -1,17 +1,15 @@
 .admonition {
   border: var(--border-medium) solid var(--fg);
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-medium);
 
   &__title,
   &__content {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-inline: var(--size-300);
   }
   &__title {
     font-weight: 700;
     line-height: 1.25;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-block: var(--size-200);
     border-bottom: var(--border-medium) solid var(--fg);
   }
   & img {

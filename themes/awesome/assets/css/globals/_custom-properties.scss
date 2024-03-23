@@ -1,33 +1,7 @@
-// Define light mode colors
-$lightlight: white;
-$lightdark: black;
-$lightaccent: hsl(210, 100%, 42%);
-
-// Define dark mode colors
-$darklight: white;
-$darkdark: hsl(0, 0%, 12%);
-$darkaccent: hsl(210, 100%, 69%);
-
 :root {
-  // Set colors (light mode)
-  --bg: #{$lightlight};
-  --fg: #{$lightdark};
-  --accent: #{$lightaccent};
-  --light: #{$lightlight};
-  --dark: #{$darkdark};
-
-  // Set colors (dark mode)
-  @media print {
-    --bg: #{white};
-    --fg: #{#121212};
-    --accent: #{Indigo};
-    --light: #{white};
-    --dark: #{#121212};
-  }
-
   // Fonts
   --font-sans-serif: 'IBM Plex Sans', sans-serif;
-  --font-serif: Bitter, ui-serif, serif;
+  --font-serif: 'Bitter', ui-serif, serif;
   --font-mono: 'Cascadia Code', monospace;
 
   --font-size-100: 0.625rem;
@@ -41,9 +15,10 @@ $darkaccent: hsl(210, 100%, 69%);
   --font-size-800: 2rem;
 
   // margin / padding sizes
-  --size-100: 0.1rem;
-  --size-200: 0.2rem;
-  --size-300: 0.5rem;
+  --size-50: 0.1rem;
+  --size-100: 0.2rem;
+  --size-200: 0.5rem;
+  --size-300: 0.75rem;
   --size-400: 1rem;
   --size-500: 1.25rem;
   --size-600: 1.5rem;
@@ -70,17 +45,4 @@ $darkaccent: hsl(210, 100%, 69%);
   --header-width: 84ch;
   --wide-width: calc(var(--header-width) - 2rem);
   --content-width: 69ch;
-}
-
-.dark-mode {
-  --bg: #{$darkdark};
-  --fg: #{$darklight};
-  --accent: #{$darkaccent};
-  @media print {
-    --bg: #{white};
-    --fg: #{#121212};
-    --light: #{white};
-    --dark: #{#121212};
-    --accent: #{Indigo};
-  }
 }

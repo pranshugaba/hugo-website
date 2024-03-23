@@ -1,0 +1,43 @@
+.float-right {
+  float: right;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1.25em);
+}
+
+.wrapper {
+  // max-width: 69ch; // nice :)
+  margin-inline: auto;
+  padding-inline: 0.75rem;
+  padding-block: 1.25rem;
+  @media print {
+    max-width: inherit;
+  }
+}
+
+.full-bleed {
+  --width: 100vw;
+  --half-width: calc(var(--width) / 2);
+  width: var(--width);
+  margin-left: calc(50% - var(--half-width));
+}
+
+.header-width {
+  @media screen {
+    max-width: var(--header-width);
+  }
+  margin-inline: auto;
+}
+.wide-width {
+  @media screen {
+    max-width: var(--wide-width);
+  }
+  margin-inline: auto;
+}
+.content-width {
+  @media screen {
+    max-width: var(--content-width);
+  }
+  margin-inline: auto;
+}

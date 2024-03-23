@@ -1,0 +1,11 @@
+a.plain-link,
+.plain-link a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}

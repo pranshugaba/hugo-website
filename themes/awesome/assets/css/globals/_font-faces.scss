@@ -1,3 +1,5 @@
+/* Display fonts */
+
 @font-face {
   font-family: 'Bitter';
   font-weight: 100 900;
@@ -5,7 +7,7 @@
   font-style: normal;
   font-named-instance: 'Regular';
   src: url('/fonts/Bitter/Bitter-Roman.woff2') format('woff2');
-  unicode-range: U+0000-00FF, ;
+  unicode-range: U+0000-00FF;
 }
 
 @font-face {
@@ -14,11 +16,32 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url('/fonts/Bitter/Bitter-Italic.woff2')
-    format('woff2');
+  src: url('/fonts/Bitter/Bitter-Italic.woff2') format('woff2');
   unicode-range: U+0000-00FF;
 }
 
+// @font-face {
+//   font-family: 'Lora';
+//   font-weight: 100 900;
+//   font-display: swap;
+//   font-style: normal;
+//   font-named-instance: 'Regular';
+//   src: url('/fonts/Lora/Lora-Roman.woff2') format('woff2');
+//   unicode-range: U+0000-00FF;
+// }
+
+// @font-face {
+//   font-family: 'Lora';
+//   font-weight: 100 900;
+//   font-display: swap;
+//   font-style: italic;
+//   font-named-instance: 'Italic';
+//   src: url('/fonts/Lora/Lora-Italic.woff2') format('woff2');
+//   unicode-range: U+0000-00FF;
+// }
+
+
+/* Text fonts */
 
 @font-face {
   font-family: 'IBM Plex Sans';
@@ -37,53 +60,21 @@
   src: url('/fonts/IBMPlexSans/IBMPlexSansVar-Italic.woff2') format('woff2');
 }
 
-@font-face {
-  font-family: 'Cascadia Code';
-  font-weight: 200 700;
-  font-display: swap;
-  font-style: normal;
-  font-named-instance: 'Regular';
-  src: url('/fonts/CascadiaCode/CascadiaCode-Roman.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Cascadia Code';
-  font-weight: 200 700;
-  font-display: swap;
-  font-style: italic;
-  font-named-instance: 'Italic';
-  src: url('/fonts/IBMPlexSans/CascadiaCode-Italic.woff2') format('woff2');
-}
-
 //@font-face {
-//  font-family: 'JBMono';
-//  src: url('/fonts/JBMono/JetBrainsMono-Regular.woff2') format('woff2');
-//  font-weight: 400;
-//  font-style: normal;
-//  font-display: swap;
+//font-family: 'Inter';
+//font-weight: 100 900;
+//font-display: swap;
+//font-style: normal;
+//font-named-instance: 'Regular';
+//src: url('/fonts/Inter/Inter-Roman.woff2') format('woff2');
 //}
 //@font-face {
-//  font-family: 'JBMono';
-//  src: url('/fonts/JBMono/JetBrainsMono-Italic.woff2') format('woff2');
-//  font-weight: 400;
-//  font-style: italic;
-//  font-display: swap;
-//}
-
-//@font-face {
-  //font-family: 'Inter';
-  //font-weight: 100 900;
-  //font-display: swap;
-  //font-style: normal;
-  //font-named-instance: 'Regular';
-  //src: url('/fonts/Inter/Inter-Roman.woff2') format('woff2');
-//}
-//@font-face {
-  //font-family: 'Inter';
-  //font-weight: 100 900;
-  //font-display: swap;
-  //font-style: italic;
-  //font-named-instance: 'Italic';
-  //src: url('/fonts/Inter/Inter-Italic.woff2') format('woff2');
+//font-family: 'Inter';
+//font-weight: 100 900;
+//font-display: swap;
+//font-style: italic;
+//font-named-instance: 'Italic';
+//src: url('/fonts/Inter/Inter-Italic.woff2') format('woff2');
 //}
 
 //@font-face {
@@ -145,4 +136,39 @@
 //  font-style: italic;
 //  font-named-instance: 'Italic';
 //  src: url('/fonts/Figtree/Figtree-Italic.ttf') format('truetype');
+//}
+
+
+/* Monospace fonts */
+
+@font-face {
+  font-family: 'Cascadia Code';
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/CascadiaCode/CascadiaCode-Roman.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cascadia Code';
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/fonts/CascadiaCode/CascadiaCode-Italic.woff2') format('woff2');
+}
+
+//@font-face {
+//  font-family: 'JBMono';
+//  src: url('/fonts/JBMono/JetBrainsMono-Regular.woff2') format('woff2');
+//  font-weight: 400;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//@font-face {
+//  font-family: 'JBMono';
+//  src: url('/fonts/JBMono/JetBrainsMono-Italic.woff2') format('woff2');
+//  font-weight: 400;
+//  font-style: italic;
+//  font-display: swap;
 //}

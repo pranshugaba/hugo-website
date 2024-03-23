@@ -1,0 +1,45 @@
+// Define light mode colors
+$lightlight: white;
+$lightdark: black;
+$lightaccent: hsl(210, 100%, 42%);
+
+// Define dark mode colors
+$darklight: white;
+$darkdark: hsl(0, 0%, 12%);
+$darkaccent: hsl(210, 100%, 69%);
+
+// Define print mode colors
+$printlight: white;
+$printdark: #121212;
+$printaccent: indigo;
+
+:root {
+  // Set colors (light mode)
+  --bg: #{$lightlight};
+  --fg: #{$lightdark};
+  --accent: #{$lightaccent};
+  --light: #{$lightlight};
+  --dark: #{$darkdark};
+
+  // Set colors (dark mode)
+  @media print {
+    --bg: #{$printlight};
+    --fg: #{$printdark};
+    --accent: #{$printaccent};
+    --light: #{$printlight};
+    --dark: #{$printdark};
+  }
+}
+
+.dark-mode {
+  --bg: #{$darkdark};
+  --fg: #{$darklight};
+  --accent: #{$darkaccent};
+  @media print {
+    --bg: #{$printlight};
+    --fg: #{$printdark};
+    --accent: #{$printaccent};
+    --light: #{$printlight};
+    --dark: #{$printdark};
+  }
+}
