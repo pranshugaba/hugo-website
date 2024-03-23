@@ -391,9 +391,12 @@ a:focus {
 
 a[href*="//"]:not([href*="pranshugaba.com"]):not([href*=localhost]) {
   text-decoration-style: dotted;
+  text-decoration-thickness: 11%;
+  text-underline-offset: 30%;
 }
 a[href*="//"]:not([href*="pranshugaba.com"]):not([href*=localhost]):hover {
   text-decoration: underline;
+  text-decoration-thickness: 8%;
 }
 
 button {
@@ -433,39 +436,39 @@ textarea {
 
 ol,
 ul {
-  --flow-space: 1rem;
-  padding-left: 1rem;
+  --flow-space: var(--font-size-100);
+  padding-inline-start: var(--size-400);
   list-style-position: outside;
 }
 @media (min-width: 640px) {
   ol,
   ul {
-    padding-left: 2rem;
+    padding-inline-start: var(--size-700);
   }
 }
 
 li {
-  margin-block: 0.6rem;
+  margin-block-start: var(--size-200);
 }
 
 li p + p {
-  margin-top: 0.75rem;
+  margin-block-start: var(--size-300);
 }
 
 li figure {
-  margin-block: 1rem;
+  margin-block: var(--size-400);
 }
 
 li p:last-child {
-  margin-bottom: 1rem;
+  margin-block-end: var(--size-400);
 }
 
 p:first-child {
-  margin-top: 0.75rem;
+  margin-block-start: var(--size-300);
 }
 
 p:last-child {
-  margin-bottom: 0.75rem;
+  margin-block-end: var(--size-300);
 }
 
 code {
@@ -541,7 +544,7 @@ dt {
 }
 
 .flow > * + * {
-  margin-block-start: var(--flow-space, 1.25em);
+  margin-block-start: var(--flow-space, 1.2em);
 }
 
 .wrapper {
