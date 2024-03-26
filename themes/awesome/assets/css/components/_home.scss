@@ -10,7 +10,7 @@
   }
 
   &__profile {
-    margin-top: var(--size-400);
+    margin-block-start: var(--size-400);
 
     &__picture {
       max-width: 160px;
@@ -33,7 +33,7 @@
           margin-block-start: var(--size-600);
         }
         &__secondary {
-          margin-top: var(--size-200);
+          margin-block-start: var(--size-200);
           font-size: var(--font-size-300);
         }
       }
@@ -46,8 +46,8 @@
     }
   }
   &__recent {
-    border-top: var(--border-medium) solid var(--fg);
-    padding-top: var(--size-200);
+    border-block-start: var(--border-medium) solid var(--fg);
+    padding-block-start: var(--size-200);
     margin-block: var(--size-700);
     &__heading {
       font-family: var(--font-sans-serif);

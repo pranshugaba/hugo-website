@@ -8,6 +8,9 @@ lastmod: 2022-06-07T21:00:00+05:30
 
 tags: ['sandwiches', 'food']
 
+image:
+  alt: "Tomato cheese sandwiches, cut and ready-to-eat."
+
 draft: false
 featured: false
 ---

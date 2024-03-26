@@ -2,7 +2,7 @@
 
 .items__list {
   @include m.plain-list;
-  --flow-space: var(--size-900);
+  --flow-space: var(--size-800);
 }
 
 .books__list {
@@ -15,13 +15,13 @@
   font-variation-settings: unset;
   font-weight: 500;
   line-height: 1;
-  margin-block: var(--size-800) var(--size-500);
+  margin-block: var(--size-400);
   font-size: var(--font-size-700);
   border-block-end: var(--border-medium) solid var(--fg);
-  padding: var(--size-300) 0 var(--size-200);
+  padding-block: var(--size-300) var(--size-200);
   @media (min-height: 320px) {
     position: sticky;
-    top: 0px;
+    inset-block-start: 0px;
   }
   background-color: var(--bg);
   z-index: 100;
@@ -103,7 +103,7 @@
     font-size: var(--font-size-400);
   }
   .item__metadata {
-    margin-block-start: var(--size-300);
+    margin-block-start: var(--size-200);
     font-size: var(--font-size-200);
   }
 }
@@ -125,8 +125,23 @@
   }
 }
 
+.archive-year {
+  margin-block-start: calc(-1 * var(--size-400));
+  &:first-of-type {
+    margin-block-start: var(--size-700);
+  }
+
+  .items__list {
+    padding-block-end: var(--size-700);
+    // padding-inline: var(--size-200);
+    @media (min-width: 640px) {
+      padding-inline: var(--size-300);
+    }
+  }
+}
+
 .list-archive__item {
-  margin-block: var(--size-600);
+  margin-block: var(--size-500);
   @media (min-width: 640px) {
     margin-block: var(--size-300);
     display: grid;

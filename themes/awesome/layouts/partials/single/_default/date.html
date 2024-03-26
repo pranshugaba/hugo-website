@@ -1,16 +1,12 @@
 {{ if .Date }}
-<div class="page__date">
-    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>
-    {{ if .Lastmod }}
-        {{ if (gt .Lastmod .Date)}}
-        <div class="page__lastmod">
-        Last updated on <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2 January 2006" }}</time>
-        </div>
+    <div class="page__date">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>
+        {{ if .Lastmod }}
+            {{ if (gt .Lastmod .Date)}}
+            <div class="page__lastmod">
+            Last updated on <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2 January 2006" }}</time>
+            </div>
+            {{ end }}
         {{ end }}
-    {{ end }}
-    <p class="page__weekdate">
-        {{- partial "single/post-prefix" . -}}
-        {{- partial "single/post-id" . -}}
-    </p>
-</div>
+    </div>
 {{ end }}

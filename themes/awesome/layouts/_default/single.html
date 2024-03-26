@@ -2,14 +2,15 @@
   <article class="[ flow ]">
     <header class="[ page__header ] [ flow ]">
       {{ partial "single/_default/date" . }}
+      {{ partial "single/_default/page-id" . }}
       {{ partial "single/_default/title" . }}
       {{ partial "single/_default/subtitle" . }}
       {{ partial "single/_default/location" . }}
     </header>
-      <div {{ if (eq .Type "poems") }}class="poem__grid"{{ end }}>
+    <div {{ if (eq .Type "poems") }}class="poem__grid"{{ end }}>
       {{ partial "single/_default/cover-image.html" . }}
       {{ partial "single/_default/page-content.html" . }}
-      </div>
+    </div>
     {{ partial "single/_default/tags" . }}
   </article>
   {{ partial "single/_default/related" . }}

@@ -1,12 +1,20 @@
 {{ $img := (.Resources.ByType "image").GetMatch "*featured*[png,jpeg,jpg,webp]" }} 
 {{ $page := . }}
+
+{{ $altText := "" }}
+{{ with $page.Params.image.alt }}
+  {{ $altText = . }}
+{{ end }}
+
 {{ with $img }}
     <div class="photowall__container">
         <a href="{{ $page.Permalink }}" class="photowall__anchor"> 
             {{ $resizedImg := .Fill "420x420 Center webp q85" }}
             <img
             src="{{ $resizedImg.Permalink }}"
-            alt="{{ $img.Title }}"
+            {{ if $altText }}
+                alt="{{ $altText }}"
+            {{ end }}
             height="{{ $resizedImg.Height }}"
             width="{{ $resizedImg.Width }}"
             class="photowall__image"

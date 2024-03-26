@@ -7,19 +7,19 @@ table {
 
 td,
 th {
-  border-left: var(--border-thin) solid var(--fg);
-  border-top: var(--border-thin) solid var(--fg);
-  padding: 0.5rem;
+  border-inline-start: var(--border-thin) solid var(--fg);
+  border-block-start: var(--border-thin) solid var(--fg);
+  padding: var(--size-200);
   line-height: 1;
 }
 
 th {
-  border-top: none;
+  border-block-start: none;
 }
 
 td:first-child,
 th:first-child {
-  border-left: none;
+  border-inline-start: none;
 }
 
 thead {

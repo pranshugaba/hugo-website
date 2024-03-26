@@ -2,10 +2,8 @@
   {{ $displayStyle := .Params.Display }}
   {{ $pages := .Pages }}
   <header class="[ page__header ] [ flow ]">
-    <h1 class="page__title">{{ .Title | emojify }}</h1>
-    {{ with .Params.Subtitle }}
-        <p class="page__subtitle" >{{ . | emojify }}</p>
-    {{ end }}
+    {{ partial "single/_default/title" . }}
+    {{ partial "single/_default/subtitle" . }}
   </header>
   <article class="[ list-content ] [ flow ]">
     {{ .Content }}

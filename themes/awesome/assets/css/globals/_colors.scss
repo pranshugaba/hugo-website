@@ -8,6 +8,20 @@ $darklight: white;
 $darkdark: hsl(0, 0%, 12%);
 $darkaccent: hsl(210, 100%, 69%);
 
+// $huelight: 50;
+// $huelightaccent: 280;
+
+// $lightlight: hsl($huelight, 89%, 91%);
+// $lightdark: hsl($huelight, 100%, 7%);
+// $lightaccent: hsl($huelightaccent, 100%, 38%);
+
+// $huedark: 280;
+// $huedarkaccent: 50;
+
+// $darklight: hsl($huedark, 100%, 95%);
+// $darkdark: hsl($huedark, 89%, 9%);
+// $darkaccent: hsl($huedarkaccent, 100%, 69%);
+
 // Define print mode colors
 $printlight: white;
 $printdark: #121212;
@@ -35,6 +49,9 @@ $printaccent: indigo;
   --bg: #{$darkdark};
   --fg: #{$darklight};
   --accent: #{$darkaccent};
+  --light: #{$darklight};
+  --dark: #{$darkdark};
+  
   @media print {
     --bg: #{$printlight};
     --fg: #{$printdark};

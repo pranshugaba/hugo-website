@@ -15,6 +15,7 @@ featured: false
 
 image:
   preview_only: true
+  alt: 'The cast of The Sound of Music bowing on stage'
 ---
 
 Hello there!
@@ -49,7 +50,7 @@ Almost 20,000 copies have already been sold in less than two weeks.
 
 ### What's playing
 - The Broadway Musical _The Sound of Music_ started playing in Mumbai from May&nbsp;3. I watched it on the opening night and loved it. The acting, singing, and dancing by the cast is phenomenal. The live music by the orchestra was amazing as well. 
-{{< figure src="sound_of_music_featured.webp" caption="The cast of the musical" class="medium" >}}
+{{< figure src="sound_of_music_featured.webp" alt="The cast of The Sound of Music bowing on stage" caption="The cast of the musical" class="medium" >}}
 - For some reason, all eight Harry Potter movies are back in theaters in Mumbai. I missed watching the first four movies in the theaters, so this is a chance to experience them on the big screen.
 - Guardians of the Galaxy Vol. 3 released this week as well. While I am no longer interested in the MCU, the reviews for this film are looking positive, and I might go watch it after all.
 

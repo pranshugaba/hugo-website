@@ -8,7 +8,7 @@
   max-width: var(--header-width);
   .page__featuredimage {
     @media (min-width: 960px) {
-      margin-block: 1rem;
+      margin-block: var(--size-400);
     }
   }
   .page__header,
@@ -20,15 +20,11 @@
     margin-inline: auto;
   }
   .page__content {
-    font-size: 1.125rem;
-    // @media (min-width: 640px) {
-    //   font-size: 1.25rem;
-    // }
+    font-size: var(--font-size-500);
     max-width: max-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1rem;
-    margin-bottom: 7.5rem;
+    margin-inline: auto;
+    margin-block-start: var(--size-400);
+    margin-block-end: 7.5rem;
     @media (min-width: 960px) {
       margin: 0;
       justify-self: center;
@@ -38,7 +34,7 @@
 
 .poem__grid {
   @media (min-width: 960px) {
-    margin-top: 0;
+    margin-block-start: 0;
     display: grid;
     grid-template-columns: 7fr 4fr;
     align-items: center;

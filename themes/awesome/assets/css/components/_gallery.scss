@@ -26,7 +26,7 @@
 
   &__caption {
     display: flex; // This is make sure the caption is not wider than the image.
-    border-top: var(--border-medium) solid var(--fg);
+    border-block-start: var(--border-medium) solid var(--fg);
     padding-inline: var(--size-300);
     padding-block: 0;
     p,
@@ -39,7 +39,7 @@
     display: flex;
     justify-content: space-between;
     line-height: 1.25;
-    border-bottom: var(--border-medium) solid var(--fg);
+    border-block-end: var(--border-medium) solid var(--fg);
     padding: var(--size-200);
     gap: 1rem;
     font-size: var(--font-size-300);

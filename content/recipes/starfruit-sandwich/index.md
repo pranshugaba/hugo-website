@@ -8,7 +8,8 @@ lastmod: 2022-03-01T17:30:00+05:30
 
 tags: ['sandwiches', 'food']
 
-math: false
+image:
+  alt: "Tomato and starfruit slices placed on a slice of bread."
 
 draft: false
 featured: false
@@ -40,7 +41,7 @@ The following recipe makes one sandwich. Two or three such sandwiches would make
 1. Sprinkle some rock salt on the starfuit slices.
 1. Cut a quarter of the cheese cube and keep it aside. Slice the remaining cube and place the slices over the starfruit.
 1. Cover with a slice of bread, and cut diagonally into two triangles.
-   {{< figure src="starfruit_sandwich_cut.webp" >}}
+   {{< figure src="starfruit_sandwich_cut.webp" alt="Starfruit sandwich cut diagonally into two triangular pieces">}}
 1. Enjoy your starfruit sandwich! Intersperse with bites of tomato, starfruit, and cheese that you had kept aside.
    Optionally, consume some [hyperbolic paraboloid potato-based crisps](https://en.wikipedia.org/wiki/Pringles) on the side.
 

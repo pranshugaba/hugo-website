@@ -1,12 +1,20 @@
 ---
 title: Playground
 subtitle: Trying out stuff here
+
+date: 2021-03-06T00:30:00+05:30
+lastmod: 2021-03-08T00:30:00+05:30
+
+location:
+  name: Mumbai, India
+  coords: [19.0769, 72.8761]
+
 map: true
 ---
 
-{{< map route="day3" >}}
-
 A playground to test out[^1] various Markdown features.
+
+{{% toc %}}
 
 [^1]: This is a footnote. 
 
@@ -270,5 +278,7 @@ A playground to test out[^1] various Markdown features.
 This is another map.
 
 {{< map route="abc" >}}
+
+{{< map route="day3" >}}
 
 {{< photo src="cat.jpg" caption="This is a photo of a _cat_." alt="Picture of a cat" >}}

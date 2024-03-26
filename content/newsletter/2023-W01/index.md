@@ -15,6 +15,7 @@ featured: false
 
 image:
   preview_only: true
+  alt: 'A panorama of the city of Haifa and the port'
 ---
 
 The year 2022 is over, and a new year has begun.

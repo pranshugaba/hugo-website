@@ -1,4 +1,10 @@
 {{ $img := (.Resources.ByType "image").GetMatch "*featured*[png,jpeg,jpg,webp]" }} 
+
+{{ $altText := "" }}
+{{ with .Params.image.alt }}
+  {{ $altText = . }}
+{{ end }}
+
 {{ if not .Params.image.preview_only }}
   {{ with $img }}
     {{ $orientation := 1 }}
@@ -14,9 +20,11 @@
         {{ $big = .Resize "x1440 webp q85" }}
       {{ end }}
       <img
-        class="[ border-thick ]"
+        class="[ border-thick border-radius-large ]"
         src="{{ $big.Permalink }}"
-        alt="{{ $img.Title }}"
+        {{ if $altText }}
+          alt="{{ $altText }}"
+        {{ end }}
         height="{{ $big.Height }}"
         width="{{ $big.Width }}"
       />

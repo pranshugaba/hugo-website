@@ -3,7 +3,8 @@ title: 'poké ball'
 subtitle: 'a poem'
 summary: 'a poem'
 
-alt: "View of a restaurant that looks like a poké ball from above"
+image:
+  alt: 'View of a restaurant that looks like a poké ball from above'
 
 tags: ['airports', 'pokemon', 'singapore']
 

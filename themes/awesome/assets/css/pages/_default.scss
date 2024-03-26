@@ -1,54 +1,48 @@
 @use '../globals/mixins' as m;
 
 .page {
-  &__date {
-    margin-top: 0rem;
-  }
   &__header {
-    margin-top: 4rem;
-    @media (min-width: 640px) {
-      margin-top: min(6rem, 20vh);
+    margin-block-start: var(--size-800);
+    margin-block-end: var(--size-700);
+
+    .page {
+      &__date {
+        margin-block-start: 0;
+      }
+      &__id {
+        margin-block-start: 0;
+        font-size: var(--font-size-600);
+      }
+      &__title {
+        margin-block-start: var(--size-400);
+        margin-block-end: 0;
+      }
+      &__subtitle {
+        margin-block-start: var(--size-300);
+        font-size: 1.35rem;
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+        line-height: 1.35;
+      }
+      &__location {
+        --flow-space: 0;
+        margin-block-start: var(--size-400);
+      }
     }
-    margin-bottom: 3rem;
-  }
-  &__title {
-    margin-top: 1rem;
-    margin-bottom: 1.25rem;
-  }
-  &__subtitle {
-    font-size: 1.35rem;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
-    text-wrap: balance;
-  }
-  &__location {
-    margin-top: 0.75rem;
-    margin-bottom: 3rem;
-  }
-  &__lastmod {
-    margin-top: 0.25rem;
-    margin-bottom: 1.5rem;
   }
 
   &__featuredimage {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    img {
-      border-radius: var(--border-radius-large);
-    }
+    margin-block: var(--size-400);
   }
 
   &__content {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    margin-block-start: var(--size-500);
+    margin-block-end: var(--size-600);
   }
 
   &__navtags {
-    margin-top: 5rem;
-    margin-bottom: 2.5rem;
+    margin-block-start: var(--size-800);
+    margin-block-end: var(--size-700);
   }
 
   &__tags {
@@ -72,35 +66,30 @@
       max-width: var(--content-width);
     }
     margin-inline: auto;
-    margin-top: 2rem;
-    margin-bottom: 2.5rem;
+    margin-block-end: var(--size-700);
     &__heading {
-      // border-top: var(--border-medium) solid var(--fg);
       font-family: var(--font-sans-serif);
       font-size: var(--font-size-600);
-      margin-top: 1rem;
-    }
-    &__ul {
-      margin-block: 1rem;
     }
   }
   &__nav {
     &__heading {
       font-family: var(--font-sans-serif);
       font-size: var(--font-size-600);
-      margin-top: 1rem;
-      border-top: var(--border-medium) solid var(--fg);
-      padding-top: 2rem;
+      margin-block-start: var(--size-400);
+      margin-block-end: calc(-1 * var(--size-200));
+      border-block-start: var(--border-medium) solid var(--fg);
+      padding-block-start: var(--size-700);
     }
     &__prev__title,
     &__next__title {
       font-size: var(--font-size-300);
-      margin-top: 2rem;
+      margin-block-start: var(--size-700);
     }
   }
   &__seeall {
     margin-inline: auto;
-    margin-top: 2.5rem;
+    margin-block-start: var(--size-700);
     @media screen {
       max-width: var(--content-width);
     }

@@ -12,9 +12,6 @@ math: true
 
 draft: false
 featured: false
-
-image:
-  preview_only: true
 ---
 
 I will be sharing some interesting maths puzzles here, somewhat semiregularly. If you solve a puzzle -- or make some progress -- do  [share your attempt with me]({{< ref "/contact" >}}). I would love to read your submissions. Interesting and enlightening reader-submitted solutions will be featured along with the following puzzle.

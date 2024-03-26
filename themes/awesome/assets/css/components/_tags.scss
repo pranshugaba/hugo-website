@@ -3,7 +3,6 @@
 .tagcloud {
   @include m.plain-list;
 
-  line-height: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;

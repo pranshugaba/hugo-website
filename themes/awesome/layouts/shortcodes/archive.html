@@ -1,7 +1,7 @@
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 
 {{ range $pages.GroupByDate "2006" }}
-  <section id="{{ .Key }}">
+  <section id="{{ .Key }}" class="archive-year">
     <h2 class="list__key">{{ .Key }}</h2>
     <ul class="items__list">
         {{ range .Pages }}

@@ -13,6 +13,9 @@ map: true
 
 draft: false
 featured: false
+
+image:
+  alt: 'My new silver Triban road bike'
 ---
 
 I ordered a road bike online from Decathlon, and it was available for pickup from their store in Bandra. Given the lovely cloudy July weather, I decided to cycle back home to Kandivali.
