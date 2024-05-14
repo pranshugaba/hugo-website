@@ -1,1 +1,1 @@
-{{ if (eq .Type "newsletter") }}{{ .Date.Format "2006" }} W{{ .Params.week }}{{ else if (eq .Type "puzzles") }}#{{ .File.ContentBaseName }}{{ else if (eq .Type "minis") }}#{{ .File.ContentBaseName }}{{ else if (eq .Type "comics") }}#{{ .File.ContentBaseName }}{{ end }}
+{{ if (eq .Type "newsletter") }}{{ .Date.Format "2006" }} W{{ .Params.week }}{{ else if or (eq .Type "puzzles") (eq .Type "minis") (eq .Type "comics")}}#{{ .File.ContentBaseName }}{{ end }}
