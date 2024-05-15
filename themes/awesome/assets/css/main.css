@@ -1189,7 +1189,7 @@ h4 code {
 }
 
 .list-books__item {
-  margin-bottom: 2rem;
+  margin-block-end: var(--size-700);
   flex-direction: row-reverse;
 }
 .list-books__item .item__date {
@@ -1202,9 +1202,9 @@ h4 code {
 }
 @media (min-width: 640px) {
   .list-books__item {
-    margin-bottom: 1rem;
+    margin-block-end: var(--size-400);
     display: flex;
-    gap: 0.5rem;
+    gap: var(--size-200);
     justify-content: space-between;
   }
 }

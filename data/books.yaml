@@ -18,14 +18,18 @@ wantToRead:
     author: George R. R. Martin
 
 reading:
-  - title: Children of Dune
+  - title: God Emperor of Dune
     author: Frank Herbert
-    startDate: 2024-03-08T18:30:00+05:30
+    startDate: 2024-05-01T18:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: Children of Dune
+    author: Frank Herbert
+    startDate: 2024-03-08T18:30:00+05:30
+    endDate: 2024-05-01T18:30:00+05:30
   - title: Dune Messiah
     author: Frank Herbert
     startDate: 2024-02-24T15:30:00+05:30

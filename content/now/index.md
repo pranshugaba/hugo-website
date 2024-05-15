@@ -24,7 +24,7 @@ My area of interest is [reactive synthesis](https://en.wikipedia.org/wiki/Reacti
 
 ## Gaming
 
-I play _Bloodborne_ and _PlateUp!_ nowadays. 
+I play _The Witness_ and _Red Dead Redemption_ nowadays. 
 
 ---
 

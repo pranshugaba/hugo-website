@@ -1,13 +1,20 @@
 watching:
+  - title: Curb your Enthusiasm
+    type: Season
+    season: 12
+    channel: HBO
+
+  - title: Taskmaster
+    type: Series
+    channel: Channel 4
+    season: 17
+    startDate: 2021-02-01T05:30:00+05:30
+
+wantToWatch:
   - title: Barry
     type: Series
     season: 4
     channel: HBO
-
-  - title: University Challenge
-    type: Series
-    season: 53
-    channel: BBC
 
   - title: 'NPC D&D'
     type: Season
@@ -19,7 +26,6 @@ watching:
     season: 1
     channel: HBO
 
-wantToWatch:
   - title: The Curse
     type: Series
     season: 1
@@ -51,11 +57,6 @@ wantToWatch:
   - title: Arcane
     type: Series
     channel: Netflix
-
-  - title: Curb your Enthusiasm
-    type: Season
-    season: 12
-    channel: HBO
 
   - title: The Righteous Gemstones
     type: Season
@@ -102,6 +103,11 @@ wantToWatch:
     endDate: 2021-09-07T05:30:00+05:30
 
 watched:
+  - title: University Challenge
+    type: Series
+    season: 53
+    channel: BBC
+
   - title: Only Connect
     type: Series
     season: 19
@@ -112,11 +118,6 @@ watched:
     season: 14
     channel: FXX
 
-  - title: Taskmaster
-    type: Series
-    channel: Channel 4
-    season: 16
-    startDate: 2021-02-01T05:30:00+05:30
 
   - title: It's Always Sunny in Philadelphia
     type: Season
