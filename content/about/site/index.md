@@ -35,7 +35,6 @@ I have hidden a number of easter eggs across this site. How many can you find?
 |    {{< countposts stories >}} | [stories]({{< ref "/stories/" >}})              |
 |     {{< countposts comics >}} | [comics]({{< ref "/comics/" >}})                |
 | {{< countposts newsletter >}} | [newsletter issues]({{< ref "/newsletter/" >}}) |
-| {{< countposts a-propos-de-moi >}} | [à propos de moi]({{< ref "/a-propos-de-moi/" >}}) |
 |      {{< countposts minis >}} | [minis]({{< ref "/minis/" >}})                  |
 |        {{< countposts dev >}} | [dev articles]({{< ref "/dev/" >}})             |
 |     **{{< countpostsall >}}** | **Total**                                       |

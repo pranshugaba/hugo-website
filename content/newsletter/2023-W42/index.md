@@ -41,8 +41,8 @@ One of the languages I want to get better at is français, that is, French.
 I had learnt some French in school, but I was not very good at it, and I had forgotten most of it by now anyway.
 I resumed actively learning French a few months ago.
 
-To improve my writing skills, I will post short essays in French here on my site in a section called [_À propos de moi_]({{< ref "/a-propos-de-moi" >}}), which means _About me_ in French.
-I have written [the first essay]({{< ref "/a-propos-de-moi/on-commence" >}}) already where I briefly introduce myself in French.
+To improve my writing skills, I will post short essays in French here on my site.
+I have written [the first essay]({{< ref "/articles/on-commence" >}}) already where I briefly introduce myself in French.
 I will write about interesting events in my life, as well as document my French learning experience, all of it in French. 
 If you are a French speaker, please have a read and let me know if you find mistakes or have suggestions to improve my writing. 
 

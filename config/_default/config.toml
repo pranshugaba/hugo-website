@@ -59,7 +59,6 @@ lastmod = ["lastmod", ":git", ":default"]
 [params]
   mainSections = [
       "articles",
-      "a-propos-de-moi",
       "dev",
       "trips",
       "recipes",

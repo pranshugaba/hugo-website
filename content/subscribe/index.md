@@ -73,12 +73,6 @@ https://pranshugaba.com/stories/index.xml
 https://pranshugaba.com/comics/index.xml
 ```
 
-### À propos de moi
-
-```shell
-https://pranshugaba.com/a-propos-de-moi/index.xml
-```
-
 ### Minis
 
 ```shell
