@@ -49,6 +49,7 @@
   --size-50: 0.1rem;
   --size-100: 0.2rem;
   --size-200: 0.5rem;
+  --size-250: 0.625rem;
   --size-300: 0.75rem;
   --size-400: 1rem;
   --size-500: 1.25rem;
@@ -1697,41 +1698,25 @@ figure figcaption {
 }
 
 .recent {
-  --item-padding: var(--size-300);
-  margin-inline: auto;
+  --item-padding: var(--size-250);
+  margin-inline: clamp(-5rem, 2rem + (100% - 100vw) / 2, 0rem);
 }
 @media (min-width: 480px) {
-  .recent__group {
+  .recent {
     display: grid;
-    gap: var(--size-600);
-    grid-auto-flow: column;
-    grid-auto-columns: 64%;
-    overflow-inline: auto;
-    overscroll-behavior-inline: contain;
-    scroll-snap-type: inline mandatory;
-  }
-}
-@media (min-width: 960px) {
-  .recent__group {
-    grid-auto-columns: 40%;
+    -moz-column-gap: var(--size-500);
+         column-gap: var(--size-500);
+    row-gap: var(--size-300);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 .recent__section {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-block: var(--size-500) var(--size-800);
+  margin-block: var(--size-500) 0;
   border: var(--border-medium) solid var(--fg);
   border-radius: var(--border-radius-medium);
-}
-@media (min-width: 480px) {
-  .recent__section {
-    margin-block: 0 var(--size-400);
-    scroll-snap-align: start;
-  }
-  .recent__section:last-child {
-    scroll-snap-align: end;
-  }
 }
 .recent__section__title {
   margin-block: 0;
