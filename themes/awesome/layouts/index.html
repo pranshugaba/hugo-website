@@ -19,10 +19,12 @@
       <p class="page__subtitle" id="kenobi">{{ .Params.Subtitle }}</p>
     </header>
     <article class="flow">{{ .Content }}</article>
-    {{ partial "home/recent-news" . }}
-    {{ partial "home/recent-home" . }}
-    {{ partial "home/recent-photos" . }}
-    {{ partial "home/recent-minis" . }}
   </div>
+</div>
+<div class="recent__home__grid">
+  {{ partial "home/recent-news" . }}
+  {{ partial "home/recent-home" . }}
+  {{ partial "home/recent-photos" . }}
+  {{ partial "home/recent-minis" . }}
 </div>
 {{ end }}

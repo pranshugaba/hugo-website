@@ -49,6 +49,9 @@
     border-block-start: var(--border-medium) solid var(--fg);
     padding-block-start: var(--size-200);
     margin-block: var(--size-700);
+    @media (min-width: 480px) {
+      margin-block: var(--size-400);
+    }
     &__heading {
       font-family: var(--font-sans-serif);
       font-size: var(--font-size-700);
@@ -57,6 +60,7 @@
     }
     &__seeall {
       margin-block-start: var(--size-600);
+      text-align: right;
     }
   }
 }

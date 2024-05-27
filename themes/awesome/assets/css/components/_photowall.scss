@@ -1,3 +1,7 @@
+.home__recent__photos,
+.photowall__wrapper {
+  container-type: inline-size;
+}
 .photowall,
 .home__recent__photowall {
   display: grid;
@@ -9,19 +13,17 @@
   grid-template-columns: 1fr;
   column-gap: var(--size-400);
   row-gap: var(--size-700);
-  @media (min-width: 360px) {
+  @container (width > 300px) {
     grid-template-columns: 1fr 1fr;
     column-gap: var(--size-300);
     row-gap: var(--size-300);
   }
-  @media (min-width: 600px) {
+  @container (width > 450px) {
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: var(--size-400);
-    row-gap: var(--size-400);
   }
-  
+
   line-height: 0;
- 
+
   .photowall__container {
     aspect-ratio: 1;
     a {

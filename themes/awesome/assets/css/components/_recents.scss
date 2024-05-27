@@ -1,3 +1,14 @@
+.recent__home__grid {
+  @media (min-width: 480px) {
+    display: grid;
+    column-gap: var(--size-800);
+    row-gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin-block-start: var(--size-200);
+  }
+  margin-inline: clamp(-5rem, calc(2rem + (100% - 100vw) / 2), 0rem);
+}
+
 .recent {
   --item-padding: var(--size-250);
   @media (min-width: 480px) {

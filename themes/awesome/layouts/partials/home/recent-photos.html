@@ -7,7 +7,7 @@
         {{ $imagePages = $imagePages | append . }}
     {{ end }}
 {{ end }}
-<div class="home__recent [ flow ]">
+<div class="home__recent home__recent__photos [ flow ]">
     <h2 class="home__recent__heading">Photos</h2>
     <div class="home__recent__photowall">
         {{ range first $numberOfItems $imagePages }}
