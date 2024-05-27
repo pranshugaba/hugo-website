@@ -1,11 +1,13 @@
 {{ $numberOfItems := 5 }}
-{{ $pages := .Site.RegularPages }}
+
+{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ $pages := where $pages "Type" "ne" "minis" }}
 <div class="home__recent [ flow ]">
-    <h2 class="home__recent__heading">Latest posts</h2>
+    <h2 class="home__recent__heading">Posts</h2>
     {{ range first $numberOfItems $pages}}
         {{ partial "list/home" . }}
     {{ end }}
     <div class="home__recent__seeall" >
-        <a href="/archive"> See all &#8594;</a>
+        <a href="/archive"> See all posts &#8594;</a>
     </div>
 </div>

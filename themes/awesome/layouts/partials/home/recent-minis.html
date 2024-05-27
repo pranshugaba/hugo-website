@@ -1,0 +1,13 @@
+{{ $numberOfItems := 2 }}
+
+{{ $pages := where .Site.RegularPages "Type" "eq" "minis" }}
+
+<div class="home__recent [ flow ]">
+    <h2 class="home__recent__heading">Minis</h2>
+    {{ range first $numberOfItems $pages}}
+        {{ partial "list/minis" . }}
+    {{ end }}
+    <div class="home__recent__seeall" >
+        <a href="/minis"> See all minis &#8594;</a>
+    </div>
+</div>

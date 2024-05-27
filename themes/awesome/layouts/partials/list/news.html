@@ -1,0 +1,6 @@
+{{ with .newsDate }}
+    <div class="newsdate">
+        <time datetime="{{ dateFormat "2006-01-02" . }}">{{ dateFormat "Jan 02, 2006" . }}</time>
+    </div>
+{{ end }}
+{{ .description | markdownify }}

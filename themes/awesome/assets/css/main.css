@@ -1320,6 +1320,21 @@ h4 code {
   text-align: right;
 }
 
+.news__list {
+  list-style: none;
+  padding-left: 0;
+}
+.news__list .news__item {
+  margin-block-end: var(--size-700);
+}
+.news__list .newsdate {
+  font-size: var(--font-size-250);
+}
+
+.home__recent .news__item {
+  margin-block-end: var(--size-600);
+}
+
 .admonition {
   border: var(--border-medium) solid var(--fg);
   border-radius: var(--border-radius-medium);

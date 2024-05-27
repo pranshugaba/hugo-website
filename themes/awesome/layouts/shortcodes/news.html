@@ -1,0 +1,14 @@
+{{ $newsItems := "" }}
+{{ with $.Site.Data.news }}
+    {{ $newsItems = sort $.Site.Data.news "newsDate" "desc" }}
+{{ end }}
+
+<ul class="news__list">
+{{ with $newsItems }}
+    {{ range . }}
+    <li class="news__item">
+        {{ partial "list/news.html" . }}
+    </li>
+    {{ end }}
+{{ end }}
+</ul>
