@@ -1,4 +1,5 @@
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ $pages := where $pages "Type" "ne" "minis" }}
 
 {{ range $pages.GroupByDate "2006" }}
   <section id="{{ .Key }}" class="archive-year">

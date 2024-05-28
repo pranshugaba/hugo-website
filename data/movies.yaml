@@ -22,6 +22,14 @@ wantToWatch:
     releaseYear: 2022
 
 watched:
+  - title: American Fiction
+    language: English
+    releaseYear: 2023
+    startDate: 2024-05-01T17:00:00+05:30
+  - title: Lyle, Lyle, Crocodile
+    language: English
+    releaseYear: 2022
+    startDate: 2024-05-01T12:00:00+05:30
   - title: Laapataa Ladies
     language: Hindi
     releaseYear: 2024

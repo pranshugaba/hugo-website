@@ -12,7 +12,7 @@ Hi, I'm Pranshu.  :wave:
 ### Education
 
 #### TIFR, Mumbai
-I am a fourth-year PhD student in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
+I am a fourth-year PhD research scholar in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
 My research interests include Logic, Automata, and Games.
 Some relevant courses that I have taken include 
 - Algebraic Automata Theory
