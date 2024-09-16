@@ -1,9 +1,24 @@
 watching:
-  - title: 'Jet Lag: The Game'
+  - title: English Teacher
     type: Series
-    season: 5
-    channel: YouTube
+    season: 1
+    channel: FXX
   
+  - title: Normal People
+    type: Series
+    season: 1
+    channel: Hulu
+
+  - title: Taskmaster UK
+    type: Series
+    channel: Channel 4
+    season: 18
+    startDate: 2021-02-01T05:30:00+05:30
+  
+  - title: Taskmaster Australia
+    type: Series
+    season: 2
+
   - title: Barry
     type: Series
     season: 4
@@ -13,12 +28,6 @@ watching:
     type: Series
     channel: Comedy Central
     season: 1
-
-  - title: Taskmaster
-    type: Series
-    channel: Channel 4
-    season: 17
-    startDate: 2021-02-01T05:30:00+05:30
 
 wantToWatch:
   - title: 'NPC D&D'
@@ -108,6 +117,11 @@ wantToWatch:
     endDate: 2021-09-07T05:30:00+05:30
 
 watched:
+  - title: 'Jet Lag: The Game'
+    type: Series
+    season: 5
+    channel: YouTube
+  
   - title: Curb your Enthusiasm
     type: Season
     season: 12

@@ -18,14 +18,26 @@ wantToRead:
     author: George R. R. Martin
 
 reading:
-  - title: God Emperor of Dune
-    author: Frank Herbert
-    startDate: 2024-05-01T18:30:00+05:30
+  - title: Book Lovers
+    author: Emily Henry
+    startDate: 2024-08-22T20:30:00+05:30
   - title: Following the Equator 
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: The Heroes
+    author: Joe Abercrombie
+    startDate: 2024-06-19T10:30:00+05:30
+    endDate: 2024-08-20T20:30:00+05:30
+  - title: The Seven Husbands of Evelyn Hugo
+    author: Taylor Jenkins Reid
+    startDate: 2024-06-18T10:30:00+05:30
+    endDate: 2024-06-18T20:30:00+05:30
+  - title: God Emperor of Dune
+    author: Frank Herbert
+    startDate: 2024-05-01T18:30:00+05:30
+    endDate: 2024-06-17T18:30:00+05:30
   - title: Children of Dune
     author: Frank Herbert
     startDate: 2024-03-08T18:30:00+05:30
