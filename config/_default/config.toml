@@ -78,6 +78,6 @@ lastmod = ["lastmod", ":git", ":default"]
   AuthorName = "Pranshu Gaba"
   GitHubUser = "pranshugaba"
 
-[author]
+[params.author]
   name = "Pranshu Gaba"
   email = "pranshu@pranshugaba.com"

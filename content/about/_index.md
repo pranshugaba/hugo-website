@@ -7,31 +7,35 @@ display: none
 
 ## About me
 
-Hi, I'm Pranshu.  :wave:
+Hi, I'm Pranshu  :wave:
+
 
 ### Education
-
 #### TIFR, Mumbai
-I am a fourth-year PhD research scholar in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
-My research interests include Logic, Automata, and Games.
+I am a fifth-year PhD research scholar in the [School of Technology and Computer Science](https://www.tcs.tifr.res.in) at [TIFR, Mumbai](https://www.tifr.res.in/).
+I am working on Formal Methods with my advisor [Shibashis Guha](https://www.tifr.res.in/~shibashis.guha/), and am co-advised by [Laurent Doyen](http://www.lsv.fr/~doyen/).
+My areas of interest include [reactive synthesis](https://en.wikipedia.org/wiki/Reactive_synthesis) and [games on graphs](https://arxiv.org/abs/2305.10546).
+
 Some relevant courses that I have taken include 
-- Algebraic Automata Theory
 - Logic, Automata, and Games
-- Algebra and Computation
+- Descriptive Complexity
+- Algebraic Automata Theory
 - Computational Complexity
+- Algebra and Computation
 - Online Algorithms
 
 #### IISc, Bangalore
 Previously, I did my undergraduate studies in Maths at [IISc, Bangalore](https://iisc.ac.in/) from 2016 to 2020.
 Some courses that I took in IISc include  
 - Automata and Computability 
-- Graphics and Visualization
+- Introduction to Scalable Systems
 - Game theory 
 - Graph theory 
 - Combinatorics 
 - Algebra I and II 
 - Topology 
 - Measure theory
+- Graphics and Visualization
 
 ### Hobbies
 

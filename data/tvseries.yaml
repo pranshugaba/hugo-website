@@ -1,33 +1,19 @@
 watching:
-  - title: English Teacher
+  - title: Nathan for You
     type: Series
+    channel: Comedy Central
     season: 1
-    channel: FXX
+ 
+  - title: Barry
+    type: Series
+    season: 4
+    channel: HBO
   
   - title: Normal People
     type: Series
     season: 1
     channel: Hulu
 
-  - title: Taskmaster UK
-    type: Series
-    channel: Channel 4
-    season: 18
-    startDate: 2021-02-01T05:30:00+05:30
-  
-  - title: Taskmaster Australia
-    type: Series
-    season: 2
-
-  - title: Barry
-    type: Series
-    season: 4
-    channel: HBO
-  
-  - title: Nathan for You
-    type: Series
-    channel: Comedy Central
-    season: 1
 
 wantToWatch:
   - title: 'NPC D&D'
@@ -117,10 +103,25 @@ wantToWatch:
     endDate: 2021-09-07T05:30:00+05:30
 
 watched:
+  - title: Taskmaster UK
+    type: Series
+    channel: Channel 4
+    season: 18
+    startDate: 2021-02-01T05:30:00+05:30
+  
+  - title: Taskmaster Australia
+    type: Series
+    season: 2
+
   - title: 'Jet Lag: The Game'
     type: Series
     season: 5
     channel: YouTube
+  
+  - title: English Teacher
+    type: Series
+    season: 1
+    channel: FXX
   
   - title: Curb your Enthusiasm
     type: Season
