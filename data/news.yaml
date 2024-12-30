@@ -4,7 +4,7 @@
 - description: 'I will give a talk on _Stochastic Window Mean-Payoff Games_ at [FMUpdate&nbsp;2023](https://fmindia.cmi.ac.in/update2023/) on 30&nbsp;June&nbsp;2023.'
   newsDate: 2023-06-13T17:30:00+05:30
 
-- description: 'Our paper _Stochastic Window Mean-Payoff Games_ is accepted at [FoSSaCS 2024](https://etaps.org/2024/conferences/fossacs/)!'
+- description: 'Paper with Laurent Doyen and Shibashis Guha on _Stochastic Window Mean-Payoff Games_  has been accepted at [FoSSaCS 2024](https://etaps.org/2024/conferences/fossacs/)!'
   newsDate: 2023-12-22T17:30:00+05:30
 
 - description: 'I will give a student seminar talk on [_The complexity of solving simple stochastic games_](https://www.tcs.tifr.res.in/web/events/1395) on 16&nbsp;February&nbsp;2024 at 5:30&nbsp;pm at TIFR.'
@@ -24,3 +24,12 @@
 
 - description: 'New preprint [_Expectation in Stochastic Window Mean-Payoff Games_](https://arxiv.org/abs/2405.18048) uploaded on arXiv.'
   newsDate: 2024-05-29T05:30:00+05:30
+
+- description: 'Paper with Arnab Sur on _Recognizing Numbers_  has been accepted at [ICLA 2025](https://logicindia.org/icla/icla2025/)!'
+  newsDate: 2024-10-25T15:40:00+05:30
+
+- description: 'I will give a talk on _Expectation in Stochastic Games with Prefix-independent Objectives_ at the  [Workshop on Automata and Games for Synthesis](https://sites.google.com/view/fsttcs2024bworkshop/schedule) co-located with FSTTCS 2024.'
+  newsDate: 2024-11-25T15:40:00+05:30
+
+- description: 'Paper with Shibashis Guha on _Optimising Expectation with Guarantees for Window Mean Payoff in Markov Decision Processes_  has been accepted at [AAMAS 2025](https://aamas2025.org) as a full paper!'
+  newsDate: 2024-12-20T00:40:00+05:30
