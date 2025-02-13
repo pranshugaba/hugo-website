@@ -1,3 +1,28 @@
+- title: The Canadian traveller problem
+  abstract: >
+    Roads in Canada often get blocked due to excessive snowfall during blizzards. On encountering a road closure, a driver needs to adapt their route on-the-fly (possibly involving backtracking) in order to minimise the time taken to reach their destination. This problem is known as the Canadian traveller problem.
+
+  
+    Formally, given a graph with partially observable edge weights, the goal is to synthesise a strategy that minimises the total weight of a walk to the target vertex, where an edge weight is only learnt on visiting an endpoint of the edge. We look at two different variants of this problem:
+
+    - [PY91] The edge weights are chosen by an adversary. We want a strategy with the best competitive ratio, that is, one that minimises the ratio of the total weight of the walk taken to that of the total weight of the walk given by an optimal offline algorithm.
+
+    - [KN07] The edge weights are given by a probability distribution. We want a strategy that minimises the expected total weight of a walk to the destination.
+
+    
+    References:  
+
+    - [PY91](https://www.sciencedirect.com/science/article/pii/0304397591902632) Christos Papadimitriou and Mihalis Yannakakis, Shortest paths without a map (1991)
+
+    - [KN07](https://people.csail.mit.edu/enikolova/papers/canadian-FINAL.pdf) David Karger and Evdokia Nikolova, Exact Algorithms for the Canadian Traveller Problem on Paths and Trees (2007)
+  eventName: TIFR Student Seminar
+  eventLink: 
+  date: 2025-02-14T16:00:00+05:30
+  location: TIFR, Mumbai
+  slides:
+  recording:
+  notes:
+
 - title: Courcelle's theorem
   abstract: "Given a graph, we are often interested in deciding if it satisfies a certain property. Some simple examples of graph properties include connectivity, bipartiteness, and planarity.  Courcelle's theorem gives parameterized upper bounds for decidability of a wide class of graph properties. Specifically, Courcelle's theorem is a metatheorem that states that if a graph property is definable in monadic second-order logic on graphs, then the property is decidable in linear fixed-parameter tractable time with the graph treewidth as the parameter. This theorem finds many uses in automata theory and model checking. We will study the theorem and look at some of its applications."
   eventName: TIFR Student Seminar
