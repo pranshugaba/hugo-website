@@ -1,20 +1,19 @@
 .site__footer {
+  max-width: var(--header-width);
+  margin-inline: auto;
+  margin-block-start: var(--size-700);
+  padding-block-start: var(--size-600);
+  border-block-start: var(--border-medium) solid var(--fg);
+  line-height: 1;
+  
   @media (min-width: 640px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
     gap: 1rem;
-  }
-  max-width: var(--header-width);
-  margin-inline: auto;
-  margin-block-start: var(--size-700);
-  padding-block-start: var(--size-600);
-  @media (min-width: 640px) {
     padding-block-start: var(--size-400);
   }
-  border-block-start: var(--border-medium) solid var(--fg);
-  line-height: 1;
 }
 
 .footer__copyright {

@@ -1,11 +1,11 @@
 .poems {
+  max-width: var(--header-width);
   .items__list {
+    margin-inline: auto;
     @media screen {
       max-width: var(--content-width);
     }
-    margin-inline: auto;
   }
-  max-width: var(--header-width);
   .page__featuredimage {
     @media (min-width: 960px) {
       margin-block: var(--size-400);
@@ -14,10 +14,10 @@
   .page__header,
   .page__navtags,
   .page__nav {
+    margin-inline: auto;
     @media screen {
       max-width: var(--content-width);
     }
-    margin-inline: auto;
   }
   .page__content {
     font-size: var(--font-size-500);

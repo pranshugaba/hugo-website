@@ -2,17 +2,18 @@
 // TODO: Style buttons when you add a button
 html {
   font-size: 115%;
+  font-family: var(--font-sans-serif);
+  font-weight: 400;
+  scroll-padding-top: var(--size-300);
+  text-underline-offset: 0.14em;
+  scrollbar-color: var(--accent) var(--bg);
+  
   @media (min-width: 640px) {
     font-size: 125%;
   }
   @media print {
     font-size: 80%;
   }
-  font-family: var(--font-sans-serif);
-  font-weight: 400;
-  scroll-padding-top: var(--size-300);
-  text-underline-offset: 0.14em;
-  scrollbar-color: var(--accent) var(--bg);
 }
 
 body {
@@ -136,13 +137,14 @@ q::after {
 
 // Links.scss
 a {
+  text-decoration: underline;
+  
   &,
   &:visited {
     color: var(--fg);
     outline: none;
     transition: outline 0.1s ease-out;
   }
-  text-decoration: underline;
 
   &:hover {
     text-decoration: none;
@@ -207,10 +209,10 @@ ol,
 ul {
   --flow-space: var(--font-size-100);
   padding-inline-start: var(--size-400);
+  list-style-position: outside;
   @media (min-width: 640px) {
     padding-inline-start: var(--size-700);
   }
-  list-style-position: outside;
 }
 
 li {
@@ -245,25 +247,29 @@ code {
 
 blockquote {
   font-size: var(--font-size-400);
-  border: var(--border-thick) solid var(--accent);
-  border-radius: var(--border-radius-large);
-  border-end-start-radius: var(--border-radius-tiny);
-  margin-block: 2.5rem;
-  margin-inline: auto;
-  padding-block: 0.25rem;
-  padding-inline: 0.8rem;
-  quotes: '“' '”' '‘' '’';
-  width: 100%;
+  margin-block: var(--size-700);
+  border-inline-start: var(--border-thick) solid var(--accent);
+  margin-inline-start: var(--size-300);
+  padding-inline-start: var(--size-300);
   @media (min-width: 640px) {
+    border: var(--border-thick) solid var(--accent);
+    border-radius: var(--border-radius-large);
+    border-end-start-radius: var(--border-radius-tiny);
+    padding-block: var(--size-100);
+    padding-inline: var(--size-300);
+    quotes: '“' '”' '‘' '’';
+    width: 100%;
     width: max-content;
     max-width: 90%;
-    padding-inline: 1rem;
   }
 }
 
 blockquote > p {
-  margin-block: 0.75rem;
-  text-indent: 1rem;
+  margin-block: var(--size-300);
+  text-indent: var(--size-300);
+  @media (min-width: 640px) {
+    text-indent: var(--size-400);
+  }
 }
 blockquote cite {
   display: block;

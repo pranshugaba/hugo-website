@@ -24,20 +24,20 @@
 }
 
 .header-width {
+  margin-inline: auto;
   @media screen {
     max-width: var(--header-width);
   }
-  margin-inline: auto;
 }
 .wide-width {
+  margin-inline: auto;
   @media screen {
     max-width: var(--wide-width);
   }
-  margin-inline: auto;
 }
 .content-width {
+  margin-inline: auto;
   @media screen {
     max-width: var(--content-width);
   }
-  margin-inline: auto;
 }
