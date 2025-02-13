@@ -11,14 +11,28 @@ wantToWatch:
   - title: Renfield
     language: English
     releaseYear: 2023
-  - title: Dungeons and Dragons
-    language: English
-    releaseYear: 2023
   - title: Triangle of Sadness
     language: English
     releaseYear: 2022
 
 watched:
+  - title: Dungeons and Dragons
+    language: English
+    releaseYear: 2023
+    startDate: 2025-02-09T17:00:00+05:30
+  - title: Little Miss Sunshine
+    language: English
+    releaseYear: 2006
+  - title: Marcel the Shell with Shoes on
+    language: English
+    releaseYear: 2021
+    startDate: 2025-02-09T17:00:00+05:30
+  - title: Look Back
+    language: Japanese
+    releaseYear: 2024
+  - title: The Wild Robot
+    language: English
+    releaseYear: 2024
   - title: Deadpool & Wolverine
     language: English
     releaseYear: 2024

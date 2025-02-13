@@ -1,21 +1,35 @@
 watching:
+  - title: Hilda
+    type: Series
+    season: 1
+    channel: Netflix
+
+wantToWatch:
+  - title: The White Lotus
+    type: Series
+    season: 3
+    channel: HBO
+
+  - title: The Rehearsal
+    type: Series
+    season: 2
+    channel: HBO
+
   - title: Nathan for You
     type: Series
     channel: Comedy Central
     season: 1
- 
+
   - title: Barry
     type: Series
     season: 4
     channel: HBO
-  
+
   - title: Normal People
     type: Series
     season: 1
     channel: Hulu
 
-
-wantToWatch:
   - title: 'NPC D&D'
     type: Season
     season: 1
@@ -108,7 +122,7 @@ watched:
     channel: Channel 4
     season: 18
     startDate: 2021-02-01T05:30:00+05:30
-  
+
   - title: Taskmaster Australia
     type: Series
     season: 2
@@ -117,17 +131,17 @@ watched:
     type: Series
     season: 5
     channel: YouTube
-  
+
   - title: English Teacher
     type: Series
     season: 1
     channel: FXX
-  
+
   - title: Curb your Enthusiasm
     type: Season
     season: 12
     channel: HBO
-  
+
   - title: University Challenge
     type: Series
     season: 53
@@ -143,17 +157,16 @@ watched:
     season: 14
     channel: FXX
 
-
   - title: It's Always Sunny in Philadelphia
     type: Season
     season: 16
     channel: FXX
-  
+
   - title: I Think You Should Leave with Tim Robinson
     type: Season
     season: 3
     channel: Netflix
-  
+
   - title: Hunter × Hunter
     type: Series
     season: 6
@@ -173,16 +186,6 @@ watched:
     type: Series
     season: 2
     channel: TV Tokyo
-
-  - title: The White Lotus
-    type: Series
-    season: 2
-    channel: HBO
-
-  - title: The Rehearsal
-    type: Series
-    season: 1
-    channel: HBO
 
   - title: Better Call Saul
     type: Series
@@ -246,10 +249,12 @@ done:
     type: Series
     season: 6
     channel: NBC
+ 
   - title: Moon Knight
     type: Season
     season: 1
     channel: Disney+
+
 abandoned:
   - title: Succession
     type: Series
@@ -260,6 +265,7 @@ abandoned:
     type: Season
     season: 4
     channel: BBC America
+
   - title: Undone
     type: Series
     season: 2
