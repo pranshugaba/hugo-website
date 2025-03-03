@@ -27,56 +27,17 @@
             {{ if .IsHome }}
                 {{ $title = "Pranshu Gaba"}}
             {{ else }}
-                {{ $title = .Title }}
+                {{ $title = .Title | replaceRE "," "%252C" | replaceRE "\\?" "%253F" | replaceRE "/" "%252F" | replaceRE "#" "%2523" }}
             {{ end }}
+            {{ $titleString := print "w_1280,h_669,c_fill,q_auto,f_auto/w_1130,c_fit,co_rgb:f7f0ff,g_south_west,x_60,y_240,l_text:plex-semibold.ttf_80_line_spacing_1:" $title "/" }}
             {{ $subtitle := " " }}
             {{ with .Params.Subtitle }}
-                {{ $subtitle = . }}
+                {{ $subtitle = . | replaceRE "," "%252C" | replaceRE "\\?" "%253F" | replaceRE "/" "%252F" | replaceRE "#" "%2523" }}
             {{ end }}
-
-            {{ $titleFont := "" }}
-            {{ $titleFontPath := "/social/plex-semibold.ttf" }}
-            {{ with resources.Get $titleFontPath }}
-                {{ $titleFont = .}}
-            {{ end }}
-            {{ $subtitleFont := "" }}
-            {{ $subtitleFontPath := "/social/plex-regular.ttf" }}
-            {{ with resources.Get $subtitleFontPath }}
-                {{ $subtitleFont = .}}
-            {{ end }}
-
-            {{ $imagePath := "/social/social.png" }}
-            {{ $r := resources.Get $imagePath }}
-
-            {{ $titleFilter := "" }}
-            {{ $opts := dict
-              "font" $titleFont
-              "size" 80
-              "color" "#f7f0ff"
-              "x" 60
-              "y" 370
-              "linespacing" 10
-              "alignx" "left"
-            }}
-            {{ $titleFilter = images.Text $title $opts }}
-
-            {{ $subtitleFilter := "" }}
-            {{ $opts := dict
-              "font" $subtitleFont
-              "size" 48
-              "color" "#f7f0ff"
-              "x" 60
-              "y" 480
-              "linespacing" 10
-            }}
-            {{ $subtitleFilter = images.Text $subtitle $opts }}
-
-            {{ with $r }}
-                {{ with . | images.Filter $titleFilter | images.Filter $subtitleFilter }}
-                    <meta property="og:image" content="{{ .RelPermalink }}"/>
-                    <meta property="twitter:image" content="{{ .RelPermalink }}"/>
-                {{ end }}
-            {{ end }}
+            {{ $subtitleString := print "w_1130,c_fit,co_rgb:f7f0ff,g_north_west,x_60,y_480,l_text:plex-regular.ttf_48_line_spacing_3:" $subtitle "/" }}
+            {{ $imageURL := print "https://res.cloudinary.com/pranshugaba/image/upload/" $titleString $subtitleString "social_image.png" }}
+            <meta property="og:image" content="{{ $imageURL }}"/>
+            <meta property="twitter:image" content="{{ $imageURL }}"/>
         {{ end -}}
     {{- end -}}
 {{- end -}}
