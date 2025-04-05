@@ -1,15 +1,15 @@
 watching:
+  - title: The White Lotus
+    type: Series
+    season: 3
+    channel: HBO
+
   - title: Hilda
     type: Series
     season: 1
     channel: Netflix
 
 wantToWatch:
-  - title: The White Lotus
-    type: Series
-    season: 3
-    channel: HBO
-
   - title: The Rehearsal
     type: Series
     season: 2
