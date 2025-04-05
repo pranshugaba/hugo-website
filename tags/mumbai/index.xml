@@ -1,4 +1,1421 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mumbai by Pranshu Gaba</title><link>https://pranshugaba.com/tags/mumbai/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 13 Feb 2025 22:15:00 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/mumbai/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/mumbai/index.xml" rel="self" type="application/rss+xml"/><item><title>Mini #12</title><link>https://pranshugaba.com/minis/12/</link><pubDate>Mon, 13 May 2024 16:02:00 +0530</pubDate><guid>https://pranshugaba.com/minis/12/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mumbai by Pranshu Gaba</title><link>https://pranshugaba.com/tags/mumbai/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 05 Apr 2025 11:54:37 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/mumbai/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/mumbai/index.xml" rel="self" type="application/rss+xml"/><item><title>Tandem Bicycle Bunnies</title><link>https://pranshugaba.com/trips/tandem-bicycle-bunnies/</link><pubDate>Sun, 16 Mar 2025 08:30:00 +0530</pubDate><guid>https://pranshugaba.com/trips/tandem-bicycle-bunnies/</guid><description>
+<![CDATA[<p>It had been more than two years since <a href="https://pranshugaba.com/trips/cycling-home-from-tifr/">I last cycled home from TIFR</a>. I left at 5.47 am and reached home by 8.15 am.</p>
+<p>I am pleasantly surprised that it takes me almost the same time by cycle as it takes by public transport (bus + train + bus).</p>
+<p>On the way, I sighted the Incredible Hulk, tandem bicycle bunnies, and a beautiful sunrise!</p>
+<p>Here is the route that I took and some photos that I captured along the way!</p>
+<h2 id="map">Map</h2>
+
+
+
+
+
+    
+
+
+
+
+
+
+<div class="maplibre-container">
+  <div id="cycling-2025-03-16" class="maplibre-map"></div>
+  <div class="route__metadata">
+    <div class="route__name">
+      <div>
+        <p id="cycling-2025-03-16__name"></p>
+        
+          <p id="cycling-2025-03-16__start-time"></p>
+        
+      </div>
+      
+        <p id="cycling-2025-03-16__type"></p>
+      
+    </div>
+    
+      <div class="route__stats">
+        <p id="cycling-2025-03-16__distance"></p>
+        <p id="cycling-2025-03-16__duration"></p>
+        <p id="cycling-2025-03-16__speed"></p>
+      </div>
+    
+  </div>
+</div>
+<script>
+  fetch("cycling-2025-03-16.geojson") 
+    .then(response => response.json())
+    .then(data => {
+      const gj = data;
+      const initialCoords = [72.82, 19.22]; 
+      const initialZoom = 12;
+
+      const maxBoundPadding = 0.42;
+
+      const routeName = getRouteName(gj);
+
+      const activityType = getActivityType(gj);
+      
+      const coordinates = getCoordinates(gj);
+      
+
+      const bounds = coordinates.reduce((bounds, coord) => 
+        { return bounds.extend(coord); },
+        new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+       
+      const maxBoundSW = [ bounds._sw.lng - maxBoundPadding, bounds._sw.lat - maxBoundPadding];
+      const maxBoundNE = [ bounds._ne.lng + maxBoundPadding, bounds._ne.lat + maxBoundPadding];
+      const maxBounds = new maplibregl.LngLatBounds(maxBoundSW, maxBoundNE);
+      
+      const startCoordinate = coordinates.at(0);
+      const endCoordinate = coordinates.at(-1);
+
+      const routeTurfLine = turf.lineString(coordinates);
+      const routeLength = turf.length(routeTurfLine);
+
+      
+
+      const map = new maplibregl.Map({
+        container: 'cycling-2025-03-16',
+        style: 'https://tiles.stadiamaps.com/styles/osm_bright.json', 
+        center: initialCoords, 
+        zoom: initialZoom, 
+        hash: false,
+        maxBounds: maxBounds,
+        
+      });
+
+      map.fitBounds(bounds, {
+          padding: 60,
+      });
+      
+      
+      
+      
+
+      let nav = new maplibregl.NavigationControl({
+        visualizePitch: true,
+      });
+      map.addControl(nav, 'top-left');
+      
+      let fullScreen = new maplibregl.FullscreenControl();
+      map.addControl(fullScreen, 'top-left');
+
+      let scale = new maplibregl.ScaleControl({
+        maxWidth: 80,
+        unit: 'metric',
+      });
+      map.addControl(scale);
+
+      let logo = new maplibregl.LogoControl({
+        compact: true,
+      });
+  
+      map.addControl(logo, 'top-right');
+
+      const markerStart = new maplibregl.Marker({ color: '#33aa66' })
+        .setLngLat(startCoordinate)
+        .addTo(map);
+
+      const markerEnd = new maplibregl.Marker({ color: '#aa4433' })
+        .setLngLat(endCoordinate)
+        .addTo(map);
+
+      map.on('load', () => {
+        map.addSource('route', {
+          type: 'geojson',
+          data: gj,
+        });
+
+        map.addLayer({
+          id: 'route',
+          type: 'line',
+          source: 'route',
+          layout: {
+            'line-join': 'round',
+            'line-cap': 'round',
+          },
+          paint: {
+            'line-color': '#2e2e2e',
+            'line-width': 3,
+            'line-opacity': 0.8,
+          },
+        });
+
+        document.getElementById(
+          'cycling-2025-03-16__name'
+        ).innerText = routeName;
+      
+        if (activityType){
+          document.getElementById(
+            'cycling-2025-03-16__type'
+          ).innerText = activityType;
+        }
+        
+        document.getElementById(
+          'cycling-2025-03-16__distance'
+        ).innerText = `Distance: ${formatNumber(routeLength)} km`;
+        
+        
+        const timestamps = getTimestamps(gj);
+        const startTime = new Date(timestamps.at(0));
+        const endTime = new Date(timestamps.at(-1));
+
+        const duration = Math.abs(endTime - startTime); 
+
+        const avgSpeed = routeLength / (duration / 36e5);
+        document.getElementById(
+          'cycling-2025-03-16__start-time'
+        ).innerText = formatDate(startTime);
+
+        if (duration){
+          document.getElementById(
+            'cycling-2025-03-16__duration'
+          ).innerText = `Duration: ${formatDuration(duration)}`;
+          document.getElementById(
+            'cycling-2025-03-16__speed'
+          ).innerText = `Avg. Speed: ${formatNumber(avgSpeed)} km/h`;
+        }
+      });
+    })
+    .catch(function (err) {
+      console.log(err.message);
+    })
+  ;
+
+  
+  function getActivityType(geojson) {
+    return geojson.features[0].properties.type;
+  }
+  
+  function getRouteName(geojson) {
+    return geojson.features[0].properties.name;
+  }
+  
+  function getCoordinates(geojson) {
+    return geojson.features[0].geometry.coordinates;
+  }
+  
+  function getTimestamps(geojson) {
+    return geojson.features[0].properties.coordTimes
+  }
+  
+  function formatNumber (number, precision = 3) {
+    if (typeof number === 'undefined' || number === null) return ''
+  
+    if (number === 0) return '0'
+  
+    const roundedValue = round(precision, number)
+    const floorValue = Math.floor(roundedValue)
+  
+    const isInteger = Math.abs(floorValue - roundedValue) < Number.EPSILON
+  
+    const numberOfFloorDigits = String(floorValue).length
+    const numberOfDigits = String(roundedValue).length
+  
+    if (numberOfFloorDigits > precision) {
+      return String(floorValue)
+    } else {
+      const padding = isInteger ? precision - numberOfFloorDigits : precision - numberOfDigits + 1
+  
+      if (padding > 0) {
+        if (isInteger) {
+          return `${String(floorValue)}.${'0'.repeat(padding)}`
+        } else {
+          return `${String(roundedValue)}${'0'.repeat(padding)}`
+        }
+      } else {
+        return String(roundedValue)
+      }
+    }
+  }
+  
+  function round(precision, number) {
+    return parseFloat(number.toPrecision(precision))
+  }
+  
+  function formatDate(date) {
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      timeZone: "Asia/Kolkata"
+    };
+    return new Intl.DateTimeFormat("en-in", options).format(date);
+  }
+
+  function formatDuration(duration) {
+    const seconds = Math.floor(duration / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    
+    if (days >= 1) {
+      return `${days}d ${hours % 24}h`;
+    } else if (hours >= 1){
+      return `${hours}h ${minutes % 60}m`;
+    } else if (minutes >= 0) {
+      return `${minutes}m ${seconds % 60}s`;
+    } else {
+      return "";
+    }
+  }
+</script>
+
+<style>
+  #cycling-2025-03-16__name {
+    font-weight: 600;
+  }
+</style>
+
+<h2 id="gallery">Gallery</h2>
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T06:14&#43;0530">2025-03-16 06:14</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=18.955639972222222&mlon=72.812296#map=16/18.955639972222222/72.812296&layers=N" rel="noopener" target="_blank">(18.956°, 72.812°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_061419068_HDR_hu_c8b72d5beb80831.webp"
+        
+            alt="A gym with a human-sized figure of the Incredible Hulk on the signboard.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>The Incredible Hulk works out at this gym.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T06:20&#43;0530">2025-03-16 06:20</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=18.963854972222222&mlon=72.807551#map=16/18.963854972222222/72.807551&layers=N" rel="noopener" target="_blank">(18.964°, 72.808°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_062049472_hu_10aaba849c7c41c2.webp"
+        
+            alt="Buses ply along at Godrej chowk.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>A view from atop the Kemps Corner flyover.
+Buses ply along at Godrej chowk.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T06:26&#43;0530">2025-03-16 06:26</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=18.977881999999997&mlon=72.81034997222221#map=16/18.977881999999997/72.81034997222221&layers=N" rel="noopener" target="_blank">(18.978°, 72.810°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_062625536_HDR_hu_82d2a9ebac98f7ac.webp"
+        
+            alt="People jog on the road, with clouds in the backdrop.
+"
+        
+        height="1600"
+        width="1200"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>Joggers are out for an early-morning jog, with beautiful broken clouds in the backdrop.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T06:27&#43;0530">2025-03-16 06:27</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=18.978898972222222&mlon=72.81171499999999#map=16/18.978898972222222/72.81171499999999&layers=N" rel="noopener" target="_blank">(18.979°, 72.812°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_062715339_hu_7f53c70a7e524dc1.webp"
+        
+            alt="Coastal road in Worli.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>The Worli seaface is ruined, thanks to the coastal road.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T06:39&#43;0530">2025-03-16 06:39</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.006630972222222&mlon=72.81819197222222#map=16/19.006630972222222/72.81819197222222&layers=N" rel="noopener" target="_blank">(19.007°, 72.818°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_063904569_HDR_hu_9c2fb21eb3bc74f3.webp"
+        
+            alt="Two bunnies ride a tandem cycle on the divider. They cast a shadow on the road. 
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>Two bunnies ride a tandem cycle on the divider. They cast a shadow on the road.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T06:39&#43;0530">2025-03-16 06:39</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.006568&mlon=72.81826099999999#map=16/19.006568/72.81826099999999&layers=N" rel="noopener" target="_blank">(19.007°, 72.818°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_063931226_HDR_hu_a031bae08694115d.webp"
+        
+            alt="Front view of the two bunnies on the tandem cycle.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>Front view of the two bunnies.
+The car is going to overtake them.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T06:40&#43;0530">2025-03-16 06:40</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.006551&mlon=72.818184#map=16/19.006551/72.818184&layers=N" rel="noopener" target="_blank">(19.007°, 72.818°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_064038185_HDR_hu_4390646bfca42aac.webp"
+        
+            alt="Side view of the two bunnies on the tandem cycle. 
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>They look so cute.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T06:41&#43;0530">2025-03-16 06:41</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.006638972222223&mlon=72.81815797222222#map=16/19.006638972222223/72.81815797222222&layers=N" rel="noopener" target="_blank">(19.007°, 72.818°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_064153963_hu_1f7113f68184e884.webp"
+        
+            alt="The bunnies surrounded by traffic. 
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>The bunnies bravely weave through the traffic.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T06:43&#43;0530">2025-03-16 06:43</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.006641972222223&mlon=72.81812599999999#map=16/19.006641972222223/72.81812599999999&layers=N" rel="noopener" target="_blank">(19.007°, 72.818°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_064312027_HDR_hu_7a7b1b0cc018f4b1.webp"
+        
+            alt="A photo of Pranshu Gaba, wearing a helmet and a Napoli jersey.
+"
+        
+        height="1600"
+        width="1200"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>I am one with the bunnies.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T06:44&#43;0530">2025-03-16 06:44</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.011110972222223&mlon=72.82069097222222#map=16/19.011110972222223/72.82069097222222&layers=N" rel="noopener" target="_blank">(19.011°, 72.821°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_064455324_HDR_hu_e3ded4c04d954650.webp"
+        
+            alt="A tall glass skyscraper. 
+"
+        
+        height="1600"
+        width="1200"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>A tall glass skyscraper looms over the road.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T06:53&#43;0530">2025-03-16 06:53</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.032477999999998&mlon=72.838521#map=16/19.032477999999998/72.838521&layers=N" rel="noopener" target="_blank">(19.032°, 72.839°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_065329239_HDR_hu_82692554fb8f8444.webp"
+        
+            alt="A skybridge over the road.
+"
+        
+        height="1600"
+        width="1200"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>A skybridge connects two wings of Hinduja hospital.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T06:58&#43;0530">2025-03-16 06:58</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.047243972222223&mlon=72.83816499999999#map=16/19.047243972222223/72.83816499999999&layers=N" rel="noopener" target="_blank">(19.047°, 72.838°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_065844512_HDR_hu_2f2407daf1599f3c.webp"
+        
+            alt="Sunrays burst through the clouds. 
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>The sun is about to rise as sunrays burst through the clouds.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T06:59&#43;0530">2025-03-16 06:59</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.047861972222226&mlon=72.83817297222221#map=16/19.047861972222226/72.83817297222221&layers=N" rel="noopener" target="_blank">(19.048°, 72.838°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_065931239_HDR_hu_3212dc2890aabfbb.webp"
+        
+            alt="A Bisleri truck passes by the sunburst.
+"
+        
+        height="1600"
+        width="1200"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>A Bisleri truck passes by the sunburst.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T07:00&#43;0530">2025-03-16 07:00</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.048282&mlon=72.83818799999999#map=16/19.048282/72.83818799999999&layers=N" rel="noopener" target="_blank">(19.048°, 72.838°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_070039889_hu_9e1216bf714b1210.webp"
+        
+            alt="A view of the Mithi river. 
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>A view of the Mithi river.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T07:00&#43;0530">2025-03-16 07:00</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.048583&mlon=72.83820399999999#map=16/19.048583/72.83820399999999&layers=N" rel="noopener" target="_blank">(19.049°, 72.838°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_070052864_hu_4877e89d526a2b30.webp"
+        
+            alt="Sunrise and sunburst. 
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>The sun peeks from the horizon.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T07:12&#43;0530">2025-03-16 07:12</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.081531972222223&mlon=72.834361#map=16/19.081531972222223/72.834361&layers=N" rel="noopener" target="_blank">(19.082°, 72.834°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_071248993_HDR_hu_98f20146fe0bcb1b.webp"
+        
+            alt="A not-as-tall glass skyscraper. 
+"
+        
+        height="1600"
+        width="1200"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>A not-as-tall glass skyscraper looms over the road.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T07:20&#43;0530">2025-03-16 07:20</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.096401999999998&mlon=72.82769397222222#map=16/19.096401999999998/72.82769397222222&layers=N" rel="noopener" target="_blank">(19.096°, 72.828°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_072053326_HDR_hu_c5541f4208e1b4c5.webp"
+        
+            alt="People walk in a walkathon in Juhu.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>People walk in a walkathon in Juhu.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T07:21&#43;0530">2025-03-16 07:21</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.096581999999998&mlon=72.82674197222222#map=16/19.096581999999998/72.82674197222222&layers=N" rel="noopener" target="_blank">(19.097°, 72.827°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_072135286_hu_2d93e59eae8eb348.webp"
+        
+            alt="A truck parked on the beach with a sign &#34;7D cinmea on wheels&#34;.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>For the first time in India, a truck is repurposed into a &ldquo;7D cinema on wheels&rdquo;.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T07:21&#43;0530">2025-03-16 07:21</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.096581999999998&mlon=72.82674197222222#map=16/19.096581999999998/72.82674197222222&layers=N" rel="noopener" target="_blank">(19.097°, 72.827°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_072137735_hu_26dd51d6afbc1757.webp"
+        
+            alt="Pigeons hunt and peck in the sand at Juhu beach.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>Pigeons hunt and peck in the sand.
+The beach is a popular Sunday morning excursion destination.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T07:23&#43;0530">2025-03-16 07:23</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.096633999999998&mlon=72.826768#map=16/19.096633999999998/72.826768&layers=N" rel="noopener" target="_blank">(19.097°, 72.827°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_072308803_HDR_hu_eb4430a852d089b6.webp"
+        
+            alt="Sunrise captured from Juhu beach.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>The sun rises relentlessly.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T07:23&#43;0530">2025-03-16 07:23</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.096633999999998&mlon=72.826768#map=16/19.096633999999998/72.826768&layers=N" rel="noopener" target="_blank">(19.097°, 72.827°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_072311224_HDR_hu_166b83660037e96e.webp"
+        
+            alt="Meditation session at the beach. 
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>A meditation session takes place at the beach.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T07:51&#43;0530">2025-03-16 07:51</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.150496999999998&mlon=72.83140897222222#map=16/19.150496999999998/72.83140897222222&layers=N" rel="noopener" target="_blank">(19.150°, 72.831°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_075101067_HDR_hu_896b224558e9f7ab.webp"
+        
+            alt="A BEST Bus plastered in watch advertisements.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>This BEST bus must be very punctual.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-03-16T08:05&#43;0530">2025-03-16 08:05</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=19.182715&mlon=72.835734#map=16/19.182715/72.835734&layers=N" rel="noopener" target="_blank">(19.183°, 72.836°)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/tandem-bicycle-bunnies/img/IMG_20250316_080531303_HDR_hu_2df2c1a86df1a9d.webp"
+        
+            alt="A car juts out of a signboard.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>This signboard car is perfect for the signboard Incredible Hulk.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+
+]]></description></item><item><title>Mini #12</title><link>https://pranshugaba.com/minis/12/</link><pubDate>Mon, 13 May 2024 16:02:00 +0530</pubDate><guid>https://pranshugaba.com/minis/12/</guid><description>
 &lt;p>And now a coriolis storm blows&amp;hellip; heralding the onset of rain.&lt;/p>
 </description></item><item><title>Mini #11</title><link>https://pranshugaba.com/minis/11/</link><pubDate>Sun, 05 May 2024 12:57:00 +0530</pubDate><guid>https://pranshugaba.com/minis/11/</guid><description>
 &lt;p>It would be great to have a stillsuit in Mumbai right now!&lt;/p>
