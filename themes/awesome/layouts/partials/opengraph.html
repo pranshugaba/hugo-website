@@ -73,8 +73,8 @@
 
             {{ with $r }}
                 {{ with . | images.Filter $titleFilter | images.Filter $subtitleFilter }}
-                    <meta property="og:image" content="{{ .RelPermalink }}"/>
-                    <meta property="twitter:image" content="{{ .RelPermalink }}"/>
+                    <meta property="og:image" content="{{ .Permalink }}"/>
+                    <meta property="twitter:image" content="{{ .Permalink }}"/>
                 {{ end }}
             {{ end }}
         {{ end -}}
