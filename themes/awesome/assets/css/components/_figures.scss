@@ -19,6 +19,15 @@ figure {
       border-radius: 0;
     }
   }
+  
+  &.gnome-screenshot {
+    img {
+      border: none;
+      border-radius: 0;
+      margin-block-start: -10px;
+      margin-block-end: -25px;
+    }
+  }
 
   &.small {
     img {
