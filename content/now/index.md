@@ -1,5 +1,5 @@
 ---
-title: Now 
+title: Now
 subtitle: Here's what I am doing now
 summary: A little bit about me and my website
 ---
@@ -21,6 +21,9 @@ My areas of interest include [reactive synthesis](https://en.wikipedia.org/wiki/
 
 [See my watching list &#8594;]({{< ref "/watches" >}})
 
+## Gaming
+I play _Bloodborne_ and _Linelight_ nowadays.
+Before that, I played _Sekiro_.
 
 ---
 
