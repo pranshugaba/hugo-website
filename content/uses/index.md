@@ -2,7 +2,6 @@
 title: Uses
 subtitle: The software that I use on a daily basis
 summary: All the software and hardware that I use
-display: none
 ---
 
 ## Laptop
@@ -18,7 +17,10 @@ However, I had to switch as these do not support Wayland.
 
 ### Text Editor
 
-I use [Neovim](neovim) to edit my text files.
+I use [Neovim](https://neovim.io) to edit my text files.
+Neovim is easily my favourite text editor. 
+The learning curve was steep and I spent some time configuring and tinkering with it to my liking. 
+But now that that's done, I cannot use any other editor, definitely not VS****.
 
 ### Browser
 
