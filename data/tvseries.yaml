@@ -1,20 +1,20 @@
 watching:
-  - title: The White Lotus
-    type: Series
-    season: 3
-    channel: HBO
-
   - title: Hilda
     type: Series
-    season: 1
+    season: 2
     channel: Netflix
 
-wantToWatch:
   - title: The Rehearsal
     type: Series
     season: 2
     channel: HBO
 
+  - title: Normal People
+    type: Series
+    season: 1
+    channel: Hulu
+
+wantToWatch:
   - title: Nathan for You
     type: Series
     channel: Comedy Central
@@ -25,10 +25,10 @@ wantToWatch:
     season: 4
     channel: HBO
 
-  - title: Normal People
+  - title: The Leftovers
     type: Series
     season: 1
-    channel: Hulu
+    channel: HBO
 
   - title: 'NPC D&D'
     type: Season
@@ -117,6 +117,11 @@ wantToWatch:
     endDate: 2021-09-07T05:30:00+05:30
 
 watched:
+  - title: The White Lotus
+    type: Series
+    season: 3
+    channel: HBO
+
   - title: Taskmaster UK
     type: Series
     channel: Channel 4
