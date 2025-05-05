@@ -23,6 +23,16 @@
   margin-inline-start: calc(50% - var(--half-width));
 }
 
+.wide-bleed {
+  --width: 100%;
+  @media (min-width: 640px){
+    --width: clamp(100%, 90vw, 1350px);
+  }
+  --half-width: calc(var(--width) / 2);
+  width: var(--width);
+  margin-inline-start: calc(50% - var(--half-width));
+}
+
 .header-width {
   margin-inline: auto;
   @media screen {

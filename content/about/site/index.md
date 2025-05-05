@@ -17,7 +17,7 @@ This site is deployed using [Github actions](https://github.com/features/actions
 
 ### Font faces
 
-This site uses [IBM Plex Sans](https://github.com/IBM/plex) as the primary sans-serif font, [<span style="font-family: var(--font-serif)">Bitter<span>](https://github.com/solmatas/Bitter) as the serif font for headings, and [<span style="font-family: var(--font-mono)">Cascadia Code</span>](https://github.com/microsoft/cascadia-code) for monospaced text. 
+This site uses [Inter](https://rsms.me/inter/) as the primary font and [<span style="font-family: var(--font-mono)">JetBrains Mono</span>](https://github.com/JetBrains/JetBrainsMono) for monospaced text. 
 
 ### Easter eggs
 

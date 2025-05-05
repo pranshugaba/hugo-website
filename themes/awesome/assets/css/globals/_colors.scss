@@ -8,19 +8,19 @@ $darklight: white;
 $darkdark: hsl(0, 0%, 12%);
 $darkaccent: hsl(210, 100%, 69%);
 
-// $huelight: 50;
-// $huelightaccent: 280;
+// $huelight: 280;
+// $huelightaccent: 60;
 
-// $lightlight: hsl($huelight, 89%, 91%);
-// $lightdark: hsl($huelight, 100%, 7%);
-// $lightaccent: hsl($huelightaccent, 100%, 38%);
+// $lightlight: oklch(100% 10% $huelight);
+// $lightdark: oklch(20% 50% $huelight);
+// $lightaccent: oklch(50% 100% $huelightaccent);
 
 // $huedark: 280;
-// $huedarkaccent: 50;
+// $huedarkaccent: 60;
 
-// $darklight: hsl($huedark, 100%, 95%);
-// $darkdark: hsl($huedark, 89%, 9%);
-// $darkaccent: hsl($huedarkaccent, 100%, 69%);
+// $darklight: oklch(100% 30% $huedark);
+// $darkdark: oklch(10% 25% $huedark);
+// $darkaccent: oklch(79% 60% $huedarkaccent);
 
 // Define print mode colors
 $printlight: white;

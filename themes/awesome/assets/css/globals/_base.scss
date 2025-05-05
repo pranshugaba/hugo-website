@@ -51,7 +51,7 @@ h6 + p {
   --flow-space: 0;
 }
 
-h1 {
+h1 { // bitter
   font-family: var(--font-serif);
   font-size: 2.5rem;
   line-height: 1.2;
@@ -60,7 +60,17 @@ h1 {
   text-wrap: balance;
 }
 
-h2 {
+h1 { // inter
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 600;
+  font-variation-settings: 'wght' 600;
+  text-wrap: balance;
+  letter-spacing: -0.01em;
+}
+
+h2 { // bitter
   font-family: var(--font-serif);
   font-size: 1.75rem;
   font-weight: 500;
@@ -68,11 +78,19 @@ h2 {
   text-wrap: balance;
 }
 
+h2 { // inter
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 650;
+  font-variation-settings: 'wght' 650;
+  text-wrap: balance;
+}
+
 h3 {
   font-family: var(--font-sans-serif);
   letter-spacing: -0.02em;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   text-wrap: balance;
 }
 
@@ -158,17 +176,21 @@ a {
   }
 }
 
-a[href*="//"]:not([href*="pranshugaba.com"]):not([href*="localhost"])
-{
-  // color: gray;
-  text-decoration-style: dotted;
-  text-decoration-thickness: 11%;
-  text-underline-offset: 30%;
-  &:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 8%;
-  }
-}
+// a[href*="//"]:not([href*="pranshugaba.com"]):not([href*="localhost"])
+// {
+//   // color: gray;
+//
+//   text-decoration-color: gray;
+//   text-decoration-thickness: 7%;
+//
+//   // text-decoration-style: dotted;
+//   // text-decoration-thickness: 11%;
+//   // text-underline-offset: 30%;
+//   // &:hover {
+//   //   text-decoration: underline;
+//   //   text-decoration-thickness: 8%;
+//   // }
+// }
 
 button {
   all: unset;

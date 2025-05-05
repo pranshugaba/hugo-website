@@ -1,8 +1,12 @@
 :root {
   // Fonts
-  --font-sans-serif: 'IBM Plex Sans', sans-serif;
-  --font-serif: 'Bitter', ui-serif, serif;
-  --font-mono: 'Cascadia Code', monospace;
+  // --font-sans-serif: 'IBM Plex Sans', sans-serif;
+  // --font-serif: 'Bitter', ui-serif, serif;
+  // --font-mono: 'Cascadia Code', monospace;
+  
+  --font-sans-serif: 'Inter', sans-serif;
+  --font-serif: 'Inter', ui-serif, serif;
+  --font-mono: 'JBMono', monospace;
 
   --font-size-100: 0.625rem;
   --font-size-200: 0.75rem;
