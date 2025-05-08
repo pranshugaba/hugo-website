@@ -33,16 +33,24 @@
             {{ with .Params.Subtitle }}
                 {{ $subtitle = . }}
             {{ end }}
+            {{ $url := "pranshugaba.com" }}
+
 
             {{ $titleFont := "" }}
-            {{ $titleFontPath := "/social/plex-semibold.ttf" }}
+            {{ $titleFontPath := "/social/InterDisplay-SemiBold_freeze.ttf" }}
             {{ with resources.Get $titleFontPath }}
                 {{ $titleFont = .}}
             {{ end }}
             {{ $subtitleFont := "" }}
-            {{ $subtitleFontPath := "/social/plex-regular.ttf" }}
+            {{ $subtitleFontPath := "/social/InterDisplay-Regular_freeze.ttf" }}
             {{ with resources.Get $subtitleFontPath }}
                 {{ $subtitleFont = .}}
+            {{ end }}
+            
+            {{ $urlFont := "" }}
+            {{ $urlFontPath := "/social/InterDisplay-Regular_freeze.ttf" }}
+            {{ with resources.Get $urlFontPath }}
+                {{ $urlFont = .}}
             {{ end }}
 
             {{ $imagePath := "/social/social.png" }}
@@ -54,9 +62,10 @@
               "size" 80
               "color" "#f7f0ff"
               "x" 60
-              "y" 370
-              "linespacing" 10
+              "y" 420
+              "linespacing" 12
               "alignx" "left"
+              "aligny" "bottom"
             }}
             {{ $titleFilter = images.Text $title $opts }}
 
@@ -66,13 +75,25 @@
               "size" 48
               "color" "#f7f0ff"
               "x" 60
-              "y" 480
+              "y" 460
               "linespacing" 10
             }}
             {{ $subtitleFilter = images.Text $subtitle $opts }}
 
+            {{ $urlFilter := "" }}
+            {{ $opts := dict
+              "font" $urlFont
+              "size" 40
+              "color" "#f7f0ff"
+              "x" 1140
+              "y"  70
+              "linespacing" 10
+              "alignx" "right"
+            }}
+            {{ $urlFilter = images.Text $url $opts }}
+
             {{ with $r }}
-                {{ with . | images.Filter $titleFilter | images.Filter $subtitleFilter }}
+                {{ with . | images.Filter $titleFilter | images.Filter $subtitleFilter | images.Filter $urlFilter }}
                     <meta property="og:image" content="{{ .Permalink }}"/>
                     <meta property="twitter:image" content="{{ .Permalink }}"/>
                 {{ end }}
