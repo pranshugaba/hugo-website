@@ -85,7 +85,7 @@ What is the maximum number of chess pieces you can place on an \(8\times 8\) che
 
 
 
-{{% puzzles/feedback %}}
+{{% feedback %}}
 
 ---
 

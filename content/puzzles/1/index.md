@@ -49,4 +49,4 @@ You may assume \(1 \le m \le n\).
 For what values of \(m\) and \(n\) is this possible? 
 In the cases it is possible, how would you go about hanging the painting?
 
-{{% puzzles/feedback %}}
+{{% feedback %}}

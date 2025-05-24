@@ -51,4 +51,4 @@ The following recipe makes one sandwich. Two or three such sandwiches would make
 - If you don't have spinach bread, you may use whole wheat bread or multigrain bread instead. You can apply some mint chutney to the bread slices to make it tastier.
 - If you don't have starfruit available, you may use a cucumber instead. However, this is not as much fun.
 
-{{% recipes/feedback %}}
+{{% feedback %}}

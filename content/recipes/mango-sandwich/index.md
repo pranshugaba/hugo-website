@@ -49,4 +49,4 @@ The following recipe makes one mango sandwich.
 - You may use whole-wheat bread if multigrain bread is not available.
 - You may experiment with different herbs that you have at hand. 
 
-{{% recipes/feedback %}}
+{{% feedback %}}

@@ -136,4 +136,4 @@ It might help if you try out more chess positions.
 If you have access to a physical chess board, that's great! Otherwise, you can play with the board online on the [Lichess board editor](https://lichess.org/editor).
 
 
-{{% puzzles/feedback %}}
+{{% feedback %}}

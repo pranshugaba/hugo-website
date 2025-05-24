@@ -44,4 +44,4 @@ The following recipe makes one sandwich. It takes less than 5 minutes to make on
 - You may use brown bread (whole wheat bread) if multigrain bread is not available.
 - You can experiment with different types of breads, cheeses, and spices.
 
-{{% recipes/feedback %}}
+{{% feedback %}}
