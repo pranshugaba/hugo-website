@@ -26,11 +26,11 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.8677434"
-     inkscape:cx="582.54549"
-     inkscape:cy="172.28595"
-     inkscape:window-width="2048"
-     inkscape:window-height="1083"
+     inkscape:zoom="0.8825"
+     inkscape:cx="38.526912"
+     inkscape:cy="314.44759"
+     inkscape:window-width="1536"
+     inkscape:window-height="891"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -49,29 +49,29 @@
        x="0"
        y="0" />
     <rect
-       style="fill:none;fill-opacity:1;stroke:#f7f0ff;stroke-width:2.9962;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#f7f0ff;stroke-width:2.5;stroke-dasharray:none;stroke-opacity:1"
        id="rect4"
-       width="77.003792"
-       height="77.003792"
-       x="61.4981"
-       y="61.4981"
-       ry="18.425453"
+       width="72.191063"
+       height="72.191063"
+       x="61.404469"
+       y="61.404469"
+       ry="17.273865"
        inkscape:export-filename="favicon-darkmode.svg"
        inkscape:export-xdpi="92.41407"
        inkscape:export-ydpi="92.41407" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:44.8016px;font-family:'Inter Display';-inkscape-font-specification:'Inter Display, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'cv10';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#f7f0ff;fill-opacity:1;stroke:none;stroke-width:2.8001"
-       x="69.08947"
-       y="116.26162"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:42.0015px;font-family:'Inter Display';-inkscape-font-specification:'Inter Display, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#f7f0ff;fill-opacity:1;stroke:none;stroke-width:2.62509;font-feature-settings:'cv10'"
+       x="68.521378"
+       y="112.74528"
        id="text4"
        inkscape:export-filename="favicon-white.svg"
        inkscape:export-xdpi="92.41407"
        inkscape:export-ydpi="92.41407"><tspan
          sodipodi:role="line"
          id="tspan4"
-         x="69.08947"
-         y="116.26162"
-         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:44.8016px;font-family:'Inter Display';-inkscape-font-specification:'Inter Display, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'cv10';fill:#f7f0ff;fill-opacity:1;stroke-width:2.8001">PG</tspan></text>
+         x="68.521378"
+         y="112.74528"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:42.00149918px;font-family:'Inter Display';-inkscape-font-specification:'Inter Display, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#f7f0ff;fill-opacity:1;stroke-width:2.62509;font-feature-settings:&quot;cv10&quot;, ">PG</tspan></text>
   </g>
 </svg>
