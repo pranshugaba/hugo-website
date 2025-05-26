@@ -1,25 +1,10 @@
 ---
 title: Pranshu Gaba
 subtitle: Curriculum Vitae
-draft: true
+
+draft: false
 ---
 
-Last updated on {{< lastmodified >}}.  
-[Download PDF](#)
+<a href="/pranshu-gaba-cv-20250526.pdf" target="_blank" rel="noopener">Download cv.pdf</a>
 
-## Education
-
-### TIFR
-2020--
-
-PhD
-
-### IISc
-2016--2020
-
-Bachelor of Science (Research)
-
-
-## Languages
-
-Rust, Kotlin, LaTeX
+Last updated on 26 May 2025.
