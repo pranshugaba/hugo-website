@@ -1,10 +1,9 @@
 ---
-title: Pranshu Gaba
-subtitle: Curriculum Vitae
-
-draft: false
+title: "Curriculum Vitae"
+subtitle: "Pranshu Gaba"
+summary: "CV of Pranshu Gaba"
 ---
 
-<a href="/pranshu-gaba-cv-20250526.pdf" target="_blank" rel="noopener">Download cv.pdf</a>
+<a href="/pranshu-gaba-cv-20250528.pdf" target="_blank" rel="noopener">&#8595; Download CV (PDF)</a>
 
-Last updated on 26 May 2025.
+Last updated on 28 May 2025.
