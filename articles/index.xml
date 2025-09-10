@@ -1,4 +1,228 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Articles by Pranshu Gaba</title><link>https://pranshugaba.com/articles/</link><description>Interesting things, websites, places, etc.</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 28 May 2025 17:43:06 +0530</lastBuildDate><image><url>https://pranshugaba.com/articles/icon.png</url></image><atom:link href="https://pranshugaba.com/articles/index.xml" rel="self" type="application/rss+xml"/><item><title>Wellbeing in GNOME 48</title><link>https://pranshugaba.com/articles/wellbeing-in-gnome-48/</link><pubDate>Sat, 03 May 2025 12:00:00 +0530</pubDate><guid>https://pranshugaba.com/articles/wellbeing-in-gnome-48/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Articles by Pranshu Gaba</title><link>https://pranshugaba.com/articles/</link><description>Interesting things, websites, places, etc.</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Wed, 10 Sep 2025 21:00:30 +0530</lastBuildDate><image><url>https://pranshugaba.com/articles/icon.png</url></image><atom:link href="https://pranshugaba.com/articles/index.xml" rel="self" type="application/rss+xml"/><item><title>Using your phone as a presentation clicker and pointer</title><link>https://pranshugaba.com/articles/using-your-phone-as-a-presentation-clicker-and-pointer/</link><pubDate>Sun, 17 Aug 2025 20:30:00 +0530</pubDate><guid>https://pranshugaba.com/articles/using-your-phone-as-a-presentation-clicker-and-pointer/</guid><description>
+<![CDATA[<p>When you are giving a presentation, say, at a conference, you want to be able to move around the stage.
+You do not want to be tethered to your laptop behind the podium, and you definitely don&rsquo;t want to be yelling &ldquo;NEXT&rdquo; to a person at the keyboard each time you want to change the slide.</p>
+<p>You could go and purchase one of the presenter pointer clickers available in the market.
+They usually come with a USB dongle that you insert in your laptop.
+They have forward and back buttons that let you change slides and a laser pointer that you can use to point at things on the slides.</p>
+<p>While these devices are not very expensive, they aren&rsquo;t exactly cheap either.
+And it is one more device that you have to carry with you and ensure that its battery is not dead.
+Many presentation venues are now equipped with a bright LED display instead of a projector.
+Your standard laser pointer is not going to stand a chance against the blinding lights of the display.
+No one is going to be able to see it the pointer.
+You could get a pointer with a brighter laser, but this can be dangerous.
+You must ensure that you don&rsquo;t blind anybody in your lovely audience.
+And no matter how bright your laser is, it is only going to work for the audience that is in the same room as you.
+Since the laser is not captured in a screenshare, the people who are watching your talk in a livestream and/or recording would have no choice but to guess what you are pointing at.</p>
+<p>There are some products where you get a software pointer, that is, they make a red dot appear on your computer that is also visible in screen recordings.
+But every such presentation remote that I have come across forces you to install their own (often laggy and proprietary) software for Windows devices, and offers no support for Linux computers at all (which is what I use).</p>
+<p>In this post, we see how to implement a presentation remote with a laser pointer, without having to buy any hardware or installing any proprietary software on your devices.
+This procedure works perfectly with my setup: a laptop running Fedora Linux (specifically, GNOME with Wayland) and an Android phone.
+You should be able to adapt the instructions if you are running some other Linux distribution and desktop environment.
+I do not have a Windows or a macOS computer or an iPhone to test out which, if any of the steps below, break.</p>
+<aside class="[ toc ] [ plain-link border-medium border-radius-large ]">
+  <details open>
+    <summary>
+      <h2 class="toc__heading">Table of Contents</h2>
+    </summary>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#one-time-setup">One-time setup</a>
+      <ul>
+        <li><a href="#installing-kde-connect">Installing KDE Connect</a></li>
+        <li><a href="#pairing-your-devices">Pairing your devices</a></li>
+        <li><a href="#changing-the-cursor-shape-and-size">Changing the cursor shape and size</a></li>
+        <li><a href="#customizing-the-cursor-hide-timeout">Customizing the cursor hide timeout</a></li>
+      </ul>
+    </li>
+    <li><a href="#during-the-presentation">During the presentation</a>
+      <ul>
+        <li><a href="#using-the-terminal">Using the terminal</a></li>
+      </ul>
+    </li>
+    <li><a href="#pros-and-cons-of-this-remote-clicker-implemenation">Pros and cons of this remote clicker implemenation</a>
+      <ul>
+        <li><a href="#pros">Pros</a></li>
+        <li><a href="#cons">Cons</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </details>
+</aside>
+<h2 id="one-time-setup">One-time setup</h2>
+<p>The following steps need to be performed only once to set things up between your phone and your laptop.</p>
+<h3 id="installing-kde-connect">Installing KDE Connect</h3>
+<p>The key ingredient &mdash; the most crucial part of this setup &mdash; that will let you control your laptop remotely from your mobile phone is <a href="https://kdeconnect.kde.org/" target="_blank" rel="noopener">KDE Connect</a>.
+KDE Connect is one of the most versatile and magical and useful application that I have ever used.
+You can use it to share files across devices, control your laptop&rsquo;s media playback from your phone, use your phone as a keyboard and touchpad for your laptop, use your laptop&rsquo;s keyboard and touchpad as an input method for your phone, and so much more.
+Today, we will use KDE Connect to use our phone as a remote presentation controller.</p>
+<ul>
+<li>
+<p>You can get KDE Connect for your Android device from either the <a href="https://play.google.com/store/apps/details?id=org.kde.kdeconnect_tp" target="_blank" rel="noopener">Play Store</a> or <a href="https://f-droid.org/packages/org.kde.kdeconnect_tp/" target="_blank" rel="noopener">F-Droid</a>.
+Install the app and grant the permissions that it asks for.</p>
+</li>
+<li>
+<p>You would also need to install KDE Connect on your laptop.
+On GNOME, it suffices to install the <a href="https://extensions.gnome.org/extension/1319/gsconnect/" target="_blank" rel="noopener">GSConnect GNOME extension</a>.
+Upon installation, you can check the status of the GSConnect application from the Quick Settings panel.
+For desktop environments other than GNOME, you would most likely need to install KDE Connect from your distribution&rsquo;s package manager.</p>
+</li>
+</ul>
+<h3 id="pairing-your-devices">Pairing your devices</h3>
+<p>The next step is to pair your phone and your laptop.
+Both of your devices would need to be on the same Wi-Fi network.
+If you do not have a Wi-Fi network available, you can also connect your laptop to your phone&rsquo;s hotspot and everything works just fine.</p>
+<p>Both devices should be able to see each other now.
+They should both appear in the each other&rsquo;s list of available devices.
+Click on &ldquo;Pair&rdquo; from one device and accept the connection from the other device.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    <picture>
+        
+        <img src="https://pranshugaba.com/articles/using-your-phone-as-a-presentation-clicker-and-pointer/pairing.webp" alt="Receiving a pairing request from your phone">
+    </picture>
+    
+    
+    <figcaption>
+        
+            Receiving a pairing request from your phone
+            
+            
+            
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>If you expand the GSConnect quick setting tile and if the devices are paired and connected, you should be able to see the current battery and network status of the phone and also see some commands that you can send to the phone.
+You can send a ping from your phone to your laptop.
+If all went well, you should see a notification on your laptop.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    <picture>
+        
+        <img src="https://pranshugaba.com/articles/using-your-phone-as-a-presentation-clicker-and-pointer/phone-status.webp" alt="Sending commands to your phone from GNOME quick settings">
+    </picture>
+    
+    
+    <figcaption>
+        
+            Sending commands to your phone from GNOME quick settings
+            
+            
+            
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Click on &ldquo;Presentation Remote&rdquo; in the KDE Connect app on your phone and you will see buttons to change slides and to enable the pointer.
+This is really a fancy restricted keyboard and mouse in disguise.
+The forward and next buttons send the events <code>Prior</code> and <code>Next</code> respectively to your computer.
+In the three-dots-menu, you have the commands &ldquo;Full-screen&rdquo; and &ldquo;Exit presentation&rdquo; which are aliases for <kbd>F5</kbd> and <kbd>Escape</kbd> respectively.
+If you hold down the pointer button and move your phone around, you should be able to see the cursor move around the screen.</p>
+
+<figure >
+    
+    
+    
+    
+    
+    <picture>
+        
+        <img src="https://pranshugaba.com/articles/using-your-phone-as-a-presentation-clicker-and-pointer/kde-connect-screenshot.webp" alt="Screenshots of the KDE Connect homescreen and the Presentation remote interface">
+    </picture>
+    
+    
+    <figcaption>
+        
+            Screenshots of the KDE Connect homescreen and the Presentation remote interface
+            
+            
+            
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Open a presentation file and try everything out.
+At this point, we are functionally done.
+Everything works, but we would like to make this more beautiful.</p>
+<h3 id="changing-the-cursor-shape-and-size">Changing the cursor shape and size</h3>
+<p>Instead of the default mouse cursor, I would like to show bright red laser dot during presentations.
+This can be easily achieved by changing your cursor theme to a red dot.
+The GoogleDot cursor looks great and you can <a href="https://github.com/ful1e5/Google_Cursor/releases" target="_blank" rel="noopener">download it from its GitHub page</a>.
+You can find red, blue, black, and white dot cursors.</p>
+<p>Download <code>GoogleDot-Red.tar.gz</code> and extract it in <code>~/.local/share/icons</code>.
+You can create this directory if it doesn&rsquo;t exist.
+You can now select the new cursor theme from GNOME Tweaks, or by running the following command.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.desktop.interface cursor-theme <span class="s1">&#39;GoogleDot-Red&#39;</span>
+</span></span></code></pre></div><p>If the cursor appears slightly small for your liking, you can go to Settings -&gt; Accessibility -&gt; Seeing -&gt; Cursor size and choose a size that you like.</p>
+<p>Alternatively, you can also change the cursor size from the command line.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.desktop.interface cursor-size <span class="m">36</span>
+</span></span></code></pre></div><h3 id="customizing-the-cursor-hide-timeout">Customizing the cursor hide timeout</h3>
+<p>All of my presentations are PDF files, and I use the <a href="https://apps.gnome.org/Papers/" target="_blank" rel="noopener">Papers application</a> to show my presentation.
+When in presentation mode in Papers, by default, the cursor remains visible for about 5 seconds.
+I like the cursor to hide after a shorter duration.</p>
+<p>I could not find a configuration to change the timeout in Papers, but I did find a GNOME extension called <a href="https://extensions.gnome.org/extension/6727/hide-cursor/" target="_blank" rel="noopener">Hide Cursor</a> that hides the cursor after a period of inactivity.
+Unfortunately, as of writing, a timeout of 5 seconds is hardcoded in this extension. Fortunately, the source of the extension is very simple and you can change the value of the timeout in the file.</p>
+<p>By default, the extension is installed at <code>~/.local/share/gnome-shell/extensions/hide-cursor@elcste.com</code>.
+In this directory, in the <code>extension.js</code> file, edit the <code>5</code> to your preferred timeout.
+I have set it to 3 seconds.
+Now when you enable this extension, your cursor should disappear after the timeout that you have set.
+(Note that if this extension is updated in the future, your changes will be overwritten and this file will revert back to its default state as written by the extension developer. You would have to change the timeout again.)</p>
+<h2 id="during-the-presentation">During the presentation</h2>
+<p>The setup is now done.
+Now, when it is time for your presentation, you only have to follow these easy steps.</p>
+<ol>
+<li>Connect the laptop to your phone&rsquo;s hotspot and check if the devices can see each other.</li>
+<li>Change the cursor theme from GNOME Tweaks.</li>
+<li>Change the cursor size from Accessibility in GNOME settings.</li>
+<li>Enable the &ldquo;Hide Cursor&rdquo; extension.</li>
+</ol>
+<p>You can now open your PDF in Papers or your slideshow in LibreOffice Impress, go fullscreen by pressing the <kbd>F5</kbd> key, and you are now ready to present with your laser pointer phone!</p>
+<p>After your presention is done, undo the above changes to get back to your normal mouse cursor appearance.</p>
+<h3 id="using-the-terminal">Using the terminal</h3>
+<p>I find it easier to execute the above steps in one go by running the following commands.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.desktop.interface cursor-theme <span class="s1">&#39;GoogleDot-Red&#39;</span>
+</span></span><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.desktop.interface cursor-size <span class="m">32</span>
+</span></span><span class="line"><span class="cl">gnome-extensions <span class="nb">enable</span> hide-cursor@elcste.com
+</span></span></code></pre></div><p>To undo the changes, I run the following script.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.desktop.interface cursor-theme <span class="s1">&#39;Adwaita&#39;</span>
+</span></span><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.desktop.interface cursor-size <span class="m">24</span>
+</span></span><span class="line"><span class="cl">gnome-extensions disable hide-cursor@elcste.com
+</span></span></code></pre></div><h2 id="pros-and-cons-of-this-remote-clicker-implemenation">Pros and cons of this remote clicker implemenation</h2>
+<h3 id="pros">Pros</h3>
+<ul>
+<li>You do not need to buy an additional device or install any proprietary software.</li>
+<li>The pointer is visible in screen shares and video recordings and there is no risk of blinding the audience with a laser.</li>
+<li>Works beautifully and people are impressed by this setup.</li>
+<li>Very easy to set up.</li>
+</ul>
+<h3 id="cons">Cons</h3>
+<ul>
+<li>This method only works if you can use your own laptop for presentation. If you have to use the venue&rsquo;s computer, plugging a USB presenter dongle is still the most convenient solution.</li>
+<li>I have encountered a bug where the pointer goes permanently in the pressed mode and the cursor keeps moving even if you have not pressed the pointer button. The only thing that fixes this is disconnecting and reconnecting the devices.</li>
+<li>Some people may not like that you are holding your phone in your hand with the screen turned on during your presentation.
+I wish that you could use your phone&rsquo;s hardware buttons instead of having on-screen buttons.</li>
+</ul>
+<hr>
+<p><a href="https://pranshugaba.com/contact/">Let me know</a> if you found this article helpful and if you used this setup for your own presentation.
+If you have any suggestions to improve the process, <a href="https://pranshugaba.com/contact/">share that with me</a> too.</p>
+]]></description></item><item><title>Wellbeing in GNOME 48</title><link>https://pranshugaba.com/articles/wellbeing-in-gnome-48/</link><pubDate>Sat, 03 May 2025 12:00:00 +0530</pubDate><guid>https://pranshugaba.com/articles/wellbeing-in-gnome-48/</guid><description>
 <![CDATA[<p>I <a href="https://pranshugaba.com/uses/">use</a> <a href="https://en.wikipedia.org/wiki/Fedora_Linux" target="_blank" rel="noopener">Fedora Linux</a> with the <a href="https://en.wikipedia.org/wiki/GNOME_Shell" target="_blank" rel="noopener">GNOME desktop environment</a> on all of my computers.
 <a href="https://fedoramagazine.org/announcing-fedora-linux-42/" target="_blank" rel="noopener">A new version of Fedora (42, yay!)</a> was released recently, and with it came <a href="https://release.gnome.org/48/" target="_blank" rel="noopener">a new version of GNOME (48)</a>.
 Each GNOME release is named after a city, and GNOME 48 is named &ldquo;Bengaluru&rdquo;, a city that I lived in for four years and absolutely love.</p>
