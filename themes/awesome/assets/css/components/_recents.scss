@@ -34,6 +34,7 @@
       padding-block-start: var(--item-padding);
       font-size: var(--font-size-700);
       font-weight: 600;
+      text-wrap: balance;
     }
     &__description {
       padding-inline: var(--item-padding);
@@ -56,6 +57,7 @@
     &__title {
       font-size: var(--font-size-400);
       font-weight: 600;
+      text-wrap: balance;
     }
     &__summary {
       margin-block-start: calc(var(--item-padding) / 2);

@@ -95,6 +95,7 @@
     font-weight: 600;
     font-size: var(--font-size-700);
     line-height: 1.35;
+    text-wrap: balance;
   }
   .item__summary {
     margin-block-start: var(--size-200);
@@ -116,6 +117,7 @@
   }
   .item__details {
     font-weight: 500;
+    text-wrap: balance;
   }
   .item__date {
     font-size: var(--font-size-250);
@@ -150,6 +152,7 @@
   .item__details {
     font-size: var(--font-size-500);
     font-weight: 500;
+    text-wrap: balance;
   }
   .item__date {
     font-size: var(--font-size-300);

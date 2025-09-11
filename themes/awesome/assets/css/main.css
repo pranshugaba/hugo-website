@@ -2,7 +2,7 @@
 :root {
   --bg: white;
   --fg: black;
-  --accent: hsl(210, 100%, 42%);
+  --accent: hsl(280, 80%, 42%);
   --light: white;
   --dark: hsl(0, 0%, 12%);
 }
@@ -19,7 +19,7 @@
 .dark-mode {
   --bg: hsl(0, 0%, 12%);
   --fg: white;
-  --accent: hsl(210, 100%, 69%);
+  --accent: hsl(280, 80%, 69%);
   --light: white;
   --dark: hsl(0, 0%, 12%);
 }
@@ -1241,6 +1241,7 @@ h4 code {
   font-weight: 600;
   font-size: var(--font-size-700);
   line-height: 1.35;
+  text-wrap: balance;
 }
 .list-minimal__item .item__summary {
   margin-block-start: var(--size-200);
@@ -1262,6 +1263,7 @@ h4 code {
 }
 .list-home__item .item__details {
   font-weight: 500;
+  text-wrap: balance;
 }
 .list-home__item .item__date {
   font-size: var(--font-size-250);
@@ -1298,6 +1300,7 @@ h4 code {
 .list-archive__item .item__details {
   font-size: var(--font-size-500);
   font-weight: 500;
+  text-wrap: balance;
 }
 .list-archive__item .item__date {
   font-size: var(--font-size-300);
@@ -1743,6 +1746,7 @@ figure figcaption {
   padding-block-start: var(--item-padding);
   font-size: var(--font-size-700);
   font-weight: 600;
+  text-wrap: balance;
 }
 .recent__section__description {
   padding-inline: var(--item-padding);
@@ -1764,6 +1768,7 @@ figure figcaption {
 .recent__item__title {
   font-size: var(--font-size-400);
   font-weight: 600;
+  text-wrap: balance;
 }
 .recent__item__summary {
   margin-block-start: calc(var(--item-padding) / 2);

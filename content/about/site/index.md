@@ -41,7 +41,7 @@ I have hidden a number of easter eggs across this site. How many can you find?
 
 Last updated: {{< lastupdated >}}
 
-Current colourscheme: **Blue accents**
+Current colourscheme: **Purple accents**
 
 ## Feeds
 
