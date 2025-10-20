@@ -492,7 +492,7 @@ blockquote > p {
   }
 }
 
-blockquote cite {
+cite {
   display: block;
   text-align: right;
 }

@@ -14,3 +14,7 @@ public
 resources
 
 uncompressed-images
+
+# emacs backups
+*~
+\#*#
