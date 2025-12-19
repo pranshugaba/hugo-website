@@ -4,15 +4,6 @@ watching:
     season: 2
     channel: Netflix
 
-  - title: The Rehearsal
-    type: Series
-    season: 2
-    channel: HBO
-
-  - title: Normal People
-    type: Series
-    season: 1
-    channel: Hulu
 
 wantToWatch:
   - title: Nathan for You
@@ -116,7 +107,22 @@ wantToWatch:
     channel: Amazon
     endDate: 2021-09-07T05:30:00+05:30
 
+  - title: Normal People
+    type: Series
+    season: 1
+    channel: Hulu
+
 watched:
+  - title: Derry Girls
+    type: Series
+    season: 3
+    channel: Channel 4
+
+  - title: The Rehearsal
+    type: Series
+    season: 2
+    channel: HBO
+
   - title: The White Lotus
     type: Series
     season: 3
