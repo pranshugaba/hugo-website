@@ -1,71 +1,72 @@
 ---
 title: Uses
 subtitle: The software that I use on a daily basis
-summary: All the software and hardware that I use
+summary: Where I talk about the software that I use on my devices
 ---
 
 ## Laptop
 
-I use a distribution of Linux called [Fedora Workstation](https://fedoraproject.org/workstation/) on my laptop.
-I mostly use it with [Niri](https://yalter.github.io/niri/), a scrollable tiling Wayland compositor.
-It is very light on resource consumption, extremely customizable, and a joy to use using just the keyboard.
+### Operating system
 
-Before Niri, I used to use (and still sometimes use)[^1] the [GNOME desktop environment](https://www.gnome.org/). 
+I use a distribution of Linux called [Fedora Workstation](https://fedoraproject.org/workstation/) on my laptop.
+I mostly use it with [niri](https://yalter.github.io/niri/), a beautiful scrollable tiling Wayland compositor.
+Niri is very light on resource consumption, extremely customizable, and a joy to use using just the keyboard.
+As the name suggests, if you open a new window, niri neatly places it next to the existing ones like tiles instead of opening over them.
+This way, windows never overlap (unless you want them to) and window management is easy and efficient.
+
+The default install of niri is pretty barebones. 
+You have to install additional software and play around with the config to get it to work the way you want it to work, so niri is recommended only if you have at least a moderate proficiency in Linux and you love tinkering with things.
+
+Before niri, I used to use (and still sometimes use)[^1] the [GNOME desktop environment](https://www.gnome.org/). 
 It is simple, elegant, stable, and a joy to use.
-It is easy to get started with, works great out of the box, and this is the desktop environment (DE) that comes by default with distros such as Fedora and Ubuntu.
-If you are new to Linux, this is the DE that I recommend that you start with.
+It is easy to get started with and works great out of the box.
+This is the desktop environment (DE) that comes by default with distros such as Fedora and Ubuntu, and if you are new to Linux, this is the DE that I recommend that you start with.
 
 [^1]: There are some features that I do not know how to get working in niri such as remote input with KDE Connect and file sharing over network. When I need these features, I briefly use GNOME.
 
 
-Previously, I ran [Arch Linux](https://archlinux.org) (btw) with [hyprland](https://hyprland.org/), a beautiful tiling window compositor for Wayland.
-Even more previously, I have used the tiling window managers [XMonad](https://xmonad.org), herbsluftwm, and awesomewm.
+Previously, I ran [Arch Linux](https://archlinux.org) (btw) with [hyprland](https://hyprland.org/), another tiling Wayland compositor.
+Even more previously, I have used the tiling window managers [XMonad](https://xmonad.org), [herbsluftwm](https://herbstluftwm.org/), and [awesomewm](https://awesomewm.org/).
 However, I had to switch away from them as they do not support Wayland.
 
 ### Text Editor
 
 I used to use [Neovim](https://neovim.io) to edit my text files.
-Neovim is easily my favourite text editor.
-The learning curve was steep and I spent some time configuring and tinkering with it to my liking. 
+Neovim was easily my favourite text editor.
+I could not imagine using any other text editor, ever.
 
-But I now have a new favourite text editor. 
-I have switched to [emacs](https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html).
+But ever since I switched my [keyboard layout](#keyboard-remapping), vim motions became inconvenient and emacs became a lot more ergonomic.
+So I switched to [emacs](https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html).
+It is now my favourite text editor, by far, and I cannot imagine using any other text editor, ever.
+
+### Keyboard remapping
+
+I use [Kanata](https://github.com/jtroo/kanata/) to remap all the keys on my laptop.
+More details on how and why coming soon...
 
 ### Browser
 
-I use Firefox with these extensions:
+I use Firefox with the following extensions:
 
-- [uBlock Origin](https://ublockorigin.com/) to block those pesky ads
-- [LeechBlock NG](https://www.proginosko.com/leechblock/) to add timers and limits to websites that are addictive timesinks.
-- [Enhancer for YouTube](https://www.mrfdev.com/enhancer-for-youtube) for additional customisations on YouTube
-- [SponsorBlock](https://sponsor.ajay.app/) to skip over sponsored segments in videos on YouTube
-- [Bitwarden](https://bitwarden.com/) to generate and remember all my passwords
-- [Dark Reader](https://darkreader.org/) so I don't blind myself with bright websites at night
-- [Stylus](https://github.com/openstyles/stylus) to customise the appearance on various websites using CSS
-
-
-Some other extensions that I have used in the past:
-
-- [SteamDB](https://steamdb.info/) to display additional pricing info on Steam pages
-- [Tridactyl](https://github.com/tridactyl/tridactyl) for those sweet vim keybindings
-- Firenvim to convert every text box into an instance of Neovim.
-- Gesturefy
-- ~Tree Style Tab~ This has become redundant to me Firefox introduced vertical tabs.
-- ~[Netflux](https://addons.mozilla.org/en-US/firefox/addon/netflux/) to force Netflix to stream in 1080p on Linux.~
-It turns out that for some arcane reason Netflix now supports 1080p video on Linux but only on the Opera browser. So you can now get Full HD videos on Netflix on Linux without having to install any extensions.
+- [uBlock Origin](https://ublockorigin.com/) to block all pesky ads, warn me about dangerous redirects, and to block any element from any website that I do not want to see.
+- [LeechBlock NG](https://www.proginosko.com/leechblock/) to add time limits and blocks to websites that are addictive timesinks.
+- [Bitwarden Password Manager](https://bitwarden.com/) to generate and store all my passwords.
+- [Enhancer for YouTube](https://www.mrfdev.com/enhancer-for-youtube) for cool customizations on YouTube such as adding a mini popup player, hiding shorts and recommended videos, and so much more.
+- [SponsorBlock](https://sponsor.ajay.app/) to skip over sponsored segments in videos on YouTube.
 
 ### Terminal emulator
 
-- Kitty
+I use [Kitty](https://sw.kovidgoyal.net/kitty/): it is fast, performant, and customizable, and featureful.
+When I am in emacs, which is most of the time, I use the shell that is part of emacs.
 
 ### Reading
-- I use [Zathura](https://pwmt.org/projects/zathura/) when I am using niri and Evince when I using GNOME to read PDF files.
-- Foliate is an excellent ePUB reader.
-- Calibre
+- I use [Zathura](https://pwmt.org/projects/zathura/) when I am using niri and [GNOME Papers](https://apps.gnome.org/Papers/) when I using GNOME to read PDF files.
+- [Foliate](https://johnfactotum.github.io/foliate/) is an excellent ePUB reader.
+- [Calibre](https://calibre-ebook.com/) for ebook management.
 
-### Note taking
+### Note-taking
 
-All of my note taking takes place in emacs using the org mode.
+All of my note-taking takes place in emacs using the org mode.
 
 Xournalpp is my preferred application to take handwritten notes and to annotate PDFs.
 
@@ -89,10 +90,6 @@ Xournalpp is my preferred application to take handwritten notes and to annotate 
 - PyRadio
 - Shortwave
 - Amberol
-
-### Video editing
-
-- Kdenlive
 
 ### GNOME extensions
 While I no longer use GNOME, these were the extensions that I found useful (or made the GNOME shell look more beautiful).
@@ -121,6 +118,7 @@ I am using an Android phone. Some notable apps:
 - Cirrus
 - Compass
 - Dropsync
+- F-Droid
 - FitoTrack
 - Firefox
 - Goodtime Productivity

@@ -214,7 +214,6 @@ html {
   font-weight: 400;
   scroll-padding-top: var(--size-300);
   text-underline-offset: 0.14em;
-  scrollbar-color: var(--accent) var(--bg);
 }
 @media (min-width: 640px) {
   html {
