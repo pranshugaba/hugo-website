@@ -1,31 +1,25 @@
 wantToRead:
-  - title: Maus
-    author: Art Spiegelman
   - title: Fire and Blood
     author: George R. R. Martin
   - title: The Colour of Magic
     author: Terry Pratchett
-  - title: In Europe
-    author: Geert Mak
-  - title: Wuthering Heights
-    author: Emily Brontë
-  - title: The Song of Achilles
-    author: Madeline Miller
     startDate: 2022-11-15T05:30:00+05:30
-  - title: The Lord of the Rings
-    author: J. R. R. Tolkien
   - title: The Winds of Winter
     author: George R. R. Martin
 
 reading:
-  - title: The Graveyard Book
-    author: Neil Gaiman
-    startDate: 2024-11-10T07:30:00+05:30
+  - title: The Lord of the Rings
+    author: J. R. R. Tolkien
+    startDate: 2026-01-04T13:45:00+05:30
   - title: Following the Equator
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: The Graveyard Book
+    author: Neil Gaiman
+    startDate: 2025-12-16T13:50:00+05:30
+    endDate: 2026-01-04T12:45:00+05:30
   - title: Red Country
     author: Joe Abercrombie
     startDate: 2025-11-07T09:30:00+05:30

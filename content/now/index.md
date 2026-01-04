@@ -21,9 +21,6 @@ My areas of interest include [reactive synthesis](https://en.wikipedia.org/wiki/
 
 [See my watching list &#8594;]({{< ref "/watches" >}})
 
-## Gaming
-I play _Bouncy Ball_ and _Linelight_ nowadays.
-Before that, I played _Nine Sols_.
 
 ---
 
