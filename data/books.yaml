@@ -1,16 +1,14 @@
 wantToRead:
-  - title: Fire and Blood
-    author: George R. R. Martin
-  - title: The Colour of Magic
-    author: Terry Pratchett
+  - title: The Lord of the Rings
+    author: J. R. R. Tolkien
     startDate: 2022-11-15T05:30:00+05:30
   - title: The Winds of Winter
     author: George R. R. Martin
 
 reading:
-  - title: The Lord of the Rings
-    author: J. R. R. Tolkien
-    startDate: 2026-01-04T13:45:00+05:30
+  - title: Dracula
+    author: Bram Stoker
+    startDate: 2026-01-04T20:40:00+05:30
   - title: Following the Equator
     author: Mark Twain
     startDate: 2022-05-23T05:30:00+05:30
