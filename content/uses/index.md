@@ -4,6 +4,16 @@ subtitle: The software that I use on a daily basis
 summary: Where I talk about the software that I use on my devices
 ---
 
+I list below the software that I use on my devices. 
+This list is dynamic: it evolves as my needs and tastes change over time, as old applications become unsupported and new ones become available.
+What you see below is what I find optimal currently, and I have arrived upon this after a great deal of discovery and experimentation.
+I try to use free and open-source software wherever possible.
+
+[Let me know]({{< ref "/contact" >}}) if you find any of these helpful and if you have started using them yourself.
+I also welcome suggestions for alternatives to the applications listed below that you think do the job better.
+
+{{< toc >}}
+
 ## Laptop
 
 ### Operating system
@@ -13,7 +23,7 @@ I mostly use it with [niri](https://yalter.github.io/niri/), a beautiful scrolla
 Niri is very light on resource consumption, extremely customizable, and a joy to use using just the keyboard.
 As the name suggests, if you open a new window, niri neatly places it next to the existing ones like tiles instead of opening over them.
 This way, windows never overlap (unless you want them to) and window management is easy and efficient.
-
+
 The default install of niri is pretty barebones. 
 You have to install additional software and play around with the config to get it to work the way you want it to work, so niri is recommended only if you have at least a moderate proficiency in Linux and you love tinkering with things.
 
@@ -54,44 +64,44 @@ I use Firefox with the following extensions:
 - [Enhancer for YouTube](https://www.mrfdev.com/enhancer-for-youtube) for cool customizations on YouTube such as adding a mini popup player, hiding shorts and recommended videos, and so much more.
 - [SponsorBlock](https://sponsor.ajay.app/) to skip over sponsored segments in videos on YouTube.
 
-### Terminal emulator
-
-I use [Kitty](https://sw.kovidgoyal.net/kitty/): it is fast, performant, and customizable, and featureful.
-When I am in emacs, which is most of the time, I use the shell that is part of emacs.
-
 ### Reading
 - I use [Zathura](https://pwmt.org/projects/zathura/) when I am using niri and [GNOME Papers](https://apps.gnome.org/Papers/) when I using GNOME to read PDF files.
-- [Foliate](https://johnfactotum.github.io/foliate/) is an excellent ePUB reader.
-- [Calibre](https://calibre-ebook.com/) for ebook management.
+I love that Zathura supports SyncTeX so when I am writing a document in LaTeX, I can click on the PDF to find the corresponding line of LaTeX code in emacs.
+- I rarely read ebooks on my laptop since I have an e-Ink ebook reader, but when I do read ebooks on my laptop, I use [Foliate](https://johnfactotum.github.io/foliate/). It is a beautiful and well-designed ePUB reader.
+- I manage my ebook libary using [Calibre](https://calibre-ebook.com/).
+- I use [Zotero](https://www.zotero.org/) to manage the research papers that I want to read.
 
 ### Note-taking
 
-All of my note-taking takes place in emacs using the org mode.
+- Almost all of my typed note-taking occurs in emacs, in [Org Mode](https://orgmode.org/).
+I find that it is hands down the best way to capture, write, organize, and export your notes.
 
-Xournalpp is my preferred application to take handwritten notes and to annotate PDFs.
+- When I want to take handwritten notes or want to annotate PDFs, I use [Xournal++](https://xournalpp.github.io/) and use my drawing tablet to draw/write.
 
-### Art
+### Miscellaneous
 
-- Inkscape
-- Krita
-- LibreSprite
+#### Terminal emulator
+- When I am in emacs (which is most of the time) I use the inbuilt shell:  
+`M-x shell` or `M-x project-shell`. 
+- When I am not in emacs, I use [Kitty](https://sw.kovidgoyal.net/kitty/): it is fast, performant, and customizable, and featureful.
 
-### Photo editing
+#### Graphics
 
-- RawTherapee
-- GIMP
+- I make vector graphics using [Inkscape](https://inkscape.org/).
+- I edit raw images taken on my DSLR using [RawTherapee](https://rawtherapee.com/).
 
-### Watching Videos
+#### Music
 
-- MPV
+- I sometimes listen to online radio stations using [Shortwave](https://apps.gnome.org/Shortwave/).
 
-### Music
+#### Email
+- Thunderbird
+- mu4e
 
-- PyRadio
-- Shortwave
-- Amberol
+#### Network File sharing
+- Packet
 
-### GNOME extensions
+#### GNOME extensions
 While I no longer use GNOME, these were the extensions that I found useful (or made the GNOME shell look more beautiful).
 
 - AppIndicator and KStatusNotifierItem Support
@@ -103,49 +113,77 @@ While I no longer use GNOME, these were the extensions that I found useful (or m
 
 ## Phone
 
-I am using an Android phone. Some notable apps:
+I use an Android phone and an Android tablet. 
+I install apps through [F-Droid](https://f-droid.org/packages/org.fdroid.basic/) whenever possible. 
+Some notable apps that I use:
 
+### Authentication
 - Aegis Authenticator
+- Bitwarden
+
+### Media
 - AntennaPod
-- AnkiDroid
-- Audio Spectrum Analyzer
+- URL Radio
 - Auxio
 - Aves Libre
-- Barcode Scanner
-- Bitwarden
-- Capy Reader
-- Chooser
-- Cirrus
-- Compass
-- Dropsync
-- F-Droid
-- FitoTrack
-- Firefox
-- Goodtime Productivity
-- Habits
-- KOReader
-- Librera Reader
-- Luftlinie
-- Markor
 - mpv-android
-- MJ PDF
-- Open Camera
-- Organic Maps
-- Pie Launcher
-- PlantNet
+
+### Productivity
+- Goodtime Productivity
+- AnkiDroid
 - PTO
-- QDict
-- Read You
-- Shader Editor
-- Signal
+- Habits
 - Simple Time Tracker
-- Stellarium
-- Survival Manual
-- Termux
-- Thunderbird
-- Tracker Control
-- Trail Sense
+
+### Tools
+- Compass
+- Cirrus
+- Barcode Scanner
+- Luftlinie
+- QDict
+- Chooser
 - Tuner
+- Organic Maps
+- Survival Manual
+- Trail Sense
+- Stellarium
+- FitoTrack
+- Dropsync
+- Audio Spectrum Analyzer
+- Notification dictionary
+
+### Reading
+- Capy Reader
+- Firefox
+- Librera Reader
+- MJ PDF
+- KOReader
+- Read You
+- Markor
+
+### Keyboard
 - Unexpected Keyboard
+
+### Privacy
+- Tracker Control
 - URLCheck
-- URL Radio
+
+### Launcher
+- Dragon Launcher
+- Pie Launcher
+- Niagara Launcher
+
+### Terminal emulator
+- Termux
+- Termux: X11
+
+### Communication
+- Thunderbird
+- Signal
+
+### Fun
+- Shader Editor
+- PlantNet
+
+
+Last updated on {{< lastmodified >}}.  
