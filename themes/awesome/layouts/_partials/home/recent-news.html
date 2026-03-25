@@ -1,8 +1,8 @@
 {{ $numberOfItems := 3 }}
 
 {{ $newsItems := "" }}
-{{ with $.Site.Data.news }}
-    {{ $newsItems = sort $.Site.Data.news "newsDate" "desc" }}
+{{ with hugo.Data.news }}
+    {{ $newsItems = sort hugo.Data.news "newsDate" "desc" }}
 {{ end }}
 
 <div class="home__recent [ flow ]">

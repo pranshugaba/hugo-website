@@ -16,7 +16,9 @@ disablePathToLower = true
 
 timeout = 300000
 
-
+[imaging]
+  [imaging.meta]
+    fields = ['! *{Exif,Exposure[MPB],Contrast,Resolution,Sharp,JPEG,Metering,Sensing,Saturation,ColorSpace,Flash,WhiteBalance}*']
 
 [pagination]
   disableAliases = false

@@ -13,7 +13,7 @@
         {{ $big = .Resize "x1600 webp q80" }}
         {{ end }}
         {{ if $showCoords }}
-            {{ with .Exif }}
+            {{ with .Meta }}
                 <div class="gallery__metadata">
                     {{ with .Date }}
                         <div class="gallery__datetime">

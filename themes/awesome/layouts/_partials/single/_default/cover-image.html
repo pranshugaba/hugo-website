@@ -8,8 +8,8 @@
 {{ if not .Params.image.preview_only }}
   {{ with $img }}
     {{ $orientation := 1 }}
-    {{ with .Exif }}
-      {{ $orientation = .Tags.Orientation }}
+    {{ with .Meta }}
+      {{ $orientation = .Orientation }}
     {{ end }}
     <figure class="page__featuredimage">
       {{ $big := "" }}

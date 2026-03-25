@@ -1,5 +1,5 @@
 <ul class="[ books__list ] [ flow ]">
-    {{ with $.Site.Data.books }}
+    {{ with hugo.Data.books }}
         {{ range .reading}}
         <li>
             {{ partial "list/books.html" (dict "Context" . "Status" "reading") }}
@@ -11,7 +11,7 @@
 <hr>
 
 <ul class="[ books__list ] [ flow ]">
-    {{ with $.Site.Data.books }}
+    {{ with hugo.Data.books }}
         {{ range .wantToRead}}
         <li>
             {{ partial "list/books.html" (dict "Context" . "Status" "wantToRead") }}
@@ -21,7 +21,7 @@
 </ul>
 <hr>
 {{ $years := slice }}
-{{ range $.Site.Data.books.read }}
+{{ range hugo.Data.books.read }}
     {{ $years = $years | append (dateFormat "2006" .endDate) }}
 {{ end }}
 {{ $years = uniq $years }}
@@ -29,7 +29,7 @@
 <ul class="[ books__list ] [ flow ]">
     {{ range $years }}
     {{ $year := . }}
-        {{ range $.Site.Data.books.read }}
+        {{ range hugo.Data.books.read }}
         {{ if (eq (dateFormat "2006" .endDate) $year) }}
             <li>
             {{ partial "list/books.html" (dict "Context" . "Status" "read") }}

@@ -6,7 +6,7 @@ summary: 'Ma première nouvelle en français, où je vous dis un peu de moi et d
 date: 2023-10-17T20:00:00+05:30
 lastmod: 2023-10-17T20:00:00+05:30
 
-lang: fr
+language: fr
 
 tags: ['french', 'mumbai']
 
