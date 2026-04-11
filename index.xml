@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hello there! by Pranshu Gaba</title><link>https://pranshugaba.com/</link><description>Welcome to my site</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 11 Apr 2026 17:05:19 +0530</lastBuildDate><image><url>https://pranshugaba.com/icon.png</url></image><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Mini #14</title><link>https://pranshugaba.com/minis/14/</link><pubDate>Mon, 20 Oct 2025 22:22:00 +0530</pubDate><guid>https://pranshugaba.com/minis/14/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hello there! by Pranshu Gaba</title><link>https://pranshugaba.com/</link><description>Welcome to my site</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 11 Apr 2026 18:40:58 +0530</lastBuildDate><image><url>https://pranshugaba.com/icon.png</url></image><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Mini #14</title><link>https://pranshugaba.com/minis/14/</link><pubDate>Mon, 20 Oct 2025 22:22:00 +0530</pubDate><guid>https://pranshugaba.com/minis/14/</guid><description>
 <![CDATA[<p>It&rsquo;s days like <del>these</del> <em>Diwali</em> that I curse the Chinese for inventing gunpowder.</p>
 <p><cite><del>&ndash; The Rehearsal</del><br>
 &ndash; Me</cite></p>
@@ -23,7 +23,7 @@ But every such presentation remote that I have come across forces you to install
 This procedure works perfectly with my setup: a laptop running Fedora Linux (specifically, GNOME with Wayland) and an Android phone.
 You should be able to adapt the instructions if you are running some other Linux distribution and desktop environment.
 I do not have a Windows or a macOS computer or an iPhone to test out which, if any of the steps below, break.</p>
-<aside class="[ toc ] [ plain-link border-medium border-radius-large ]">
+<aside class="[ toc ] [ plain-link border-medium border-radius-large  ]">
   <details open>
     <summary>
       <h2 class="toc__heading">Table of Contents</h2>
@@ -1743,7 +1743,8 @@ I liked it so much that I wanted to share my thoughts on it here.</p>
 
 
 
-<aside class="[ toc ] [ plain-link border-medium border-radius-large ]">
+
+<aside class="[ toc ] [ plain-link border-medium border-radius-large  ]">
   <details >
     <summary>
       <h2 class="toc__heading">Table of Contents</h2>
@@ -2117,7 +2118,8 @@ There is a lot that is new on my site. I have also included several interesting 
 
 
 
-<aside class="[ toc ] [ plain-link border-medium border-radius-large ]">
+
+<aside class="[ toc ] [ plain-link border-medium border-radius-large  ]">
   <details open>
     <summary>
       <h2 class="toc__heading">Table of Contents</h2>
@@ -4694,7 +4696,8 @@ Does a chess position have the information required to deduce which player plays
 
 
 
-<aside class="[ toc ] [ plain-link border-medium border-radius-large ]">
+
+<aside class="[ toc ] [ plain-link border-medium border-radius-large  ]">
   <details open>
     <summary>
       <h2 class="toc__heading">Table of Contents</h2>
@@ -20422,7 +20425,7 @@ Two friends walk on the footpath, shoulder to shoulder.</p>
 <p>I like my stack now. It is boring, and that&rsquo;s a good thing. I have redesigned my site twice in the last three months, and have spent hardly any time writing content. I am done adding new features to this site now.  I might polish up the code and publish it as a theme on <a href="https://themes.gohugo.io/" target="_blank" rel="noopener">Hugo themes</a>. Everything has been setup for me to write content and post it. I just need to start writing now.</p>
 <p>I have moved my Nuxt website to the nuxt subdomain, and it will remain there for posterity. I won&rsquo;t be making any changes to it. I will publish new  posts on my new website only.</p>
 ]]></description></item><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/dev/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/building-x-and-o-using-godot/</guid><description>
-<![CDATA[<aside class="[ toc ] [ plain-link border-medium border-radius-large ]">
+<![CDATA[<aside class="[ toc ] [ plain-link border-medium border-radius-large  ]">
   <details open>
     <summary>
       <h2 class="toc__heading">Table of Contents</h2>
