@@ -1821,10 +1821,10 @@ figure figcaption {
 }
 .home {
   display: grid;
-  margin-block-start: var(--size-700);
+  margin-block-start: var(--size-300);
   margin-inline: auto;
   column-gap: var(--size-800);
-  row-gap: var(--size-400);
+  row-gap: var(--size-600);
   grid-template-columns: 1fr;
 }
 @media (min-width: 800px) {
@@ -1832,12 +1832,33 @@ figure figcaption {
     grid-template-columns: 2fr 7fr;
   }
 }
+.home {
+  container-type: inline-size;
+}
 .home__profile {
   margin-block-start: var(--size-400);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  column-gap: var(--size-400);
+}
+@media (min-width: 480px) {
+  .home__profile {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
+@media (min-width: 800px) {
+  .home__profile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .home__profile__picture {
   max-width: 160px;
-  margin-inline: auto;
   display: block;
   width: 100%;
   height: auto;
@@ -1848,14 +1869,48 @@ figure figcaption {
   text-align: center;
 }
 .home__profile__text .profile__primary {
-  font-size: var(--font-size-600);
-  font-weight: 500;
+  font-size: var(--font-size-700);
+  font-weight: 600;
   letter-spacing: -0.025em;
-  margin-block-start: var(--size-600);
+  margin-block-start: var(--size-300);
 }
-.home__profile__text .profile__secondary {
-  margin-block-start: var(--size-200);
-  font-size: var(--font-size-300);
+.home__profile__text .profile__secondary, .home__profile__text .profile__tertiary {
+  margin-block-start: var(--size-100);
+  font-size: var(--font-size-400);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  row-gap: var(--size-100);
+  column-gap: var(--size-300);
+  justify-content: center;
+}
+@media (min-width: 480px) {
+  .home__profile__text .profile__secondary, .home__profile__text .profile__tertiary {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 800px) {
+  .home__profile__text .profile__secondary, .home__profile__text .profile__tertiary {
+    justify-content: center;
+  }
+}
+.home__profile__text .profile__tertiary {
+  margin-block-start: 0;
+}
+.home #email-popover-anchor {
+  anchor-name: --email-button;
+}
+.home #email-popover {
+  margin: 0;
+  inset: auto;
+  position-anchor: --email-button;
+  position-area: block-end span-inline-end;
+  padding-inline: var(--size-200);
+  padding-block: var(--size-100);
+  border-radius: var(--border-radius-small);
+  border: var(--border-medium) solid var(--fg);
+  background-color: var(--bg);
+  color: var(--fg);
 }
 .home__content .page__header {
   margin-block-start: 0;

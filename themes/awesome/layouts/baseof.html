@@ -3,7 +3,7 @@
   {{- partial "head.html" . -}}
   <body>
     <div class="wrapper">
-      {{- partial "header.html" . -}}
+      {{ if (ne .Kind "home") }}{{- partial "header.html" . -}}{{ end }}
       <main class="{{ with .Type }}{{ . }}{{ end }} {{ if .Params.Wide }}wide-width{{ else }}content-width{{ end }}" id="content">{{- block "main" . }} {{- end }}</main>
       {{- partial "footer.html" . -}}
     </div>

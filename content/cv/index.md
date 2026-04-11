@@ -15,7 +15,7 @@ type: cv
 
 
 Last updated on {{< lastmodified >}} &nbsp; 
-<a href="/pranshu-gaba-cv-20260411.pdf" target="_blank" rel="noopener">&#8595; Download CV as PDF</a>  
+<a href="/pranshu-gaba-cv-20260411.pdf" target="_blank" rel="noopener">&#8595;&nbsp;Download&nbsp;CV&nbsp;as&nbsp;PDF</a>  
 
 
 {{< toc heading="Jump to">}}
