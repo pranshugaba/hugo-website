@@ -1,9 +1,19 @@
 watching:
-  - title: Hilda
+  - title: Taskmaster UK
     type: Series
-    season: 2
-    channel: Netflix
+    channel: Channel 4
+    season: 21
+    startDate: 2021-02-01T05:30:00+05:30
+    
+  - title: 'Jet Lag: The Game'
+    type: Series
+    season: 17
+    channel: YouTube
 
+  - title: Game Changer
+    type: Series
+    season: 17
+    channel: Dropout
 
 wantToWatch:
   - title: Nathan for You
@@ -25,11 +35,6 @@ wantToWatch:
     type: Season
     season: 1
     channel: VLDL
-
-  - title: The Last of Us
-    type: Season
-    season: 1
-    channel: HBO
 
   - title: The Curse
     type: Series
@@ -113,6 +118,11 @@ wantToWatch:
     channel: Hulu
 
 watched:
+  - title: Hilda
+    type: Series
+    season: 3
+    channel: Netflix
+    
   - title: Derry Girls
     type: Series
     season: 3
@@ -128,20 +138,9 @@ watched:
     season: 3
     channel: HBO
 
-  - title: Taskmaster UK
-    type: Series
-    channel: Channel 4
-    season: 18
-    startDate: 2021-02-01T05:30:00+05:30
-
   - title: Taskmaster Australia
     type: Series
     season: 2
-
-  - title: 'Jet Lag: The Game'
-    type: Series
-    season: 5
-    channel: YouTube
 
   - title: English Teacher
     type: Series
@@ -160,7 +159,7 @@ watched:
 
   - title: Only Connect
     type: Series
-    season: 19
+    season: 21
     channel: BBC
 
   - title: Archer
@@ -195,7 +194,7 @@ watched:
 
   - title: Spy × Family
     type: Series
-    season: 2
+    season: 3
     channel: TV Tokyo
 
   - title: Better Call Saul

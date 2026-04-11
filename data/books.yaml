@@ -14,6 +14,10 @@ reading:
     startDate: 2022-05-23T05:30:00+05:30
 
 read:
+  - title: A Fine Balance
+    author: Rohinton Mistry
+    startDate: 2026-03-23T18:40:00+05:30
+    endDate: 2026-04-02T18:08:00+05:30
   - title: The Graveyard Book
     author: Neil Gaiman
     startDate: 2025-12-16T13:50:00+05:30

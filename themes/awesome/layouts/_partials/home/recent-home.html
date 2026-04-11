@@ -3,7 +3,7 @@
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 {{ $pages := where $pages "Type" "ne" "minis" }}
 <div class="home__recent [ flow ]">
-    <h2 class="home__recent__heading">Posts</h2>
+    <h2 class="home__recent__heading">Blog posts</h2>
     {{ range first $numberOfItems $pages}}
         {{ partial "list/home" . }}
     {{ end }}
