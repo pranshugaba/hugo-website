@@ -1,9 +1,10 @@
 {{ $closed := default false (.Get "closed") }}
+{{ $heading := default "Table of Contents" (.Get "heading") }}
 
 <aside class="[ toc ] [ plain-link border-medium border-radius-large ]">
   <details {{ if not $closed }}open{{ end }}>
     <summary>
-      <h2 class="toc__heading">Table of Contents</h2>
+      <h2 class="toc__heading">{{ $heading }}</h2>
     </summary>
     {{ .Page.TableOfContents}}
   </details>
