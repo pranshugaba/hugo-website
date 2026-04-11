@@ -1841,7 +1841,7 @@ figure figcaption {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  column-gap: var(--size-300);
+  column-gap: var(--size-400);
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
@@ -1869,14 +1869,13 @@ figure figcaption {
   margin-block-start: var(--size-400);
 }
 .home__profile__text .profile__secondary, .home__profile__text .profile__tertiary {
-  margin-block-start: var(--size-100);
+  margin-block-start: var(--size-200);
   font-size: var(--font-size-400);
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   row-gap: var(--size-100);
   column-gap: var(--size-300);
-  justify-content: center;
   justify-content: flex-start;
 }
 @media (min-width: 800px) {
