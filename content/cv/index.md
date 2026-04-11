@@ -18,14 +18,14 @@ Last updated on {{< lastmodified >}} &nbsp;
 <a href="/pranshu-gaba-cv-20260411.pdf" target="_blank" rel="noopener">&#8595;&nbsp;Download&nbsp;CV&nbsp;as&nbsp;PDF</a>  
 
 
-{{< toc heading="Jump to">}}
+{{< toc heading="Jump to" floating=true >}}
 
 ## Research interests
 *General*  
-&nbsp;&nbsp;&nbsp;&nbsp;formal methods, game theory, logic, computer science, discrete mathematics
+formal methods, game theory, logic, computer science, discrete mathematics
 
 *Specific*  
-&nbsp;&nbsp;&nbsp;&nbsp;reactive synthesis, finitary objectives, stochastic games, Markov decision processes
+reactive synthesis, finitary objectives, stochastic games, Markov decision processes
 
 
 

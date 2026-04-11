@@ -13,6 +13,21 @@
     font-variation-settings: 'wght' 600;
   }
   & li {
-    margin-block: 0.25rem;
+      margin-block: var(--size-100);
+      margin-inline-start: 0;
+  }
+  & ul, ol {
+      @media (min-width: 640px) {
+	  padding-inline-start: var(--size-400);
+      }
+  }
+  &.toc-floating {
+      @media (min-width: 800px) {
+	  // background-color: red;
+	  float: inline-end;
+	  margin-inline-start: var(--size-400);
+	  margin-block-end: var(--size-300);
+	  max-width: 42%;
+      }
   }
 }

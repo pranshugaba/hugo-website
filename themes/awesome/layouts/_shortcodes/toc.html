@@ -1,7 +1,8 @@
 {{ $closed := default false (.Get "closed") }}
 {{ $heading := default "Table of Contents" (.Get "heading") }}
+{{ $floating := default false (.Get "floating") }}
 
-<aside class="[ toc ] [ plain-link border-medium border-radius-large ]">
+<aside class="[ toc ] [ plain-link border-medium border-radius-large {{ if $floating }} toc-floating {{ end }} ]">
   <details {{ if not $closed }}open{{ end }}>
     <summary>
       <h2 class="toc__heading">{{ $heading }}</h2>

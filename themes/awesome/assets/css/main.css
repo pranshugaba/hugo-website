@@ -1533,7 +1533,21 @@ h4 code {
   font-variation-settings: "wght" 600;
 }
 .toc li {
-  margin-block: 0.25rem;
+  margin-block: var(--size-100);
+  margin-inline-start: 0;
+}
+@media (min-width: 640px) {
+  .toc ul, .toc ol {
+    padding-inline-start: var(--size-400);
+  }
+}
+@media (min-width: 800px) {
+  .toc.toc-floating {
+    float: inline-end;
+    margin-inline-start: var(--size-400);
+    margin-block-end: var(--size-300);
+    max-width: 42%;
+  }
 }
 
 .tagcloud {
@@ -1821,7 +1835,7 @@ figure figcaption {
 }
 .home {
   display: grid;
-  margin-block-start: var(--size-300);
+  margin-block-start: var(--size-200);
   margin-inline: auto;
   column-gap: var(--size-700);
   row-gap: var(--size-600);
