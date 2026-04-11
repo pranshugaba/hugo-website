@@ -757,6 +757,11 @@ h4 code {
   font-size: 1.2rem;
 }
 
+.cv .page__header {
+  margin-block-start: var(--size-800);
+  margin-block-end: var(--size-500);
+}
+
 :root {
   --chroma-bg: #f4f0ed;
   --chroma-fg: #4f453b;
