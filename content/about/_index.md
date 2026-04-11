@@ -5,8 +5,13 @@ summary: A little bit about me
 display: none
 ---
 
-Hi there! I am Pranshu Gaba (IPA: /ˈpraːn.ʃuː ˈɡaː.baː/, Devanagiri: प्रांशू गाबा).  
-My pronouns are he/him.
+Hi there! I am Pranshu Gaba (he/him).  
+
+Here's how you can pronounce my name.
+- IPA: /ˈpraːn.ʃuː&nbsp;ˈɡaː.baː/  
+- Devanagari: प्रांशू गाबा  
+
+
 
 I am a final-year PhD research scholar in Theoretical Computer Science at [TIFR, Mumbai](https://www.tcs.tifr.res.in/).
 I am working on Formal Methods with my advisor [Shibashis Guha](https://www.tifr.res.in/~shibashis.guha/), and am co-advised by [Laurent Doyen](http://www.lsv.fr/~doyen/).

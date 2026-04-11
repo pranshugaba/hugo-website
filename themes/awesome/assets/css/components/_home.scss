@@ -2,11 +2,11 @@
   display: grid;
   margin-block-start: var(--size-300);
   margin-inline: auto;
-  column-gap: var(--size-800);
+  column-gap: var(--size-700);
   row-gap: var(--size-600);
   grid-template-columns: 1fr;
   @media (min-width: 800px) {
-    grid-template-columns: 2fr 7fr;
+    grid-template-columns: 3fr 8fr;
   }
   container-type: inline-size;
   &__profile {
@@ -17,13 +17,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    column-gap: var(--size-400);
+    column-gap: var(--size-300);
     
-    @media (min-width: 480px) {
+
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: flex-end;
-    }
+
     @media (min-width: 800px) {
 	flex-direction: column;
 	justify-content: center;
@@ -31,7 +31,7 @@
     }
 
     &__picture {
-      max-width: 160px;
+      max-width: 150px;
 
       display: block;
       width: 100%;
@@ -40,14 +40,14 @@
       border: var(--border-medium) solid var(--fg);
     }    
     &__text {
-      text-align: center;
-
+      // text-align: center;
       .profile {
         &__primary {
           font-size: var(--font-size-700);
           font-weight: 600;
           letter-spacing: -0.025em;
-          margin-block-start: var(--size-300);
+	  line-height: 1.2;
+          margin-block-start: var(--size-400);
         }
         &__secondary, &__tertiary {
           margin-block-start: var(--size-100);
@@ -59,9 +59,9 @@
 	  column-gap: var(--size-300);
 	  justify-content: center;
 	      
-	  @media (min-width: 480px) {
+
 	      justify-content: flex-start;
-	  }
+
 	  @media (min-width: 800px) {
 	      justify-content: center;
 	  }
