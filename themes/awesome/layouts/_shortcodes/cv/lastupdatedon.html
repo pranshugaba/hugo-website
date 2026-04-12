@@ -1,0 +1,4 @@
+{{ $updatedDate := default time.Now hugo.Data.cv.updatedDate }}
+
+
+Last updated on <time datetime="{{ $updatedDate.Format "2006-01-02" }}">{{ $updatedDate.Format "2 January 2006" }}</time>

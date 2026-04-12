@@ -1,0 +1,14 @@
+{{ $interestsData := hugo.Data.cv.interests }}
+
+{{ range $interestsData }}
+  <p>
+    <em>{{ .type }}</em>
+    <br/>
+    {{ range first (sub (len .topics) 1) .topics }}
+      {{ . }},
+    {{ end }}
+    {{ range last 1 .topics }}
+      {{ . }}
+    {{ end }}
+  </p>
+{{ end }}

@@ -1,17 +1,17 @@
 .home {
   display: grid;
-  margin-block-start: var(--size-200);
+  margin-block-start: 0;
   margin-inline: auto;
   column-gap: var(--size-700);
-  row-gap: var(--size-600);
+  row-gap: var(--size-400);
   grid-template-columns: 1fr;
   @media (min-width: 800px) {
+    margin-block-start: var(--size-100);
     grid-template-columns: 3fr 8fr;
   }
   container-type: inline-size;
   &__profile {
-    margin-block-start: var(--size-400);
-    // margin-inline: auto;      
+    margin-block-start: 0;
 
     display: flex;
     flex-direction: column;
@@ -19,15 +19,15 @@
     align-items: center;
     column-gap: var(--size-400);
     
-
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: flex-end;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
 
     @media (min-width: 800px) {
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+      margin-block-start: var(--size-400);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     &__picture {
@@ -45,7 +45,7 @@
         &__primary {
           font-size: var(--font-size-700);
           font-weight: 600;
-          letter-spacing: -0.025em;
+          letter-spacing: -0.0125em;
 	  line-height: 1.2;
           margin-block-start: var(--size-400);
         }
@@ -93,8 +93,9 @@
   &__content {
     .page__header {
       margin-block-start: 0;
-      margin-block-end: var(--size-600);
+      margin-block-end: var(--size-500);
     }
+    margin-block-end: calc(-1 * var(--size-200));
   }
   &__recent {
     border-block-start: var(--border-medium) solid var(--fg);

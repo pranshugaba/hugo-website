@@ -2,7 +2,7 @@
 
 {{ $newsItems := "" }}
 {{ with hugo.Data.news }}
-    {{ $newsItems = sort hugo.Data.news "newsDate" "desc" }}
+    {{ $newsItems = sort . "newsDate" "desc" }}
 {{ end }}
 
 <div class="home__recent [ flow ]">

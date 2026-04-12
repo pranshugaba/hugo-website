@@ -1,9 +1,0 @@
-<ul class="[ talks__list ] [ flow ]">
-    {{ with hugo.Data.talks }}
-        {{ range . }}
-        <li>
-            {{ partial "list/talks.html" . }}
-        </li>
-        {{ end }}
-    {{ end }}
-</ul>

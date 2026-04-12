@@ -1,0 +1,21 @@
+{{ $talktype := default "publications" (.Get "talktype") }}
+{{ $talkdata := "" }}
+
+{{ if (eq $talktype "seminars") }}
+  {{ $talkdata = hugo.Data.cv.seminars }}
+{{ else if (eq $talktype "outreaches") }}
+  {{ $talkdata = hugo.Data.cv.outreaches }}
+{{ else }}
+  {{ $talkdata = hugo.Data.cv.publications }}
+{{ end }}
+
+
+{{ with $talkdata }}
+  <ul class="[ talks__list ] [ flow ]">
+    {{ range . }}
+    <li>
+      {{ partial "list/talks.html" . }}
+    </li>
+    {{ end }}
+  </ul>
+{{ end }}

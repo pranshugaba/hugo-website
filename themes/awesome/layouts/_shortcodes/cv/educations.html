@@ -1,0 +1,26 @@
+{{ $educationsData := hugo.Data.cv.educations }}
+
+{{ range $educationsData }}
+<div class="[ cv__education] [ flow ]">
+<p>
+  <strong>{{ .programName }}</strong>, {{ cond (not .completed) "ongoing" (.endDate | time.Format "January 2006") }}
+  <br/>
+  <em>{{ .institute.name }}</em>, {{ .institute.city }}, {{ .institute.country }}
+</p>
+
+<p>
+  Advisor: {{ .advisor.name }}
+  <br/>
+  Thesis: <em>{{ .thesis.name }}</em>
+</p>
+<p>
+  Relevant courses:
+  {{ range first (sub (len .courses) 1) .courses }}
+  {{ . }};
+  {{ end }}
+  {{ range last 1 .courses }}
+  {{ . }}
+  {{ end }}
+</p>
+</div>
+{{ end }}

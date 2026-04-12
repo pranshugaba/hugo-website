@@ -1,0 +1,342 @@
+updatedDate = 2026-04-11T09:30:00+05:30
+
+#################################################################
+[[interests]]
+type = "general"
+topics = ["formal methods", "game theory", "logic", "computer science", "discrete mathematics"]
+
+[[interests]]
+type = "specific"
+topics = ["reactive synthesis", "finitary objectives", "stochastic games", "Markov decision processes"]
+
+
+#################################################################
+[[educations]]
+programName = "PhD in Theoretical Computer Science"
+
+institute.name = "Tata Institute of Fundamental Research"
+institute.city = "Mumbai"
+institute.country = "India"
+
+startDate = 2020-09-21T09:30:00+05:30
+completed = false
+
+advisor.name = "Shibashis Guha"
+advisor.link = "https://www.tifr.res.in/~shibashis.guha/"
+
+thesis.name = "Window mean-payoff in turn-based stochastic games"
+
+courses = ["Logic, automata, and games", "Automata, verification, and infinite games", "Descriptive complexity", "Computational complexity", "Algebra and computation", "Algebraic automata theory"]
+
+
+[[educations]]
+programName = "Bachelor of Science (Research) with Mathematics major"
+
+startDate = 2016-08-01T09:00:00+05:30
+endDate = 2020-07-31T17:00:00+05:30
+completed = true
+
+institute.name = "Indian Institute of Science"
+institute.city = "Bangalore"
+institute.country = "India"
+
+advisor.name = "L. Sunil Chandran"
+thesis.name = "Vertex connectivity of Eulerian orientations"
+courses = ["Automata theory and computability", "Introduction to scalable systems", "Game theory", "Graph theory", "Combinatorics", "Number Theory", "Measure theory"]
+
+#################################################################
+
+[[publications]]
+title = "Expectation in Stochastic Games with Prefix-independent Objectives"
+collaborators = ["Laurent Doyen", "Shibashis Guha"]
+abstract = ''''''
+
+[[publications.acceptances]] 
+name = "CONCUR 2025"
+link = ""
+date = "2025"
+doi = ""
+
+[[publications.events]]
+name = "CONCUR"
+link = ""
+date = 2025-08-09T15:10:00+05:30
+location = "Aarhus, Denmark"
+slides = ""
+recording = ""
+
+#######################################
+
+[[publications]]
+title = "Optimising Expectation with Guarantees for Window Mean Payoff in Markov Decision Processes"
+collaborators = ["Shibashis Guha"]
+abstract = ''''''
+
+[[publications.acceptances]] 
+name = "AAMAS 2025"
+link = ""
+date = "2025"
+doi = ""
+
+
+
+#######################################
+
+[[publications]]
+title = "Recognising numbers"
+collaborators = ["Arnab Sur",]
+abstract = ''''''
+
+[[publications.acceptances]] 
+name = "ICLA 2025"
+link = ""
+date = "2025"
+doi = ""
+notes = "Awarded best student paper award"
+
+[[publications.events]]
+name = "ICLA"
+link = ""
+date = 2025-02-09T15:10:00+05:30
+location = "ISI Kolkata"
+slides = ""
+recording = ""
+
+#######################################
+
+[[publications]]
+title = "Stochastic Window Mean-payoff Games"
+collaborators = ["Laurent Doyen", "Shibashis Guha"]
+abstract = '''Stochastic two-player games model systems with an environment that is both adversarial and stochastic. The environment is modelled by a player (Player 2) who tries to prevent the system (Player 1) from achieving its objective. We consider window mean-payoff objectives: these are finitary versions of the traditional mean-payoff objective, obtained by replacing the long-run average of the payoffs by average payoffs computed over a finite sliding window. We present complexity bounds and algorithmic solutions for computing strategies of Player 1 to ensure that the objective is satisfied with positive probability, with probability 1, or with probability at least \(p\), regardless of the strategy of Player 2. The solution crucially relies on a reduction to the special case of non-stochastic two-player games with the same objective. We also give a general characterisation of prefix-independent objectives for which this reduction holds.'''
+
+[[publications.acceptances]] 
+name = "FoSSaCS 2024"
+link = ""
+date = "2024"
+doi = ""
+[[publications.acceptances]] 
+name = "LMCS"
+link = ""
+date = "June 2025"
+doi = ""
+
+[[publications.events]] 
+name = "FMUpdate 2023"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2023-06-30T15:10:00+05:30
+location = "IIT Goa, India"
+slides = ""
+recording = ""
+[[publications.events]]
+name = "FoSSaCS"
+link = ""
+date = 2024-04-09T15:10:00+05:30
+location = "Luxembourg"
+slides = ""
+recording = ""
+
+
+#######################################
+
+[[seminars]]
+title = "The Canadian traveller problem"
+abstract = '''Roads in Canada often get blocked due to excessive snowfall during blizzards. On encountering a road closure, a driver needs to adapt their route on-the-fly (possibly involving backtracking) in order to minimise the time taken to reach their destination. This problem is known as the Canadian traveller problem. 
+
+Formally, given a graph with partially observable edge weights, the goal is to synthesise a strategy that minimises the total weight of a walk to the target vertex, where an edge weight is only learnt on visiting an endpoint of the edge. We look at two different variants of this problem:
+
+- [PY91] The edge weights are chosen by an adversary. We want a strategy with the best competitive ratio, that is, one that minimises the ratio of the total weight of the walk taken to that of the total weight of the walk given by an optimal offline algorithm.
+
+- [KN07] The edge weights are given by a probability distribution. We want a strategy that minimises the expected total weight of a walk to the destination.
+
+References:
+
+- [PY91](https://www.sciencedirect.com/science/article/pii/0304397591902632) Christos Papadimitriou and Mihalis Yannakakis, Shortest paths without a map (1991)
+
+- [KN07](https://people.csail.mit.edu/enikolova/papers/canadian-FINAL.pdf) David Karger and Evdokia Nikolova, Exact Algorithms for the Canadian Traveller Problem on Paths and Trees (2007)'''
+
+[[seminars.events]] 
+name = "FMUpdate 2023"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2023-06-30T15:10:00+05:30
+location = "IIT Goa, India"
+slides = ""
+recording = ""
+
+
+
+#######################################
+
+[[seminars]]
+title = "Sperner’s lemma and the equidissection of regular polygons"
+
+[[seminars.events]] 
+name = "FMUpdate 2023"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2023-06-30T15:10:00+05:30
+location = "IIT Goa, India"
+slides = ""
+recording = ""
+
+
+
+#######################################
+
+[[seminars]]
+title = "The connection between circuit complexity and first-order logic"
+
+[[seminars.events]] 
+name = "FMUpdate 2023"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2023-06-30T15:10:00+05:30
+location = "IIT Goa, India"
+slides = ""
+recording = ""
+
+
+
+#######################################
+
+[[seminars]]
+title = "The complexity of solving simple stochastic games"
+
+[[seminars.events]] 
+name = "FMUpdate 2023"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2023-06-30T15:10:00+05:30
+location = "IIT Goa, India"
+slides = ""
+recording = ""
+
+
+
+#######################################
+
+[[seminars]]
+title = "Courcelle’s theorem "
+
+[[seminars.events]] 
+name = "FMUpdate 2023"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2023-06-30T15:10:00+05:30
+location = "IIT Goa, India"
+slides = ""
+recording = ""
+
+
+
+#######################################
+
+[[seminars]]
+title = "Total-payoff games on graphs with windows"
+
+[[seminars.events]] 
+name = "FMUpdate 2023"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2023-06-30T15:10:00+05:30
+location = "IIT Goa, India"
+slides = ""
+recording = ""
+
+
+
+#######################################
+
+[[seminars]]
+title = "Determinacy of two-player games with perfect information"
+
+[[seminars.events]] 
+name = "FMUpdate 2023"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2023-06-30T15:10:00+05:30
+location = "IIT Goa, India"
+slides = ""
+recording = ""
+
+
+#######################################
+
+[[seminars]]
+title = "Vertex connectivity of Eulerian orientations "
+
+[[seminars.events]] 
+name = "FMUpdate 2023"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2023-06-30T15:10:00+05:30
+location = "IIT Goa, India"
+slides = ""
+recording = ""
+
+
+#######################################
+
+
+
+[[outreaches]]
+title = "Sperner’s lemma and its application to rent division"
+collaborators = ["Malhar Managoli", "Shanthanu Rai", "Aindrila Rakshit",]
+[[outreaches.events]] 
+name = "Chai and Why 2025"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2025-06-30T15:10:00+05:30
+location = "Prithvi Café, Juhu"
+slides = ""
+recording = ""
+[[outreaches.events]] 
+name = "Vigyan Vidushi 2024"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2024-06-30T15:10:00+05:30
+location = "TIFR, Mumbai"
+slides = ""
+recording = ""
+
+#######################################
+
+[[outreaches]]
+title = "Voting mechanisms"
+collaborators = ["Ratnakar Medepalli",  "Shanthanu Rai", "Ashutosh Shankar",]
+[[outreaches.events]] 
+name = "Chai and Why 2024"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2024-06-30T15:10:00+05:30
+location = "HBCSE"
+slides = ""
+recording = ""
+
+#######################################
+
+[[outreaches]]
+title = "Hamming codes"
+collaborators = ["Eeshan Modak", "Varun Ramanathan", "Ashutosh Shankar",]
+[[outreaches.events]] 
+name = "Chai and Why 2023"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2024-06-30T15:10:00+05:30
+location = "Prithvi Café, Juhu"
+slides = ""
+recording = ""
+
+#######################################
+
+[[outreaches]]
+title = "Fun with graphs"
+collaborators = ["Hari Krishnan P A", "Ashutosh Shankar",]
+[[outreaches.events]] 
+name = "Chai and Why 2022"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2024-06-30T15:10:00+05:30
+location = "Ruparel College, Matunga"
+slides = ""
+recording = ""
+
+#######################################
+
+[[outreaches]]
+title = "Impartial games"
+collaborators = ["IISc Maths department",]
+[[outreaches.events]] 
+name = "IISc Open Day 2020"
+link = "https://fmindia.cmi.ac.in/update2023/"
+date = 2024-06-30T15:10:00+05:30
+location = "IISc, Bengaluru"
+slides = ""
+recording = ""

@@ -51,3 +51,18 @@
     max-width: var(--content-width);
   }
 }
+
+// .inline-list {
+//     // background-color: red;
+//     // list-style: none;
+//     padding-inline: var(--size-300);
+//     margin-block: 0;
+
+//     li {
+// 	display: inline;
+// 	&::before {
+// 	    content: "\00a0";
+// 	    display: inline-block;
+// 	}
+//     }
+// }
