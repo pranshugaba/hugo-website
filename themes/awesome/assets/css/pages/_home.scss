@@ -9,7 +9,6 @@
     margin-block-start: var(--size-100);
     grid-template-columns: 3fr 8fr;
   }
-  container-type: inline-size;
   &__profile {
     margin-block-start: 0;
 
@@ -91,11 +90,19 @@
       color: var(--fg)
   }
   &__content {
-    .page__header {
-      margin-block-start: 0;
-      margin-block-end: var(--size-500);
+    .page__title {
+	font-size: 1.75rem;
+	margin-block-start: var(--size-400);
+	font-weight: 500;
     }
-    margin-block-end: calc(-1 * var(--size-200));
+    .page__subtitle {
+	display: none;
+	margin-block-start: var(--size-300);
+    }
+    .page__header {
+      margin-block: 0;
+    }
+    margin-block-end: calc(-1 * var(--size-500));
   }
   &__recent {
     border-block-start: var(--border-medium) solid var(--fg);
@@ -106,9 +113,9 @@
     }
     &__heading {
       font-family: var(--font-sans-serif);
-      font-size: var(--font-size-700);
+      font-size: var(--font-size-600);
       letter-spacing: -0.01em;
-      margin-block: var(--size-500);
+      margin-block: var(--size-400);
     }
     &__seeall {
       margin-block-start: var(--size-600);
