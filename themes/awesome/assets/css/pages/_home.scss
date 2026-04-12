@@ -1,12 +1,12 @@
 .home {
   display: grid;
-  margin-block-start: 0;
+  margin-block-start: var(--size-100);
   margin-inline: auto;
   column-gap: var(--size-700);
   row-gap: var(--size-400);
   grid-template-columns: 1fr;
   @media (min-width: 800px) {
-    margin-block-start: var(--size-100);
+    margin-block-start: var(--size-200);
     grid-template-columns: 3fr 8fr;
   }
   &__profile {
@@ -91,7 +91,7 @@
   }
   &__content {
     .page__title {
-	font-size: 1.75rem;
+	font-size: var(--font-size-700);
 	margin-block-start: var(--size-400);
 	font-weight: 500;
     }
@@ -102,7 +102,7 @@
     .page__header {
       margin-block: 0;
     }
-    margin-block-end: calc(-1 * var(--size-500));
+    margin-block-end: calc(-1 * var(--size-400));
   }
   &__recent {
     border-block-start: var(--border-medium) solid var(--fg);

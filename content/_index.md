@@ -5,7 +5,10 @@ summary: Personal website of Pranshu Gaba. Here I share photos, poems, puzzles, 
 wide: true
 ---
 
-I am a PhD research scholar in Theoretical Computer Science at TIFR, Mumbai. 
-My research interests include logic, automata, and games, as well as algebra, combinatorics, and mathematics in general.
+I am a PhD research scholar (nearing completion) in Theoretical Computer Science at TIFR Mumbai. 
+I am currently looking for postdoc opportunities!
 
-I write puzzles, poems, and more here on this site.
+My primary area of research during my PhD has been reactive synthesis for probabilistic systems, i.e., finding efficient algorithms to synthesize winning strategies (of small memory size) for conjunctions of probabilistic objectives in stochastic games on graphs.
+You can read more about my work in [my&nbsp;CV]({{< ref "/cv" >}}).
+
+On this site, you will also find [my blog]({{< ref "/blog" >}}) where I write and share interesting [articles]({{< ref "/articles" >}}), [puzzles]({{< ref "/puzzles" >}}), [poems]({{< ref "/poems" >}}), [photos]({{< ref "/photos" >}}), [recipes]({{< ref "/recipes" >}}), [comics]({{< ref "/comics" >}}), and so much more.
