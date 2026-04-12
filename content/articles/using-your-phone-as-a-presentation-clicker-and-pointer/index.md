@@ -13,6 +13,8 @@ math: false
 draft: false
 ---
 
+{{< toc-float >}}
+
 When you are giving a presentation, say, at a conference, you want to be able to move around the stage.
 You do not want to be tethered to your laptop behind the podium, and you definitely don't want to be yelling "NEXT" to a person at the keyboard each time you want to change the slide.
 
@@ -38,7 +40,7 @@ This procedure works perfectly with my setup: a laptop running Fedora Linux (spe
 You should be able to adapt the instructions if you are running some other Linux distribution and desktop environment.
 I do not have a Windows or a macOS computer or an iPhone to test out which, if any of the steps below, break.
 
-{{% toc %}}
+{{< toc >}}
 
 ## One-time setup
 

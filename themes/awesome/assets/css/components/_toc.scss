@@ -22,12 +22,23 @@
       }
   }
   &.toc-floating {
+      // background-color: blue;
+      display: none;
       @media (min-width: 800px) {
 	  // background-color: red;
+	  display: unset;
 	  float: inline-end;
 	  margin-inline-start: var(--size-400);
 	  margin-block-end: var(--size-300);
 	  max-width: 42%;
+      }
+  }
+
+  &.toc-block {
+      // background-color: red;
+      @media (min-width: 800px) {
+	  // background-color: red;
+	  display: none;
       }
   }
 }

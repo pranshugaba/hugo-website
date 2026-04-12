@@ -4,6 +4,8 @@ subtitle: The software that I use on a daily basis
 summary: Where I talk about the software that I use on my devices
 ---
 
+{{< toc-float >}}
+
 I list below the software that I use on my devices. 
 This list is dynamic: it evolves as my needs and tastes change over time, as old applications become unsupported and new ones become available.
 What you see below is what I find optimal currently, and I have arrived upon this after a great deal of discovery and experimentation.

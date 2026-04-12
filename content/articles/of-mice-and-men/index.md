@@ -23,7 +23,6 @@ I liked it so much that I wanted to share my thoughts on it here.
 
 [^librerie]: A _librerie_ is a public bookshelf in TIFR where anyone can freely keep and take books.
 
-{{< toc closed=true >}}
 
 ## Spoiler-free review
 

@@ -14,6 +14,8 @@ draft: false
 featured: false
 ---
 
+{{< toc-float >}}
+
 Hello there!
 
 I hope you have been doing well in the past few months.

@@ -14,12 +14,13 @@ draft: false
 featured: false
 ---
 
-
 We have another chess puzzle!
 
 {{< note >}}
 If you are not familiar with the rules of chess, then you can [read the rules on Wikipedia](https://en.wikipedia.org/wiki/Rules_of_chess) or [practice playing on lichess.org](https://lichess.org/learn).
 {{</ note >}}
+
+{{< toc-float >}}
 
 ## The Problem
 

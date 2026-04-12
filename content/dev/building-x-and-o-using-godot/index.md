@@ -3,10 +3,6 @@ title: 'Building an X and O game using Godot'
 subtitle: 'Learn game development by making a game'
 summary: 'If you want to learn game development but do not know where to start, then this guide is for you. Learn game development using the Godot game engine by making an X and O game.'
 
-# featuredImage: "avatar.png"
-# previewOnly: false
-# caption: false
-
 authors: ['pranshu']
 
 tags: ['godot', 'gamedev']
@@ -18,7 +14,9 @@ draft: false
 featured: false
 ---
 
-{{% toc %}}
+{{< toc-float >}}
+
+{{< toc >}}
 
 ## Introduction
 

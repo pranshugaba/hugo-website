@@ -17,8 +17,9 @@ math: true
 {{< cv/lastupdatedon >}} &nbsp; 
 <a href="/pranshu-gaba-cv-20260411.pdf" target="_blank" rel="noopener">&#8595;&nbsp;Download&nbsp;CV&nbsp;as&nbsp;PDF</a>  
 
+{{< toc-float heading="Jump to" >}}
 
-{{< toc heading="Jump to" floating=true >}}
+{{< toc heading="Jump to" >}}
 
 ## Research interests
 
