@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hello there! by Pranshu Gaba</title><link>https://pranshugaba.com/</link><description>Welcome to my site</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sun, 12 Apr 2026 13:14:41 +0530</lastBuildDate><image><url>https://pranshugaba.com/icon.png</url></image><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Mini #14</title><link>https://pranshugaba.com/minis/14/</link><pubDate>Mon, 20 Oct 2025 22:22:00 +0530</pubDate><guid>https://pranshugaba.com/minis/14/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hello there! by Pranshu Gaba</title><link>https://pranshugaba.com/</link><description>Welcome to my site</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sun, 12 Apr 2026 14:41:01 +0530</lastBuildDate><image><url>https://pranshugaba.com/icon.png</url></image><atom:link href="https://pranshugaba.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Mini #14</title><link>https://pranshugaba.com/minis/14/</link><pubDate>Mon, 20 Oct 2025 22:22:00 +0530</pubDate><guid>https://pranshugaba.com/minis/14/</guid><description>
 <![CDATA[<p>It&rsquo;s days like <del>these</del> <em>Diwali</em> that I curse the Chinese for inventing gunpowder.</p>
 <p><cite><del>&ndash; The Rehearsal</del><br>
 &ndash; Me</cite></p>
-]]></description></item><item><title>Using your phone as a presentation clicker and pointer</title><link>https://pranshugaba.com/articles/using-your-phone-as-a-presentation-clicker-and-pointer/</link><pubDate>Sun, 17 Aug 2025 20:30:00 +0530</pubDate><guid>https://pranshugaba.com/articles/using-your-phone-as-a-presentation-clicker-and-pointer/</guid><description>
-<![CDATA[<p>When you are giving a presentation, say, at a conference, you want to be able to move around the stage.
+]]></description></item><item><title>Using your phone as a presentation clicker and pointer</title><link>https://pranshugaba.com/articles/using-your-phone-as-a-presentation-clicker-and-pointer/</link><pubDate>Sun, 17 Aug 2025 20:30:00 +0530</pubDate><guid>https://pranshugaba.com/articles/using-your-phone-as-a-presentation-clicker-and-pointer/</guid><description><![CDATA[
+<p>When you are giving a presentation, say, at a conference, you want to be able to move around the stage.
 You do not want to be tethered to your laptop behind the podium, and you definitely don&rsquo;t want to be yelling &ldquo;NEXT&rdquo; to a person at the keyboard each time you want to change the slide.</p>
 <p>You could go and purchase one of the presenter pointer clickers available in the market.
 They usually come with a USB dongle that you insert in your laptop.
@@ -23,7 +23,10 @@ But every such presentation remote that I have come across forces you to install
 This procedure works perfectly with my setup: a laptop running Fedora Linux (specifically, GNOME with Wayland) and an Android phone.
 You should be able to adapt the instructions if you are running some other Linux distribution and desktop environment.
 I do not have a Windows or a macOS computer or an iPhone to test out which, if any of the steps below, break.</p>
-<aside class="[ toc ] [ plain-link border-medium border-radius-large  ]">
+
+
+
+<aside class="[ toc toc-block ] [ plain-link border-medium border-radius-large ]">
   <details open>
     <summary>
       <h2 class="toc__heading">Table of Contents</h2>
@@ -53,6 +56,7 @@ I do not have a Windows or a macOS computer or an iPhone to test out which, if a
 </nav>
   </details>
 </aside>
+
 <h2 id="one-time-setup">One-time setup</h2>
 <p>The following steps need to be performed only once to set things up between your phone and your laptop.</p>
 <h3 id="installing-kde-connect">Installing KDE Connect</h3>
@@ -1740,33 +1744,6 @@ The title seemed familiar and intriguing, the quality of the hardbound was excel
 it was hard not to pick this book up.
 It is a short and captivating read and I finished it in a few days.
 I liked it so much that I wanted to share my thoughts on it here.</p>
-
-
-
-
-<aside class="[ toc ] [ plain-link border-medium border-radius-large  ]">
-  <details >
-    <summary>
-      <h2 class="toc__heading">Table of Contents</h2>
-    </summary>
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#spoiler-free-review">Spoiler-free review</a></li>
-    <li><a href="#review-with-spoilers">Review with spoilers</a>
-      <ul>
-        <li><a href="#george-and-lennie">George and Lennie</a></li>
-        <li><a href="#petting-and-rabbits">Petting and rabbits</a></li>
-        <li><a href="#the-characters">The characters</a></li>
-        <li><a href="#dreaming-of-a-better-future">Dreaming of a better future</a></li>
-        <li><a href="#the-people-are-all-on-their-own">The people are all on their own</a></li>
-        <li><a href="#cyclical-story-and-foreshadowing">Cyclical story and foreshadowing</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </details>
-</aside>
-
 <h2 id="spoiler-free-review">Spoiler-free review</h2>
 <p>The book is primarily a tale of two men: George Milton (who is small and witty) and Lennie Small (who is slow and brawny).
 The story takes place along the Salinas river near the Gabilan mountains, a few miles south of Soledad, California.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>
@@ -2108,8 +2085,8 @@ For instance, I have a 66-week streak for Mondays, but have only solved 2 or 3 S
 <![CDATA[<img src="https://pranshugaba.com/poems/white-horse/white-horse-featured_hu_cb4d4a4b6ab6f7db.jpg"  /><p>amidst the garbage dump<br>
 beside the mangroves one finds<br>
 a majestic white horse</p>
-]]></description></item><item><title>2023 W42: Shadow of the Moon</title><link>https://pranshugaba.com/newsletter/2023-W42/</link><pubDate>Sat, 21 Oct 2023 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/newsletter/2023-W42/</guid><description>
-<![CDATA[<p>Hello there!</p>
+]]></description></item><item><title>2023 W42: Shadow of the Moon</title><link>https://pranshugaba.com/newsletter/2023-W42/</link><pubDate>Sat, 21 Oct 2023 17:30:00 +0530</pubDate><guid>https://pranshugaba.com/newsletter/2023-W42/</guid><description><![CDATA[
+<p>Hello there!</p>
 <p>I hope you have been doing well in the past few months.
 This was the 42nd week of the year, which means that the end of the year is nigh.
 Indeed, as the wise Ford Prefect once said, &ldquo;Time is an illusion. Lunchtime, doubly so.&rdquo;</p>
@@ -2118,8 +2095,7 @@ There is a lot that is new on my site. I have also included several interesting 
 
 
 
-
-<aside class="[ toc ] [ plain-link border-medium border-radius-large  ]">
+<aside class="[ toc toc-block ] [ plain-link border-medium border-radius-large ]">
   <details open>
     <summary>
       <h2 class="toc__heading">Table of Contents</h2>
@@ -4678,6 +4654,7 @@ tossed in a flowerpot &mdash;<br>
 
     </div>
 </aside>
+
 <h2 id="the-problem">The Problem</h2>
 <p>You are organising a chess tournament.
 The games had just started when the clock struck one, and all players promptly left their games and headed for lunch! When they returned, they found to their dismay, they had all forgotten whose turn it was to play.
@@ -4696,8 +4673,7 @@ Does a chess position have the information required to deduce which player plays
 
 
 
-
-<aside class="[ toc ] [ plain-link border-medium border-radius-large  ]">
+<aside class="[ toc toc-block ] [ plain-link border-medium border-radius-large ]">
   <details open>
     <summary>
       <h2 class="toc__heading">Table of Contents</h2>
@@ -20424,8 +20400,11 @@ Two friends walk on the footpath, shoulder to shoulder.</p>
 <p>While Nuxt is powerful, it is too powerful for a simple site like mine which has just text and images. I feel Hugo is more than enough for my needs.</p>
 <p>I like my stack now. It is boring, and that&rsquo;s a good thing. I have redesigned my site twice in the last three months, and have spent hardly any time writing content. I am done adding new features to this site now.  I might polish up the code and publish it as a theme on <a href="https://themes.gohugo.io/" target="_blank" rel="noopener">Hugo themes</a>. Everything has been setup for me to write content and post it. I just need to start writing now.</p>
 <p>I have moved my Nuxt website to the nuxt subdomain, and it will remain there for posterity. I won&rsquo;t be making any changes to it. I will publish new  posts on my new website only.</p>
-]]></description></item><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/dev/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/building-x-and-o-using-godot/</guid><description>
-<![CDATA[<aside class="[ toc ] [ plain-link border-medium border-radius-large  ]">
+]]></description></item><item><title>Building an X and O game using Godot</title><link>https://pranshugaba.com/dev/building-x-and-o-using-godot/</link><pubDate>Tue, 29 Jun 2021 19:30:00 +0530</pubDate><guid>https://pranshugaba.com/dev/building-x-and-o-using-godot/</guid><description><![CDATA[
+
+
+
+<aside class="[ toc toc-block ] [ plain-link border-medium border-radius-large ]">
   <details open>
     <summary>
       <h2 class="toc__heading">Table of Contents</h2>
@@ -20470,6 +20449,7 @@ Two friends walk on the footpath, shoulder to shoulder.</p>
 </nav>
   </details>
 </aside>
+
 <h2 id="introduction">Introduction</h2>
 <p>Do you love playing video games? I sure do! I enjoy making games too, and it&rsquo;s highly likely that you would too.
 Game development is an umbrella term for ranging from designing levels, mechanics to coding the logic to making art and music.
