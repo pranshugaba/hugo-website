@@ -49,11 +49,15 @@
 }
 
 .list-mini__item {
-  // background-color: hsla(234, 81%, 75%, 0.14);
+  background-color: hsla(320, 81%, 75%, 0.14);
+  // background-color: oklch(from var(--accent) l c h / 1);
+  max-width: 30rem;
+  
+  
   padding-block-start: var(--size-400);
   padding-block-end: var(--size-200);
   padding-inline: var(--size-300);
-  border: var(--border-medium) solid var(--fg);
+  border: var(--border-thick) solid var(--fg);
   border-radius: var(--border-radius-large);
   .item__metadata {
     font-size: var(--font-size-250);
@@ -79,7 +83,7 @@
       margin-block-start: 0;
     }
     figure {
-      margin-block: var(--size-200);
+      margin-block-start: var(--size-500);
     }
   }
 }

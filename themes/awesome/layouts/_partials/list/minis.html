@@ -1,15 +1,22 @@
 <div class="list-mini__item">
   <div class="item__metadata">
-    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time> &nbsp; {{ .Date.Format "3:04 pm" }}
     {{ with .Params.Location }}
     &nbsp; · &nbsp; {{ partial "helpers/location" . }}
     {{ end }}
-    &nbsp; · &nbsp; #{{ .File.ContentBaseName }} 
+    &nbsp; · &nbsp; <a href="{{ .Permalink }}">#{{ .File.ContentBaseName }}</a>
   </div>
   <div class="item__content">
-      {{ .Content }}
-      <div class="item__read-more">
-        <a href="{{ .Permalink }}">{{ .Date.Format "3:04 pm" }}</a> 
-      </div>
+    {{ .Content }}
+    <div class="item__read-more">
+      {{ $tags := .GetTerms "tags" }}
+      {{ with $tags }}
+        <ul class="page__tags">
+          {{ range . }}
+            <li><a class="page__tags__link" href="{{ .Permalink }}">#{{ .LinkTitle | lower }}</a></li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </div>
   </div>
 </div>

@@ -42,7 +42,7 @@ institute.country = "India"
 
 advisor.name = "L. Sunil Chandran"
 thesis.name = "Vertex connectivity of Eulerian orientations"
-courses = ["Automata theory and computability", "Introduction to scalable systems", "Game theory", "Graph theory", "Combinatorics", "Number Theory", "Measure theory"]
+courses = ["Automata theory and computability", "Introduction to scalable systems", "Game theory", "Graph theory", "Combinatorics", "Number theory", "Measure theory"]
 
 #################################################################
 

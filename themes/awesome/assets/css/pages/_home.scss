@@ -1,6 +1,6 @@
 .home {
   display: grid;
-  margin-block-start: var(--size-100);
+  margin-block-start: var(--size-500);
   margin-inline: auto;
   column-gap: var(--size-700);
   row-gap: var(--size-400);
@@ -102,15 +102,12 @@
     .page__header {
       margin-block: 0;
     }
-    margin-block-end: calc(-1 * var(--size-400));
   }
   &__recent {
     border-block-start: var(--border-medium) solid var(--fg);
     padding-block-start: var(--size-200);
-    margin-block: var(--size-700);
-    @media (min-width: 480px) {
-      margin-block: var(--size-400);
-    }
+    // margin-block-start: var(--size-300);
+    margin-block-end: var(--size-500);
     &__heading {
       font-family: var(--font-sans-serif);
       font-size: var(--font-size-600);
