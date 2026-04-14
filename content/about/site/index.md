@@ -17,30 +17,6 @@ This site is deployed using [Github actions](https://github.com/features/actions
 
 This site uses a variant of [Inter](https://rsms.me/inter/) as the primary font and [<span style="font-family: var(--font-mono)">JetBrains Mono</span>](https://github.com/JetBrains/JetBrainsMono) for monospaced text. 
 
-### Easter eggs
-
-I have hidden a number of easter eggs across this site. How many can you find?
-
-## Some statistics
-
-|                         Count | Section                                         |
-| ----------------------------: | :---------------------------------------------- |
-|      {{< countposts articles >}} | [articles]({{< ref "/articles/" >}})                  |
-|      {{< countposts trips >}} | [trips]({{< ref "/trips/" >}})                  |
-|    {{< countposts recipes >}} | [recipes]({{< ref "/recipes/" >}})              |
-|    {{< countposts puzzles >}} | [puzzles]({{< ref "/puzzles/" >}})              |
-|      {{< countposts poems >}} | [poems]({{< ref "/poems/" >}})                  |
-|    {{< countposts stories >}} | [stories]({{< ref "/stories/" >}})              |
-|     {{< countposts comics >}} | [comics]({{< ref "/comics/" >}})                |
-| {{< countposts newsletter >}} | [newsletter issues]({{< ref "/newsletter/" >}}) |
-|      {{< countposts minis >}} | [minis]({{< ref "/minis/" >}})                  |
-|        {{< countposts dev >}} | [dev articles]({{< ref "/dev/" >}})             |
-|     **{{< countpostsall >}}** | **Total**                                       |
-
-Last updated: {{< lastupdated >}}
-
-Current colourscheme: **Pink Accents**
-
 ## Feeds
 
 You can read my posts using a feed reader!

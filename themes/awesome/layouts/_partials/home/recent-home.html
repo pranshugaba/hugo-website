@@ -1,4 +1,4 @@
-{{ $numberOfItems := 7 }}
+{{ $numberOfItems := 8 }}
 
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 {{ $pages := where $pages "Type" "ne" "minis" }}

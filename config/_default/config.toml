@@ -67,15 +67,15 @@ lastmod = ["lastmod", ":git", ":default"]
 [params]
   mainSections = [
       "articles",
-      "dev",
-      "trips",
-      "recipes",
       "poems",
       "puzzles",
-      "stories",
+      "recipes",
+      "trips",
       "comics",
-      "minis",
       "newsletter",
+      "stories",
+      "dev",
+      "minis",
   ]
   AuthorName = "Pranshu Gaba"
   GitHubUser = "pranshugaba"

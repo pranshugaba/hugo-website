@@ -1,0 +1,10 @@
+<div class="home__recent [ flow ]">
+  <h2 class="home__recent__heading">Site statistics</h2>
+  <p>Site last updated on <time datetime="{{ now.Format "2006-01-02T15:04-0700" }}">{{ now.Format "January 2, 2006, 3:04 PM" }}</time></p>
+
+  {{ partial "sitewordcount" . }}
+
+  <div class="home__recent__seeall" >
+    <a href="/about/site"> Read more about this site &#8594;</a>
+  </div>
+</div>
