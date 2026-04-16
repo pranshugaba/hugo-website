@@ -1471,6 +1471,15 @@ h4 code {
   margin-block-end: var(--size-600);
 }
 
+.list__pagination {
+  margin-block-start: var(--size-800);
+  padding-block-start: var(--size-600);
+  border-block-start: var(--border-medium) solid var(--fg);
+}
+.list__pagination__currentpage {
+  font-size: var(--font-size-500);
+}
+
 .admonition {
   border: var(--border-medium) solid var(--fg);
   border-radius: var(--border-radius-medium);

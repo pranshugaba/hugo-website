@@ -1,0 +1,56 @@
+{{ $page := . }}
+{{ $paginator := .Paginator }}
+
+{{ $pageType := "pages"}}
+  {{ with site.GetPage .Section }}
+    {{ with .Params.short_term }}
+      {{ $pageType = . }}
+    {{ else }}
+      {{ $pageType = .Title | lower }}
+  {{ end  }}
+{{ end }}
+
+
+{{ with $paginator }}
+  {{ if gt .TotalPages 1 }}
+    {{ $firstPostOnPage := sub .TotalNumberOfElements (mul (sub .PageNumber 1) .PagerSize) }}
+    {{ $lastPostOnPage := math.Max 1 (sub $firstPostOnPage (sub .PagerSize 1)) }}
+    
+    {{ $firstPostOnPrevPage := sub .TotalNumberOfElements (mul (sub .PageNumber 1) .PagerSize) .PagerSize}}
+    {{ $lastPostOnPrevPage := math.Max 1 (sub $firstPostOnPrevPage (sub .PagerSize 1)) }}
+    
+    {{ $firstPostOnNextPage := sub .TotalNumberOfElements (mul (sub .PageNumber 1) .PagerSize) (mul -1 .PagerSize) }}
+    {{ $lastPostOnNextPage := math.Max 1 (sub $firstPostOnNextPage (sub .PagerSize 1)) }}
+    <nav class="page__nav list__pagination">
+      <div class="list__pagination__currentpage">
+        Showing {{ $pageType }} {{ $lastPostOnPage }} to {{ $firstPostOnPage }} of {{ .TotalNumberOfElements }}
+      </div>
+      
+      {{ with .Next }}
+        <div class="page__nav__prev">
+  	<div class="page__nav__next__title">
+              &#8592; Previous {{ $pageType }}
+	  </div>
+	  <div>
+	    <a href="{{ .URL }}">
+	      {{ $lastPostOnPrevPage }} to {{ $firstPostOnPrevPage }}
+            </a>
+          </div>
+        </div>
+      {{ end }}
+      
+      {{ with .Prev }}
+        <div class="page__nav__next">
+	  <div class="page__nav__next__title">
+              Next {{ $pageType }} &#8594;
+	  </div>
+          <div>
+	    <a href="{{ .URL }}">
+              {{ $lastPostOnNextPage }} to {{ $firstPostOnNextPage }}
+	    </a>
+          </div>
+        </div>
+    {{ end }}
+    </nav>
+  {{ end }}
+{{ end }}

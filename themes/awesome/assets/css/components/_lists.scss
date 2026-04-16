@@ -179,3 +179,13 @@
     margin-block-end: var(--size-600);
   }
 }
+
+
+.list__pagination {
+    margin-block-start: var(--size-800);
+    padding-block-start: var(--size-600);
+    border-block-start: var(--border-medium) solid var(--fg);
+    &__currentpage {
+	font-size: var(--font-size-500);
+    }
+}

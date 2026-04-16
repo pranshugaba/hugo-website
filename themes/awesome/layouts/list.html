@@ -1,6 +1,7 @@
 {{ define "main" }}
   {{ $displayStyle := .Params.Display }}
   {{ $pages := .Pages }}
+  {{ $paginator := .Paginate $pages 10 }}
   <header class="[ page__header ] [ flow ]">
     {{ partial "single/_default/title" . }}
     {{ partial "single/_default/subtitle" . }}
@@ -9,22 +10,23 @@
     {{ .Content }}
   </article>
   {{ if (ne $displayStyle "none") }}
-      <ul class="[ items__list list-{{ $displayStyle }} ] [ flow ]">
-        {{ range $pageIndex, $page := $pages }}
-        <li>
-          {{ if $displayStyle }}
-            {{ partial (print "list/" $displayStyle ".html") . }}
-          {{ else }}
-            {{ if (eq .Section "minis")}}
-              {{ partial "list/minis.html" . }}
-            {{ else }}
-              {{ partial "list/minimal-section.html" . }}
-            {{ end }}
-          {{ end }}
-        </li>
+    <ul class="[ items__list list-{{ $displayStyle }} ] [ flow ]">
+      {{ range $pageIndex, $page := $paginator.Pages }}
+      <li>
+        {{ if $displayStyle }}
+          {{ partial (print "list/" $displayStyle ".html") . }}
         {{ else }}
-          <p>No posts in this section yet. Check back later!</p>
+          {{ if (eq .Section "minis")}}
+            {{ partial "list/minis.html" . }}
+          {{ else }}
+            {{ partial "list/minimal-section.html" . }}
+          {{ end }}
         {{ end }}
-      </ul>
-    {{ end }}
+      </li>
+      {{ else }}
+        <p>No posts in this section yet. Check back later!</p>
+      {{ end }}
+    </ul>
+    {{ partial "list/pagination.html" . }}
+  {{ end }}
 {{ end }}
