@@ -1,4 +1,4 @@
-updatedDate = 2026-04-11T09:30:00+05:30
+updatedDate = 2026-05-13T09:30:00+05:30
 
 #################################################################
 [[interests]]
@@ -30,7 +30,7 @@ courses = ["Logic, automata, and games", "Automata, verification, and infinite g
 
 
 [[educations]]
-programName = "Bachelor of Science (Research) with Mathematics major"
+programName = "Bachelor of Science (Research) with major in Mathematics"
 
 startDate = 2016-08-01T09:00:00+05:30
 endDate = 2020-07-31T17:00:00+05:30
@@ -49,34 +49,105 @@ courses = ["Automata theory and computability", "Introduction to scalable system
 [[publications]]
 title = "Expectation in Stochastic Games with Prefix-independent Objectives"
 collaborators = ["Laurent Doyen", "Shibashis Guha"]
-abstract = ''''''
+abstract = '''Stochastic two-player games model systems with an environment that is both adversarial and stochastic. In this paper, we study the expected value of bounded quantitative prefix-independent objectives in the context of stochastic games. We show a generic reduction from the expectation problem to linearly many instances of the almost-sure satisfaction problem for threshold Boolean objectives. The result follows from partitioning the vertices of the game into so-called value classes where each class consists of vertices of the same value. Our procedure further entails that the memory required by both players to play optimally for the expectation problem is no more than the memory required by the players to play optimally for the almost-sure satisfaction problem for a corresponding threshold Boolean objective.
 
-[[publications.acceptances]] 
+We show the applicability of the framework to compute the expected window mean-payoff measure in stochastic games. The window mean-payoff measure strengthens the classical mean-payoff measure by computing the mean payoff over windows of bounded length that slide along an infinite path. We show that the decision problem to check if the expected window mean-payoff value is at least a given threshold is in UP ∩ coUP when the window length is given in unary.'''
+
+[publications.conference]
 name = "CONCUR 2025"
-link = ""
+link = "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CONCUR.2025.16"
 date = "2025"
-doi = ""
+doi = "10.4230/LIPIcs.CONCUR.2025.16"
+
+[publications.fullversion]
+name = "arXiv"
+# link = ""
+# date = "2025"
+doi = "10.48550/arXiv.2405.18048"
+ 	
 
 [[publications.events]]
-name = "CONCUR"
-link = ""
-date = 2025-08-09T15:10:00+05:30
-location = "Aarhus, Denmark"
-slides = ""
-recording = ""
+name = "Seminar talk at MPI-SWS Kaiserslautern"
+date = 2025-09-19T11:00:00+02:00
+location = "MPI-SWS Kaiserslautern, Germany"
+# slides = ""
+
+[[publications.events]]
+name = "CONCUR 2025"
+link = "https://conferences.au.dk/confest2025/concur/program#c208909"
+date = 2025-08-27T17:05:00+02:00
+location = "University of Aarhus, Denmark"
+# slides = ""
+
+[[publications.events]]
+name = "Workshop on Automata and Games for Synthesis, co-located with FSTTCS 2024"
+link = "https://sites.google.com/view/fsttcs2024bworkshop/home"
+date = 2024-12-19T17:00:00+05:30
+location = "IIT Gandhinagar, India"
+# slides = ""
 
 #######################################
 
 [[publications]]
 title = "Optimising Expectation with Guarantees for Window Mean Payoff in Markov Decision Processes"
 collaborators = ["Shibashis Guha"]
-abstract = ''''''
+abstract = '''The window mean-payoff objective strengthens the classical mean-payoff objective by computing the mean-payoff over a finite window that slides along an infinite path. Two variants have been considered: in one variant, the maximum window length is fixed and given, while in the other, it is not fixed but is required to be bounded. In this paper, we look at the problem of synthesising strategies in Markov decision processes that maximise the window mean-payoff value in expectation, while also simultaneously guaranteeing that the value is above a certain threshold. We solve the synthesis problem for three different kinds of guarantees: sure (that needs to be satisfied in the worst-case, that is, for an adversarial environment), almost-sure (that needs to be satisfied with probability one), and probabilistic (that needs to be satisfied with at least some given probability \(p\)).
 
-[[publications.acceptances]] 
+We show that for fixed window mean-payoff objective, all the three problems are in PTIME, while for bounded window mean-payoff objective, they are in NP ∩ coNP, and thus have the same complexity as for maximising the expected performance without any guarantee. Moreover, we show that pure finite-memory strategies suffice for maximising the expectation with sure and almost-sure guarantees, whereas, for maximising expectation with a probabilistic guarantee, randomised strategies are necessary in general.'''
+
+[publications.conference]
 name = "AAMAS 2025"
-link = ""
-date = "2025"
-doi = ""
+pdf = "https://ifaamas.csc.liv.ac.uk/Proceedings/aamas2025/pdfs/p820.pdf"
+
+[publications.fullversion]
+name = "arXiv"
+doi = "10.48550/arXiv.2501.05384"
+pdf = "https://arxiv.org/pdf/2501.05384"
+
+
+
+[[publications.events]]
+name = "Workshop on Automata and Games for Synthesis, co-located with FSTTCS 2025"
+link = "https://sites.google.com/view/wagsfsttcs2025/home"
+date = 2025-12-20T11:10:00+05:30
+location = "BITS Pilani Goa, India"
+# slides = ""
+
+[[publications.events]]
+name = "Seminar talk at Masaryk University, Brno"
+# link = ""
+date = 2025-09-15T14:00:00+02:00
+location = "Masaryk University, Brno, Czech Republic"
+# slides = ""
+
+[[publications.events]]
+name = "Seminar talk at ISTA"
+# link = ""
+date = 2025-09-08T16:00:00+05:30
+location = "ISTA, Austria"
+# slides = ""
+
+[[publications.events]]
+name = "Highlights 2025"
+link = "https://highlights-conference.org/2025/"
+date = 2025-09-02T14:24:00+02:00
+location = "Saarland University, Saarbrücken, Germany"
+# slides = ""
+
+[[publications.events]]
+name = "Seminar talk at IIT Bombay"
+# link = ""
+date = 2025-08-12T10:30:00+05:30
+location = "IIT Bombay, India"
+# slides = ""
+
+
+[[publications.events]]
+name = "Formal Methods Update meeting 2025"
+link = "https://fmindia.cmi.ac.in/update2025/"
+date = 2025-07-03T11:45:00+05:30
+location = "DAU, Gandhinagar"
+# slides = ""
 
 
 
@@ -85,22 +156,36 @@ doi = ""
 [[publications]]
 title = "Recognising numbers"
 collaborators = ["Arnab Sur",]
-abstract = ''''''
+abstract = '''The use of monoids in the study of word languages recognized by finite-state automata has been quite fruitful. In this work, we look at the same idea of "recognizability by finite monoids" for other monoids. In particular, we attempt to characterize recognizable subsets of various additive and multiplicative monoids over integers, rationals, reals, and complex numbers. While these recognizable sets satisfy properties such as closure under Boolean operations and inverse morphisms, they do not enjoy many of the nice properties that recognizable word languages do.'''
 
-[[publications.acceptances]] 
+[publications.conference]
 name = "ICLA 2025"
-link = ""
+link = "https://link.springer.com/chapter/10.1007/978-3-031-89610-1_9"
 date = "2025"
-doi = ""
-notes = "Awarded best student paper award"
+doi = "10.1007/978-3-031-89610-1_9"
+awards = "received best student paper award"
 
 [[publications.events]]
-name = "ICLA"
-link = ""
-date = 2025-02-09T15:10:00+05:30
+name = "ICLA 2025"
+link = "https://logicindia.org/icla/icla2025/"
+date = 2025-02-05T12:15:00+05:30
 location = "ISI Kolkata"
-slides = ""
-recording = ""
+# slides = ""
+
+[[publications.events]]
+name = "TCS Research Expo 2024"
+# link = ""
+date = 2025-08-30T12:30:00+05:30
+location = "TCS Pune"
+# slides = ""
+
+[[publications.events]]
+name = "STCS Student Symposium 2024"
+link = "https://www.tcs.tifr.res.in/~symposium/stcs-24.html"
+date = 2024-08-12T11:30:00+05:30
+location = "TIFR Mumbai"
+# slides = ""
+# recording = ""
 
 #######################################
 
@@ -109,31 +194,54 @@ title = "Stochastic Window Mean-payoff Games"
 collaborators = ["Laurent Doyen", "Shibashis Guha"]
 abstract = '''Stochastic two-player games model systems with an environment that is both adversarial and stochastic. The environment is modelled by a player (Player 2) who tries to prevent the system (Player 1) from achieving its objective. We consider window mean-payoff objectives: these are finitary versions of the traditional mean-payoff objective, obtained by replacing the long-run average of the payoffs by average payoffs computed over a finite sliding window. We present complexity bounds and algorithmic solutions for computing strategies of Player 1 to ensure that the objective is satisfied with positive probability, with probability 1, or with probability at least \(p\), regardless of the strategy of Player 2. The solution crucially relies on a reduction to the special case of non-stochastic two-player games with the same objective. We also give a general characterisation of prefix-independent objectives for which this reduction holds.'''
 
-[[publications.acceptances]] 
+[publications.conference]
 name = "FoSSaCS 2024"
-link = ""
+# link = ""
 date = "2024"
-doi = ""
-[[publications.acceptances]] 
+doi = "10.1007/978-3-031-57228-9_3"
+[publications.fullversion]
 name = "LMCS"
-link = ""
+# link = ""
 date = "June 2025"
-doi = ""
+doi = "10.46298/lmcs-21(2:19)2025"
+
+
+
+[[publications.events]]
+name = "ACM ARCS 2025"
+link = "https://event.india.acm.org/arcs/arcs-2025/"
+date = 2025-02-27T11:00:00+05:30
+location = "PSG College of Technology, Coimbatore, India"
+# slides = ""
+
+[[publications.events]]
+name = "Seminar talk at ENS Paris-Saclay"
+# link = ""
+date = 2024-04-12T11:00:00+05:30
+location = "ENS Paris-Saclay"
+# slides = ""
+
+[[publications.events]]
+name = "FoSSaCS 2024"
+link = "https://etaps.org/2024/programme/"
+date = 2024-04-09T15:10:00+02:00
+location = "Luxembourg"
+# slides = ""
 
 [[publications.events]] 
-name = "FMUpdate 2023"
+name = "STCS Student Symposium 2023"
+link = "https://www.tifr.res.in/~pranshu.gaba/stcs-23/"
+date = 2023-08-03T15:00:00+05:30
+location = "TIFR Mumbai"
+# slides = ""
+# recording = ""
+
+[[publications.events]] 
+name = "Formal Methods Update Meeting 2023"
 link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2023-06-30T15:10:00+05:30
+date = 2023-06-30T10:20:00+05:30
 location = "IIT Goa, India"
-slides = ""
-recording = ""
-[[publications.events]]
-name = "FoSSaCS"
-link = ""
-date = 2024-04-09T15:10:00+05:30
-location = "Luxembourg"
-slides = ""
-recording = ""
+# slides = ""
 
 
 #######################################
@@ -155,85 +263,119 @@ References:
 - [KN07](https://people.csail.mit.edu/enikolova/papers/canadian-FINAL.pdf) David Karger and Evdokia Nikolova, Exact Algorithms for the Canadian Traveller Problem on Paths and Trees (2007)'''
 
 [[seminars.events]] 
-name = "FMUpdate 2023"
-link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2023-06-30T15:10:00+05:30
-location = "IIT Goa, India"
+name = "STCS Student seminar"
+link = "https://www.tcs.tifr.res.in/web/events/1527"
+date = 2025-02-14T16:00:00+05:30
+location = "TIFR Mumbai"
+notes = ""
 slides = ""
 recording = ""
-
 
 
 #######################################
 
 [[seminars]]
 title = "Sperner’s lemma and the equidissection of regular polygons"
+abstract = '''Equidissection of a regular polygon is the problem of dissecting the polygon into triangles of equal area. Given a regular \(n\)-gon and a positive integer \(m\), we ask if it is possible to equidissect the \(n\)-gon into \(m\) triangles. To answer this question, we make use of Sperner's lemma along with some elementary number theory. Sperner's lemma is a major combinatorial result that has found applications in topics such as fixed-point computation and fair division.
+
+We shall see Sperner's lemma and its proof, and use it to solve the equidissection problem for regular polygons. We will also look at some polygons that cannot be equidissected into \(m\) triangles for any positive \(m\). Finally, we will go over the equidissection problem for higher-dimensional hypercubes.
+
+References:
+- Monsky, P. (1970). On Dividing A Square Into Triangles. The American Mathematical Monthly, 77(2), 161–164. https://doi.org/10.1080/00029890.1970.11992441
+- Stein, S. (2004). Cutting a Polygon into Triangles of Equal Areas. The Mathematical Intelligencer 26, 17–21. https://doi.org/10.1007/BF02985395'''
 
 [[seminars.events]] 
-name = "FMUpdate 2023"
-link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2023-06-30T15:10:00+05:30
-location = "IIT Goa, India"
+name = "STCS Student seminar"
+link = "https://www.tcs.tifr.res.in/web/events/1527"
+date = 2024-07-12T14:30:00+05:30
+location = "TIFR Mumbai"
+notes = ""
 slides = ""
 recording = ""
-
-
 
 #######################################
 
 [[seminars]]
 title = "The connection between circuit complexity and first-order logic"
+abstract = '''Descriptive complexity is a branch of computational complexity where complexity classes are described using forms of logic, giving machine-independent characterizations of the complexity classes. In this talk, we look at an important result in descriptive complexity:
+
+> [BIS88, Theorem 8.1] A class of structures is in DLOGTIME-uniform AC0 if and only if the class is definable in first-order logic with numerical predicates.
+
+Here, DLOGTIME is the class of languages accepted by a deterministic random-access Turing machine in logarithmic time.
+A language is said to be in DLOGTIME-uniform AC0 if it can be recognized by a family of constant-depth, polynomial-size circuits with AND and OR gates, where the circuits can be constructed by a DLOGTIME machine. The proof involves showing that if a language is in DLOGTIME, then it is definable in first-order logic with numerical predicates.
+
+
+Reference:  
+[BIS88] David A. Mix-Barrington, Neil Immerman, and Howard Straubing. 1990. On uniformity within NC1. J. Comput. Syst. Sci. 41, 3 (Dec. 1990), 274–306. https://doi.org/10.1016/0022-0000(90)90022-D'''
 
 [[seminars.events]] 
-name = "FMUpdate 2023"
-link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2023-06-30T15:10:00+05:30
-location = "IIT Goa, India"
+name = "STCS Student seminar"
+link = "https://www.tcs.tifr.res.in/web/events/1527"
+date = 2024-05-17T11:30:00+05:30
+location = "TIFR Mumbai"
+notes = ""
 slides = ""
 recording = ""
-
 
 
 #######################################
 
 [[seminars]]
 title = "The complexity of solving simple stochastic games"
+abstract = '''Simple stochastic games (SSG) are zero-sum games played by two players on a directed graph with a designated target vertex. The players take turns moving a token along the edges of the game graph. The objective of player 1 is to eventually reach the target vertex, whereas the objective of player 2 is to never reach the target vertex. The SSG problem is to find the maximum probability with which player 1 wins the game. We will see that this problem is in NP ∩ coNP.
+We will also see 3 more problems that are polynomial-time equivalent to SSG, and thus also in NP ∩ coNP. Showing that any of these problems are in P would be a major breakthrough.
+
+You can read the following papers for more details.
+- The complexity of stochastic games, Anne Condon (1992)
+https://www.sciencedirect.com/science/article/pii/089054019290048K
+
+- The Complexity of Solving Stochastic Games on Graphs, Daniel Andersson & Peter Bro Miltersen (2009) 
+https://link.springer.com/chapter/10.1007/978-3-642-10631-6_13
+'''
 
 [[seminars.events]] 
-name = "FMUpdate 2023"
-link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2023-06-30T15:10:00+05:30
-location = "IIT Goa, India"
+name = "STCS Student seminar"
+link = "https://www.tcs.tifr.res.in/web/events/1527"
+date = 2024-02-16T17:30:00+05:30
+location = "TIFR Mumbai"
+notes = ""
 slides = ""
 recording = ""
-
 
 
 #######################################
 
 [[seminars]]
-title = "Courcelle’s theorem "
+title = "Courcelle’s theorem"
+abstract = '''Given a graph, we are often interested in deciding if it satisfies a certain property. Some examples of graph properties include connectivity, bipartiteness, and planarity. Courcelle's theorem gives parameterized upper bounds for decidability for a wide class of graph properties. Specifically, Courcelle's theorem is a metatheorem that states that if a graph property is definable in monadic second-order logic on graphs, then the property is decidable in linear fixed-parameter tractable time with the graph treewidth as the parameter. This theorem finds many uses in automata theory and model checking. We will study the theorem and look at some of its applications.'''
 
 [[seminars.events]] 
-name = "FMUpdate 2023"
-link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2023-06-30T15:10:00+05:30
-location = "IIT Goa, India"
+name = "STCS Student seminar"
+link = "https://www.tcs.tifr.res.in/web/events/1527"
+date = 2023-09-08T16:00:00+05:30
+location = "TIFR Mumbai"
+notes = ""
 slides = ""
 recording = ""
-
-
 
 #######################################
 
 [[seminars]]
 title = "Total-payoff games on graphs with windows"
+abstract = '''
+We look at a two-player game played on a weighted directed graph. The game begins by placing a pawn on a vertex in the graph. The players then take turns moving the pawn to an adjacent vertex in the graph, yielding an infinite walk in the graph. Each time an edge is traversed, Player 1 receives a payoff equal to the weight of the edge. An objective that has been traditionally studied for such games is the total-payoff objective.
+
+In this objective, Player 1 wins the game if the total payoff that they receive in the long run is non-negative, whereas Player 2 wins if the total-payoff is negative. A drawback of this objective is that Player 1 may win the game, and yet there may exist arbitrarily long stretches in the play in which the total-payoff is negative. This leads us to consider a stronger objective: window total-payoff. In this objective, Player 1 wins if from every point in the play, they can ensure that the total-payoff becomes non-negative in at most \(\ell\) steps. This objective gives stronger guarantees on the payoff received by Player 1 while at the same time being easier to compute.  Computing the winning regions and winning strategies for the players for the traditional total-payoff objective is only known to be in NP  ∩ coNP, whereas we see polynomial time algorithms to compute the same for the window total-payoff objective.
+
+All results presented in this talk are from the paper “Looking at mean-payoff and total-payoff through windows” by Chatterjee, Doyen, Randour, and Raskin (2015).
+'''
 
 [[seminars.events]] 
-name = "FMUpdate 2023"
-link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2023-06-30T15:10:00+05:30
-location = "IIT Goa, India"
+name = "STCS Student seminar"
+link = "https://www.tcs.tifr.res.in/web/events/1527"
+date = 2022-10-21T14:00:00+05:30
+location = "TIFR Mumbai"
+notes = ""
 slides = ""
 recording = ""
 
@@ -243,12 +385,26 @@ recording = ""
 
 [[seminars]]
 title = "Determinacy of two-player games with perfect information"
+abstract = '''
+A game with *perfect information* is a game in which no information is hidden from the players. All players know the rules and the state of the game at all times. Some examples of games with perfect information are Chess, Checkers, Go, and Nim.
+In two-player zero-sum games, a player has a *winning strategy* if they can always win no matter how the other player plays. A game is *determined* if one of the players has a winning strategy. Given a two-player game with perfect information, we would like to find out if it is determined.
+
+In today's talk, we discuss some results on two-player games with perfect information:
+- We show that all finite games are determined.
+- We construct an example of an infinite game that is not determined.
+- We define a topology on infinite games. We use this to show the determinacy of some special classes of infinite games.
+
+All results are from:  
+[1] "Theory of Games and Economic Behavior" by von Neumann and Morgenstern, 1947.  
+[2] "Infinite Games with Perfect Information" by Gale and Stewart, 1953.
+'''
 
 [[seminars.events]] 
-name = "FMUpdate 2023"
-link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2023-06-30T15:10:00+05:30
-location = "IIT Goa, India"
+name = "STCS Student seminar"
+link = "https://www.tcs.tifr.res.in/web/events/1527"
+date = 2022-03-25T16:15:00+05:30
+location = "TIFR Mumbai"
+notes = ""
 slides = ""
 recording = ""
 
@@ -257,12 +413,20 @@ recording = ""
 
 [[seminars]]
 title = "Vertex connectivity of Eulerian orientations "
+abstract = '''A directed graph is said to be \(k\)-vertex-connected if after deleting any \(k-1\) vertices, there is a directed path from every vertex to every other vertex along the directed edges.
+An Eulerian orientation of a graph is an orientation such that every vertex has equal indegree and outdegree.
+Given an \(2k\)-regular graph \(G\), we would like to know if every Eulerian orientation of \(G\) is \(k\)-vertex connected.
+Horsch and Szigeti showed that this property holds for complete bipartite graphs, line graphs of regular complete bipartite graphs, incidence graphs of projective planes, but not for most complete graphs.
+In this talk, we will go through their proofs. We will also show that this property does not hold for most regular complete multipartite graphs.
+
+Link to paper: https://doi.org/10.1016/j.dam.2020.09.022.'''
 
 [[seminars.events]] 
-name = "FMUpdate 2023"
-link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2023-06-30T15:10:00+05:30
-location = "IIT Goa, India"
+name = "STCS Student seminar"
+link = "https://www.tcs.tifr.res.in/web/events/1527"
+date = 2021-07-09T15:00:00+05:30
+location = "TIFR Mumbai"
+notes = ""
 slides = ""
 recording = ""
 
@@ -276,42 +440,43 @@ title = "Sperner’s lemma and its application to rent division"
 collaborators = ["Malhar Managoli", "Shanthanu Rai", "Aindrila Rakshit",]
 [[outreaches.events]] 
 name = "Chai and Why 2025"
-link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2025-06-30T15:10:00+05:30
-location = "Prithvi Café, Juhu"
-slides = ""
-recording = ""
+link = "https://main.tifr.res.in/outreach/chai_and_why.html"
+date = 2025-06-01T11:00:00+05:30
+location = "Prithvi Café, Juhu, Mumbai"
+# slides = ""
+
 [[outreaches.events]] 
 name = "Vigyan Vidushi 2024"
-link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2024-06-30T15:10:00+05:30
-location = "TIFR, Mumbai"
-slides = ""
-recording = ""
+link = "https://www.tcs.tifr.res.in/~stcs-vv-24/"
+date = 2024-07-18T09:00:00+05:30
+location = "TIFR Mumbai"
+# slides = ""
 
 #######################################
 
 [[outreaches]]
-title = "Voting mechanisms"
-collaborators = ["Ratnakar Medepalli",  "Shanthanu Rai", "Ashutosh Shankar",]
+title = "Voting mechanisms: Let's put it to a vote"
+collaborators = ["Ratnakar Medepalli",  "Shanthanu Rai",]
+abstract = '''Election season is here and with it, many questions. Do other countries have different systems from India? Which is the best? Is it always possible to determine a winner? Why do some people not vote for their favourite candidate? Does the shape of my constituency matter? 
+ Join us to explore questions in voting and social choice.'''
 [[outreaches.events]] 
 name = "Chai and Why 2024"
-link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2024-06-30T15:10:00+05:30
-location = "HBCSE"
-slides = ""
-recording = ""
+link = "https://main.tifr.res.in/outreach/chai_and_why.html"
+date = 2024-05-19T11:00:00+05:30
+location = "HBCSE, Mumbai"
+# slides = ""
 
 #######################################
 
 [[outreaches]]
-title = "Hamming codes"
+title = "Beating Chinese Whispers and other communication problems"
 collaborators = ["Eeshan Modak", "Varun Ramanathan", "Ashutosh Shankar",]
+abstract = '''If you've played the game of Chinese Whispers you'll know just how hard it can be to avoid errors in communication. How do modern communication networks transmit messages without errors? And do it efficiently and securely? Join us to explore the principles behind effective communication on computers, through some fun activities --- chessboard puzzles, card tricks and more! No hard math needed (or the knowledge of chess or cards). If you enjoy solving puzzles, then this session is for you!'''
 [[outreaches.events]] 
 name = "Chai and Why 2023"
-link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2024-06-30T15:10:00+05:30
-location = "Prithvi Café, Juhu"
+link = "https://main.tifr.res.in/outreach/chai_and_why.html"
+date = 2023-05-07T11:00:00+05:30
+location = "Prithvi Café, Juhu, Mumbai"
 slides = ""
 recording = ""
 
@@ -320,13 +485,14 @@ recording = ""
 [[outreaches]]
 title = "Fun with graphs"
 collaborators = ["Hari Krishnan P A", "Ashutosh Shankar",]
+abstract = '''What do roads, friendships and even codes all have in common? All can be modelled using a *graph*: a network of vertices connected by edges. Join us as we explore some interesting puzzles related to networks!'''
 [[outreaches.events]] 
 name = "Chai and Why 2022"
-link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2024-06-30T15:10:00+05:30
-location = "Ruparel College, Matunga"
-slides = ""
-recording = ""
+link = "https://main.tifr.res.in/outreach/chai_and_why.html"
+date = 2022-05-29T11:00:00+05:30
+location = "Ruparel College, Matunga, Mumbai"
+# slides = ""
+recording = "https://www.youtube.com/watch?v=qakLY2e_YMo"
 
 #######################################
 
@@ -335,8 +501,7 @@ title = "Impartial games"
 collaborators = ["IISc Maths department",]
 [[outreaches.events]] 
 name = "IISc Open Day 2020"
-link = "https://fmindia.cmi.ac.in/update2023/"
-date = 2024-06-30T15:10:00+05:30
+# link = ""
+date = 2020-02-01T10:00:00+05:30
 location = "IISc, Bengaluru"
-slides = ""
-recording = ""
+# slides = ""

@@ -1,0 +1,43 @@
+<div class="list-talks__item">
+  <div class="item__details [ flow ]">
+    <div class="item__heading">
+      <div class="item__title"><strong>{{ .title }}</strong></div>
+    </div>
+    {{ $events := .events }}    
+
+      {{ with .abstract }}
+        <details class="item__abstract__container">
+          <summary>Abstract</summary>
+          {{ . | markdownify }}
+      {{ with $events }}
+      <div class="item__events__container">  
+      <div><br/>Talk details</div>
+      <ul class="item__events">
+        {{ range . }}
+        <li class="item__event">
+
+  	  <div class="item__metadata">
+  	    {{ with .date }}
+    	    <div>Date: <time datetime="{{ dateFormat "2006-01-02T15:04:00-07:00" . }}">{{ dateFormat "January 2, 2006 3:04 PM" . }}</time></div>
+  	    {{ end }}
+  	    {{ with .location }}
+    	    <div class="item__location">Venue: {{ . }}</div>
+  	    {{ end }}
+  	    {{ with .link }}
+    	    <span class="item__location"><a href="{{ . }}" rel="noreferrer noopener" target="_blank">event link<sup>&nearrow;</sup></a></span>
+  	    {{ end }}
+  	    {{ with .recording }}
+    	    <span class="item__location"><a href="{{ . }}" rel="noreferrer noopener" target="_blank">recording<sup>&nearrow;</sup></a></span>
+  	    {{ end }}
+  	  </div>
+        </li>
+        {{ end }}
+      </ul>
+      </div>
+    {{ end }}
+        </details>
+      {{ end }}
+  
+
+  </div>
+</div>

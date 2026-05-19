@@ -11,7 +11,6 @@ math: true
 <pranshu@pranshugaba.com> &nbsp;
 <pranshu.gaba@tifr.res.in> &nbsp;
 [dblp](https://dblp.org/pid/345/7987) &nbsp;
-[orcid](https://orcid.org/0009-0000-8012-780X) &nbsp; 
 
 
 {{< cv/lastupdatedon >}} &nbsp; 
@@ -42,11 +41,16 @@ math: true
 {{< cv/talks talktype="outreaches" >}}
 
 ## Experience
+
 ### Reviewing
 MathOR, ATVA 2025, EC 2025, CAV 2025, CSL 2025, STACS 2025, LICS 2024
 
+### Moderation
+- Panel Discussion on _Education and Careers in Logic (ECL)_ at [ICLA 2025](https://logicindia.org/icla/icla2025/#panel-discussions)
+- Discussion on _Open problems and challenges in Reactive Synthesis_ at [IndiCS Seminar on Automated Synthesis 2025](https://indics-synthesis.github.io/)
+
 ### Teaching assistantship
-- Automata and Computability at TIFR (January - May 2025)
+- Automata and Computability at TIFR (January -- May 2025)
 
 
 ### Conferences attended

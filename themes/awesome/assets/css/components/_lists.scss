@@ -189,3 +189,32 @@
 	font-size: var(--font-size-500);
     }
 }
+.talks__list {
+    list-style: none;
+    padding-left: 0;
+    > li {
+	--flow-space: var(--size-600);
+    }
+}
+.list-talks__item {
+    .item__title {
+	text-wrap: balance;
+    }
+    .item__events {
+	list-style: none;
+	padding-inline: var(--size-300);	
+    }
+    .item__event {
+	margin-block-start: 0;
+	
+	.item__metadata {
+	    // background-color: red;
+	    padding-inline: var(--size-300);
+	    padding-block-end: var(--size-200);
+	    font-size: var(--font-size-300);
+	}
+    }
+    .item__details > * {
+	--flow-space: var(--size-100);
+    }
+}

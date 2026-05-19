@@ -18,9 +18,13 @@ draft: false
 featured: false
 ---
 
+{{< toc-float >}}
+
 When the clock strikes twelve during the day, we say it's noon. We may perceive this to be the time when the Sun is at its highest point in the sky. However, this is rarely, if ever, true.
 
 To avoid confusion, let's say when the clock reads 12:00, it is _noon_, and when the Sun is at its highest, it is _local noon_. It will soon be clear why it's called it local noon.
+
+{{< toc >}}
 
 ## Why is noon not the same as local noon?
 

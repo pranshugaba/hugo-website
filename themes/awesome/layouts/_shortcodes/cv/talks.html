@@ -14,7 +14,11 @@
   <ul class="[ talks__list ] [ flow ]">
     {{ range . }}
     <li>
-      {{ partial "list/talks.html" . }}
+      {{ if (eq $talktype "seminars") }}
+        {{ partial "list/seminars.html" . }}
+      {{ else }}
+        {{ partial "list/talks.html" . }}      
+      {{ end }}
     </li>
     {{ end }}
   </ul>
