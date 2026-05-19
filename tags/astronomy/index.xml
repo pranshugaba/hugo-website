@@ -1,6 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Astronomy by Pranshu Gaba</title><link>https://pranshugaba.com/tags/astronomy/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Thu, 16 Apr 2026 18:08:15 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/astronomy/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/astronomy/index.xml" rel="self" type="application/rss+xml"/><item><title>Zero Shadow Day</title><link>https://pranshugaba.com/articles/zero-shadow-day/</link><pubDate>Sun, 15 May 2022 12:35:00 +0530</pubDate><guid>https://pranshugaba.com/articles/zero-shadow-day/</guid><description>
-<![CDATA[<p>When the clock strikes twelve during the day, we say it&rsquo;s noon. We may perceive this to be the time when the Sun is at its highest point in the sky. However, this is rarely, if ever, true.</p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Astronomy by Pranshu Gaba</title><link>https://pranshugaba.com/tags/astronomy/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Tue, 19 May 2026 10:59:55 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/astronomy/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/astronomy/index.xml" rel="self" type="application/rss+xml"/><item><title>Zero Shadow Day</title><link>https://pranshugaba.com/articles/zero-shadow-day/</link><pubDate>Sun, 15 May 2022 12:35:00 +0530</pubDate><guid>https://pranshugaba.com/articles/zero-shadow-day/</guid><description><![CDATA[
+<p>When the clock strikes twelve during the day, we say it&rsquo;s noon. We may perceive this to be the time when the Sun is at its highest point in the sky. However, this is rarely, if ever, true.</p>
 <p>To avoid confusion, let&rsquo;s say when the clock reads 12:00, it is <em>noon</em>, and when the Sun is at its highest, it is <em>local noon</em>. It will soon be clear why it&rsquo;s called it local noon.</p>
+
+
+
+<aside class="[ toc toc-block ] [ plain-link border-medium border-radius-large ]">
+  <details open>
+    <summary>
+      <h2 class="toc__heading">Table of Contents</h2>
+    </summary>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-is-noon-not-the-same-as-local-noon">Why is noon not the same as local noon?</a>
+      <ul>
+        <li><a href="#local-noon-also-depends-on-the-time-of-the-year">Local noon also depends on the time of the year</a></li>
+      </ul>
+    </li>
+    <li><a href="#shadow-length-at-local-noon">Shadow length at local noon</a></li>
+    <li><a href="#latitudes-where-zero-shadow-is-observed">Latitudes where Zero Shadow is observed</a>
+      <ul>
+        <li><a href="#zero-shadow-day-in-mumbai">Zero Shadow Day in Mumbai</a></li>
+        <li><a href="#zero-shadow-day-at-your-location">Zero Shadow Day at your location</a></li>
+      </ul>
+    </li>
+    <li><a href="#further-reading">Further Reading</a></li>
+  </ul>
+</nav>
+  </details>
+</aside>
+
 <h2 id="why-is-noon-not-the-same-as-local-noon">Why is noon not the same as local noon?</h2>
 <p>The earth rotates about its axis, making a complete turn every 24 hours. Because of this, we see the Sun rise and set every day. The Earth rotates from west to east, so the Sun appears to rise in the east and set in the west.</p>
 <p>Places that are in the east experience events like sunrise and sunset before places in the west. Consider Mumbai and Pune, two cities in Maharashtra, India. Because Pune is roughly 1 degree east of Mumbai, the day begins and ends in Pune slightly earlier than it does in Mumbai. We can calculate how much earlier:</p>
