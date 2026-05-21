@@ -14,7 +14,7 @@ math: true
 
 
 {{< cv/lastupdatedon >}} &nbsp; 
-<a href="/pranshu-gaba-cv.pdf" target="_blank" rel="noopener">&#8595;&nbsp;Download&nbsp;CV&nbsp;as&nbsp;PDF</a>  
+<a href="pranshu-gaba-cv.pdf" target="_blank" rel="noopener">&#8595;&nbsp;Download&nbsp;CV&nbsp;as&nbsp;PDF</a>  
 
 {{< toc-float heading="Jump to" >}}
 
@@ -29,11 +29,12 @@ math: true
 
 {{< cv/educations >}}
 
-## Communication
 
-### Publications
+
+## Publications
 {{< cv/talks talktype="publications" >}}
 
+## Other talks and presentations
 ### Seminar talks
 {{< cv/talks talktype="seminars" >}}
 
@@ -46,8 +47,8 @@ math: true
 MathOR, ATVA 2025, EC 2025, CAV 2025, CSL 2025, STACS 2025, LICS 2024
 
 ### Moderating
-- Panel Discussion on _Education and Careers in Logic (ECL)_ at [ICLA 2025](https://logicindia.org/icla/icla2025/#panel-discussions)
 - Discussion on _Open problems and challenges in Reactive Synthesis_ at [IndiCS Seminar on Automated Synthesis 2025](https://indics-synthesis.github.io/)
+- Panel Discussion on _Education and Careers in Logic (ECL)_ at [ICLA 2025](https://logicindia.org/icla/icla2025/#panel-discussions)
 
 ### Teaching assistance
 - Automata and Computability at TIFR (January -- May 2025)
