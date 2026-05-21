@@ -14,7 +14,7 @@ math: true
 
 
 {{< cv/lastupdatedon >}} &nbsp; 
-<a href="/pranshu-gaba-cv-20260411.pdf" target="_blank" rel="noopener">&#8595;&nbsp;Download&nbsp;CV&nbsp;as&nbsp;PDF</a>  
+<a href="/pranshu-gaba-cv.pdf" target="_blank" rel="noopener">&#8595;&nbsp;Download&nbsp;CV&nbsp;as&nbsp;PDF</a>  
 
 {{< toc-float heading="Jump to" >}}
 
@@ -45,11 +45,11 @@ math: true
 ### Reviewing
 MathOR, ATVA 2025, EC 2025, CAV 2025, CSL 2025, STACS 2025, LICS 2024
 
-### Moderation
+### Moderating
 - Panel Discussion on _Education and Careers in Logic (ECL)_ at [ICLA 2025](https://logicindia.org/icla/icla2025/#panel-discussions)
 - Discussion on _Open problems and challenges in Reactive Synthesis_ at [IndiCS Seminar on Automated Synthesis 2025](https://indics-synthesis.github.io/)
 
-### Teaching assistantship
+### Teaching assistance
 - Automata and Computability at TIFR (January -- May 2025)
 
 
@@ -69,7 +69,7 @@ MathOR, ATVA 2025, EC 2025, CAV 2025, CSL 2025, STACS 2025, LICS 2024
 - Winter School on Verification 2024 in IIT Delhi, India
 - SAT 2024 in TCS Pune, India
 - ISLA 2024 in IIT Goa, India
-- ETAPS 2024 in Luxembourg
+- ETAPS 2024 in Luxembourg (student volunteer)
 
 #### 2023 
 - FSTTCS 2023 in IIIT Hyderabad, India
@@ -77,6 +77,5 @@ MathOR, ATVA 2025, EC 2025, CAV 2025, CSL 2025, STACS 2025, LICS 2024
 
 #### 2022 
 - FSTTCS 2022 in IIT Madras, Chennai, India
-- FLoC 2022 in Technion, Haifa, Israel
+- FLoC 2022 in Technion, Haifa, Israel (student volunteer)
 
-<!-- ### Projects -->

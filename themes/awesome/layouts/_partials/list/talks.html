@@ -32,13 +32,13 @@
       <p class="item__acceptances">
       {{ end }}  
       {{ with .conference }}
-        Accepted in {{ .name }} {{ with .doi }} (<a href="https://doi.org/{{ . }}" rel="noreferrer noopener" target="_blank">link<sup>&nearrow;</sup></a>)  {{ else }} (<a href="{{ .pdf }}" rel="noreferrer noopener" target="_blank">link<sup>&nearrow;</sup></a>) {{ end }}
+        Accepted in <a href="{{ .doi }}" rel="noreferrer noopener" target="_blank">{{ .name }}</a>
         {{ with .awards }}
-          ({{ . }} ☆)
+          (☆{{ . }}☆)
         {{ end }}<br/>
       {{ end }}
       {{ with .fullversion }}
-        Full version at {{ .name }} {{ with .doi }} (<a href="https://doi.org/{{ . }}" rel="noreferrer noopener" target="_blank">link<sup>&nearrow;</sup></a>)  {{ end }}
+        Full version at <a href="{{ .doi }}" rel="noreferrer noopener" target="_blank">{{ .name }}</a>
         {{ with .awards }}
           {{ . }}
         {{ end }}

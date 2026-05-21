@@ -1,13 +1,13 @@
-updatedDate = 2026-05-13T09:30:00+05:30
+updatedDate = 2026-05-21T09:30:00Z
 
 #################################################################
 [[interests]]
-type = "general"
-topics = ["formal methods", "game theory", "logic", "computer science", "discrete mathematics"]
+type = "General"
+topics = ["formal methods", "game theory", "automata theory", "logic", "discrete mathematics"]
 
 [[interests]]
-type = "specific"
-topics = ["reactive synthesis", "finitary objectives", "stochastic games", "Markov decision processes"]
+type = "Specific"
+topics = ["reactive synthesis", "verification", "probabilistic systems", "Markov decision processes"]
 
 
 #################################################################
@@ -18,7 +18,7 @@ institute.name = "Tata Institute of Fundamental Research"
 institute.city = "Mumbai"
 institute.country = "India"
 
-startDate = 2020-09-21T09:30:00+05:30
+startDate = 2020-09-21T09:30:00
 completed = false
 
 advisor.name = "Shibashis Guha"
@@ -26,22 +26,22 @@ advisor.link = "https://www.tifr.res.in/~shibashis.guha/"
 
 thesis.name = "Window mean-payoff in turn-based stochastic games"
 
-courses = ["Logic, automata, and games", "Automata, verification, and infinite games", "Descriptive complexity", "Computational complexity", "Algebra and computation", "Algebraic automata theory"]
+courses = ["Automata, verification, and infinite games", "Descriptive complexity", "Probability", "Algebraic automata theory", "Computational complexity", "Algebra and computation",  "Online algorithms"]
 
 
 [[educations]]
 programName = "Bachelor of Science (Research) with major in Mathematics"
 
-startDate = 2016-08-01T09:00:00+05:30
-endDate = 2020-07-31T17:00:00+05:30
+startDate = 2016-08-01T09:00:00
+endDate = 2020-07-31T17:00:00
 completed = true
 
 institute.name = "Indian Institute of Science"
 institute.city = "Bangalore"
 institute.country = "India"
 
-advisor.name = "L. Sunil Chandran"
-thesis.name = "Vertex connectivity of Eulerian orientations"
+# advisor.name = "L. Sunil Chandran"
+# thesis.name = "Vertex connectivity of Eulerian orientations"
 courses = ["Automata theory and computability", "Introduction to scalable systems", "Game theory", "Graph theory", "Combinatorics", "Number theory", "Measure theory"]
 
 #################################################################
@@ -57,13 +57,13 @@ We show the applicability of the framework to compute the expected window mean-p
 name = "CONCUR 2025"
 link = "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CONCUR.2025.16"
 date = "2025"
-doi = "10.4230/LIPIcs.CONCUR.2025.16"
+doi = "https://doi.org/10.4230/LIPIcs.CONCUR.2025.16"
 
 [publications.fullversion]
 name = "arXiv"
 # link = ""
 # date = "2025"
-doi = "10.48550/arXiv.2405.18048"
+doi = "https://doi.org/10.48550/arXiv.2405.18048"
  	
 
 [[publications.events]]
@@ -80,7 +80,7 @@ location = "University of Aarhus, Denmark"
 # slides = ""
 
 [[publications.events]]
-name = "Workshop on Automata and Games for Synthesis, co-located with FSTTCS 2024"
+name = "Workshop on Automata and Games for Synthesis (co-located with FSTTCS 2024)"
 link = "https://sites.google.com/view/fsttcs2024bworkshop/home"
 date = 2024-12-19T17:00:00+05:30
 location = "IIT Gandhinagar, India"
@@ -97,17 +97,17 @@ We show that for fixed window mean-payoff objective, all the three problems are 
 
 [publications.conference]
 name = "AAMAS 2025"
-pdf = "https://ifaamas.csc.liv.ac.uk/Proceedings/aamas2025/pdfs/p820.pdf"
+doi = "https://ifaamas.csc.liv.ac.uk/Proceedings/aamas2025/pdfs/p820.pdf"
 
 [publications.fullversion]
 name = "arXiv"
-doi = "10.48550/arXiv.2501.05384"
+doi = "https://doi.org/10.48550/arXiv.2501.05384"
 pdf = "https://arxiv.org/pdf/2501.05384"
 
 
 
 [[publications.events]]
-name = "Workshop on Automata and Games for Synthesis, co-located with FSTTCS 2025"
+name = "Workshop on Automata and Games for Synthesis (co-located with FSTTCS 2025)"
 link = "https://sites.google.com/view/wagsfsttcs2025/home"
 date = 2025-12-20T11:10:00+05:30
 location = "BITS Pilani Goa, India"
@@ -121,7 +121,7 @@ location = "Masaryk University, Brno, Czech Republic"
 # slides = ""
 
 [[publications.events]]
-name = "Seminar talk at ISTA"
+name = "Seminar talk at IST Austria"
 # link = ""
 date = 2025-09-08T16:00:00+05:30
 location = "ISTA, Austria"
@@ -136,7 +136,7 @@ location = "Saarland University, Saarbrücken, Germany"
 
 [[publications.events]]
 name = "Seminar talk at IIT Bombay"
-# link = ""
+link = "https://www.cse.iitb.ac.in/talks"
 date = 2025-08-12T10:30:00+05:30
 location = "IIT Bombay, India"
 # slides = ""
@@ -162,8 +162,14 @@ abstract = '''The use of monoids in the study of word languages recognized by fi
 name = "ICLA 2025"
 link = "https://link.springer.com/chapter/10.1007/978-3-031-89610-1_9"
 date = "2025"
-doi = "10.1007/978-3-031-89610-1_9"
-awards = "received best student paper award"
+doi = "https://doi.org/10.1007/978-3-031-89610-1_9"
+awards = "best student paper award"
+
+[publications.fullversion]
+name = "arXiv"
+doi = "https://doi.org/10.48550/arXiv.2502.07314"
+pdf = "https://arxiv.org/pdf/2502.07314"
+
 
 [[publications.events]]
 name = "ICLA 2025"
@@ -198,12 +204,12 @@ abstract = '''Stochastic two-player games model systems with an environment that
 name = "FoSSaCS 2024"
 # link = ""
 date = "2024"
-doi = "10.1007/978-3-031-57228-9_3"
+doi = "https://doi.org/10.1007/978-3-031-57228-9_3"
 [publications.fullversion]
 name = "LMCS"
 # link = ""
 date = "June 2025"
-doi = "10.46298/lmcs-21(2:19)2025"
+doi = "https://doi.org/10.46298/lmcs-21(2:19)2025"
 
 
 
@@ -243,6 +249,20 @@ date = 2023-06-30T10:20:00+05:30
 location = "IIT Goa, India"
 # slides = ""
 
+
+[[publications]]
+title = "Sure-almost-sure and Sure-limit-sure Window Mean Payoff in Markov Decision Processes"
+collaborators = ["Shibashis Guha"]
+abstract = '''Given rationals α and β, the sure-almost-sure problem for a quantitative objective φ in a Markov decision process (MDP) asks if one can simultaneously ensure that all outcomes of the MDP have φ-value at least α (i.e. sure α satisfaction) and with probability 1 the outcome has φ-value at least β (i.e. almost-sure β satisfaction). The sure-limit-sure problem asks if for all ε>0 one can simultaneously ensure that all outcomes have φ-value at least α and with probability at least 1−ε the outcome has φ-value at least β. Moreover, if simultaneous satisfaction of objectives is possible, then one would also like to construct a strategy (for sure-almost-sure) or a family of strategies (for sure-limit-sure) that achieves this.
+
+In this paper, we solve the sure-almost-sure and sure-limit-sure problems for window mean-payoff objectives. The window mean-payoff objective strengthens the standard mean-payoff objective by requiring that the average payoff of a finite window that slides over an infinite run be greater than a given threshold. We study two variants of window mean payoff: in the fixed variant, the window length ℓ is given, while in the bounded variant, the length is not given but is required to be bounded throughout the run. We show that the sure-almost-sure problem and the sure-limit-sure problem are both in P for the fixed variant (if ℓ is given in unary) and are both in NP ∩ coNP for the bounded variant, matching the computational complexity of sure satisfaction and almost-sure satisfaction when considered separately for these objectives. We also give bounds for the memory requirement of winning strategies for all considered problems. '''
+
+
+[publications.fullversion]
+name = "arXiv"
+# link = ""
+# date = "2025"
+doi = "https://doi.org/10.48550/arXiv.2605.12191"
 
 #######################################
 
