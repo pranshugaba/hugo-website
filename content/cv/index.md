@@ -14,7 +14,7 @@ math: true
 
 
 {{< cv/lastupdatedon >}} &nbsp; 
-<a href="/cv-pranshu-gaba.pdf" target="_blank" rel="noopener">&#8595;&nbsp;Download&nbsp;CV&nbsp;as&nbsp;PDF</a>  
+<a href="cv-pranshu-gaba.pdf" target="_blank" rel="noopener">&#8595;&nbsp;Download&nbsp;CV&nbsp;as&nbsp;PDF</a>  
 
 {{< toc-float heading="Jump to" >}}
 
