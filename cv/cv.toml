@@ -154,7 +154,7 @@ location = "DAU, Gandhinagar"
 #######################################
 
 [[publications]]
-title = "Recognising numbers"
+title = "Recognizing numbers"
 collaborators = ["Arnab Sur",]
 abstract = '''The use of monoids in the study of word languages recognized by finite-state automata has been quite fruitful. In this work, we look at the same idea of "recognizability by finite monoids" for other monoids. In particular, we attempt to characterize recognizable subsets of various additive and multiplicative monoids over integers, rationals, reals, and complex numbers. While these recognizable sets satisfy properties such as closure under Boolean operations and inverse morphisms, they do not enjoy many of the nice properties that recognizable word languages do.'''
 
@@ -460,7 +460,7 @@ title = "Sperner’s lemma and its application to rent division"
 collaborators = ["Malhar Managoli", "Shanthanu Rai", "Aindrila Rakshit",]
 [[outreaches.events]] 
 name = "Chai and Why 2025"
-link = "https://main.tifr.res.in/outreach/chai_and_why.html"
+link = "https://www.tifr.res.in/~outreach/cw20250601.html"
 date = 2025-06-01T11:00:00+05:30
 location = "Prithvi Café, Juhu, Mumbai"
 # slides = ""
@@ -481,7 +481,7 @@ abstract = '''Election season is here and with it, many questions. Do other coun
  Join us to explore questions in voting and social choice.'''
 [[outreaches.events]] 
 name = "Chai and Why 2024"
-link = "https://main.tifr.res.in/outreach/chai_and_why.html"
+link = "https://www.tifr.res.in/~outreach/cw20240519.html"
 date = 2024-05-19T11:00:00+05:30
 location = "HBCSE, Mumbai"
 # slides = ""
@@ -494,7 +494,7 @@ collaborators = ["Eeshan Modak", "Varun Ramanathan", "Ashutosh Shankar",]
 abstract = '''If you've played the game of Chinese Whispers you'll know just how hard it can be to avoid errors in communication. How do modern communication networks transmit messages without errors? And do it efficiently and securely? Join us to explore the principles behind effective communication on computers, through some fun activities --- chessboard puzzles, card tricks and more! No hard math needed (or the knowledge of chess or cards). If you enjoy solving puzzles, then this session is for you!'''
 [[outreaches.events]] 
 name = "Chai and Why 2023"
-link = "https://main.tifr.res.in/outreach/chai_and_why.html"
+link = "https://www.tifr.res.in/~outreach/cw20230507.html"
 date = 2023-05-07T11:00:00+05:30
 location = "Prithvi Café, Juhu, Mumbai"
 slides = ""
@@ -508,7 +508,7 @@ collaborators = ["Hari Krishnan P A", "Ashutosh Shankar",]
 abstract = '''What do roads, friendships and even codes all have in common? All can be modelled using a *graph*: a network of vertices connected by edges. Join us as we explore some interesting puzzles related to networks!'''
 [[outreaches.events]] 
 name = "Chai and Why 2022"
-link = "https://main.tifr.res.in/outreach/chai_and_why.html"
+link = "https://www.tifr.res.in/~outreach/cw20220529.html"
 date = 2022-05-29T11:00:00+05:30
 location = "Ruparel College, Matunga, Mumbai"
 # slides = ""
