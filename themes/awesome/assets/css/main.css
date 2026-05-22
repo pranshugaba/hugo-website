@@ -2194,7 +2194,14 @@ figure figcaption {
   }
 }
 .home__profile__picture {
-  max-width: 150px;
+  max-width: 160px;
+}
+@media (min-width: 800px) {
+  .home__profile__picture {
+    max-width: 180px;
+  }
+}
+.home__profile__picture {
   display: block;
   width: 100%;
   height: auto;
@@ -2206,7 +2213,7 @@ figure figcaption {
   font-weight: 600;
   letter-spacing: -0.0125em;
   line-height: 1.2;
-  margin-block-start: var(--size-400);
+  margin-block-start: var(--size-500);
 }
 .home__profile__text .profile__secondary, .home__profile__text .profile__tertiary {
   margin-block-start: var(--size-200);

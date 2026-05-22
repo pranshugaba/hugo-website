@@ -1,4 +1,4 @@
-- description: 'New preprint [_Stochastic Window Mean-Payoff Games_](https://arxiv.org/abs/2304.11563) uploaded on arXiv.'
+- description: 'New preprint [_Stochastic Window Mean-Payoff Games_](https://arxiv.org/abs/2304.11563) available on arXiv.'
   newsDate: 2023-04-23T17:30:00+05:30
 
 - description: 'I will give a talk on _Stochastic Window Mean-Payoff Games_ at [FMUpdate&nbsp;2023](https://fmindia.cmi.ac.in/update2023/) on 30&nbsp;June&nbsp;2023.'
@@ -22,7 +22,7 @@
 - description: "We will conduct a _Chai and Why?_ session titled [_Let's put it to a vote_](https://www.tifr.res.in/~outreach/cw20240519.html) on 19&nbsp;May&nbsp;2024 at 11:00&nbsp;am at HBCSE, Mankhurd."
   newsDate: 2024-05-12T05:30:00+05:30
 
-- description: 'New preprint [_Expectation in Stochastic Window Mean-Payoff Games_](https://arxiv.org/abs/2405.18048) uploaded on arXiv.'
+- description: 'New preprint [_Expectation in Stochastic Window Mean-Payoff Games_](https://arxiv.org/abs/2405.18048) available on arXiv.'
   newsDate: 2024-05-29T05:30:00+05:30
 
 - description: 'Paper with Arnab Sur on _Recognizing Numbers_  has been accepted at [ICLA 2025](https://logicindia.org/icla/icla2025/)!'
@@ -40,8 +40,20 @@
 - description: 'I will give a student seminar talk on [_The Canadian traveller problem_](https://www.tcs.tifr.res.in/web/events/1527) on 14&nbsp;February&nbsp;2025 at 4:00&nbsp;pm at TIFR.'
   newsDate: 2025-02-12T17:30:00+05:30
 
+- description: "We will conduct a _Chai and Why?_ session titled [_Fair shares with triangles: The magic of Sperner's lemma_](https://www.tifr.res.in/~outreach/cw20240519.html) on 1&nbsp;June&nbsp;2025 at 11:00&nbsp;am at Prithvi Café, Juhu."
+  newsDate: 2025-05-12T05:30:00+05:30
+
 - description: 'Paper with Laurent Doyen and Shibashis Guha on _Expectation in Stochastic Games with Prefix-independent Objectives_  has been accepted at [CONCUR 2025](https://conferences.au.dk/confest2025/concur/)!'
   newsDate: 2025-05-27T20:30:00+05:30
 
+- description: 'I will give a talk on _Optimizing Expectation with Guarantees for Window Mean-payoff in Markov Decision Processes_ on 8&nbsp;September&nbsp;2025 at 4:00&nbsp;pm at ISTA.'
+  newsDate: 2025-09-12T14:30:00+05:30
+
+- description: 'I will give a talk on _Expectation in Stochastic Games with Prefix-independent Objectives_ on 19&nbsp;September&nbsp;2025 at 11:00&nbsp;am at MPI-SWS Kaiserslautern.'
+  newsDate: 2025-09-13T14:30:00+05:30
+
 - description: 'I will give a talk on _Optimizing Expectation with Guarantees for Window Mean-payoff in Markov Decision Processes_ at the  [Workshop on Automata and Games for Synthesis](https://sites.google.com/view/wagsfsttcs2025/home) co-located with FSTTCS 2025.'
   newsDate: 2025-11-12T14:30:00+05:30
+
+- description: 'New preprint [_Sure-almost-sure and Sure-limit-sure Window Mean Payoff in Markov Decision Processes_](https://arxiv.org/abs/2605.12191) available on arXiv.'
+  newsDate: 2026-05-12T14:30:00+05:30

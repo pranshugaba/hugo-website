@@ -30,8 +30,10 @@
     }
 
     &__picture {
-      max-width: 150px;
-
+      max-width: 160px;
+      @media (min-width: 800px) {
+	max-width: 180px;
+      }
       display: block;
       width: 100%;
       height: auto;
@@ -46,7 +48,7 @@
           font-weight: 600;
           letter-spacing: -0.0125em;
 	  line-height: 1.2;
-          margin-block-start: var(--size-400);
+          margin-block-start: var(--size-500);
         }
         &__secondary, &__tertiary {
           margin-block-start: var(--size-200);

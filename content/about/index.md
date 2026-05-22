@@ -22,6 +22,13 @@ If you have feedback or comments for me, if you have ideas for collaboration, or
 Reach out to me at <pranshu@pranshugaba.com> or [text me on Signal](https://signal.me/#eu/V4brQqY2itx4JhgorP15R_p0njK_vFq4HaulfrjKWYdy78C1tWBPJbyR7LAQdzgx) and say hello :wave:
 
 
+{{< figure src="pranshu-board.webp" caption="Me pointing at the blackboard" class="medium" >}}
+
+
+{{< figure src="pranshu-highlights.webp" caption="Me pointing at my poster" class="medium" >}}
+
+
+
 ## Hobbies
 
 I like to [walk]({{< ref "/tags/walking" >}}) or [cycle]({{< ref "/tags/cycling" >}}) around the city and explore new places. I like to do some street [photography]({{< ref "/photos" >}}), eat street food, and play with street cats and dogs on the way.
@@ -34,6 +41,13 @@ I am currently learning Lisp so I can configure my Emacs better.
 
 In my free time, I [read books]({{< ref "/reads" >}}), solve the [New York Times crossword](https://www.nytimes.com/crosswords) and [Spelling Bee](https://www.nytimes.com/puzzles/spelling-bee), or play [drawback chess](https://www.drawbackchess.com/).
 
+
+{{< figure src="pranshu-doing-painting.webp" caption="Me painting a scene with mountains and a river" class="large" >}}
+
+{{< figure src="pranshu-painting.webp" caption="Me standing in front of a painting of mountains and a river" class="large" >}}
+
+{{< figure src="pranshu-lake.webp" caption="Me standing in front of real mountains and a lake" class="large" >}}
+
 ## Uses
 
 I primarily use a laptop running GNU/Linux and an Android phone.
@@ -42,8 +56,9 @@ I prefer to use free and open-source software wherever feasible.
 
 [Read more about the devices and programs that I use &#8594;]({{< ref "/uses" >}})
 
+{{< figure src="pranshu-pointing.webp" caption="Me pointing at the banquet sign for SAT 2024" class="medium" >}}
 
-{{< figure src="lotus.webp" caption="Me looking at purple lotuses in a pond" alt="Picture of Pranshu looking at purple lotuses in a pond" >}}
+
 ## About this site {#this-site}
 
 This website is my personal corner of the internet (and I highly recommend that you have your own personal website as well).
@@ -72,7 +87,4 @@ https://pranshugaba.com/index.xml
 You will be notified whenever I publish a new post. You can also subscribe to only select sections.
 For more details, visit the [subscribe page]({{< ref "/subscribe" >}}).
 
-## Support
-
-If you like my work, consider supporting me at [ko&#8209;fi.com/pranshugaba](https://ko-fi.com/pranshugaba).
-Thanks! :smile:
+{{< figure src="pranshu-eating.webp" caption="Me having a meal at SAT 2024" class="medium" >}}
