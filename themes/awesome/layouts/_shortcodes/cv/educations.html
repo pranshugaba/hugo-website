@@ -1,4 +1,14 @@
-{{ $educationsData := hugo.Data.cv.educations }}
+{{ $cv := "" }}
+
+{{ with .Page.Resources.Get "cv.toml" }}
+    {{ with unmarshal .Content }}
+        {{ $cv = . }}
+    {{ end }}
+{{ else }}
+    {{ errorf "Unable to get page resource cv.toml" }}
+{{ end }}
+
+{{ $educationsData := $cv.educations }}
 
 {{ range $educationsData }}
 <div class="[ cv__education] [ flow ]">

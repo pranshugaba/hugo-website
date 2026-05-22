@@ -1,4 +1,15 @@
-{{ $interestsData := hugo.Data.cv.interests }}
+{{ $cv := "" }}
+
+{{ with .Page.Resources.Get "cv.toml" }}
+    {{ with unmarshal .Content }}
+        {{ $cv = . }}
+    {{ end }}
+{{ else }}
+    {{ errorf "Unable to get page resource cv.toml" }}
+{{ end }}
+
+
+{{ $interestsData := $cv.interests }}
 
 {{ range $interestsData }}
   <p>

@@ -1,12 +1,22 @@
+{{ $cv := "" }}
+
+{{ with .Page.Resources.Get "cv.toml" }}
+    {{ with unmarshal .Content }}
+        {{ $cv = . }}
+    {{ end }}
+{{ else }}
+    {{ errorf "Unable to get page resource cv.toml" }}
+{{ end }}
+
 {{ $talktype := default "publications" (.Get "talktype") }}
 {{ $talkdata := "" }}
 
 {{ if (eq $talktype "seminars") }}
-  {{ $talkdata = hugo.Data.cv.seminars }}
+  {{ $talkdata = $cv.seminars }}
 {{ else if (eq $talktype "outreaches") }}
-  {{ $talkdata = hugo.Data.cv.outreaches }}
+  {{ $talkdata = $cv.outreaches }}
 {{ else }}
-  {{ $talkdata = hugo.Data.cv.publications }}
+  {{ $talkdata = $cv.publications }}
 {{ end }}
 
 

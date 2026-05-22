@@ -34,9 +34,11 @@
       {{ with .conference }}
         Accepted in <a href="{{ .doi }}" rel="noreferrer noopener" target="_blank">{{ .name }}</a>
         {{ with .awards }}
-          (☆{{ . }}☆)
-        {{ end }}<br/>
-      {{ end }}
+          ({{ . }})
+        {{ end }}
+      {{ else }}
+        Under submission
+      {{ end }}<br/>
       {{ with .fullversion }}
         Full version at <a href="{{ .doi }}" rel="noreferrer noopener" target="_blank">{{ .name }}</a>
         {{ with .awards }}

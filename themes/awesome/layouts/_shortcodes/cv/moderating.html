@@ -1,0 +1,20 @@
+{{ $cv := "" }}
+
+{{ with .Page.Resources.Get "cv.toml" }}
+    {{ with unmarshal .Content }}
+        {{ $cv = . }}
+    {{ end }}
+{{ else }}
+    {{ errorf "Unable to get page resource cv.toml" }}
+{{ end }}
+
+{{ $moderatingData := $cv.experience.moderating }}
+
+<ul>
+  {{ range $moderatingData }}
+  <li>
+    {{ .type }} on <em>{{ .topic }}</em> at <a href="{{ .link }}" target="_blank" rel="noopener">{{ .venue }}</a>
+
+  </li>
+{{ end }}
+</ul>

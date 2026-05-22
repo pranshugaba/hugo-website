@@ -1,0 +1,20 @@
+{{ $cv := "" }}
+
+{{ with .Page.Resources.Get "cv.toml" }}
+    {{ with unmarshal .Content }}
+        {{ $cv = . }}
+    {{ end }}
+{{ else }}
+    {{ errorf "Unable to get page resource cv.toml" }}
+{{ end }}
+
+{{ $reviewingData := $cv.experience.reviewing }}
+
+<p>
+    {{ range first (sub (len $reviewingData) 1) $reviewingData }}
+	{{ . }},
+    {{ end }}
+    {{ range last 1 $reviewingData }}
+        {{ . }}
+    {{ end }}
+</p>

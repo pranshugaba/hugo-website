@@ -1,4 +1,15 @@
-{{ $updatedDate := default time.Now hugo.Data.cv.updatedDate }}
+{{ $cv := "" }}
+
+{{ with .Page.Resources.Get "cv.toml" }}
+    {{ with unmarshal .Content }}
+        {{ $cv = . }}
+    {{ end }}
+{{ else }}
+    {{ errorf "Unable to get page resource cv.toml" }}
+{{ end }}
 
 
-Last updated on <time datetime="{{ $updatedDate.Format "2006-01-02" }}">{{ $updatedDate.Format "2 January 2006" }}</time>
+{{ $updatedDate := default time.Now $cv.updatedDate }}
+
+
+Up to date as of <time datetime="{{ $updatedDate.Format "2006-01-02" }}">{{ $updatedDate.Format "2 January 2006" }}</time>
