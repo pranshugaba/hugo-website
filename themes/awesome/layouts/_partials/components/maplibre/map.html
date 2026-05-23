@@ -26,7 +26,7 @@
     .then(response => response.json())
     .then(data => {
       const gj = data;
-      const initialCoords = [72.82, 19.22]; // starting position [lng, lat]
+      // const initialCoords = [72.82, 19.22]; // starting position [lng, lat]
       const initialZoom = 12;
 
       const maxBoundPadding = 0.42;
@@ -34,13 +34,18 @@
       const routeName = getRouteName(gj);
 
       const activityType = getActivityType(gj);
+      const routeCreateTime = getRouteCreateTime(gj);
       
       const coordinates = getCoordinates(gj);
       
 
       const bounds = coordinates.reduce((bounds, coord) => 
         { return bounds.extend(coord); },
-        new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      const initialCoords = [(bounds._sw.lng + bounds._ne.lng)/2, (bounds._sw.lat + bounds._ne.lat)/2]; // starting position [lng, lat]
+
        
       const maxBoundSW = [ bounds._sw.lng - maxBoundPadding, bounds._sw.lat - maxBoundPadding];
       const maxBoundNE = [ bounds._ne.lng + maxBoundPadding, bounds._ne.lat + maxBoundPadding];
@@ -137,6 +142,7 @@
         
         
         const timestamps = getTimestamps(gj);
+        const routeCreateTimeDisplay = new Date(routeCreateTime);
         const startTime = new Date(timestamps.at(0));
         const endTime = new Date(timestamps.at(-1));
 
@@ -145,7 +151,7 @@
         const avgSpeed = routeLength / (duration / 36e5);
         document.getElementById(
           '{{ .Route }}__start-time'
-        ).innerText = formatDate(startTime);
+        ).innerText = formatDate(routeCreateTimeDisplay);
 
         if (duration){
           document.getElementById(
@@ -166,7 +172,9 @@
   function getActivityType(geojson) {
     return geojson.features[0].properties.type;
   }
-  
+  function getRouteCreateTime(geojson) {
+    return geojson.features[0].properties.time;
+  }
   function getRouteName(geojson) {
     return geojson.features[0].properties.name;
   }

@@ -6,7 +6,7 @@ summary: "Names of colours don't convey their image very well. What does #714825
 date: 2021-07-21T17:30:00+05:30
 lastmod: 2021-07-21T17:30:00+05:30
 
-tags: ["hugo", "shortcodes", "colours"]
+tags: ["hugo", "shortcodes", "snippets", "colours"]
 
 math: false
 
