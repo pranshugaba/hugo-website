@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Saarbruecken by Pranshu Gaba</title><link>https://pranshugaba.com/tags/saarbruecken/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 23 May 2026 16:56:00 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/saarbruecken/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/saarbruecken/index.xml" rel="self" type="application/rss+xml"/><item><title>Jogging in Saarbrücken</title><link>https://pranshugaba.com/trips/jogging-in-saarbrucken/</link><pubDate>Sat, 06 Sep 2025 08:00:00 +0530</pubDate><guid>https://pranshugaba.com/trips/jogging-in-saarbrucken/</guid><description>
+<![CDATA[<p>I attended the <a href="https://highlights-conference.org/2025/" target="_blank" rel="noopener">Highlights Conference</a> this week at Saarland University where I presented my AAMAS paper on <a href="ifaamas.csc.liv.ac.uk/Proceedings/aamas2025/pdfs/p820.pdf">Optimizing expectation with guarantees in Markov decision processes</a>.
+I am staying in Sportcampus Saar which is very close to the university.
+It is a beautiful campus with three running trails nearby.</p>
+
+
+
+
+
+
+
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-04T06:42&#43;0530">2025-09-04 06:42</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.25095697222222&mlon=7.0374289999999995#map=16/49.25095697222222/7.0374289999999995&layers=N" rel="noopener" target="_blank">(49.251° N, 7.037° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/IMG_20250904_064248725_hu_cae445de267d8783.webp"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>The three routes shown on a map. (Note that North is down in the map.)</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+<p>On Thursday, I walked along trail #1 (blue, short).
+Today, I jogged along trail #2 (green, medium) which is about 7 km long.
+I left very early in the morning while it was still very dark but you could just make out brightness in the eastern sky.
+However, as soon as I started the trail and entered the forest, it was completely dark once again.</p>
+<p>Around the 3.8 km mark, there was a very long stretch that was all downhill.
+I loved rushing down the hill; it was a thrill.
+I covered 500 meters in a matter of what felt like mere seconds.
+It was exhilarating, but also terrifying.
+I could not stop even if I wanted to.
+If I stopped running, I would have tumbled and rolled over and over.</p>
+<p>Anyway, here&rsquo;s the route that I took and some pictures that I clicked.
+Enjoy!</p>
+<h2 id="map">Map</h2>
+
+
+
+
+
+    
+
+
+
+
+
+
+<div class="maplibre-container">
+  <div id="saarbruecken-2025-09-06" class="maplibre-map"></div>
+  <div class="route__metadata">
+    <div class="route__name">
+      <div>
+        <p id="saarbruecken-2025-09-06__name"></p>
+        
+          <p id="saarbruecken-2025-09-06__start-time"></p>
+        
+      </div>
+      
+        <p id="saarbruecken-2025-09-06__type"></p>
+      
+    </div>
+    
+      <div class="route__stats">
+        <p id="saarbruecken-2025-09-06__distance"></p>
+        <p id="saarbruecken-2025-09-06__duration"></p>
+        <p id="saarbruecken-2025-09-06__speed"></p>
+      </div>
+    
+  </div>
+</div>
+<script>
+  fetch("saarbruecken-2025-09-06.geojson") 
+    .then(response => response.json())
+    .then(data => {
+      const gj = data;
+      
+      const initialZoom = 12;
+
+      const maxBoundPadding = 0.42;
+
+      const routeName = getRouteName(gj);
+
+      const activityType = getActivityType(gj);
+      const routeCreateTime = getRouteCreateTime(gj);
+      
+      const coordinates = getCoordinates(gj);
+      
+
+      const bounds = coordinates.reduce((bounds, coord) => 
+        { return bounds.extend(coord); },
+
+      new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      const initialCoords = [(bounds._sw.lng + bounds._ne.lng)/2, (bounds._sw.lat + bounds._ne.lat)/2]; 
+
+       
+      const maxBoundSW = [ bounds._sw.lng - maxBoundPadding, bounds._sw.lat - maxBoundPadding];
+      const maxBoundNE = [ bounds._ne.lng + maxBoundPadding, bounds._ne.lat + maxBoundPadding];
+      const maxBounds = new maplibregl.LngLatBounds(maxBoundSW, maxBoundNE);
+      
+      const startCoordinate = coordinates.at(0);
+      const endCoordinate = coordinates.at(-1);
+
+      const routeTurfLine = turf.lineString(coordinates);
+      const routeLength = turf.length(routeTurfLine);
+
+      
+
+      const map = new maplibregl.Map({
+        container: 'saarbruecken-2025-09-06',
+        style: 'https://tiles.stadiamaps.com/styles/osm_bright.json', 
+        center: initialCoords, 
+        zoom: initialZoom, 
+        hash: false,
+        maxBounds: maxBounds,
+        
+      });
+
+      map.fitBounds(bounds, {
+          padding: 60,
+      });
+      
+      
+      
+      
+
+      let nav = new maplibregl.NavigationControl({
+        visualizePitch: true,
+      });
+      map.addControl(nav, 'top-left');
+      
+      let fullScreen = new maplibregl.FullscreenControl();
+      map.addControl(fullScreen, 'top-left');
+
+      let scale = new maplibregl.ScaleControl({
+        maxWidth: 80,
+        unit: 'metric',
+      });
+      map.addControl(scale);
+
+      let logo = new maplibregl.LogoControl({
+        compact: true,
+      });
+  
+      map.addControl(logo, 'top-right');
+
+      const markerStart = new maplibregl.Marker({ color: '#33aa66' })
+        .setLngLat(startCoordinate)
+        .addTo(map);
+
+      const markerEnd = new maplibregl.Marker({ color: '#aa4433' })
+        .setLngLat(endCoordinate)
+        .addTo(map);
+
+      map.on('load', () => {
+        map.addSource('route', {
+          type: 'geojson',
+          data: gj,
+        });
+
+        map.addLayer({
+          id: 'route',
+          type: 'line',
+          source: 'route',
+          layout: {
+            'line-join': 'round',
+            'line-cap': 'round',
+          },
+          paint: {
+            'line-color': '#2e2e2e',
+            'line-width': 3,
+            'line-opacity': 0.8,
+          },
+        });
+
+        document.getElementById(
+          'saarbruecken-2025-09-06__name'
+        ).innerText = routeName;
+      
+        if (activityType){
+          document.getElementById(
+            'saarbruecken-2025-09-06__type'
+          ).innerText = activityType;
+        }
+        
+        document.getElementById(
+          'saarbruecken-2025-09-06__distance'
+        ).innerText = `Distance: ${formatNumber(routeLength)} km`;
+        
+        
+        const timestamps = getTimestamps(gj);
+        const routeCreateTimeDisplay = new Date(routeCreateTime);
+        const startTime = new Date(timestamps.at(0));
+        const endTime = new Date(timestamps.at(-1));
+
+        const duration = Math.abs(endTime - startTime); 
+
+        const avgSpeed = routeLength / (duration / 36e5);
+        document.getElementById(
+          'saarbruecken-2025-09-06__start-time'
+        ).innerText = formatDate(routeCreateTimeDisplay);
+
+        if (duration){
+          document.getElementById(
+            'saarbruecken-2025-09-06__duration'
+          ).innerText = `Duration: ${formatDuration(duration)}`;
+          document.getElementById(
+            'saarbruecken-2025-09-06__speed'
+          ).innerText = `Avg. Speed: ${formatNumber(avgSpeed)} km/h`;
+        }
+      });
+    })
+    .catch(function (err) {
+      console.log(err.message);
+    })
+  ;
+
+  
+  function getActivityType(geojson) {
+    return geojson.features[0].properties.type;
+  }
+  function getRouteCreateTime(geojson) {
+    return geojson.features[0].properties.time;
+  }
+  function getRouteName(geojson) {
+    return geojson.features[0].properties.name;
+  }
+  
+  function getCoordinates(geojson) {
+    return geojson.features[0].geometry.coordinates;
+  }
+  
+  function getTimestamps(geojson) {
+    return geojson.features[0].properties.coordTimes
+  }
+  
+  function formatNumber (number, precision = 3) {
+    if (typeof number === 'undefined' || number === null) return ''
+  
+    if (number === 0) return '0'
+  
+    const roundedValue = round(precision, number)
+    const floorValue = Math.floor(roundedValue)
+  
+    const isInteger = Math.abs(floorValue - roundedValue) < Number.EPSILON
+  
+    const numberOfFloorDigits = String(floorValue).length
+    const numberOfDigits = String(roundedValue).length
+  
+    if (numberOfFloorDigits > precision) {
+      return String(floorValue)
+    } else {
+      const padding = isInteger ? precision - numberOfFloorDigits : precision - numberOfDigits + 1
+  
+      if (padding > 0) {
+        if (isInteger) {
+          return `${String(floorValue)}.${'0'.repeat(padding)}`
+        } else {
+          return `${String(roundedValue)}${'0'.repeat(padding)}`
+        }
+      } else {
+        return String(roundedValue)
+      }
+    }
+  }
+  
+  function round(precision, number) {
+    return parseFloat(number.toPrecision(precision))
+  }
+  
+  function formatDate(date) {
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      timeZone: "Asia/Kolkata"
+    };
+    return new Intl.DateTimeFormat("en-in", options).format(date);
+  }
+
+  function formatDuration(duration) {
+    const seconds = Math.floor(duration / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    
+    if (days >= 1) {
+      return `${days}d ${hours % 24}h`;
+    } else if (hours >= 1){
+      return `${hours}h ${minutes % 60}m`;
+    } else if (minutes >= 0) {
+      return `${minutes}m ${seconds % 60}s`;
+    } else {
+      return "";
+    }
+  }
+</script>
+
+<style>
+  #saarbruecken-2025-09-06__name {
+    font-weight: 600;
+  }
+</style>
+
+<h2 id="gallery">Gallery</h2>
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T06:15&#43;0530">2025-09-06 06:15</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.241733&mlon=7.029039#map=16/49.241733/7.029039&layers=N" rel="noopener" target="_blank">(49.242° N, 7.029° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_061537725_hu_f270a10df8619e4b.webp"
+        
+            alt="A faint silhouette of an electricity pylon and overhead powerlines against a backdrop of a dark blue sky.
+"
+        
+        height="1600"
+        width="1200"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>The faintest glimpse of sunlight in the sky.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T06:32&#43;0530">2025-09-06 06:32</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.244061&mlon=7.044575#map=16/49.244061/7.044575&layers=N" rel="noopener" target="_blank">(49.244° N, 7.045° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_063200633_hu_bc05b66cda469961.webp"
+        
+            alt="Two benches in a forest.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>Two benches in the middle of the woods.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T06:41&#43;0530">2025-09-06 06:41</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.247852972222226&mlon=7.048483#map=16/49.247852972222226/7.048483&layers=N" rel="noopener" target="_blank">(49.248° N, 7.048° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_064126058_HDR_hu_a1b518697759fddc.webp"
+        
+            alt="A mountain covered in trees.
+"
+        
+        height="1600"
+        width="1200"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>The trees at the top of the mountain begin to see the sunlight. It is still dark below.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T06:42&#43;0530">2025-09-06 06:42</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.247843&mlon=7.0483799722222225#map=16/49.247843/7.0483799722222225&layers=N" rel="noopener" target="_blank">(49.248° N, 7.048° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_064215977_hu_b6b06406e3bcfaa1.webp"
+        
+            alt="A trail towered over by trees on both sides.
+"
+        
+        height="1600"
+        width="1200"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>Tall trees tower the trail.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T06:46&#43;0530">2025-09-06 06:46</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.249639972222226&mlon=7.048362#map=16/49.249639972222226/7.048362&layers=N" rel="noopener" target="_blank">(49.250° N, 7.048° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_064620874_HDR_hu_4f13ca2be421c007.webp"
+        
+            alt="A view of houses and trees in the valley with golden clouds in the blue sky.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>Houses and trees in the valley come to light as the sun begins to rise.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T06:53&#43;0530">2025-09-06 06:53</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.25160697222222&mlon=7.052754999999999#map=16/49.25160697222222/7.052754999999999&layers=N" rel="noopener" target="_blank">(49.252° N, 7.053° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_065356695_HDR_hu_7d23519f474002d5.webp"
+        
+            alt="A bench alongside overlooks a fence.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>If you sit on the bench, you see the fence&hellip;</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T06:54&#43;0530">2025-09-06 06:54</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.251621972222225&mlon=7.052887999999999#map=16/49.251621972222225/7.052887999999999&layers=N" rel="noopener" target="_blank">(49.252° N, 7.053° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_065407298_HDR_hu_29c39ae139b78321.webp"
+        
+            alt="Brown sheep grazing in a fenced pasture.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>&hellip; and the sheep behind the fence see you.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T06:54&#43;0530">2025-09-06 06:54</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.251837&mlon=7.052967972222222#map=16/49.251837/7.052967972222222&layers=N" rel="noopener" target="_blank">(49.252° N, 7.053° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_065441731_HDR_hu_275f26afd1fe62e8.webp"
+        
+            alt="A road sign with printed text &#34;Forstwirt - schaftlicher Verkehr frei&#34; and handwritten text &#34;Help me&#34;.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>The road is traffic-free. The sign says &ldquo;Help me&rdquo;.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T06:54&#43;0530">2025-09-06 06:54</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.251837&mlon=7.052967972222222#map=16/49.251837/7.052967972222222&layers=N" rel="noopener" target="_blank">(49.252° N, 7.053° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_065446477_HDR_hu_ab3d1442c18ddf62.webp"
+        
+            alt="A trail cutting through the trees.
+"
+        
+        height="1600"
+        width="1200"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>It is still dark in the woods.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T06:58&#43;0530">2025-09-06 06:58</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.254905972222225&mlon=7.0530029999999995#map=16/49.254905972222225/7.0530029999999995&layers=N" rel="noopener" target="_blank">(49.255° N, 7.053° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_065840131_HDR_hu_13daaa637b8fb34b.webp"
+        
+            alt="A trail marker in the woods.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>Continue left to stay on trail #2.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T07:05&#43;0530">2025-09-06 07:05</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.25759297222222&mlon=7.049155972222222#map=16/49.25759297222222/7.049155972222222&layers=N" rel="noopener" target="_blank">(49.258° N, 7.049° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_070555697_hu_5e173cfbbff98947.webp"
+        
+            alt="A giant metallic structure that is a parking lot.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>A parking lot from afar.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T07:07&#43;0530">2025-09-06 07:07</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.257261972222224&mlon=7.048486972222222#map=16/49.257261972222224/7.048486972222222&layers=N" rel="noopener" target="_blank">(49.257° N, 7.048° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_070703447_HDR_hu_e8bdcaea7d164fef.webp"
+        
+            alt="Four floors of parking lot in the background, grass in the foreground.
+"
+        
+        height="1600"
+        width="1200"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>The (empty) parking lot from up close.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T07:19&#43;0530">2025-09-06 07:19</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.254306972222224&mlon=7.044253#map=16/49.254306972222224/7.044253&layers=N" rel="noopener" target="_blank">(49.254° N, 7.044° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_071952052_HDR_hu_3beb79dc1bbd85fe.webp"
+        
+            alt="Two bicycles: one on the ground and one up above.
+"
+        
+        height="1600"
+        width="1200"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>A cycle on the ground, a cycle up above.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T07:24&#43;0530">2025-09-06 07:24</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.251663972222225&mlon=7.0401069722222225#map=16/49.251663972222225/7.0401069722222225&layers=N" rel="noopener" target="_blank">(49.252° N, 7.040° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_072447557_hu_6fac21df8eb4ea77.webp"
+        
+            alt="A side view of a metal structure for parking cycles.
+"
+        
+        height="1600"
+        width="1200"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>Concentric circles for parking cycles.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+    
+
+ 
+
+
+    <figure class="gallery__figure">
+        
+        
+        
+        
+        
+            
+                <div class="gallery__metadata">
+                    
+                        <div class="gallery__datetime">
+                            <time datetime="2025-09-06T07:28&#43;0530">2025-09-06 07:28</time>
+                        </div>
+                    
+                    
+                    <div class="[ gallery__coords ] [ plain-link ]">
+                        <a href="https://www.openstreetmap.org/?mlat=49.250832&mlon=7.03577#map=16/49.250832/7.03577&layers=N" rel="noopener" target="_blank">(49.251° N, 7.036° E)</a> 
+                    </div>
+                    
+                </div>
+            
+        
+        <img
+        src="https://pranshugaba.com/trips/jogging-in-saarbrucken/img/IMG_20250906_072810823_HDR_hu_84cc3d2f5d45a31d.webp"
+        
+            alt="The Sportcampus building with bright blue skies.
+"
+        
+        height="1200"
+        width="1600"
+        />
+        
+            <div class="gallery__caption">
+                <figcaption>
+                    
+                        <p>The end of the trail. It is now fully bright outside. We have returned back to the starting point.</p>
+
+                    
+                </figcaption>
+            </div>
+        
+    </figure>
+
+
+
+
+]]></description></item></channel></rss>

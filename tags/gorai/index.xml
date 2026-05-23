@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gorai by Pranshu Gaba</title><link>https://pranshugaba.com/tags/gorai/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Fri, 22 May 2026 21:34:21 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/gorai/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/gorai/index.xml" rel="self" type="application/rss+xml"/><item><title>Cycling to Gorai</title><link>https://pranshugaba.com/trips/cycling-to-gorai/</link><pubDate>Fri, 30 Jul 2021 14:00:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-to-gorai/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gorai by Pranshu Gaba</title><link>https://pranshugaba.com/tags/gorai/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 23 May 2026 16:55:59 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/gorai/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/gorai/index.xml" rel="self" type="application/rss+xml"/><item><title>Cycling to Gorai</title><link>https://pranshugaba.com/trips/cycling-to-gorai/</link><pubDate>Fri, 30 Jul 2021 14:00:00 +0530</pubDate><guid>https://pranshugaba.com/trips/cycling-to-gorai/</guid><description>
 <![CDATA[<h2 id="map">Map</h2>
 
 
@@ -40,7 +40,7 @@
     .then(response => response.json())
     .then(data => {
       const gj = data;
-      const initialCoords = [72.82, 19.22]; 
+      
       const initialZoom = 12;
 
       const maxBoundPadding = 0.42;
@@ -48,13 +48,18 @@
       const routeName = getRouteName(gj);
 
       const activityType = getActivityType(gj);
+      const routeCreateTime = getRouteCreateTime(gj);
       
       const coordinates = getCoordinates(gj);
       
 
       const bounds = coordinates.reduce((bounds, coord) => 
         { return bounds.extend(coord); },
-        new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      const initialCoords = [(bounds._sw.lng + bounds._ne.lng)/2, (bounds._sw.lat + bounds._ne.lat)/2]; 
+
        
       const maxBoundSW = [ bounds._sw.lng - maxBoundPadding, bounds._sw.lat - maxBoundPadding];
       const maxBoundNE = [ bounds._ne.lng + maxBoundPadding, bounds._ne.lat + maxBoundPadding];
@@ -151,6 +156,7 @@
         
         
         const timestamps = getTimestamps(gj);
+        const routeCreateTimeDisplay = new Date(routeCreateTime);
         const startTime = new Date(timestamps.at(0));
         const endTime = new Date(timestamps.at(-1));
 
@@ -159,7 +165,7 @@
         const avgSpeed = routeLength / (duration / 36e5);
         document.getElementById(
           'gorai__start-time'
-        ).innerText = formatDate(startTime);
+        ).innerText = formatDate(routeCreateTimeDisplay);
 
         if (duration){
           document.getElementById(
@@ -180,7 +186,9 @@
   function getActivityType(geojson) {
     return geojson.features[0].properties.type;
   }
-  
+  function getRouteCreateTime(geojson) {
+    return geojson.features[0].properties.time;
+  }
   function getRouteName(geojson) {
     return geojson.features[0].properties.name;
   }
@@ -300,7 +308,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.214980999999998&mlon=72.813693#map=16/19.214980999999998/72.813693&layers=N" rel="noopener" target="_blank">(19.215°, 72.814°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.214980999999998&mlon=72.813693#map=16/19.214980999999998/72.813693&layers=N" rel="noopener" target="_blank">(19.215° N, 72.814° E)</a> 
                     </div>
                     
                 </div>
@@ -340,7 +348,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.214804972222222&mlon=72.81188697222223#map=16/19.214804972222222/72.81188697222223&layers=N" rel="noopener" target="_blank">(19.215°, 72.812°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.214804972222222&mlon=72.81188697222223#map=16/19.214804972222222/72.81188697222223&layers=N" rel="noopener" target="_blank">(19.215° N, 72.812° E)</a> 
                     </div>
                     
                 </div>
@@ -377,7 +385,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.233382972222223&mlon=72.82400799999999#map=16/19.233382972222223/72.82400799999999&layers=N" rel="noopener" target="_blank">(19.233°, 72.824°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.233382972222223&mlon=72.82400799999999#map=16/19.233382972222223/72.82400799999999&layers=N" rel="noopener" target="_blank">(19.233° N, 72.824° E)</a> 
                     </div>
                     
                 </div>
@@ -414,7 +422,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234608972222222&mlon=72.82171097222222#map=16/19.234608972222222/72.82171097222222&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234608972222222&mlon=72.82171097222222#map=16/19.234608972222222/72.82171097222222&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -451,7 +459,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234611&mlon=72.82170297222221#map=16/19.234611/72.82170297222221&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234611&mlon=72.82170297222221#map=16/19.234611/72.82170297222221&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -488,7 +496,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234579&mlon=72.82172097222222#map=16/19.234579/72.82172097222222&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234579&mlon=72.82172097222222#map=16/19.234579/72.82172097222222&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -525,7 +533,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234595972222223&mlon=72.82171799999999#map=16/19.234595972222223/72.82171799999999&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234595972222223&mlon=72.82171799999999#map=16/19.234595972222223/72.82171799999999&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -562,7 +570,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234608972222222&mlon=72.821736#map=16/19.234608972222222/72.821736&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234608972222222&mlon=72.821736#map=16/19.234608972222222/72.821736&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -599,7 +607,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234584972222223&mlon=72.82176497222221#map=16/19.234584972222223/72.82176497222221&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234584972222223&mlon=72.82176497222221#map=16/19.234584972222223/72.82176497222221&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -636,7 +644,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234560972222223&mlon=72.82181097222222#map=16/19.234560972222223/72.82181097222222&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234560972222223&mlon=72.82181097222222#map=16/19.234560972222223/72.82181097222222&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -673,7 +681,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234567972222223&mlon=72.82181299999999#map=16/19.234567972222223/72.82181299999999&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234567972222223&mlon=72.82181299999999#map=16/19.234567972222223/72.82181299999999&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -710,7 +718,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234560972222223&mlon=72.82181197222222#map=16/19.234560972222223/72.82181197222222&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234560972222223&mlon=72.82181197222222#map=16/19.234560972222223/72.82181197222222&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -747,7 +755,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234566&mlon=72.82182399999999#map=16/19.234566/72.82182399999999&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234566&mlon=72.82182399999999#map=16/19.234566/72.82182399999999&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -784,7 +792,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234414&mlon=72.82205599999999#map=16/19.234414/72.82205599999999&layers=N" rel="noopener" target="_blank">(19.234°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234414&mlon=72.82205599999999#map=16/19.234414/72.82205599999999&layers=N" rel="noopener" target="_blank">(19.234° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -821,7 +829,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.23326197222222&mlon=72.82450097222222#map=16/19.23326197222222/72.82450097222222&layers=N" rel="noopener" target="_blank">(19.233°, 72.825°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.23326197222222&mlon=72.82450097222222#map=16/19.23326197222222/72.82450097222222&layers=N" rel="noopener" target="_blank">(19.233° N, 72.825° E)</a> 
                     </div>
                     
                 </div>
@@ -858,7 +866,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.23249797222222&mlon=72.82879899999999#map=16/19.23249797222222/72.82879899999999&layers=N" rel="noopener" target="_blank">(19.232°, 72.829°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.23249797222222&mlon=72.82879899999999#map=16/19.23249797222222/72.82879899999999&layers=N" rel="noopener" target="_blank">(19.232° N, 72.829° E)</a> 
                     </div>
                     
                 </div>
@@ -895,7 +903,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.23245297222222&mlon=72.828805#map=16/19.23245297222222/72.828805&layers=N" rel="noopener" target="_blank">(19.232°, 72.829°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.23245297222222&mlon=72.828805#map=16/19.23245297222222/72.828805&layers=N" rel="noopener" target="_blank">(19.232° N, 72.829° E)</a> 
                     </div>
                     
                 </div>

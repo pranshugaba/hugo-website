@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cycling by Pranshu Gaba</title><link>https://pranshugaba.com/tags/cycling/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Fri, 22 May 2026 21:34:19 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/cycling/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/cycling/index.xml" rel="self" type="application/rss+xml"/><item><title>Tandem Bicycle Bunnies</title><link>https://pranshugaba.com/trips/tandem-bicycle-bunnies/</link><pubDate>Sun, 16 Mar 2025 08:30:00 +0530</pubDate><guid>https://pranshugaba.com/trips/tandem-bicycle-bunnies/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cycling by Pranshu Gaba</title><link>https://pranshugaba.com/tags/cycling/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 23 May 2026 16:55:57 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/cycling/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/cycling/index.xml" rel="self" type="application/rss+xml"/><item><title>Tandem Bicycle Bunnies</title><link>https://pranshugaba.com/trips/tandem-bicycle-bunnies/</link><pubDate>Sun, 16 Mar 2025 08:30:00 +0530</pubDate><guid>https://pranshugaba.com/trips/tandem-bicycle-bunnies/</guid><description>
 <![CDATA[<p>It had been more than two years since <a href="https://pranshugaba.com/trips/cycling-home-from-tifr/">I last cycled home from TIFR</a>. I left at 5.47 am and reached home by 8.15 am.</p>
 <p>I am pleasantly surprised that it takes me almost the same time by cycle as it takes by public transport (bus + train + bus).</p>
 <p>On the way, I sighted the Incredible Hulk, tandem bicycle bunnies, and a beautiful sunrise!</p>
@@ -44,7 +44,7 @@
     .then(response => response.json())
     .then(data => {
       const gj = data;
-      const initialCoords = [72.82, 19.22]; 
+      
       const initialZoom = 12;
 
       const maxBoundPadding = 0.42;
@@ -52,13 +52,18 @@
       const routeName = getRouteName(gj);
 
       const activityType = getActivityType(gj);
+      const routeCreateTime = getRouteCreateTime(gj);
       
       const coordinates = getCoordinates(gj);
       
 
       const bounds = coordinates.reduce((bounds, coord) => 
         { return bounds.extend(coord); },
-        new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      const initialCoords = [(bounds._sw.lng + bounds._ne.lng)/2, (bounds._sw.lat + bounds._ne.lat)/2]; 
+
        
       const maxBoundSW = [ bounds._sw.lng - maxBoundPadding, bounds._sw.lat - maxBoundPadding];
       const maxBoundNE = [ bounds._ne.lng + maxBoundPadding, bounds._ne.lat + maxBoundPadding];
@@ -155,6 +160,7 @@
         
         
         const timestamps = getTimestamps(gj);
+        const routeCreateTimeDisplay = new Date(routeCreateTime);
         const startTime = new Date(timestamps.at(0));
         const endTime = new Date(timestamps.at(-1));
 
@@ -163,7 +169,7 @@
         const avgSpeed = routeLength / (duration / 36e5);
         document.getElementById(
           'cycling-2025-03-16__start-time'
-        ).innerText = formatDate(startTime);
+        ).innerText = formatDate(routeCreateTimeDisplay);
 
         if (duration){
           document.getElementById(
@@ -184,7 +190,9 @@
   function getActivityType(geojson) {
     return geojson.features[0].properties.type;
   }
-  
+  function getRouteCreateTime(geojson) {
+    return geojson.features[0].properties.time;
+  }
   function getRouteName(geojson) {
     return geojson.features[0].properties.name;
   }
@@ -304,7 +312,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.955639972222222&mlon=72.812296#map=16/18.955639972222222/72.812296&layers=N" rel="noopener" target="_blank">(18.956°, 72.812°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.955639972222222&mlon=72.812296#map=16/18.955639972222222/72.812296&layers=N" rel="noopener" target="_blank">(18.956° N, 72.812° E)</a> 
                     </div>
                     
                 </div>
@@ -353,7 +361,7 @@
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.963854972222222&mlon=72.807551#map=16/18.963854972222222/72.807551&layers=N" rel="noopener" target="_blank">(18.964°, 72.808°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.963854972222222&mlon=72.807551#map=16/18.963854972222222/72.807551&layers=N" rel="noopener" target="_blank">(18.964° N, 72.808° E)</a> 
                     </div>
                     
                 </div>
@@ -403,7 +411,7 @@ Buses ply along at Godrej chowk.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.977881999999997&mlon=72.81034997222221#map=16/18.977881999999997/72.81034997222221&layers=N" rel="noopener" target="_blank">(18.978°, 72.810°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.977881999999997&mlon=72.81034997222221#map=16/18.977881999999997/72.81034997222221&layers=N" rel="noopener" target="_blank">(18.978° N, 72.810° E)</a> 
                     </div>
                     
                 </div>
@@ -452,7 +460,7 @@ Buses ply along at Godrej chowk.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.978898972222222&mlon=72.81171499999999#map=16/18.978898972222222/72.81171499999999&layers=N" rel="noopener" target="_blank">(18.979°, 72.812°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.978898972222222&mlon=72.81171499999999#map=16/18.978898972222222/72.81171499999999&layers=N" rel="noopener" target="_blank">(18.979° N, 72.812° E)</a> 
                     </div>
                     
                 </div>
@@ -501,7 +509,7 @@ Buses ply along at Godrej chowk.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.006630972222222&mlon=72.81819197222222#map=16/19.006630972222222/72.81819197222222&layers=N" rel="noopener" target="_blank">(19.007°, 72.818°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.006630972222222&mlon=72.81819197222222#map=16/19.006630972222222/72.81819197222222&layers=N" rel="noopener" target="_blank">(19.007° N, 72.818° E)</a> 
                     </div>
                     
                 </div>
@@ -550,7 +558,7 @@ Buses ply along at Godrej chowk.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.006568&mlon=72.81826099999999#map=16/19.006568/72.81826099999999&layers=N" rel="noopener" target="_blank">(19.007°, 72.818°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.006568&mlon=72.81826099999999#map=16/19.006568/72.81826099999999&layers=N" rel="noopener" target="_blank">(19.007° N, 72.818° E)</a> 
                     </div>
                     
                 </div>
@@ -600,7 +608,7 @@ The car is going to overtake them.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.006551&mlon=72.818184#map=16/19.006551/72.818184&layers=N" rel="noopener" target="_blank">(19.007°, 72.818°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.006551&mlon=72.818184#map=16/19.006551/72.818184&layers=N" rel="noopener" target="_blank">(19.007° N, 72.818° E)</a> 
                     </div>
                     
                 </div>
@@ -649,7 +657,7 @@ The car is going to overtake them.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.006638972222223&mlon=72.81815797222222#map=16/19.006638972222223/72.81815797222222&layers=N" rel="noopener" target="_blank">(19.007°, 72.818°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.006638972222223&mlon=72.81815797222222#map=16/19.006638972222223/72.81815797222222&layers=N" rel="noopener" target="_blank">(19.007° N, 72.818° E)</a> 
                     </div>
                     
                 </div>
@@ -698,7 +706,7 @@ The car is going to overtake them.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.006641972222223&mlon=72.81812599999999#map=16/19.006641972222223/72.81812599999999&layers=N" rel="noopener" target="_blank">(19.007°, 72.818°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.006641972222223&mlon=72.81812599999999#map=16/19.006641972222223/72.81812599999999&layers=N" rel="noopener" target="_blank">(19.007° N, 72.818° E)</a> 
                     </div>
                     
                 </div>
@@ -747,7 +755,7 @@ The car is going to overtake them.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.011110972222223&mlon=72.82069097222222#map=16/19.011110972222223/72.82069097222222&layers=N" rel="noopener" target="_blank">(19.011°, 72.821°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.011110972222223&mlon=72.82069097222222#map=16/19.011110972222223/72.82069097222222&layers=N" rel="noopener" target="_blank">(19.011° N, 72.821° E)</a> 
                     </div>
                     
                 </div>
@@ -796,7 +804,7 @@ The car is going to overtake them.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.032477999999998&mlon=72.838521#map=16/19.032477999999998/72.838521&layers=N" rel="noopener" target="_blank">(19.032°, 72.839°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.032477999999998&mlon=72.838521#map=16/19.032477999999998/72.838521&layers=N" rel="noopener" target="_blank">(19.032° N, 72.839° E)</a> 
                     </div>
                     
                 </div>
@@ -845,7 +853,7 @@ The car is going to overtake them.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.047243972222223&mlon=72.83816499999999#map=16/19.047243972222223/72.83816499999999&layers=N" rel="noopener" target="_blank">(19.047°, 72.838°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.047243972222223&mlon=72.83816499999999#map=16/19.047243972222223/72.83816499999999&layers=N" rel="noopener" target="_blank">(19.047° N, 72.838° E)</a> 
                     </div>
                     
                 </div>
@@ -894,7 +902,7 @@ The car is going to overtake them.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.047861972222226&mlon=72.83817297222221#map=16/19.047861972222226/72.83817297222221&layers=N" rel="noopener" target="_blank">(19.048°, 72.838°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.047861972222226&mlon=72.83817297222221#map=16/19.047861972222226/72.83817297222221&layers=N" rel="noopener" target="_blank">(19.048° N, 72.838° E)</a> 
                     </div>
                     
                 </div>
@@ -943,7 +951,7 @@ The car is going to overtake them.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.048282&mlon=72.83818799999999#map=16/19.048282/72.83818799999999&layers=N" rel="noopener" target="_blank">(19.048°, 72.838°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.048282&mlon=72.83818799999999#map=16/19.048282/72.83818799999999&layers=N" rel="noopener" target="_blank">(19.048° N, 72.838° E)</a> 
                     </div>
                     
                 </div>
@@ -992,7 +1000,7 @@ The car is going to overtake them.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.048583&mlon=72.83820399999999#map=16/19.048583/72.83820399999999&layers=N" rel="noopener" target="_blank">(19.049°, 72.838°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.048583&mlon=72.83820399999999#map=16/19.048583/72.83820399999999&layers=N" rel="noopener" target="_blank">(19.049° N, 72.838° E)</a> 
                     </div>
                     
                 </div>
@@ -1041,7 +1049,7 @@ The car is going to overtake them.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.081531972222223&mlon=72.834361#map=16/19.081531972222223/72.834361&layers=N" rel="noopener" target="_blank">(19.082°, 72.834°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.081531972222223&mlon=72.834361#map=16/19.081531972222223/72.834361&layers=N" rel="noopener" target="_blank">(19.082° N, 72.834° E)</a> 
                     </div>
                     
                 </div>
@@ -1090,7 +1098,7 @@ The car is going to overtake them.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.096401999999998&mlon=72.82769397222222#map=16/19.096401999999998/72.82769397222222&layers=N" rel="noopener" target="_blank">(19.096°, 72.828°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.096401999999998&mlon=72.82769397222222#map=16/19.096401999999998/72.82769397222222&layers=N" rel="noopener" target="_blank">(19.096° N, 72.828° E)</a> 
                     </div>
                     
                 </div>
@@ -1139,7 +1147,7 @@ The car is going to overtake them.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.096581999999998&mlon=72.82674197222222#map=16/19.096581999999998/72.82674197222222&layers=N" rel="noopener" target="_blank">(19.097°, 72.827°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.096581999999998&mlon=72.82674197222222#map=16/19.096581999999998/72.82674197222222&layers=N" rel="noopener" target="_blank">(19.097° N, 72.827° E)</a> 
                     </div>
                     
                 </div>
@@ -1188,7 +1196,7 @@ The car is going to overtake them.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.096581999999998&mlon=72.82674197222222#map=16/19.096581999999998/72.82674197222222&layers=N" rel="noopener" target="_blank">(19.097°, 72.827°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.096581999999998&mlon=72.82674197222222#map=16/19.096581999999998/72.82674197222222&layers=N" rel="noopener" target="_blank">(19.097° N, 72.827° E)</a> 
                     </div>
                     
                 </div>
@@ -1238,7 +1246,7 @@ The beach is a popular Sunday morning excursion destination.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.096633999999998&mlon=72.826768#map=16/19.096633999999998/72.826768&layers=N" rel="noopener" target="_blank">(19.097°, 72.827°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.096633999999998&mlon=72.826768#map=16/19.096633999999998/72.826768&layers=N" rel="noopener" target="_blank">(19.097° N, 72.827° E)</a> 
                     </div>
                     
                 </div>
@@ -1287,7 +1295,7 @@ The beach is a popular Sunday morning excursion destination.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.096633999999998&mlon=72.826768#map=16/19.096633999999998/72.826768&layers=N" rel="noopener" target="_blank">(19.097°, 72.827°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.096633999999998&mlon=72.826768#map=16/19.096633999999998/72.826768&layers=N" rel="noopener" target="_blank">(19.097° N, 72.827° E)</a> 
                     </div>
                     
                 </div>
@@ -1336,7 +1344,7 @@ The beach is a popular Sunday morning excursion destination.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.150496999999998&mlon=72.83140897222222#map=16/19.150496999999998/72.83140897222222&layers=N" rel="noopener" target="_blank">(19.150°, 72.831°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.150496999999998&mlon=72.83140897222222#map=16/19.150496999999998/72.83140897222222&layers=N" rel="noopener" target="_blank">(19.150° N, 72.831° E)</a> 
                     </div>
                     
                 </div>
@@ -1385,7 +1393,7 @@ The beach is a popular Sunday morning excursion destination.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.182715&mlon=72.835734#map=16/19.182715/72.835734&layers=N" rel="noopener" target="_blank">(19.183°, 72.836°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.182715&mlon=72.835734#map=16/19.182715/72.835734&layers=N" rel="noopener" target="_blank">(19.183° N, 72.836° E)</a> 
                     </div>
                     
                 </div>
@@ -1466,7 +1474,7 @@ abandoned in the forest</p>
     .then(response => response.json())
     .then(data => {
       const gj = data;
-      const initialCoords = [72.82, 19.22]; 
+      
       const initialZoom = 12;
 
       const maxBoundPadding = 0.42;
@@ -1474,13 +1482,18 @@ abandoned in the forest</p>
       const routeName = getRouteName(gj);
 
       const activityType = getActivityType(gj);
+      const routeCreateTime = getRouteCreateTime(gj);
       
       const coordinates = getCoordinates(gj);
       
 
       const bounds = coordinates.reduce((bounds, coord) => 
         { return bounds.extend(coord); },
-        new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      const initialCoords = [(bounds._sw.lng + bounds._ne.lng)/2, (bounds._sw.lat + bounds._ne.lat)/2]; 
+
        
       const maxBoundSW = [ bounds._sw.lng - maxBoundPadding, bounds._sw.lat - maxBoundPadding];
       const maxBoundNE = [ bounds._ne.lng + maxBoundPadding, bounds._ne.lat + maxBoundPadding];
@@ -1577,6 +1590,7 @@ abandoned in the forest</p>
         
         
         const timestamps = getTimestamps(gj);
+        const routeCreateTimeDisplay = new Date(routeCreateTime);
         const startTime = new Date(timestamps.at(0));
         const endTime = new Date(timestamps.at(-1));
 
@@ -1585,7 +1599,7 @@ abandoned in the forest</p>
         const avgSpeed = routeLength / (duration / 36e5);
         document.getElementById(
           'cycling-2022-02-18__start-time'
-        ).innerText = formatDate(startTime);
+        ).innerText = formatDate(routeCreateTimeDisplay);
 
         if (duration){
           document.getElementById(
@@ -1606,7 +1620,9 @@ abandoned in the forest</p>
   function getActivityType(geojson) {
     return geojson.features[0].properties.type;
   }
-  
+  function getRouteCreateTime(geojson) {
+    return geojson.features[0].properties.time;
+  }
   function getRouteName(geojson) {
     return geojson.features[0].properties.name;
   }
@@ -1726,7 +1742,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.003464972222222&mlon=72.81600999999999#map=16/19.003464972222222/72.81600999999999&layers=N" rel="noopener" target="_blank">(19.003°, 72.816°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.003464972222222&mlon=72.81600999999999#map=16/19.003464972222222/72.81600999999999&layers=N" rel="noopener" target="_blank">(19.003° N, 72.816° E)</a> 
                     </div>
                     
                 </div>
@@ -1775,7 +1791,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.048193&mlon=72.83815399999999#map=16/19.048193/72.83815399999999&layers=N" rel="noopener" target="_blank">(19.048°, 72.838°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.048193&mlon=72.83815399999999#map=16/19.048193/72.83815399999999&layers=N" rel="noopener" target="_blank">(19.048° N, 72.838° E)</a> 
                     </div>
                     
                 </div>
@@ -1824,7 +1840,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.048200972222222&mlon=72.83816#map=16/19.048200972222222/72.83816&layers=N" rel="noopener" target="_blank">(19.048°, 72.838°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.048200972222222&mlon=72.83816#map=16/19.048200972222222/72.83816&layers=N" rel="noopener" target="_blank">(19.048° N, 72.838° E)</a> 
                     </div>
                     
                 </div>
@@ -1873,7 +1889,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.055223&mlon=72.82987797222222#map=16/19.055223/72.82987797222222&layers=N" rel="noopener" target="_blank">(19.055°, 72.830°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.055223&mlon=72.82987797222222#map=16/19.055223/72.82987797222222&layers=N" rel="noopener" target="_blank">(19.055° N, 72.830° E)</a> 
                     </div>
                     
                 </div>
@@ -1922,7 +1938,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.055223&mlon=72.82987797222222#map=16/19.055223/72.82987797222222&layers=N" rel="noopener" target="_blank">(19.055°, 72.830°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.055223&mlon=72.82987797222222#map=16/19.055223/72.82987797222222&layers=N" rel="noopener" target="_blank">(19.055° N, 72.830° E)</a> 
                     </div>
                     
                 </div>
@@ -1971,7 +1987,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.055223&mlon=72.82987797222222#map=16/19.055223/72.82987797222222&layers=N" rel="noopener" target="_blank">(19.055°, 72.830°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.055223&mlon=72.82987797222222#map=16/19.055223/72.82987797222222&layers=N" rel="noopener" target="_blank">(19.055° N, 72.830° E)</a> 
                     </div>
                     
                 </div>
@@ -2020,7 +2036,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.055288&mlon=72.82988999999999#map=16/19.055288/72.82988999999999&layers=N" rel="noopener" target="_blank">(19.055°, 72.830°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.055288&mlon=72.82988999999999#map=16/19.055288/72.82988999999999&layers=N" rel="noopener" target="_blank">(19.055° N, 72.830° E)</a> 
                     </div>
                     
                 </div>
@@ -2069,7 +2085,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.055288&mlon=72.82988999999999#map=16/19.055288/72.82988999999999&layers=N" rel="noopener" target="_blank">(19.055°, 72.830°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.055288&mlon=72.82988999999999#map=16/19.055288/72.82988999999999&layers=N" rel="noopener" target="_blank">(19.055° N, 72.830° E)</a> 
                     </div>
                     
                 </div>
@@ -2118,7 +2134,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.055285972222222&mlon=72.82985099999999#map=16/19.055285972222222/72.82985099999999&layers=N" rel="noopener" target="_blank">(19.055°, 72.830°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.055285972222222&mlon=72.82985099999999#map=16/19.055285972222222/72.82985099999999&layers=N" rel="noopener" target="_blank">(19.055° N, 72.830° E)</a> 
                     </div>
                     
                 </div>
@@ -2167,7 +2183,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.069517&mlon=72.82272197222221#map=16/19.069517/72.82272197222221&layers=N" rel="noopener" target="_blank">(19.070°, 72.823°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.069517&mlon=72.82272197222221#map=16/19.069517/72.82272197222221&layers=N" rel="noopener" target="_blank">(19.070° N, 72.823° E)</a> 
                     </div>
                     
                 </div>
@@ -2216,7 +2232,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.070437972222223&mlon=72.8224#map=16/19.070437972222223/72.8224&layers=N" rel="noopener" target="_blank">(19.070°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.070437972222223&mlon=72.8224#map=16/19.070437972222223/72.8224&layers=N" rel="noopener" target="_blank">(19.070° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -2265,7 +2281,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.070517972222223&mlon=72.822349#map=16/19.070517972222223/72.822349&layers=N" rel="noopener" target="_blank">(19.071°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.070517972222223&mlon=72.822349#map=16/19.070517972222223/72.822349&layers=N" rel="noopener" target="_blank">(19.071° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -2314,7 +2330,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.070589972222223&mlon=72.82254297222222#map=16/19.070589972222223/72.82254297222222&layers=N" rel="noopener" target="_blank">(19.071°, 72.823°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.070589972222223&mlon=72.82254297222222#map=16/19.070589972222223/72.82254297222222&layers=N" rel="noopener" target="_blank">(19.071° N, 72.823° E)</a> 
                     </div>
                     
                 </div>
@@ -2363,7 +2379,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.108304&mlon=72.823847#map=16/19.108304/72.823847&layers=N" rel="noopener" target="_blank">(19.108°, 72.824°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.108304&mlon=72.823847#map=16/19.108304/72.823847&layers=N" rel="noopener" target="_blank">(19.108° N, 72.824° E)</a> 
                     </div>
                     
                 </div>
@@ -2412,7 +2428,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.108304&mlon=72.823847#map=16/19.108304/72.823847&layers=N" rel="noopener" target="_blank">(19.108°, 72.824°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.108304&mlon=72.823847#map=16/19.108304/72.823847&layers=N" rel="noopener" target="_blank">(19.108° N, 72.824° E)</a> 
                     </div>
                     
                 </div>
@@ -2461,7 +2477,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.108308&mlon=72.823954#map=16/19.108308/72.823954&layers=N" rel="noopener" target="_blank">(19.108°, 72.824°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.108308&mlon=72.823954#map=16/19.108308/72.823954&layers=N" rel="noopener" target="_blank">(19.108° N, 72.824° E)</a> 
                     </div>
                     
                 </div>
@@ -2510,7 +2526,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.16548797222222&mlon=72.83198#map=16/19.16548797222222/72.83198&layers=N" rel="noopener" target="_blank">(19.165°, 72.832°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.16548797222222&mlon=72.83198#map=16/19.16548797222222/72.83198&layers=N" rel="noopener" target="_blank">(19.165° N, 72.832° E)</a> 
                     </div>
                     
                 </div>
@@ -2559,7 +2575,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.16548797222222&mlon=72.83198#map=16/19.16548797222222/72.83198&layers=N" rel="noopener" target="_blank">(19.165°, 72.832°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.16548797222222&mlon=72.83198#map=16/19.16548797222222/72.83198&layers=N" rel="noopener" target="_blank">(19.165° N, 72.832° E)</a> 
                     </div>
                     
                 </div>
@@ -2633,7 +2649,7 @@ abandoned in the forest</p>
     .then(response => response.json())
     .then(data => {
       const gj = data;
-      const initialCoords = [72.82, 19.22]; 
+      
       const initialZoom = 12;
 
       const maxBoundPadding = 0.42;
@@ -2641,13 +2657,18 @@ abandoned in the forest</p>
       const routeName = getRouteName(gj);
 
       const activityType = getActivityType(gj);
+      const routeCreateTime = getRouteCreateTime(gj);
       
       const coordinates = getCoordinates(gj);
       
 
       const bounds = coordinates.reduce((bounds, coord) => 
         { return bounds.extend(coord); },
-        new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      const initialCoords = [(bounds._sw.lng + bounds._ne.lng)/2, (bounds._sw.lat + bounds._ne.lat)/2]; 
+
        
       const maxBoundSW = [ bounds._sw.lng - maxBoundPadding, bounds._sw.lat - maxBoundPadding];
       const maxBoundNE = [ bounds._ne.lng + maxBoundPadding, bounds._ne.lat + maxBoundPadding];
@@ -2744,6 +2765,7 @@ abandoned in the forest</p>
         
         
         const timestamps = getTimestamps(gj);
+        const routeCreateTimeDisplay = new Date(routeCreateTime);
         const startTime = new Date(timestamps.at(0));
         const endTime = new Date(timestamps.at(-1));
 
@@ -2752,7 +2774,7 @@ abandoned in the forest</p>
         const avgSpeed = routeLength / (duration / 36e5);
         document.getElementById(
           'tifr__start-time'
-        ).innerText = formatDate(startTime);
+        ).innerText = formatDate(routeCreateTimeDisplay);
 
         if (duration){
           document.getElementById(
@@ -2773,7 +2795,9 @@ abandoned in the forest</p>
   function getActivityType(geojson) {
     return geojson.features[0].properties.type;
   }
-  
+  function getRouteCreateTime(geojson) {
+    return geojson.features[0].properties.time;
+  }
   function getRouteName(geojson) {
     return geojson.features[0].properties.name;
   }
@@ -2898,7 +2922,7 @@ abandoned in the forest</p>
     .then(response => response.json())
     .then(data => {
       const gj = data;
-      const initialCoords = [72.82, 19.22]; 
+      
       const initialZoom = 12;
 
       const maxBoundPadding = 0.42;
@@ -2906,13 +2930,18 @@ abandoned in the forest</p>
       const routeName = getRouteName(gj);
 
       const activityType = getActivityType(gj);
+      const routeCreateTime = getRouteCreateTime(gj);
       
       const coordinates = getCoordinates(gj);
       
 
       const bounds = coordinates.reduce((bounds, coord) => 
         { return bounds.extend(coord); },
-        new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      const initialCoords = [(bounds._sw.lng + bounds._ne.lng)/2, (bounds._sw.lat + bounds._ne.lat)/2]; 
+
        
       const maxBoundSW = [ bounds._sw.lng - maxBoundPadding, bounds._sw.lat - maxBoundPadding];
       const maxBoundNE = [ bounds._ne.lng + maxBoundPadding, bounds._ne.lat + maxBoundPadding];
@@ -3009,6 +3038,7 @@ abandoned in the forest</p>
         
         
         const timestamps = getTimestamps(gj);
+        const routeCreateTimeDisplay = new Date(routeCreateTime);
         const startTime = new Date(timestamps.at(0));
         const endTime = new Date(timestamps.at(-1));
 
@@ -3017,7 +3047,7 @@ abandoned in the forest</p>
         const avgSpeed = routeLength / (duration / 36e5);
         document.getElementById(
           'gorai__start-time'
-        ).innerText = formatDate(startTime);
+        ).innerText = formatDate(routeCreateTimeDisplay);
 
         if (duration){
           document.getElementById(
@@ -3038,7 +3068,9 @@ abandoned in the forest</p>
   function getActivityType(geojson) {
     return geojson.features[0].properties.type;
   }
-  
+  function getRouteCreateTime(geojson) {
+    return geojson.features[0].properties.time;
+  }
   function getRouteName(geojson) {
     return geojson.features[0].properties.name;
   }
@@ -3158,7 +3190,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.214980999999998&mlon=72.813693#map=16/19.214980999999998/72.813693&layers=N" rel="noopener" target="_blank">(19.215°, 72.814°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.214980999999998&mlon=72.813693#map=16/19.214980999999998/72.813693&layers=N" rel="noopener" target="_blank">(19.215° N, 72.814° E)</a> 
                     </div>
                     
                 </div>
@@ -3198,7 +3230,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.214804972222222&mlon=72.81188697222223#map=16/19.214804972222222/72.81188697222223&layers=N" rel="noopener" target="_blank">(19.215°, 72.812°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.214804972222222&mlon=72.81188697222223#map=16/19.214804972222222/72.81188697222223&layers=N" rel="noopener" target="_blank">(19.215° N, 72.812° E)</a> 
                     </div>
                     
                 </div>
@@ -3235,7 +3267,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.233382972222223&mlon=72.82400799999999#map=16/19.233382972222223/72.82400799999999&layers=N" rel="noopener" target="_blank">(19.233°, 72.824°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.233382972222223&mlon=72.82400799999999#map=16/19.233382972222223/72.82400799999999&layers=N" rel="noopener" target="_blank">(19.233° N, 72.824° E)</a> 
                     </div>
                     
                 </div>
@@ -3272,7 +3304,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234608972222222&mlon=72.82171097222222#map=16/19.234608972222222/72.82171097222222&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234608972222222&mlon=72.82171097222222#map=16/19.234608972222222/72.82171097222222&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -3309,7 +3341,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234611&mlon=72.82170297222221#map=16/19.234611/72.82170297222221&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234611&mlon=72.82170297222221#map=16/19.234611/72.82170297222221&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -3346,7 +3378,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234579&mlon=72.82172097222222#map=16/19.234579/72.82172097222222&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234579&mlon=72.82172097222222#map=16/19.234579/72.82172097222222&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -3383,7 +3415,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234595972222223&mlon=72.82171799999999#map=16/19.234595972222223/72.82171799999999&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234595972222223&mlon=72.82171799999999#map=16/19.234595972222223/72.82171799999999&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -3420,7 +3452,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234608972222222&mlon=72.821736#map=16/19.234608972222222/72.821736&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234608972222222&mlon=72.821736#map=16/19.234608972222222/72.821736&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -3457,7 +3489,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234584972222223&mlon=72.82176497222221#map=16/19.234584972222223/72.82176497222221&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234584972222223&mlon=72.82176497222221#map=16/19.234584972222223/72.82176497222221&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -3494,7 +3526,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234560972222223&mlon=72.82181097222222#map=16/19.234560972222223/72.82181097222222&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234560972222223&mlon=72.82181097222222#map=16/19.234560972222223/72.82181097222222&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -3531,7 +3563,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234567972222223&mlon=72.82181299999999#map=16/19.234567972222223/72.82181299999999&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234567972222223&mlon=72.82181299999999#map=16/19.234567972222223/72.82181299999999&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -3568,7 +3600,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234560972222223&mlon=72.82181197222222#map=16/19.234560972222223/72.82181197222222&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234560972222223&mlon=72.82181197222222#map=16/19.234560972222223/72.82181197222222&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -3605,7 +3637,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234566&mlon=72.82182399999999#map=16/19.234566/72.82182399999999&layers=N" rel="noopener" target="_blank">(19.235°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234566&mlon=72.82182399999999#map=16/19.234566/72.82182399999999&layers=N" rel="noopener" target="_blank">(19.235° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -3642,7 +3674,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.234414&mlon=72.82205599999999#map=16/19.234414/72.82205599999999&layers=N" rel="noopener" target="_blank">(19.234°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.234414&mlon=72.82205599999999#map=16/19.234414/72.82205599999999&layers=N" rel="noopener" target="_blank">(19.234° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -3679,7 +3711,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.23326197222222&mlon=72.82450097222222#map=16/19.23326197222222/72.82450097222222&layers=N" rel="noopener" target="_blank">(19.233°, 72.825°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.23326197222222&mlon=72.82450097222222#map=16/19.23326197222222/72.82450097222222&layers=N" rel="noopener" target="_blank">(19.233° N, 72.825° E)</a> 
                     </div>
                     
                 </div>
@@ -3716,7 +3748,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.23249797222222&mlon=72.82879899999999#map=16/19.23249797222222/72.82879899999999&layers=N" rel="noopener" target="_blank">(19.232°, 72.829°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.23249797222222&mlon=72.82879899999999#map=16/19.23249797222222/72.82879899999999&layers=N" rel="noopener" target="_blank">(19.232° N, 72.829° E)</a> 
                     </div>
                     
                 </div>
@@ -3753,7 +3785,7 @@ abandoned in the forest</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.23245297222222&mlon=72.828805#map=16/19.23245297222222/72.828805&layers=N" rel="noopener" target="_blank">(19.232°, 72.829°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.23245297222222&mlon=72.828805#map=16/19.23245297222222/72.828805&layers=N" rel="noopener" target="_blank">(19.232° N, 72.829° E)</a> 
                     </div>
                     
                 </div>
@@ -3817,7 +3849,7 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
     .then(response => response.json())
     .then(data => {
       const gj = data;
-      const initialCoords = [72.82, 19.22]; 
+      
       const initialZoom = 12;
 
       const maxBoundPadding = 0.42;
@@ -3825,13 +3857,18 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
       const routeName = getRouteName(gj);
 
       const activityType = getActivityType(gj);
+      const routeCreateTime = getRouteCreateTime(gj);
       
       const coordinates = getCoordinates(gj);
       
 
       const bounds = coordinates.reduce((bounds, coord) => 
         { return bounds.extend(coord); },
-        new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      const initialCoords = [(bounds._sw.lng + bounds._ne.lng)/2, (bounds._sw.lat + bounds._ne.lat)/2]; 
+
        
       const maxBoundSW = [ bounds._sw.lng - maxBoundPadding, bounds._sw.lat - maxBoundPadding];
       const maxBoundNE = [ bounds._ne.lng + maxBoundPadding, bounds._ne.lat + maxBoundPadding];
@@ -3928,6 +3965,7 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
         
         
         const timestamps = getTimestamps(gj);
+        const routeCreateTimeDisplay = new Date(routeCreateTime);
         const startTime = new Date(timestamps.at(0));
         const endTime = new Date(timestamps.at(-1));
 
@@ -3936,7 +3974,7 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
         const avgSpeed = routeLength / (duration / 36e5);
         document.getElementById(
           'decathlon__start-time'
-        ).innerText = formatDate(startTime);
+        ).innerText = formatDate(routeCreateTimeDisplay);
 
         if (duration){
           document.getElementById(
@@ -3957,7 +3995,9 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
   function getActivityType(geojson) {
     return geojson.features[0].properties.type;
   }
-  
+  function getRouteCreateTime(geojson) {
+    return geojson.features[0].properties.time;
+  }
   function getRouteName(geojson) {
     return geojson.features[0].properties.name;
   }
@@ -4077,7 +4117,7 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.096757&mlon=72.82689599999999#map=16/19.096757/72.82689599999999&layers=N" rel="noopener" target="_blank">(19.097°, 72.827°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.096757&mlon=72.82689599999999#map=16/19.096757/72.82689599999999&layers=N" rel="noopener" target="_blank">(19.097° N, 72.827° E)</a> 
                     </div>
                     
                 </div>
@@ -4126,7 +4166,7 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.096755972222223&mlon=72.82688797222222#map=16/19.096755972222223/72.82688797222222&layers=N" rel="noopener" target="_blank">(19.097°, 72.827°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.096755972222223&mlon=72.82688797222222#map=16/19.096755972222223/72.82688797222222&layers=N" rel="noopener" target="_blank">(19.097° N, 72.827° E)</a> 
                     </div>
                     
                 </div>
@@ -4174,7 +4214,7 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.126227&mlon=72.821922#map=16/19.126227/72.821922&layers=N" rel="noopener" target="_blank">(19.126°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.126227&mlon=72.821922#map=16/19.126227/72.821922&layers=N" rel="noopener" target="_blank">(19.126° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -4222,7 +4262,7 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.13977&mlon=72.81521#map=16/19.13977/72.81521&layers=N" rel="noopener" target="_blank">(19.140°, 72.815°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.13977&mlon=72.81521#map=16/19.13977/72.81521&layers=N" rel="noopener" target="_blank">(19.140° N, 72.815° E)</a> 
                     </div>
                     
                 </div>
@@ -4270,7 +4310,7 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.139044972222223&mlon=72.81557497222222#map=16/19.139044972222223/72.81557497222222&layers=N" rel="noopener" target="_blank">(19.139°, 72.816°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.139044972222223&mlon=72.81557497222222#map=16/19.139044972222223/72.81557497222222&layers=N" rel="noopener" target="_blank">(19.139° N, 72.816° E)</a> 
                     </div>
                     
                 </div>
@@ -4318,7 +4358,7 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.14042&mlon=72.81481#map=16/19.14042/72.81481&layers=N" rel="noopener" target="_blank">(19.140°, 72.815°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.14042&mlon=72.81481#map=16/19.14042/72.81481&layers=N" rel="noopener" target="_blank">(19.140° N, 72.815° E)</a> 
                     </div>
                     
                 </div>
@@ -4366,7 +4406,7 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.148661999999998&mlon=72.823762#map=16/19.148661999999998/72.823762&layers=N" rel="noopener" target="_blank">(19.149°, 72.824°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.148661999999998&mlon=72.823762#map=16/19.148661999999998/72.823762&layers=N" rel="noopener" target="_blank">(19.149° N, 72.824° E)</a> 
                     </div>
                     
                 </div>
@@ -4414,7 +4454,7 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.15154897222222&mlon=72.83560597222221#map=16/19.15154897222222/72.83560597222221&layers=N" rel="noopener" target="_blank">(19.152°, 72.836°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.15154897222222&mlon=72.83560597222221#map=16/19.15154897222222/72.83560597222221&layers=N" rel="noopener" target="_blank">(19.152° N, 72.836° E)</a> 
                     </div>
                     
                 </div>
@@ -4462,7 +4502,7 @@ As a result, I ended up cycling 27 kilometres, even though Bandra is only 18 kil
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.151567999999997&mlon=72.83563799999999#map=16/19.151567999999997/72.83563799999999&layers=N" rel="noopener" target="_blank">(19.152°, 72.836°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.151567999999997&mlon=72.83563799999999#map=16/19.151567999999997/72.83563799999999&layers=N" rel="noopener" target="_blank">(19.152° N, 72.836° E)</a> 
                     </div>
                     
                 </div>
@@ -4512,7 +4552,7 @@ Two friends walk on the footpath, shoulder to shoulder.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.163896972222222&mlon=72.83189899999999#map=16/19.163896972222222/72.83189899999999&layers=N" rel="noopener" target="_blank">(19.164°, 72.832°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.163896972222222&mlon=72.83189899999999#map=16/19.163896972222222/72.83189899999999&layers=N" rel="noopener" target="_blank">(19.164° N, 72.832° E)</a> 
                     </div>
                     
                 </div>
@@ -4560,7 +4600,7 @@ Two friends walk on the footpath, shoulder to shoulder.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.170594972222222&mlon=72.83523597222222#map=16/19.170594972222222/72.83523597222222&layers=N" rel="noopener" target="_blank">(19.171°, 72.835°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.170594972222222&mlon=72.83523597222222#map=16/19.170594972222222/72.83523597222222&layers=N" rel="noopener" target="_blank">(19.171° N, 72.835° E)</a> 
                     </div>
                     
                 </div>
@@ -4608,7 +4648,7 @@ Two friends walk on the footpath, shoulder to shoulder.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.187447972222223&mlon=72.83811197222222#map=16/19.187447972222223/72.83811197222222&layers=N" rel="noopener" target="_blank">(19.187°, 72.838°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.187447972222223&mlon=72.83811197222222#map=16/19.187447972222223/72.83811197222222&layers=N" rel="noopener" target="_blank">(19.187° N, 72.838° E)</a> 
                     </div>
                     
                 </div>
@@ -4656,7 +4696,7 @@ Two friends walk on the footpath, shoulder to shoulder.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=19.191122&mlon=72.83721299999999#map=16/19.191122/72.83721299999999&layers=N" rel="noopener" target="_blank">(19.191°, 72.837°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=19.191122&mlon=72.83721299999999#map=16/19.191122/72.83721299999999&layers=N" rel="noopener" target="_blank">(19.191° N, 72.837° E)</a> 
                     </div>
                     
                 </div>

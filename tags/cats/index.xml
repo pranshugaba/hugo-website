@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cats by Pranshu Gaba</title><link>https://pranshugaba.com/tags/cats/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Fri, 22 May 2026 21:34:14 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/cats/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/cats/index.xml" rel="self" type="application/rss+xml"/><item><title>mlem</title><link>https://pranshugaba.com/poems/mlem/</link><pubDate>Thu, 28 Apr 2022 17:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/mlem/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cats by Pranshu Gaba</title><link>https://pranshugaba.com/tags/cats/</link><description/><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>pranshu@pranshugaba.com (Pranshu Gaba)</managingEditor><webMaster>pranshu@pranshugaba.com (Pranshu Gaba)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><lastBuildDate>Sat, 23 May 2026 16:55:52 +0530</lastBuildDate><image><url>https://pranshugaba.com/tags/cats/icon.png</url></image><atom:link href="https://pranshugaba.com/tags/cats/index.xml" rel="self" type="application/rss+xml"/><item><title>mlem</title><link>https://pranshugaba.com/poems/mlem/</link><pubDate>Thu, 28 Apr 2022 17:00:00 +0530</pubDate><guid>https://pranshugaba.com/poems/mlem/</guid><description>
 <![CDATA[<img src="https://pranshugaba.com/poems/mlem/mlem_featured_hu_623ece7c728bc4fd.jpg"  /><p>golden cat<br>
 on a red suitcase &mdash;<br>
 does a mlem</p>
@@ -47,7 +47,7 @@ does a mlem</p>
     .then(response => response.json())
     .then(data => {
       const gj = data;
-      const initialCoords = [72.82, 19.22]; 
+      
       const initialZoom = 12;
 
       const maxBoundPadding = 0.42;
@@ -55,13 +55,18 @@ does a mlem</p>
       const routeName = getRouteName(gj);
 
       const activityType = getActivityType(gj);
+      const routeCreateTime = getRouteCreateTime(gj);
       
       const coordinates = getCoordinates(gj);
       
 
       const bounds = coordinates.reduce((bounds, coord) => 
         { return bounds.extend(coord); },
-        new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
+
+      const initialCoords = [(bounds._sw.lng + bounds._ne.lng)/2, (bounds._sw.lat + bounds._ne.lat)/2]; 
+
        
       const maxBoundSW = [ bounds._sw.lng - maxBoundPadding, bounds._sw.lat - maxBoundPadding];
       const maxBoundNE = [ bounds._ne.lng + maxBoundPadding, bounds._ne.lat + maxBoundPadding];
@@ -158,6 +163,7 @@ does a mlem</p>
         
         
         const timestamps = getTimestamps(gj);
+        const routeCreateTimeDisplay = new Date(routeCreateTime);
         const startTime = new Date(timestamps.at(0));
         const endTime = new Date(timestamps.at(-1));
 
@@ -166,7 +172,7 @@ does a mlem</p>
         const avgSpeed = routeLength / (duration / 36e5);
         document.getElementById(
           'refill__start-time'
-        ).innerText = formatDate(startTime);
+        ).innerText = formatDate(routeCreateTimeDisplay);
 
         if (duration){
           document.getElementById(
@@ -187,7 +193,9 @@ does a mlem</p>
   function getActivityType(geojson) {
     return geojson.features[0].properties.type;
   }
-  
+  function getRouteCreateTime(geojson) {
+    return geojson.features[0].properties.time;
+  }
   function getRouteName(geojson) {
     return geojson.features[0].properties.name;
   }
@@ -307,7 +315,7 @@ does a mlem</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.91166497222222&mlon=72.82128399999999#map=16/18.91166497222222/72.82128399999999&layers=N" rel="noopener" target="_blank">(18.912°, 72.821°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.91166497222222&mlon=72.82128399999999#map=16/18.91166497222222/72.82128399999999&layers=N" rel="noopener" target="_blank">(18.912° N, 72.821° E)</a> 
                     </div>
                     
                 </div>
@@ -356,7 +364,7 @@ The more you look at this statue, the weirder it gets.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.917628&mlon=72.827652#map=16/18.917628/72.827652&layers=N" rel="noopener" target="_blank">(18.918°, 72.828°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.917628&mlon=72.827652#map=16/18.917628/72.827652&layers=N" rel="noopener" target="_blank">(18.918° N, 72.828° E)</a> 
                     </div>
                     
                 </div>
@@ -404,7 +412,7 @@ The more you look at this statue, the weirder it gets.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.922547972222223&mlon=72.83452799999999#map=16/18.922547972222223/72.83452799999999&layers=N" rel="noopener" target="_blank">(18.923°, 72.835°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.922547972222223&mlon=72.83452799999999#map=16/18.922547972222223/72.83452799999999&layers=N" rel="noopener" target="_blank">(18.923° N, 72.835° E)</a> 
                     </div>
                     
                 </div>
@@ -452,7 +460,7 @@ The more you look at this statue, the weirder it gets.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.922620972222223&mlon=72.83414099999999#map=16/18.922620972222223/72.83414099999999&layers=N" rel="noopener" target="_blank">(18.923°, 72.834°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.922620972222223&mlon=72.83414099999999#map=16/18.922620972222223/72.83414099999999&layers=N" rel="noopener" target="_blank">(18.923° N, 72.834° E)</a> 
                     </div>
                     
                 </div>
@@ -502,7 +510,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.925107&mlon=72.832818#map=16/18.925107/72.832818&layers=N" rel="noopener" target="_blank">(18.925°, 72.833°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.925107&mlon=72.832818#map=16/18.925107/72.832818&layers=N" rel="noopener" target="_blank">(18.925° N, 72.833° E)</a> 
                     </div>
                     
                 </div>
@@ -550,7 +558,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.925854972222222&mlon=72.83206197222222#map=16/18.925854972222222/72.83206197222222&layers=N" rel="noopener" target="_blank">(18.926°, 72.832°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.925854972222222&mlon=72.83206197222222#map=16/18.925854972222222/72.83206197222222&layers=N" rel="noopener" target="_blank">(18.926° N, 72.832° E)</a> 
                     </div>
                     
                 </div>
@@ -598,7 +606,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.926908&mlon=72.83144399999999#map=16/18.926908/72.83144399999999&layers=N" rel="noopener" target="_blank">(18.927°, 72.831°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.926908&mlon=72.83144399999999#map=16/18.926908/72.83144399999999&layers=N" rel="noopener" target="_blank">(18.927° N, 72.831° E)</a> 
                     </div>
                     
                 </div>
@@ -644,7 +652,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.926908&mlon=72.83144399999999#map=16/18.926908/72.83144399999999&layers=N" rel="noopener" target="_blank">(18.927°, 72.831°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.926908&mlon=72.83144399999999#map=16/18.926908/72.83144399999999&layers=N" rel="noopener" target="_blank">(18.927° N, 72.831° E)</a> 
                     </div>
                     
                 </div>
@@ -690,7 +698,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.927648&mlon=72.831474#map=16/18.927648/72.831474&layers=N" rel="noopener" target="_blank">(18.928°, 72.831°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.927648&mlon=72.831474#map=16/18.927648/72.831474&layers=N" rel="noopener" target="_blank">(18.928° N, 72.831° E)</a> 
                     </div>
                     
                 </div>
@@ -736,7 +744,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.927966972222222&mlon=72.83174799999999#map=16/18.927966972222222/72.83174799999999&layers=N" rel="noopener" target="_blank">(18.928°, 72.832°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.927966972222222&mlon=72.83174799999999#map=16/18.927966972222222/72.83174799999999&layers=N" rel="noopener" target="_blank">(18.928° N, 72.832° E)</a> 
                     </div>
                     
                 </div>
@@ -782,7 +790,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.928042&mlon=72.831822#map=16/18.928042/72.831822&layers=N" rel="noopener" target="_blank">(18.928°, 72.832°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.928042&mlon=72.831822#map=16/18.928042/72.831822&layers=N" rel="noopener" target="_blank">(18.928° N, 72.832° E)</a> 
                     </div>
                     
                 </div>
@@ -828,7 +836,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.929555&mlon=72.831507#map=16/18.929555/72.831507&layers=N" rel="noopener" target="_blank">(18.930°, 72.832°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.929555&mlon=72.831507#map=16/18.929555/72.831507&layers=N" rel="noopener" target="_blank">(18.930° N, 72.832° E)</a> 
                     </div>
                     
                 </div>
@@ -874,7 +882,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.930339&mlon=72.83135797222222#map=16/18.930339/72.83135797222222&layers=N" rel="noopener" target="_blank">(18.930°, 72.831°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.930339&mlon=72.83135797222222#map=16/18.930339/72.83135797222222&layers=N" rel="noopener" target="_blank">(18.930° N, 72.831° E)</a> 
                     </div>
                     
                 </div>
@@ -920,7 +928,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.931644972222223&mlon=72.829577#map=16/18.931644972222223/72.829577&layers=N" rel="noopener" target="_blank">(18.932°, 72.830°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.931644972222223&mlon=72.829577#map=16/18.931644972222223/72.829577&layers=N" rel="noopener" target="_blank">(18.932° N, 72.830° E)</a> 
                     </div>
                     
                 </div>
@@ -966,7 +974,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.930241972222223&mlon=72.83000497222221#map=16/18.930241972222223/72.83000497222221&layers=N" rel="noopener" target="_blank">(18.930°, 72.830°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.930241972222223&mlon=72.83000497222221#map=16/18.930241972222223/72.83000497222221&layers=N" rel="noopener" target="_blank">(18.930° N, 72.830° E)</a> 
                     </div>
                     
                 </div>
@@ -1012,7 +1020,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.932679&mlon=72.82906097222222#map=16/18.932679/72.82906097222222&layers=N" rel="noopener" target="_blank">(18.933°, 72.829°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.932679&mlon=72.82906097222222#map=16/18.932679/72.82906097222222&layers=N" rel="noopener" target="_blank">(18.933° N, 72.829° E)</a> 
                     </div>
                     
                 </div>
@@ -1058,7 +1066,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.930758&mlon=72.82619097222222#map=16/18.930758/72.82619097222222&layers=N" rel="noopener" target="_blank">(18.931°, 72.826°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.930758&mlon=72.82619097222222#map=16/18.930758/72.82619097222222&layers=N" rel="noopener" target="_blank">(18.931° N, 72.826° E)</a> 
                     </div>
                     
                 </div>
@@ -1104,7 +1112,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.930976&mlon=72.82415999999999#map=16/18.930976/72.82415999999999&layers=N" rel="noopener" target="_blank">(18.931°, 72.824°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.930976&mlon=72.82415999999999#map=16/18.930976/72.82415999999999&layers=N" rel="noopener" target="_blank">(18.931° N, 72.824° E)</a> 
                     </div>
                     
                 </div>
@@ -1150,7 +1158,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.92942&mlon=72.82241797222221#map=16/18.92942/72.82241797222221&layers=N" rel="noopener" target="_blank">(18.929°, 72.822°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.92942&mlon=72.82241797222221#map=16/18.92942/72.82241797222221&layers=N" rel="noopener" target="_blank">(18.929° N, 72.822° E)</a> 
                     </div>
                     
                 </div>
@@ -1198,7 +1206,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.928968972222222&mlon=72.823171#map=16/18.928968972222222/72.823171&layers=N" rel="noopener" target="_blank">(18.929°, 72.823°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.928968972222222&mlon=72.823171#map=16/18.928968972222222/72.823171&layers=N" rel="noopener" target="_blank">(18.929° N, 72.823° E)</a> 
                     </div>
                     
                 </div>
@@ -1244,7 +1252,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.926276&mlon=72.82675297222222#map=16/18.926276/72.82675297222222&layers=N" rel="noopener" target="_blank">(18.926°, 72.827°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.926276&mlon=72.82675297222222#map=16/18.926276/72.82675297222222&layers=N" rel="noopener" target="_blank">(18.926° N, 72.827° E)</a> 
                     </div>
                     
                 </div>
@@ -1290,7 +1298,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.920173972222223&mlon=72.82594399999999#map=16/18.920173972222223/72.82594399999999&layers=N" rel="noopener" target="_blank">(18.920°, 72.826°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.920173972222223&mlon=72.82594399999999#map=16/18.920173972222223/72.82594399999999&layers=N" rel="noopener" target="_blank">(18.920° N, 72.826° E)</a> 
                     </div>
                     
                 </div>
@@ -1338,7 +1346,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.918905972222223&mlon=72.82545897222222#map=16/18.918905972222223/72.82545897222222&layers=N" rel="noopener" target="_blank">(18.919°, 72.825°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.918905972222223&mlon=72.82545897222222#map=16/18.918905972222223/72.82545897222222&layers=N" rel="noopener" target="_blank">(18.919° N, 72.825° E)</a> 
                     </div>
                     
                 </div>
@@ -1384,7 +1392,7 @@ They offer instant prints for just ₹30.</p>
                     
                     
                     <div class="[ gallery__coords ] [ plain-link ]">
-                        <a href="https://www.openstreetmap.org/?mlat=18.918905972222223&mlon=72.82545897222222#map=16/18.918905972222223/72.82545897222222&layers=N" rel="noopener" target="_blank">(18.919°, 72.825°)</a> 
+                        <a href="https://www.openstreetmap.org/?mlat=18.918905972222223&mlon=72.82545897222222#map=16/18.918905972222223/72.82545897222222&layers=N" rel="noopener" target="_blank">(18.919° N, 72.825° E)</a> 
                     </div>
                     
                 </div>
