@@ -2,7 +2,7 @@ name = "Pranshu Gaba"
 email = "pranshu.gaba@tifr.res.in"
 website = "pranshugaba.com/about"
 
-updatedDate = 2026-05-22T09:30:00Z
+updatedDate = 2026-05-25T09:30:00Z
 
 #################################################################
 [[interests]]
@@ -261,6 +261,8 @@ abstract = '''Given rationals α and β, the sure-almost-sure problem for a quan
 
 In this paper, we solve the sure-almost-sure and sure-limit-sure problems for window mean-payoff objectives. The window mean-payoff objective strengthens the standard mean-payoff objective by requiring that the average payoff of a finite window that slides over an infinite run be greater than a given threshold. We study two variants of window mean payoff: in the fixed variant, the window length ℓ is given, while in the bounded variant, the length is not given but is required to be bounded throughout the run. We show that the sure-almost-sure problem and the sure-limit-sure problem are both in P for the fixed variant (if ℓ is given in unary) and are both in NP ∩ coNP for the bounded variant, matching the computational complexity of sure satisfaction and almost-sure satisfaction when considered separately for these objectives. We also give bounds for the memory requirement of winning strategies for all considered problems. '''
 
+[publications.conference]
+undersubmission = true
 
 [publications.fullversion]
 name = "arXiv"
@@ -534,7 +536,7 @@ location = "IISc, Bengaluru"
 
 [experience]
 
-reviewing = ["MathOR", "ATVA 2025", "EC 2025", "CAV 2025", "CSL 2025", "STACS 2025", "LICS 2024"]
+reviewing = ["FMCAD 2026",  "MathOR", "ATVA 2025", "EC 2025", "CAV 2025", "CSL 2025", "STACS 2025", "LICS 2024"]
 
 [[experience.moderating]]
 topic = "Open problems and challenges in Reactive Synthesis"

@@ -32,15 +32,13 @@
       <p class="item__acceptances">
       {{ end }}  
       {{ with .conference }}
-        Accepted in <a href="{{ .doi }}" rel="noreferrer noopener" target="_blank">{{ .name }}</a>
-        {{ with .awards }}
-          ({{ . }})
-        {{ end }}
-      {{ else }}
-        Under submission
-      {{ end }}<br/>
+        {{ if .undersubmission }}
+          Under submission,
+        {{ else }}
+        Accepted in <a href="{{ .doi }}" rel="noreferrer noopener" target="_blank">{{ .name }}</a>{{ with .awards }} ({{ . }}){{ end }},{{ end }}
+      {{ end }}
       {{ with .fullversion }}
-        Full version at <a href="{{ .doi }}" rel="noreferrer noopener" target="_blank">{{ .name }}</a>
+        full version at <a href="{{ .doi }}" rel="noreferrer noopener" target="_blank">{{ .name }}</a>
         {{ with .awards }}
           {{ . }}
         {{ end }}
