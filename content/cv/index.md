@@ -9,8 +9,7 @@ math: true
 
 
 <pranshu@pranshugaba.com> &nbsp;
-<pranshu.gaba@tifr.res.in> &nbsp;
-[dblp](https://dblp.org/pid/345/7987) &nbsp;
+[dblp profile](https://dblp.org/pid/345/7987) &nbsp;
 
 
 {{< cv/lastupdatedon >}} &nbsp; 

@@ -1,8 +1,8 @@
 name = "Pranshu Gaba"
-email = "pranshu.gaba@tifr.res.in"
+email = "pranshu@pranshugaba.com"
 website = "pranshugaba.com/about"
 
-updatedDate = 2026-05-25T09:30:00Z
+updatedDate = 2026-06-18T09:30:00Z
 
 #################################################################
 [[interests]]
@@ -49,6 +49,29 @@ institute.country = "India"
 courses = ["Automata theory and computability", "Introduction to scalable systems", "Game theory", "Graph theory", "Combinatorics", "Number theory", "Measure theory"]
 
 #################################################################
+
+
+[[publications]]
+title = "Sure-almost-sure and Sure-limit-sure Window Mean Payoff in Markov Decision Processes"
+collaborators = ["Shibashis Guha"]
+abstract = '''Given rationals α and β, the sure-almost-sure problem for a quantitative objective φ in a Markov decision process (MDP) asks if one can simultaneously ensure that all outcomes of the MDP have φ-value at least α (i.e. sure α satisfaction) and with probability 1 the outcome has φ-value at least β (i.e. almost-sure β satisfaction). The sure-limit-sure problem asks if for all ε>0 one can simultaneously ensure that all outcomes have φ-value at least α and with probability at least 1−ε the outcome has φ-value at least β. Moreover, if simultaneous satisfaction of objectives is possible, then one would also like to construct a strategy (for sure-almost-sure) or a family of strategies (for sure-limit-sure) that achieves this.
+
+In this paper, we solve the sure-almost-sure and sure-limit-sure problems for window mean-payoff objectives. The window mean-payoff objective strengthens the standard mean-payoff objective by requiring that the average payoff of a finite window that slides over an infinite run be greater than a given threshold. We study two variants of window mean payoff: in the fixed variant, the window length ℓ is given, while in the bounded variant, the length is not given but is required to be bounded throughout the run. We show that the sure-almost-sure problem and the sure-limit-sure problem are both in P for the fixed variant (if ℓ is given in unary) and are both in NP ∩ coNP for the bounded variant, matching the computational complexity of sure satisfaction and almost-sure satisfaction when considered separately for these objectives. We also give bounds for the memory requirement of winning strategies for all considered problems. '''
+
+[publications.conference]
+name = "CONCUR 2026"
+# link = ""
+date = "2026"
+doi = "https://confest-2026.github.io/concur/accepted-papers"
+
+[publications.fullversion]
+name = "arXiv"
+# link = ""
+# date = "2025"
+doi = "https://doi.org/10.48550/arXiv.2605.12191"
+
+#######################################
+
 
 [[publications]]
 title = "Expectation in Stochastic Games with Prefix-independent Objectives"
@@ -216,7 +239,6 @@ date = "June 2025"
 doi = "https://doi.org/10.46298/lmcs-21(2:19)2025"
 
 
-
 [[publications.events]]
 name = "ACM ARCS 2025"
 link = "https://event.india.acm.org/arcs/arcs-2025/"
@@ -253,24 +275,6 @@ date = 2023-06-30T10:20:00+05:30
 location = "IIT Goa, India"
 # slides = ""
 
-
-[[publications]]
-title = "Sure-almost-sure and Sure-limit-sure Window Mean Payoff in Markov Decision Processes"
-collaborators = ["Shibashis Guha"]
-abstract = '''Given rationals α and β, the sure-almost-sure problem for a quantitative objective φ in a Markov decision process (MDP) asks if one can simultaneously ensure that all outcomes of the MDP have φ-value at least α (i.e. sure α satisfaction) and with probability 1 the outcome has φ-value at least β (i.e. almost-sure β satisfaction). The sure-limit-sure problem asks if for all ε>0 one can simultaneously ensure that all outcomes have φ-value at least α and with probability at least 1−ε the outcome has φ-value at least β. Moreover, if simultaneous satisfaction of objectives is possible, then one would also like to construct a strategy (for sure-almost-sure) or a family of strategies (for sure-limit-sure) that achieves this.
-
-In this paper, we solve the sure-almost-sure and sure-limit-sure problems for window mean-payoff objectives. The window mean-payoff objective strengthens the standard mean-payoff objective by requiring that the average payoff of a finite window that slides over an infinite run be greater than a given threshold. We study two variants of window mean payoff: in the fixed variant, the window length ℓ is given, while in the bounded variant, the length is not given but is required to be bounded throughout the run. We show that the sure-almost-sure problem and the sure-limit-sure problem are both in P for the fixed variant (if ℓ is given in unary) and are both in NP ∩ coNP for the bounded variant, matching the computational complexity of sure satisfaction and almost-sure satisfaction when considered separately for these objectives. We also give bounds for the memory requirement of winning strategies for all considered problems. '''
-
-[publications.conference]
-undersubmission = true
-
-[publications.fullversion]
-name = "arXiv"
-# link = ""
-# date = "2025"
-doi = "https://doi.org/10.48550/arXiv.2605.12191"
-
-#######################################
 
 [[seminars]]
 title = "The Canadian traveller problem"
@@ -458,6 +462,16 @@ recording = ""
 
 
 #######################################
+
+[[outreaches]]
+title = "Games, Secrets, and Smart Thinking"
+collaborators = ["Malhar Managoli", "Chandralekha P.",]
+[[outreaches.events]] 
+name = "Chai and Why 2026"
+link = "https://www.tifr.res.in/~outreach/cw20260607.html"
+date = 2026-06-07T11:00:00+05:30
+location = "Prithvi Café, Juhu, Mumbai"
+# slides = ""
 
 
 
