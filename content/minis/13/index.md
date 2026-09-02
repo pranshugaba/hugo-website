@@ -5,7 +5,7 @@ summary: 'The Rehearsal (Season 2)'
 date: 2025-04-30T16:00:00+05:30
 lastmod: 2025-04-30T16:00:00+05:30
 
-tags: ['tv-series', 'comedy']
+tags: ['the-rehearsal', 'tv-series', 'comedy']
 
 draft: false
 featured: false

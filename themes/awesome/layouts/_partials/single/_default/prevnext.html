@@ -18,7 +18,7 @@
                         <a href="{{ .Permalink }}">
                         {{ if (eq .Section "minis")}}
                             #{{ .File.ContentBaseName }}: <em>
-                            {{ .Page.Plain | truncate 35 "..." }}
+                            {{ .Page.Plain | safeHTML | truncate 35 "..." }}
                             </em>
                         {{ else }}
                             {{- partial "single/post-id" . -}}
@@ -36,7 +36,7 @@
                     <a href="{{ .Permalink }}">
                         {{ if (eq .Section "minis")}}
                             #{{ .File.ContentBaseName }}: <em>
-                            {{ .Page.Plain | truncate 35 "..." }}
+                            {{ .Page.Plain | safeHTML | truncate 35 "..." }}
                             </em>
                         {{ else }}
                             {{- partial "single/post-id" . -}}
