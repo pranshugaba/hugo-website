@@ -44,6 +44,9 @@
   border: var(--border-medium) solid var(--chroma-fg);
   border-radius: var(--border-radius-medium);
 }
+li .highlight {
+    margin-block: var(--size-400);
+}
 /* Background */
 .bg {
   background-color: var(--chroma-bg);

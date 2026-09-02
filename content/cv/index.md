@@ -48,6 +48,10 @@ math: true
 
 
 ### Conferences attended
+#### 2026
+- CONCUR 2026 in University of Liverpool, UK
+- Formal Methods Update meeting 2026 in Krea University, Sri City, India
+
 #### 2025 
 - FSTTCS 2025 in BITS Pilani, Goa, India
 - IndiCS Seminar on Automated Synthesis 2025, Mysore, India

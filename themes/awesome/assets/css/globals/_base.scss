@@ -275,10 +275,6 @@ blockquote {
 
 blockquote > p {
   margin-block: var(--size-300);
-  text-indent: var(--size-300);
-  @media (min-width: 640px) {
-    text-indent: var(--size-400);
-  }
 }
 cite {
   display: block;

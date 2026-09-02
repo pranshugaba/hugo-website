@@ -2,7 +2,7 @@ name = "Pranshu Gaba"
 email = "pranshu@pranshugaba.com"
 website = "pranshugaba.com/about"
 
-updatedDate = 2026-06-18T09:30:00Z
+updatedDate = 2026-08-31T09:30:00Z
 
 #################################################################
 [[interests]]
@@ -62,7 +62,7 @@ In this paper, we solve the sure-almost-sure and sure-limit-sure problems for wi
 name = "CONCUR 2026"
 # link = ""
 date = "2026"
-doi = "https://confest-2026.github.io/concur/accepted-papers"
+doi = "https://doi.org/10.4230/LIPIcs.CONCUR.2026.36"
 
 [publications.fullversion]
 name = "arXiv"

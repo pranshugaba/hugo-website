@@ -13,7 +13,7 @@
 {{ range $educationsData }}
 <div class="[ cv__education] [ flow ]">
 <p>
-  <strong>{{ .programName }}</strong>, {{ cond (not .completed) "ongoing, synopsis submitted" (.endDate | time.Format "January 2006") }}
+  <strong>{{ .programName }}</strong>, {{ cond (not .completed) "ongoing, thesis submitted" (.endDate | time.Format "January 2006") }}
   <br/>
   <em>{{ .institute.name }}</em>, {{ .institute.city }}, {{ .institute.country }}
 </p>
